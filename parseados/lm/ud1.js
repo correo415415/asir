@@ -1092,3 +1092,229 @@ Tamaño: 5 bytes</code></pre>
 <p><strong>Resaltado ≠ validación</strong>: el coloreado solo aplica reglas visuales por patrones (todo lo que va entre <code>&lt;</code> y <code>&gt;</code> se pinta como etiqueta). No construye el árbol del documento ni comprueba que cada apertura tenga su cierre, que los nombres coincidan o que las comillas estén emparejadas. Eso solo lo hace un <strong>analizador/validador XML</strong> (por ejemplo, un navegador o XML Copy Editor). Un editor con buen resaltado (Notepad++, gedit, VS Code) ayuda a <em>ver</em> el problema de las comillas porque el color «se desborda» hasta la siguiente comilla; el Bloc de notas no ofrece esa pista.</p>
 </details>`
   },
+
+  /* ---------------- 5. Documentos bien formados ---------------- */
+  {
+    id: 'lm-ud1-5',
+    tipo: 'tema',
+    titulo: '5. Elaboración de documentos bien formados',
+    resumen: 'Un XML está bien formado cuando respeta todas las reglas sintácticas básicas; así cualquier procesador puede construir su árbol sin ambigüedad. Lista de comprobación, ejemplo completo y cómo comprobarlo (navegador, XML Copy Editor).',
+    claves: ['Bien formado = cumple la sintaxis general de XML', 'El procesador construye un árbol en memoria; una etiqueta sin cerrar es un ERROR FATAL: se detiene', 'Ventajas: interpretación uniforme, intercambio previsible, localizar errores, evitar estructuras ambiguas', 'Bien formado ≠ válido: válido además cumple una DTD o esquema', 'Checklist: declaración, una raíz, marcado correcto, atributos con comillas, nombres permitidos, comentarios fuera de las etiquetas'],
+    tags: ['bien formado', 'well-formed', 'valido', 'dtd', 'esquema', 'xml', 'procesador', 'error fatal'],
+    links: ['lm-ud1-5-1', 'lm-ud1-5-2', 'lm-ud1-5-3', 'lm-ud1-ej2'],
+    contenido: `
+<div class="box def"><div class="box-title">Documento bien formado</div>
+<p>Un documento XML está <strong>bien formado</strong> cuando respeta <strong>todas las reglas sintácticas básicas</strong> de XML. Esta condición permite que cualquier procesador XML pueda construir su estructura sin tener que adivinar qué quiso escribir el autor.</p></div>
+<p>Las etiquetas, los atributos, el anidamiento y la raíz ya se presentaron en el apartado 3. Aquí los reuniremos como una <strong>lista de comprobación</strong> y los aplicaremos a un documento completo.</p>
+
+<h4>¿Por qué debe estar bien formado?</h4>
+<p>Un procesador XML lee el documento y construye en memoria una estructura de <strong>árbol</strong>. Para hacerlo necesita identificar sin ambigüedad dónde empieza y termina cada elemento, qué elementos dependen de otros y qué atributos les pertenecen.</p>
+<p>Si encuentra, por ejemplo, una etiqueta sin cerrar, no puede determinar con seguridad qué contenido pertenece a cada elemento. La especificación XML trata estas situaciones como <strong>errores fatales</strong>: el procesador debe comunicar el problema y <strong>no puede continuar</strong> procesando el documento como si fuese correcto.</p>
+<p>Esta exigencia aporta varias ventajas:</p>
+<ul>
+  <li>evita que distintas aplicaciones interpreten de manera diferente el mismo archivo;</li>
+  <li>permite intercambiar datos entre sistemas con resultados previsibles;</li>
+  <li>facilita la localización de errores;</li>
+  <li>impide trabajar con una estructura incompleta o ambigua.</li>
+</ul>
+<div class="box warn"><div class="box-title">Bien formado no significa válido</div>
+<p>Un documento <strong>bien formado</strong> cumple la sintaxis general de XML. Un documento <strong>válido</strong>, además, cumple las reglas particulares definidas en una <strong>DTD</strong> o en un <strong>esquema</strong>, por ejemplo qué elementos son obligatorios o en qué orden deben aparecer. La validez se estudiará con más profundidad posteriormente.</p></div>
+
+<h4>Contenido del apartado</h4>
+<ol>
+  <li>Lista de comprobación (6 reglas)</li>
+  <li>Ejemplo completo bien formado</li>
+  <li>Cómo comprobar el documento: navegador y XML Copy Editor</li>
+  <li>Práctica: provocar y localizar errores</li>
+</ol>`
+  },
+
+  {
+    id: 'lm-ud1-5-1',
+    tipo: 'subtema',
+    titulo: '5.1 Lista de comprobación de un XML bien formado',
+    resumen: 'Seis reglas: declaración XML al principio, una única raíz con jerarquía coherente, marcado y delimitación correctos, atributos entre comillas y sin repetir, nombres permitidos (sin espacios, no empezar por número, sin xml ni :), comentarios fuera de otras marcas.',
+    claves: ['1. Declaración <?xml version="1.0" encoding="UTF-8"?> al principio (recomendable, no obligatoria)', '2. Una sola raíz; hijos dentro de su padre', '3. Apertura y cierre con el mismo nombre, anidados en orden, respetando mayúsculas', '4. Atributos: valor entre comillas; sin repetir en la misma etiqueta', '5. Nombres: empiezan por letra o _; luego letras, números, -, ., _; sin espacios; no empezar por número; reservados los que empiezan por xml; no usar :', '6. Comentarios <!-- --> fuera de las etiquetas; no pueden contener --'],
+    tags: ['checklist', 'declaracion', 'raiz', 'atributos', 'nombres', 'comentarios', 'xml', 'reservado', 'pcdata'],
+    contenido: `
+<h4>1 · Declaración XML</h4>
+<p>El W3C indica que los documentos XML <em>deberían</em> comenzar con una declaración que identifique la versión utilizada:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code></pre>
+<p><code>version="1.0"</code> indica la versión de XML y <code>encoding="UTF-8"</code> declara la codificación del archivo. <strong>Si se incluye, debe aparecer al principio</strong> del documento. La declaración es recomendable, pero su ausencia no hace que todos los documentos XML sean automáticamente incorrectos.</p>
+
+<h4>2 · Jerarquía coherente y una única raíz</h4>
+<p>Todo documento debe tener <strong>un solo elemento raíz</strong> que contenga el resto de la estructura. Los elementos hijos deben quedar dentro de su elemento padre.</p>
+<pre><code>&lt;inventario&gt;
+    &lt;equipo&gt;
+        &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+    &lt;/equipo&gt;
+&lt;/inventario&gt;</code></pre>
+<p><code>inventario</code> es la raíz, <code>equipo</code> es hijo de <code>inventario</code> y <code>nombre</code> es hijo de <code>equipo</code>.</p>
+
+<h4>3 · Marcado y delimitación correctos</h4>
+<p>Las etiquetas de apertura y cierre deben tener el <strong>mismo nombre</strong> y estar <strong>anidadas en el orden adecuado</strong>:</p>
+<table>
+<thead><tr><th>Correcto</th><th>Incorrecto</th></tr></thead>
+<tbody><tr>
+<td><pre><code>&lt;equipo&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+&lt;/equipo&gt;</code></pre></td>
+<td><pre><code>&lt;equipo&gt;
+    &lt;nombre&gt;servidor-web&lt;/equipo&gt;
+&lt;/nombre&gt;</code></pre></td>
+</tr></tbody></table>
+<p>XML distingue entre mayúsculas y minúsculas. <code>&lt;nombre&gt;</code> y <code>&lt;Nombre&gt;</code> son etiquetas diferentes, por lo que también deben coincidir al abrir y cerrar.</p>
+
+<h4>4 · Atributos correctamente escritos</h4>
+<p>Los atributos aportan información adicional o <em>metadatos</em> sobre un elemento. Sus valores deben aparecer <strong>entre comillas simples o dobles</strong>:</p>
+<pre><code>&lt;equipo id="srv01" entorno="produccion"&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+&lt;/equipo&gt;</code></pre>
+<p>Cada atributo debe tener un nombre y <strong>no puede repetirse</strong> dentro de la misma etiqueta.</p>
+<div class="box danger"><div class="box-title">Incorrecto</div>
+<pre><code>&lt;equipo id=srv01 id="principal" /&gt;</code></pre>
+<p class="muted">Dos fallos: valor sin comillas y atributo <code>id</code> repetido.</p></div>
+
+<h4>5 · Nombres permitidos</h4>
+<p>Los nombres de elementos y atributos <strong>no pueden contener espacios ni comenzar por un número</strong>. Como regla práctica, pueden comenzar por una <strong>letra</strong> o por <code>_</code> y continuar con letras, números, guiones, puntos o guiones bajos.</p>
+<table>
+<thead><tr><th>Nombres adecuados</th><th>Nombres incorrectos</th></tr></thead>
+<tbody><tr>
+<td><pre><code>&lt;servidor_web&gt;
+    &lt;ip-principal&gt;192.168.10.20&lt;/ip-principal&gt;
+&lt;/servidor_web&gt;</code></pre></td>
+<td><pre><code>&lt;1servidor /&gt;
+&lt;direccion ip /&gt;</code></pre></td>
+</tr></tbody></table>
+<div class="box warn"><div class="box-title">Nombres reservados</div>
+<p>Los nombres que empiezan por cualquier combinación de las letras <code>xml</code>, como <code>xmlDatos</code> o <code>XMLconfiguracion</code>, están <strong>reservados</strong> para su estandarización. Para evitar conflictos, tampoco se debe utilizar <code>:</code> al crear nombres propios, ya que se reserva para trabajar con <strong>espacios de nombres</strong>.</p></div>
+
+<h4>6 · Comentarios fuera de otras marcas</h4>
+<p>Los comentarios comienzan con <code>&lt;!--</code> y terminan con <code>--&gt;</code>. Pueden situarse antes o después de un elemento, o entre los elementos de su contenido:</p>
+<pre><code>&lt;!-- Equipo que publica la aplicación web --&gt;
+&lt;equipo id="srv01"&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+    &lt;!-- La dirección pertenece a la red interna --&gt;
+    &lt;ip&gt;192.168.10.20&lt;/ip&gt;
+&lt;/equipo&gt;</code></pre>
+<p>Un comentario <strong>no puede introducirse dentro de una etiqueta</strong>, porque interrumpiría su marcado:</p>
+<div class="box danger"><div class="box-title">Incorrecto</div>
+<pre><code>&lt;equipo &lt;!-- servidor principal --&gt; id="srv01"&gt;</code></pre></div>
+<p>Además, el texto de un comentario <strong>no puede contener la secuencia <code>--</code></strong>.</p>`
+  },
+
+  {
+    id: 'lm-ud1-5-2',
+    tipo: 'subtema',
+    titulo: '5.2 Ejemplo completo bien formado',
+    resumen: 'Inventario del aula de sistemas que reúne todas las reglas: declaración, comentario, raíz única con atributo fecha, equipo con id y entorno, elemento vacío <sistema … />, servicios anidados.',
+    claves: ['Comienza con declaración XML', 'Única raíz: inventario (con atributo fecha)', 'Jerarquía coherente: inventario > equipo > nombre, ip, sistema, servicios > servicio', 'Todas las etiquetas cerradas y bien anidadas; elemento vacío <sistema operativo="Debian" version="13" />', 'Respeta mayúsculas/minúsculas', 'Todos los valores de atributo entre comillas', 'Comentario fuera de las etiquetas'],
+    tags: ['ejemplo', 'inventario', 'debian', 'bien formado', 'xml'],
+    contenido: `
+<p>El siguiente documento reúne las reglas anteriores:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Inventario simplificado del aula de sistemas --&gt;
+&lt;inventario fecha="2026-09-02"&gt;
+    &lt;equipo id="srv01" entorno="produccion"&gt;
+        &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+        &lt;ip&gt;192.168.10.20&lt;/ip&gt;
+        &lt;sistema operativo="Debian" version="13" /&gt;
+        &lt;servicios&gt;
+            &lt;servicio puerto="80"&gt;HTTP&lt;/servicio&gt;
+            &lt;servicio puerto="443"&gt;HTTPS&lt;/servicio&gt;
+        &lt;/servicios&gt;
+    &lt;/equipo&gt;
+&lt;/inventario&gt;</code></pre>
+<p>El documento está bien formado porque:</p>
+<ul>
+  <li>comienza con una <strong>declaración XML</strong>;</li>
+  <li>contiene una <strong>única raíz</strong>, <code>inventario</code>;</li>
+  <li>conserva una <strong>jerarquía coherente</strong>;</li>
+  <li>todas las etiquetas están <strong>cerradas y correctamente anidadas</strong> (incluido el elemento vacío <code>&lt;sistema … /&gt;</code>);</li>
+  <li>respeta las <strong>mayúsculas y minúsculas</strong>;</li>
+  <li>todos los valores de los atributos están <strong>entre comillas</strong>;</li>
+  <li>el <strong>comentario</strong> se encuentra fuera de las etiquetas.</li>
+</ul>
+<h4>Árbol resultante</h4>
+<pre><code>inventario [fecha="2026-09-02"]
+└── equipo [id="srv01", entorno="produccion"]
+    ├── nombre = "servidor-web"
+    ├── ip = "192.168.10.20"
+    ├── sistema [operativo="Debian", version="13"]   (vacío)
+    └── servicios
+        ├── servicio [puerto="80"]  = "HTTP"
+        └── servicio [puerto="443"] = "HTTPS"</code></pre>`
+  },
+
+  {
+    id: 'lm-ud1-5-3',
+    tipo: 'subtema',
+    titulo: '5.3 Cómo comprobar el documento',
+    resumen: 'Con un navegador (Firefox, Chrome, Edge): comprobación rápida de formación, muestra error y línea aproximada. Con XML Copy Editor: aplicación especializada que además valida con DTD, XML Schema o RELAX NG. Cuidado con validadores online y datos sensibles.',
+    claves: ['Navegador: abrir el .xml → si está bien formado muestra contenido/estructura; si no, mensaje de error con posición aproximada', 'El navegador NO valida contra DTD/esquema ni comprueba vocabularios', 'XML Copy Editor: resaltado, completado, comprobación; valida con DTD, XML Schema, RELAX NG (xml-copy-editor.sourceforge.io)', 'Validadores online: no usar con configuraciones reales, credenciales ni IP internas (se envían a un servicio externo)', 'Para clase: jsonformatter.org/xml-editor o xml.onlineviewer.net'],
+    tags: ['comprobar', 'navegador', 'firefox', 'chrome', 'edge', 'xml copy editor', 'validador', 'dtd', 'xml schema', 'relax ng', 'privacidad', 'online'],
+    contenido: `
+<h4>Con un navegador</h4>
+<ol>
+  <li>Descarga o copia el ejemplo en un archivo con extensión <code>.xml</code>.</li>
+  <li>Ábrelo con Firefox, Chrome, Edge…</li>
+  <li>Si está bien formado, el navegador mostrará su contenido o su estructura.</li>
+  <li>Modifica <code>&lt;/nombre&gt;</code> por <code>&lt;/Nombre&gt;</code> y vuelve a cargar el archivo.</li>
+  <li>El navegador mostrará un <strong>mensaje de error</strong> e indicará aproximadamente dónde se interrumpió el análisis.</li>
+</ol>
+<div class="box info"><div class="box-title">Alcance del navegador</div>
+<p>El navegador es útil para una <strong>comprobación rápida de formación</strong>, pero <strong>no garantiza</strong> que el contenido cumpla un vocabulario concreto ni valida normalmente el documento contra una DTD o un esquema XML.</p></div>
+
+<h4>Con XML Copy Editor</h4>
+<p><strong>XML Copy Editor</strong> es una aplicación de escritorio especializada en XML. Ofrece resaltado, completado y comprobación de documentos, y puede <strong>validar mediante DTD, XML Schema o RELAX NG</strong>. Disponible en <a href="https://xml-copy-editor.sourceforge.io/" target="_blank" rel="noopener">xml-copy-editor.sourceforge.io</a>.</p>
+<ol>
+  <li>Abre <code>inventario-bien-formado.xml</code> en XML Copy Editor.</li>
+  <li>Ejecuta la opción de <strong>comprobar que el documento está bien formado</strong>.</li>
+  <li>Observa que no se muestran errores.</li>
+  <li>Elimina una comilla o cambia el nombre de una etiqueta de cierre.</li>
+  <li>Repite la comprobación y utiliza la <strong>línea indicada</strong> para localizar el error.</li>
+</ol>
+
+<div class="box danger"><div class="box-title">Privacidad en los validadores en línea</div>
+<p>También existen editores y comprobadores XML en la Web. <strong>No deben utilizarse con configuraciones reales, credenciales, direcciones internas ni otros datos sensibles</strong>, porque el contenido se envía a un servicio externo.</p></div>
+<p>No obstante, aunque no se deben usar esos servicios dentro de una empresa privada o administración pública, para los ejemplos de clase se puede hacer uso de herramientas online como <a href="https://jsonformatter.org/xml-editor" target="_blank" rel="noopener">jsonformatter.org/xml-editor</a> o <a href="https://xml.onlineviewer.net/" target="_blank" rel="noopener">xml.onlineviewer.net</a>.</p>
+
+<table>
+<thead><tr><th>Herramienta</th><th>Comprueba bien formado</th><th>Valida (DTD/esquema)</th><th>Observaciones</th></tr></thead>
+<tbody>
+<tr><td>Navegador</td><td>Sí</td><td>No</td><td>Rápido; indica línea aproximada</td></tr>
+<tr><td>XML Copy Editor</td><td>Sí</td><td>Sí (DTD, XSD, RELAX NG)</td><td>Escritorio, especializado</td></tr>
+<tr><td>Validadores online</td><td>Sí</td><td>Según servicio</td><td>Solo para ejemplos sin datos sensibles</td></tr>
+</tbody></table>`
+  },
+
+  {
+    id: 'lm-ud1-ej2',
+    tipo: 'ejercicio',
+    titulo: 'Práctica · Romper y arreglar un XML bien formado',
+    resumen: 'A partir del inventario bien formado, introducir errores uno a uno (cierre distinto, comilla eliminada, segunda raíz, comentario dentro de etiqueta) y observar cómo reaccionan el navegador y XML Copy Editor.',
+    claves: ['Cada error debe provocar un error fatal en el procesador', 'Anotar el mensaje y la línea que indica cada herramienta', 'Volver a dejar el documento bien formado tras cada prueba'],
+    tags: ['practica', 'ejercicio', 'errores', 'navegador', 'xml copy editor', 'bien formado'],
+    contenido: `
+<p>Partiendo del <strong>ejemplo completo bien formado</strong> del apartado 5.2 (guárdalo como <code>inventario-bien-formado.xml</code>), realiza estas pruebas y anota en cada caso qué mensaje da el navegador y qué línea señala XML Copy Editor:</p>
+<ol>
+  <li>Cambia <code>&lt;/nombre&gt;</code> por <code>&lt;/Nombre&gt;</code>.</li>
+  <li>Elimina la comilla final de <code>puerto="80"</code>.</li>
+  <li>Añade un segundo <code>&lt;inventario&gt;…&lt;/inventario&gt;</code> después del primero.</li>
+  <li>Escribe un comentario dentro de una etiqueta: <code>&lt;equipo &lt;!-- principal --&gt; id="srv01"&gt;</code>.</li>
+  <li>Renombra <code>&lt;ip&gt;</code> como <code>&lt;1ip&gt;</code>.</li>
+  <li>Cambia <code>&lt;servicios&gt;</code> por <code>&lt;xmlServicios&gt;</code> (¿da error el navegador? ¿por qué conviene evitarlo igualmente?).</li>
+</ol>
+<details><summary>Qué debería ocurrir</summary>
+<table>
+<thead><tr><th>Prueba</th><th>Regla incumplida</th><th>Resultado esperado</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Marcado: nombres de apertura y cierre no coinciden (case-sensitive)</td><td>Error fatal («etiqueta no coincidente»)</td></tr>
+<tr><td>2</td><td>Atributos: valor sin comilla de cierre</td><td>Error fatal; el analizador «se traga» el resto hasta la siguiente comilla</td></tr>
+<tr><td>3</td><td>Unicidad de la raíz</td><td>Error fatal: «basura después del elemento raíz»</td></tr>
+<tr><td>4</td><td>Comentario dentro de una etiqueta</td><td>Error fatal en la etiqueta <code>equipo</code></td></tr>
+<tr><td>5</td><td>Nombres: no pueden empezar por número</td><td>Error fatal</td></tr>
+<tr><td>6</td><td>Nombres reservados que empiezan por <code>xml</code></td><td>Muchos procesadores lo aceptan, pero está reservado para estandarización: debe evitarse</td></tr>
+</tbody></table>
+</details>`
+  },
