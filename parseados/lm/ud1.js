@@ -1469,3 +1469,128 @@ prefijo  nombre local</code></pre>`
 <p>Si se elimina <code>xmlns:bak</code>, el prefijo <code>bak</code> queda <strong>sin declarar</strong> y el procesador comunica un error de espacio de nombres: un prefijo debe estar siempre asociado a una URI antes de usarse. Observa también que <code>inv:estado</code> y <code>bak:estado</code> comparten nombre local pero son elementos distintos gracias a sus URI.</p>
 </details>`
   },
+
+  /* ---------------- Glosario ---------------- */
+  {
+    id: 'lm-ud1-glosario',
+    tipo: 'glosario',
+    titulo: 'Glosario · UD1 Lenguajes de marcas',
+    resumen: 'Términos clave de la unidad: marca, etiqueta, elemento, atributo, raíz, anidamiento, SGML, metalenguaje, bien formado, válido, DTD, espacio de nombres, prefijo, URI, texto plano, UTF-8, interoperabilidad…',
+    claves: ['Marca / etiqueta / elemento / atributo', 'Raíz, anidamiento, padre-hijo-hermano', 'SGML, metalenguaje, ISO 8879:1986', 'Bien formado vs válido (DTD, esquema)', 'Espacio de nombres, xmlns, prefijo, URI/URN', 'Texto plano, UTF-8, BOM, ASCII', 'Interoperabilidad, independencia, flexibilidad'],
+    tags: ['glosario', 'definiciones', 'vocabulario', 'terminos'],
+    contenido: `
+<table>
+<thead><tr><th>Término</th><th>Definición</th></tr></thead>
+<tbody>
+<tr><td><strong>Marca</strong></td><td>Señal incluida en un documento para indicar la función o el significado de una parte de su contenido. Distingue los datos de las indicaciones que los describen.</td></tr>
+<tr><td><strong>Etiqueta</strong></td><td>Tipo de marca que identifica el comienzo (<code>&lt;x&gt;</code>) o el final (<code>&lt;/x&gt;</code>) de un elemento. En XML/HTML va entre <code>&lt;</code> y <code>&gt;</code>.</td></tr>
+<tr><td><strong>Elemento</strong></td><td>Etiqueta de apertura + contenido + etiqueta de cierre. Puede estar vacío: <code>&lt;x /&gt;</code>.</td></tr>
+<tr><td><strong>Contenido</strong></td><td>Información entre las etiquetas de apertura y cierre: texto, otros elementos o nada (elemento vacío).</td></tr>
+<tr><td><strong>Atributo</strong></td><td>Par <code>nombre="valor"</code> dentro de la etiqueta de apertura que añade información al elemento. Valor entre comillas; no se repite.</td></tr>
+<tr><td><strong>Elemento raíz</strong></td><td>Elemento único que contiene a todos los demás en un documento XML.</td></tr>
+<tr><td><strong>Declaración XML</strong></td><td><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code>. Indica versión y codificación. Va al principio; no es la raíz.</td></tr>
+<tr><td><strong>Anidamiento</strong></td><td>Inclusión de elementos dentro de otros, formando un árbol (padre, hijo, hermanos). El último que se abre es el primero que se cierra.</td></tr>
+<tr><td><strong>Case-sensitive</strong></td><td>Sensible a mayúsculas y minúsculas. XML lo es (<code>&lt;Equipo&gt;</code> ≠ <code>&lt;equipo&gt;</code>); HTML no.</td></tr>
+<tr><td><strong>Comentario</strong></td><td><code>&lt;!-- texto --&gt;</code>. Fuera de las etiquetas; no puede contener <code>--</code>.</td></tr>
+<tr><td><strong>Documento bien formado</strong></td><td>Documento XML que cumple todas las reglas sintácticas básicas (una raíz, cierre, anidamiento, comillas, nombres, case).</td></tr>
+<tr><td><strong>Documento válido</strong></td><td>Documento bien formado que además cumple las reglas de una DTD o esquema (elementos obligatorios, orden, tipos).</td></tr>
+<tr><td><strong>DTD</strong></td><td><em>Document Type Definition</em>: define qué elementos y atributos admite un tipo de documento (<code>&lt;!ELEMENT …&gt;</code>).</td></tr>
+<tr><td><strong>Esquema (XML Schema, RELAX NG)</strong></td><td>Lenguajes para definir la estructura y los tipos de datos permitidos en un documento XML; usados en la validación.</td></tr>
+<tr><td><strong>Error fatal</strong></td><td>Situación en que el procesador XML debe detenerse y comunicar el problema (p. ej. etiqueta sin cerrar).</td></tr>
+<tr><td><strong>Procesador / analizador XML</strong></td><td>Programa que lee el documento y construye su árbol en memoria.</td></tr>
+<tr><td><strong>Espacio de nombres</strong></td><td>Mecanismo para identificar a qué vocabulario pertenece un elemento o atributo, evitando colisiones de nombres.</td></tr>
+<tr><td><strong>xmlns</strong></td><td>Atributo que declara un espacio de nombres: <code>xmlns:prefijo="URI"</code> o <code>xmlns="URI"</code> (por defecto).</td></tr>
+<tr><td><strong>Prefijo / nombre local</strong></td><td>En <code>inv:nombre</code>, <code>inv</code> es el prefijo (alias de la URI) y <code>nombre</code> el nombre local.</td></tr>
+<tr><td><strong>URI / URN</strong></td><td>Identificador único y estable de un vocabulario (p. ej. <code>urn:lmsgi:inventario</code>, <code>http://www.w3.org/2000/svg</code>). No tiene que ser una web accesible.</td></tr>
+<tr><td><strong>SGML</strong></td><td><em>Standard Generalized Markup Language</em>. Metalenguaje estándar ISO 8879:1986, derivado de GML (IBM). Origen de HTML y XML.</td></tr>
+<tr><td><strong>Metalenguaje</strong></td><td>Lenguaje que proporciona reglas para definir otros lenguajes (SGML, XML).</td></tr>
+<tr><td><strong>HTML</strong></td><td>Lenguaje de marcas para estructurar páginas web; etiquetas predefinidas, no case-sensitive.</td></tr>
+<tr><td><strong>XML</strong></td><td><em>Extensible Markup Language</em>. Lenguaje descriptivo para representar datos con etiquetas propias; simplificación de SGML.</td></tr>
+<tr><td><strong>XHTML</strong></td><td>HTML escrito con sintaxis XML; procesado como XML es case-sensitive.</td></tr>
+<tr><td><strong>Markdown</strong></td><td>Sintaxis ligera (<code>#</code>, <code>*</code>, <code>[]()</code>) para documentación; se transforma en HTML.</td></tr>
+<tr><td><strong>JSON</strong></td><td>Formato de serialización de datos con objetos <code>{}</code>, listas <code>[]</code> y pares clave-valor. Habitual en API.</td></tr>
+<tr><td><strong>YAML</strong></td><td>Formato de serialización legible basado en sangrado y <code>clave: valor</code>. Habitual en configuración.</td></tr>
+<tr><td><strong>SVG</strong></td><td>Vocabulario XML para gráficos vectoriales escalables.</td></tr>
+<tr><td><strong>RSS</strong></td><td>Vocabulario XML para distribuir novedades (<code>&lt;channel&gt;</code>, <code>&lt;item&gt;</code>).</td></tr>
+<tr><td><strong>LaTeX / TeX</strong></td><td>Sistema de composición de documentos con marcas de procedimiento (<code>\\section</code>, <code>\\textbf</code>).</td></tr>
+<tr><td><strong>Lenguaje de procedimiento</strong></td><td>Sus marcas indican qué operación realizar sobre el contenido (LaTeX).</td></tr>
+<tr><td><strong>Lenguaje de presentación</strong></td><td>Sus marcas indican cómo se organiza o muestra el contenido (HTML, Markdown).</td></tr>
+<tr><td><strong>Lenguaje descriptivo / semántico</strong></td><td>Sus marcas indican qué significa cada dato (XML).</td></tr>
+<tr><td><strong>Texto plano</strong></td><td>Archivo formado solo por caracteres legibles con cualquier editor, sin formato binario propietario.</td></tr>
+<tr><td><strong>Extensión</strong></td><td>Sufijo del nombre de archivo (<code>.xml</code>, <code>.json</code>) que sugiere cómo tratarlo. No determina el contenido.</td></tr>
+<tr><td><strong>Tipo de contenido (MIME)</strong></td><td>Información que envía un servidor sobre el formato (<code>text/html</code>, <code>application/json</code>).</td></tr>
+<tr><td><strong>Codificación de caracteres</strong></td><td>Correspondencia entre caracteres y bytes. <strong>UTF-8</strong>: 1–4 bytes por carácter; ASCII ocupa 1 byte.</td></tr>
+<tr><td><strong>BOM</strong></td><td><em>Byte Order Mark</em>: marca opcional de 3 bytes al inicio de un archivo UTF-8.</td></tr>
+<tr><td><strong>Interoperabilidad</strong></td><td>Capacidad de sistemas distintos para intercambiar información y usarla correctamente (sintaxis + significado).</td></tr>
+<tr><td><strong>Resaltado de sintaxis</strong></td><td>Coloreado que aplica el editor para distinguir etiquetas, atributos y contenido. No valida.</td></tr>
+<tr><td><strong>Validación</strong></td><td>Comprobación de que un documento cumple las reglas sintácticas (bien formado) o de un esquema (válido).</td></tr>
+<tr><td><strong>Plegado de bloques</strong></td><td>Función del editor para ocultar temporalmente partes del documento.</td></tr>
+<tr><td><strong>Navegador web</strong></td><td>Aplicación que obtiene, interpreta y muestra contenidos web (Firefox, Chrome, Edge, Safari).</td></tr>
+</tbody></table>`
+  },
+
+  /* ---------------- Recursos ---------------- */
+  {
+    id: 'lm-ud1-recursos',
+    tipo: 'recursos',
+    titulo: 'Recursos, herramientas y bibliografía · UD1',
+    resumen: 'Libro de referencia (Síntesis), especificaciones W3C (XML 1.0, Namespaces, HTML), norma ISO 8879 (SGML), documentación de editores (Notepad++, gedit, VS Code, Kate, Sublime, Neovim, XML Copy Editor), vídeo de historia y herramientas online.',
+    claves: ['Libro: Moreno Pérez y González Ruíz, Lenguajes de marcas y SGI, Síntesis, 3.ª ed. 2026, ISBN 978-84-1357-481-3', 'W3C: XML 1.0 (5.ª ed.), Namespaces in XML 1.0 (3.ª ed.), HTML 2.0, historia de la Web', 'ISO 8879:1986 (SGML)', 'Editores: Notepad++, gedit, VS Code, Kate, Sublime Text, Neovim, XML Copy Editor', 'Online (solo ejemplos de clase): jsonformatter.org/xml-editor, xml.onlineviewer.net, Overleaf'],
+    tags: ['recursos', 'bibliografia', 'w3c', 'iso', 'enlaces', 'herramientas', 'sintesis'],
+    contenido: `
+<p class="muted">Los apuntes originales son material docente de elaboración propia. Las fuentes recogidas sirven para contrastar conceptos y orientar la progresión del temario; su inclusión no implica autoría ni respaldo editorial.</p>
+
+<h4>Libro de referencia</h4>
+<div class="box info"><div class="box-title">Bibliografía principal</div>
+<p>Moreno Pérez, Juan Carlos, y González Ruíz, Sergio Luis. <em>Lenguajes de marcas y sistemas de gestión de información</em>. Editorial Síntesis.</p>
+<ul>
+  <li>Año: 2026 · Tercera edición · España</li>
+  <li>ISBN: 978-84-1357-481-3</li>
+</ul></div>
+
+<h4>Especificaciones y estándares</h4>
+<ul>
+  <li>ISO. <a href="https://www.iso.org/standard/16387.html" target="_blank" rel="noopener">ISO 8879:1986 — Standard Generalized Markup Language (SGML)</a></li>
+  <li>ISO. <a href="https://www.iso.org/about" target="_blank" rel="noopener">Información general sobre ISO</a></li>
+  <li>W3C. <a href="https://www.w3.org/2012/08/history-of-the-web/origins.htm" target="_blank" rel="noopener">Web History Primer: Origins of the Web</a></li>
+  <li>W3C. <a href="https://www.w3.org/TR/xml/" target="_blank" rel="noopener">Extensible Markup Language (XML) 1.0, quinta edición</a></li>
+  <li>W3C. <a href="https://www.w3.org/TR/xml-names/" target="_blank" rel="noopener">Namespaces in XML 1.0, tercera edición</a></li>
+  <li>W3C. <a href="https://www.w3.org/MarkUp/html-spec/tex-experiment/html-spec.html" target="_blank" rel="noopener">Hypertext Markup Language 2.0 (especificación)</a></li>
+</ul>
+
+<h4>Editores y herramientas</h4>
+<ul>
+  <li>Microsoft Support. <a href="https://support.microsoft.com/en-us/windows/help-in-notepad-4d68c388-2ff2-0e7f-b706-35fb2ab88a8c" target="_blank" rel="noopener">Ayuda del Bloc de notas de Windows</a></li>
+  <li>Proyecto gedit. <a href="https://gedit-text-editor.org/features.html" target="_blank" rel="noopener">Funciones principales de gedit</a></li>
+  <li>Notepad++. <a href="https://npp-user-manual.org/docs/" target="_blank" rel="noopener">Manual de usuario</a></li>
+  <li>Microsoft. <a href="https://code.visualstudio.com/docs/languages/overview" target="_blank" rel="noopener">Lenguajes y funciones de edición de Visual Studio Code</a></li>
+  <li>Proyecto KDE. <a href="https://kate-editor.org/about-kate/" target="_blank" rel="noopener">Características del editor Kate</a></li>
+  <li>Sublime HQ. <a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a></li>
+  <li>Proyecto Neovim. <a href="https://neovim.io/doc/user/" target="_blank" rel="noopener">Documentación de Neovim</a></li>
+  <li>XML Copy Editor. <a href="https://xml-copy-editor.sourceforge.io/html/features.html" target="_blank" rel="noopener">Características del editor</a></li>
+</ul>
+
+<h4>Herramientas en línea (solo para ejemplos sin datos sensibles)</h4>
+<ul>
+  <li><a href="https://jsonformatter.org/xml-editor" target="_blank" rel="noopener">jsonformatter.org/xml-editor</a> — editor/comprobador XML</li>
+  <li><a href="https://xml.onlineviewer.net/" target="_blank" rel="noopener">xml.onlineviewer.net</a> — visor XML</li>
+  <li><a href="https://www.overleaf.com/" target="_blank" rel="noopener">Overleaf</a> — LaTeX en línea</li>
+  <li><a href="https://www.sarmate.net/demo/mathpad_tex_edit.php" target="_blank" rel="noopener">sarmate.net mathpad</a> — prueba rápida de TeX</li>
+</ul>
+
+<h4>Vídeo</h4>
+<ul>
+  <li><a href="https://youtu.be/Ea9Awg4kKuw?si=5Kx6FucBfk7_hYOZ" target="_blank" rel="noopener">Historia de los lenguajes de marcas</a></li>
+</ul>
+
+<h4>Ejemplos de los apuntes</h4>
+<ul>
+  <li><a href="apuntes/lm/assets/examples/tema01/presentacion.html" target="_blank" rel="noopener">presentacion.html</a> — HTML de presentación</li>
+  <li><a href="apuntes/lm/assets/examples/tema01/mayusculas-html.html" target="_blank" rel="noopener">mayusculas-html.html</a> — HTML con mayúsculas mezcladas</li>
+  <li><a href="apuntes/lm/tema01/imagenes/prueba_navegador.png" target="_blank" rel="noopener">prueba_navegador.png</a> — resultado en el navegador</li>
+  <li><a href="apuntes/lm/index.html" target="_blank" rel="noopener">Sitio original de los apuntes (MkDocs)</a></li>
+</ul>`
+  }
+
+  ]
+});
