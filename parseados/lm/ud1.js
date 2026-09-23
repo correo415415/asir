@@ -1318,3 +1318,154 @@ Tamaño: 5 bytes</code></pre>
 </tbody></table>
 </details>`
   },
+
+  /* ---------------- 6. Espacios de nombres ---------------- */
+  {
+    id: 'lm-ud1-6',
+    tipo: 'tema',
+    titulo: '6. Utilización de espacios de nombres',
+    resumen: 'Un espacio de nombres XML identifica a qué vocabulario pertenece cada elemento o atributo. Se declara con xmlns, se identifica por una URI y se usa mediante un prefijo. Evita colisiones al combinar vocabularios (inventario vs incidencias, SVG).',
+    claves: ['Espacio de nombres: identifica a qué vocabulario pertenece un elemento o atributo', 'Se identifica con una URI (identificador único y estable; no tiene que ser una web)', 'Prefijo:nombreLocal → inv:nombre (inv = prefijo, nombre = nombre local)', 'Declaración: xmlns:prefijo="URI" en un elemento (normalmente la raíz)', 'El procesador identifica cada elemento por URI + nombre local; los prefijos son intercambiables', 'xmlns sin prefijo = espacio de nombres por defecto (ej. SVG)', 'Sirven para: combinar vocabularios sin colisiones, indicar procedencia, procesar solo lo conocido, reutilizar estándares'],
+    tags: ['espacios de nombres', 'namespaces', 'xmlns', 'prefijo', 'uri', 'urn', 'svg', 'colision', 'vocabulario'],
+    links: ['lm-ud1-6-1', 'lm-ud1-6-2', 'lm-ud1-ej3'],
+    contenido: `
+<div class="box def"><div class="box-title">Espacio de nombres XML</div>
+<p>Permite <strong>identificar a qué vocabulario pertenece</strong> un elemento o atributo. Es especialmente útil cuando un documento combina información de aplicaciones diferentes que utilizan <strong>etiquetas con el mismo nombre</strong>.</p></div>
+<p>Cada espacio de nombres se identifica mediante una <strong>URI</strong> y puede asociarse a un <strong>prefijo</strong> corto:</p>
+<pre><code>&lt;inv:nombre&gt;servidor-web&lt;/inv:nombre&gt;</code></pre>
+<p>Aquí, <code>inv</code> es el <strong>prefijo</strong> y <code>nombre</code> es el <strong>nombre local</strong> del elemento.</p>
+<div class="box info"><div class="box-title">La URI funciona como identificador</div>
+<p>La URI <strong>no tiene por qué conducir a una página web</strong>. Su función principal es proporcionar un identificador <strong>único y estable</strong> para el vocabulario.</p></div>
+
+<h4>¿Para qué sirven?</h4>
+<ul>
+  <li><strong>Combinar vocabularios</strong> XML sin colisiones.</li>
+  <li>Indicar la <strong>procedencia</strong> de cada elemento.</li>
+  <li>Facilitar que una aplicación <strong>procese solo el vocabulario que conoce</strong>.</li>
+  <li><strong>Reutilizar estándares</strong> junto con vocabularios propios.</li>
+</ul>
+
+<h4>Espacio de nombres predeterminado: el caso de SVG</h4>
+<p>SVG ofrece un ejemplo habitual de espacio de nombres <strong>por defecto</strong>:</p>
+<pre><code>&lt;svg xmlns="http://www.w3.org/2000/svg" width="100" height="60"&gt;
+    &lt;circle cx="30" cy="30" r="20" fill="green" /&gt;
+&lt;/svg&gt;</code></pre>
+<p>Al declararse con <code>xmlns</code> <strong>y sin prefijo</strong>, el espacio de nombres se aplica por defecto a los elementos contenidos en <code>svg</code>.</p>
+
+<h4>Contenido del apartado</h4>
+<ol>
+  <li>Documento 1: el problema sin espacios de nombres</li>
+  <li>Documento 2: la solución con espacios de nombres</li>
+  <li>Ejercicio: combinar vocabularios</li>
+</ol>`
+  },
+
+  {
+    id: 'lm-ud1-6-1',
+    tipo: 'subtema',
+    titulo: '6.1 El problema sin espacios de nombres',
+    resumen: 'Un informe combina un inventario y un sistema de incidencias, ambos con <nombre> y <estado>. El documento está bien formado, pero una aplicación podría confundir el estado operativo del servidor con el estado de tramitación de la incidencia.',
+    claves: ['Dos vocabularios distintos usan las mismas etiquetas: nombre y estado', 'El documento está bien formado, pero es ambiguo', 'Riesgo: confundir estado operativo (activo) con estado de tramitación (abierta)'],
+    tags: ['colision', 'ambiguedad', 'informe', 'inventario', 'incidencias', 'sin namespaces'],
+    contenido: `
+<p>Supongamos que una aplicación reúne información de un <strong>inventario</strong> y de un sistema de <strong>incidencias</strong>. Ambos utilizan las etiquetas <code>nombre</code> y <code>estado</code>:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;informe&gt;
+    &lt;servidor&gt;
+        &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+        &lt;estado&gt;activo&lt;/estado&gt;
+    &lt;/servidor&gt;
+    &lt;incidencia&gt;
+        &lt;nombre&gt;Error de conexión&lt;/nombre&gt;
+        &lt;estado&gt;abierta&lt;/estado&gt;
+    &lt;/incidencia&gt;
+&lt;/informe&gt;</code></pre>
+<p>El documento <strong>está bien formado</strong>, pero las etiquetas no indican por sí mismas a qué vocabulario pertenecen. Una aplicación podría <strong>confundir</strong> el estado operativo de un servidor (<code>activo</code>) con el estado de tramitación de una incidencia (<code>abierta</code>).</p>
+<div class="box warn"><div class="box-title">Bien formado, pero ambiguo</div>
+<p>La sintaxis es correcta; el problema es <strong>semántico</strong>: dos <code>&lt;estado&gt;</code> con significados distintos y ninguna marca que los diferencie.</p></div>`
+  },
+
+  {
+    id: 'lm-ud1-6-2',
+    tipo: 'subtema',
+    titulo: '6.2 La solución con espacios de nombres',
+    resumen: 'Se declara cada vocabulario con xmlns:inv="urn:lmsgi:inventario" y xmlns:inc="urn:lmsgi:incidencias" en la raíz y se prefijan los elementos: inv:estado es el estado operativo, inc:estado el de tramitación. El procesador identifica cada elemento por URI + nombre local.',
+    claves: ['xmlns:inv="urn:lmsgi:inventario" → prefijo inv → Inventario de sistemas', 'xmlns:inc="urn:lmsgi:incidencias" → prefijo inc → Gestión de incidencias', 'inv:estado = estado operativo; inc:estado = estado de tramitación', 'Identidad real = URI + nombre local; el prefijo es solo un alias legible', 'Los prefijos podrían cambiarse si siguen asociados a las mismas URI'],
+    tags: ['xmlns', 'prefijo', 'urn', 'uri', 'inv', 'inc', 'declaracion', 'con namespaces'],
+    contenido: `
+<p>En el segundo documento se identifica cada vocabulario mediante una declaración <code>xmlns</code>:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;informe
+    xmlns:inv="urn:lmsgi:inventario"
+    xmlns:inc="urn:lmsgi:incidencias"&gt;
+    &lt;inv:servidor&gt;
+        &lt;inv:nombre&gt;servidor-web&lt;/inv:nombre&gt;
+        &lt;inv:estado&gt;activo&lt;/inv:estado&gt;
+    &lt;/inv:servidor&gt;
+    &lt;inc:incidencia&gt;
+        &lt;inc:nombre&gt;Error de conexión&lt;/inc:nombre&gt;
+        &lt;inc:estado&gt;abierta&lt;/inc:estado&gt;
+    &lt;/inc:incidencia&gt;
+&lt;/informe&gt;</code></pre>
+<p>Las declaraciones relacionan los prefijos con sus identificadores:</p>
+<table>
+<thead><tr><th>Declaración</th><th>Prefijo</th><th>Vocabulario</th></tr></thead>
+<tbody>
+<tr><td><code>xmlns:inv="urn:lmsgi:inventario"</code></td><td><code>inv</code></td><td>Inventario de sistemas</td></tr>
+<tr><td><code>xmlns:inc="urn:lmsgi:incidencias"</code></td><td><code>inc</code></td><td>Gestión de incidencias</td></tr>
+</tbody></table>
+<p>Ahora <strong>no existe ambigüedad</strong>:</p>
+<ul>
+  <li><code>inv:estado</code> es el estado <strong>operativo</strong> de un servidor.</li>
+  <li><code>inc:estado</code> es el estado de <strong>tramitación</strong> de una incidencia.</li>
+</ul>
+<div class="box tip"><div class="box-title">Cómo lo ve el procesador</div>
+<p>El procesador identifica realmente cada elemento mediante la <strong>combinación de la URI y el nombre local</strong>. Los prefijos facilitan la lectura y <strong>podrían cambiarse por otros</strong> si continuaran asociados a las mismas URI. Es decir, <code>{urn:lmsgi:inventario}estado</code> y <code>{urn:lmsgi:incidencias}estado</code> son dos elementos diferentes.</p></div>
+
+<h4>Anatomía de un nombre cualificado</h4>
+<pre><code>xmlns:inv="urn:lmsgi:inventario"
+      ───            ─────────────────────
+    prefijo                 URI (identificador del vocabulario)
+
+&lt;inv:estado&gt;
+  ─── ──────
+prefijo  nombre local</code></pre>`
+  },
+
+  {
+    id: 'lm-ud1-ej3',
+    tipo: 'ejercicio',
+    titulo: 'Ejercicio · Combinar vocabularios con espacios de nombres',
+    resumen: 'Construir un documento XML que combine el inventario de equipos con un vocabulario propio de copias de seguridad, usando prefijos y URIs, e incrustar un SVG con su espacio de nombres por defecto.',
+    claves: ['Declarar dos prefijos en la raíz con URIs urn:', 'Cada elemento lleva el prefijo de su vocabulario', 'SVG usa espacio de nombres por defecto (xmlns sin prefijo)', 'Comprobar que sigue bien formado en el navegador'],
+    tags: ['ejercicio', 'namespaces', 'xmlns', 'svg', 'urn', 'practica'],
+    contenido: `
+<h4>Enunciado</h4>
+<ol>
+  <li>Crea <code>informe-copias.xml</code> con raíz <code>&lt;informe&gt;</code>.</li>
+  <li>Declara el vocabulario de inventario con prefijo <code>inv</code> y URI <code>urn:lmsgi:inventario</code>, y un vocabulario de copias de seguridad con prefijo <code>bak</code> y URI <code>urn:lmsgi:copias</code>.</li>
+  <li>Describe un servidor (<code>inv:servidor</code> con <code>inv:nombre</code> e <code>inv:estado</code>) y una copia (<code>bak:copia</code> con <code>bak:nombre</code>, <code>bak:fecha</code> y <code>bak:estado</code>).</li>
+  <li>Añade dentro del informe un pequeño <code>&lt;svg&gt;</code> con un círculo verde, usando el espacio de nombres por defecto de SVG.</li>
+  <li>Ábrelo en el navegador y comprueba que está bien formado. ¿Qué pasa si eliminas la declaración <code>xmlns:bak</code>?</li>
+</ol>
+<details><summary>Solución</summary>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;informe
+    xmlns:inv="urn:lmsgi:inventario"
+    xmlns:bak="urn:lmsgi:copias"&gt;
+    &lt;inv:servidor&gt;
+        &lt;inv:nombre&gt;servidor-web&lt;/inv:nombre&gt;
+        &lt;inv:estado&gt;activo&lt;/inv:estado&gt;
+    &lt;/inv:servidor&gt;
+    &lt;bak:copia&gt;
+        &lt;bak:nombre&gt;copia-diaria&lt;/bak:nombre&gt;
+        &lt;bak:fecha&gt;2026-09-02&lt;/bak:fecha&gt;
+        &lt;bak:estado&gt;completada&lt;/bak:estado&gt;
+    &lt;/bak:copia&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"&gt;
+        &lt;circle cx="30" cy="30" r="20" fill="green" /&gt;
+    &lt;/svg&gt;
+&lt;/informe&gt;</code></pre>
+<p>Si se elimina <code>xmlns:bak</code>, el prefijo <code>bak</code> queda <strong>sin declarar</strong> y el procesador comunica un error de espacio de nombres: un prefijo debe estar siempre asociado a una URI antes de usarse. Observa también que <code>inv:estado</code> y <code>bak:estado</code> comparten nombre local pero son elementos distintos gracias a sus URI.</p>
+</details>`
+  },
