@@ -600,3 +600,284 @@ activo: true</code></pre></td>
 <tr><td>Estandarización</td><td>¿Existen reglas públicas y suficientemente estables?</td></tr>
 </tbody></table>`
   },
+
+  {
+    id: 'lm-ud1-2-5',
+    tipo: 'subtema',
+    titulo: '2.5 Características generales de los lenguajes de marcas',
+    resumen: 'Se basan en texto plano (extensión ≠ contenido; bytes y UTF-8), favorecen la interoperabilidad, son independientes del programa y la plataforma, y son flexibles y fáciles de crear.',
+    claves: ['Texto plano: se lee con cualquier editor; facilita búsquedas, copias de seguridad y Git', 'El contenido determina qué es el documento; la extensión indica cómo se espera tratarlo', 'En la Web el servidor informa del tipo de contenido (text/html, application/json)', 'UTF-8: 1 a 4 bytes por carácter. "Hola" = 4 bytes; "José" = 5 bytes (é = C3 A9)', '<ip>192.168.1.10</ip> = 21 bytes (todo ASCII)', 'Salto de línea +1/+2 bytes; BOM UTF-8 +3 bytes; tamaño ≠ espacio en disco (bloques)', 'Interoperabilidad: sistemas distintos intercambian y usan la información; requiere acordar sintaxis Y significado', 'Independencia: no ligados a un SO o aplicación propietaria (no absoluta)', 'Flexibles: fácil de crear ≠ cualquier estructura es correcta'],
+    tags: ['texto plano', 'extension', 'utf-8', 'bytes', 'ascii', 'bom', 'interoperabilidad', 'independencia', 'flexibilidad', 'mime', 'text/html', 'application/json', 'git'],
+    contenido: `
+<p>Los conceptos de <strong>texto plano</strong>, <strong>interoperabilidad</strong>, <strong>independencia</strong> y <strong>flexibilidad</strong> explican por qué los lenguajes de marcas resultan útiles para almacenar e intercambiar información.</p>
+
+<h4>1 · Se basan en texto plano</h4>
+<div class="box def"><div class="box-title">Texto plano</div>
+<p>Un archivo de <strong>texto plano</strong> almacena caracteres que pueden leerse con un editor de texto, sin necesitar el programa concreto que lo creó. Un documento XML, HTML o Markdown puede abrirse con Visual Studio Code, Notepad++ o un editor básico.</p></div>
+<p>Esto no significa que el documento carezca de estructura o formato visual. El <em>código fuente</em> es texto plano, pero una aplicación interpreta sus marcas y puede generar una página web, un gráfico o un documento con formato.</p>
+<p>El texto plano también facilita las <strong>búsquedas</strong>, las <strong>copias de seguridad</strong> y la <strong>comparación de cambios</strong> mediante sistemas de control de versiones como <strong>Git</strong>.</p>
+
+<h5>Si todos son texto plano, ¿para qué sirve la extensión?</h5>
+<p><strong>Texto plano</strong> describe cómo se almacena el contenido, mientras que la <strong>extensión</strong> ayuda a reconocer con qué reglas debe interpretarse. Los archivos <code>pagina.html</code>, <code>equipo.xml</code>, <code>datos.json</code>, <code>configuracion.yaml</code> y <code>apuntes.md</code> contienen caracteres, pero emplean sintaxis y tienen finalidades diferentes.</p>
+<p>La extensión sirve como <em>pista</em> para las personas, el sistema operativo y las aplicaciones: un editor puede aplicar el coloreado adecuado y el sistema puede proponer un programa para abrir el archivo (<code>.html</code> → navegador, <code>.xml</code> → herramientas XML).</p>
+<p>Cambiar <code>equipo.xml</code> por <code>equipo.txt</code> <strong>no modifica su contenido</strong>: si conserva sus etiquetas, continúa siendo XML escrito como texto plano, aunque algunas herramientas podrían dejar de reconocerlo automáticamente. Del mismo modo, usar la extensión <code>.json</code> no convierte cualquier texto en JSON:</p>
+<pre><code>Esto no es JSON.</code></pre>
+<p>Un analizador JSON rechazará ese contenido aunque el archivo se llame <code>datos.json</code>.</p>
+<div class="box tip"><div class="box-title">Regla de oro</div>
+<p><strong>El contenido determina qué es realmente el documento y la extensión indica cómo se espera que sea tratado.</strong></p></div>
+<div class="box info"><div class="box-title">En la Web también existe el tipo de contenido</div>
+<p>Cuando un servidor envía un archivo, puede informar de su formato mediante un tipo como <code>text/html</code> o <code>application/json</code>. El navegador utiliza esta información para decidir cómo procesar la respuesta; <strong>no depende únicamente de la extensión</strong> del nombre.</p></div>
+
+<h5>Del texto a los bytes</h5>
+<p>Aunque veamos letras y símbolos, un archivo almacena <strong>bytes</strong>. Una <strong>codificación de caracteres</strong> establece qué bytes representan cada carácter. <strong>UTF-8</strong> es una de las más utilizadas y emplea <strong>entre uno y cuatro bytes por carácter</strong>.</p>
+<p>El texto <code>Hola</code> ocupa cuatro bytes en UTF-8:</p>
+<table>
+<thead><tr><th>Carácter</th><th>Valor hexadecimal</th><th>Tamaño</th></tr></thead>
+<tbody>
+<tr><td><code>H</code></td><td><code>48</code></td><td>1 byte</td></tr>
+<tr><td><code>o</code></td><td><code>6F</code></td><td>1 byte</td></tr>
+<tr><td><code>l</code></td><td><code>6C</code></td><td>1 byte</td></tr>
+<tr><td><code>a</code></td><td><code>61</code></td><td>1 byte</td></tr>
+</tbody></table>
+<pre><code>Texto:  Hola
+Bytes:  48 6F 6C 61
+Tamaño: 4 bytes</code></pre>
+<p>En cambio, la letra <code>é</code> necesita <strong>dos bytes</strong> en UTF-8. Por eso <code>José</code>, aunque tiene cuatro caracteres, ocupa cinco bytes:</p>
+<pre><code>Texto:  José
+Bytes:  4A 6F 73 C3 A9
+Tamaño: 5 bytes</code></pre>
+<p>Un fragmento XML también es una secuencia de caracteres codificados. Guardado en UTF-8, sin salto de línea ni marca BOM, este contenido ocupa <strong>21 bytes</strong>:</p>
+<pre><code>&lt;ip&gt;192.168.1.10&lt;/ip&gt;</code></pre>
+<p>Los signos <code>&lt;</code>, <code>&gt;</code>, <code>/</code>, las letras, los puntos y los números pertenecen al conjunto <strong>ASCII</strong> y cada uno ocupa un byte en UTF-8.</p>
+<div class="box warn"><div class="box-title">El tamaño puede variar</div>
+<p>Un salto de línea puede añadir uno o dos bytes según el sistema, y una marca <strong>BOM</strong> de UTF-8 añade tres bytes al principio. Además, el <strong>tamaño del archivo</strong> y el <strong>espacio ocupado en disco</strong> pueden ser distintos, porque el sistema de archivos reserva el almacenamiento en bloques.</p></div>
+
+<h4>2 · Favorecen la interoperabilidad</h4>
+<div class="box def"><div class="box-title">Interoperabilidad</div>
+<p>Capacidad de sistemas diferentes para <strong>intercambiar información y utilizarla correctamente</strong>. Un servidor Linux puede generar XML y una aplicación ejecutada en Windows puede procesarlo porque ambos conocen las mismas reglas.</p></div>
+<div class="box warn"><div class="box-title">Intercambiar no siempre significa entender</div>
+<p>Compartir una sintaxis no garantiza por sí solo la interoperabilidad. Dos aplicaciones pueden leer XML, pero deben acordar también <strong>qué significan las etiquetas</strong> y <strong>qué estructura</strong> tendrá el documento.</p></div>
+
+<h4>3 · Son independientes del programa y de la plataforma</h4>
+<p>La información no suele quedar ligada a un único sistema operativo o a una aplicación propietaria. El mismo archivo puede copiarse y procesarse en distintos equipos siempre que exista una herramienta compatible con el estándar.</p>
+<p>Esta independencia <strong>no es absoluta</strong>: el programa receptor necesita conocer la sintaxis, el vocabulario y la codificación empleados. La ventaja es que esas reglas pueden documentarse y aplicarse en plataformas diferentes.</p>
+
+<h4>4 · Son flexibles y fáciles de crear</h4>
+<p>Muchos lenguajes de marcas pueden escribirse con cualquier editor de texto y no requieren herramientas costosas. Además, algunos permiten crear estructuras adaptadas al problema, como las etiquetas <code>&lt;servidor&gt;</code>, <code>&lt;ip&gt;</code> o <code>&lt;servicio&gt;</code> de un inventario propio.</p>
+<p>«Fácil de crear» <strong>no significa que cualquier estructura sea correcta</strong>. Cuanto más crece un documento, más importantes son las reglas de sintaxis, la validación y la documentación del vocabulario utilizado.</p>`
+  },
+
+  {
+    id: 'lm-ud1-2-6',
+    tipo: 'subtema',
+    titulo: '2.6 Resumen del apartado 2',
+    resumen: 'Cinco ideas para recordar sobre elección de formato, texto plano, interoperabilidad, independencia y flexibilidad.',
+    claves: ['La elección depende de sintaxis, flexibilidad, propósito, compatibilidad y estandarización', 'El texto plano facilita edición, búsqueda y control de versiones', 'Interoperabilidad: intercambio entre sistemas si comparten sintaxis Y significado', 'Independencia: menos vinculación con un programa o plataforma', 'Flexibilidad: adaptar el documento, pero definir reglas para mantener la consistencia'],
+    tags: ['resumen', 'repaso'],
+    contenido: `
+<ul>
+  <li>La <strong>elección</strong> depende de la sintaxis, la flexibilidad, el propósito, la compatibilidad y el grado de estandarización.</li>
+  <li>El <strong>texto plano</strong> facilita la edición, la búsqueda y el control de versiones.</li>
+  <li>La <strong>interoperabilidad</strong> permite intercambiar datos entre sistemas, siempre que estos compartan tanto la sintaxis como el significado.</li>
+  <li>La <strong>independencia</strong> reduce la vinculación con un programa o una plataforma concreta.</li>
+  <li>La <strong>flexibilidad</strong> facilita adaptar el documento, pero exige definir reglas para mantener su consistencia.</li>
+</ul>`
+  },
+
+  /* ---------------- 3. Estructura y sintaxis ---------------- */
+  {
+    id: 'lm-ud1-3',
+    tipo: 'tema',
+    titulo: '3. Estructura y sintaxis de un documento XML',
+    resumen: 'Partes de un documento XML (declaración, raíz, elementos, anidamiento, contenido, atributos) y sus reglas sintácticas básicas. Comparación XML vs HTML en mayúsculas/minúsculas.',
+    claves: ['Declaración XML: <?xml version="1.0" encoding="UTF-8"?> (habitual, no siempre obligatoria; no es la raíz)', 'Exactamente UN elemento raíz que contiene todo', 'Anidamiento: jerarquía en árbol (padre/hijo/hermanos); el último que se abre es el primero que se cierra', 'Contenido: texto, otros elementos o vacío (<x /> ≡ <x></x>)', 'Atributos: nombre="valor" en la etiqueta de apertura, con comillas, sin repetir', 'XML es case-sensitive; HTML no'],
+    tags: ['xml', 'sintaxis', 'estructura', 'raiz', 'elemento', 'atributo', 'anidamiento', 'declaracion'],
+    links: ['lm-ud1-3-1', 'lm-ud1-3-2', 'lm-ud1-3-3'],
+    contenido: `
+<p>En este apartado utilizaremos <strong>XML</strong> para conocer las partes de un documento estructurado y sus reglas sintácticas básicas. XML permite crear etiquetas adaptadas a la información que se desea representar, por lo que resulta útil para observar con claridad la raíz, los elementos, los atributos y las relaciones jerárquicas.</p>
+<p>Partiremos del siguiente inventario de equipos:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;inventario&gt;
+    &lt;equipo id="srv01"&gt;
+        &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+        &lt;ip&gt;192.168.10.20&lt;/ip&gt;
+        &lt;servicios&gt;
+            &lt;servicio puerto="80"&gt;HTTP&lt;/servicio&gt;
+            &lt;servicio puerto="443"&gt;HTTPS&lt;/servicio&gt;
+        &lt;/servicios&gt;
+    &lt;/equipo&gt;
+&lt;/inventario&gt;</code></pre>
+<div class="box def"><div class="box-title">Declaración XML</div>
+<p>La primera línea es la <strong>declaración XML</strong>. Informa de la <strong>versión</strong> utilizada y de la <strong>codificación de caracteres</strong>. Es habitual incluirla, aunque no siempre es obligatoria.</p></div>
+
+<h4>Contenido del apartado</h4>
+<ol>
+  <li>Estructura de un documento XML: raíz, elementos y anidamiento, contenido</li>
+  <li>Reglas sintácticas básicas: etiquetas, atributos, unicidad de la raíz, mayúsculas/minúsculas</li>
+  <li>Comparación final entre XML y HTML</li>
+</ol>`
+  },
+
+  {
+    id: 'lm-ud1-3-1',
+    tipo: 'subtema',
+    titulo: '3.1 Estructura: raíz, elementos, anidamiento y contenido',
+    resumen: 'El elemento raíz contiene todo (exactamente uno). Los elementos se anidan formando un árbol: padre, hijos y hermanos. El contenido puede ser texto, otros elementos o vacío.',
+    claves: ['Un documento XML tiene exactamente UN elemento raíz; su nombre lo elige el autor', 'Declaración y raíz no son lo mismo: <?xml …?> no es la raíz', 'Elemento = apertura + contenido + cierre', 'Anidamiento → árbol: inventario (raíz) > equipo > nombre, ip, servicios > servicio', 'Hermanos = comparten padre', 'El último elemento que se abre debe ser el primero que se cierra', 'Contenido: texto · otros elementos · vacío (<mantenimiento /> ≡ <mantenimiento></mantenimiento>)'],
+    tags: ['raiz', 'root', 'elemento', 'anidamiento', 'arbol', 'padre', 'hijo', 'hermano', 'contenido', 'elemento vacio'],
+    contenido: `
+<h4>Elemento raíz</h4>
+<p>El <strong>elemento raíz</strong> contiene todos los demás elementos del documento. En el ejemplo, la raíz comienza con <code>&lt;inventario&gt;</code> y termina con <code>&lt;/inventario&gt;</code>:</p>
+<pre><code>&lt;inventario&gt;
+    &lt;!-- El resto de los elementos se encuentra dentro --&gt;
+&lt;/inventario&gt;</code></pre>
+<p>Un documento XML debe tener <strong>exactamente un elemento raíz</strong>. Su nombre puede elegirse según la información representada: <code>&lt;inventario&gt;</code>, <code>&lt;configuracion&gt;</code> o <code>&lt;usuarios&gt;</code>, por ejemplo.</p>
+<div class="box warn"><div class="box-title">Declaración y raíz no son lo mismo</div>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code> aporta información sobre el documento, pero <strong>no es su elemento raíz</strong>. La raíz del ejemplo es <code>&lt;inventario&gt;</code>.</p></div>
+
+<h4>Elementos y anidamiento</h4>
+<p>Un <strong>elemento</strong> está formado normalmente por una etiqueta de apertura, un contenido y una etiqueta de cierre:</p>
+<pre><code>&lt;nombre&gt;servidor-web&lt;/nombre&gt;</code></pre>
+<p>Los elementos pueden contener otros elementos. Esta relación se denomina <strong>anidamiento</strong> y crea una estructura jerárquica semejante a un <strong>árbol</strong>:</p>
+<pre><code>inventario
+└── equipo
+    ├── nombre
+    ├── ip
+    └── servicios
+        ├── servicio (HTTP)
+        └── servicio (HTTPS)</code></pre>
+<p>En esta jerarquía:</p>
+<ul>
+  <li><code>inventario</code> es el elemento <strong>raíz</strong> y <strong>padre</strong> de <code>equipo</code>.</li>
+  <li><code>equipo</code> es <strong>hijo</strong> de <code>inventario</code> y padre de <code>nombre</code>, <code>ip</code> y <code>servicios</code>.</li>
+  <li>Los dos elementos <code>servicio</code> son <strong>hermanos</strong> porque comparten el mismo padre.</li>
+</ul>
+<p>El anidamiento debe respetar el orden de apertura. <strong>El último elemento que se abre debe ser el primero que se cierre</strong>:</p>
+<table>
+<thead><tr><th>Anidamiento correcto</th><th>Anidamiento incorrecto</th></tr></thead>
+<tbody><tr>
+<td><pre><code>&lt;equipo&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+&lt;/equipo&gt;</code></pre></td>
+<td><pre><code>&lt;equipo&gt;
+    &lt;nombre&gt;servidor-web&lt;/equipo&gt;
+&lt;/nombre&gt;</code></pre></td>
+</tr></tbody></table>
+
+<h4>Contenido</h4>
+<p>El <strong>contenido</strong> es la información situada entre las etiquetas de apertura y cierre. Puede adoptar distintas formas:</p>
+<table>
+<thead><tr><th>Texto</th><th>Otros elementos</th><th>Elemento vacío</th></tr></thead>
+<tbody><tr>
+<td><pre><code>&lt;nombre&gt;servidor-web&lt;/nombre&gt;</code></pre></td>
+<td><pre><code>&lt;equipo&gt;
+  &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+  &lt;ip&gt;192.168.10.20&lt;/ip&gt;
+&lt;/equipo&gt;</code></pre></td>
+<td><pre><code>&lt;mantenimiento /&gt;</code></pre></td>
+</tr></tbody></table>
+<p>Un <strong>elemento vacío</strong> no contiene texto ni elementos hijos. La forma abreviada <code>&lt;mantenimiento /&gt;</code> equivale a escribir <code>&lt;mantenimiento&gt;&lt;/mantenimiento&gt;</code>.</p>`
+  },
+
+  {
+    id: 'lm-ud1-3-2',
+    tipo: 'subtema',
+    titulo: '3.2 Reglas sintácticas básicas de XML',
+    resumen: 'Etiquetas con cierre (o vacías), nombres sin espacios y sin empezar por número, atributos nombre="valor" entre comillas y sin repetir, una única raíz y distinción de mayúsculas/minúsculas.',
+    claves: ['Toda etiqueta de apertura tiene su cierre, salvo elementos vacíos <x />', 'El nombre al abrir y cerrar debe coincidir exactamente', 'Nombres: sin espacios, no empiezan por número', 'Atributos: nombre="valor" dentro de la etiqueta de apertura; comillas simples o dobles obligatorias; no repetir el mismo atributo', '¿Elemento o atributo? Elementos para datos principales; atributos para información breve que describe/identifica', 'Todo dentro de una única raíz (dos raíces = incorrecto)', 'XML es case-sensitive: <equipo>, <Equipo> y <EQUIPO> son distintos'],
+    tags: ['reglas', 'sintaxis', 'etiquetas', 'atributos', 'comillas', 'raiz unica', 'case-sensitive', 'mayusculas', 'minusculas'],
+    contenido: `
+<div class="box def"><div class="box-title">Sintaxis</div>
+<p>La <strong>sintaxis</strong> es el conjunto de reglas que establece cómo debe escribirse un documento. Si no se respetan, el procesador XML no podrá interpretarlo correctamente.</p></div>
+
+<h4>Etiquetas</h4>
+<p>Cada etiqueta de apertura debe tener su correspondiente etiqueta de cierre, salvo que se utilice la forma abreviada de elemento vacío:</p>
+<pre><code>&lt;nombre&gt;servidor-web&lt;/nombre&gt;
+&lt;mantenimiento /&gt;</code></pre>
+<p>El nombre utilizado al abrir y cerrar debe <strong>coincidir exactamente</strong>. Los nombres <strong>no pueden contener espacios</strong> y <strong>no deben comenzar por un número</strong>.</p>
+<div class="box danger"><div class="box-title">Incorrecto: falta la etiqueta de cierre</div>
+<pre><code>&lt;nombre&gt;servidor-web</code></pre></div>
+
+<h4>Atributos</h4>
+<p>Los <strong>atributos</strong> añaden información a un elemento y se escriben dentro de la etiqueta de apertura mediante pares <code>nombre="valor"</code>:</p>
+<pre><code>&lt;servicio puerto="443" protocolo="tcp"&gt;HTTPS&lt;/servicio&gt;</code></pre>
+<p>Aquí <code>puerto</code> y <code>protocolo</code> son atributos. Sus valores deben estar <strong>entre comillas simples o dobles</strong>. Un mismo atributo <strong>no puede repetirse</strong> dentro de la misma etiqueta.</p>
+<div class="box danger"><div class="box-title">Incorrecto: valor sin comillas</div>
+<pre><code>&lt;servicio puerto=443&gt;HTTPS&lt;/servicio&gt;</code></pre></div>
+<div class="box tip"><div class="box-title">¿Elemento o atributo?</div>
+<p>Como primera aproximación, utiliza <strong>elementos para los datos principales</strong> y <strong>atributos para información breve</strong> que describa o identifique al elemento. La decisión también dependerá del vocabulario XML utilizado.</p></div>
+
+<h4>Unicidad de la raíz</h4>
+<p>Todo el contenido debe quedar dentro de un <strong>único elemento raíz</strong>:</p>
+<table>
+<thead><tr><th>Correcto</th><th>Incorrecto (dos raíces)</th></tr></thead>
+<tbody><tr>
+<td><pre><code>&lt;inventario&gt;
+    &lt;equipo id="srv01" /&gt;
+    &lt;equipo id="srv02" /&gt;
+&lt;/inventario&gt;</code></pre></td>
+<td><pre><code>&lt;equipo id="srv01" /&gt;
+&lt;equipo id="srv02" /&gt;</code></pre></td>
+</tr></tbody></table>
+
+<h4>Mayúsculas y minúsculas</h4>
+<p>XML distingue entre mayúsculas y minúsculas: es <strong>sensible a mayúsculas y minúsculas</strong> (<em>case-sensitive</em>). Por tanto, <code>&lt;equipo&gt;</code>, <code>&lt;Equipo&gt;</code> y <code>&lt;EQUIPO&gt;</code> son nombres diferentes.</p>
+<table>
+<thead><tr><th>Correcto</th><th>Incorrecto (los nombres no coinciden)</th></tr></thead>
+<tbody><tr>
+<td><pre><code>&lt;Equipo&gt;
+    &lt;Nombre&gt;servidor-web&lt;/Nombre&gt;
+&lt;/Equipo&gt;</code></pre></td>
+<td><pre><code>&lt;Equipo&gt;
+    &lt;Nombre&gt;servidor-web&lt;/nombre&gt;
+&lt;/Equipo&gt;</code></pre></td>
+</tr></tbody></table>
+<p>En el segundo fragmento se abre <code>&lt;Nombre&gt;</code>, pero se intenta cerrar con <code>&lt;/nombre&gt;</code>. Un procesador XML <strong>detendrá el análisis y comunicará un error</strong>.</p>`
+  },
+
+  {
+    id: 'lm-ud1-3-3',
+    tipo: 'subtema',
+    titulo: '3.3 Comparación XML vs HTML: mayúsculas y minúsculas',
+    resumen: 'En XML los nombres de apertura y cierre deben coincidir exactamente; en HTML las etiquetas no distinguen mayúsculas, aunque se recomienda escribirlas en minúsculas. XHTML procesado como XML sí distingue.',
+    claves: ['XML: <Nombre>…</nombre> es un error', 'HTML: <HTML>…</html>, <H1>…</h1> se interpreta igualmente', 'Recomendación: etiquetas HTML en minúsculas, consistentes → legibilidad y compatibilidad con XHTML', 'XHTML procesado como XML sí es case-sensitive'],
+    tags: ['xml', 'html', 'xhtml', 'case-sensitive', 'mayusculas', 'minusculas', 'comparacion'],
+    contenido: `
+<p>XML y HTML utilizan etiquetas delimitadas por <code>&lt;</code> y <code>&gt;</code>, pero <strong>no aplican las mismas reglas</strong> sobre mayúsculas y minúsculas.</p>
+
+<h4>XML: los nombres deben coincidir exactamente</h4>
+<p>Este documento XML está bien formado porque conserva las mismas mayúsculas en las etiquetas de apertura y cierre:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Servidor&gt;
+    &lt;Nombre&gt;servidor-web&lt;/Nombre&gt;
+    &lt;Estado&gt;activo&lt;/Estado&gt;
+&lt;/Servidor&gt;</code></pre>
+<p>Cambiar <code>&lt;/Nombre&gt;</code> por <code>&lt;/nombre&gt;</code> <strong>provocaría un error</strong>.</p>
+
+<h4>HTML: las etiquetas no distinguen entre mayúsculas y minúsculas</h4>
+<p>Cuando un documento se procesa como HTML, los nombres de sus etiquetas no distinguen entre mayúsculas y minúsculas. Un navegador puede interpretar este ejemplo aunque combine distintas formas:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;HTML lang="es"&gt;
+    &lt;HEAD&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;TITLE&gt;Estado del servidor&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;BODY&gt;
+        &lt;H1&gt;servidor-web&lt;/h1&gt;
+        &lt;P&gt;Estado: activo&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><a href="apuntes/lm/assets/examples/tema01/mayusculas-html.html" target="_blank" rel="noopener">Abrir el ejemplo HTML</a></p>
+<div class="box tip"><div class="box-title">Recomendación</div>
+<p>Aunque el navegador lo admita, escribe las etiquetas HTML <strong>en minúsculas de forma consistente</strong>. El código resulta más legible y se evitan errores al trabajar posteriormente con XHTML u otras tecnologías basadas en XML.</p></div>
+<div class="box warn"><div class="box-title">HTML no siempre se comporta igual</div>
+<p>Esta tolerancia corresponde a documentos procesados como HTML. Si se utiliza sintaxis <strong>XHTML</strong> y el documento se procesa como XML, los nombres <strong>sí distinguen</strong> entre mayúsculas y minúsculas.</p></div>
+
+<table>
+<thead><tr><th></th><th>XML</th><th>HTML</th></tr></thead>
+<tbody>
+<tr><td>Mayúsculas/minúsculas</td><td>Distingue (case-sensitive)</td><td>No distingue</td></tr>
+<tr><td>Etiqueta mal emparejada</td><td>Error fatal, se detiene el análisis</td><td>El navegador lo tolera</td></tr>
+<tr><td>Buenas prácticas</td><td>Coincidencia exacta</td><td>Minúsculas consistentes</td></tr>
+</tbody></table>`
+  },
