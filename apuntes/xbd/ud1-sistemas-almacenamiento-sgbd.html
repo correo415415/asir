@@ -1,0 +1,2016 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UD1 · Apuntes: Sistemas de almacenamiento y SGBD · MP0372</title>
+  <style>
+    /* CSS estándar MP0228 - no modificar este bloque base */
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --success: #059669;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-page: #f8fafc;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-main);
+      background: var(--bg-page);
+      line-height: 1.7;
+    }
+
+    .wrapper {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 2.5rem 2.25rem 4rem;
+    }
+
+    header.doc-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      padding: 2rem 2.25rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    header.doc-header .meta {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      color: #fff;
+    }
+
+    .ud-badge {
+      display: block;
+      width: fit-content;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.65rem;
+      border-radius: 20px;
+      margin-bottom: 0.55rem;
+    }
+
+    .type-badge {
+      display: inline-block;
+      width: fit-content;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.65rem;
+      border-radius: 20px;
+      margin-bottom: 0.55rem;
+      margin-left: 0.5rem;
+      background: #ffffff;
+      color: var(--primary);
+    }
+
+    /* Variante para Guía (paso a paso): fondo cian, distinto de Apuntes/Boletín/Reto/Prueba */
+    .type-badge.type-guia {
+      background: #0891b2;
+      color: #fff;
+    }
+
+    .separator {
+      width: 40%;
+      border: none;
+      border-top: 2px dashed var(--primary-light);
+      margin: 2rem auto;
+    }
+
+    h2 {
+      font-weight: 700;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-top: 2.5rem;
+      color: var(--primary);
+    }
+
+    h3 {
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 1.8rem;
+    }
+
+    a {
+      color: var(--primary-light);
+    }
+
+    p {
+      margin: 0.8rem 0;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.5rem;
+      margin: 0.6rem 0;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    tr:nth-child(even) td {
+      background: #f1f5f9;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.88rem;
+      font-family: "Consolas", "Courier New", monospace;
+      line-height: 1.55;
+      margin: 1rem 0;
+      white-space: pre;
+    }
+
+    code {
+      font-family: "Consolas", "Courier New", monospace;
+    }
+
+    :not(pre)>code {
+      background: #e2e8f0;
+      color: var(--danger);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    /* Botón "Copiar" (inyectado por el script del final del documento) */
+    .pre-wrap {
+      position: relative;
+      margin: 1rem 0;
+    }
+
+    .pre-wrap pre {
+      margin: 0;
+      padding-top: 2.2rem;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.6rem;
+      background: rgba(255, 255, 255, 0.12);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 6px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.72rem;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      line-height: 1.4;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .copy-btn.is-copied {
+      background: var(--success);
+      border-color: var(--success);
+      color: #fff;
+    }
+
+    .callout {
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-left: 5px solid;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .callout-body>*:last-child {
+      margin-bottom: 0;
+    }
+
+    .callout-info {
+      border-color: #0369a1;
+      background: #eff6ff;
+    }
+
+    .callout-info .callout-title {
+      color: #0369a1;
+    }
+
+    .callout-recuerda {
+      border-color: #7c3aed;
+      background: #f5f3ff;
+    }
+
+    .callout-recuerda .callout-title {
+      color: #7c3aed;
+    }
+
+    .callout-tip {
+      border-color: var(--success);
+      background: #ecfdf5;
+    }
+
+    .callout-tip .callout-title {
+      color: var(--success);
+    }
+
+    .callout-aviso {
+      border-color: var(--warning);
+      background: #fffbeb;
+    }
+
+    .callout-aviso .callout-title {
+      color: #92400e;
+    }
+
+    .callout-importante {
+      border-color: var(--danger);
+      background: #fef2f2;
+    }
+
+    .callout-importante .callout-title {
+      color: var(--danger);
+    }
+
+    .callout-definicion {
+      border-color: #0891b2;
+      background: #ecfeff;
+    }
+
+    .callout-definicion .callout-title {
+      color: #0891b2;
+    }
+
+    .callout-ejercicio {
+      border-color: #db2777;
+      background: #fdf2f8;
+    }
+
+    .callout-ejercicio .callout-title {
+      color: #db2777;
+    }
+
+    .callout-solucion {
+      border-color: var(--success);
+      background: #f0fdf4;
+    }
+
+    .callout-solucion .callout-title {
+      color: var(--success);
+    }
+
+    .diagram {
+      background: #1e293b;
+      color: #94a3b8;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      overflow-x: auto;
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 0.84rem;
+      line-height: 1.5;
+      margin: 1rem 0;
+      white-space: pre;
+    }
+
+    footer.doc-footer {
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .wrapper {
+        padding: 1.2rem 1rem 3rem;
+      }
+
+      header.doc-header {
+        padding: 1.4rem 1.2rem;
+      }
+
+      table {
+        font-size: 0.85rem;
+      }
+
+      .sgbd-grid,
+      .acid-grid,
+      .cap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      header.doc-header {
+        background: #1e40af !important;
+        -webkit-print-color-adjust: exact;
+      }
+
+      pre {
+        white-space: pre-wrap;
+      }
+
+      .copy-btn {
+        display: none;
+      }
+    }
+
+    /* Clases específicas del tipo de material - añadir aquí */
+    /* --- clases específicas: apuntes UD1 --- */
+    details.sol {
+      margin: 0.8rem 0;
+    }
+
+    summary.sol-toggle {
+      cursor: pointer;
+      padding: 0.5rem 0.9rem;
+      background: #f1f5f9;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      list-style: none;
+      user-select: none;
+    }
+
+    summary.sol-toggle::before {
+      content: "\25B6  ";
+    }
+
+    details[open] summary.sol-toggle::before {
+      content: "\25BC  ";
+    }
+
+    .sol-body {
+      margin: 0.3rem 0 0;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 0 0 6px 6px;
+      background: #f8fafc;
+    }
+
+    .sgbd-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .sgbd-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      background: #fff;
+      border-left: 4px solid var(--primary-light);
+    }
+
+    .sgbd-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    .sgbd-card p {
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
+    /* --- ACID: 4 tarjetas en una cuadrícula fija 2x2 (nunca huérfanas) --- */
+    .acid-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+      margin: 1.2rem 0;
+    }
+
+    .acid-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.9rem 1rem 0.9rem 3.2rem;
+      background: #fff;
+      border-top: 4px solid var(--primary-light);
+    }
+
+    .acid-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .acid-card p {
+      margin: 0 0 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .acid-letra {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.9rem;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #fff;
+      background: var(--primary-light);
+    }
+
+    .acid-ej {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: #f8fafc;
+      border-radius: 6px;
+      padding: 0.5rem 0.6rem;
+      margin: 0;
+    }
+
+    .a-card {
+      border-top-color: #d97706;
+    }
+
+    .a-card .acid-letra {
+      background: #d97706;
+    }
+
+    .c-card {
+      border-top-color: #059669;
+    }
+
+    .c-card .acid-letra {
+      background: #059669;
+    }
+
+    .i-card {
+      border-top-color: #7c3aed;
+    }
+
+    .i-card .acid-letra {
+      background: #7c3aed;
+    }
+
+    .d-card {
+      border-top-color: #db2777;
+    }
+
+    .d-card .acid-letra {
+      background: #db2777;
+    }
+
+    /* --- CAP: 3 tarjetas en una cuadrícula fija 1x3 (nunca huérfanas) --- */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin: 1.2rem 0;
+    }
+
+    .cap-card {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.9rem 1rem 0.9rem 3.2rem;
+      background: #fff;
+      border-top: 4px solid var(--primary-light);
+    }
+
+    .cap-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--text-main);
+      font-size: 0.92rem;
+    }
+
+    .cap-card p {
+      margin: 0 0 0.4rem;
+      font-size: 0.83rem;
+    }
+
+    .cap-label {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.9rem;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #fff;
+      background: var(--primary-light);
+    }
+
+    .cp {
+      border-top-color: #0369a1;
+    }
+
+    .cp .cap-label {
+      background: #0369a1;
+    }
+
+    .ap {
+      border-top-color: #059669;
+    }
+
+    .ap .cap-label {
+      background: #059669;
+    }
+
+    .pp {
+      border-top-color: #db2777;
+    }
+
+    .pp .cap-label {
+      background: #db2777;
+    }
+
+    figure.svg-fig {
+      margin: 1.4rem 0;
+      overflow-x: auto;
+    }
+
+    figure.svg-fig figcaption {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    @media print {
+      details.sol {
+        display: block;
+      }
+
+      details.sol summary.sol-toggle {
+        display: none;
+      }
+
+      .sol-body {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="doc-header">
+      <span class="ud-badge">Unidad 1 · Apuntes</span>
+      <div class="meta">MP0372 Xestión de Bases de Datos · ASIR · IES Aller Ulloa (Lalín) · Curso 2026-2027</div>
+    </header>
+
+    <article>
+      <h1 id="top">Unidad 1 · Sistemas de almacenamiento y SGBD</h1>
+      <h2 id="s1">1. Dato, información y conocimiento</h2>
+      <p>Antes de hablar de bases de datos hay que entender qué gestionamos. Los tres conceptos son distintos aunque se
+        confunden en el lenguaje cotidiano.</p>
+      <div class="callout callout-definicion">
+        <div class="callout-title">&#128218; DEFINICIONES</div>
+        <div class="callout-body">
+          <ul>
+            <li><strong>Dato:</strong> valor bruto sin contexto. Solo tiene existencia física. Ejemplo:
+              <code>59.80</code>.</li>
+            <li><strong>Información:</strong> dato interpretado con contexto. Ejemplo: "el pedido número 100 de
+              TendaGalicia tiene un total de 59,80€".</li>
+            <li><strong>Conocimiento:</strong> información combinada con experiencia y reglas de negocio que permite
+              tomar decisiones. Ejemplo: "los clientes con ticket medio superior a 50€ son clientes VIP".</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="svg-fig" aria-label="Jerarquía dato, información, conocimiento"><svg viewBox="0 0 900 160"
+          xmlns="http://www.w3.org/2000/svg" role="img" style="max-width:100%;display:block;margin:0 auto;">
+          <title>Jerarquía: dato, información, conocimiento</title>
+          <desc>Tres recuadros conectados en horizontal mostrando la transformación de dato a información y a
+            conocimiento.</desc>
+          <rect x="10" y="30" width="230" height="100" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" /><text
+            x="125" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af">DATO</text><text x="125"
+            y="82" text-anchor="middle" font-size="11" fill="#1e293b">Valor bruto sin contexto</text><text x="125"
+            y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#3b82f6">"59.80"</text><text x="125"
+            y="118" text-anchor="middle" font-size="10" fill="#64748b">tipo: NUMERIC(10,2)</text><text x="248" y="85"
+            text-anchor="middle" font-size="18" fill="#94a3b8">→</text>
+          <rect x="270" y="30" width="300" height="100" rx="10" fill="#dcfce7" stroke="#059669" stroke-width="2" /><text
+            x="420" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#065f46">INFORMACIÓN</text><text
+            x="420" y="82" text-anchor="middle" font-size="11" fill="#1e293b">Dato con contexto y
+            significado</text><text x="420" y="100" text-anchor="middle" font-size="12" font-weight="600"
+            fill="#059669">"Pedido #100 → 59,80€"</text><text x="420" y="118" text-anchor="middle" font-size="10"
+            fill="#64748b">tabla: pedidos, columna: total</text><text x="578" y="85" text-anchor="middle" font-size="18"
+            fill="#94a3b8">→</text>
+          <rect x="598" y="30" width="292" height="100" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" /><text
+            x="744" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#5b21b6">CONOCIMIENTO</text><text
+            x="744" y="82" text-anchor="middle" font-size="11" fill="#1e293b">Información aplicada +
+            experiencia</text><text x="744" y="100" text-anchor="middle" font-size="12" font-weight="600"
+            fill="#7c3aed">"Clientes VIP: ticket &gt; 50€"</text><text x="744" y="118" text-anchor="middle"
+            font-size="10" fill="#64748b">consulta + regla de negocio</text>
+        </svg>
+        <figcaption>Jerarquía dato · información · conocimiento en el contexto de TendaGalicia</figcaption>
+      </figure>
+      <h3 id="s1-1">1.1 La importancia del nombre y del tipo de campo</h3>
+      <p>Un dato no transmite nada por sí solo. Para que sea útil necesita dos atributos mínimos: un
+        <strong>nombre</strong> que diga qué representa y un <strong>tipo</strong> que defina qué valores admite.</p>
+      <table>
+        <colgroup>
+          <col style="width:18%">
+          <col style="width:20%">
+          <col style="width:32%">
+          <col style="width:30%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Tipo PostgreSQL</th>
+            <th>Restricción</th>
+            <th>Por qué importa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>prezo</code></td>
+            <td><code>NUMERIC(10,2)</code></td>
+            <td><code>CHECK (prezo &gt;= 0)</code></td>
+            <td>Impide precios negativos; conserva exactitud decimal en dinero</td>
+          </tr>
+          <tr>
+            <td><code>email</code></td>
+            <td><code>VARCHAR(120)</code></td>
+            <td><code>UNIQUE NOT NULL</code></td>
+            <td>Garantiza unicidad; el SGBD rechaza duplicados automáticamente</td>
+          </tr>
+          <tr>
+            <td><code>stock</code></td>
+            <td><code>INTEGER</code></td>
+            <td><code>CHECK (stock &gt;= 0)</code></td>
+            <td>Stock no puede ser fraccionario ni negativo</td>
+          </tr>
+          <tr>
+            <td><code>data_pedido</code></td>
+            <td><code>DATE</code></td>
+            <td><code>DEFAULT CURRENT_DATE</code></td>
+            <td>Formato estándar; evita "13/32/2024"</td>
+          </tr>
+          <tr>
+            <td><code>puntuacion</code></td>
+            <td><code>SMALLINT</code></td>
+            <td><code>CHECK (puntuacion BETWEEN 1 AND 5)</code></td>
+            <td>Solo valores válidos para una valoración</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="s2">2. Limitaciones de los sistemas de ficheros</h2>
+      <p>Antes de los SGBD, cada aplicación gestionaba sus propios ficheros independientes. TendaGalicia tenía tres:
+        <code>clientes.csv</code>, <code>pedidos.csv</code> y <code>facturacion.csv</code>, uno por cada departamento.
+        Ese enfoque provocó problemas bien documentados:</p>
+      <table>
+        <colgroup>
+          <col style="width:24%">
+          <col style="width:76%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Problema</th>
+            <th>Descripción con ejemplo en TendaGalicia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Redundancia</strong></td>
+            <td>El nombre del cliente aparece en pedidos, envíos y facturación. Un cambio de dirección hay que hacerlo
+              en tres sitios.</td>
+          </tr>
+          <tr>
+            <td><strong>Inconsistencia</strong></td>
+            <td>Si la actualización falla a medias, el cliente tiene dos direcciones distintas en ficheros diferentes.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Dependencia datos/programas</strong></td>
+            <td>Añadir una columna al fichero obliga a modificar todos los programas que lo leen.</td>
+          </tr>
+          <tr>
+            <td><strong>Concurrencia sin control</strong></td>
+            <td>Dos empleados modifican el mismo fichero simultáneamente y pueden sobrescribirse mutuamente.</td>
+          </tr>
+          <tr>
+            <td><strong>Sin seguridad granular</strong></td>
+            <td>No hay control de quién lee o escribe qué parte del fichero.</td>
+          </tr>
+          <tr>
+            <td><strong>Sin integridad automática</strong></td>
+            <td>Nada impide guardar un precio negativo o una fecha inválida salvo que el programa lo valide
+              explícitamente.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-ejercicio">
+        <div class="callout-title">&#9997;&#65039; Ejercicio 1 · Identifica el problema</div>
+        <div class="callout-body">
+          <p>Ana Fernández se mudó de Vigo a Santiago. Su nombre y ciudad estaban repetidos en <code>pedidos.csv</code>,
+            <code>envios.csv</code> y <code>facturacion.csv</code>. Solo se actualizó en <code>pedidos.csv</code>.</p>
+          <p>(a) Identifica el problema con su nombre técnico. (b) Dos consecuencias prácticas. (c) Cómo lo resuelve un
+            SGBD.</p>
+        </div>
+      </div>
+      <details class="sol">
+        <summary class="sol-toggle">Solución</summary>
+        <div class="sol-body">
+          <p><strong>(a)</strong> <strong>Redundancia</strong> (el dato está repetido en tres ficheros) e
+            <strong>inconsistencia</strong> (tras actualizar solo uno, el mismo dato tiene valores distintos según el
+            fichero).</p>
+          <p><strong>(b)</strong> Los envíos se entregan en Vigo (dirección antigua de <code>envios.csv</code>): coste
+            de reenvío y reclamación. Las facturas salen con la dirección incorrecta de <code>facturacion.csv</code>:
+            posible incumplimiento del RGPD.</p>
+          <p><strong>(c)</strong> El SGBD almacena la dirección una única vez en la tabla <code>clientes</code>.
+            Pedidos, envíos y facturas referencian al cliente por <code>id_cliente</code> (clave foránea). Un solo
+            <code>UPDATE</code> propaga el cambio a todo el sistema.</p>
+        </div>
+      </details>
+      <h2 id="s3">3. La evolución de los modelos de datos</h2>
+      <p>En el apartado anterior vimos los problemas de gestionar datos con ficheros sueltos. Antes de ver qué es
+        exactamente un SGBD, conviene entender <strong>de dónde viene</strong> el modelo relacional que usaremos
+        todo el curso: no apareció de la nada, sino como respuesta a los límites de las soluciones anteriores. Y
+        entenderlo ayuda también a entender por qué, décadas después, aparecieron a su vez los modelos NoSQL.</p>
+
+      <h3 id="s3-1">3.1 Antes del modelo relacional: jerárquico y en red</h3>
+      <p>En los años 60 y 70, cuando las empresas empezaron a informatizar grandes volúmenes de datos, los primeros
+        sistemas organizaban la información de dos formas:</p>
+      <table>
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:40%">
+          <col style="width:40%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Modelo</th>
+            <th>Cómo organiza los datos</th>
+            <th>Ejemplo real</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Jerárquico</strong></td>
+            <td>En forma de árbol: cada registro tiene un único "padre" y puede tener varios "hijos".</td>
+            <td>IBM IMS (1966), todavía en uso en algunos sistemas bancarios heredados</td>
+          </tr>
+          <tr>
+            <td><strong>En red</strong></td>
+            <td>Como un grafo: un registro puede tener varios "padres", no solo uno.</td>
+            <td>Sistemas CODASYL (finales de los 60)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-importante">
+        <div class="callout-title">&#9888;&#65039; EL PROBLEMA DE FONDO</div>
+        <div class="callout-body">
+          <p>En ambos modelos, la forma de acceder a los datos estaba <strong>grabada en la propia estructura</strong>.
+            Si al diseñar el sistema de TendaGalicia hubiéramos decidido que los pedidos "cuelgan" de los clientes,
+            preguntar «¿qué clientes compraron el producto X?» habría obligado a recorrer todo el árbol
+            cliente a cliente, o a rediseñar la estructura entera. Cada nueva pregunta no prevista de antemano era
+            un problema.</p>
+        </div>
+      </div>
+
+      <h3 id="s3-2">3.2 La gran idea de Codd: separar el qué del cómo</h3>
+      <p>En 1970, <strong>Edgar F. Codd</strong>, investigador de IBM, publicó un artículo que cambiaría por
+        completo la forma de organizar datos: <em>"A Relational Model of Data for Large Shared Data Banks"</em>.
+        Su propuesta partía de una idea simple pero radical para la época:</p>
+      <div class="callout callout-definicion">
+        <div class="callout-title">&#128218; LA IDEA DE CODD</div>
+        <div class="callout-body">
+          <p>Representar <strong>toda</strong> la información, sin excepción, como <strong>tablas</strong>
+            (a las que Codd llamó formalmente <em>relaciones</em>, de ahí el nombre del modelo). El usuario no
+            necesita saber cómo están organizados los datos físicamente en el disco, ni por qué camino se llega
+            hasta ellos: basta con decir <strong>qué</strong> se quiere consultar, no <strong>cómo</strong>
+            recorrer la estructura para encontrarlo.</p>
+        </div>
+      </div>
+      <p>Esta separación entre "qué pido" y "cómo se resuelve" es precisamente la que ya conocemos con otro nombre:
+        es el germen de la <strong>arquitectura ANSI/SPARC</strong> y de la <strong>independencia de datos</strong>
+        que veremos en el apartado siguiente. Codd le dio además una base matemática sólida (la teoría de conjuntos
+        y el álgebra relacional), lo que permitió demostrar formalmente qué operaciones son posibles y garantizar
+        resultados consistentes.</p>
+
+      <h3 id="s3-3">3.3 Cómo se organiza la información en una tabla</h3>
+      <p>Sin necesidad todavía de escribir ni una línea de código, podemos entender la idea central del modelo
+        relacional con una analogía cotidiana: una <strong>agenda de contactos</strong> o una <strong>hoja de
+          cálculo</strong>.</p>
+      <table>
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:80%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td><strong>Tabla</strong></td>
+            <td>Una colección de elementos del mismo tipo. Por ejemplo, todos los <em>clientes</em> de
+              TendaGalicia.</td>
+          </tr>
+          <tr>
+            <td><strong>Fila</strong></td>
+            <td>Un elemento individual de esa colección: un cliente concreto. También se llama <em>registro</em> o
+              <em>tupla</em>.</td>
+          </tr>
+          <tr>
+            <td><strong>Columna</strong></td>
+            <td>Una característica que <strong>todas</strong> las filas comparten: nombre, email, ciudad. También
+              se llama <em>campo</em> o <em>atributo</em>.</td>
+          </tr>
+          <tr>
+            <td><strong>Tipo de dato</strong></td>
+            <td>Cada columna admite solo cierta clase de valores (texto, número, fecha). Esto evita, por ejemplo,
+              guardar "quince euros" en una columna pensada para precios numéricos.</td>
+          </tr>
+          <tr>
+            <td><strong>Clave primaria</strong></td>
+            <td>La columna (o combinación de columnas) que identifica sin ambigüedad cada fila, igual que un DNI
+              identifica a una persona. Dos clientes pueden llamarse igual; nunca comparten clave primaria.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Así se vería, de forma puramente conceptual (todavía sin ningún comando), un fragmento de la tabla
+        <code>clientes</code> de TendaGalicia:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>id_cliente <em>(clave primaria)</em></th>
+            <th>nome</th>
+            <th>email</th>
+            <th>cidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ana Fernández</td>
+            <td>ana@correo.gal</td>
+            <td>Santiago</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Breogán Souto</td>
+            <td>breogan@correo.gal</td>
+            <td>Lugo</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-recuerda">
+        <div class="callout-title">&#128161; TODAVÍA NO TOCA ESCRIBIR SQL</div>
+        <div class="callout-body">
+          <p>Esta tabla es solo la <strong>forma de organizar los datos</strong>, el resultado final de la idea de
+            Codd. Cómo se crea esa tabla y cómo se le hacen preguntas mediante instrucciones (el lenguaje
+            <strong>SQL</strong>) lo veremos en detalle en unidades posteriores. Aquí lo importante es quedarnos
+            con el concepto: tabla, fila, columna, tipo de dato y clave primaria son las piezas con las que está
+            construido absolutamente todo lo que haremos con PostgreSQL en este módulo.</p>
+        </div>
+      </div>
+
+      <h3 id="s3-4">3.4 La línea de tiempo</h3>
+      <figure class="svg-fig" aria-label="Evolución de los modelos de datos"><svg viewBox="0 0 1060 186"
+          xmlns="http://www.w3.org/2000/svg" role="img" style="max-width:100%;display:block;margin:0 auto;">
+          <title>Evolución de los modelos de datos</title>
+          <desc>Cuatro etapas en horizontal: modelos jerárquico y en red en los años 60-70, el modelo relacional de
+            Codd en 1970, la estandarización de SQL en 1986, y el auge de las bases NoSQL desde los años 2000.</desc>
+          <defs>
+            <marker id="tl" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8" />
+            </marker>
+          </defs>
+          <rect x="10" y="30" width="230" height="126" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2" /><text
+            x="125" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">Jerárquico y en
+            red</text><text x="125" y="80" text-anchor="middle" font-size="9" fill="#334155">Estructura fija en
+            árbol o grafo</text><text x="125" y="100" text-anchor="middle" font-size="9" fill="#334155">IBM IMS,
+            CODASYL</text>
+          <rect x="65" y="116" width="120" height="24" rx="5" fill="#64748b" /><text x="125" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">Años 60-70</text>
+          <line x1="240" y1="93" x2="254" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#tl)" />
+          <rect x="254" y="30" width="230" height="126" rx="8" fill="#dbeafe" stroke="#1e40af" stroke-width="2.5" /><text
+            x="369" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">Modelo
+            relacional</text><text x="369" y="80" text-anchor="middle" font-size="9" fill="#1e3a8a">Codd separa el
+            qué del cómo</text><text x="369" y="100" text-anchor="middle" font-size="9" fill="#1e3a8a">Tablas,
+            filas y columnas</text>
+          <rect x="309" y="116" width="120" height="24" rx="5" fill="#1e40af" /><text x="369" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">1970</text>
+          <line x1="484" y1="93" x2="498" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#tl)" />
+          <rect x="498" y="30" width="230" height="126" rx="8" fill="#cffafe" stroke="#0891b2" stroke-width="2" /><text
+            x="613" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#0e7490">SQL se
+            estandariza</text><text x="613" y="80" text-anchor="middle" font-size="9" fill="#0e7490">Lenguaje
+            declarativo común</text><text x="613" y="100" text-anchor="middle" font-size="9" fill="#0e7490">Norma
+            ISO/ANSI</text>
+          <rect x="553" y="116" width="120" height="24" rx="5" fill="#0891b2" /><text x="613" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">1986</text>
+          <line x1="728" y1="93" x2="742" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#tl)" />
+          <rect x="742" y="30" width="230" height="126" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" /><text
+            x="857" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#5b21b6">Auge de
+            NoSQL</text><text x="857" y="80" text-anchor="middle" font-size="9" fill="#5b21b6">Escala y esquemas
+            flexibles</text><text x="857" y="100" text-anchor="middle" font-size="9" fill="#5b21b6">MongoDB,
+            Cassandra...</text>
+          <rect x="797" y="116" width="120" height="24" rx="5" fill="#7c3aed" /><text x="857" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">2000-hoy</text>
+        </svg>
+        <figcaption>De las estructuras rígidas de los años 60 a la explosión de modelos NoSQL de las últimas dos
+          décadas</figcaption>
+      </figure>
+
+      <h3 id="s3-5">3.5 Por qué triunfó el modelo relacional</h3>
+      <p>Durante más de treinta años, el modelo relacional fue prácticamente la única opción seria para gestionar
+        datos de empresa. Tres razones lo explican:</p>
+      <ul>
+        <li><strong>Simplicidad conceptual:</strong> todo son tablas. No hace falta pensar en árboles ni en grafos
+          para diseñar ni para consultar.</li>
+        <li><strong>Un lenguaje estándar:</strong> SQL se convirtió en norma ISO en 1986. Aprenderlo una vez permite
+          usarlo, con pequeñas variaciones, en PostgreSQL, Oracle, MySQL o SQL Server.</li>
+        <li><strong>Consistencia fuerte:</strong> las propiedades ACID (que veremos en el apartado siguiente)
+          garantizan que los datos nunca quedan a medias, algo crítico en bancos, hospitales o tiendas online.</li>
+      </ul>
+
+      <h3 id="s3-6">3.6 Y después del relacional: por qué aparece NoSQL</h3>
+      <p>A partir de los años 2000, empresas como Google, Amazon o Facebook se enfrentaron a un problema distinto:
+        no cientos de miles de filas, sino miles de millones, repartidas por servidores de todo el mundo y
+        cambiando constantemente de estructura. El modelo relacional no "falló": simplemente estaba pensado para
+        otro contexto, uno con volúmenes menores y esquemas más estables.</p>
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; NO ES UNA SUSTITUCIÓN, ES UNA AMPLIACIÓN</div>
+        <div class="callout-body">
+          <p>Las bases NoSQL (documentales, clave-valor, columnares, de grafos) no vinieron a "reemplazar" al
+            modelo relacional: nacieron para resolver problemas concretos de escala y flexibilidad que el modelo
+            relacional clásico no afronta bien por sí solo. Hoy conviven ambos enfoques, y elegir uno u otro
+            depende del problema, como veremos en el apartado de clasificación de SGBD.</p>
+        </div>
+      </div>
+      <div class="callout callout-ejercicio">
+        <div class="callout-title">&#9997;&#65039; Ejercicio 2 · De ficheros a tablas</div>
+        <div class="callout-body">
+          <p>TendaGalicia guardaba antes sus clientes en <code>clientes.csv</code>, con un problema: dos clientes
+            distintos podían llamarse igual y el sistema los confundía al buscar por nombre.</p>
+          <p>(a) ¿Qué elemento del modelo relacional visto en el apartado 3.3 resuelve exactamente este problema?
+            (b) Explica con tus palabras la diferencia entre una fila y una columna usando el ejemplo de la tabla
+            <code>clientes</code>. (c) ¿Por qué decimos que Codd separó "el qué" del "cómo"?</p>
+        </div>
+      </div>
+      <details class="sol">
+        <summary class="sol-toggle">Solución</summary>
+        <div class="sol-body">
+          <p><strong>(a)</strong> La <strong>clave primaria</strong> (<code>id_cliente</code>): un número único
+            por cliente que no depende del nombre, así que dos "Ana García" nunca se confunden.</p>
+          <p><strong>(b)</strong> Una <strong>fila</strong> es un cliente concreto (por ejemplo, todos los datos de
+            Ana Fernández en una única línea). Una <strong>columna</strong> es una característica que comparten
+            todos los clientes (por ejemplo, la columna <code>cidade</code> existe para todas las filas, aunque
+            cada una tenga un valor distinto).</p>
+          <p><strong>(c)</strong> Porque antes de Codd había que saber cómo estaban físicamente organizados los
+            datos para poder preguntarles algo. Con el modelo relacional basta con decir qué se quiere obtener
+            (por ejemplo, "los clientes de Lugo"); el sistema se encarga de decidir cómo ir a buscarlo.</p>
+        </div>
+      </details>
+
+      <h2 id="s4">4. Qué es un SGBD</h2>
+      <div class="callout callout-definicion">
+        <div class="callout-title">&#128218; DEFINICIÓN</div>
+        <div class="callout-body">
+          <p><strong>SGBD</strong> (Sistema Gestor de Bases de Datos): software que actúa como intermediario entre los
+            usuarios o aplicaciones y los datos almacenados físicamente. Su función es definir, crear, mantener y
+            controlar el acceso a la base de datos de forma segura, eficiente y consistente.</p>
+        </div>
+      </div>
+      <h3 id="s4-1">4.1 Componentes principales</h3>
+      <p>Todos los SGBD modernos comparten los mismos bloques internos, aunque cada fabricante los nombre de forma
+        ligeramente diferente.</p>
+      <table>
+        <colgroup>
+          <col style="width:26%">
+          <col style="width:74%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Función</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Parser</strong> (analizador sintáctico)</td>
+            <td>Primera parada de una consulta SQL. Comprueba que la sintaxis es correcta antes de hacer nada más. Si
+              falta una coma o una palabra reservada está mal escrita, el parser lo rechaza.</td>
+          </tr>
+          <tr>
+            <td><strong>Optimizador de consultas</strong></td>
+            <td>Analiza los posibles planes de ejecución y elige el más eficiente. Decide si usar un índice o un escaneo
+              secuencial (Seq Scan). En PostgreSQL se puede visualizar con <code>EXPLAIN ANALYZE</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Motor de almacenamiento</strong></td>
+            <td>Gestiona cómo se guardan y recuperan los datos en disco. PostgreSQL organiza los datos en páginas de
+              8 KB y usa el método de acceso heap por defecto.</td>
+          </tr>
+          <tr>
+            <td><strong>Gestor de transacciones</strong></td>
+            <td>Garantiza las propiedades ACID. Controla el inicio (<code>BEGIN</code>), la confirmación
+              (<code>COMMIT</code>) y la cancelación (<code>ROLLBACK</code>) de cada transacción.</td>
+          </tr>
+          <tr>
+            <td><strong>Gestor de concurrencia</strong></td>
+            <td>Controla el acceso simultáneo de múltiples usuarios al mismo dato. PostgreSQL usa MVCC (Multiversion
+              Concurrency Control): cada transacción ve una instantánea consistente de los datos sin bloquear a las
+              demás.</td>
+          </tr>
+          <tr>
+            <td><strong>Gestor de seguridad</strong></td>
+            <td>Controla quién accede a qué datos y con qué permisos (roles, privilegios, RLS: Row Level Security).</td>
+          </tr>
+          <tr>
+            <td><strong>Diccionario de datos</strong></td>
+            <td>Catálogo de metadatos: tablas, columnas, tipos, restricciones, índices, vistas. En PostgreSQL:
+              <code>information_schema</code> y <code>pg_catalog</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Gestor de recuperación</strong></td>
+            <td>Escribe el WAL (Write-Ahead Log) antes de modificar los datos en disco. Si el sistema falla, al
+              reiniciar el SGBD lee el WAL y rehace o deshace las operaciones para volver a un estado consistente.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; FLUJO DE UNA CONSULTA EN POSTGRESQL</div>
+        <div class="callout-body">
+          <p>Cuando ejecutas <code>SELECT * FROM clientes WHERE cidade = 'Vigo'</code>, PostgreSQL sigue estos pasos
+            internos:</p>
+          <ol>
+            <li><strong>Parser:</strong> verifica que la sintaxis SQL es correcta.</li>
+            <li><strong>Rewriter:</strong> expande reglas y vistas.</li>
+            <li><strong>Optimizador:</strong> calcula el plan más barato: ¿hay un índice sobre <code>cidade</code>?
+              ¿merece la pena usarlo?</li>
+            <li><strong>Ejecutor:</strong> lanza el plan usando el motor de almacenamiento.</li>
+            <li><strong>Resultado:</strong> las filas llegan al cliente a través del protocolo PostgreSQL.</li>
+          </ol>
+          <p>Puedes ver el plan elegido con: <code>EXPLAIN ANALYZE SELECT * FROM clientes WHERE cidade = 'Vigo';</code>
+          </p>
+        </div>
+      </div>
+      <h3 id="s4-2">4.2 Propiedades ACID</h3>
+      <p>ACID es el contrato que un SGBD transaccional ofrece a sus usuarios. Garantiza que las operaciones sobre los
+        datos son fiables incluso ante fallos del sistema, errores de red o acceso concurrente.</p>
+      <div class="acid-grid">
+        <div class="acid-card a-card">
+          <div class="acid-letra">A</div>
+          <h4>Atomicidad</h4>
+          <p>La transacción se ejecuta completamente o no se ejecuta en absoluto. No existen estados intermedios
+            persistentes.</p>
+          <div class="acid-ej"><strong>TendaGalicia:</strong> al procesar un pedido se descuenta el stock Y se registra
+            la línea. Si el servidor cae entre los dos pasos, el SGBD revierte el descuento. El stock nunca queda
+            decrementado sin la línea correspondiente.</div>
+        </div>
+        <div class="acid-card c-card">
+          <div class="acid-letra">C</div>
+          <h4>Consistencia</h4>
+          <p>La BD pasa de un estado válido a otro estado válido. Todas las restricciones definidas (CHECK, FK, UNIQUE)
+            se cumplen antes y después de cada transacción.</p>
+          <div class="acid-ej"><strong>TendaGalicia:</strong> no puede existir una <code>linha_pedido</code> que
+            referencie a un <code>id_produto</code> inexistente. La FK lo impide aunque la aplicación lo intente.</div>
+        </div>
+        <div class="acid-card i-card">
+          <div class="acid-letra">I</div>
+          <h4>Aislamiento</h4>
+          <p>Las transacciones concurrentes no se interfieren entre sí. Cada transacción ve los datos como si fuera la
+            única en ejecución. PostgreSQL implementa esto con MVCC.</p>
+          <div class="acid-ej"><strong>TendaGalicia:</strong> dos clientes compran el último producto en stock
+            simultáneamente. MVCC garantiza que solo uno de los dos tendrá éxito; el otro recibirá un error de
+            concurrencia.</div>
+        </div>
+        <div class="acid-card d-card">
+          <div class="acid-letra">D</div>
+          <h4>Durabilidad</h4>
+          <p>Una vez confirmada la transacción (<code>COMMIT</code>), los cambios persisten aunque el sistema falle
+            inmediatamente después. El WAL garantiza esto.</p>
+          <div class="acid-ej"><strong>TendaGalicia:</strong> si el servidor se apaga en el instante posterior al
+            <code>COMMIT</code> de un pedido, el pedido sigue ahí cuando el servidor vuelve. El WAL lo garantiza.</div>
+        </div>
+      </div>
+      <h2 id="s5">5. Arquitectura ANSI/SPARC</h2>
+      <p>En 1975 el comité ANSI/SPARC propuso separar la descripción de una base de datos en tres niveles
+        independientes. Esta separación permite que los usuarios trabajen con los datos sin conocer cómo están
+        almacenados físicamente, y que el administrador pueda cambiar la estructura interna sin afectar a las
+        aplicaciones.</p>
+      <p><small>ANSI: American National Standards Institute · SPARC: Standards Planning and Requirements
+          Committee</small></p>
+      <figure class="svg-fig" aria-label="Arquitectura ANSI/SPARC tres niveles"><svg viewBox="0 0 1060 186"
+          xmlns="http://www.w3.org/2000/svg" role="img" style="max-width:100%;display:block;margin:0 auto;">
+          <title>Arquitectura ANSI/SPARC</title>
+          <desc>Tres niveles apilados: Externo arriba (vistas de usuario), Conceptual en medio (esquema lógico), Interno
+            abajo (almacenamiento físico).</desc>
+          <rect x="10" y="10" width="1040" height="46" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2" /><text
+            x="530" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">NIVEL EXTERNO ·
+            Vistas</text><text x="530" y="46" text-anchor="middle" font-size="10" fill="#92400e">Vista logística · Vista
+            dirección · API REST · App móvil · (cada usuario ve solo lo que necesita)</text>
+          <rect x="10" y="72" width="1040" height="46" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" /><text
+            x="530" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">NIVEL CONCEPTUAL ·
+            Esquema lógico global</text><text x="530" y="108" text-anchor="middle" font-size="10" fill="#1e40af">Tablas:
+            clientes · pedidos · linhas_pedido · produtos · provedores · categorias · (relaciones, PKs, FKs,
+            restricciones)</text>
+          <rect x="10" y="134" width="1040" height="46" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="2" /><text
+            x="530" y="152" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">NIVEL INTERNO ·
+            Almacenamiento físico</text><text x="530" y="170" text-anchor="middle" font-size="10"
+            fill="#166534">Ficheros en /var/lib/postgresql · Páginas de 8 KB · Índices B-tree · WAL (Write-Ahead
+            Log)</text>
+        </svg>
+        <figcaption>La separación en tres niveles permite independencia: cambiar el nivel Interno no afecta al
+          Conceptual ni al Externo</figcaption>
+      </figure>
+      <table>
+        <colgroup>
+          <col style="width:14%">
+          <col style="width:36%">
+          <col style="width:50%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Qué describe</th>
+            <th>Ejemplo en TendaGalicia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Externo</strong></td>
+            <td>Lo que ve cada usuario o aplicación. Pueden existir múltiples vistas del mismo conjunto de datos.</td>
+            <td>Vista <code>pedidos_activos</code> para logística; <code>kpis_mensuales</code> para dirección; la app
+              móvil solo ve catálogo y stock.</td>
+          </tr>
+          <tr>
+            <td><strong>Conceptual</strong></td>
+            <td>Visión global de todos los datos: tablas, relaciones y restricciones, sin detalles físicos.</td>
+            <td>Esquema completo: <code>clientes</code>, <code>pedidos</code>, <code>linhas_pedido</code>,
+              <code>produtos</code>, <code>provedores</code>, <code>categorias</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Interno</strong></td>
+            <td>Cómo se almacenan los datos en disco: ficheros, páginas de datos, índices B-tree.</td>
+            <td>Ficheros en <code>/var/lib/postgresql</code> dentro del contenedor Docker; páginas de 8 KB; índice
+              B-tree sobre <code>clientes.email</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-info">
+        <div class="callout-title">&#8505;&#65039; INDEPENDENCIA DE DATOS</div>
+        <div class="callout-body">
+          <p>La separación en tres niveles aporta dos tipos de independencia:</p>
+          <ul>
+            <li><strong>Independencia física:</strong> si el DBA cambia el almacenamiento físico (mueve datos a otro
+              disco, añade un índice, cambia el tamaño de página), el esquema conceptual no cambia y las aplicaciones no
+              se ven afectadas.</li>
+            <li><strong>Independencia lógica:</strong> si el DBA añade una tabla o columna al esquema conceptual, las
+              vistas existentes del nivel externo no necesitan cambiar (siempre que los datos que muestran sigan
+              disponibles).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout callout-ejercicio">
+        <div class="callout-title">&#9997;&#65039; Ejercicio 3 · Identifica el nivel ANSI/SPARC</div>
+        <div class="callout-body">
+          <p>Clasifica cada elemento en Externo, Conceptual o Interno:</p>
+          <ol>
+            <li><code>CREATE INDEX idx_email ON clientes(email);</code></li>
+            <li>Vista <code>pedidos_pendientes</code> del departamento de logística.</li>
+            <li>Esquema relacional completo de TendaGalicia.</li>
+            <li>Ficheros <code>base/16384/</code> en el directorio de datos de PostgreSQL.</li>
+            <li>La restricción <code>CHECK (stock &gt;= 0)</code> en la tabla <code>produtos</code>.</li>
+          </ol>
+        </div>
+      </div>
+      <details class="sol">
+        <summary class="sol-toggle">Solución</summary>
+        <div class="sol-body">
+          <ol>
+            <li><strong>Interno</strong>: los índices son estructuras físicas de acceso.</li>
+            <li><strong>Externo</strong>: visión parcial personalizada para un perfil de usuario.</li>
+            <li><strong>Conceptual</strong>: estructura lógica global de todos los datos.</li>
+            <li><strong>Interno</strong>: ficheros en disco gestionados por el motor de almacenamiento.</li>
+            <li><strong>Conceptual</strong>: las restricciones de integridad forman parte de la definición lógica del
+              esquema.</li>
+          </ol>
+        </div>
+      </details>
+      <h2 id="s6">6. Formatos de almacenamiento</h2>
+      <p>Antes de que un dato llegue a vivir dentro de una tabla relacional, es habitual encontrarlo representado
+        en un fichero de texto con algún formato concreto: alguien tiene que exportarlo, enviarlo a otro sistema o
+        recibirlo de un proveedor externo. Los tres formatos que más te vas a encontrar son <strong>CSV</strong>,
+        <strong>JSON</strong> y <strong>XML</strong>. Vamos a ver cómo es cada uno por dentro, y sobre todo, a
+        comparar cómo representan <em>exactamente el mismo dato</em>.</p>
+
+      <h3 id="s6-1">6.1 CSV: la tabla en texto plano</h3>
+      <p><strong>CSV</strong> (Comma-Separated Values, «valores separados por comas») es la forma más simple de
+        representar una tabla en un fichero de texto: la primera línea es la cabecera con los nombres de columna,
+        y cada línea siguiente es una fila, con los valores separados por comas.</p>
+      <pre>id,nome,prezo,categoria
+7,Mochila outdoor,45.90,Deporte</pre>
+      <div class="callout callout-definicion">
+        <div class="callout-title">&#128218; CARACTERÍSTICAS DE CSV</div>
+        <div class="callout-body">
+          <ul>
+            <li>Sin tipos de datos: todo se guarda como texto, aunque represente un número.</li>
+            <li>Sin anidamiento: no puede haber una lista o un objeto dentro de una celda sin inventar un truco
+              (por ejemplo, separar varios valores dentro de la misma celda con otro símbolo).</li>
+            <li>Estructura fija: todas las filas deben tener las mismas columnas, en el mismo orden.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 id="s6-2">6.2 JSON: objetos, listas y anidamiento</h3>
+      <p><strong>JSON</strong> (JavaScript Object Notation) representa los datos como pares <em>clave: valor</em>
+        dentro de llaves <code>{ }</code>. A diferencia de CSV, un valor puede ser a su vez una <strong>lista</strong>
+        (entre corchetes <code>[ ]</code>) o incluso otro objeto anidado.</p>
+      <pre>{
+  "id": 7,
+  "nome": "Mochila outdoor",
+  "prezo": 45.90,
+  "categoria": "Deporte",
+  "tallas": ["S", "M", "L"]
+}</pre>
+      <div class="callout callout-recuerda">
+        <div class="callout-title">&#128161; LA DIFERENCIA CLAVE CON CSV</div>
+        <div class="callout-body">
+          <p>Fíjate en el campo <code>tallas</code>: es una <strong>lista</strong> de valores dentro del mismo
+            registro. En CSV esto no tiene una solución limpia: habría que crear una columna por cada talla
+            posible, o repetir una fila por cada combinación producto-talla. JSON lo resuelve de forma natural,
+            sin inventar columnas ni duplicar datos.</p>
+        </div>
+      </div>
+
+      <h3 id="s6-3">6.3 XML: etiquetas que se abren y se cierran</h3>
+      <p><strong>XML</strong> (eXtensible Markup Language) envuelve cada dato entre una etiqueta de apertura y una
+        de cierre (<code>&lt;nome&gt;...&lt;/nome&gt;</code>). Todo el documento cuelga de una única etiqueta
+        raíz. También admite anidamiento y listas, aunque de forma más extensa que JSON: una lista se representa
+        repitiendo una etiqueta tantas veces como elementos tenga.</p>
+      <pre>&lt;produto&gt;
+  &lt;id&gt;7&lt;/id&gt;
+  &lt;nome&gt;Mochila outdoor&lt;/nome&gt;
+  &lt;prezo&gt;45.90&lt;/prezo&gt;
+  &lt;categoria&gt;Deporte&lt;/categoria&gt;
+  &lt;tallas&gt;
+    &lt;talla&gt;S&lt;/talla&gt;
+    &lt;talla&gt;M&lt;/talla&gt;
+    &lt;talla&gt;L&lt;/talla&gt;
+  &lt;/tallas&gt;
+&lt;/produto&gt;</pre>
+
+      <h3 id="s6-4">6.4 La misma información, tres formatos</h3>
+      <p>El siguiente producto de TendaGalicia aparece representado a la vez en los tres formatos. Compáralos
+        línea a línea: es exactamente el mismo dato, solo cambia la forma de escribirlo.</p>
+      <table>
+        <colgroup>
+          <col style="width:33%">
+          <col style="width:33%">
+          <col style="width:34%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>CSV</th>
+            <th>JSON</th>
+            <th>XML</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>id,nome,prezo<br>3,Bota de monte,74.50</code></td>
+            <td><code>{ "id": 3,<br>&nbsp;&nbsp;"nome": "Bota de monte",<br>&nbsp;&nbsp;"prezo": 74.50 }</code></td>
+            <td><code>&lt;produto&gt;<br>&nbsp;&nbsp;&lt;id&gt;3&lt;/id&gt;<br>&nbsp;&nbsp;&lt;nome&gt;Bota de
+                monte&lt;/nome&gt;<br>&nbsp;&nbsp;&lt;prezo&gt;74.50&lt;/prezo&gt;<br>&lt;/produto&gt;</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-tip">
+        <div class="callout-title">&#128161; ¿CÓMO SE RECONOCEN A SIMPLE VISTA?</div>
+        <div class="callout-body">
+          <ul>
+            <li><strong>CSV:</strong> una fila de cabecera y filas de datos separadas por comas; ningún símbolo de
+              agrupación.</li>
+            <li><strong>JSON:</strong> llaves <code>{ }</code>, cada valor con su clave entre comillas seguida de
+              dos puntos.</li>
+            <li><strong>XML:</strong> etiquetas <code>&lt;...&gt;</code> que se abren y se cierran, anidadas dentro
+              de una etiqueta raíz.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-ejercicio">
+        <div class="callout-title">&#9997;&#65039; Ejercicio 4 · Convierte y decide</div>
+        <div class="callout-body">
+          <p>Esta es una fila de la tabla <code>clientes</code> de TendaGalicia:</p>
+          <p><code>id_cliente=9, nome="Xurxo Bastos", email="xurxo@correo.gal", cidade="Pontevedra"</code></p>
+          <p>(a) Represéntala en JSON, añadiendo un campo <code>intereses</code> con una lista de al menos dos
+            valores (por ejemplo, categorías de productos que le interesan). (b) ¿Por qué ese campo sería
+            complicado de representar en CSV?</p>
+        </div>
+      </div>
+      <details class="sol">
+        <summary class="sol-toggle">Solución</summary>
+        <div class="sol-body">
+          <pre>{
+  "id_cliente": 9,
+  "nome": "Xurxo Bastos",
+  "email": "xurxo@correo.gal",
+  "cidade": "Pontevedra",
+  "intereses": ["Deporte", "Fogar"]
+}</pre>
+          <p><strong>(b)</strong> En CSV cada celda admite un único valor. Para guardar varios intereses habría que
+            crear una columna por cada interés posible (con "sí"/"no" en cada una) o repetir una fila por cada
+            combinación cliente-interés, duplicando el resto de sus datos. JSON lo resuelve con una lista dentro
+            del mismo registro, sin duplicar ni inventar columnas.</p>
+        </div>
+      </details>
+
+      <h3 id="s6-5">6.5 Otros formatos que te vas a encontrar</h3>
+      <p>CSV, JSON y XML son los más habituales para intercambiar datos entre sistemas, pero no son los únicos:</p>
+      <table>
+        <colgroup>
+          <col style="width:14%">
+          <col style="width:26%">
+          <col style="width:26%">
+          <col style="width:34%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Formato</th>
+            <th>Ventajas</th>
+            <th>Limitaciones</th>
+            <th>Cuándo usarlo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Texto plano</td>
+            <td>Universal, sin dependencias</td>
+            <td>Sin estructura, sin tipos</td>
+            <td>Logs, configuración</td>
+          </tr>
+          <tr>
+            <td>Excel</td>
+            <td>Fácil para usuarios finales, gráficos</td>
+            <td>Formato cerrado, difícil de versionar</td>
+            <td>Informes para negocio</td>
+          </tr>
+          <tr>
+            <td>Parquet</td>
+            <td>Columnar, muy comprimido</td>
+            <td>No legible directamente</td>
+            <td>Data lakes, análisis con Spark o Pandas</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Y para referencia rápida, así se relacionan con PostgreSQL en concreto:</p>
+      <table>
+        <colgroup>
+          <col style="width:14%">
+          <col style="width:86%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Formato</th>
+            <th>Uso típico en PostgreSQL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CSV</td>
+            <td>Importación y exportación masiva de filas con la orden <code>COPY</code></td>
+          </tr>
+          <tr>
+            <td>JSON</td>
+            <td>Columnas de tipo <code>JSON</code> o <code>JSONB</code> para datos semiestructurados dentro de una
+              tabla relacional</td>
+          </tr>
+          <tr>
+            <td>XML</td>
+            <td>Integración con sistemas heredados que exigen ese formato por normativa</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="s7">7. Clasificación de las bases de datos</h2>
+      <h3 id="s7-1">7.1 Por modelo de datos</h3>
+      <div class="sgbd-grid">
+        <div class="sgbd-card">
+          <h4>Relacional</h4>
+          <p>Tablas, filas, columnas. SQL estándar. Claves foráneas.</p>
+          <p><small>PostgreSQL, MariaDB, Oracle</small></p>
+        </div>
+        <div class="sgbd-card">
+          <h4>Documental</h4>
+          <p>Colecciones de documentos JSON/BSON. Esquema flexible.</p>
+          <p><small>MongoDB, CouchDB</small></p>
+        </div>
+        <div class="sgbd-card">
+          <h4>Clave-valor</h4>
+          <p>Pares clave-valor. Máxima velocidad para datos simples.</p>
+          <p><small>Redis, Memcached</small></p>
+        </div>
+        <div class="sgbd-card">
+          <h4>Columnar</h4>
+          <p>Almacenamiento por columnas. Eficiente para analítica.</p>
+          <p><small>Cassandra, Redshift</small></p>
+        </div>
+        <div class="sgbd-card">
+          <h4>Grafos</h4>
+          <p>Nodos y aristas. Relaciones complejas.</p>
+          <p><small>Neo4j, Amazon Neptune</small></p>
+        </div>
+        <div class="sgbd-card">
+          <h4>Series temporales</h4>
+          <p>Optimizado para métricas y sensores IoT.</p>
+          <p><small>InfluxDB, TimescaleDB</small></p>
+        </div>
+      </div>
+      <h3 id="s7-2">7.2 Por ubicación</h3>
+      <table>
+        <colgroup>
+          <col style="width:18%">
+          <col style="width:42%">
+          <col style="width:40%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Ejemplo en el módulo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Centralizada</strong></td>
+            <td>Todos los datos en un único servidor</td>
+            <td>PostgreSQL en un contenedor Docker</td>
+          </tr>
+          <tr>
+            <td><strong>Distribuida</strong></td>
+            <td>Datos repartidos entre nodos coordinados. Aplica el teorema CAP (ver abajo).</td>
+            <td>Clúster PostgreSQL con replicación (fuera del alcance de esta UD)</td>
+          </tr>
+          <tr>
+            <td><strong>En la nube</strong></td>
+            <td>Servicio PaaS gestionado por un proveedor</td>
+            <td>Amazon RDS for PostgreSQL, Supabase, Railway</td>
+          </tr>
+          <tr>
+            <td><strong>Embebida</strong></td>
+            <td>Motor integrado dentro de la aplicación, sin servidor separado</td>
+            <td>SQLite (móviles, escritorio)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="s7-3">7.3 El teorema CAP</h3>
+      <p>En el año 2000, Eric Brewer propuso el teorema CAP (también llamado <strong>teorema de Brewer</strong>).
+        Formalmente demostrado por Gilbert y Lynch en 2002, establece que <strong>un sistema de bases de datos
+          distribuido no puede garantizar simultáneamente las tres propiedades siguientes</strong>; como máximo puede
+        ofrecer dos de las tres:</p>
+      <div class="cap-grid">
+        <div class="cap-card cp"><span class="cap-label">C</span>
+          <h4>Consistencia (Consistency)</h4>
+          <p>Todos los nodos del clúster devuelven siempre el mismo dato en el mismo momento. Una lectura después de una
+            escritura correcta siempre devuelve el último valor escrito, independientemente del nodo que responda.</p>
+          <p><small><strong>Ejemplo:</strong> si actualizas el stock de un produto en el nodo A, el nodo B devuelve
+              inmediatamente el mismo stock actualizado.</small></p>
+        </div>
+        <div class="cap-card ap"><span class="cap-label">A</span>
+          <h4>Disponibilidad (Availability)</h4>
+          <p>El sistema siempre responde a las peticiones aunque algunos nodos hayan caído. Cada petición recibe una
+            respuesta (no necesariamente con el dato más reciente).</p>
+          <p><small><strong>Ejemplo:</strong> aunque el nodo B esté caído, el sistema sigue respondiendo con el último
+              valor que tenía almacenado en el nodo A.</small></p>
+        </div>
+        <div class="cap-card pp"><span class="cap-label">P</span>
+          <h4>Tolerancia a Particiones (Partition tolerance)</h4>
+          <p>El sistema sigue funcionando aunque se pierda la comunicación entre nodos (una partición de red divide el
+            clúster en dos mitades incomunicadas).</p>
+          <p><small><strong>Ejemplo:</strong> si la red entre el centro de datos de Vigo y el de Madrid se corta, cada
+              mitad sigue atendiendo peticiones.</small></p>
+        </div>
+      </div>
+      <figure class="svg-fig" aria-label="Triángulo del teorema CAP"><svg viewBox="0 0 700 320"
+          xmlns="http://www.w3.org/2000/svg" role="img" style="max-width:100%;display:block;margin:0 auto;">
+          <title>Teorema CAP: triángulo de Brewer</title>
+          <desc>Triángulo equilátero. En cada vértice una propiedad: Consistencia, Disponibilidad (Availability) y
+            Tolerancia a Particiones. En cada lado, los sistemas que eligen esas dos propiedades.</desc>
+          <polygon points="350,30 660,280 40,280" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+          <circle cx="350" cy="30" r="28" fill="#1e40af" /><text x="350" y="25" text-anchor="middle" font-size="11"
+            font-weight="700" fill="#fff">C</text><text x="350" y="40" text-anchor="middle" font-size="8"
+            fill="#bfdbfe">Consistencia</text>
+          <circle cx="660" cy="280" r="28" fill="#059669" /><text x="660" y="275" text-anchor="middle" font-size="11"
+            font-weight="700" fill="#fff">P</text><text x="660" y="290" text-anchor="middle" font-size="8"
+            fill="#a7f3d0">Partición</text>
+          <circle cx="40" cy="280" r="28" fill="#d97706" /><text x="40" y="275" text-anchor="middle" font-size="11"
+            font-weight="700" fill="#fff">A</text><text x="40" y="290" text-anchor="middle" font-size="8"
+            fill="#fde68a">Disponib.</text><text x="505" y="145" text-anchor="middle" font-size="10" font-weight="700"
+            fill="#059669">CP</text><text x="505" y="158" text-anchor="middle" font-size="9"
+            fill="#047857">PostgreSQL</text><text x="505" y="170" text-anchor="middle" font-size="9"
+            fill="#047857">HBase, Zookeeper</text><text x="195" y="145" text-anchor="middle" font-size="10"
+            font-weight="700" fill="#d97706">CA</text><text x="195" y="158" text-anchor="middle" font-size="9"
+            fill="#92400e">Sistemas locales</text><text x="195" y="170" text-anchor="middle" font-size="9"
+            fill="#92400e">(sin partición real)</text><text x="350" y="268" text-anchor="middle" font-size="10"
+            font-weight="700" fill="#1e40af">AP</text><text x="350" y="281" text-anchor="middle" font-size="9"
+            fill="#1e40af">MongoDB, Cassandra</text><text x="350" y="294" text-anchor="middle" font-size="9"
+            fill="#1e40af">CouchDB, DynamoDB</text><text x="350" y="188" text-anchor="middle" font-size="9"
+            fill="#94a3b8">Solo 2 de 3</text><text x="350" y="203" text-anchor="middle" font-size="9"
+            fill="#94a3b8">propiedades</text><text x="350" y="218" text-anchor="middle" font-size="9"
+            fill="#94a3b8">simultáneas</text>
+        </svg>
+        <figcaption>El teorema CAP dice que ante una partición de red, el sistema debe elegir entre Consistencia o
+          Disponibilidad</figcaption>
+      </figure>
+      <div class="callout callout-importante">
+        <div class="callout-title">&#128680; LO QUE EL TEOREMA CAP DICE EN REALIDAD</div>
+        <div class="callout-body">
+          <p>En un sistema distribuido real, las <strong>particiones de red son inevitables</strong> (los cables se
+            cortan, los switches fallan, las latencias se disparan). Por eso la pregunta práctica no es "C, A o P" sino
+            <strong>"¿qué hacemos cuando hay una partición: priorizamos C o A?"</strong>.</p>
+          <ul>
+            <li><strong>Sistemas CP</strong>: ante una partición, dejan de responder antes que devolver datos
+              inconsistentes. Priorizan la corrección. Ejemplos: PostgreSQL en modo síncrono, HBase, Zookeeper.</li>
+            <li><strong>Sistemas AP</strong>: ante una partición, siguen respondiendo aunque la respuesta pueda estar
+              desactualizada. Priorizan la disponibilidad. Ejemplos: MongoDB (por defecto), Cassandra, CouchDB,
+              DynamoDB.</li>
+          </ul>
+          <p>Los sistemas CA (Consistentes y Disponibles sin tolerar particiones) solo son posibles en redes locales
+            perfectas, lo que los hace prácticamente inexistentes en entornos distribuidos reales. PostgreSQL en una
+            sola máquina (como en el módulo) no entra en el dominio del teorema CAP: es un sistema centralizado al que
+            CAP no aplica directamente.</p>
+        </div>
+      </div>
+      <table>
+        <colgroup>
+          <col style="width:22%">
+          <col style="width:12%">
+          <col style="width:66%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>SGBD</th>
+            <th>Clasificación CAP</th>
+            <th>Por qué</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PostgreSQL (clúster síncrono)</td>
+            <td>CP</td>
+            <td>Replicación síncrona: bloquea la escritura hasta que todos los réplicas confirman. Consistente pero
+              puede dejar de responder si un nodo cae.</td>
+          </tr>
+          <tr>
+            <td>MongoDB (replica set por defecto)</td>
+            <td>AP</td>
+            <td>El nodo primario acepta escrituras y replica en segundo plano. Si hay partición, los secundarios pueden
+              servir datos algo desactualizados.</td>
+          </tr>
+          <tr>
+            <td>Apache Cassandra</td>
+            <td>AP</td>
+            <td>Consistencia eventual: todos los nodos convergen al mismo valor, pero no de forma instantánea. Maximiza
+              la disponibilidad y la escritura masiva.</td>
+          </tr>
+          <tr>
+            <td>HBase</td>
+            <td>CP</td>
+            <td>Basado en HDFS. Prefiere bloquear las operaciones antes que devolver datos inconsistentes.</td>
+          </tr>
+          <tr>
+            <td>Redis (modo cluster)</td>
+            <td>AP</td>
+            <td>Acepta lecturas de nodos secundarios (posiblemente desactualizadas) para maximizar la disponibilidad.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-recuerda">
+        <div class="callout-title">&#128260; CONSISTENCIA EN CAP vs. CONSISTENCIA EN ACID</div>
+        <div class="callout-body">
+          <p>La palabra "Consistencia" tiene significados diferentes en estos dos contextos:</p>
+          <ul>
+            <li><strong>ACID → C:</strong> la BD cumple todas sus restricciones de integridad después de cada
+              transacción (CHECK, FK, UNIQUE). Es una propiedad local a un solo nodo.</li>
+            <li><strong>CAP → C:</strong> todos los nodos del sistema distribuido devuelven el mismo dato en el mismo
+              instante. Es una propiedad global entre nodos.</li>
+          </ul>
+          <p>Un sistema puede tener ACID-Consistencia sin tener CAP-Consistencia, y viceversa.</p>
+        </div>
+      </div>
+      <div class="callout callout-ejercicio">
+        <div class="callout-title">&#9997;&#65039; Ejercicio 5 · CAP en casos reales</div>
+        <div class="callout-body">
+          <p>Clasifica cada escenario según el teorema CAP y razona tu respuesta:</p>
+          <ol>
+            <li>TendaGalicia despliega su BD en un único contenedor PostgreSQL en un servidor.</li>
+            <li>Se añade un clúster de tres nodos MongoDB para el catálogo de productos. Ante una partición, el sistema
+              sigue sirviendo páginas aunque el stock pueda estar desactualizado unos segundos.</li>
+            <li>Un sistema bancario usa HBase y decide bloquear todas las transferencias durante una partición de red
+              para evitar inconsistencias de saldo.</li>
+          </ol>
+        </div>
+      </div>
+      <details class="sol">
+        <summary class="sol-toggle">Solución</summary>
+        <div class="sol-body">
+          <ol>
+            <li>El teorema CAP <strong>no aplica</strong> a sistemas centralizados (un solo nodo). No hay distribución
+              ni partición posible. PostgreSQL en un contenedor es un sistema ACID centralizado fuera del dominio CAP.
+            </li>
+            <li>Clasificación <strong>AP</strong>: el sistema prioriza disponibilidad (sigue respondiendo) sobre
+              consistencia inmediata (el stock puede estar ligeramente desactualizado). MongoDB en configuración por
+              defecto es AP.</li>
+            <li>Clasificación <strong>CP</strong>: el sistema prioriza consistencia (los saldos son siempre correctos)
+              sobre disponibilidad (bloquea operaciones durante la partición). Es la elección correcta para un sistema
+              financiero.</li>
+          </ol>
+        </div>
+      </details>
+      <h2 id="s8">8. PostgreSQL vs. MongoDB</h2>
+      <p>Los dos SGBD del módulo representan los dos modelos más extendidos: relacional y documental. Conocer las
+        diferencias clave permite elegir el más adecuado para cada proyecto.</p>
+      <table>
+        <colgroup>
+          <col style="width:26%">
+          <col style="width:37%">
+          <col style="width:37%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th>PostgreSQL 18</th>
+            <th>MongoDB 7</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modelo</td>
+            <td>Relacional (tablas, filas, columnas)</td>
+            <td>Documental (colecciones JSON/BSON)</td>
+          </tr>
+          <tr>
+            <td>Estructura</td>
+            <td>Esquema rígido definido con DDL</td>
+            <td>Esquema flexible (schema-less)</td>
+          </tr>
+          <tr>
+            <td>Lenguaje</td>
+            <td>SQL estándar ISO/ANSI</td>
+            <td>MQL (MongoDB Query Language)</td>
+          </tr>
+          <tr>
+            <td>Transacciones ACID</td>
+            <td>ACID completo desde siempre</td>
+            <td>ACID en doc.; multi-documento desde v4.0</td>
+          </tr>
+          <tr>
+            <td>Clasificación CAP</td>
+            <td>CP (en clúster síncrono)</td>
+            <td>AP (por defecto en replica set)</td>
+          </tr>
+          <tr>
+            <td>Licencia</td>
+            <td>PostgreSQL License (libre, estilo MIT)</td>
+            <td>SSPL 1.0: código disponible, no open source según la OSI</td>
+          </tr>
+          <tr>
+            <td>Escalabilidad</td>
+            <td>Vertical (más CPU/RAM)</td>
+            <td>Horizontal (sharding entre nodos)</td>
+          </tr>
+          <tr>
+            <td>Caso de uso ideal</td>
+            <td>Datos relacionales con integridad estricta</td>
+            <td>Documentos variables; prototipado rápido</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout callout-aviso">
+        <div class="callout-title">&#9888;&#65039; LICENCIA DE MONGODB</div>
+        <div class="callout-body">
+          <p>Desde octubre de 2018 (a partir de la versión 4.0) MongoDB Community Server se distribuye bajo la SSPL (Server Side Public License), no bajo la antigua AGPL. La OSI (Open Source Initiative) no ha reconocido la SSPL como licencia open source, por lo que suele describirse como «código disponible» (source-available) y no como software libre en sentido estricto. La licencia impone condiciones a quien ofrezca MongoDB como servicio en la nube sin acuerdo comercial, pero no afecta al uso educativo, de estudio o interno en una organización, que es gratuito.</p>
+        </div>
+      </div>
+      <h2 id="s9">9. Ciclo de vida de una base de datos</h2>
+      <p>Crear una base de datos de calidad sigue un proceso estructurado que garantiza un resultado correcto, eficiente
+        y mantenible. Lo recorreremos a lo largo de todo el módulo.</p>
+      <figure class="svg-fig" aria-label="Ciclo de vida de una base de datos"><svg viewBox="0 0 1060 186"
+          xmlns="http://www.w3.org/2000/svg" role="img" style="max-width:100%;display:block;margin:0 auto;">
+          <title>Ciclo de vida de una base de datos</title>
+          <desc>Seis fases en horizontal: Análisis, Diseño E/R, Diseño relacional, Normalización, Diseño físico,
+            Implementación, con etiquetas de UD.</desc>
+          <defs>
+            <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8" />
+            </marker>
+          </defs>
+          <rect x="10" y="30" width="160" height="126" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="2" /><text
+            x="90" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3412">1. Análisis</text><text
+            x="90" y="80" text-anchor="middle" font-size="9" fill="#9a3412">de requisitos</text><text x="90" y="100"
+            text-anchor="middle" font-size="9" fill="#9a3412">Qué datos necesita</text>
+          <rect x="50" y="116" width="80" height="24" rx="5" fill="#f97316" /><text x="90" y="132" text-anchor="middle"
+            font-size="9" font-weight="700" fill="#fff">UD1</text>
+          <line x1="170" y1="93" x2="184" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)" />
+          <rect x="184" y="30" width="160" height="126" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2" /><text
+            x="264" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">2. Diseño
+            E/R</text><text x="264" y="80" text-anchor="middle" font-size="9" fill="#92400e">Modelo
+            conceptual</text><text x="264" y="100" text-anchor="middle" font-size="9" fill="#92400e">Entidades y
+            relaciones</text>
+          <rect x="224" y="116" width="80" height="24" rx="5" fill="#d97706" /><text x="264" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">UD2</text>
+          <line x1="344" y1="93" x2="358" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)" />
+          <rect x="358" y="30" width="160" height="126" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="2" /><text
+            x="438" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">3. Diseño</text><text
+            x="438" y="80" text-anchor="middle" font-size="9" fill="#166534">relacional</text><text x="438" y="100"
+            text-anchor="middle" font-size="9" fill="#166534">Tablas, PKs, FKs</text>
+          <rect x="398" y="116" width="80" height="24" rx="5" fill="#059669" /><text x="438" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">UD2</text>
+          <line x1="518" y1="93" x2="532" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)" />
+          <rect x="532" y="30" width="160" height="126" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" /><text
+            x="612" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">4. Normalización</text><text
+            x="612" y="80" text-anchor="middle" font-size="9" fill="#1e40af">Eliminar redundancias</text><text x="612" y="100"
+            text-anchor="middle" font-size="9" fill="#1e40af">1FN, 2FN, 3FN</text>
+          <rect x="572" y="116" width="80" height="24" rx="5" fill="#3b82f6" /><text x="612" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">UD2</text>
+          <line x1="692" y1="93" x2="706" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)" />
+          <rect x="706" y="30" width="160" height="126" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" /><text
+            x="786" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#5b21b6">5. Diseño</text><text
+            x="786" y="80" text-anchor="middle" font-size="9" fill="#5b21b6">físico</text><text x="786" y="100"
+            text-anchor="middle" font-size="9" fill="#5b21b6">Tipos, índices</text>
+          <rect x="746" y="116" width="80" height="24" rx="5" fill="#7c3aed" /><text x="786" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">UD3</text>
+          <line x1="866" y1="93" x2="880" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)" />
+          <rect x="880" y="30" width="160" height="126" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="2" /><text
+            x="960" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#9d174d">6. Implementación</text><text
+            x="960" y="80" text-anchor="middle" font-size="9" fill="#9d174d">Crear la BD real</text><text x="960" y="100"
+            text-anchor="middle" font-size="9" fill="#9d174d">DDL PostgreSQL</text>
+          <rect x="920" y="116" width="80" height="24" rx="5" fill="#db2777" /><text x="960" y="132"
+            text-anchor="middle" font-size="9" font-weight="700" fill="#fff">UD3</text>
+        </svg>
+        <figcaption>Las etiquetas indican la unidad didáctica en que se trabaja cada fase del ciclo</figcaption>
+      </figure>
+      <div class="callout callout-ejercicio">
+        <div class="callout-title">&#9997;&#65039; Ejercicio 6 · Ciclo de vida aplicado a TendaGalicia</div>
+        <div class="callout-body">
+          <p>Indica una tarea concreta de TendaGalicia para cada fase del ciclo.</p>
+        </div>
+      </div>
+      <details class="sol">
+        <summary class="sol-toggle">Solución</summary>
+        <div class="sol-body">
+          <ul>
+            <li><strong>Análisis:</strong> el negocio necesita gestionar clientes, catálogo con stock, pedidos con
+              líneas y valoraciones.</li>
+            <li><strong>Diseño E/R:</strong> diagramar entidades Cliente, Produto, Pedido, Linha, Categoría con sus
+              atributos y relaciones.</li>
+            <li><strong>Diseño relacional:</strong> transformar el E/R en tablas con PKs, FKs y restricciones.</li>
+            <li><strong>Normalización:</strong> verificar que no hay dependencias parciales; el nombre del produto no se
+              repite en <code>linhas_pedido</code>.</li>
+            <li><strong>Diseño físico:</strong> <code>NUMERIC(10,2)</code> para precios, índices sobre
+              <code>email</code> e <code>id_produto</code>.</li>
+            <li><strong>Implementación:</strong> ejecutar el script <code>S3_script_TendaGalicia.sql</code> en
+              PostgreSQL.</li>
+          </ul>
+        </div>
+      </details>
+      <h2 id="s10">10. El esquema de TendaGalicia</h2>
+      <p>TendaGalicia es la base de datos de prácticas del módulo: una plataforma gallega de comercio electrónico
+        simulada. Trabajaremos con dos volúmenes de datos: <strong>S3</strong> (datos reducidos para aprendizaje) y
+        <strong>S4</strong> (~20.000 filas en <code>linhas_pedido</code> para optimización y rendimiento).</p>
+      <figure class="svg-fig" aria-label="Esquema relacional de TendaGalicia"><svg viewBox="0 0 1060 610"
+          xmlns="http://www.w3.org/2000/svg" role="img" style="max-width:100%;display:block;margin:0 auto;">
+          <title>Esquema relacional de TendaGalicia</title>
+          <desc>Siete tablas: categorias, provedores, produtos, clientes, pedidos, linhas_pedido y valoracions,
+            organizadas en tres columnas y conectadas por sus claves foráneas sin líneas cruzadas.</desc>
+          <rect x="10" y="10" width="190" height="90" rx="6" fill="#fef9c3" stroke="#d97706" stroke-width="2" />
+          <rect x="10" y="10" width="190" height="26" rx="6" fill="#d97706" />
+          <text x="105.0" y="28" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">categorias</text>
+          <text x="20" y="55" font-size="9.5" fill="#1e293b">PK id_categoria SERIAL</text>
+          <text x="20" y="70" font-size="9.5" fill="#1e293b"> nome VARCHAR(60) NOT NULL</text>
+          <text x="20" y="85" font-size="9.5" fill="#1e293b"> descripcion TEXT</text>
+          <rect x="10" y="130" width="190" height="100" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="2" />
+          <rect x="10" y="130" width="190" height="26" rx="6" fill="#6366f1" />
+          <text x="105.0" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">provedores</text>
+          <text x="20" y="175" font-size="9.5" fill="#1e293b">PK id_provedor SERIAL</text>
+          <text x="20" y="190" font-size="9.5" fill="#1e293b"> nome VARCHAR(120)</text>
+          <text x="20" y="205" font-size="9.5" fill="#1e293b"> pais VARCHAR(60)</text>
+          <text x="20" y="220" font-size="9.5" fill="#1e293b"> email VARCHAR(120)</text>
+          <rect x="230" y="10" width="200" height="130" rx="6" fill="#fff7ed" stroke="#f97316" stroke-width="2" />
+          <rect x="230" y="10" width="200" height="26" rx="6" fill="#f97316" />
+          <text x="330.0" y="28" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">valoracions</text>
+          <text x="240" y="55" font-size="9.5" fill="#1e293b">PK id_valoracion SERIAL</text>
+          <text x="240" y="70" font-size="9.5" fill="#1e293b">FK id_cliente</text>
+          <text x="240" y="85" font-size="9.5" fill="#1e293b">FK id_produto</text>
+          <text x="240" y="100" font-size="9.5" fill="#1e293b"> puntuacion 1..5</text>
+          <text x="240" y="115" font-size="9.5" fill="#1e293b"> comentario TEXT</text>
+          <rect x="230" y="170" width="200" height="150" rx="6" fill="#dcfce7" stroke="#059669" stroke-width="2" />
+          <rect x="230" y="170" width="200" height="26" rx="6" fill="#059669" />
+          <text x="330.0" y="188" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">produtos</text>
+          <text x="240" y="215" font-size="9.5" fill="#1e293b">PK id_produto SERIAL</text>
+          <text x="240" y="230" font-size="9.5" fill="#1e293b"> nome VARCHAR(120)</text>
+          <text x="240" y="245" font-size="9.5" fill="#1e293b"> prezo NUMERIC(10,2)</text>
+          <text x="240" y="260" font-size="9.5" fill="#1e293b"> stock INTEGER >= 0</text>
+          <text x="240" y="275" font-size="9.5" fill="#1e293b">FK id_categoria</text>
+          <text x="240" y="290" font-size="9.5" fill="#1e293b">FK id_provedor</text>
+          <rect x="230" y="350" width="200" height="130" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+          <rect x="230" y="350" width="200" height="26" rx="6" fill="#db2777" />
+          <text x="330.0" y="368" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">linhas_pedido</text>
+          <text x="240" y="395" font-size="9.5" fill="#1e293b">PK id_linha SERIAL</text>
+          <text x="240" y="410" font-size="9.5" fill="#1e293b">FK id_pedido</text>
+          <text x="240" y="425" font-size="9.5" fill="#1e293b">FK id_produto</text>
+          <text x="240" y="440" font-size="9.5" fill="#1e293b"> cantidade INTEGER > 0</text>
+          <text x="240" y="455" font-size="9.5" fill="#1e293b"> prezo_unitaria NUMERIC</text>
+          <rect x="460" y="10" width="200" height="130" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" />
+          <rect x="460" y="10" width="200" height="26" rx="6" fill="#3b82f6" />
+          <text x="560.0" y="28" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">clientes</text>
+          <text x="470" y="55" font-size="9.5" fill="#1e293b">PK id_cliente SERIAL</text>
+          <text x="470" y="70" font-size="9.5" fill="#1e293b"> nome VARCHAR(120)</text>
+          <text x="470" y="85" font-size="9.5" fill="#1e293b"> email VARCHAR(120) UNIQUE</text>
+          <text x="470" y="100" font-size="9.5" fill="#1e293b"> cidade VARCHAR(80)</text>
+          <text x="470" y="115" font-size="9.5" fill="#1e293b"> data_rexistro DATE</text>
+          <rect x="460" y="170" width="200" height="130" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" />
+          <rect x="460" y="170" width="200" height="26" rx="6" fill="#7c3aed" />
+          <text x="560.0" y="188" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">pedidos</text>
+          <text x="470" y="215" font-size="9.5" fill="#1e293b">PK id_pedido SERIAL</text>
+          <text x="470" y="230" font-size="9.5" fill="#1e293b">FK id_cliente</text>
+          <text x="470" y="245" font-size="9.5" fill="#1e293b"> data_pedido DATE</text>
+          <text x="470" y="260" font-size="9.5" fill="#1e293b"> estado VARCHAR(20)</text>
+          <text x="470" y="275" font-size="9.5" fill="#1e293b"> total NUMERIC(10,2)</text>
+          <line x1="200" y1="55" x2="230" y2="100" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,3" />
+          <line x1="200" y1="180" x2="230" y2="150" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5,3" />
+          <line x1="330" y1="140" x2="330" y2="170" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5,3" />
+          <line x1="430" y1="60" x2="460" y2="60" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5,3" />
+          <line x1="560" y1="140" x2="560" y2="170" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3" />
+          <line x1="460" y1="250" x2="430" y2="400" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3" />
+          <line x1="330" y1="320" x2="330" y2="350" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3" />
+          <rect x="10" y="500" width="650" height="90" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+          <text x="30" y="520" text-anchor="start" font-size="10" font-weight="700" fill="#475569">Leyenda:</text>
+          <text x="30" y="540" text-anchor="start" font-size="9.5" font-weight="400" fill="#475569">PK = clave primaria (identifica de forma única cada fila) &#183; FK = clave foránea (referencia a otra tabla)</text>
+          <text x="30" y="558" text-anchor="start" font-size="9.5" font-weight="400" fill="#475569">Volumen S3: ~20 clientes, ~20 productos, ~20 pedidos &#183; Volumen S4: ~1.000 clientes, ~5.000 pedidos, ~20.000 linhas_pedido</text>
+          <text x="30" y="576" text-anchor="start" font-size="9.5" font-weight="400" fill="#475569">Los identificadores en gallego (produtos, provedores, linhas_pedido, valoracions) se conservan como nombres de objeto SQL.</text>
+        </svg>
+        <figcaption>Esquema relacional de TendaGalicia · Siete tablas con sus claves y restricciones</figcaption>
+      </figure>
+      <h2 id="glosario">Glosario</h2>
+      <dl>
+        <dt><strong>ACID</strong></dt>
+        <dd>Conjunto de propiedades que garantizan la fiabilidad de las transacciones: Atomicidad, Consistencia,
+          Aislamiento y Durabilidad.</dd>
+        <dt><strong>ANSI/SPARC</strong></dt>
+        <dd>Arquitectura de tres niveles (Externo, Conceptual, Interno) que describe cómo se organiza lógicamente un
+          SGBD.</dd>
+        <dt><strong>CAP</strong></dt>
+        <dd>Teorema de Brewer: un sistema distribuido no puede garantizar simultáneamente Consistencia, Disponibilidad y
+          Tolerancia a Particiones.</dd>
+        <dt><strong>Clave foránea (FK)</strong></dt>
+        <dd>Columna que referencia la clave primaria de otra tabla para garantizar integridad referencial.</dd>
+        <dt><strong>Consistencia eventual</strong></dt>
+        <dd>Propiedad de los sistemas AP: todos los nodos convergen al mismo valor, pero no de forma instantánea.</dd>
+        <dt><strong>DBA</strong></dt>
+        <dd>Database Administrator: responsable de instalar, configurar, monitorizar y mantener el SGBD.</dd>
+        <dt><strong>DDL</strong></dt>
+        <dd>Data Definition Language: sentencias SQL para crear y modificar estructuras (CREATE, ALTER, DROP).</dd>
+        <dt><strong>DML</strong></dt>
+        <dd>Data Manipulation Language: sentencias SQL para manipular datos (INSERT, UPDATE, DELETE).</dd>
+        <dt><strong>DQL</strong></dt>
+        <dd>Data Query Language: sentencias SQL para consultar datos (SELECT).</dd>
+        <dt><strong>Gestor de concurrencia</strong></dt>
+        <dd>Componente del SGBD que controla el acceso simultáneo. PostgreSQL usa MVCC.</dd>
+        <dt><strong>Metadato</strong></dt>
+        <dd>Dato que describe a otros datos. El diccionario de datos almacena metadatos.</dd>
+        <dt><strong>MQL</strong></dt>
+        <dd>MongoDB Query Language: lenguaje de consulta nativo de MongoDB basado en filtros JSON.</dd>
+        <dt><strong>MVCC</strong></dt>
+        <dd>Multiversion Concurrency Control: mecanismo de PostgreSQL para aislar transacciones sin bloqueos de lectura.
+        </dd>
+        <dt><strong>Optimizador de consultas</strong></dt>
+        <dd>Componente del SGBD que elige el plan de ejecución más eficiente.</dd>
+        <dt><strong>Parser</strong></dt>
+        <dd>Analizador sintáctico: verifica que una sentencia SQL es gramaticalmente correcta.</dd>
+        <dt><strong>Redundancia</strong></dt>
+        <dd>Repetición del mismo dato en múltiples lugares, fuente de inconsistencias.</dd>
+        <dt><strong>Sharding</strong></dt>
+        <dd>Técnica de escalado horizontal: los datos se dividen entre varios nodos según una clave de partición.</dd>
+        <dt><strong>SGBD</strong></dt>
+        <dd>Sistema Gestor de Bases de Datos: software intermediario entre usuarios y datos.</dd>
+        <dt><strong>SQL</strong></dt>
+        <dd>Structured Query Language: lenguaje estándar ISO/ANSI para bases de datos relacionales.</dd>
+        <dt><strong>Transacción</strong></dt>
+        <dd>Unidad lógica de trabajo que se ejecuta completamente o no se ejecuta (BEGIN / COMMIT / ROLLBACK).</dd>
+        <dt><strong>WAL</strong></dt>
+        <dd>Write-Ahead Log: fichero de registro de PostgreSQL que garantiza la Durabilidad (D de ACID).</dd>
+      </dl>
+      <h2 id="recursos">Recursos</h2>
+      <ul>
+        <li><a href="https://www.postgresql.org/docs/current/" target="_blank" rel="noopener">Documentación oficial de
+            PostgreSQL</a></li>
+        <li><a href="https://www.mongodb.com/docs/manual/" target="_blank" rel="noopener">Documentación oficial de
+            MongoDB</a></li>
+        <li><a href="https://db-engines.com/en/ranking" target="_blank" rel="noopener">DB-Engines Ranking · ranking
+            actualizado de SGBD</a></li>
+        <li><a href="https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/" target="_blank"
+            rel="noopener">CAP Twelve Years Later (Brewer, 2012)</a></li>
+      </ul>
+    </article>
+
+    <footer class="doc-footer">
+      Material didáctico · MP0372 Xestión de Bases de Datos · ASIR · IES Aller Ulloa (Lalín) · Curso 2026-2027<br>
+      Autoría: Javier Feijóo López · Licencia CC BY-NC-SA 4.0<br>
+      <small>Contenido elaborado con apoyo de inteligencia artificial y revisado por el/la docente antes de su
+        publicación.</small>
+    </footer>
+
+  </div><!-- /wrapper -->
+  <script>
+    (function () {
+      document.querySelectorAll('pre').forEach(function (pre) {
+        if (pre.closest('.pre-wrap')) return;
+        var wrap = document.createElement('div');
+        wrap.className = 'pre-wrap';
+        pre.parentNode.insertBefore(wrap, pre);
+        wrap.appendChild(pre);
+
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'copy-btn';
+        btn.textContent = 'Copiar';
+        btn.setAttribute('aria-label', 'Copiar código');
+        wrap.appendChild(btn);
+
+        btn.addEventListener('click', function () {
+          var text = pre.textContent;
+          var onDone = function () {
+            btn.textContent = 'Copiado';
+            btn.classList.add('is-copied');
+            setTimeout(function () {
+              btn.textContent = 'Copiar';
+              btn.classList.remove('is-copied');
+            }, 1500);
+          };
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(text).then(onDone);
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) { }
+            document.body.removeChild(ta);
+            onDone();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
