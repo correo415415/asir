@@ -214,7 +214,7 @@
     document.body.style.setProperty('--mat-color', (currentMateria && window.APUNTES.materias[currentMateria] || {}).color || '#2563eb');
   }
   function setMateria(materiaId, animate) {
-    if (materiaId === currentMateria) return;
+    if ((materiaId || null) === currentMateria) return;
     rebuild(materiaId);
     try { localStorage.setItem('asir.materia', materiaId || ''); } catch (_) {}
     if (animate) fitAll(); else { const a = freeArea(); cam.s = 0.5; cam.x = a.cx; cam.y = a.cy; applyCam(); fitAll(); }
@@ -576,8 +576,11 @@
     // Materia inicial: la del nodo del hash > preferencia guardada > primera materia
     let matPref = null; try { matPref = localStorage.getItem('asir.materia'); } catch (_) {}
     const hashMat = hash ? materiaOf(hash) : null;
-    let mat = hashMat || (matPref === '' ? null : matPref) || Object.keys(A.materias)[0] || null;
-    if (mat && !A.materias[mat]) mat = Object.keys(A.materias)[0] || null;
+    let mat;
+    if (hashMat) mat = hashMat;                       // el enlace manda
+    else if (matPref === '') mat = null;              // el usuario eligió «todas»
+    else if (matPref && A.materias[matPref]) mat = matPref;
+    else mat = Object.keys(A.materias)[0] || null;
     rebuild(mat);
 
     let idxPref = '1'; try { idxPref = localStorage.getItem('asir.index') || (window.innerWidth >= 1100 ? '1' : '0'); } catch (_) {}
@@ -591,6 +594,6 @@
       const a = freeArea(); cam.s = 0.5; cam.x = a.cx; cam.y = a.cy; applyCam();
       fitAll();
     }
-    window.addEventListener('hashchange', () => { const h = decodeURIComponent(location.hash.slice(1)); if (h && G.byId.has(h) && h !== activeId) openNode(h, true); });
+    window.addEventListener('hashchange', () => { const h = decodeURIComponent(location.hash.slice(1)); if (h && h !== activeId && (G.byId.has(h) || materiaOf(h))) openNode(h, true); });
   });
 })();
