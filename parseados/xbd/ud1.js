@@ -14,7 +14,7 @@ window.APUNTES.materias.xbd = window.APUNTES.materias.xbd || {
   nombre: 'Xestión de Bases de Datos',
   abrev: 'XBD',
   codigo: 'MP0372',
-  color: '#2563eb',
+  color: '#1d4e89',
   descripcion: 'Del dato al SGBD. PostgreSQL y MongoDB sobre la base de datos de prácticas TendaGalicia.'
 };
 

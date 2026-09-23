@@ -14,7 +14,7 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const KIND_LABEL = { materia: 'Materia', unidad: 'Unidad', tema: 'Tema', subtema: 'Apartado', ejercicio: 'Ejercicio', glosario: 'Glosario', recursos: 'Recursos' };
-  const KIND_COLOR = { materia: '#2563eb', unidad: '#d97706', tema: '#2563eb', subtema: '#059669', ejercicio: '#db2777', glosario: '#7c3aed', recursos: '#0891b2' };
+  const KIND_COLOR = { materia: '#0f2545', unidad: '#b8892f', tema: '#1d4e89', subtema: '#2f7a5c', ejercicio: '#a83a4f', glosario: '#5b4b8a', recursos: '#2b7a8a' };
   const KINDS = ['unidad', 'tema', 'subtema', 'ejercicio', 'glosario', 'recursos'];
   const CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
 
@@ -177,14 +177,14 @@
     const A = window.APUNTES || { materias: {}, unidades: [] };
     const list = Object.values(A.materias);
     const cur = currentMateria ? A.materias[currentMateria] : null;
-    $('.mat-dot', matBtn).style.background = cur ? cur.color : 'linear-gradient(135deg,#2563eb,#7c3aed)';
+    $('.mat-dot', matBtn).style.background = cur ? cur.color : '#0f2545';
     $('.mat-name', matBtn).textContent = cur ? (cur.abrev || cur.nombre) : 'Todas las materias';
     $('.mat-sub', matBtn).textContent = cur ? cur.nombre : `${list.length} materias · ${A.unidades.length} unidades`;
     const item = (m, active) => {
       const nUd = m ? A.unidades.filter(u => u.materia === m.id).length : A.unidades.length;
       const nNodos = m ? A.unidades.filter(u => u.materia === m.id).reduce((a, u) => a + u.nodos.length, 0) : A.unidades.reduce((a, u) => a + u.nodos.length, 0);
       return `<button class="mat-item${active ? ' on' : ''}" data-mat="${m ? esc(m.id) : ''}">
-        <span class="mat-item-dot" style="background:${m ? m.color : 'linear-gradient(135deg,#2563eb,#7c3aed)'}"></span>
+        <span class="mat-item-dot" style="background:${m ? m.color : '#0f2545'}"></span>
         <span class="mat-item-text">
           <span class="mat-item-title">${m ? esc(m.nombre) : 'Todas las materias'}${m && m.abrev ? ` <b>${esc(m.abrev)}</b>` : ''}</span>
           <span class="mat-item-meta">${m && m.codigo ? esc(m.codigo) + ' · ' : ''}${nUd} unidad${nUd === 1 ? '' : 'es'} · ${nNodos} nodos</span>
@@ -211,7 +211,7 @@
     currentMateria = materiaId || null;
     closePanel(true);
     buildGraph(currentMateria); layout(); render(); renderIndex(); renderMateriaSwitch();
-    document.body.style.setProperty('--mat-color', (currentMateria && window.APUNTES.materias[currentMateria] || {}).color || '#2563eb');
+    document.body.style.setProperty('--mat-color', (currentMateria && window.APUNTES.materias[currentMateria] || {}).color || '#0f2545');
   }
   function setMateria(materiaId, animate) {
     if ((materiaId || null) === currentMateria) return;

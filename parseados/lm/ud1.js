@@ -14,7 +14,7 @@ window.APUNTES.materias.lm = window.APUNTES.materias.lm || {
   nombre: 'Lenguajes de Marcas',
   abrev: 'LM',
   codigo: 'LMSGI',
-  color: '#7c3aed',
+  color: '#5b4b8a',
   descripcion: 'Lenguajes de marcas y sistemas de gestión de información: HTML, XML, JSON, YAML, documentos bien formados, espacios de nombres y transformación de datos.'
 };
 
