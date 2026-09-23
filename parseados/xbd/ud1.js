@@ -528,3 +528,276 @@ window.APUNTES.unidades.push({
 <tr><td><strong>XML</strong></td><td>Integración con sistemas heredados que exigen ese formato por normativa</td></tr>
 </table>`
   },
+
+  /* ---------------- 7 ---------------- */
+  {
+    id: 'xbd-ud1-7',
+    tipo: 'tema',
+    titulo: '7. Clasificación de las bases de datos',
+    resumen: 'Por modelo de datos (relacional, documental, clave-valor, columnar, grafos, series temporales), por ubicación (centralizada, distribuida, nube, embebida) y el teorema CAP.',
+    claves: ['Por modelo: relacional, documental, clave-valor, columnar, grafos, series temporales', 'Por ubicación: centralizada, distribuida, nube, embebida', 'Teorema CAP: solo 2 de 3'],
+    tags: ['clasificación', 'nosql', 'relacional', 'documental', 'clave-valor', 'columnar', 'grafos', 'series temporales', 'cap'],
+    links: ['xbd-ud1-7-1', 'xbd-ud1-7-2', 'xbd-ud1-7-3', 'xbd-ud1-ej5'],
+    contenido: `
+<p>Las bases de datos se pueden clasificar según <strong>el modelo de datos</strong> que utilizan, según <strong>dónde se ubican</strong> los datos y, en el caso de los sistemas distribuidos, según qué propiedades priorizan del <strong>teorema CAP</strong>.</p>
+<ul>
+  <li><strong>7.1 Por modelo de datos:</strong> relacional, documental, clave-valor, columnar, grafos, series temporales.</li>
+  <li><strong>7.2 Por ubicación:</strong> centralizada, distribuida, en la nube, embebida.</li>
+  <li><strong>7.3 Teorema CAP:</strong> Consistencia, Disponibilidad, Tolerancia a particiones: solo 2 de 3.</li>
+</ul>`
+  },
+  {
+    id: 'xbd-ud1-7-1',
+    tipo: 'subtema',
+    titulo: '7.1 Clasificación por modelo de datos',
+    resumen: 'Relacional (PostgreSQL), Documental (MongoDB), Clave-valor (Redis), Columnar (Cassandra), Grafos (Neo4j), Series temporales (InfluxDB, TimescaleDB).',
+    claves: ['Relacional: PostgreSQL, MariaDB, Oracle', 'Documental: MongoDB, CouchDB', 'Clave-valor: Redis, Memcached', 'Columnar: Cassandra, Redshift', 'Grafos: Neo4j, Neptune', 'Series temporales: InfluxDB, TimescaleDB'],
+    tags: ['relacional', 'documental', 'clave-valor', 'columnar', 'grafos', 'series temporales', 'postgresql', 'mongodb', 'redis', 'cassandra', 'neo4j', 'influxdb', 'timescaledb', 'mariadb', 'oracle'],
+    contenido: `
+<table>
+<tr><th>Modelo</th><th>Descripción</th><th>Ejemplos</th></tr>
+<tr><td><strong>Relacional</strong></td><td>Tablas, filas, columnas. SQL estándar. Claves foráneas.</td><td>PostgreSQL, MariaDB, Oracle</td></tr>
+<tr><td><strong>Documental</strong></td><td>Colecciones de documentos JSON/BSON. Esquema flexible.</td><td>MongoDB, CouchDB</td></tr>
+<tr><td><strong>Clave-valor</strong></td><td>Pares clave-valor. Máxima velocidad para datos simples.</td><td>Redis, Memcached</td></tr>
+<tr><td><strong>Columnar</strong></td><td>Almacenamiento por columnas. Eficiente para analítica.</td><td>Cassandra, Redshift</td></tr>
+<tr><td><strong>Grafos</strong></td><td>Nodos y aristas. Relaciones complejas.</td><td>Neo4j, Amazon Neptune</td></tr>
+<tr><td><strong>Series temporales</strong></td><td>Optimizado para métricas y sensores IoT.</td><td>InfluxDB, TimescaleDB</td></tr>
+</table>`
+  },
+  {
+    id: 'xbd-ud1-7-2',
+    tipo: 'subtema',
+    titulo: '7.2 Clasificación por ubicación',
+    resumen: 'Centralizada (un servidor), Distribuida (varios nodos, aplica CAP), En la nube (PaaS: RDS, Supabase), Embebida (SQLite).',
+    claves: ['Centralizada: un servidor (PostgreSQL en Docker)', 'Distribuida: nodos coordinados, aplica CAP', 'Nube: PaaS (RDS, Supabase, Railway)', 'Embebida: dentro de la app (SQLite)'],
+    tags: ['centralizada', 'distribuida', 'nube', 'paas', 'embebida', 'sqlite', 'rds', 'supabase', 'docker'],
+    contenido: `
+<table>
+<tr><th>Tipo</th><th>Descripción</th><th>Ejemplo en el módulo</th></tr>
+<tr><td><strong>Centralizada</strong></td><td>Todos los datos en un único servidor</td><td>PostgreSQL en un contenedor Docker</td></tr>
+<tr><td><strong>Distribuida</strong></td><td>Datos repartidos entre nodos coordinados. Aplica el teorema CAP.</td><td>Clúster PostgreSQL con replicación (fuera del alcance de esta UD)</td></tr>
+<tr><td><strong>En la nube</strong></td><td>Servicio PaaS gestionado por un proveedor</td><td>Amazon RDS for PostgreSQL, Supabase, Railway</td></tr>
+<tr><td><strong>Embebida</strong></td><td>Motor integrado dentro de la aplicación, sin servidor separado</td><td>SQLite (móviles, escritorio)</td></tr>
+</table>`
+  },
+  {
+    id: 'xbd-ud1-7-3',
+    tipo: 'subtema',
+    titulo: '7.3 El teorema CAP',
+    resumen: 'Brewer (2000): un sistema distribuido solo puede garantizar 2 de 3: Consistencia, Disponibilidad, Tolerancia a particiones. Sistemas CP vs AP. Consistencia CAP ≠ Consistencia ACID.',
+    claves: ['Brewer 2000; demostrado por Gilbert y Lynch 2002', 'C: todos los nodos devuelven el mismo dato', 'A: siempre responde', 'P: sigue funcionando con la red partida', 'Las particiones son inevitables → elegir C o A', 'CP: PostgreSQL síncrono, HBase, Zookeeper', 'AP: MongoDB, Cassandra, CouchDB, DynamoDB, Redis cluster', 'Consistencia CAP (global) ≠ Consistencia ACID (local)'],
+    tags: ['cap', 'brewer', 'consistencia', 'disponibilidad', 'availability', 'partición', 'partition tolerance', 'cp', 'ap', 'ca', 'consistencia eventual', 'hbase', 'zookeeper', 'cassandra', 'dynamodb', 'redis cluster'],
+    contenido: `
+<p>En el año 2000, <strong>Eric Brewer</strong> propuso el teorema CAP (teorema de Brewer). Demostrado formalmente por Gilbert y Lynch en 2002, establece que un sistema de bases de datos <strong>distribuido</strong> no puede garantizar simultáneamente las tres propiedades; como máximo dos de las tres:</p>
+<table>
+<tr><th></th><th>Propiedad</th><th>Definición</th><th>Ejemplo</th></tr>
+<tr><td><strong>C</strong></td><td><strong>Consistencia</strong> (Consistency)</td><td>Todos los nodos devuelven siempre el mismo dato en el mismo momento. Una lectura tras una escritura correcta siempre devuelve el último valor escrito, sea cual sea el nodo.</td><td>Si actualizas el stock de un produto en el nodo A, el nodo B devuelve inmediatamente el mismo stock actualizado.</td></tr>
+<tr><td><strong>A</strong></td><td><strong>Disponibilidad</strong> (Availability)</td><td>El sistema siempre responde aunque algunos nodos hayan caído. Cada petición recibe respuesta (no necesariamente con el dato más reciente).</td><td>Aunque el nodo B esté caído, el sistema responde con el último valor almacenado en el nodo A.</td></tr>
+<tr><td><strong>P</strong></td><td><strong>Tolerancia a Particiones</strong> (Partition tolerance)</td><td>El sistema sigue funcionando aunque se pierda la comunicación entre nodos (la red divide el clúster en dos mitades incomunicadas).</td><td>Si la red entre el centro de datos de Vigo y el de Madrid se corta, cada mitad sigue atendiendo peticiones.</td></tr>
+</table>
+<h4>Triángulo de Brewer</h4>
+<table>
+<tr><th>Lado</th><th>Sistemas</th></tr>
+<tr><td><strong>CP</strong> (Consistencia + Partición)</td><td>PostgreSQL (clúster síncrono), HBase, Zookeeper</td></tr>
+<tr><td><strong>AP</strong> (Disponibilidad + Partición)</td><td>MongoDB, Cassandra, CouchDB, DynamoDB</td></tr>
+<tr><td><strong>CA</strong> (Consistencia + Disponibilidad)</td><td>Sistemas locales (sin partición real)</td></tr>
+</table>
+<div class="box danger"><div class="box-title">🚨 Lo que el teorema CAP dice en realidad</div>
+<p>En un sistema distribuido real, <strong>las particiones de red son inevitables</strong> (cables cortados, switches que fallan, latencias). La pregunta práctica no es "C, A o P" sino <strong>"¿qué hacemos cuando hay una partición: priorizamos C o A?"</strong>.</p>
+<ul>
+  <li><strong>Sistemas CP:</strong> ante una partición, dejan de responder antes que devolver datos inconsistentes. Priorizan la corrección. PostgreSQL en modo síncrono, HBase, Zookeeper.</li>
+  <li><strong>Sistemas AP:</strong> ante una partición, siguen respondiendo aunque la respuesta pueda estar desactualizada. Priorizan la disponibilidad. MongoDB (por defecto), Cassandra, CouchDB, DynamoDB.</li>
+</ul>
+<p>Los sistemas <strong>CA</strong> solo son posibles en redes locales perfectas: prácticamente inexistentes en entornos distribuidos reales. <strong>PostgreSQL en una sola máquina no entra en el dominio del teorema CAP</strong>: es un sistema centralizado.</p></div>
+<table>
+<tr><th>SGBD</th><th>CAP</th><th>Por qué</th></tr>
+<tr><td>PostgreSQL (clúster síncrono)</td><td><strong>CP</strong></td><td>Replicación síncrona: bloquea la escritura hasta que todas las réplicas confirman. Consistente pero puede dejar de responder si un nodo cae.</td></tr>
+<tr><td>MongoDB (replica set por defecto)</td><td><strong>AP</strong></td><td>El primario acepta escrituras y replica en segundo plano. Ante partición, los secundarios pueden servir datos algo desactualizados.</td></tr>
+<tr><td>Apache Cassandra</td><td><strong>AP</strong></td><td>Consistencia eventual: todos los nodos convergen al mismo valor, pero no de forma instantánea. Maximiza disponibilidad y escritura masiva.</td></tr>
+<tr><td>HBase</td><td><strong>CP</strong></td><td>Basado en HDFS. Prefiere bloquear operaciones antes que devolver datos inconsistentes.</td></tr>
+<tr><td>Redis (modo cluster)</td><td><strong>AP</strong></td><td>Acepta lecturas de secundarios (posiblemente desactualizadas) para maximizar disponibilidad.</td></tr>
+</table>
+<div class="box info"><div class="box-title">🔄 Consistencia en CAP vs. Consistencia en ACID</div>
+<ul>
+  <li><strong>ACID → C:</strong> la BD cumple todas sus restricciones de integridad después de cada transacción (CHECK, FK, UNIQUE). Propiedad <em>local</em> a un solo nodo.</li>
+  <li><strong>CAP → C:</strong> todos los nodos del sistema distribuido devuelven el mismo dato en el mismo instante. Propiedad <em>global</em> entre nodos.</li>
+</ul>
+<p>Un sistema puede tener ACID-Consistencia sin tener CAP-Consistencia, y viceversa.</p></div>`
+  },
+  {
+    id: 'xbd-ud1-ej5',
+    tipo: 'ejercicio',
+    titulo: 'Ejercicio 5 · CAP en casos reales',
+    resumen: 'PostgreSQL en un contenedor (CAP no aplica), clúster MongoDB de catálogo (AP), banco con HBase que bloquea transferencias (CP).',
+    claves: ['Un solo nodo → CAP no aplica', 'Catálogo MongoDB que sigue sirviendo → AP', 'Banco HBase que bloquea → CP'],
+    tags: ['ejercicio', 'cap', 'cp', 'ap', 'mongodb', 'hbase'],
+    contenido: `
+<div class="box ex"><div class="box-title">✍️ Enunciado</div>
+<p>Clasifica cada escenario según el teorema CAP y razona tu respuesta:</p>
+<ol>
+  <li>TendaGalicia despliega su BD en un único contenedor PostgreSQL en un servidor.</li>
+  <li>Se añade un clúster de tres nodos MongoDB para el catálogo. Ante una partición, sigue sirviendo páginas aunque el stock pueda estar desactualizado unos segundos.</li>
+  <li>Un sistema bancario usa HBase y bloquea todas las transferencias durante una partición de red para evitar inconsistencias de saldo.</li>
+</ol></div>
+<details><summary>Solución</summary>
+<ol>
+  <li><strong>CAP no aplica</strong> a sistemas centralizados (un solo nodo). No hay distribución ni partición posible. PostgreSQL en un contenedor es un sistema ACID centralizado fuera del dominio CAP.</li>
+  <li><strong>AP:</strong> prioriza disponibilidad (sigue respondiendo) sobre consistencia inmediata (stock ligeramente desactualizado). MongoDB por defecto es AP.</li>
+  <li><strong>CP:</strong> prioriza consistencia (saldos siempre correctos) sobre disponibilidad (bloquea operaciones durante la partición). Elección correcta para un sistema financiero.</li>
+</ol></details>`
+  },
+
+  /* ---------------- 8 ---------------- */
+  {
+    id: 'xbd-ud1-8',
+    tipo: 'tema',
+    titulo: '8. PostgreSQL vs. MongoDB',
+    resumen: 'Relacional vs documental; esquema rígido vs flexible; SQL vs MQL; ACID completo vs ACID por documento; CP vs AP; licencia libre vs SSPL; escalado vertical vs horizontal.',
+    claves: ['Relacional (tablas) vs documental (JSON/BSON)', 'Esquema rígido (DDL) vs flexible', 'SQL vs MQL', 'ACID completo vs multi-documento desde v4.0', 'CP vs AP', 'PostgreSQL License vs SSPL (no OSI)', 'Escala vertical vs horizontal (sharding)'],
+    tags: ['postgresql', 'mongodb', 'comparativa', 'sql', 'mql', 'sspl', 'sharding', 'escalabilidad', 'licencia'],
+    contenido: `
+<p>Los dos SGBD del módulo representan los dos modelos más extendidos: relacional y documental.</p>
+<table>
+<tr><th>Criterio</th><th>PostgreSQL 18</th><th>MongoDB 7</th></tr>
+<tr><td>Modelo</td><td>Relacional (tablas, filas, columnas)</td><td>Documental (colecciones JSON/BSON)</td></tr>
+<tr><td>Estructura</td><td>Esquema rígido definido con DDL</td><td>Esquema flexible (schema-less)</td></tr>
+<tr><td>Lenguaje</td><td>SQL estándar ISO/ANSI</td><td>MQL (MongoDB Query Language)</td></tr>
+<tr><td>Transacciones ACID</td><td>ACID completo desde siempre</td><td>ACID en documento; multi-documento desde v4.0</td></tr>
+<tr><td>Clasificación CAP</td><td>CP (en clúster síncrono)</td><td>AP (por defecto en replica set)</td></tr>
+<tr><td>Licencia</td><td>PostgreSQL License (libre, estilo MIT)</td><td>SSPL 1.0: código disponible, no open source según la OSI</td></tr>
+<tr><td>Escalabilidad</td><td>Vertical (más CPU/RAM)</td><td>Horizontal (sharding entre nodos)</td></tr>
+<tr><td>Caso de uso ideal</td><td>Datos relacionales con integridad estricta</td><td>Documentos variables; prototipado rápido</td></tr>
+</table>
+<div class="box warn"><div class="box-title">⚠️ Licencia de MongoDB</div>
+<p>Desde octubre de 2018 (versión 4.0) MongoDB Community Server se distribuye bajo la <strong>SSPL</strong> (Server Side Public License), no bajo la antigua AGPL. La OSI no la reconoce como open source, por lo que se describe como «código disponible» (<em>source-available</em>). La licencia impone condiciones a quien ofrezca MongoDB como servicio en la nube sin acuerdo comercial, pero <strong>no afecta al uso educativo, de estudio o interno</strong>, que es gratuito.</p></div>`
+  },
+
+  /* ---------------- 9 ---------------- */
+  {
+    id: 'xbd-ud1-9',
+    tipo: 'tema',
+    titulo: '9. Ciclo de vida de una base de datos',
+    resumen: 'Seis fases: Análisis (UD1) → Diseño E/R (UD2) → Diseño relacional (UD2) → Normalización (UD2) → Diseño físico (UD3) → Implementación (UD3).',
+    claves: ['1 Análisis de requisitos (UD1)', '2 Diseño E/R (UD2)', '3 Diseño relacional (UD2)', '4 Normalización 1FN/2FN/3FN (UD2)', '5 Diseño físico (UD3)', '6 Implementación DDL (UD3)'],
+    tags: ['ciclo de vida', 'análisis de requisitos', 'diseño e/r', 'diseño relacional', 'normalización', '1fn', '2fn', '3fn', 'diseño físico', 'implementación', 'ddl'],
+    links: ['xbd-ud1-ej6'],
+    contenido: `
+<p>Crear una base de datos de calidad sigue un proceso estructurado que garantiza un resultado correcto, eficiente y mantenible. Lo recorreremos a lo largo de todo el módulo.</p>
+<table>
+<tr><th>#</th><th>Fase</th><th>Qué se hace</th><th>UD</th></tr>
+<tr><td>1</td><td><strong>Análisis de requisitos</strong></td><td>Qué datos necesita el negocio</td><td>UD1</td></tr>
+<tr><td>2</td><td><strong>Diseño E/R</strong></td><td>Modelo conceptual: entidades y relaciones</td><td>UD2</td></tr>
+<tr><td>3</td><td><strong>Diseño relacional</strong></td><td>Tablas, PKs, FKs</td><td>UD2</td></tr>
+<tr><td>4</td><td><strong>Normalización</strong></td><td>Eliminar redundancias: 1FN, 2FN, 3FN</td><td>UD2</td></tr>
+<tr><td>5</td><td><strong>Diseño físico</strong></td><td>Tipos, índices</td><td>UD3</td></tr>
+<tr><td>6</td><td><strong>Implementación</strong></td><td>Crear la BD real con DDL PostgreSQL</td><td>UD3</td></tr>
+</table>`
+  },
+  {
+    id: 'xbd-ud1-ej6',
+    tipo: 'ejercicio',
+    titulo: 'Ejercicio 6 · Ciclo de vida aplicado a TendaGalicia',
+    resumen: 'Una tarea concreta de TendaGalicia por cada fase del ciclo de vida.',
+    claves: ['Análisis: clientes, catálogo, pedidos, valoraciones', 'E/R: Cliente, Produto, Pedido, Linha, Categoría', 'Relacional: tablas con PK/FK', 'Normalización: sin dependencias parciales', 'Físico: NUMERIC(10,2), índices', 'Implementación: S3_script_TendaGalicia.sql'],
+    tags: ['ejercicio', 'ciclo de vida', 'tendagalicia'],
+    contenido: `
+<div class="box ex"><div class="box-title">✍️ Enunciado</div><p>Indica una tarea concreta de TendaGalicia para cada fase del ciclo.</p></div>
+<details><summary>Solución</summary>
+<ul>
+  <li><strong>Análisis:</strong> el negocio necesita gestionar clientes, catálogo con stock, pedidos con líneas y valoraciones.</li>
+  <li><strong>Diseño E/R:</strong> diagramar entidades Cliente, Produto, Pedido, Linha, Categoría con sus atributos y relaciones.</li>
+  <li><strong>Diseño relacional:</strong> transformar el E/R en tablas con PKs, FKs y restricciones.</li>
+  <li><strong>Normalización:</strong> verificar que no hay dependencias parciales; el nombre del produto no se repite en <code>linhas_pedido</code>.</li>
+  <li><strong>Diseño físico:</strong> <code>NUMERIC(10,2)</code> para precios, índices sobre <code>email</code> e <code>id_produto</code>.</li>
+  <li><strong>Implementación:</strong> ejecutar el script <code>S3_script_TendaGalicia.sql</code> en PostgreSQL.</li>
+</ul></details>`
+  },
+
+  /* ---------------- 10 ---------------- */
+  {
+    id: 'xbd-ud1-10',
+    tipo: 'tema',
+    titulo: '10. El esquema de TendaGalicia',
+    resumen: 'BD de prácticas: 7 tablas (categorias, provedores, produtos, clientes, pedidos, linhas_pedido, valoracions). Volúmenes S3 (reducido) y S4 (~20.000 líneas).',
+    claves: ['7 tablas: categorias, provedores, produtos, clientes, pedidos, linhas_pedido, valoracions', 'produtos → categorias, provedores', 'pedidos → clientes', 'linhas_pedido → pedidos, produtos', 'valoracions → clientes, produtos', 'S3 reducido · S4 ~20.000 líneas'],
+    tags: ['tendagalicia', 'esquema', 'categorias', 'provedores', 'produtos', 'clientes', 'pedidos', 'linhas_pedido', 'valoracions', 'pk', 'fk', 'serial', 's3', 's4'],
+    contenido: `
+<p><strong>TendaGalicia</strong> es la base de datos de prácticas del módulo: una plataforma gallega de comercio electrónico simulada. Dos volúmenes de datos: <strong>S3</strong> (datos reducidos para aprendizaje) y <strong>S4</strong> (~20.000 filas en <code>linhas_pedido</code> para optimización y rendimiento).</p>
+<table>
+<tr><th>Tabla</th><th>Columnas</th></tr>
+<tr><td><strong>categorias</strong></td><td><code>PK id_categoria SERIAL</code> · <code>nome VARCHAR(60) NOT NULL</code> · <code>descripcion TEXT</code></td></tr>
+<tr><td><strong>provedores</strong></td><td><code>PK id_provedor SERIAL</code> · <code>nome VARCHAR(120)</code> · <code>pais VARCHAR(60)</code> · <code>email VARCHAR(120)</code></td></tr>
+<tr><td><strong>produtos</strong></td><td><code>PK id_produto SERIAL</code> · <code>nome VARCHAR(120)</code> · <code>prezo NUMERIC(10,2)</code> · <code>stock INTEGER &gt;= 0</code> · <code>FK id_categoria</code> · <code>FK id_provedor</code></td></tr>
+<tr><td><strong>clientes</strong></td><td><code>PK id_cliente SERIAL</code> · <code>nome VARCHAR(120)</code> · <code>email VARCHAR(120) UNIQUE</code> · <code>cidade VARCHAR(80)</code> · <code>data_rexistro DATE</code></td></tr>
+<tr><td><strong>pedidos</strong></td><td><code>PK id_pedido SERIAL</code> · <code>FK id_cliente</code> · <code>data_pedido DATE</code> · <code>estado VARCHAR(20)</code> · <code>total NUMERIC(10,2)</code></td></tr>
+<tr><td><strong>linhas_pedido</strong></td><td><code>PK id_linha SERIAL</code> · <code>FK id_pedido</code> · <code>FK id_produto</code> · <code>cantidade INTEGER &gt; 0</code> · <code>prezo_unitaria NUMERIC</code></td></tr>
+<tr><td><strong>valoracions</strong></td><td><code>PK id_valoracion SERIAL</code> · <code>FK id_cliente</code> · <code>FK id_produto</code> · <code>puntuacion 1..5</code> · <code>comentario TEXT</code></td></tr>
+</table>
+<h4>Relaciones (FK → PK)</h4>
+<ul>
+  <li><code>produtos.id_categoria → categorias</code> · <code>produtos.id_provedor → provedores</code></li>
+  <li><code>pedidos.id_cliente → clientes</code></li>
+  <li><code>linhas_pedido.id_pedido → pedidos</code> · <code>linhas_pedido.id_produto → produtos</code></li>
+  <li><code>valoracions.id_cliente → clientes</code> · <code>valoracions.id_produto → produtos</code></li>
+</ul>
+<div class="box info"><div class="box-title">Leyenda y volúmenes</div>
+<p><strong>PK</strong> = clave primaria (identifica de forma única cada fila) · <strong>FK</strong> = clave foránea (referencia a otra tabla).</p>
+<p><strong>S3:</strong> ~20 clientes, ~20 productos, ~20 pedidos · <strong>S4:</strong> ~1.000 clientes, ~5.000 pedidos, ~20.000 linhas_pedido.</p>
+<p>Los identificadores en gallego (<code>produtos</code>, <code>provedores</code>, <code>linhas_pedido</code>, <code>valoracions</code>) se conservan como nombres de objeto SQL.</p></div>`
+  },
+
+  /* ---------------- GLOSARIO ---------------- */
+  {
+    id: 'xbd-ud1-glosario',
+    tipo: 'glosario',
+    titulo: 'Glosario UD1',
+    resumen: 'ACID, ANSI/SPARC, CAP, FK, consistencia eventual, DBA, DDL, DML, DQL, MVCC, MQL, WAL, sharding, transacción…',
+    claves: ['21 términos clave de la unidad'],
+    tags: ['glosario', 'acid', 'ansi/sparc', 'cap', 'clave foránea', 'consistencia eventual', 'dba', 'ddl', 'dml', 'dql', 'metadato', 'mql', 'mvcc', 'optimizador', 'parser', 'redundancia', 'sharding', 'sgbd', 'sql', 'transacción', 'wal'],
+    contenido: `
+<dl>
+<dt>ACID</dt><dd>Conjunto de propiedades que garantizan la fiabilidad de las transacciones: Atomicidad, Consistencia, Aislamiento y Durabilidad.</dd>
+<dt>ANSI/SPARC</dt><dd>Arquitectura de tres niveles (Externo, Conceptual, Interno) que describe cómo se organiza lógicamente un SGBD.</dd>
+<dt>CAP</dt><dd>Teorema de Brewer: un sistema distribuido no puede garantizar simultáneamente Consistencia, Disponibilidad y Tolerancia a Particiones.</dd>
+<dt>Clave foránea (FK)</dt><dd>Columna que referencia la clave primaria de otra tabla para garantizar integridad referencial.</dd>
+<dt>Consistencia eventual</dt><dd>Propiedad de los sistemas AP: todos los nodos convergen al mismo valor, pero no de forma instantánea.</dd>
+<dt>DBA</dt><dd>Database Administrator: responsable de instalar, configurar, monitorizar y mantener el SGBD.</dd>
+<dt>DDL</dt><dd>Data Definition Language: sentencias SQL para crear y modificar estructuras (CREATE, ALTER, DROP).</dd>
+<dt>DML</dt><dd>Data Manipulation Language: sentencias SQL para manipular datos (INSERT, UPDATE, DELETE).</dd>
+<dt>DQL</dt><dd>Data Query Language: sentencias SQL para consultar datos (SELECT).</dd>
+<dt>Gestor de concurrencia</dt><dd>Componente del SGBD que controla el acceso simultáneo. PostgreSQL usa MVCC.</dd>
+<dt>Metadato</dt><dd>Dato que describe a otros datos. El diccionario de datos almacena metadatos.</dd>
+<dt>MQL</dt><dd>MongoDB Query Language: lenguaje de consulta nativo de MongoDB basado en filtros JSON.</dd>
+<dt>MVCC</dt><dd>Multiversion Concurrency Control: mecanismo de PostgreSQL para aislar transacciones sin bloqueos de lectura.</dd>
+<dt>Optimizador de consultas</dt><dd>Componente del SGBD que elige el plan de ejecución más eficiente.</dd>
+<dt>Parser</dt><dd>Analizador sintáctico: verifica que una sentencia SQL es gramaticalmente correcta.</dd>
+<dt>Redundancia</dt><dd>Repetición del mismo dato en múltiples lugares, fuente de inconsistencias.</dd>
+<dt>Sharding</dt><dd>Técnica de escalado horizontal: los datos se dividen entre varios nodos según una clave de partición.</dd>
+<dt>SGBD</dt><dd>Sistema Gestor de Bases de Datos: software intermediario entre usuarios y datos.</dd>
+<dt>SQL</dt><dd>Structured Query Language: lenguaje estándar ISO/ANSI para bases de datos relacionales.</dd>
+<dt>Transacción</dt><dd>Unidad lógica de trabajo que se ejecuta completamente o no se ejecuta (BEGIN / COMMIT / ROLLBACK).</dd>
+<dt>WAL</dt><dd>Write-Ahead Log: fichero de registro de PostgreSQL que garantiza la Durabilidad (D de ACID).</dd>
+</dl>`
+  },
+
+  /* ---------------- RECURSOS ---------------- */
+  {
+    id: 'xbd-ud1-recursos',
+    tipo: 'recursos',
+    titulo: 'Recursos UD1',
+    resumen: 'Documentación oficial PostgreSQL y MongoDB, DB-Engines Ranking, artículo "CAP Twelve Years Later" (Brewer, 2012).',
+    claves: ['Docs PostgreSQL', 'Docs MongoDB', 'DB-Engines Ranking', 'CAP Twelve Years Later (Brewer, 2012)'],
+    tags: ['recursos', 'documentación', 'postgresql', 'mongodb', 'db-engines', 'brewer'],
+    contenido: `
+<ul>
+  <li><a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener">Documentación oficial de PostgreSQL</a></li>
+  <li><a href="https://www.mongodb.com/docs/" target="_blank" rel="noopener">Documentación oficial de MongoDB</a></li>
+  <li><a href="https://db-engines.com/en/ranking" target="_blank" rel="noopener">DB-Engines Ranking</a> · ranking actualizado de SGBD</li>
+  <li><a href="https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/" target="_blank" rel="noopener">CAP Twelve Years Later</a> (Brewer, 2012)</li>
+</ul>
+<p class="muted">Material didáctico · MP0372 Xestión de Bases de Datos · ASIR · IES Aller Ulloa (Lalín) · Curso 2026-2027<br>
+Autoría: Javier Feijóo López · Licencia CC BY-NC-SA 4.0<br>
+Contenido elaborado con apoyo de inteligencia artificial y revisado por el docente antes de su publicación.</p>`
+  }
+  ]
+});
