@@ -14,10 +14,14 @@ assets/
 apuntes/              Apuntes ORIGINALES tal y como se reciben, separados por materia
   xbd/                XBD · Xestión de Bases de Datos (MP0372)
     ud1-sistemas-almacenamiento-sgbd.html
+  lm/                 LM · Lenguajes de Marcas (sitio MkDocs exportado)
+    index.html, tema01/, referencias/, assets/
 parseados/            Misma estructura de carpetas, con los apuntes convertidos a nodos
   manifest.js         Lista de ficheros parseados que se cargan
   xbd/
     ud1.js            UD1 parseada (36 nodos)
+  lm/
+    ud1.js            UD1 parseada (35 nodos)
 vercel.json           Configuración de despliegue estático
 ```
 
@@ -57,6 +61,7 @@ y añadir la ruta a `parseados/manifest.js`.
 | Abrir un nodo | Clic (doble clic centra y acerca) |
 | Panel | Pestañas *Contenido · Ideas clave · Relacionados*; `←` `→` nodo anterior/siguiente |
 | Índice | Botón ☰ o `I`; árbol expandible sincronizado con el nodo abierto |
+| Cambiar de materia | Selector en la barra superior o `M`; muestra una materia o todas a la vez. Se recuerda la elección y los enlaces `#id` cambian de materia automáticamente |
 | Buscar | `/` · escribe · `↑ ↓ Enter`; filtros por tipo; resalta coincidencias en el mapa y en el texto |
 | Compartir | La URL guarda el nodo abierto (`#xbd-ud1-4-2`) |
 | Ayuda | `?` |
@@ -76,3 +81,4 @@ Importar el repo en Vercel con *Framework Preset: Other* y sin comando de build.
 | Carpeta | Materia | Unidades parseadas |
 |---------|---------|--------------------|
 | `xbd`   | XBD · Xestión de Bases de Datos (MP0372) | UD1 |
+| `lm`    | LM · Lenguajes de Marcas y Sistemas de Gestión de Información (LMSGI) | UD1 |
