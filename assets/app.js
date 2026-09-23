@@ -33,6 +33,8 @@
 
   /* ---------- Construcción del grafo ---------- */
   const G = { nodes: [], byId: new Map(), edges: [], xrefs: [], root: null, order: [] };
+  let currentMateria = null; // null = todas las materias
+  function resetGraph() { G.nodes = []; G.byId = new Map(); G.edges = []; G.xrefs = []; G.root = null; G.order = []; }
 
   function makeMateriaNode(m) {
     const n = {
@@ -48,9 +50,11 @@
     return n;
   }
 
-  function buildGraph() {
+  function buildGraph(materiaId) {
+    resetGraph();
     const A = window.APUNTES || { materias: {}, unidades: [] };
-    const materias = Object.values(A.materias);
+    const materias = Object.values(A.materias).filter(m => !materiaId || m.id === materiaId);
+    const unidades = A.unidades.filter(u => !materiaId || u.materia === materiaId);
 
     let root;
     if (materias.length === 1) {
@@ -58,11 +62,11 @@
     } else {
       root = { id: '__root', tipo: 'materia', titulo: 'ASIR · Apuntes', resumen: 'Todas las materias', contenido: '', tags: [], claves: [], children: [], virtual: true, ctx: {} };
       G.byId.set(root.id, root);
-      materias.forEach(m => { const n = makeMateriaNode(m); n.parent = root; root.children.push(n); });
+      materias.forEach(m => { const n = makeMateriaNode(m); n.parent = root; root.children.push(n); G.nodes.push(n); });
     }
     G.root = root;
 
-    A.unidades.forEach(u => {
+    unidades.forEach(u => {
       const matNode = G.byId.get('mat-' + u.materia) || root;
       const mat = A.materias[u.materia] || {};
       const hub = u.nodos.find(n => n.tipo === 'unidad') || u.nodos[0];
@@ -125,6 +129,7 @@
   const nodeEls = new Map();
 
   function render() {
+    nodesEl.innerHTML = ''; edgesEl.innerHTML = ''; nodeEls.clear();
     const frag = document.createDocumentFragment();
     G.nodes.forEach(n => {
       if (n.virtual) return;
@@ -155,8 +160,64 @@
     G.xrefs.forEach(([a, b]) => draw(a, b, 'xref'));
 
     $('#legend').innerHTML = KINDS.map(k => `<span><i style="background:${KIND_COLOR[k]}"></i>${KIND_LABEL[k]}</span>`).join('');
+    const nMat = G.nodes.filter(n => n.tipo === 'materia').length || 1;
+    const nUd = G.nodes.filter(n => n.tipo === 'unidad').length;
+    $('#stats').textContent = `${G.nodes.filter(n => !n.virtual && n.tipo !== 'materia').length} nodos · ${nMat} materia(s) · ${nUd} unidad(es)`;
+  }
+
+  /* ---------- Selector de materia ---------- */
+  const matBtn = $('#mat-btn'), matMenu = $('#mat-menu');
+  function materiaOf(nodeId) {
+    const A = window.APUNTES || { unidades: [] };
+    if (nodeId.startsWith('mat-')) return nodeId.slice(4);
+    const u = A.unidades.find(u => u.nodos.some(n => n.id === nodeId));
+    return u ? u.materia : null;
+  }
+  function renderMateriaSwitch() {
     const A = window.APUNTES || { materias: {}, unidades: [] };
-    $('#stats').textContent = `${G.nodes.filter(n => !n.virtual && n.tipo !== 'materia').length} nodos · ${Object.keys(A.materias).length} materia(s) · ${A.unidades.length} unidad(es)`;
+    const list = Object.values(A.materias);
+    const cur = currentMateria ? A.materias[currentMateria] : null;
+    $('.mat-dot', matBtn).style.background = cur ? cur.color : 'linear-gradient(135deg,#2563eb,#7c3aed)';
+    $('.mat-name', matBtn).textContent = cur ? (cur.abrev || cur.nombre) : 'Todas las materias';
+    $('.mat-sub', matBtn).textContent = cur ? cur.nombre : `${list.length} materias · ${A.unidades.length} unidades`;
+    const item = (m, active) => {
+      const nUd = m ? A.unidades.filter(u => u.materia === m.id).length : A.unidades.length;
+      const nNodos = m ? A.unidades.filter(u => u.materia === m.id).reduce((a, u) => a + u.nodos.length, 0) : A.unidades.reduce((a, u) => a + u.nodos.length, 0);
+      return `<button class="mat-item${active ? ' on' : ''}" data-mat="${m ? esc(m.id) : ''}">
+        <span class="mat-item-dot" style="background:${m ? m.color : 'linear-gradient(135deg,#2563eb,#7c3aed)'}"></span>
+        <span class="mat-item-text">
+          <span class="mat-item-title">${m ? esc(m.nombre) : 'Todas las materias'}${m && m.abrev ? ` <b>${esc(m.abrev)}</b>` : ''}</span>
+          <span class="mat-item-meta">${m && m.codigo ? esc(m.codigo) + ' · ' : ''}${nUd} unidad${nUd === 1 ? '' : 'es'} · ${nNodos} nodos</span>
+          ${m && m.descripcion ? `<span class="mat-item-desc">${esc(m.descripcion)}</span>` : ''}
+        </span>
+        ${active ? '<span class="mat-check">✓</span>' : ''}
+      </button>`;
+    };
+    matMenu.innerHTML = `<div class="mat-menu-head">Cambiar de materia <kbd>M</kbd></div>` + list.map(m => item(m, currentMateria === m.id)).join('') + `<div class="mat-menu-sep"></div>` + item(null, !currentMateria);
+  }
+  function toggleMatMenu(force) {
+    const on = force != null ? force : matMenu.hidden;
+    matMenu.hidden = !on; matBtn.setAttribute('aria-expanded', on ? 'true' : 'false');
+  }
+  matBtn.addEventListener('click', e => { e.stopPropagation(); toggleMatMenu(); });
+  matMenu.addEventListener('click', e => {
+    const b = e.target.closest('.mat-item'); if (!b) return;
+    toggleMatMenu(false);
+    setMateria(b.dataset.mat || null, true);
+  });
+  document.addEventListener('click', e => { if (!e.target.closest('.mat-switch')) toggleMatMenu(false); });
+
+  function rebuild(materiaId) {
+    currentMateria = materiaId || null;
+    closePanel(true);
+    buildGraph(currentMateria); layout(); render(); renderIndex(); renderMateriaSwitch();
+    document.body.style.setProperty('--mat-color', (currentMateria && window.APUNTES.materias[currentMateria] || {}).color || '#2563eb');
+  }
+  function setMateria(materiaId, animate) {
+    if (materiaId === currentMateria) return;
+    rebuild(materiaId);
+    try { localStorage.setItem('asir.materia', materiaId || ''); } catch (_) {}
+    if (animate) fitAll(); else { const a = freeArea(); cam.s = 0.5; cam.x = a.cx; cam.y = a.cy; applyCam(); fitAll(); }
   }
 
   /* ---------- Índice (árbol) ---------- */
@@ -178,16 +239,15 @@
     const ul = document.createElement('ul');
     (G.root.virtual ? G.root.children : [G.root]).forEach(t => ul.appendChild(build(t, 0)));
     tree.appendChild(ul); body.innerHTML = ''; body.appendChild(tree);
-
-    body.addEventListener('click', e => {
-      const tw = e.target.closest('.tw');
-      if (tw && !tw.classList.contains('leaf')) { tw.closest('li').classList.toggle('collapsed'); return; }
-      const row = e.target.closest('.row');
-      if (row) openNode(row.dataset.id, true);
-    });
-    $('#index-expand').onclick = () => $$('.tree li.collapsed', body).forEach(l => l.classList.remove('collapsed'));
-    $('#index-collapse').onclick = () => $$('.tree li', body).forEach(l => { if (l.querySelector('ul') && l.querySelector('.row').classList.contains('d2')) l.classList.add('collapsed'); });
   }
+  $('#index-body').addEventListener('click', e => {
+    const tw = e.target.closest('.tw');
+    if (tw && !tw.classList.contains('leaf')) { tw.closest('li').classList.toggle('collapsed'); return; }
+    const row = e.target.closest('.row');
+    if (row) openNode(row.dataset.id, true);
+  });
+  $('#index-expand').onclick = () => $$('#index-body .tree li.collapsed').forEach(l => l.classList.remove('collapsed'));
+  $('#index-collapse').onclick = () => $$('#index-body .tree li').forEach(l => { if (l.querySelector('ul') && l.querySelector('.row').classList.contains('d2')) l.classList.add('collapsed'); });
   function syncIndex(id) {
     $$('.tree .row.active').forEach(r => r.classList.remove('active'));
     const row = $(`.tree .row[data-id="${id}"]`);
@@ -245,7 +305,8 @@
     animateTo(a.cx - n.x * s, a.cy - n.y * s, s);
   }
   function fitAll() {
-    const xs = G.nodes.map(n => n.x), ys = G.nodes.map(n => n.y);
+    const vis = G.nodes.filter(n => !n.virtual); if (!vis.length) return;
+    const xs = vis.map(n => n.x), ys = vis.map(n => n.y);
     const minX = Math.min(...xs) - 170, maxX = Math.max(...xs) + 170, minY = Math.min(...ys) - 120, maxY = Math.max(...ys) + 120;
     const a = freeArea();
     const w = window.innerWidth - a.left - a.right, h = window.innerHeight - 56 - 100;
@@ -321,6 +382,12 @@
   const relItem = (n, arrow) => `<button class="rel" data-go="${n.id}"><span class="dot" style="background:${n.color || KIND_COLOR[n.tipo]}"></span><span class="rel-text"><div class="rel-t">${esc(n.titulo)}</div><div class="rel-s">${esc(n.resumen || KIND_LABEL[n.tipo])}</div></span><span class="arrow">${arrow}</span></button>`;
 
   function openNode(id, center, opts = {}) {
+    if (!G.byId.has(id)) {
+      // El nodo pertenece a otra materia: cambiar de materia y reintentar
+      const m = materiaOf(id);
+      if (m && m !== currentMateria) { rebuild(m); try { localStorage.setItem('asir.materia', m); } catch (_) {} }
+      if (!G.byId.has(id)) return;
+    }
     const n = G.byId.get(id); if (!n || n.virtual) return;
     if (activeId && nodeEls.get(activeId)) nodeEls.get(activeId).classList.remove('active');
     activeId = id; nodeEls.get(id).classList.add('active');
@@ -363,12 +430,12 @@
     if (center) centerOn(n);
     if (!opts.noHash) history.replaceState(null, '', '#' + id);
   }
-  function closePanel() {
+  function closePanel(keepHash) {
     panel.classList.remove('open'); panel.setAttribute('aria-hidden', 'true'); document.body.classList.remove('panel-open');
     if (activeId && nodeEls.get(activeId)) nodeEls.get(activeId).classList.remove('active');
     $$('path.hl', edgesEl).forEach(l => l.classList.remove('hl'));
     activeId = null; renderCrumbs(null); $$('.tree .row.active').forEach(r => r.classList.remove('active'));
-    history.replaceState(null, '', location.pathname + location.search);
+    if (keepHash !== true) history.replaceState(null, '', location.pathname + location.search);
   }
   function setTab(name) {
     $$('.panel-tabs .tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
@@ -495,6 +562,7 @@
     else if (e.key === '-') zoomAt(0.83, freeArea().cx, freeArea().cy);
     else if (e.key === 'f' || e.key === 'F') fitAll();
     else if (e.key === 'i' || e.key === 'I') toggleIndex();
+    else if (e.key === 'm' || e.key === 'M') toggleMatMenu();
     else if (e.key === '?') help.hidden = !help.hidden;
     else if (e.key === 'ArrowLeft' && activeId) step(-1);
     else if (e.key === 'ArrowRight' && activeId) step(1);
@@ -503,11 +571,18 @@
 
   /* ---------- Inicio ---------- */
   loadScripts(window.APUNTES_FILES || [], () => {
-    buildGraph(); layout(); render(); renderIndex();
+    const A = window.APUNTES || { materias: {}, unidades: [] };
+    const hash = decodeURIComponent(location.hash.slice(1));
+    // Materia inicial: la del nodo del hash > preferencia guardada > primera materia
+    let matPref = null; try { matPref = localStorage.getItem('asir.materia'); } catch (_) {}
+    const hashMat = hash ? materiaOf(hash) : null;
+    let mat = hashMat || (matPref === '' ? null : matPref) || Object.keys(A.materias)[0] || null;
+    if (mat && !A.materias[mat]) mat = Object.keys(A.materias)[0] || null;
+    rebuild(mat);
+
     let idxPref = '1'; try { idxPref = localStorage.getItem('asir.index') || (window.innerWidth >= 1100 ? '1' : '0'); } catch (_) {}
     toggleIndex(idxPref === '1');
 
-    const hash = decodeURIComponent(location.hash.slice(1));
     if (hash && G.byId.has(hash)) {
       const n = G.byId.get(hash);
       cam.s = 1; const a = freeArea(); cam.x = a.cx - n.x; cam.y = a.cy - n.y; applyCam();

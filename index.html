@@ -24,6 +24,14 @@
         <span class="brand-logo"></span>
         <span class="brand-text">Apuntes <strong>ASIR</strong></span>
       </a>
+      <div class="mat-switch">
+        <button id="mat-btn" class="mat-btn" title="Cambiar de materia (M)" aria-haspopup="listbox" aria-expanded="false">
+          <span class="mat-dot"></span>
+          <span class="mat-text"><span class="mat-name">Materia</span><span class="mat-sub"></span></span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div id="mat-menu" class="mat-menu glass" role="listbox" hidden></div>
+      </div>
       <nav class="crumbs" id="crumbs" aria-label="Ruta"></nav>
     </div>
     <div class="topbar-right">
@@ -132,11 +140,12 @@
           <div><kbd>↑ ↓ Enter</kbd><span>Moverse por los resultados</span></div>
           <div><kbd>← →</kbd><span>Nodo anterior / siguiente (panel abierto)</span></div>
           <div><kbd>I</kbd><span>Mostrar u ocultar el índice</span></div>
+          <div><kbd>M</kbd><span>Cambiar de materia</span></div>
           <div><kbd>F</kbd><span>Ver todo el mapa</span></div>
           <div><kbd>+ −</kbd><span>Zoom</span></div>
           <div><kbd>Esc</kbd><span>Cerrar panel o buscador</span></div>
         </div>
-        <p class="muted">Los colores indican el tipo de nodo. La URL guarda el nodo abierto para compartir enlaces directos (<code>#xbd-ud1-4-2</code>).</p>
+        <p class="muted">Los colores indican el tipo de nodo. Con el selector de la barra superior cambias de materia (o ves todas a la vez). La URL guarda el nodo abierto para compartir enlaces directos (<code>#xbd-ud1-4-2</code>, <code>#lm-ud1-5-1</code>).</p>
       </div>
     </div>
   </div>
