@@ -350,3 +350,253 @@ $servidor = "servidor-web";
 <p>Copia el código en un archivo llamado <code>servidores.html</code> y ábrelo con un navegador. En la pestaña aparecerá <strong>Estado de los servidores</strong> y en la página se mostrarán el encabezado, el párrafo y la lista de equipos.</p>
 <p class="muted">Resultado en el navegador: <a href="apuntes/lm/tema01/imagenes/prueba_navegador.png" target="_blank" rel="noopener">ver captura</a>.</p></div>`
   },
+
+  /* ---------------- 2. Clasificación y ámbitos ---------------- */
+  {
+    id: 'lm-ud1-2',
+    tipo: 'tema',
+    titulo: '2. Clasificación, características y ámbitos de uso',
+    resumen: 'No todos los lenguajes de marcas sirven para lo mismo. Se clasifican por la función de sus marcas (procedimiento, presentación, descriptivo) y por su ámbito (intercambio de datos, documentación web, especializados). Cómo elegir y qué características comparten.',
+    claves: ['Dos preguntas: ¿qué indican sus marcas? ¿en qué ámbito se usa?', 'Las clasificaciones son orientativas: una tecnología puede estar en varios grupos', 'JSON y YAML son formatos de serialización de datos (sin etiquetas) pero se estudian junto a los lenguajes de marcas', 'RSS es un vocabulario basado en XML', 'Características: texto plano, interoperabilidad, independencia, flexibilidad'],
+    tags: ['clasificacion', 'ambitos', 'html', 'markdown', 'xml', 'json', 'yaml', 'svg', 'rss'],
+    links: ['lm-ud1-2-1', 'lm-ud1-2-2', 'lm-ud1-2-3', 'lm-ud1-2-4', 'lm-ud1-2-5', 'lm-ud1-2-6'],
+    contenido: `
+<p>Los lenguajes de marcas no se utilizan todos para lo mismo. Algunos ayudan a componer documentos, otros estructuran páginas web y otros describen datos que serán intercambiados entre aplicaciones. Para elegir una tecnología conviene preguntarse dos cosas:</p>
+<ol>
+  <li><strong>¿Qué indican sus marcas?</strong></li>
+  <li><strong>¿En qué ámbito se va a utilizar?</strong></li>
+</ol>
+<p>Las clasificaciones que estudiaremos son <em>orientativas</em>. Una misma tecnología puede pertenecer a más de un grupo dependiendo del uso que se haga de ella.</p>
+
+<div class="box info"><div class="box-title">Lenguajes de marcas y formatos de datos</div>
+<p>HTML, XML, Markdown y SVG utilizan marcas de forma clara. <strong>JSON y YAML</strong> se consideran, con mayor precisión, <strong>formatos de serialización de datos</strong>: no emplean etiquetas, pero se estudian junto con los lenguajes de marcas porque también representan información estructurada. <strong>RSS</strong>, por su parte, es un vocabulario basado en XML.</p></div>
+
+<h4>Contenido del apartado</h4>
+<ol>
+  <li>Tecnologías habituales y para qué se utilizan</li>
+  <li>Clasificación según la función de las marcas (procedimiento · presentación · descriptivo)</li>
+  <li>Clasificación según el ámbito de uso (propósito general · documentación web · especializados)</li>
+  <li>Cómo elegir un lenguaje o formato genérico</li>
+  <li>Características generales (texto plano, interoperabilidad, independencia, flexibilidad)</li>
+  <li>Resumen</li>
+</ol>`
+  },
+
+  {
+    id: 'lm-ud1-2-1',
+    tipo: 'subtema',
+    titulo: '2.1 Tecnologías habituales y para qué se utilizan',
+    resumen: 'Tabla de reconocimiento: HTML (<h1>, <p>), Markdown (#, *, []()), XML (etiquetas propias), JSON ({} [] clave-valor), YAML (sangrado clave: valor), SVG (<circle>, <path>), RSS (<channel>, <item>).',
+    claves: ['HTML → estructurar páginas web', 'Markdown → documentación, apuntes, README', 'XML → intercambiar, almacenar y configurar información estructurada', 'JSON → intercambiar datos en API y aplicaciones web', 'YAML → archivos de configuración legibles', 'SVG → gráficos vectoriales escalables', 'RSS → publicar y distribuir novedades de un sitio'],
+    tags: ['html', 'markdown', 'xml', 'json', 'yaml', 'svg', 'rss', 'tabla', 'reconocer'],
+    contenido: `
+<table>
+<thead><tr><th>Tecnología</th><th>Cómo se reconoce</th><th>Uso habitual</th></tr></thead>
+<tbody>
+<tr><td><strong>HTML</strong></td><td>Etiquetas como <code>&lt;h1&gt;</code> o <code>&lt;p&gt;</code></td><td>Estructurar el contenido de páginas web</td></tr>
+<tr><td><strong>Markdown</strong></td><td>Símbolos sencillos como <code>#</code>, <code>*</code> o <code>[]()</code></td><td>Escribir documentación, apuntes y archivos README</td></tr>
+<tr><td><strong>XML</strong></td><td>Etiquetas definidas según las necesidades</td><td>Intercambiar, almacenar y configurar información estructurada</td></tr>
+<tr><td><strong>JSON</strong></td><td>Objetos <code>{}</code>, listas <code>[]</code> y pares clave-valor</td><td>Intercambiar datos en API y aplicaciones web</td></tr>
+<tr><td><strong>YAML</strong></td><td>Sangrado y pares <code>clave: valor</code></td><td>Crear archivos de configuración legibles</td></tr>
+<tr><td><strong>SVG</strong></td><td>Elementos XML como <code>&lt;circle&gt;</code> o <code>&lt;path&gt;</code></td><td>Describir gráficos vectoriales escalables</td></tr>
+<tr><td><strong>RSS</strong></td><td>Elementos XML como <code>&lt;channel&gt;</code> e <code>&lt;item&gt;</code></td><td>Publicar y distribuir novedades de un sitio web</td></tr>
+</tbody></table>
+<div class="box tip"><div class="box-title">Ejemplo integrador</div>
+<p>Una aplicación de monitorización podría ofrecer sus datos mediante <strong>JSON</strong>, guardar su configuración en <strong>YAML</strong>, generar una interfaz en <strong>HTML</strong> y mostrar un esquema de red en <strong>SVG</strong>.</p></div>`
+  },
+
+  {
+    id: 'lm-ud1-2-2',
+    tipo: 'subtema',
+    titulo: '2.2 Clasificación según la función de las marcas',
+    resumen: 'Procedimiento (qué operación realizar: TeX/LaTeX), presentación (cómo se organiza o muestra: HTML, Markdown) y descriptivo o semántico (qué significa el dato: XML).',
+    claves: ['Procedimiento: marcas que indican QUÉ OPERACIÓN realizar (LaTeX \\section, \\textbf) → composición', 'Presentación: CÓMO se organiza o muestra (HTML, Markdown)', 'Descriptivo/semántico: QUÉ SIGNIFICA cada dato (XML)', 'HTML moderno también aporta semántica (<header>, <nav>, <main>); el aspecto lo controla CSS', 'LaTeX: pdflatex archivo.tex; Overleaf online; fuerte en fórmulas'],
+    tags: ['procedimiento', 'presentacion', 'descriptivo', 'semantico', 'latex', 'tex', 'pdflatex', 'overleaf', 'html', 'xml', 'css'],
+    contenido: `
+<p>Esta clasificación se fija en <strong>lo que expresan las marcas</strong> dentro del documento.</p>
+
+<h4>Lenguajes de procedimiento</h4>
+<p>Las marcas de procedimiento indican <strong>qué operación debe realizar</strong> una herramienta sobre el contenido: comenzar una sección, aplicar un estilo, insertar un salto o generar un documento final. Están relacionadas con el proceso de <em>composición</em>.</p>
+<p><strong>TeX</strong> y <strong>LaTeX</strong> son ejemplos habituales. Los comandos <code>\\section</code> y <code>\\textbf</code> indican operaciones que el procesador debe aplicar:</p>
+<pre><code>\\documentclass{article}
+
+\\begin{document}
+\\section{Informe del servidor}
+
+Estado: \\textbf{activo}.
+\\end{document}</code></pre>
+<p>Guárdalo como <code>procedimiento.tex</code> y, si tienes una distribución de LaTeX, compílalo con:</p>
+<pre><code>pdflatex procedimiento.tex</code></pre>
+<p>Sin instalar nada, se puede probar en línea en <a href="https://www.sarmate.net/demo/mathpad_tex_edit.php" target="_blank" rel="noopener">sarmate.net/demo/mathpad_tex_edit.php</a> o con editores como <a href="https://www.overleaf.com/" target="_blank" rel="noopener">Overleaf</a>. Este tipo de lenguaje se utiliza sobre todo para redactar <strong>trabajos de investigación</strong> y documentos de matemáticas, física o química. Uno de sus puntos fuertes es que <strong>facilita la escritura de fórmulas complejas</strong>.</p>
+
+<h4>Lenguajes de presentación</h4>
+<p>Ayudan a indicar <strong>cómo se organiza o se muestra</strong> el contenido. <strong>HTML</strong> y <strong>Markdown</strong> se utilizan con frecuencia para presentar documentación, especialmente en la Web. Ejemplo con título, párrafo y lista:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Estado de la red&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Estado de la red&lt;/h1&gt;
+        &lt;p&gt;Equipos comprobados:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;servidor-web: activo&lt;/li&gt;
+            &lt;li&gt;servidor-copias: mantenimiento&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Guárdalo como <code>presentacion.html</code> y ábrelo con un navegador. <strong>No necesita un servidor web</strong> para esta prueba (<a href="apuntes/lm/assets/examples/tema01/presentacion.html" target="_blank" rel="noopener">abrir el ejemplo</a>).</p>
+<div class="box info"><div class="box-title">HTML también aporta significado</div>
+<p>Esta clasificación no es absoluta. HTML moderno no se limita a definir la presentación: etiquetas como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> o <code>&lt;main&gt;</code> describen también la <strong>función semántica</strong> del contenido. El aspecto visual se controla principalmente mediante <strong>CSS</strong>.</p></div>
+
+<h4>Lenguajes descriptivos o semánticos</h4>
+<p>Las marcas descriptivas indican <strong>qué significa cada dato</strong> y cómo se relaciona con los demás. No ordenan directamente cómo debe aparecer en pantalla ni qué operación debe ejecutarse. <strong>XML</strong> es el ejemplo más representativo:</p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;equipo&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+    &lt;ip&gt;192.168.10.20&lt;/ip&gt;
+    &lt;estado&gt;activo&lt;/estado&gt;
+&lt;/equipo&gt;</code></pre>
+<p>El archivo no muestra ni modifica el servidor: <strong>solo representa información sobre él</strong>. Puede abrirse en un navegador o procesarse mediante un programa.</p>
+
+<h4>Resumen de la clasificación</h4>
+<table>
+<thead><tr><th>Tipo</th><th>Pregunta a la que responde</th><th>Ejemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Procedimiento</strong></td><td>¿Qué operación debe realizarse?</td><td>LaTeX: <code>\\textbf{activo}</code></td></tr>
+<tr><td><strong>Presentación</strong></td><td>¿Cómo se organiza o muestra?</td><td>HTML: <code>&lt;h1&gt;Estado&lt;/h1&gt;</code></td></tr>
+<tr><td><strong>Descriptivo o semántico</strong></td><td>¿Qué significa el dato?</td><td>XML: <code>&lt;estado&gt;activo&lt;/estado&gt;</code></td></tr>
+</tbody></table>`
+  },
+
+  {
+    id: 'lm-ud1-2-3',
+    tipo: 'subtema',
+    titulo: '2.3 Clasificación según el ámbito de uso',
+    resumen: 'Propósito general e intercambio de datos (XML, JSON, YAML), documentación y presentación web (HTML, Markdown) y lenguajes específicos o especializados (SVG, RSS).',
+    claves: ['Propósito general/intercambio: XML (vocabularios propios), JSON (API, compacto), YAML (configuración, legible)', 'La misma información se puede representar en XML, JSON o YAML: cambia la sintaxis, no el contenido', 'YAML: la sangría importa; no mezclar tabuladores y espacios', 'Documentación web: HTML estructura, Markdown se transforma en HTML (Markdown → MkDocs → HTML → navegador)', 'Especializados: SVG (gráficos vectoriales), RSS (titulares/noticias); ambos usan sintaxis XML con etiquetas de significado predefinido'],
+    tags: ['xml', 'json', 'yaml', 'html', 'markdown', 'mkdocs', 'svg', 'rss', 'api', 'configuracion', 'intercambio'],
+    contenido: `
+<p>También podemos clasificar estas tecnologías según el <strong>entorno o el problema</strong> en el que se utilizan.</p>
+
+<h4>Propósito general e intercambio de datos</h4>
+<p>Representan información que puede ser almacenada o enviada entre programas diferentes:</p>
+<ul>
+  <li><strong>XML</strong> permite crear vocabularios propios mediante etiquetas.</li>
+  <li><strong>JSON</strong> es muy habitual en API y aplicaciones web por su sintaxis compacta.</li>
+  <li><strong>YAML</strong> se utiliza especialmente en configuración y automatización por su legibilidad.</li>
+</ul>
+<p>Los tres formatos pueden representar un servidor. <strong>Cambia la sintaxis, pero la información es equivalente</strong>:</p>
+<table>
+<thead><tr><th>XML</th><th>JSON</th><th>YAML</th></tr></thead>
+<tbody><tr>
+<td><pre><code>&lt;servidor&gt;
+  &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+  &lt;activo&gt;true&lt;/activo&gt;
+&lt;/servidor&gt;</code></pre></td>
+<td><pre><code>{
+  "nombre": "servidor-web",
+  "activo": true
+}</code></pre></td>
+<td><pre><code>nombre: servidor-web
+activo: true</code></pre></td>
+</tr></tbody></table>
+<div class="box warn"><div class="box-title">La sangría importa en YAML</div>
+<p>Los espacios indican la jerarquía de los datos. <strong>No se deben mezclar tabuladores y espacios.</strong></p></div>
+
+<h4>Documentación y presentación web</h4>
+<p>Tecnologías pensadas para publicar o redactar contenido que leerán las <em>personas</em>:</p>
+<ul>
+  <li><strong>HTML</strong> estructura páginas y aplicaciones web.</li>
+  <li><strong>Markdown</strong> permite escribir documentación con una sintaxis más sencilla y suele transformarse después en HTML.</li>
+</ul>
+<p>Este fragmento Markdown se convierte en un encabezado y una lista:</p>
+<pre><code># Estado de la red
+
+- servidor-web: activo
+- servidor-copias: mantenimiento</code></pre>
+<p>Esta misma cadena de transformación se utiliza en los apuntes originales:</p>
+<p><code>Archivo Markdown</code> → <code>MkDocs</code> → <code>Documento HTML</code> → <code>Navegador</code></p>
+
+<h4>Lenguajes específicos o especializados</h4>
+<p>Un lenguaje especializado utiliza un vocabulario diseñado para una tarea concreta. Dos ejemplos basados en XML:</p>
+<ul>
+  <li><strong>SVG</strong>, destinado a representar gráficos vectoriales.</li>
+  <li><strong>RSS</strong>, destinado a distribuir titulares, noticias o actualizaciones.</li>
+</ul>
+<p>Este SVG dibuja un indicador verde que representa un servidor activo:</p>
+<pre><code>&lt;svg xmlns="http://www.w3.org/2000/svg" width="240" height="70"&gt;
+    &lt;circle cx="35" cy="35" r="18" fill="green" /&gt;
+    &lt;text x="65" y="42" font-family="sans-serif" font-size="18"&gt;
+        servidor-web
+    &lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+<p>Un lector RSS, en cambio, procesaría elementos como estos:</p>
+<pre><code>&lt;item&gt;
+    &lt;title&gt;Mantenimiento completado&lt;/title&gt;
+    &lt;link&gt;https://ejemplo.test/avisos/mantenimiento&lt;/link&gt;
+    &lt;description&gt;El servidor vuelve a estar disponible.&lt;/description&gt;
+&lt;/item&gt;</code></pre>
+<p>Aunque SVG y RSS utilizan la sintaxis de XML, <strong>sus etiquetas tienen significados predefinidos</strong> para un ámbito concreto.</p>`
+  },
+
+  {
+    id: 'lm-ud1-2-4',
+    tipo: 'subtema',
+    titulo: '2.4 Cómo elegir un lenguaje o formato genérico',
+    resumen: 'Cinco criterios: sintaxis y estructura, flexibilidad, propósito o ámbito, compatibilidad y estandarización. No basta con la sintaxis más atractiva: hay que pensar en quién crea, qué programa procesa y cuánto tiempo se conserva.',
+    claves: ['Sintaxis/estructura: JSON compacto; YAML cómodo para personas (cuidar sangría); XML extenso pero claro y con validación potente', 'Flexibilidad: XML permite etiquetas propias, pero exige acordar vocabulario y reglas', 'Propósito: HTML web · Markdown docs · JSON API · YAML config · SVG gráficos · RSS novedades', 'Compatibilidad: qué leen/generan las aplicaciones; versiones, codificación, bibliotecas', 'Estandarización: especificación pública → menos diferencias entre aplicaciones', 'Elegir el formato cuya estructura represente los datos sin ambigüedades, no el que ocupe menos líneas'],
+    tags: ['criterios', 'eleccion', 'sintaxis', 'flexibilidad', 'proposito', 'compatibilidad', 'estandarizacion', 'json', 'yaml', 'xml'],
+    contenido: `
+<p>Cuando varias tecnologías pueden representar la misma información, no basta con escoger la que tenga una sintaxis más atractiva. Hay que valorar <strong>quién creará el documento</strong>, <strong>qué programa lo procesará</strong> y <strong>durante cuánto tiempo deberá conservarse</strong>.</p>
+
+<h4>1 · Sintaxis y estructura</h4>
+<p>La sintaxis determina cómo se escriben los datos y la estructura establece cómo se organizan y relacionan.</p>
+<ul>
+  <li><strong>JSON</strong> resulta compacto para objetos y listas.</li>
+  <li><strong>YAML</strong> suele ser cómodo para archivos que editarán personas, aunque hay que cuidar la sangría.</li>
+  <li><strong>XML</strong> es más extenso, pero distingue claramente cada elemento y dispone de mecanismos potentes para validar estructuras complejas.</li>
+</ul>
+<div class="box tip"><div class="box-title">Regla</div><p>No debe elegirse solamente el formato que ocupe menos líneas, sino aquel cuya estructura <strong>represente los datos sin ambigüedades</strong>.</p></div>
+
+<h4>2 · Flexibilidad</h4>
+<p>Un formato es flexible cuando permite adaptarse a necesidades nuevas. XML, por ejemplo, permite crear etiquetas propias:</p>
+<pre><code>&lt;servidor&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+    &lt;servicio puerto="443"&gt;https&lt;/servicio&gt;
+&lt;/servidor&gt;</code></pre>
+<p>Podrían añadirse después elementos como <code>&lt;sistema-operativo&gt;</code> o <code>&lt;ubicacion&gt;</code>. Esta libertad es útil, pero tiene un <strong>riesgo</strong>: dos personas podrían crear estructuras diferentes para representar la misma información. Por ello suele ser necesario <strong>acordar un vocabulario y unas reglas comunes</strong>.</p>
+
+<h4>3 · Propósito o ámbito de aplicación</h4>
+<p>La tecnología debe encajar con la tarea:</p>
+<ul>
+  <li>HTML es adecuado para estructurar una página web.</li>
+  <li>Markdown simplifica la redacción de documentación.</li>
+  <li>JSON es habitual en la respuesta de una API.</li>
+  <li>YAML es frecuente en archivos de configuración.</li>
+  <li>SVG describe gráficos vectoriales y RSS distribuye actualizaciones.</li>
+</ul>
+<p>Aunque sea técnicamente posible utilizar un formato para otra finalidad, no siempre será práctico. Por ejemplo, se podría almacenar una configuración sencilla en HTML, pero <strong>las herramientas no esperan encontrarla en ese formato</strong>.</p>
+
+<h4>4 · Compatibilidad</h4>
+<p>Antes de elegir hay que comprobar qué formatos pueden leer y generar las aplicaciones implicadas. Si una API solo entrega JSON, utilizar XML obligaría a añadir una conversión. Si una herramienta de automatización espera YAML, ese formato será normalmente la opción más directa.</p>
+<p>También deben considerarse las <strong>versiones admitidas</strong>, la <strong>codificación de caracteres</strong> y la <strong>disponibilidad de bibliotecas</strong> para procesar el formato.</p>
+
+<h4>5 · Estandarización</h4>
+<p>Un formato estandarizado cuenta con una <strong>especificación pública</strong> que establece cómo debe interpretarse. Esto reduce las diferencias entre aplicaciones y evita depender de las decisiones particulares de un único programa.</p>
+
+<div class="box ex"><div class="box-title">Una elección razonada</div>
+<p>Para una configuración que editará el administrador podría elegirse <strong>YAML</strong> por su legibilidad. Para enviar el estado del sistema mediante una API podría escogerse <strong>JSON</strong> por su compatibilidad con aplicaciones web. Si se necesita una validación documental más estricta o combinar vocabularios, <strong>XML</strong> puede resultar más apropiado.</p></div>
+
+<h4>Resumen: preguntas prácticas</h4>
+<table>
+<thead><tr><th>Criterio</th><th>Pregunta práctica</th></tr></thead>
+<tbody>
+<tr><td>Sintaxis y estructura</td><td>¿Representa claramente los datos que necesito?</td></tr>
+<tr><td>Flexibilidad</td><td>¿Podré ampliar la estructura sin rehacerla por completo?</td></tr>
+<tr><td>Propósito</td><td>¿Está pensado para esta tarea?</td></tr>
+<tr><td>Compatibilidad</td><td>¿Lo entienden todas las herramientas implicadas?</td></tr>
+<tr><td>Estandarización</td><td>¿Existen reglas públicas y suficientemente estables?</td></tr>
+</tbody></table>`
+  },
