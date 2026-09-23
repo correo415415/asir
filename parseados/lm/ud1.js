@@ -881,3 +881,214 @@ Tamaño: 5 bytes</code></pre>
 <tr><td>Buenas prácticas</td><td>Coincidencia exacta</td><td>Minúsculas consistentes</td></tr>
 </tbody></table>`
   },
+
+  /* ---------------- 4. Herramientas de edición ---------------- */
+  {
+    id: 'lm-ud1-4',
+    tipo: 'tema',
+    titulo: '4. Herramientas de edición',
+    resumen: 'Los documentos de marcas son texto plano: valen con cualquier editor, pero uno especializado reduce errores. Comparativa de Bloc de notas, gedit y Notepad++, y otras opciones (VS Code, Kate, Sublime, Nano, Vim).',
+    claves: ['Un editor debe permitir: extensión adecuada, codificación UTF-8, números de línea, sangría, buscar/reemplazar, resaltado de sintaxis, varios documentos', 'Colorear NO es validar: un editor puede colorear un XML mal cerrado', 'Bloc de notas: básico, cuidado con servidor.xml.txt', 'gedit (GNOME): pestañas, resaltado, UTF-8, complementos', 'Notepad++ (Windows, libre): plegado, regex, codificación, macros, portátil', 'Otros: VS Code (recomendado), Kate, Sublime Text, Nano/Vim (terminal, SSH)'],
+    tags: ['editores', 'bloc de notas', 'notepad', 'gedit', 'notepad++', 'vscode', 'kate', 'sublime', 'nano', 'vim', 'resaltado', 'validacion'],
+    links: ['lm-ud1-4-1', 'lm-ud1-4-2', 'lm-ud1-4-3', 'lm-ud1-ej1'],
+    contenido: `
+<p>Los documentos HTML, XML, JSON, YAML o Markdown son <strong>archivos de texto plano</strong>. Por esta razón pueden crearse con un editor sencillo, aunque un editor especializado ofrece ayudas que <strong>reducen errores y facilitan el trabajo</strong>.</p>
+<p>En este apartado compararemos tres herramientas: el <strong>Bloc de notas</strong> de Windows, <strong>gedit</strong> en Linux y <strong>Notepad++</strong>. Las tres permiten modificar texto, pero no ofrecen el mismo nivel de asistencia.</p>
+
+<h4>¿Qué debe aportar un editor?</h4>
+<p>Para escribir lenguajes de marcas conviene que el editor permita:</p>
+<ul>
+  <li>guardar archivos con la <strong>extensión adecuada</strong>, como <code>.xml</code> o <code>.html</code>;</li>
+  <li>seleccionar una <strong>codificación</strong>, preferiblemente UTF-8;</li>
+  <li>mostrar <strong>números de línea</strong>;</li>
+  <li>controlar la <strong>sangría</strong> y visualizar la jerarquía;</li>
+  <li><strong>buscar y reemplazar</strong> texto;</li>
+  <li><strong>resaltar la sintaxis</strong> para diferenciar etiquetas, atributos y contenido;</li>
+  <li>trabajar con <strong>varios documentos</strong>.</li>
+</ul>
+<div class="box warn"><div class="box-title">Colorear no es validar</div>
+<p>El resaltado de sintaxis ayuda a leer el documento, pero <strong>no demuestra que sea correcto</strong>. Un editor puede colorear un XML que tenga etiquetas mal cerradas. Para comprobar sus reglas se necesita una función o herramienta de <strong>validación</strong>.</p></div>
+
+<h4>Comparativa rápida</h4>
+<table>
+<thead><tr><th></th><th>Bloc de notas</th><th>gedit</th><th>Notepad++</th></tr></thead>
+<tbody>
+<tr><td>Sistema</td><td>Windows</td><td>Linux (GNOME)</td><td>Windows (libre)</td></tr>
+<tr><td>Resaltado de sintaxis</td><td>No (muy limitado)</td><td>Sí</td><td>Sí, muchos lenguajes</td></tr>
+<tr><td>Pestañas</td><td>Limitado</td><td>Sí</td><td>Sí + vistas divididas</td></tr>
+<tr><td>Plegado de bloques</td><td>No</td><td>Con complementos</td><td>Sí</td></tr>
+<tr><td>Regex en buscar/reemplazar</td><td>No</td><td>Sí</td><td>Sí</td></tr>
+<tr><td>Codificación</td><td>Selección al guardar</td><td>UTF-8</td><td>Selección y conversión</td></tr>
+<tr><td>Valida XML</td><td>No</td><td>No</td><td>No (resaltado ≠ validador)</td></tr>
+</tbody></table>
+
+<h4>Contenido del apartado</h4>
+<ol>
+  <li>Bloc de notas de Windows</li>
+  <li>gedit en Linux</li>
+  <li>Notepad++ y otras opciones</li>
+  <li>Tarea 1: comparación de editores</li>
+</ol>`
+  },
+
+  {
+    id: 'lm-ud1-4-1',
+    tipo: 'subtema',
+    titulo: '4.1 Bloc de notas de Windows',
+    resumen: 'Editor básico incluido en Windows. Sirve para crear un XML sin instalar nada, pero ofrece poca ayuda. Cuidado con las extensiones ocultas (servidor.xml.txt).',
+    claves: ['Pasos: escribir → Archivo → Guardar como → servidor.xml → UTF-8', 'Comprobar que no se guardó como servidor.xml.txt', 'Ventajas: disponible, sencillo, suficiente para cambios pequeños', 'Limitaciones: poca ayuda para XML; difícil ver la estructura; editar ≠ validar', 'Activar la visualización de extensiones en el Explorador'],
+    tags: ['bloc de notas', 'notepad', 'windows', 'utf-8', 'extensiones ocultas', 'txt'],
+    contenido: `
+<p>El <strong>Bloc de notas</strong> es el editor de texto incluido en Windows. Puede utilizarse para crear un documento de marcas sin instalar software adicional.</p>
+<h4>Crear un archivo XML</h4>
+<ol>
+  <li>Abre el Bloc de notas.</li>
+  <li>Escribe el contenido del documento.</li>
+  <li>Selecciona <strong>Archivo → Guardar como</strong>.</li>
+  <li>Escribe el nombre <code>servidor.xml</code>.</li>
+  <li>Selecciona <strong>UTF-8</strong> como codificación si la versión utilizada muestra esa opción.</li>
+  <li>Comprueba que el archivo <strong>no se haya guardado como <code>servidor.xml.txt</code></strong>.</li>
+</ol>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;servidor&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+    &lt;estado&gt;activo&lt;/estado&gt;
+&lt;/servidor&gt;</code></pre>
+<h4>Ventajas</h4>
+<ul>
+  <li>Está disponible en Windows.</li>
+  <li>Su interfaz es sencilla.</li>
+  <li>Es suficiente para cambios pequeños o para comprobar que un documento es realmente texto plano.</li>
+</ul>
+<h4>Limitaciones</h4>
+<ul>
+  <li>Ofrece poca ayuda específica para XML y otros lenguajes.</li>
+  <li>En comparación con un editor de código, resulta más difícil reconocer la estructura de documentos largos.</li>
+  <li>No debe confundirse la edición del archivo con su validación.</li>
+</ul>
+<div class="box warn"><div class="box-title">Cuidado con las extensiones ocultas</div>
+<p>Si el Explorador de archivos oculta las extensiones conocidas, un archivo llamado aparentemente <code>servidor.xml</code> podría ser en realidad <code>servidor.xml.txt</code>. Conviene <strong>activar la visualización de extensiones</strong>.</p></div>`
+  },
+
+  {
+    id: 'lm-ud1-4-2',
+    tipo: 'subtema',
+    titulo: '4.2 gedit en Linux',
+    resumen: 'Editor del entorno GNOME. Interfaz sencilla con pestañas, números de línea, búsqueda/reemplazo, resaltado de sintaxis y UTF-8. Reconoce .xml y aplica colores automáticamente.',
+    claves: ['gedit: editor relacionado con GNOME', 'Funciones: pestañas, números de línea, buscar/reemplazar, resaltado, UTF-8', 'Reconoce la extensión .xml → esquema de colores automático', 'Los colores no forman parte del archivo: son ayuda visual del editor', 'Ampliable con complementos', 'Limitaciones: no es un IDE completo; depende de la distribución/escritorio', 'GNOME Text Editor es otra aplicación distinta que sustituye a gedit en algunas distros'],
+    tags: ['gedit', 'linux', 'gnome', 'text editor', 'resaltado', 'pestañas', 'complementos'],
+    contenido: `
+<p><strong>gedit</strong> es un editor de texto relacionado con el entorno de escritorio <strong>GNOME</strong>. Mantiene una interfaz sencilla, pero incorpora funciones útiles para editar código y lenguajes de marcas: pestañas, números de línea, búsqueda y reemplazo, resaltado de sintaxis y compatibilidad con UTF-8.</p>
+<p>Cuando gedit reconoce la extensión <code>.xml</code>, puede aplicar automáticamente un esquema de colores. Así resulta más fácil distinguir las etiquetas del contenido y detectar visualmente algunos errores.</p>
+<pre><code>&lt;servicio puerto="443"&gt;
+    HTTPS
+&lt;/servicio&gt;</code></pre>
+<p>En un editor con resaltado, <code>&lt;servicio&gt;</code>, el atributo <code>puerto</code> y el texto <code>HTTPS</code> se representan con colores diferentes. <strong>Los colores no forman parte del archivo</strong>: son una ayuda visual proporcionada por el editor.</p>
+<h4>Ventajas</h4>
+<ul>
+  <li>Es sencillo y adecuado para el escritorio Linux.</li>
+  <li>Reconoce la sintaxis de XML, HTML, Markdown y otros lenguajes.</li>
+  <li>Permite trabajar con varios archivos mediante pestañas.</li>
+  <li>Puede ampliarse mediante complementos.</li>
+</ul>
+<h4>Limitaciones</h4>
+<ul>
+  <li>No ofrece por defecto todas las funciones propias de un entorno de desarrollo.</li>
+  <li>Su disponibilidad depende de la distribución y del escritorio instalados.</li>
+</ul>
+<div class="box info"><div class="box-title">gedit y Editor de texto de GNOME</div>
+<p>Algunas distribuciones recientes incluyen <strong>Editor de texto de GNOME</strong> como editor predeterminado en lugar de gedit. Son aplicaciones diferentes, aunque ambas sirven para editar texto y ofrecen resaltado de sintaxis.</p></div>`
+  },
+
+  {
+    id: 'lm-ud1-4-3',
+    tipo: 'subtema',
+    titulo: '4.3 Notepad++ y otras opciones',
+    resumen: 'Notepad++: editor libre para Windows con resaltado, plegado, regex, codificación, macros y versión portátil. Otras opciones: Visual Studio Code, Kate, Sublime Text, Nano y Vim/Neovim.',
+    claves: ['Notepad++: libre, Windows, más funciones que un editor básico sin ser un IDE', 'Funciones: resaltado, plegado de bloques, números de línea y guías de sangría, pestañas/vistas divididas, regex, codificación, macros y complementos', 'Ventajas: ligero, rápido, versión portátil', 'Limitaciones: nativo solo Windows; resaltado ≠ validador; cuidar complementos', 'VS Code: multiplataforma, proyectos, terminal, Git, extensiones → recomendado para el curso', 'Kate (KDE, multiplataforma) · Sublime Text (comercial) · Nano y Vim/Neovim (terminal, ideal por SSH)', 'Conocer un editor gráfico + lo básico de uno de terminal'],
+    tags: ['notepad++', 'vscode', 'visual studio code', 'kate', 'sublime text', 'nano', 'vim', 'neovim', 'ssh', 'plegado', 'regex', 'portable'],
+    contenido: `
+<h4>Notepad++</h4>
+<p><strong>Notepad++</strong> es un editor de texto y código <strong>libre para Windows</strong>. Está orientado a usuarios que necesitan más funciones que las disponibles en un editor básico, pero sin utilizar un entorno de desarrollo completo.</p>
+<p>Entre sus funciones más útiles:</p>
+<ul>
+  <li>resaltado de sintaxis para numerosos lenguajes;</li>
+  <li><strong>plegado de bloques</strong> para ocultar temporalmente partes del documento;</li>
+  <li>números de línea y guías de sangría;</li>
+  <li>edición de varios archivos en pestañas o vistas divididas;</li>
+  <li>búsqueda y reemplazo mediante <strong>expresiones regulares</strong>;</li>
+  <li>selección y conversión de la codificación;</li>
+  <li>macros y complementos.</li>
+</ul>
+<p>En un documento XML extenso, el plegado permite ocultar elementos completos y concentrarse en la zona que se está modificando:</p>
+<pre><code>&lt;inventario&gt;
+    &lt;equipo id="srv01"&gt;
+        &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+        &lt;estado&gt;activo&lt;/estado&gt;
+    &lt;/equipo&gt;
+    &lt;equipo id="srv02"&gt;
+        &lt;nombre&gt;servidor-copias&lt;/nombre&gt;
+        &lt;estado&gt;mantenimiento&lt;/estado&gt;
+    &lt;/equipo&gt;
+&lt;/inventario&gt;</code></pre>
+<table>
+<thead><tr><th>Ventajas</th><th>Limitaciones</th></tr></thead>
+<tbody><tr>
+<td><ul><li>Consume pocos recursos y se inicia rápidamente.</li><li>Facilita la lectura de documentos estructurados.</li><li>Incluye herramientas avanzadas de búsqueda y edición.</li><li>Puede utilizarse mediante una versión portátil.</li></ul></td>
+<td><ul><li>Su versión nativa está dirigida a Windows.</li><li>El resaltado de sintaxis no sustituye a un validador XML.</li><li>Los complementos deben seleccionarse y mantenerse con cuidado.</li></ul></td>
+</tr></tbody></table>
+
+<h4>Otras opciones</h4>
+<table>
+<thead><tr><th>Editor</th><th>Descripción</th></tr></thead>
+<tbody>
+<tr><td><strong>Visual Studio Code</strong></td><td>Editor multiplataforma con gestión de proyectos, terminal, control de versiones y extensiones. <strong>Opción recomendable para el curso</strong> con HTML, XML, JSON, YAML y Markdown.</td></tr>
+<tr><td><strong>Kate</strong></td><td>Editor libre (KDE) para Linux, Windows y macOS. Resaltado, panel de proyecto, terminal y complementos.</td></tr>
+<tr><td><strong>Sublime Text</strong></td><td>Multiplataforma, rápido y con interfaz sencilla. Aplicación <em>comercial</em>, aunque puede evaluarse antes de adquirir licencia.</td></tr>
+<tr><td><strong>Nano y Vim/Neovim</strong></td><td>Editores de <strong>terminal</strong>. Especialmente útiles para modificar archivos de configuración en un <strong>servidor remoto mediante SSH</strong>.</td></tr>
+</tbody></table>
+<div class="box tip"><div class="box-title">Consejo</div>
+<p>No es necesario dominar todos estos editores. Lo importante es <strong>conocer uno con interfaz gráfica</strong> y <strong>aprender las operaciones básicas de algún editor de terminal</strong>.</p></div>`
+  },
+
+  {
+    id: 'lm-ud1-ej1',
+    tipo: 'ejercicio',
+    titulo: 'Tarea 1 · Comparación de editores',
+    resumen: 'Abrir un XML con errores en varios editores, localizar los fallos (<nombre>…</Nombre>, comillas sin cerrar), corregirlo como servidor.xml y razonar por qué el resaltado no equivale a validar.',
+    claves: ['Objetivo: comparar ayudas de los editores y distinguir resaltado de validación', 'Error 1: <nombre> se cierra con </Nombre> (case-sensitive)', 'Error 2: activo="si sin cerrar las comillas', 'Entrega: servidor.xml corregido + respuestas a las actividades 5 y 6'],
+    tags: ['tarea', 'ejercicio', 'editores', 'errores', 'servidor.xml', 'resaltado', 'validacion'],
+    contenido: `
+<h4>Objetivo</h4>
+<p>Comparar las ayudas que ofrecen distintos editores al trabajar con un documento XML y <strong>distinguir el resaltado de sintaxis de la validación</strong>.</p>
+<h4>Documento de partida</h4>
+<p>Copia este documento <em>incorrecto</em> y ábrelo con varios de los editores estudiados:</p>
+<pre><code>&lt;servidor&gt;
+    &lt;nombre&gt;servidor-web&lt;/Nombre&gt;
+    &lt;estado activo="si&gt;disponible&lt;/estado&gt;
+&lt;/servidor&gt;</code></pre>
+<h4>Actividades</h4>
+<ol>
+  <li>Observa qué partes colorea cada editor.</li>
+  <li>Localiza la diferencia entre <code>&lt;nombre&gt;</code> y <code>&lt;/Nombre&gt;</code>.</li>
+  <li>Busca el atributo cuyo valor no tiene las comillas correctamente cerradas.</li>
+  <li>Corrige todos los errores y guarda el resultado como <code>servidor.xml</code>.</li>
+  <li>Anota qué editor facilita más la detección de cada problema.</li>
+  <li>Explica por qué el resaltado no equivale a validar el documento.</li>
+</ol>
+<h4>Entrega</h4>
+<p>Entrega el archivo <code>servidor.xml</code> corregido y un breve documento con las respuestas a las actividades 5 y 6.</p>
+<details><summary>Solución orientativa</summary>
+<p>Errores del documento:</p>
+<ul>
+  <li><strong>Línea 2</strong>: se abre <code>&lt;nombre&gt;</code> y se cierra con <code>&lt;/Nombre&gt;</code>. XML distingue mayúsculas y minúsculas, así que los nombres no coinciden.</li>
+  <li><strong>Línea 3</strong>: el atributo <code>activo="si</code> no cierra las comillas. El procesador interpreta el resto de la línea como parte del valor.</li>
+</ul>
+<p>Documento corregido:</p>
+<pre><code>&lt;servidor&gt;
+    &lt;nombre&gt;servidor-web&lt;/nombre&gt;
+    &lt;estado activo="si"&gt;disponible&lt;/estado&gt;
+&lt;/servidor&gt;</code></pre>
+<p><strong>Resaltado ≠ validación</strong>: el coloreado solo aplica reglas visuales por patrones (todo lo que va entre <code>&lt;</code> y <code>&gt;</code> se pinta como etiqueta). No construye el árbol del documento ni comprueba que cada apertura tenga su cierre, que los nombres coincidan o que las comillas estén emparejadas. Eso solo lo hace un <strong>analizador/validador XML</strong> (por ejemplo, un navegador o XML Copy Editor). Un editor con buen resaltado (Notepad++, gedit, VS Code) ayuda a <em>ver</em> el problema de las comillas porque el color «se desborda» hasta la siguiente comilla; el Bloc de notas no ofrece esa pista.</p>
+</details>`
+  },
