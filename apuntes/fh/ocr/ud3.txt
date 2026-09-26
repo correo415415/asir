@@ -1,0 +1,450 @@
+===== PAXINA 1 =====
+| de 3
+
+/ ntos internos dun
+
+É /
+SUMARIO
+EO
+A Com ñentes dos sistemas microinformáticos
+dy D
+
+positivos de almacenamento: características e ti-
+
+>
+positivos de memoria: características e tipos
+— Controladores
+
+OBXECTIVOS
+
+dentificar e caracterizar os diferentes compoñentes
+
+'onforman fisicamente un microordenador hoxe en
+
+ía
+
+Manexar con habilidade os conceptos básicos rela-
+
+os co hardware informático
+
+cer diferentes alternativas tecnolóxicas para
+
+tipo de dispositivo
+
+— Detectar posibles incompatibilidades entre diferen-
+
+ementos de calquera dispositivo
+
+- Describir dispositivos de almacenamento masivo uti-
+
+dos en sistemas de computadores, recoñecendo a
+
+Mu importancia na custodia da información
+
+pr escribir os tipos de memoria utilizados en compu-
+
+: tadores, analizando os parámetros que as definen e a
+úa achega ó rendemento do conxunto
+
+» É Entender as características dun orzamento
+
+¡E 5 Aprender a realizar un orzamento
+
+===== PAXINA 2 =====
+1>> Introdución
+
+Cando nos enfrontamos á montaxe ou desmontaxe dun equipo informático
+debemos ter en conta que este consta de partes claramente diferenciables e
+dependentes unhas doutras. Así, toparemos que non vale de nada ter un equi-
+po cun procesador cunha velocidade enorme se non temos proporcionada a
+memoria RAM do mesmo, ou un equipo de altísimas prestacións se o que que-
+remos é escribir unhas poucas cartas ó mes.
+
+Logo, é importante saber escoller as pezas que comporán o noso equipo, den-
+de a carcasa ata o procesador pasando pola fonte de alimentación, placa base,
+refrixerador...
+
+2 >> Carcasa
+
+Non está de máis dedicar un pouco de tempo a escoller a carcasa do ordena-
+dor, xa que é determinante na disposición mecánica de tódolos compoñentes
+internos e, por conseguinte, tamén nas posibilidades de ampliación que ten o
+equipo.
+
+É a estrutura metálica ou plástica que ten por función albergar e
+protexer os compoñentes internos do equipamento informático.
+
+Existen diversos tipos de carcasas (tamén reciben o nome de torre, gabinete,
+caixa ou chasis), estandarizadas nas dimensións e compoñentes máis caracte-
+rísticos, pero sen estar suxeitas a unha normativa xeral.
+
+Habitualmente tódolos indicadores e elementos de control do ordenador están
+situados na cara frontal da caixa; ademais pode ter un interruptor eléctrico na
+esquina superior dereita da cara posterior. Entre estes indicadores e controis
+soen estar:
+
+e Interruptor xeral, normalmente na cara dianteira.
+
+e Interruptor de chave, para bloquear o ordenador e protexelo de accesos
+externos.
+
+e LED de control, indica o estado do ordenador (aceso ou apagado).
+
+e LED de disco duro, indica o estado do disco duro (traballando nese intre ou
+non).
+
+Aínda que non tódalas carcasas son iguais, a maioría teñen os seguintes com-
+poñentes: chasis, cuberta, panel frontal, interruptores, baías para unidades,
+panel traseiro (con aberturas para portos de E/S e tarxetas de expansión...) e,
+nalgúns casos, ventiladores e fonte de alimentación como sistema de refrixe-
+ración.
+
+2.1> O chasis
+
+O chasis é o esqueleto do ordenador, a estrutura metálica, xeralmente feita de
+aluminio ou unha combinación de aceiro e plástico, que serve de soporte para
+montar as outras pezas. Debe ser unha estrutura ríxida e resistente que non se
+poida dobrar porque a maioría dos dispositivos montados nel non poden so-
+portar a flexión.
+
+2.2> A cuberta
+
+A cuberta forma a parte exterior da carcasa e únese ó chasis. A maioría dos
+ordenadores usan parafusos para fixar a cuberta ó chasis. Tamén hai sistemas
+de fixación esvarantes ou montados con orificios.
+
+Pode estar feita de varios tipos de materiais, como aluminio, fibra de vidro,
+metacrilato, plástico...
+
+2.3> O panel frontal
+
+O panel frontal é a parte frontal da carcasa, normalmente feita de plástico ou
+similar. O panel frontal ten indicadores ou LED que amosan o estado do com-
+putador. Normalmente ten un LED de acendido e outro LED que indica as ope-
+
+Chasis
+
+Forma habitual de retirar a
+cuberta
+
+O Retiramos os parafusos
+
+1 Deslizamos a cuberta
+
+2 Levantamos a cuberta
+
+Conexións do panel frontal a través do
+chasis
+
+TS
+
+Placa traseira (backplate)
+===== PAXINA 3 =====
+Baía extraíble
+
+Orientación
+
+As carcasas pódense clasificar
+pola disposición da placa base.
+
+e Vertical: é a orientación máis
+común; a carcasa e a placa base
+están dispostas verticalmente,
+coas rañuras de expansión per-
+pendiculares á placa base.
+
+e Horizontal ou sobremesa:
+Anteriormente, este era o tipo
+de carcasa máis común; hoxe en
+día, aínda se ve con certa fre-
+cuencia nos PC de oficina. Ás
+veces son pouco ergonómicas, xa
+que serven como base para o
+monitor, elevando a súa altura
+excesivamente.
+
+Baía integrada Dock Station
+
+A baía de acoplamento integrado
+na parte superior facilita a inser-
+ción de discos duros de 3.5" ou
+2.5".
+
+Os usuarios poden controlar o
+acceso e a transferencia de datos
+sobre a marcha sen ter que insta-
+lar fisicamente os seus discos
+duros nin engadir un dispositivo
+de acoplamento externo.
+
+racións de acceso ós discos duros. Tamén ten botóns de acendido e reinicio, e
+conectores USB.
+
+2.4> O panel traseiro
+
+É onde se atopan os portos ou conectores para os dispositivos externos. Esta
+placa é proporcionada polo fabricante da placa base, xa que o número de
+portos e a súa disposición varían segundo o modelo.
+
+2.5> Baías para unidades
+
+As baías para unidades son espazos para aloxar unidades de almacenamento.
+Usanse para montar unidades de disquete, discos duros, CD-ROM ou DVD.
+Pódense clasificar en dous tipos:
+
++ Internas: están completamente dentro da carcasa e non se pode acceder
+a elas dende o exterior. Usanse para montar dispositivos ós que non se
+pode acceder dende o exterior, como os discos duros.
+
+e Externas: están internas na carcasa e no chasis, pero pódese acceder a
+elas dende o exterior. Normalmente úsanse para unidades de disquete,
+CD-ROM e DVD.
+
+2.6 > Tipos de carcasas
+
+A clasificación adoita facerse por tamaño, dependendo da placa base que ad-
+miten:
+
+e Sobremesa: é a caixa tradicional, con espazo para unha unidade de 3.5
+polgadas e unha ou dúas de 5.25 polgadas. O número de ocos dispoñi-
+bles para ampliacións dependerá da placa base, que estará montada en
+horizontal, polo que as tarxetas terán que ser montadas en vertical.
+Normalmente, pónselle enriba dela o monitor, para que ocupe menos na
+mesa de traballo, o que pode ser un problema a nivel ergonómico. ATX
+ou BTX son factores de forma de Intel, tódolos usamos nos nosos orde-
+nadores de sobremesa e por iso os ordenadores de sobremesa son tan
+semellantes.
+
+e Torre: Se se ten previsto ampliar o equipo nun futuro, a mellor alternati-
+va é partir dunha carcasa deste tipo. Ó dispor de máis espazo, este tipo
+de caixa permite dispor os dispositivos con maior claridade e poderanse
+montar e desmontar máis facilmente, algo que pode ser realmente
+complexo nunha carcasa tipo sobremesa. Neste tipo de caixas a placa
+base móntase en posición vertical; como consecuencia, as tarxetas coló-
+canse horizontalmente.
+
+Estas unidades presentan tres ou catro baías de 5.25 polgadas e unha
+ou dúas de 3.5 polgadas. Segundo o tamaño da caixa e as baías que pre-
+senten pódense dividir en Microtorre (entre 25 e 32 cm de altura e in-
+corpora entre unha e tres baías externas e unha ou dúas baías internas,
+para placas base microATX ou flex-ATX), Minitorre (entre 32 e 37 cm de
+altura con tres baías externas e unha ou dúas baías internas, para pla-
+cas base ATX, microATX ou flex-ATX), Semitorre (entre 37 e 45 cm de
+altura, son as máis empregadas permitindo a instalación de placas base
+de tódolos formatos, con ata seis baías, Torre (entre 45 e 55 cm de al-
+tura, permiten unha boa ventilación e xeralmente aceptan placas base
+de todo tipo; teñen polo menos 6 baías) e Gran torre (entre 55 e 72 cm
+de altura, adoitan ter 8 baías externas; é unha caixa común para servi-
+dores de gama baixa polas súas boas características de ventilación e ex-
+pansión).
+
+e Servidor: úsase en instalacións de servidores ou almacenamento. Adoitan
+ser máis anchas do normal, teñen luces adicionais para a monitorización
+de discos ou portas de acceso con pechadura para as unidades. Teñen
+moitas baías internas e externas e algún outro sistema como poden ser
+discos en quente, incorporando varios orificios de ventilación adicionais.
+
+===== PAXINA 4 =====
+A maioría permiten a instalación de placas de servidor máis grandes ou
+fontes de alimentación redundantes.
+
+e Cubos: O cubo, tamén chamado miniPC, dispón de liberdade, o que fixo
+que crecerá rapidamente, aumentando o seu número de clientes de
+forma exponencial durante os seus poucos anos de vida. Estes ordena-
+dores, úsanse para factores de forma pequenos como mini-ITX ou SFF
+(Small Form Factor), que compren poucas das indicacións dos estánda-
+res máis estendidos, que veñen a ser os desenvolvidos por Intel.
+
+O cubo non ten ataduras, podémolos encontrar cos sistemas de refrixe-
+ración máis extravagantes ou cos deseños máis innovadores. Esta é pre-
+cisamente a forza dos cubos; pasaron de ser meros ordenadores peque-
+nos, onde é difícil montar un ordenador de grandes prestacións, a má-
+quinas onde os condicionantes de refrixeración ou potencia non son un
+problema e onde os elementos usados permiten dispor dunha máquina
+sen límites de prestacións: pequenos, lixeiros, fiables e moi silenciosos.
+Pero as vantaxes do deseño non radican só na refrixeración senón ta-
+mén na comodidade e facilidade de montaxe. Estes novos cubos tenden
+a ser descapotables, dispondo dun eixe que podemos usar para levantar
+todo o frontal deixando moito máis espazo para traballar; isto é de moi-
+ta axuda para aqueles que deben montar unha cantidade grande deles.
+A principal desvantaxe deste tipo de carcasas segue radicando no seu
+alto prezo comparado co das caixas tradicionais; é relativamente doado
+que sobrepasen os 200 €. Outra desvantaxe é que normalmente teñen
+poucas ou ás veces ningunha baía externa.
+
+e Barebone: non tódolos cubos son barebones nin tódolos barebones son
+cubos; é simplemente un formato comercial. Trátase dunha plataforma
+semiensamblada que consiste nunha carcasa en forma de cubo cunha
+placa base a maiores, dotada dun sistema de refrixeración máis sofisti-
+cado. Están deseñados de maneira que non poidan ser ensamblados os
+compoñentes hardware dun xeito convencional. O comprador deste tipo
+de plataformas decídese por elas máis polo deseño que polas posibili-
+dades de ampliación ou capacidade, que veñen restrinxidas pola placa
+base inicial. Entre as súas vantaxes está que se trata dun equipo moi
+compacto e que ocupa moi pouco espazo; ademais soen ser moi silen-
+ciosos.
+
+De aí que barebone sexa unha forma non incorrecta pero si pouco preci-
+sa de definir un MiniPC en formato cubo.
+
+e Rack: úsase para montar servidores en armarios rack en instalacións in-
+dustriais, centros de procesamento de datos...
+
+3 >> Fonte de alimentación
+
+A enerxía subminístraselle á placa base a través do que se denominan fontes
+de alimentación, que subministran 3.3, 5 ou 12 voltios á placa para o seu fun-
+cionamento dependendo do dispositivo que a use.
+
+Está situada dentro da carcasa; é unha caixa metálica rectangular equipada
+cun ventilador. Dela sae cableado de diferentes cores, o que permite alimentar
+os diferentes dispositivos da carcasa. Estes conectores están estandarizados.
+
+Unha fonte de alimentación debe proporcionar suficiente enerxía tanto para
+alimentar os compoñentes instalados como para permitir engadir compoñen-
+tes futuros.
+
+As fontes de alimentación que podemos atopar no mercado oscilan entre os
+180 W e os 2000 W (moi pouco común). Unha análise de mercado suxire que as
+fontes de alimentación máis vendidas oscilan entre os 500 W e os 850 W. Estas
+adoitan aplicarse á maioría dos PC do mercado, xa sexan de gama baixa, media
+ou alta.
+
+Se a fonte de alimentación non ten potencia suficiente (o normal é que estean
+entre os 350 e os 500 watts) para proporcionar electricidade a tódolos compo-
+ñentes, o equipo dará problemas.
+
+Tipos de carcasas
+
+A clasificación adoita facerse por
+tamaño, dependendo da placa
+base que admiten:
+
+y au
+
+Mini Slim
+
+Sobremesa
+Microtorre Minitorre
+Semitorre Torre
+
+Gran torre
+
+Servidor
+
+Rack
+===== PAXINA 5 =====
+Fonte de alimentación
+
+Algunhas carcasas inclúen unha
+fonte de alimentación, pero esta
+non forma parte da carcasa. O seu
+propósito é converter a corrente
+alterna da rede eléctrica en co-
+rrente continua que o ordenador
+pode usar. Á beira do conector de
+alimentación, pode haber un
+interruptor para activar ou desac-
+tivar a fonte de alimentación.
+
+Cables de alimentación ex-
+ternos
+
+e AK-5012: conecta un monitor,
+un ordenador ou calquera outro
+dispositivo á rede eléctrica. Nun
+extremo, ten un conector Shuc-
+ko macho para conectalo a unha
+toma de corrente Shucko; no
+outro extremo, ten un conector
+femia lEC320-C13 para conectalo
+ó dispositivo que se vai alimen-
+tar.
+
+tá:
+
+e AK-50242: conecta portátiles,
+fontes de alimentación externas,
+transformadores, fontes de ali-
+mentación reducidas e outros
+equipos á rede eléctrica. Nun
+extremo, ten un conector Shucko
+macho e no outro extremo un
+conector femia lEC320-C5 (con
+forma de trevo).
+
++ AK-5030: conecta a saída da
+fonte de alimentación á entrada
+
+dun monitor. Os conectores son
+1EC320-C13 e 1EC320-C14.
+
+En ordenadores de tipo servidor, que estean funcionando de forma permanen-
+te, sóense pór dúas fontes de alimentación para que a tensión que pasa polos
+compoñentes sexa máis estable e regular.
+
+Xoga un papel fundamental en varios aspectos do sistema informático:
+
+e Proporciona estabilidade ó sistema: unha fonte de alimentación de alta
+calidade con potencia suficiente para satisfacer as demandas dos distin-
+tos compoñentes do ordenador é unha garantía, mentres que unha fon-
+te de alimentación sobrecargada e de baixa calidade causa diversos
+problemas (funcionamento incorrecto, discos duros con sectores defec-
+tuosos...). Este tipo de problemas non son doados de detectar.
+
+e Determina as posibilidades de expansión: a súa potencia, medida en
+watts, é un factor determinante nas posibilidades de expansión e sopor-
+te do sistema, así como o número de conectores de alimentación que
+ofrece que subministran enerxía á placa base (conector de 20 ou 24
+pins) e ós dispositivos (conector Molex de 4 pins, conector mini-Molex
+Berg de 4 pins ou conector Serial ATA de 15 pins).
+
+e Refrixeración: o seu tamaño e ventilador inflúen no sistema de refrixera-
+ción do ordenador.
+
+e Consumo de enerxía: hoxe en día, adoitan incluír consumo intelixente
+asociado á actividade do sistema, de xeito que case tódolos dispositivos
+compren co estándar Energy Star, que identifica os produtos que usan
+a enerxía de forma eficiente.
+
+3.1> Clasificación segundo o seu cableado
+Poden ser de dous tipos:
+
+e Semimodular: trátase de fontes de alimentación que inclúen certos ca-
+bles fixos, pero que ofrecen a opción de usar conexións modulares op-
+cionais, especialmente SATA e PCle.
+
+e Modular: tódalas conexións son modulares, o que che permite usar só as
+que necesitas e, para este propósito, terás varios cables na caixa da fon-
+te de alimentación.
+
+3.2 > Clasificación segundo a súa refrixeración
+Poden ser de dous tipos:
+
+e Activas: as máis comúns, veñen equipadas cun ventilador para expulsar a
+calor.
+
+e Pasivas: arrefríanse por convección, non teñen ventilador e son moi silen-
+ciosas. Só son recomendables se o PC ten unha ventilación axeitada, xa
+que a fonte de alimentación podería sobrequentarse durante procesos
+moi esixentes.
+
+3.3 > Cal é o propósito do factor de forma dunha fonte de alimenta-
+ción?
+Cando unha fonte de alimentación ten un factor de forma específico, significa
+
+que ten dimensións definidas e puntos de montaxe específicos para caixas de
+PC específicas.
+
+A existencia de factores de forma sólidos e definidos é realmente positiva.
+Imaxina un mercado onde cada chasis usa a súa propia fonte de alimentación
+de factor de forma, o que che limita a usar caixas con fontes de alimentación
+incluídas e substitucións exclusivas e caras, ou te obriga a mercar fontes de
+alimentación específicas do fabricante que poderían non ser de boa calidade.
+En definitiva, un desastre.
+
+Por outra banda, se só houbese un factor de forma, tamén sería desastroso,
+tendo en conta que non todos teñen as mesmas necesidades. Unha fonte de
+alimentación cun chasis de tamaño normal/grande permite a fabricación de
+modelos de maior potencia con menos problemas de refrixeración, pero non lle
+
