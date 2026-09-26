@@ -377,3 +377,152 @@ window.APUNTES.unidades.push({
 <figure><img src="apuntes/fh/img/ud3/tabla-80plus.png" alt="Táboa oficial de eficiencias 80 PLUS" loading="lazy"><figcaption>Táboa oficial de requisitos 80 PLUS (230 V EU interna non redundante e redundante).</figcaption></figure>
 <div class="box warn"><div class="box-title">Sen certificación?</div><p>Se a fonte non inclúe ningún tipo de certificación, o mellor é esquecerse dela por completo e mercar outro modelo que a teña, sempre que non esteas disposto a malgastar enerxía.</p></div>`
   },
+  {
+    id: 'fh-ud3-3-7',
+    tipo: 'subtema',
+    titulo: '3.7 Conectores',
+    resumen: 'O estándar ATX (Advanced Technology Extended) controla o tamaño dos compoñentes e as súas conexións. Conectores internos: ATX 24 pins (principal, raís 3,3/5/12 V, antes 20 → 20+4), ATX 12 V (4 ou 8 pins EPS, só 12 V para a CPU), Molex 4 pins (5 e 12 V, >100 W, periféricos antigos), SATA (15/16 pins, 3,3/5/12 V), PCI Express (6 pins 75 W, 8 pins 150 W, 6+2) e EPS (192 W en 4 pins, 336 W en 8).',
+    claves: ['ATX = Advanced Technology Extended: estándar de sobremesa (tamaño + conexións)', 'ATX 24 pins: principal placa base; raís 3,3 / 5 / 12 V + control (acendido, apagado, suspensión); antes 20 pins → hoxe 20+4 (desde ATX 2.0)', 'ATX 12 V: 4 pins (placas normais) ou 8 pins (EPS, servidores); só 12 V → a placa converte a 3,3 e 5 V (máis eficiencia, placas máis complexas)', 'Molex 4 pins: 5 e 12 V, >100 W; disqueteiras, IDE, CD/DVD antigos; hoxe en desuso', 'SATA alimentación: 15 pins, máis ancho que o de datos, 3,3/5/12 V; versión reducida de 6 pins a 5 V en portátiles', 'PCIe: 6 pins = 75 W, 8 pins = 150 W (12 V); 6+2 substitúe ó de 8; o de 6 encaixa no de 8 pero pode danar', 'EPS: dous conectores de 4 → 8 pins; 192 W (4 pins) / 336 W (8 pins); parécese ó PCIe 8 pero non é equivalente'],
+    tags: ['conectores', 'ATX 24 pins', 'ATX 12V', 'EPS', 'Molex', 'SATA', 'PCI Express', 'PCIe', '6+2', 'raís'],
+    contenido: `
+<p>A que voltaxe deberiamos converter a electricidade? Que especificacións necesitará a fonte para funcionar co resto de compoñentes? Para solucionar estes problemas desenvolvéronse varios estándares, entre os que destaca o <strong>estándar ATX</strong> (<em>Advanced Technology Extended</em>), o estándar para ordenadores de sobremesa domésticos e profesionais (con alternativas en servidores e sistemas industriais).</p>
+<p>Este estándar está presente nas fontes pero tamén nas placas base. O estándar ATX controla principalmente dúas variables: o <strong>tamaño dos compoñentes</strong> e as <strong>conexións</strong> que terán entre si, garantindo que non haxa limitacións entre marcas e modelos.</p>
+<figure><img src="apuntes/fh/img/ud3/conectores-internos.png" alt="Conectores internos dunha fonte de alimentación" loading="lazy"><figcaption><strong>Conectores de alimentación internos</strong> dunha fonte actual.</figcaption></figure>
+<h4>ATX de 24 pins</h4>
+<p>É o <strong>conector principal</strong>. Conecta a fonte á placa base a través de varios <strong>raís de 3,3, 5 e 12 voltios</strong>. Tamén inclúe un circuíto de control para a comunicación de estado (acendido, apagado e modo de suspensión). Anteriormente só tiña <strong>20 pins</strong>; moitas fontes aínda o presentan como <strong>20+4</strong>, cos últimos catro separados. O conector orixinal non foi deseñado para altas demandas, polo que a partir da versión 2.0 se incorporou un pin máis para cada voltaxe.</p>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/atx-24-pins.png" alt="Conector ATX de 24 pins" loading="lazy"><figcaption>ATX de 24 pins.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/atx-24-pins-voltaxes.png" alt="Voltaxes de cada pin do conector ATX 24" loading="lazy"><figcaption>Voltaxe de cada pin do ATX de 24 pins (+3,3 V laranxa, +5 V vermello, +12 V amarelo, −12 V azul, +5VSB violeta, PS-ON verde, PG gris, GND negro).</figcaption></figure>
+</div>
+<h4>ATX de 12 voltios</h4>
+<p>Úsase para proporcionar máis enerxía ós <strong>microprocesadores</strong>. Pode ser de <strong>4 ou 8 pins</strong>: 8 pins xeralmente para placas de servidor (<strong>EPS</strong>) e 4 pins para outras placas. En vez de transportar 3 voltaxes, só fornece <strong>12 V</strong>, o que obriga á placa a ter módulos dedicados para converter ás voltaxes restantes. Isto aumenta a eficiencia (a fonte só converte unha voltaxe, correntes máis baixas), pero fai as placas máis complexas (etapas de conversión a 3,3 e 5 V).</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/atx-12v.png" alt="Conector ATX 12 V de 4+4 pins" loading="lazy"><figcaption>ATX de 12 V (4+4 pins).</figcaption></figure>
+<h4>Molex de 4 pins</h4>
+<p>Deseñado para alimentar <strong>periféricos</strong>, introducido no lanzamento do ATX. Ofrece <strong>5 e 12 V</strong> a través dos seus 4 pins e máis de <strong>100 W</strong>, suficiente para disqueteiras, discos IDE antigos ou unidades de CD/DVD. Tamén se usaba para dar enerxía adicional a placas base ou tarxetas gráficas antes de existir conectores especializados. Hoxe o seu uso reduciuse moito: os dispositivos modernos empregan o conector SATA, máis plano e doado de conectar.</p>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/molex-4-pins.png" alt="Conector Molex de 4 pins" loading="lazy"><figcaption>Molex de 4 pins.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/molex-voltaxes.png" alt="Voltaxes do Molex: 12 V amarelo, 5 V vermello, terra negro" loading="lazy"><figcaption>Voltaxes do Molex: +12 V (amarelo), +5 V (vermello), terra (negro).</figcaption></figure>
+</div>
+<h4>SATA</h4>
+<p>Empregado por dispositivos SATA (unidades de DVD novas, discos duros e SSD SATA). Aspecto similar ó conector de datos SATA, pero <strong>máis ancho</strong>, con <strong>15 pins</strong> e unha fendedura para evitar erros de conexión. Admite <strong>3,3, 5 e 12 V</strong>, aínda que a primeira raramente se usa. Existe unha versión reducida de <strong>6 pins a 5 V</strong> en portátiles e algúns premontados.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/sata-alimentacion.png" alt="Conectores de alimentación SATA" loading="lazy"><figcaption>Conectores de alimentación SATA.</figcaption></figure>
+<h4>PCI Express</h4>
+<p>Engaden enerxía adicional ás <strong>tarxetas de expansión PCIe</strong> que requiren máis dos 75 W que proporciona o seu porto, sobre todo <strong>tarxetas gráficas</strong> (ás veces varios conectores na mesma tarxeta). Dúas versións a 12 V: <strong>6 pins → 75 W</strong> e <strong>8 pins → 150 W</strong>. Inicialmente non eran compatibles (o de 6 tiña unha fendedura); a maioría dos de 8 foron substituídos pola versión <strong>6+2</strong>, válida para ambas. O de 6 pins encaixa no de 8 e funciona, pero é probable que <strong>cause danos</strong> no porto ou conector.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/pcie-6-2.png" alt="Conector PCI Express 6+2 pins" loading="lazy"><figcaption>PCI Express 6+2 pins.</figcaption></figure>
+<h4>EPS</h4>
+<p>Combina dous conectores de 4 pins que xuntos forman un EPS completo de 8 pins. Proporciona <strong>12 V adicionais</strong>, sobre todo á <strong>CPU</strong> (tamén a gráficas de servidor ou compoñentes que requiren moita enerxía): <strong>192 W en formato ATX de 4 pins</strong> ou <strong>336 W en formato EPS de 8 pins</strong>. Aseméllase ó PCIe de 8 pins pero <strong>non son equivalentes</strong>: distintas asignacións de pins e potencias. Un dos dous conectores de 4 pins é un ATX de 12 V.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/eps-8-pins.png" alt="Conector EPS de 8 pins" loading="lazy"><figcaption>EPS de 8 pins.</figcaption></figure>
+<table>
+<tr><th>Conector</th><th>Pins</th><th>Voltaxes</th><th>Uso</th></tr>
+<tr><td>ATX principal</td><td>24 (20+4)</td><td>3,3 / 5 / 12 V (+ −12, 5VSB)</td><td>Placa base</td></tr>
+<tr><td>ATX 12 V / EPS</td><td>4 / 8 (4+4)</td><td>12 V</td><td>CPU (192 W / 336 W)</td></tr>
+<tr><td>Molex</td><td>4</td><td>5 / 12 V</td><td>Periféricos antigos (IDE, disqueteira, CD)</td></tr>
+<tr><td>SATA</td><td>15</td><td>3,3 / 5 / 12 V</td><td>Discos, SSD, DVD SATA</td></tr>
+<tr><td>PCIe</td><td>6 / 8 (6+2)</td><td>12 V</td><td>Tarxetas gráficas (75 W / 150 W)</td></tr>
+</table>
+<div class="box info"><div class="box-title">Conectores antigos que xa non se usan</div>
+<ul>
+  <li><strong>ATX de 20 pins:</strong> predecesor do de 24; sen a liña adicional para cada voltaxe.</li>
+  <li><strong>ATX de 6 pins:</strong> usado no ATX 1.0 ata a súa eliminación no 2.0; daba 3,3 e 5 V á placa antes de moverse ó de 24 pins.</li>
+  <li><strong>Berg:</strong> deseñado para <strong>disqueteiras</strong>, como un mini-Molex (mesmas conexións, máis pequeno, menos enerxía). Non está nas fontes actuais.</li>
+</ul>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/atx-20-pins.png" alt="Conector ATX de 20 pins" loading="lazy"><figcaption>ATX de 20 pins.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/atx-6-pins.png" alt="Conector ATX de 6 pins" loading="lazy"><figcaption>ATX de 6 pins.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/berg.png" alt="Conector Berg de disqueteira" loading="lazy"><figcaption>Berg.</figcaption></figure>
+</div></div>`
+  },
+  {
+    id: 'fh-ud3-3-8',
+    tipo: 'subtema',
+    titulo: '3.8 Precaucións ó usar conectores',
+    resumen: 'Regra non escrita: onde encaixa, é o conector correcto. Erros comúns: confundir CPU (4+4) e gráfica (6+2), ambos de 8 pins → consultar o manual, non forzar. Conectores SATA: se fai falta moita forza, a orientación é incorrecta e pode romper o pin do disco.',
+    claves: ['"Vaia onde vaia, o conector é o correcto"… pero non forzar', 'CPU 8 pins = 4+4 · Gráfica 8 pins = 6+2 (99 % das fontes)', 'Forzar un conector pode rompelo e danar o equipo', 'SATA: demasiada forza → orientación incorrecta, pode romper o pin do disco'],
+    tags: ['precaucións', 'conectores', 'erros', '4+4', '6+2', 'SATA'],
+    contenido: `
+<p>En xeral, conectar os cables da fonte é un proceso rápido, sinxelo e seguro: adoita seguirse a regra non escrita de que <em>vaia onde vaia, o conector é o correcto</em>. Non obstante, hai erros comúns de usuarios sen experiencia:</p>
+<ul>
+  <li>Os cables da <strong>CPU</strong> e da <strong>tarxeta gráfica</strong> confúndense moi facilmente, xa que ambos son de 8 pins; pero no 99 % das fontes os primeiros están separados en <strong>4+4</strong> e os segundos en <strong>6+2</strong>. Hai que distinguilos así ou consultar o manual. Os conectores non encaixan onde non son… pero algunhas persoas pensan que é o correcto e <strong>fórzano</strong>, rompéndoo e potencialmente danando o equipo.</li>
+  <li>A orientación dos conectores <strong>SATA</strong> pode facer que o pin do disco se rompa: se se necesita demasiada forza, probablemente estea orientado incorrectamente.</li>
+</ul>`
+  },
+  {
+    id: 'fh-ud3-3-9',
+    tipo: 'subtema',
+    titulo: '3.9 Conectores en fontes modulares',
+    resumen: 'As non modulares (cableadas) teñen os cables fixos e sobran moitos soltos. As modulares substitúen os cables por conectores femia na fonte: só se conectan os necesarios. Non hai estándar: mesturar cables de fontes distintas é perigoso. Vantaxes: versatilidade, xestión de cables, cables con fundas. Desvantaxes: prezo, conectores non universais, espazo extra.',
+    claves: ['Non modular/cableada: máis común e barata; cables fixos, moitos sen usar soltos na caixa', 'Modular: conectores femia na fonte, conectar só o necesario', 'Sen estándar universal → non mesturar cables de fontes distintas (perigoso)', 'Semimodular: fixos os vitais (ATX + CPU, ás veces PCIe); equilibrio prezo/versatilidade', 'Vantaxes: versatilidade · mellor xestión de cables e refrixeración · desmontar sen recablear · cables con fundas/kits', 'Desvantaxes: prezo · conectores non universais (non perder os cables) · lonxitude extra en caixas pequenas', 'Non priorizar modularidade sobre calidade'],
+    tags: ['modular', 'semimodular', 'cableada', 'xestión de cables', 'fundas'],
+    contenido: `
+<p>As fontes máis comúns e baratas son as <strong>non modulares ou cableadas</strong>: os seus cables están conectados ós circuítos internos e saen por un burato na parte traseira. Con poucos conectores é razoable, pero con moitos cables, na maioría dos casos algúns quedan sen usar, soltos na carcasa, o que é molesto. Este problema resólveo o <strong>cableado modular</strong>.</p>
+<p>Unha fonte modular substitúe a morea de cables por <strong>conectores femia na parte traseira da fonte</strong>: conectamos e desconectamos só os cables que necesitamos. O máis importante: <strong>non existe un estándar universal</strong>, polo que mesturar cables de diferentes fontes modulares é <strong>perigoso</strong>. Na maioría dos casos utilízanse conectores Molex moi semellantes ós dos compoñentes; con coidado (e o manual) non debería haber problema.</p>
+<h4>Fontes semimodulares</h4>
+<p>Non tódalas modulares inclúen o 100 % dos cables desconectables. As semimodulares teñen algúns fixos, normalmente os vitais (<strong>ATX + CPU</strong>) e ás veces outros de uso común como <strong>PCIe</strong>. Buscan un equilibrio entre o baixo prezo das cableadas e a versatilidade das 100 % modulares.</p>
+<div class="box tip"><div class="box-title">Por que escoller unha fonte modular?</div>
+<ul>
+  <li><strong>Versatilidade:</strong> só se conectan os cables necesarios, o que anima a escoller modelos con máis potencia e conectores sen dificultar a montaxe.</li>
+  <li><strong>Xestión de cables mellorada:</strong> menos cables sobrantes → mellor organización e mellor refrixeración interna. Para retirar a fonte, desconéctanse os cables do lado da fonte sen reorganizar nada.</li>
+  <li><strong>Cables con fundas ou personalizados:</strong> pódense facer cables propios ou mercar kits prefabricados; nunha cableada habería que desoldar (perigoso, anula a garantía) ou usar extensións.</li>
+</ul></div>
+<div class="box warn"><div class="box-title">Por que non escollela?</div>
+<ul>
+  <li><strong>Prezo:</strong> o cableado modular aumenta o custo. Con orzamento axustado hai modelos baratos "modulares" de baixa calidade interna. <strong>A calidade é o primeiro</strong>: non priorizar a modularidade.</li>
+  <li><strong>Conectores non universais:</strong> os conectores cara ós compoñentes son estándar, pero os do lado da fonte non. Coidado de non perder os cables nin mesturalos; as pezas de reposto non sempre se venden por separado.</li>
+  <li><strong>Configuracións máis molestas:</strong> en caixas con moi pouco espazo, a lonxitude engadida da modularidade dificulta a montaxe.</li>
+</ul></div>`
+  },
+  {
+    id: 'fh-ud3-3-10',
+    tipo: 'subtema',
+    titulo: '3.10 O futuro xa é presente: 12VHPWR',
+    resumen: 'Conector desenvolvido por Intel e adoptado por NVIDIA nas gráficas de gama alta, tamén chamado PCIe 5.0. Substitúe varios PCIe 6+2 (2–3 × 150 W + 75 W do porto) por un único conector de 12 pins + 4 de comunicación, con niveis de 150, 300, 450 e 600 W. Problemas de conectores queimados nas RTX 4080/4090 → redeseño 12V-2x6 (ATX 3.1) con pins máis longos.',
+    claves: ['12VHPWR: desenvolvido por Intel, adoptado por NVIDIA (gama alta); chamado PCIe 5.0', 'Substitúe os PCIe 6+2: 2–3 conectores de 8 pins = ata 450 W + 75 W do porto x16', 'Un único conector de 12 pins + 4 pins de comunicación coa fonte', 'Niveis de potencia: 150, 300, 450, 600 W (teoricamente case 1000 W no futuro)', 'Problemas RTX 4080/4090: conector non inserido a fondo → queimado', 'Recomendacións: inserir completamente; non dobrar o cable a menos de 35 mm do conector nin >90° · cables con conector a 90°', 'Revisión: 12V-2x6 (PCIe 5.0 / ATX 3.1), pins máis longos; ATX 3.1 xa non obrigatorio senón recomendado'],
+    tags: ['12VHPWR', 'PCIe 5.0', '12V-2x6', 'ATX 3.1', 'NVIDIA', 'RTX 4090', 'conector queimado', 'Intel', 'PCI-SIG'],
+    contenido: `
+<p>É un conector desenvolvido por <strong>Intel</strong> que foi adoptado por <strong>NVIDIA</strong> nos seus modelos de gama alta e maior potencia. Adoita denominarse <strong>PCIe 5.0</strong> pola súa asociación coas fontes PCIe 5.0. A idea é <strong>substituír os conectores PCIe de 6+2 pins</strong>, reducindo o número de cables necesarios para alimentar a tarxeta gráfica.</p>
+<p>As gráficas modernas adoitan ter dous ou tres conectores PCIe de 8 pins: ata <strong>450 W</strong> ademais dos 75 W do porto PCIe x16. O 12VHPWR corrixe isto cun <strong>único conector de 12 pins</strong>. Admite <strong>catro niveis de potencia</strong>: 150, 300, 450 e <strong>600 W</strong> (teoricamente case 1000 W no futuro). Ademais dos pins de alimentación, ten <strong>catro pins de comunicación</strong> coa fonte para mellorar a subministración.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/12vhpwr.png" alt="Conector 12VHPWR de 600 W" loading="lazy"><figcaption><strong>Conector PCIe 5.0 / 12VHPWR</strong> (600 W).</figcaption></figure>
+<h4>Problemas graves con este conector</h4>
+<p>A medida que as primeiras <strong>NVIDIA RTX 4080 e RTX 4090</strong> chegaron ó mercado, apareceron problemas polo alto consumo: o cable <strong>queimábase</strong> e deixaba de funcionar. Un aparente problema de deseño provocaba que o conector <strong>non se inserise completamente</strong> nalgúns casos, o que levou á queimadura.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/conector-queimado.png" alt="Conector 12VHPWR queimado" loading="lazy"><figcaption><strong>Conector queimado.</strong> NVIDIA recomendou verificar que estivese completamente inserido; varios usuarios informaron de que, aínda así, continuaba a queimarse.</figcaption></figure>
+<div class="box warn"><div class="box-title">Como dobrar o cable</div><p>O fabricante (e varios fabricantes de fontes) responderon que tamén se debe ter especial coidado coa forma en que se dobra o cable: sempre a polo menos <strong>35 mm</strong> de distancia do conector e <strong>nunca en ángulos superiores a 90°</strong>. Se non te queres complicar, a solución máis sinxela é mercar un <strong>cable cun conector de 90°</strong>, que ofrecen a maioría dos fabricantes de fontes e gráficas.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/dobrar-cable-12vhpwr.png" alt="Forma correcta e incorrecta de dobrar o cable" loading="lazy"><figcaption>Dobrar o cable a menos de 35 mm do conector (✗) fronte a facelo máis lonxe (✓).</figcaption></figure>
+<h4>Revisión do conector</h4>
+<p>Debido ós danos, <strong>PCI-SIG</strong> (regulador do conector), Intel e NVIDIA redeseñaron o conector, renomeándoo <strong>12V-2x6</strong>, aínda que nas especificacións oficiais se denomina PCIe 5.0 e <strong>ATX 3.1</strong>. A diferenza non é doada de ver: o novo conector engade <strong>pins máis longos</strong> para evitar os problemas de conexión. Ademais, o conector ATX 3.1 xa non é obrigatorio, senón simplemente recomendado.</p>`
+  },
+  {
+    id: 'fh-ud3-3-11',
+    tipo: 'subtema',
+    titulo: '3.11 Como comprobar que a fonte ATX funciona',
+    resumen: 'Proba do clip: coa fonte apagada e desconectada, unir co clip o cable verde (PS-ON) cun negro (GND), conectar e acender: se o ventilador xira, funciona. Con multímetro: rango 20 V DC, punta negra en negro (terra), punta vermella nos pins: vermello 5 V, amarelo 12 V, azul −12 V, laranxa 3,3 V, violeta 5 V (standby), gris Power Good.',
+    claves: ['Proba do clip: apagar e desconectar → clip entre cable verde e un negro → conectar → o ventilador debe xirar', 'Sen movemento = fonte defectuosa', 'Multímetro: DC, rango 20 V; negra en COM e en pin negro (terra); vermella en V e nos pins', 'Vermello +5 V · Amarelo +12 V · Azul −12 V · Laranxa +3,3 V · Violeta +5 V standby · Negro 0 V · Gris = Power Good', 'Retirar puntas e apagar o multímetro'],
+    tags: ['comprobar fonte', 'clip', 'multímetro', 'PS-ON', 'Power Good', 'cores dos cables', 'voltaxes'],
+    contenido: `
+<h4>Proba do clip</h4>
+<ol>
+  <li>Apaga o interruptor da fonte e desconéctaa da rede.</li>
+  <li>Colle un clip ou un cable, dóbrao formando unha curva e conéctao entre o <strong>cable verde</strong> (PS-ON) e <strong>un dos cables negros</strong> (terra).</li>
+  <li>Conecta a fonte.</li>
+  <li>Se a fonte funciona, arrancará e o <strong>ventilador comezará a xirar</strong>. Se non hai movemento, a fonte está defectuosa.</li>
+</ol>
+<h4>Medición cun multímetro</h4>
+<ol>
+  <li>Acender o multímetro e seleccionar <strong>tensión de corrente continua</strong>, rango de <strong>20 V DC</strong> (suficiente para tódalas medicións).</li>
+  <li>Conectar a punta de proba <strong>negra</strong> ó terminal COM e á toma de terra da fonte (cables negros).</li>
+  <li>Coa punta <strong>vermella</strong> (terminal V) medir as voltaxes nos distintos pins.</li>
+  <li>O cable <strong>gris</strong> (Power Good) debería indicar se chega a voltaxe correcta.</li>
+  <li>Retirar as puntas e apagar o multímetro.</li>
+</ol>
+<table>
+<tr><th>Cor do cable</th><th>Voltaxe</th></tr>
+<tr><td>Vermello</td><td>+5 V</td></tr>
+<tr><td>Amarelo</td><td>+12 V</td></tr>
+<tr><td>Azul</td><td>−12 V</td></tr>
+<tr><td>Laranxa</td><td>+3,3 V</td></tr>
+<tr><td>Violeta</td><td>+5 V (standby)</td></tr>
+<tr><td>Negro</td><td>0 V (terra)</td></tr>
+<tr><td>Verde</td><td>PS-ON (acendido)</td></tr>
+<tr><td>Gris</td><td>Power Good</td></tr>
+</table>
+<figure><img src="apuntes/fh/img/ud3/multimetro.png" alt="Medición da fonte cun multímetro" loading="lazy"><figcaption><strong>Utilización do multímetro</strong> para medir os valores da fonte: punta negra en terminal COM e nun pin negro (terra); punta vermella en terminal V movéndose polos distintos pins; 20 V en continua é suficiente.</figcaption></figure>`
+  },
