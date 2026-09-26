@@ -1157,3 +1157,61 @@ window.APUNTES.unidades.push({
 <figure class="small"><img src="apuntes/fh/img/ud3/instalar-ram.png" alt="Instalación de RAM" loading="lazy"><figcaption>Instalación dun módulo DIMM.</figcaption></figure>
 `
   },
+  {
+    id: 'fh-ud3-7-3', tipo: 'subtema', titulo: '7.3 Características dunha memoria RAM',
+    resumen: 'Capacidade (8/16/32 GB), frecuencia real e efectiva, taxa de transferencia (MT/s × 8 B), multicanle (dual/tri/quad), tensión e latencias (CL-tRCD-tRP-tRAS). Táboa DDR→DDR6. Infinity Fabric en Zen.',
+    claves: ['Capacidade', 'Frecuencia efectiva', 'Taxa de transferencia', 'Dual Channel', 'Latencia CAS (CL)', 'PC3-12800'],
+    tags: ['memoria', 'ram', 'ddr', 'latencia', 'dual-channel'],
+    links: ['fh-ud3-7', 'fh-ud3-7-1', 'fh-ud3-7-4', 'fh-ud3-5-5'],
+    contenido: `
+<ul>
+<li><b>Capacidade</b>: en bytes; módulos comúns de 8, 16 e 32 GB.</li>
+<li><b>Frecuencia de traballo externa</b> (real): frecuencia do bus coa CPU; módulos actuais arredor do GHz.</li>
+<li><b>Frecuencia efectiva</b>: a que anuncian os fabricantes (2× real en DDR).</li>
+<li><b>Taxa de transferencia</b>: transferencias/s × ancho do bus (64 bits = 8 bytes).</li>
+<li><b>Multicanle</b>: o controlador accede a 2, 3 ou 4 módulos á vez (Dual/Tri/QuadChannel) → taxa ×2, ×3, ×4. Os módulos deben ser iguais (fabricante, frecuencia, latencias): por iso se venden en <b>kits</b>.</li>
+<li><b>Tensión</b>: máis tensión = máis rendemento pero máis consumo e calor.</li>
+<li><b>Latencias</b>: ciclos que tardan distintas operacións; catro parámetros CL-tRCD-tRP-tRAS, p. ex. <code>7-8-8-24</code>.</li>
+</ul>
+<div class="box ex"><div class="box-title">Exemplo: DDR3-1600 / PC3-12800</div><p>Bus a 800 MHz real → con DDR fai 1600 MT/s (frecuencia efectiva, "DDR3-1600"). Taxa de transferencia: 1600 × 8 B = <b>12 800 MB/s</b> ("PC3-12800"). Dous módulos en Dual Channel: 12 800 × 2 = <b>25 600 MB/s</b>.</p></div>
+<div class="box def"><div class="box-title">Latencia CAS (CL)</div><p>Ciclos entre a solicitude de datos e o inicio da transmisión. En nanosegundos: <code>1000 / frecuencia(MHz) × CL</code>. Latencias máis baixas son mellores, pero como se miden en ciclos, unha memoria lenta con CL baixo pode gañar a unha rápida con CL alto.</p></div>
+<div class="box tip"><div class="box-title">Dual Channel</div><p>Require procesador e placa con dúas canles e dous módulos iguais (tamaño, velocidade, fabricante), colocados nas rañuras que indica o fabricante (normalmente da mesma cor). Dous módulos de 8 GB en Dual Channel rinden mellor que un de 16 GB.</p></div>
+<figure><img src="apuntes/fh/img/ud3/slots-ram-dual-channel.png" alt="Rañuras Dual Channel" loading="lazy"><figcaption>Rañuras por cores: os módulos van por parellas da mesma cor.</figcaption></figure>
+<table><tr><th></th><th>DDR</th><th>DDR2</th><th>DDR3</th><th>DDR4</th><th>DDR5</th><th>DDR6</th></tr>
+<tr><td>Ano</td><td>1998</td><td>2003</td><td>2007</td><td>2014</td><td>2020</td><td>2025</td></tr>
+<tr><td>Contactos</td><td>184</td><td>240</td><td>240</td><td>288</td><td>288</td><td>?</td></tr>
+<tr><td>Capacidade máx.</td><td>1 GB</td><td>4 GB</td><td>16 GB</td><td>32 GB</td><td>128 GB</td><td>?</td></tr>
+<tr><td>Frec. real (MHz)</td><td>100–200</td><td>200–533</td><td>400–1066</td><td>800–2133</td><td>2400–3600</td><td>6400?</td></tr>
+<tr><td>Frec. efectiva</td><td>200–400</td><td>400–1066</td><td>800–2133</td><td>1600–3200</td><td>4800–10000</td><td>12800–?</td></tr>
+<tr><td>Taxa (MB/s)</td><td>1600–3200</td><td>3200–8500</td><td>6400–17000</td><td>12800–25600</td><td>38400–57600</td><td>102400–?</td></tr>
+<tr><td>Tensión</td><td>2,5/2,6 V</td><td>1,8 V</td><td>1,5/1,35 V</td><td>1,2/1,05 V</td><td>1,1 V</td><td>?</td></tr>
+</table>
+<div class="box info"><div class="box-title">AMD Zen e a frecuencia da RAM</div><p>O Infinity Fabric funciona á frecuencia da RAM: fclk (Infinity Fabric) : uclk (controlador de memoria) : mclk (RAM) = <b>1:1:1</b>. RAM máis rápida → mellor comunicación entre CCD. Pero se a RAM é demasiado rápida, o Infinity Fabric baixa á metade (relación <b>2:1:1</b>) e vai máis lento.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-7-4', tipo: 'subtema', titulo: '7.4 Memorias RAM especiais',
+    resumen: 'ECC: detecta e corrixe erros (servidores, ciencia, finanzas), máis cara e lenta. Rexistradas: chip intermedio para manexar máis RAM con máis retardo; moitas son tamén ECC.',
+    claves: ['ECC', 'Memoria rexistrada', 'Servidores', 'Integridade de datos'],
+    tags: ['memoria', 'ram', 'ecc', 'servidor'],
+    links: ['fh-ud3-7', 'fh-ud3-7-3', 'fh-ud3-7-5'],
+    contenido: `
+<ul>
+<li><b>Memorias con ECC</b> (comprobación e corrección de erros): recoñecen e corrixen erros que corromperían datos. Usadas en servidores e contornos científicos/financeiros. Máis caras e lentas pola comprobación.</li>
+<li><b>Memorias rexistradas</b> (Registered/RDIMM): rexistro ou chip intermedio entre os chips e o controlador que permite manexar maiores cantidades de RAM a costa de maiores retardos. Tamén para servidores; moitas son ECC ademais.</li>
+</ul>
+`
+  },
+  {
+    id: 'fh-ud3-7-5', tipo: 'subtema', titulo: '7.5 Memoria ROM',
+    resumen: 'Read-Only Memory: non volátil, non se pode escribir (facilmente). Garda a configuración/arranque (BIOS); hoxe memorias flash. O seu contido cópiase á RAM porque esta é máis rápida.',
+    claves: ['ROM', 'Non volátil', 'BIOS', 'Flash', 'Microprogramación'],
+    tags: ['memoria', 'rom', 'bios', 'flash'],
+    links: ['fh-ud3-7', 'fh-ud3-7-4', 'fh-ud3-4-6'],
+    contenido: `
+<div class="box def"><div class="box-title">ROM</div><p>Memoria de semicondutor <b>non volátil</b> e non destrutible: non se pode escribir sobre ela e conserva a información sen corrente. Almacena a configuración do sistema ou o <b>programa de arranque</b>.</p></div>
+<p>Úsase para distribuír programas moi ligados ao hardware que non necesitan actualización. Existe porque non se pode ler desde o disco o programa necesario para arrancar o disco: a <b>BIOS</b> ten que ir nunha ROM (hoxe <b>memorias flash</b>, evolución das ROM: PROM → EPROM → EEPROM → flash).</p>
+<p>A RAM é máis rápida de ler que a ROM, polo que o contido da ROM adoita <b>transvasarse á RAM</b> para o seu uso (shadowing). Emprégase sobre todo en microprogramación de sistemas e compoñentes fabricados en masa.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/chip-flash-usb.png" alt="Chip flash" loading="lazy"><figcaption>Chip de memoria flash.</figcaption></figure>
+`
+  },
