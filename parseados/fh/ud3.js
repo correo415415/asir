@@ -1215,3 +1215,72 @@ window.APUNTES.unidades.push({
 <figure class="small"><img src="apuntes/fh/img/ud3/chip-flash-usb.png" alt="Chip flash" loading="lazy"><figcaption>Chip de memoria flash.</figcaption></figure>
 `
   },
+  {
+    id: 'fh-ud3-8', tipo: 'tema', titulo: '8. Sistemas de almacenamento',
+    resumen: 'Para ler/escribir en soportes externos cómpre unha interface física e lóxica co bus: as controladoras de disco. Controladoras (PATA, SCSI, SATA, SAS, M.2/NVMe/PCIe), disco duro, SSD, disquetes, ópticos, USB/FireWire, memorias flash.',
+    claves: ['Controladora de disco', 'HDD', 'SSD', 'SATA', 'NVMe', 'Óptico'],
+    tags: ['almacenamento', 'disco', 'ssd', 'controladora'],
+    links: ['fh-ud3', 'fh-ud3-8-1', 'fh-ud3-8-2', 'fh-ud3-8-3', 'fh-ud3-8-4', 'fh-ud3-8-5', 'fh-ud3-8-6', 'fh-ud3-8-7', 'fh-ud3-8-8'],
+    contenido: `
+<p>Para ler e escribir en soportes de almacenamento cómpre unha <b>interface física e lóxica</b> que una o periférico co bus do sistema. Ademais de xestionar a transferencia, controlan as operacións de E/S: chámanse <b>controladoras de disco</b>.</p>
+<ul>
+<li><b>8.1</b> Controladoras: PATA/IDE, SCSI, SATA, SAS, M.2, NVMe, PCIe.</li>
+<li><b>8.2</b> Disco duro (HDD): pratos, cabezas, pistas, cilindros, sectores, MBR/GPT, prestacións.</li>
+<li><b>8.3</b> SSD: flash NAND, TBW e DWPD.</li>
+<li><b>8.4</b> Disquetes. <b>8.5</b> Unidades ópticas (CD, DVD, Blu-ray).</li>
+<li><b>8.6</b> USB e FireWire. <b>8.7</b> Memorias flash. <b>8.8</b> Outros.</li>
+</ul>
+<div class="box info"><div class="box-title">Memoria rexistrada e flash (marxe)</div><p>As memorias <b>rexistradas</b> recoñécense polo chip extra; requiren controlador de memoria específico, e se se instalan nun equipo non compatible este non detecta a RAM ou dá erro. As memorias <b>flash</b>, ademais de soporte da BIOS, úsanse en chaveiros USB, tarxetas PC Card e tarxetas de memoria para fotos.</p></div>
+<div class="box def"><div class="box-title">Sistemas para enderezar o contido</div><p><b>CHS</b> (cilindro-cabeza-sector): cos tres valores sitúase calquera dato do disco. <b>LBA</b> (Logical Block Addressing): divide o disco en sectores e asigna un número único a cada un; é o usado actualmente.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/pistas-sectores-cabezas.png" alt="Pistas, sectores e cabezas" loading="lazy"><figcaption>Track/cilindro, sector e cabezas.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-8-1', tipo: 'subtema', titulo: '8.1 Controladoras de disco',
+    resumen: 'PATA/IDE (40 fíos, mestre/escravo, 2 dispositivos por cable, 45 cm), SCSI (7 periféricos, 50/68 fíos, tarxeta), SATA (7 fíos, punto a punto, 1 m, hot-plug, 550 MB/s), SAS (sucesor serie de SCSI; acepta SATA). M.2 (factor de forma), NVMe (protocolo flash), PCIe (carrís, ~×2 por xeración).',
+    claves: ['PATA/IDE', 'Mestre/Escravo/Cable Select', 'SCSI', 'SATA', 'SAS', 'M.2', 'NVMe', 'PCIe'],
+    tags: ['almacenamento', 'controladora', 'sata', 'nvme', 'pcie', 'scsi'],
+    links: ['fh-ud3-8', 'fh-ud3-8-2', 'fh-ud3-8-3'],
+    contenido: `
+<div class="box def"><div class="box-title">PATA (Parallel ATA) = IDE = ATA</div><p>Estándar en desuso, tamén chamado controladora de bus AT (IDE-ATAPI). Cable de <b>40 fíos</b> con tres conectores: placa, dispositivo intermedio e dispositivo final. Inconveniente: mentres se accede a un dispositivo o outro non se pode usar. Máis barato que SCSI pero menos rendemento. Cable máx. 45 cm.</p>
+<p>Un dispositivo → <b>mestre</b> (M). Dous → un mestre e outro <b>escravo</b> (S), mediante <i>jumpers</i> traseiros; ou <b>Cable Select</b> (CS) para que decida o cable. Evolución <b>E-IDE</b>: discos &gt; 504 MB, Plug and Play, ata 4 dispositivos por controladora.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/cable-ide.png" alt="Cable PATA" loading="lazy"><figcaption>Cable PATA/IDE.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/conector-ide-placa.png" alt="Conector IDE" loading="lazy"><figcaption>Conector IDE na placa.</figcaption></figure>
+</div>
+<div class="box def"><div class="box-title">SCSI (Small Computer System Interface)</div><p>Ata <b>7 periféricos</b> numerados, unidos por un único cable de <b>50 ou 68 fíos</b> que se activan en fervenza. Cada periférico é como se tivese controladora propia. Difícil configuración; véndese como tarxeta de ampliación.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/cable-scsi-interno.png" alt="Cable SCSI interno" loading="lazy"><figcaption>Cable SCSI interno.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/cable-scsi-externo.png" alt="Cable SCSI externo" loading="lazy"><figcaption>Cable SCSI externo.</figcaption></figure>
+</div>
+<div class="box def"><div class="box-title">SATA (Serial ATA)</div><p>Substitúe a PATA: máis velocidade, mellor con varias unidades, cable máis longo (<b>ata 1 m</b>), <b>conexión en quente</b>.</p>
+<ul>
+<li>Cable de <b>7 fíos</b> (non cinta de 40) → mellor ventilación; conectores de datos e alimentación distintos.</li>
+<li>Conexión <b>punto a punto</b>: un disco por conector.</li>
+<li>Serie → menos interferencias → maiores frecuencias.</li>
+<li>Rendemento/prezo compite con SCSI en almacenamento masivo (RAID).</li>
+</ul></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/cable-sata.png" alt="Cable SATA" loading="lazy"><figcaption>Cable SATA.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/conectores-sata-placa.png" alt="Conectores SATA" loading="lazy"><figcaption>Conectores SATA na placa.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/conector-sas.png" alt="Conector SAS" loading="lazy"><figcaption>Conector SAS.</figcaption></figure>
+</div>
+<div class="box def"><div class="box-title">SAS (Serial Attached SCSI)</div><p>Sucesor serie de SCSI; mantén os comandos SCSI, máis velocidade e hot-plug. Conector similar a SATA: unha controladora SAS acepta discos SATA (para aforrar), pero unha SATA <b>non</b> recoñece discos SAS.</p></div>
+<div class="box def"><div class="box-title">M.2, NVMe e PCIe</div>
+<ul>
+<li><b>M.2</b> (2012, substitúe mSATA): <b>factor de forma</b>. Os números indican tamaño: <code>2280</code> = 22 mm de ancho × 80 mm de longo. Ser M.2 non implica ser NVMe: hai M.2 SATA e M.2 PCIe.</li>
+<li><b>NVMe</b> (Non-Volatile Memory Express): <b>protocolo</b> deseñado para aproveitar a flash NAND (SATA deseñouse para discos duros).</li>
+<li><b>PCIe</b>: SATA está limitado a 1 canle; PCIe usa ata 4 carrís e case duplica cada xeración.</li>
+</ul>
+<table><tr><th>Interface</th><th>×1</th><th>×2</th><th>×4</th></tr>
+<tr><td>PCIe 5.0</td><td>4000 MB/s</td><td>8000 MB/s</td><td>16 000 MB/s</td></tr>
+<tr><td>PCIe 4.0</td><td>2000 MB/s</td><td>4000 MB/s</td><td>8000 MB/s</td></tr>
+<tr><td>PCIe 3.0</td><td>1000 MB/s</td><td>2000 MB/s</td><td>4000 MB/s</td></tr>
+<tr><td>SATA III</td><td>550 MB/s</td><td>–</td><td>–</td></tr>
+</table></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/ssd-m2.png" alt="SSD M.2" loading="lazy"><figcaption>SSD M.2 2280.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/ssd-pcie.png" alt="SSD PCIe" loading="lazy"><figcaption>SSD en tarxeta PCIe.</figcaption></figure>
+</div>
+`
+  },
