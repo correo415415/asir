@@ -1369,3 +1369,68 @@ window.APUNTES.unidades.push({
 <figure class="small"><img src="apuntes/fh/img/ud3/firewire.png" alt="Conectores FireWire" loading="lazy"><figcaption>Conectores FireWire de 4, 6 e 9 pins.</figcaption></figure>
 `
   },
+  {
+    id: 'fh-ud3-8-5', tipo: 'subtema', titulo: '8.5 DVD (Digital Versatile Disc)',
+    resumen: 'Disco óptico de 12 cm (ou 8 cm) con maior densidade que o CD; sistema de ficheiros UDF. Tipos: DVD-ROM, ±R, ±RW, RAM. Capacidades DVD-5 (4,7 GB) a DVD-18 (17,1 GB). Velocidade 1× = 1350 KB/s (= 9× CD). Conservación: 23 °C, 50 % humidade.',
+    claves: ['UDF', 'DVD-5/9/10/14/18', 'Capa dobre', '1350 KB/s', '+R vs -R', 'DVD-RAM'],
+    tags: ['almacenamento', 'optico', 'dvd'],
+    links: ['fh-ud3-8', 'fh-ud3-8-4', 'fh-ud3-8-6'],
+    contenido: `
+<p>Formato de almacenamento multimedia en <b>disco óptico</b> para datos e películas con alta calidade. Mesmas dimensións que o CD (12 cm ou mini de 8 cm) pero codificación distinta e <b>moito maior densidade</b>. Todos os DVD conteñen un sistema de ficheiros <b>UDF</b> (extensión da ISO 9660 dos CD de datos).</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/discos-opticos.png" alt="Discos ópticos" loading="lazy"><figcaption>Discos ópticos: CD, DVD e Blu-ray.</figcaption></figure>
+<div class="box def"><div class="box-title">Tipos segundo o medio</div>
+<ul>
+<li><b>DVD-ROM</b>: só lectura, prensado en fábrica.</li>
+<li><b>DVD±R</b>: gravable unha vez.</li>
+<li><b>DVD±RW</b>: regravable.</li>
+<li><b>DVD-RAM</b>: regravable de acceso aleatorio.</li>
+</ul>
+<p>O <b>+</b> e o <b>−</b> son estándares técnicos similares, parcialmente compatibles; hoxe as unidades soportan ambos.</p></div>
+<table><tr><th>Tipo</th><th>Lados</th><th>Capas</th><th>Capacidade</th></tr>
+<tr><td>DVD-5</td><td>1</td><td>simple</td><td>4,7 GB</td></tr>
+<tr><td>DVD-9</td><td>1</td><td>dobre</td><td>8,5 GB</td></tr>
+<tr><td>DVD-10</td><td>2</td><td>simple / simple</td><td>9,4 GB</td></tr>
+<tr><td>DVD-14</td><td>2</td><td>dobre / simple</td><td>13,3 GB</td></tr>
+<tr><td>DVD-18</td><td>2</td><td>dobre / dobre</td><td>17,1 GB</td></tr>
+</table>
+<div class="box tip"><div class="box-title">Recoñecer as capas a ollo</div><p>Capa dobre → cor <b>dourada</b>; capa simple → <b>prateada</b> (como un CD). No anel central: dous códigos de barras = capa dobre, un = simple.</p></div>
+<div class="box ex"><div class="box-title">Velocidade</div><p>Múltiplos de <b>1350 KB/s</b>: unha unidade 16× → 16 × 1350 = 21 600 KB/s. Como o CD vai en múltiplos de 150 KB/s, 1× DVD = 9× CD.</p></div>
+<div class="box warn"><div class="box-title">Conservación</div><p>Protexer do po e rabuñadas (as capas do DVD son máis finas que as do CD). Como se len con luz, non hai desgaste físico. Humidade e temperatura importan: cambios bruscos deterioran (coeficientes térmicos distintos das capas). Norma: máx. <b>23 °C e 50 % de humidade</b>. En clima tropical (30 °C, 90 %) hai fungos que destrúen os CD.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-8-6', tipo: 'subtema', titulo: '8.6 CD (Compact Disc)',
+    resumen: 'CD-R (gravable unha vez, multisesión, ata 52× ≈ 7800 KB/s, 650/700/800/900 MB), CD-ROM (estampado, espiral de ocos e chairas: as transicións son os 1), CD-RW (regravable ~1000 veces, cambio de fase).',
+    claves: ['CD-R', 'CD-ROM', 'CD-RW', 'Ocos e chairas', 'Multisesión', '700 MB'],
+    tags: ['almacenamento', 'optico', 'cd'],
+    links: ['fh-ud3-8', 'fh-ud3-8-5', 'fh-ud3-8-7'],
+    contenido: `
+<div class="box def"><div class="box-title">CD-R (Recordable)</div><p>Grávase <b>unha vez</b>, aínda que en varias sesións (<b>multisesión</b>: pérdense megas e algúns lectores antigos non os len). Gravadoras ata <b>52×</b> (≈ 7800 KB/s). Capacidade: 650, <b>700 MB</b> (o común), 800 ou 900 MB en datos.</p></div>
+<div class="box def"><div class="box-title">CD-ROM (Read Only Memory)</div><p>Disco de plástico plano con información dixital nunha <b>espiral</b> do centro ao bordo. Fabricado en masa por <b>estampación</b> (os CD-R/RW grávanse). 650/700 MB, menos de 30 g. Popular para distribuír software e bases de datos.</p>
+<p>Os datos gárdanse como <b>ocos e chairas</b> que reflicten o láser con distinto ángulo. Non é que oco = 1 e chaira = 0: cada <b>transición</b> oco↔chaira é un <b>1</b>, e a lonxitude dun oco ou chaira indica cantos <b>0</b> consecutivos hai.</p></div>
+<div class="box def"><div class="box-title">CD-RW (ReWritable)</div><p>Substrato de policarbonato + capa reflectante de aluminio (láser infravermello) + capa protectora + etiqueta. Permite gravar e borrar <b>arredor de 1000 veces</b> na mesma posición.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-8-7', tipo: 'subtema', titulo: '8.7 Cinta magnética',
+    resumen: 'Soporte de imaxe, son ou datos. Os streamers (almacenamento masivo en cinta) úsanse para copias de seguridade e procesos secuenciais (nóminas de grandes organizacións).',
+    claves: ['Streamer', 'Backup', 'Acceso secuencial'],
+    tags: ['almacenamento', 'cinta', 'backup'],
+    links: ['fh-ud3-8', 'fh-ud3-8-6', 'fh-ud3-8-8'],
+    contenido: `
+<p>Soporte de almacenamento de imaxe, son ou datos. Os dispositivos informáticos de almacenamento masivo en cinta (<b>streamers</b>) úsanse sobre todo para <b>respaldo de ficheiros</b> (backup) e para procesos de información <b>secuenciais</b>, como as nóminas de grandes organizacións públicas e privadas.</p>
+<div class="box info"><div class="box-title">Hoxe</div><p>Segue viva en centros de datos co formato LTO (Linear Tape-Open): moi barata por TB e duradeira para arquivo a longo prazo.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-8-8', tipo: 'subtema', titulo: '8.8 Disco magnetóptico (MO)',
+    resumen: 'Grava de forma magnética e reproduce de forma óptica: láser quenta a aleación baixo un campo magnético (cambio de fase), os dominios reoriéntanse e ao arrefriar rápido permanecen. Exemplo: MiniDisc.',
+    claves: ['Magnetóptico', 'Cambio de fase', 'Láser + campo magnético', 'MiniDisc'],
+    tags: ['almacenamento', 'magnetoptico', 'minidisc'],
+    links: ['fh-ud3-8', 'fh-ud3-8-7'],
+    contenido: `
+<p>Disco óptico que serve de soporte para gravación <b>magnetóptica</b> dixital: grava de forma <b>magnética</b> pero reproduce de forma <b>óptica</b>.</p>
+<div class="box def"><div class="box-title">Recubrimento de cambio de fase</div><p>A superficie quéntase cun láser mentres está baixo un campo magnético. A aleación cambia o seu estado de cristalización coa calor e os dominios magnéticos reoriéntanse. Ao arrefriar rapidamente, o magnetismo inducido permanece (reflíctese menos luz e o material non recristaliza ao estado orixinal).</p></div>
+<p>Tamén chamados discos <b>MO</b>. O <b>MiniDisc</b> de Sony é un exemplo.</p>
+`
+  },
