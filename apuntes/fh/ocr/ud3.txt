@@ -1569,3 +1569,552 @@ Hoxe en día, son o tipo de placa base máis utilizado para construír PC para
 xogos, principalmente porque ofrecen o nivel de configuración e expansión
 necesario.
 
+===== PAXINA 16 =====
+FlexATX
+
+Estamos a falar dun derivado do estándar ATX deseñado para ofrecer unha
+solución compacta para ordenadores de sobremesa pequenos. Obviamente, ó
+ser unha placa base máis pequena derivada do formato ATX, o número de
+opcións de conectividade é moito menor.
+
+As placas base con formato FlexATX teñen un tamaño de 229 x 101 mm. É
+compatible coas mesmas caixas de PC que son compatibles co formato ATX,
+aínda que debemos comprobar as especificacións con atención, xa que este
+formato non é tan común no mercado.
+
+Este tipo de placa base úsase principalmente en equipos de oficina e multime-
+dia cunha soa función onde o espazo dispoñible é limitado. Os modelos máis
+potentes inclúen unha tarxeta gráfica dedicada, xa que, debido ás restricións
+de espazo, non tódalas tarxetas gráficas caben, especialmente as consideradas
+de gama alta.
+
+O mesmo ocorre co espazo da RAM e o número de portos PCle para ampliar as
+súas capacidades. Estas limitacións teñen como obxectivo reducir os custos de
+fabricación, polo que están deseñadas para ordenadores económicos. Aínda
+que son compatibles con fontes de alimentación ATX, para aforrar espazo
+podemos optar por fontes de alimentación máis pequenas como as SFX.
+
+Mini-ITX
+
+Para a creación de pequenos ordenadores de sobremesa, temos as chamadas
+placas base Mini-ITX, que non son un derivado das placas base ATX. Trátase de
+placas base de 170 x 170 mm, e o seu pequeno tamaño xeralmente significa
+que veñen con menos compoñentes que os tipos de placas base mencionados
+anteriormente. Non obstante, a integración de compoñentes fixo que fosen tan
+boas neste sentido como as ATX e derivados co paso do tempo.
+
+O seu tamaño causa certos problemas á hora de montar certos compoñentes,
+especialmente os sistemas de refrixeración como radiadores e disipadores de
+calor, que están deseñados para sistemas ATX e Micro-ATX. Tamén podemos
+atopar tarxetas gráficas máis compactas e, polo tanto, máis estreitas, que
+están deseñadas para caixas Mini-ITX.
+
+Aínda que podemos atopar torres que admiten unha placa base Mini-ITX, xa
+que os seus catro orificios adoitan coincidir cos catro orificios situados á es-
+querda e no centro das placas base ATX, usalas nunha caixa ATX ou Micro-ATX
+é un desperdicio de espazo. Polo tanto, recoméndanse para crear HTPC (Home
+Theater Personal Computer) multimedia ou outros sistemas compactos onde o
+espazo é escaso e o aproveitamento máximo é esencial, e onde só se poden
+instalar fontes de alimentación máis pequenas.
+
+Nano-ITX
+
+As placas base co formato Nano-ITX, unha variante máis pequena do Mini-ITX,
+comezaron a implementarse en 2025 e miden 120 x 120 mm. Este tipo de pla-
+cas están destinadas a dispositivos multimedia de consumo como caixas An-
+droid de gama alta, centros multimedia e dispositivos loT (Internet das Cou-
+sas), sistemas de son e ordenadores ultraportátiles de baixo consumo ou
+mesmo mini PC.
+
+Debido ó seu tamaño, as capacidades de expansión son moito máis limitadas
+que as de calquera outro tipo de placa base máis grande, xa que están deseña-
+das para un uso específico que non require actualizacións futuras. Aínda que é
+certo que, como calquera outra placa base, podes actualizar os seus compo-
+ñentes, debido ás limitacións de espazo, isto adoita ser un impedimento.
+
+Pico-1TX
+
+Estamos a falar das placas base máis pequenas dispoñibles no mercado. Son
+unha versión máis pequena das placas base Nano-ITX, que miden 100 x 72 mm.
+Este tipo de placa base xa vén co procesador integrado, polo que non é posible
+
+Unha carcasa pode ser com-
+patible con varios formatos?
+
+Un dos principais aspectos a ter
+en conta é que, en última instan-
+cia, o feito de que escollamos un
+tipo de placa base ou outro de-
+terminará o tamaño do noso PC,
+incluíndo, por suposto, a propia
+carcasa, así como as diversas
+características adicionais que
+ofrecen as máis grandes.
+
+Neste sentido, as carcasas dos
+ordenadores teñen unha serie de
+características que debemos ter
+en conta, xa que obviamente non
+todas son compatibles con tódo-
+los tipos de placas base do mer-
+cado, polo que debemos elixir
+coidadosamente a configuración
+de ambas.
+
+Cada carcasa ten un formato
+diferente que é perfecto para cada
+tipo de placa base, pero hai algúns
+modelos que teñen un uso moito
+máis xeral. Neste caso, se pensa-
+mos en chasis de semitorre, po-
+demos ver que hai bastantes que
+se ofrecen con compatibilidade
+para varios tipos de placas base,
+como ATX, micro-ATX e mesmo
+ás veces MINI-ITX, dependendo do
+caso.
+
+Ademais, polo feito de que teñen
+maior ou menor compatibilidade,
+aínda que todas teñen os orificios
+para incorporar este tipo de pla-
+cas base, hai algunhas que permi-
+ten facelo dun xeito moito mellor
+que outras.
+
+Debes ter en conta que é mellor
+escoller o tipo de caixa que se
+corresponde co factor de forma
+da placa base. En definitiva, mer-
+car un modelo Micro-ATX para un
+chasis que normalmente admite
+ATX simplemente deixará un
+conglomerado que non aproveita-
+rá ó máximo as capacidades de
+refrixeración da caixa, pero que
+tampouco terá a vantaxe dun
+factor de forma máis pequeno.
+
+As placas base desempeñan un
+papel crucial á hora de facilitar a
+comunicación entre diferentes
+compoñentes, garantindo un
+rendemento óptimo en cada tare-
+fa que realizamos.
+===== PAXINA 17 =====
+BTX (Balanced Technology
+Extended)
+
+Este estándar é un formato de
+placa base creado por Intel en
+2004 como unha evolución do
+formato ATX, para tentar resolver
+os problemas de refrixeración ós
+que se enfrontaban algúns proce-
+sadores.
+
+É practicamente incompatible co
+ATX, agás pola fonte de alimenta-
+ción (é posible usar unha fonte de
+alimentación ATX nunha placa
+base BTX).
+
+Non foi aceptada polos fabrican-
+tes e usuarios porque a localiza-
+ción do procesador na placa a
+facía incompatible con algúns
+tipos de procesadores que tiñan
+requisitos de localización específi-
+cos.
+
+Placa de circuíto impreso
+
+Tamén coñecida como PCB (Prin-
+ted Circuit Board), é un medio
+para suxeitar mecanicamente e
+conectar electricamente compo-
+ñentes electrónicos a través de
+camiños ou pistas de material
+condutor gravado en láminas de
+cobre laminadas sobre un subs-
+trato non condutor.
+
+Conectores internos da pla-
+ca base
+
+1PCI
+
+2 SATA
+
+3 pila
+
+4 memoria RAM
+
+5 disqueteira
+
+6 conexión eléctrica ATX
+7 zócolo procesador
+
+8 IDE
+
+9 PCI Express
+
+substituílo. O mesmo ocorre coa memoria, e ambas están soldadas á placa
+base, igual que nos portátiles. Non obstante, as características que ofrecen son
+moi diferentes en termos de rendemento e potencia, xa que tampouco permi-
+ten actualizacións de RAM, que tamén están soldadas á placa base.
+
+Este tipo de placas son perfectas para crear dispositivos domóticos pequenos
+e de baixo consumo. Tamén se empregan para crear pequenos servidores do-
+mésticos para compartir ficheiros e descargas P2P, debido ó seu baixo consu-
+mo, que non supera os 8 W na peor das hipóteses, e ó seu baixo nivel de ruído,
+xa que a maioría só teñen refrixeración pasiva, aínda que se lles pode engadir
+un ventilador para mellorar o rendemento.
+
+Ademais, son perfectas para crear diversos proxectos porque permiten a in-
+corporación dunha serie de módulos adicionais grazas ós seus pins GPIO inte-
+grados. Isto é algo que podemos atopar, por exemplo, na Raspberry Pi, e que
+nos permite instalar complementos como sensores, pantallas ou outro tipo de
+dispositivos adicionais para configuralos o máis completamente posible.
+
+4.2 > Conexións da placa base
+
+As placas base teñen varias conexións que lles permiten comunicarse con ou-
+tros compoñentes, tanto de xeito interno como externo.
+
+w
+y
+>
+a
+«X
+E
+o
+
+Conectores externos
+
+===== PAXINA 18 =====
+4.3 > BIOS (Basic Input/Output System)
+
+Nas antigas memorias ROM-BIOS e nas actuais UEFI almacénanse as rutinas
+básicas de baixo nivel que fan posible que o ordenador arranque para, poste-
+riormente, ceder o control ó sistema operativo. Están alimentadas de forma
+permanente por unha pila de botón.
+
+Mediante o setup, podemos configurar a BIOS, tendo certos coñecementos
+técnicos. Para activar o programa de configuración teremos que premer, se-
+gundo o modelo de placa base, a tecla F2 ou a tecla Supr antes de que o equi-
+po cargue o sistema operativo.
+
+O propósito fundamental da BIOS é iniciar e probar o hardware do sistema e
+cargar un xestor de arranque ou un sistema operativo que estea nun dispositi-
+vo de almacenamento de datos.
+
+4.4 > UEFI (Unified Extensible Firmware Interface)
+
+É unha especificación que define a interface existente entre o sistema operati-
+vo e a plataforma firmware. Xurdiu para substituír á BIOS e dotala de novas
+características como soportar diagnose e reparacións remotas, incluso sen ter
+instalado o sistema operativo.
+
+Manexa bases de datos con información da plataforma, inicio e tempo de exe-
+cución dos servizos dispoñibles listos para cargar el sistema operativo. Destaca
+por:
+
+e ser capaz de emular a BIOS cando o sistema operativo só é compatible
+con ela.
+
+e posibilitar o arranque dende unidades de almacenamento superiores a 2
+TB mediante GPT.
+
+e ter unha arquitectura e controladores independentes da CPU.
+
+e ter unha contorna de traballo amigable.
+
+e ter un deseño modular.
+
+4.5> Bus
+
+O bus do sistema é o compoñente da placa base, formado por cables ou pistas
+nun circuíto impreso, que permite que a información poida circular da memoria
+cara os periféricos e viceversa, segundo as instrucións marcadas polo procesa-
+dor. Divídense en tres tipos:
+
++ Bus de control: goberna o uso e acceso ás liñas de datos e de enderezos
+debido a que están compartidas por tódolos compoñentes; desta forma
+minimizanse as colisións de información no sistema.
+
+e Bus de enderezos: é unha canle do microprocesador independente do bus
+de datos onde se establece o enderezo de memoria do dato en tránsito;
+a capacidade da memoria que se pode enderezar depende da cantidade
+de bits que conforman este bus, sendo 2" o tamaño máximo en bits do
+banco de memoria que se poderá enderezar con n liñas.
+
+e Bus de datos: por el viaxan os datos entre os diversos compoñentes
+hardware do equipo informático.
+
+A capacidade e o rendemento do bus do sistema veñen determinados por:
+
+e Ancho do bus: é o número de liñas en paralelo polas que se transmite in-
+formación. Poden ser de 8, 16, 32, 64 ou 128 bits. Na actualidade, trabá-
+llase con 64 bits.
+
+e Frecuencia do bus: é a frecuencia de reloxo coa que o bus traballa; non
+ten por que ser a mesma que a frecuencia da CPU, o que pode orixinar
+problemas no rendemento do equipo.
+
+e Velocidade de transmisión: son os megabytes de información que pode
+transmitir nun segundo.
+
+Conectores externos da
+placa base
+
+1PS2
+
+2 USB 2.0
+
+3 VGA
+
+4 DVI
+
+5 HDMI
+
+6 reinicio UEFI
+7USB 2.0
+
+8 Firewire
+
+9 SATA
+
+10 RJ45
+
+11 USB 3.0
+
+12 Son analóxico
+13 Son dixital
+
+Interface BIOS
+
+Interface UEFI
+===== PAXINA 19 =====
+PCI Express
+
+Tarxetas PCI Express
+
+O PCle arrancou no 2004, conver-
+téndose nun estándar que aínda
+non foi substituído, pero que foi
+mellorado.
+
+Aquí, os alicerces cambiaron: era
+unha conexión punto a punto, non
+un bus. Deste xeito, eliminábase a
+perda de rendemento causada por
+varios dispositivos que intentaban
+comunicarse co procesador simul-
+taneamente. Antes tiñamos ocos
+individuais que se agrupaban para
+conseguir un maior ancho de
+banda. Agora, nas placas base,
+vemos diferentes carrís: x1, x4, x8,
+x16. Co tempo, esta conexión
+evolucionou, ofrecendo maiores
+velocidades de transferencia:
+
+1.0: de 250 MB/s (x1) a 4 GB/s (x16)
+2.0: de 500 MB/s a 8 GB/s
+
+3.0: de 984.6 MB/s a 15.8 GB/s
+4.0: de 1969.2 MB/s a 31.5 GB/s
+
+Non hai que confundir PCl-e con
+PCH-x... esta última foi unha evolu-
+ción da PCI, que non se populari-
+zou porque se perdían velocidades
+de transmisión ó instalar máis dun
+dispositivo.
+
+Tódolos nodos que están conectados ó bus reciben os datos aínda que non se
+dirixan a eles; os nodos ós que non van dirixidos simplemente ignoran eses
+datos.
+
+4.6> Ocos de expansión
+
+Parte dos periféricos podémolos conectar a través de ocos de expansión
+(slots), que teñen un número determinado de contactos onde podemos inserir
+tarxetas que serven para ampliar a capacidade e o número de periféricos co-
+nectados ó ordenador. Cando falamos de slots ou ocos de expansión, referímo-
+nos á forma na que o bus se pode comunicar con outros dispositivos periféri-
+cos. Normalmente son de catro tipos:
+
+e ISA: xa non están dispoñibles na actualidade; servían para conectar dispo-
+sitivos de 8 e 16 bits.
+
+e PCl: baseado na comunicación paralela para conectar dispositivos de 32 e
+64 bits; só se topan en máquinas que precisan compoñentes obsoletos.
+
+e AGP: específicos de tarxetas gráficas... tamén obsoleta.
+
+e PCI Express: baseado na comunicación serie polo que alcanza un ancho de
+banda maior.
+
+Antigamente as placas incorporaban nos sete ocos de expansión máis de tipo
+ISA que de tipo PCI, pero isto foi cambiando de tal xeito que na actualidade non
+se monta ningunha de tipo ISA.
+
+Coa aparición dos conectores USB, a maioría dos periféricos conéctanse dende
+o exterior. Ademais, a maioría das placas base incorporan na actualidade direc-
+tamente tarxetas de rede, de son, gráficas... Así, os ocos só se utilizan para
+conectar dispositivos moi específicos; os dispositivos convencionais soen ser
+parte da placa.
+
+A vantaxe radica na despreocupación á hora de configuralos, xa que a propia
+ROM estará configurada para recoñecelos sen problema. O inconveniente é que
+ante a maioría dos fallos dalgún deles, toda a placa base quedará inutilizada.
+
+4.7 > Chipset
+
+O chipset ou xogo de circuítos integrados auxiliares é o conxunto de circuítos
+integrados que se encontra na placa base e que manexa o fluxo de datos entre
+O procesador, a memoria e os periféricos.
+
+Determina as características da placa base que son inalterables, o tamaño
+máximo de memoria que a placa é quen de enderezar, os tipos e velocidades
+dos buses, o número de procesadores que pode soportar... e o máis importan-
+te, a familia de microprocesadores que se poderá usar con esa placa.
+
+A maior parte destas funcións de control agrúpanse en dous circuítos integra-
+dos de gran tamaño, normalmente chamados ponte norte e ponte sur. As
+placas actuais xa non soen traer a ponte norte pois os microprocesadores de
+última xeración xa a levan integrada.
+
+A ponte norte controla o fluxo de datos que se transfire entre a CPU e a me-
+moria RAM e entran no porto AGP ou PCI Express; soe levar un disipador tér-
+mico debido ó quentamento que sufre a causa da grande cantidade de datos
+que a miúdo o atravesan. O bus que conecta a ponte norte co procesador chá-
+mase bus frontal (FSB). A velocidade do FSB limita o rendemento dun procesa-
+dor porque é a velocidade máxima á que pode ler información da RAM.
+
+A ponte sur encárgase da transferencia de datos que entran e saen do disco
+duro e de tódolos demais dispositivos de entrada/saída, e os transfire a través
+da canle de ligazón que está conectada á ponte norte.
+
+Que é o PCH?
+
+Actualmente, o Northbridge integrouse no procesador e pasou a chamarse
+PCH. O Southbridge, pola contra, aínda está presente nas placas base, pero
+
+===== PAXINA 20 =====
+agora chámase chipset. Aínda que ambos seguen existindo, os seus nomes
+cambiaron debido ás súas características tan diferentes.
+
+O Platform Controller Hub (PCH) introduciuse por primeira vez en 2009 como
+unha solución simplificada para o enrutamento de datos e as funcións de so-
+porte. Este elemento inclúe actualmente elementos como o reloxo do sistema,
+a Flexible Display Interface (FDI) e a Direct Media Interface (DMI). Cómpre sina-
+lar que a FDI só se usa cando o chipset debe admitir procesadores con gráficos
+integrados.
+
+A distribución actual da xestión dos diferentes elementos cambiou significati-
+vamente. O PCH encárgase principalmente da xestión das principais canles
+PCle (GPU + M.2 SSD) e da xestión da memoria. O chipset é responsable da
+xestión dos portos de E/S, algunhas canles PCle e outros aspectos especiais
+como a configuración RAID ou o overclocking.
+
+AMD ten un deseño equivalente, pero con algunhas diferenzas (recordade que
+esta arquitectura recibe o nome de Zen fronte á arquitectura Intel que recibe o
+nome Gen de xeneración). Debido ó seu deseño de procesador tipo chiplet, o
+PCH está situado dentro do paquete, pero separado dos núcleos. É un DIE es-
+pecífico, chamado 1/O Die que esencialmente fai o mesmo que o PCH de Intel.
+
+Nos procesadores AMD coa microarquitectura Zen teriamos:
+
+e Die de E/S ou clOD: é o responsable da comunicación entre o procesador
+e os compoñentes externos, concretamente a memoria e o bus PCI.
+
+e Infinity Fabric: é o bus que interconecta internamente os CCX entre si, os
+CCD entre si e co die de E/S. En realidade, forma parte do clOD.
+
+e Controlador de memoria unificado (Unified Memory Controller): é a
+responsable da comunicación coa RAM.
+
+e Hub de E/S: é o responsable da comunicación co bus PCle, os periféricos
+ou calquera outro bus que non sexa o utilizado para a comunicación da
+RAM.
+
+Noutras palabras, o die de E/S é o que antes era a ponte norte. E o bus frontal
+(FSB) sería o Infinity Fabric.
+
+É importante ter en conta que cada parte do chip de E/S funciona a unha fre-
+cuencia diferente:
+
+e fclk: frecuencia de Infinity Fabric
+e uclk: frecuencia de Unified Memory Controller
+e iclk: frecuencia de I/O Hub
+
+Finalmente, a RAM funcionará á frecuencia chamada mclk.
+Capacidades que proporciona
+
+Para funcionar, o procesador require instalación nunha placa base. Debe comu-
+nicarse con outros compoñentes de diferentes fabricantes, o que se fai a tra-
+vés do PCH e as súas diferentes capacidades.
+
+As características e capacidades do PCH están en consonancia coas capacida-
+des do procesador e, en consecuencia, co prezo final. Normalmente, as capaci-
+dades do PCH son directamente proporcionais ó número de núcleos do proce-
+sador. Así, os modelos de gama máis alta ofrecerán a maior cantidade de fun-
+cionalidades, e estas diminúen a medida que baixamos no rango do procesador.
+
+As capacidades do PCH adoitan variar segundo estes parámetros:
+
+e Capacidade de overclocking para o procesador e a RAM.
+
+e Número de carrís PCle directos. Normalmente, hai 16 carrís para a tarxeta
+gráfica e algúns ofrecen carrís adicionais para SSD M.2 PCle.
+
+e Número de interfaces SATA.
+
+e Número de portos USB directos no procesador.
+
+e Liñas de comunicación directa co chipset.
+
+Que problemas pode expe-
+rimentar o PCH dunha placa
+base?
+
+En xeral, os compoñentes con
+capacidades máis limitadas non
+deberían ter fallos extremada-
+mente graves, pero tamén poden
+causar erros críticos.
+
+Se falamos dun procesador, por
+exemplo, é común saber que as
+temperaturas poden afectar
+directamente o seu funcionamen-
+to.
+
+Este tipo de fallos tamén poden
+afectar a outras partes da placa
+base se a voltaxe non se axusta
+correctamente.
+
+Un erro de microcódigo pode
+incluso afectar ó chipset, que, se
+se sobrequenta, pode experimen-
+tar os mesmos fallos que unha
+CPU.
+
+Por isto, adoitan incorporar un
+disipador de calor pasivo, similar ó
+que vemos noutros chips que son
+susceptibles á calor.
+
+Por estas razóns, é moi importan-
+te ter unha configuración equili-
+brada en termos de potencia e
+refrixeración.
+
+Os problemas que poden causar
+as altas temperaturas nun PC
+poden ter un impacto significativo
+no seu rendemento.
