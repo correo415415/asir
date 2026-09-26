@@ -133,4 +133,139 @@ META = {
   'resumen': 'Herramientas para diagramas E-R: MySQL Workbench, Lucidchart, Visio; en el curso se usan DIA y draw.io/diagrams.net.',
   'claves': ['MySQL Workbench (sucesor de DBDesigner)', 'Lucidchart, Microsoft Visio', 'DIA (libre) y draw.io como alternativa web'],
   'tags': ['herramientas', 'DIA', 'draw.io', 'diagrams.net', 'MySQL Workbench', 'Lucidchart', 'Visio']},
+
+# ---------- 7 ----------
+'xbd-ud2-7': {
+  'resumen': 'El diseño lógico transforma el E-R en un esquema relacional (tablas, columnas, claves) según el modelo de Codd (1970).',
+  'claves': ['Codd, 1970: álgebra y cálculo relacional', 'Diseño lógico = fase intermedia entre conceptual y físico'],
+  'tags': ['diseño lógico', 'modelo relacional', 'Codd']},
+'xbd-ud2-7-1': {
+  'resumen': 'Origen (Codd, 1970) y objetivos del modelo relacional: simplicidad, independencia de los datos, consistencia y eliminación de redundancia.',
+  'claves': ['Simplicidad: tablas fáciles de entender', 'Independencia de los datos', 'Consistencia mediante normalización e integridad'],
+  'tags': ['Codd', '1970', 'objetivos', 'independencia de datos']},
+'xbd-ud2-7-2': {
+  'resumen': 'E-R (conceptual, abstracto, diagramas) frente a relacional (lógico, tablas y claves): cada entidad → tabla, cada relación → claves foráneas o tabla intermedia.',
+  'claves': ['E-R: fase conceptual, visual', 'Relacional: tablas, columnas y claves', 'La transformación preserva la estructura del conceptual'],
+  'tags': ['comparativa', 'E-R vs relacional', 'transformación']},
+'xbd-ud2-7-3': {
+  'resumen': 'Ventajas: uniformidad estructural, independencia física y lógica, integridad y consistencia, consultas complejas (álgebra relacional/SQL) y rigor teórico.',
+  'claves': ['Uniformidad estructural', 'Independencia física y lógica', 'Normalización e integridad', 'Consultas con álgebra relacional y SQL', 'Base matemática'],
+  'tags': ['ventajas', 'independencia física', 'independencia lógica', 'álgebra relacional', 'SQL']},
+
+# ---------- 8 ----------
+'xbd-ud2-8': {
+  'resumen': 'Elementos del modelo relacional: relaciones (tablas) con atributos (columnas), dominios y tuplas (filas).',
+  'claves': ['Relación = tabla', 'Atributo = columna con dominio', 'Tupla = fila única'],
+  'tags': ['modelo relacional', 'relación', 'tabla', 'tupla', 'dominio']},
+'xbd-ud2-8-1': {
+  'resumen': 'Una relación se representa como tabla: filas (tuplas) son instancias, columnas (atributos) características. Ejemplo: Clientes(ID_Cliente, Nombre, Apellido, Email).',
+  'claves': ['Filas = tuplas = registros', 'Columnas = atributos'],
+  'tags': ['relación', 'tabla', 'filas', 'columnas']},
+'xbd-ud2-8-2': {
+  'resumen': 'Atributos atómicos con tipo de dato claro; el dominio define tipo y rango permitido (INT, VARCHAR(50)…).',
+  'claves': ['Atributo atómico', 'Dominio = tipo + rango de valores', 'Ejemplo: ID_Cliente INT, Email VARCHAR(50)'],
+  'tags': ['atributo', 'dominio', 'tipo de dato', 'atómico']},
+'xbd-ud2-8-3': {
+  'resumen': 'Tupla: cada fila, única, cumpliendo la integridad. Estructura bidimensional: cada dato tiene una posición exacta (fila × columna).',
+  'claves': ['Tupla única', 'Ejemplo: (1, Ana, García, ana@mail.com)', 'Intersección fila–columna'],
+  'tags': ['tupla', 'fila', 'estructura bidimensional']},
+
+# ---------- 9 ----------
+'xbd-ud2-9': {
+  'resumen': 'Claves (primaria, candidata, alternativa, foránea), valores nulos y reglas de integridad de entidad y referencial.',
+  'claves': ['Las claves identifican y relacionan registros', 'La integridad garantiza coherencia'],
+  'tags': ['claves', 'integridad', 'diseño lógico']},
+'xbd-ud2-9-1': {
+  'resumen': 'Primaria (única, no nula), candidata (podría ser primaria), alternativa (candidata no elegida) y foránea (referencia a la primaria de otra tabla).',
+  'claves': ['Primaria: ID_Cliente', 'Candidatas: Número_Bastidor y Matrícula', 'Alternativa: Matrícula si se elige Bastidor', 'Foránea: Pedidos.ID_Cliente → Clientes.ID_Cliente'],
+  'tags': ['clave primaria', 'clave candidata', 'clave alternativa', 'clave foránea', 'primary key', 'foreign key']},
+'xbd-ud2-9-2': {
+  'resumen': 'NULL = valor desconocido o no aplicable (≠ 0 ≠ cadena vacía). La PK nunca admite nulos; una FK sí si la relación es opcional.',
+  'claves': ['NULL no es cero ni vacío', 'PK NOT NULL', 'FK opcional puede ser NULL (ID_Jefe)'],
+  'tags': ['NULL', 'valores nulos', 'opcional']},
+'xbd-ud2-9-3': {
+  'resumen': 'Integridad de entidad (PK única y no nula) e integridad referencial (toda FK apunta a una PK existente). Opciones: cascada, restringir.',
+  'claves': ['Entidad: PK sin nulos ni duplicados', 'Referencial: sin referencias huérfanas', 'Eliminar/actualizar en cascada', 'Restringir o denegar'],
+  'tags': ['integridad de entidad', 'integridad referencial', 'cascada', 'restringir', 'huérfanas']},
+
+# ---------- 10 ----------
+'xbd-ud2-10': {
+  'resumen': 'Grafo relacional: tablas en mayúsculas con atributos entre paréntesis; PK subrayada, alternativas en negrita, FK en cursiva con flecha; opciones B:C/R/N/D y M:C/R/N/D.',
+  'claves': ['TABLA(atributos)', 'PK subrayada · alternativa negrita · FK cursiva + flecha · nulos con *', 'B:C cascada · B:R restringido · B:N nulos · B:D defecto', 'M:C · M:R · M:N · M:D'],
+  'tags': ['grafo relacional', 'notación', 'B:C', 'B:R', 'M:C', 'borrado en cascada', 'modificación']},
+
+# ---------- 11 ----------
+'xbd-ud2-11': {
+  'resumen': 'Reglas para pasar del E-R al relacional: entidades → tablas, atributos → columnas, relaciones según cardinalidad, débiles y especializaciones.',
+  'claves': ['Entidad → tabla', 'Relación → FK o tabla intermedia', 'Se preservan las restricciones'],
+  'tags': ['transformación', 'paso a tablas', 'E-R a relacional']},
+'xbd-ud2-11-1': {
+  'resumen': 'Cada entidad → tabla con sus atributos como columnas y la misma PK. Compuestos se descomponen; multivaluados → tabla aparte (TELEFONO(DNI, teléfono)).',
+  'claves': ['CLIENTE(DNI, nombre, apellidos, calle, código_postal, ciudad)', 'Multivaluado → TELEFONO(DNI, teléfono)'],
+  'tags': ['entidad a tabla', 'atributo compuesto', 'atributo multivaluado']},
+'xbd-ud2-11-2': {
+  'resumen': '1:1 → FK en una tabla (o fusionar); 1:N → FK en el lado N (NOT NULL si obligatoria); N:M → tabla intermedia con ambas FK.',
+  'claves': ['1:1: FK en cualquiera o una sola tabla', '1:N: FK en el lado muchos', 'Obligatoria → NOT NULL · opcional → NULL', 'N:M: tabla Estudiante_Curso(ID_Estudiante, ID_Curso)'],
+  'tags': ['1:1', '1:N', 'N:M', 'tabla intermedia', 'participación obligatoria', 'participación opcional']},
+'xbd-ud2-11-3': {
+  'resumen': 'Entidad débil → tabla con PK compuesta (clave de la fuerte + clave parcial). Relación con atributos propios → tabla intermedia con esos atributos.',
+  'claves': ['Habitación: PK (ID_Hotel, Número_Habitación)', 'Empleado_Proyecto(ID_Empleado, ID_Proyecto, Fecha_Asignación)'],
+  'tags': ['entidad débil', 'clave compuesta', 'atributos de la relación']},
+'xbd-ud2-11-4': {
+  'resumen': 'Las cuatro combinaciones de especialización traducidas a tablas con ejemplos de datos: total/parcial × exclusiva/solapada.',
+  'claves': ['Total + exclusiva: tabla por subtipo, o supertipo con campo Tipo + subtablas', 'Parcial + exclusiva: supertipo + subtablas (Vehículo)', 'Total + solapada: supertipo + subtablas, un registro en varias (Material)', 'Parcial + solapada: Persona / Estudiante / Profesor'],
+  'tags': ['especialización', 'herencia total', 'herencia parcial', 'exclusión', 'solapamiento', 'subtablas']},
+
+# ---------- 12 ----------
+'xbd-ud2-12': {
+  'resumen': 'Normalización: organizar las tablas para minimizar redundancias aplicando formas normales sucesivas. Base: la dependencia funcional (A → B).',
+  'claves': ['Dependencia funcional: cada valor de A determina un único B', 'Formas normales: 1FN, 2FN, 3FN, BCNF, 4FN, 5FN'],
+  'tags': ['normalización', 'dependencia funcional', 'formas normales']},
+'xbd-ud2-12-1': {
+  'resumen': '1FN: valores atómicos (sin listas) y un solo tipo por columna. Se descomponen las celdas con varios valores en filas.',
+  'claves': ['Sin listas ni conjuntos en una celda', 'Pedidos.productos "P1, P2" → dos filas'],
+  'tags': ['1FN', 'primera forma normal', 'atómico']},
+'xbd-ud2-12-2': {
+  'resumen': '2FN: 1FN + sin dependencias parciales (todo atributo no clave depende de la clave completa). Se separan tablas.',
+  'claves': ['Solo aplica con PK compuesta', 'nombre_Cliente depende solo de ID_Pedido → Pedidos + Pedido_Detalle'],
+  'tags': ['2FN', 'segunda forma normal', 'dependencia parcial']},
+'xbd-ud2-12-3': {
+  'resumen': '3FN: 2FN + sin dependencias transitivas (ningún atributo no clave depende de otro no clave).',
+  'claves': ['ID_Departamento → Nombre_Departamento → Nombre_Jefe es transitiva', 'Empleados + Departamentos'],
+  'tags': ['3FN', 'tercera forma normal', 'dependencia transitiva']},
+'xbd-ud2-12-4': {
+  'resumen': 'BCNF: 3FN + todo determinante es clave candidata. Ejemplo Profesor–Curso–Aula dividido en Profesores_Curso y Curso_Aula.',
+  'claves': ['El determinante debe ser clave candidata', 'Curso → Aula pero Curso no es clave'],
+  'tags': ['BCNF', 'Boyce-Codd', 'determinante']},
+'xbd-ud2-12-5': {
+  'resumen': '4FN: BCNF + sin dependencias multivaluadas independientes (alumno–cursos y alumno–actividades en tablas distintas).',
+  'claves': ['Dependencia multivaluada: varios valores independientes entre sí', 'Alumnos_Cursos + Alumnos_Actividades'],
+  'tags': ['4FN', 'cuarta forma normal', 'dependencia multivaluada']},
+'xbd-ud2-12-6': {
+  'resumen': '5FN (proyección-join): 4FN + sin dependencias de join; la tabla se reconstruye sin pérdida a partir de proyecciones.',
+  'claves': ['Alumno–Curso–Profesor → tres tablas de pares', 'Sin dependencias de join'],
+  'tags': ['5FN', 'quinta forma normal', 'dependencia de join', 'proyección']},
+'xbd-ud2-12-ej': {
+  'titulo': 'Ejemplo completo de normalización hasta BCNF',
+  'resumen': 'Tabla de pedidos no normalizada → 1FN → 2FN (Pedidos, Clientes, Detalle_Pedidos) → 3FN → BCNF, paso a paso.',
+  'claves': ['Problemas: valores repetidos, grupos repetidos, datos no atómicos', '2FN: dividir en Pedidos, Clientes y Detalle_Pedidos', '3FN y BCNF ya se cumplen tras la división'],
+  'tags': ['ejemplo', 'normalización', 'pedidos', 'clientes', 'BCNF']},
+
+# ---------- 13 ----------
+'xbd-ud2-13': {
+  'resumen': "Notaciones profesionales para el esquema final: Crow's Foot (pata de cuervo, la más usada en herramientas) y UML (diagramas de clases).",
+  'claves': ["Chen: didáctica, no la usan las herramientas", "Crow's Foot: compacta, cardinalidades claras (1, N, 1..N)", 'UML: clases con relaciones, usado en desarrollo OO'],
+  'tags': ["Crow's Foot", 'pata de cuervo', 'UML', 'notación', 'Chen']},
+
+# ---------- glosario / recursos ----------
+'xbd-ud2-glosario': {
+  'titulo': 'Glosario UD2',
+  'resumen': 'Definiciones breves: entidad, atributo, clave primaria y foránea, cardinalidad, generalización, especialización, entidad débil, dependencia funcional, normalización, integridad referencial, grafo relacional, álgebra relacional.',
+  'claves': ['Entidad, atributo, relación', 'Clave primaria y foránea', 'Cardinalidad', 'Entidad débil y fuerte', 'Dependencia funcional', 'Normalización', 'Integridad referencial', 'Grafo relacional', 'Álgebra relacional'],
+  'tags': ['glosario', 'definiciones', 'vocabulario']},
+'xbd-ud2-recursos': {
+  'titulo': 'Bibliografía y recursos UD2',
+  'resumen': 'Libros (Mora Rioja, Marqués, Camps Paré), apuntes ISPC, artículos y documentales sobre bases de datos y big data.',
+  'claves': ['Bases de datos: Diseño y Gestión (Síntesis)', 'Bases de Datos, Mercedes Marqués (CC)', 'Introducción a las Bases de Datos, UOC (CC)'],
+  'tags': ['bibliografía', 'recursos', 'libros', 'documentales']},
 }
