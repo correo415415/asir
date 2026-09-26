@@ -530,3 +530,44 @@ window.APUNTES.unidades.push({
 <figure><img src="apuntes/fh/img/ud1/deep-learning.png" alt="Rede neuronal profunda con varias capas ocultas" loading="lazy"><figcaption><strong>Deep learning.</strong> A aprendizaxe profunda ou redes neuronais profundas (DNN) é a última estratexia de recoñecemento para resolver desafíos complexos da IA, como o recoñecemento da fala ou o recoñecemento visual.</figcaption></figure>
 <div class="box tip"><div class="box-title">Por que usar IA nos procesadores?</div><p>Para realizar tarefas complexas como o recoñecemento facial, a realidade aumentada ou mellorar as fotos —tarefas moi frecuentes e demandadas polos usuarios— usar <strong>motores neuronais</strong> nos chips fará que moitos procesadores usen a IA dun modo máis eficiente en vez de utilizar a forza bruta coa CPU ou GPU.</p></div>`
   },
+  {
+    id: 'fh-ud1-9-3',
+    tipo: 'subtema',
+    titulo: '9.3 As redes neuronais',
+    resumen: 'Os sistemas neuromórficos replican o cerebro nun chip: ademais de decidir, almacenan información e deducen. Identifican patróns visuais ou auditivos e axustan as súas predicións co tempo.',
+    claves: ['Obxectivo: replicar o funcionamento do cerebro humano', 'A IA tradicional predí ben o cuantificable pero falla máis aló', 'Cerebro nun chip: copia literalmente a forma dun cerebro', 'Almacena información e deduce por si mesmo', 'Axusta predicións segundo aprende', 'ANN: nodos (neuronas artificiais) e conexións (frechas)'],
+    tags: ['redes neuronais', 'neuromórfica', 'ANN', 'rede neuronal artificial', 'cerebro nun chip', 'patróns'],
+    contenido: `
+<p>Os <strong>sistemas neuromórficos</strong> teñen como obxectivo replicar o funcionamento do cerebro humano. Están deseñados para recibir imaxes e sons dunha forma da que a IA nunca antes dispuña. As plataformas tradicionais de IA e aprendizaxe automática son brillantes ó facer predicións sólidas sobre problemas cuantificables ou expresables mediante números, pero fallan cando o desafío necesita ir máis aló.</p>
+<p>A informática neuromórfica baséase no concepto dun <strong>cerebro nun chip</strong>. Mentres que a aprendizaxe automática e as teorías máis complexas, como a aprendizaxe profunda, baséanse nas decisións de alcance, a tecnoloxía neuromórfica intenta copiar literalmente a forma dun cerebro humano. Isto fai que, ademais de tomar decisións, poida <strong>almacenar información</strong> e <strong>deducir</strong> cousas por si mesma. Un sistema neuromórfico pode identificar patróns en datos visuais ou auditivos e ir axustando as súas predicións en función do que vai aprendendo co tempo.</p>
+<figure class="small"><img src="apuntes/fh/img/ud1/ann.png" alt="Rede neuronal artificial: capa de entrada, capa oculta e capa de saída" loading="lazy"><figcaption><strong>ANN · Artificial Neural Network.</strong> Unha rede neuronal artificial é un grupo interconectado de nodos, inspirado nunha simplificación das neuronas dun cerebro. Cada nodo circular representa unha neurona artificial e unha frecha representa unha conexión dende a saída dunha neurona artificial ata a entrada doutra.</figcaption></figure>`
+  },
+  {
+    id: 'fh-ud1-9-4',
+    tipo: 'subtema',
+    titulo: '9.4 Como pode a computación neuromórfica transformar a IA?',
+    resumen: 'A IA actual depende da nube, de volumes masivos de datos e da latencia (IoT, Alexa, Google Home). Un chip neuromórfico usa menos enerxía: millóns de neuronas que pasan información en calquera dirección (redes neuronais de impulsos, SNN) e aprenden por retroalimentación.',
+    claves: ['IA actual: computación na nube, datos masivos, velocidade e latencia', 'IoT (Alexa, Google Home) esixe resposta instantánea', 'Os smartphones non teñen potencia para algoritmos cerebrais complexos (esgotarían a batería)', 'Chip neuromórfico: millóns de neuronas que pasan información en calquera dirección', 'SNN (Spiking Neural Networks): redes neuronais de impulsos', 'As neuronas actívanse só cando ocorre un evento; aprendizaxe por retroalimentación'],
+    tags: ['neuromórfica', 'IoT', 'nube', 'latencia', 'SNN', 'spiking neural networks', 'retroalimentación', 'Alexa', 'Google Home'],
+    contenido: `
+<p>Calquera aplicación de IA exitosa baséase na <strong>computación na nube</strong>, en volumes masivos de datos dos que obter patróns, velocidade e latencia. Os dispositivos de <strong>Internet das cousas (IoT)</strong> son probablemente o mellor exemplo: os usuarios de Alexa de Amazon ou de Google Home esperan que calquera resposta ás súas peticións sexa atendida ó instante. Para conseguilo, as redes entre o lugar no que se xera o comando de voz e os datos teñen que ser extremadamente potentes e eficientes.</p>
+<p>Aínda que os teléfonos intelixentes asumiron algúns aspectos da IA, non teñen a potencia de cómputo necesaria para algoritmos cerebrais máis complexos e, se a tiveran, esgotarían as baterías.</p>
+<p>Un <strong>chip neuromórfico</strong> utiliza menos enerxía e mellora o rendemento en comparación cun chip convencional debido a como foi deseñado. En lugar de pasar información dun transistor ó seguinte, unha rede neuromórfica consiste en <strong>millóns de neuronas que poden pasar a información en calquera dirección</strong>, tal como se faría bioloxicamente nun cerebro. Isto recibe o nome de <strong>rede neuronal de impulsos</strong> (SNN).</p>
+<figure><img src="apuntes/fh/img/ud1/snn.png" alt="Spiking Neural Network: entrada, impulsos, excitación e inhibición (rede WTA)" loading="lazy"><figcaption><strong>SNN · Spiking Neural Networks.</strong> Cómpre unha porcentaxe menor de neuronas para transmitir a información, se o comparamos cos transistores dunha arquitectura convencional, o que posibilita que outras neuronas que non están na rede poidan aprender sobre a marcha.</figcaption></figure>
+<p>Ademais, os procesadores actuais necesitan unha <strong>propagación inversa</strong>, xa que as neuronas só se activan cando ocorre un evento. Nos sistemas convencionais os resultados non se retroalimentan para facer un axuste fino; a aprendizaxe por parte dos cerebros é xeralmente un proceso de <strong>retroalimentación</strong> e, por tanto, os chips neuromórficos son máis eficientes neste contexto.</p>`
+  },
+  {
+    id: 'fh-ud1-9-5',
+    tipo: 'subtema',
+    titulo: '9.5 Que nos espera no futuro?',
+    resumen: 'Chips neuromórficos nos smartphones a partir de 2025 e impulso da IoT: vehículos autónomos que perciben a contorna, móbiles que anticipan intencións e robots autónomos de baixo consumo.',
+    claves: ['Chips neuromórficos en smartphones dende 2025', 'Transporte e fabricación: vehículos autónomos que detectan o seu contorno', 'Móbiles que vixían o que fai o usuario e se anticipan (se a seguridade dos datos o permite)', 'Robótica: robots que navegan e pensan por si mesmos sen gran consumo'],
+    tags: ['futuro', 'vehículos autónomos', 'robótica', 'IoT', 'smartphones', '2025'],
+    contenido: `
+<p>Os expertos cren que os chips neuromórficos poderían integrarse nos teléfonos intelixentes a partir de 2025 e impulsar o crecemento da IoT. Como os dispositivos poderán percibir a contorna ó seu arredor para deducir decisións, na próxima década comezaremos a ver:</p>
+<ul>
+  <li><strong>Desenvolvemento máis rápido no transporte e na fabricación.</strong> Os vehículos autónomos levan moitos anos en dificultades, en gran parte pola súa incapacidade para detectar o seu contorno. É probable que os chips neuromórficos leven isto ó seguinte nivel, impulsando a comercialización da tecnoloxía.</li>
+  <li><strong>Teléfonos que se anticipan.</strong> Poderán vixiar continuamente o que fai o usuario (se a seguridade dos datos o permite) e incluso axudarlle antes de facer preguntas, baseándose no que percibiron. O dispositivo podería comezar a comprender as intencións do mesmo xeito que o fai o cerebro.</li>
+  <li><strong>Robótica.</strong> Crecerá rapidamente a medida que os robots sexan máis capaces de responder a comandos baseados no seu contorno. Se un robot pode navegar de forma independente e pensar por si mesmo sen consumir grandes cantidades de enerxía, o mundo comezará a cambiar rapidamente.</li>
+</ul>`
+  },
