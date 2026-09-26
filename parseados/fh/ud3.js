@@ -1617,3 +1617,78 @@ window.APUNTES.unidades.push({
 </ul>
 `
   },
+
+  /* ---------------- GLOSARIO ---------------- */
+  {
+    id: 'fh-ud3-glosario',
+    tipo: 'glosario',
+    titulo: 'Glosario UD3',
+    resumen: 'Termos clave: chasis, baía, ATX/SFX/TFX, 80 PLUS, 12VHPWR, BIOS/UEFI, chipset, zócolo LGA/PGA, TDP, hyperthreading, DDR, latencia CAS, Dual Channel, ECC, SATA/NVMe/M.2, MBR/GPT, TBW, UDF, MAC/OUI, PC99…',
+    claves: ['Carcasa · fonte · placa base', 'Procesador · refrixeración', 'Memoria · almacenamento', 'Tarxetas · orzamento'],
+    tags: ['glosario', 'definicións', 'vocabulario'],
+    links: ['fh-ud3'],
+    contenido: `
+<dl>
+<dt>Chasis</dt><dd>Estrutura metálica interna da carcasa onde se fixan placa base, fonte e unidades.</dd>
+<dt>Baía</dt><dd>Espazo da carcasa para unidades: 5,25" (ópticas) e 3,5"/2,5" (discos).</dd>
+<dt>ATX / micro-ATX / mini-ITX</dt><dd>Factores de forma de placa base (e de fonte ATX): tamaño, posición de ancoraxes e conectores.</dd>
+<dt>SFX / TFX / Flex ATX</dt><dd>Factores de forma de fontes compactas para carcasas pequenas.</dd>
+<dt>80 PLUS</dt><dd>Certificación de eficiencia de fontes (≥ 80 % ao 20/50/100 % de carga): Standard, Bronze, Silver, Gold, Platinum, Titanium.</dd>
+<dt>12VHPWR</dt><dd>Conector de 16 pins (12+4) para gráficas PCIe 5.0, ata 600 W; sensible a dobrar o cable.</dd>
+<dt>Fonte modular</dt><dd>Fonte cuxos cables se conectan só se se necesitan (semimodular: os principais fixos).</dd>
+<dt>BIOS</dt><dd>Firmware de arranque en memoria flash; configuración gardada en CMOS con pila.</dd>
+<dt>UEFI</dt><dd>Sucesor da BIOS: interface gráfica, arranque desde discos GPT &gt; 2 TB, Secure Boot.</dd>
+<dt>Chipset</dt><dd>Conxunto de chips (ponte norte/sur ou PCH) que comunica CPU, memoria e periféricos.</dd>
+<dt>Bus</dt><dd>Camiño de comunicación de datos, enderezos e control entre compoñentes.</dd>
+<dt>PCIe</dt><dd>Bus serie de expansión por carrís (×1, ×4, ×16); duplica velocidade cada xeración.</dd>
+<dt>Zócolo LGA / PGA</dt><dd>LGA: pins na placa (Intel). PGA: pins no procesador (AMD AM4). AM5 xa é LGA.</dd>
+<dt>Núcleo / fío</dt><dd>Núcleo: unidade de proceso física. Fío (thread): secuencia de execución; Hyperthreading/SMT dá 2 fíos por núcleo.</dd>
+<dt>Caché L1/L2/L3</dt><dd>Memoria SRAM moi rápida dentro do procesador, por niveis de tamaño e velocidade.</dd>
+<dt>Overclocking</dt><dd>Subir frecuencia/tensión por encima do nominal; máis rendemento, calor e risco.</dd>
+<dt>TDP</dt><dd>Thermal Design Power: calor máxima a disipar (W); serve para elixir o refrixerador.</dd>
+<dt>CCX / CCD / Infinity Fabric</dt><dd>Bloques de núcleos de AMD Zen e o bus que os interconecta (á frecuencia da RAM).</dd>
+<dt>Lei de Amdahl</dt><dd>A aceleración por máis núcleos limítaa a parte non paralelizable do programa.</dd>
+<dt>RISC / CISC</dt><dd>Xogos de instrucións reducido (ARM) / complexo (x86).</dd>
+<dt>big.LITTLE</dt><dd>Núcleos potentes + eficientes no mesmo chip (ARM; Intel P/E-core).</dd>
+<dt>Disipador / refrixerador</dt><dd>Aletas metálicas que ceden calor ao aire; con ventilador forma o refrixerador.</dd>
+<dt>Pasta térmica / thermal pad</dt><dd>Material condutor entre chip e disipador para encher as irregularidades microscópicas.</dd>
+<dt>Watercooling</dt><dd>Refrixeración líquida: bloque, bomba, tubos, radiador, ventiladores, depósito.</dd>
+<dt>Peltier</dt><dd>Célula termoeléctrica: unha cara arrefría e a outra quenta ao pasar corrente.</dd>
+<dt>DRAM / SRAM</dt><dd>RAM dinámica (precisa refresco, barata) / estática (sen refresco, cara, caché).</dd>
+<dt>SDRAM / DDR</dt><dd>RAM síncrona co reloxo / Double Data Rate: 2 transferencias por ciclo.</dd>
+<dt>Frecuencia efectiva</dt><dd>Transferencias por segundo (MT/s) anunciadas; 2× a frecuencia real en DDR.</dd>
+<dt>DIMM / SO-DIMM</dt><dd>Módulo de RAM de sobremesa / de portátil (máis pequeno).</dd>
+<dt>SPD</dt><dd>Chip do módulo que informa á placa de tamaño, tempos e tipo de memoria.</dd>
+<dt>Latencia CAS (CL)</dt><dd>Ciclos entre a petición de datos e o inicio da transmisión.</dd>
+<dt>Dual Channel</dt><dd>Acceso simultáneo a dous módulos iguais → dobre ancho de banda.</dd>
+<dt>ECC / rexistrada</dt><dd>Memoria que corrixe erros / con chip intermedio para máis capacidade (servidores).</dd>
+<dt>ROM / flash</dt><dd>Memoria non volátil de só lectura / regravable eléctricamente (BIOS, USB, SSD).</dd>
+<dt>PATA / IDE</dt><dd>Interface paralela de discos en desuso: cinta de 40 fíos, mestre/escravo.</dd>
+<dt>SCSI / SAS</dt><dd>Interface de ata 7 periféricos (paralela) / sucesora serie compatible con SATA.</dd>
+<dt>SATA</dt><dd>Interface serie de discos: 7 fíos, punto a punto, 1 m, hot-plug, 550 MB/s (III).</dd>
+<dt>M.2</dt><dd>Factor de forma de SSD (2280 = 22×80 mm); pode ser SATA ou PCIe/NVMe.</dd>
+<dt>NVMe</dt><dd>Protocolo para SSD sobre PCIe pensado para a memoria flash.</dd>
+<dt>CHS / LBA</dt><dd>Enderezamento por cilindro-cabeza-sector / por número de bloque lóxico (actual).</dd>
+<dt>Pista / cilindro / sector</dt><dd>Circunferencia dunha cara / pistas aliñadas verticalmente / porción angular.</dd>
+<dt>MBR / GPT</dt><dd>Primeiro sector con arranque + táboa de particións / táboa de particións GUID para UEFI.</dd>
+<dt>TBW / DWPD</dt><dd>Terabytes escribibles na vida do SSD / escrituras completas por día.</dd>
+<dt>Memristor</dt><dd>Resistencia con memoria, "cuarto elemento pasivo"; futuro do almacenamento.</dd>
+<dt>UDF / ISO 9660</dt><dd>Sistema de ficheiros dos DVD / dos CD de datos.</dd>
+<dt>DVD-5/9/10/14/18</dt><dd>4,7 / 8,5 / 9,4 / 13,3 / 17,1 GB segundo lados e capas.</dd>
+<dt>Ocos e chairas</dt><dd>Marcas do CD; cada transición é un 1 e a lonxitude indica os 0.</dd>
+<dt>Streamer</dt><dd>Unidade de cinta magnética para backup e proceso secuencial.</dd>
+<dt>Magnetóptico (MO)</dt><dd>Grava magneticamente con láser (cambio de fase) e le opticamente; MiniDisc.</dd>
+<dt>USB</dt><dd>Universal Serial Bus: 1.0 (1,5 Mb/s), 1.1 (12), 2.0 (480), 3.0 (4,8 Gb/s), 3.1 (10). USB-C: reversible.</dd>
+<dt>FireWire (IEEE 1394)</dt><dd>Bus serie para vídeo/cámaras, ata 63 dispositivos; substituído por USB/Thunderbolt.</dd>
+<dt>Thunderbolt</dt><dd>Interface Intel/Apple de 10–40 Gb/s; v1/2 Mini DisplayPort, v3/4 USB-C.</dd>
+<dt>PC99</dt><dd>Estándar de cores dos conectores de son: rosa micro, azul line-in, verde saída, negro traseiros, laranxa SPDIF.</dd>
+<dt>GPU</dt><dd>Procesador gráfico; frecuencias base/game/boost; arquitecturas Nvidia (Ampere, Ada…).</dd>
+<dt>VGA / DVI / HDMI / DisplayPort</dt><dd>Analóxico 15 pins / dixital sen son / dixital con son (TV) / dixital con son e enerxía (PC).</dd>
+<dt>NIC</dt><dd>Network Interface Card: tarxeta de rede, con fíos (RJ-45) ou sen fíos (802.11).</dd>
+<dt>MAC / OUI</dt><dd>Enderezo físico de 48 bits / os 24 primeiros bits que identifican o fabricante.</dd>
+<dt>Orzamento</dt><dd>Estimación de custo de hardware e software: inventariar, decidir, comprobar requisitos, buscar prezo.</dd>
+</dl>
+`
+  }
+  ]
+});
