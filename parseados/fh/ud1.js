@@ -245,3 +245,63 @@ window.APUNTES.unidades.push({
 <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
 <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr></table></div>`
   },
+
+  /* ---------------- 5 ---------------- */
+  {
+    id: 'fh-ud1-5',
+    tipo: 'tema',
+    titulo: '5. Sistemas informáticos',
+    resumen: 'Programa → aplicación → software; compoñentes físicos → hardware. Sistema informático = hardware + software para satisfacer as necesidades do usuario. Persoal informático e firmware.',
+    claves: ['Programa: conxunto de ordes/instrucións para un proceso', 'Aplicación informática: conxunto de programas (nóminas, préstamos, contabilidade…)', 'Software: instrucións, programas e aplicacións · base (sistema operativo) e de aplicación', 'Hardware: compoñentes físicos', 'Sistema informático = hardware + software para satisfacer necesidades do usuario', 'Persoal informático: quen usa, desenvolve ou mantén', 'Firmware: software gravado nos compoñentes hardware'],
+    tags: ['sistema informático', 'programa', 'aplicación', 'software', 'hardware', 'firmware', 'sistema operativo', 'persoal informático'],
+    links: ['fh-ud1-5-1'],
+    contenido: `
+<p>O conxunto de ordes ou instrucións que se introducen nun ordenador para realizar un proceso determinado denomínase <strong>programa</strong>. O conxunto de varios programas denomínase <strong>aplicación informática</strong>. Unha aplicación informática podería ser, por exemplo, un programa bancario, que consta de varios programas, cada un cunha finalidade concreta: nóminas, préstamos, contabilidade...</p>
+<p>O conxunto de instrucións, programas e aplicacións informáticas quedan definidos baixo o termo de <strong>software</strong>. Para que estes programas funcionen e poidan xerar a información que o usuario precisa, necesítanse determinados compoñentes físicos, agrupados baixo a denominación de <strong>hardware</strong>.</p>
+<div class="box def"><div class="box-title">Sistema informático</div><p>Hardware e software necesario para satisfacer determinadas necesidades do usuario.</p></div>
+<p>As persoas que utilizan, desenvolven ou manteñen o hardware e o software reciben o nome de <strong>persoal informático</strong>.</p>
+<div class="fig-row">
+<figure><img src="apuntes/fh/img/ud1/hardware.png" alt="Compoñentes hardware dun PC" loading="lazy"><figcaption><strong>Hardware.</strong> Compoñentes físicos, como por exemplo monitor, teclado, microprocesador, memoria...</figcaption></figure>
+<figure><img src="apuntes/fh/img/ud1/firmware.png" alt="Firmware entre software e hardware" loading="lazy"><figcaption><strong>Firmware.</strong> Parte intanxible dos compoñentes hardware: o software co que se programan e configuran os dispositivos. Cando se grava nun compoñente hardware queda practicamente invariable ó longo da vida deste.</figcaption></figure>
+</div>
+<div class="box info"><div class="box-title">Software</div><p>É a parte intanxible (programas e aplicacións). Pódese dividir en:</p>
+<ul><li><strong>Software base:</strong> parte do software sen a cal o computador non pode funcionar. Tamén se denomina <strong>sistema operativo</strong>.</li>
+<li><strong>Software de aplicación:</strong> parte do software que serve para procesar a información.</li></ul></div>`
+  },
+  {
+    id: 'fh-ud1-5-1',
+    tipo: 'subtema',
+    titulo: '5.1 Programa',
+    resumen: 'Un programa é un conxunto de instrucións almacenadas secuencialmente en enderezos sucesivos de memoria que se executan unha tras outra. O ordenador extrae instrucións e operandos da memoria, interprétaos e calcula o resultado.',
+    claves: ['A función principal do ordenador é executar programas', 'Instrucións en posicións sucesivas de memoria, executadas unha tras outra', 'Ciclo: extraer instrución → interpretar → extraer operandos → operar → resultado'],
+    tags: ['programa', 'instrución', 'operando', 'memoria principal', 'execución'],
+    contenido: `
+<p>A función principal dun ordenador é <strong>executar programas</strong>, polo que todo o esquema da arquitectura vai encamiñado a iso, co gallo de coñecer o seu funcionamento básico e como interaccionan os distintos bloques entre si.</p>
+<div class="box def"><div class="box-title">Programa</div><p>Un programa é un conxunto de <strong>instrucións</strong> que son almacenadas secuencialmente en posicións ou enderezos sucesivos de memoria e que serán executadas unha tras outra.</p></div>
+<p>O funcionamento do ordenador consistirá en extraer instrucións da memoria principal, interpretalas, extraer de memoria os datos empregados na operación (chamados <strong>operandos</strong>), envialos á unidade que realiza as operacións e calcular o resultado.</p>`
+  },
+
+  /* ---------------- 6 ---------------- */
+  {
+    id: 'fh-ud1-6',
+    tipo: 'tema',
+    titulo: '6. Bloques funcionais dun sistema microinformático',
+    resumen: 'Arquitectura de von Neumann (1946): programa almacenado e catro bloques —unidade de control, unidade aritmético-lóxica, memoria e entrada/saída— conectados por buses. Máquinas de propósito xeral.',
+    claves: ['John von Neumann, 1946: ordenador con programa almacenado (antes: programas cableados)', 'Unidade de control (UC): le instrucións e xera sinais de control; contador de programa', 'Unidade aritmético-lóxica (ALU): sumas, restas, AND, OR, NOT; rexistros temporais', 'Memoria: celas de igual tamaño identificadas por enderezo; puntos de memoria (bits 0/1); datos e instrucións', 'Entrada/saída: memorias auxiliares e periféricos', 'Buses: camiños polos que circulan instrucións e datos', 'Instrucións máquina · propósito xeral'],
+    tags: ['von Neumann', 'unidade de control', 'ALU', 'unidade aritmético lóxica', 'memoria', 'entrada/saída', 'buses', 'contador de programa', 'programa almacenado', 'CPU'],
+    contenido: `
+<p>O modelo básico de arquitectura empregada nos ordenadores foi establecido en <strong>1946</strong> por <strong>John von Neumann</strong>. O seu aporte máis significativo foi construír un ordenador con <strong>programa almacenado</strong>, xa que os existentes ata entón traballaban con programas cableados que se introducían establecendo manualmente as conexións.</p>
+<figure><img src="apuntes/fh/img/ud1/estrutura-von-neumann.png" alt="Estrutura funcional dun ordenador: dispositivos de entrada → Unidade de Proceso Central (unidade de control, unidade aritmético-lóxica, unidade de memoria) → dispositivos de saída" loading="lazy"><figcaption>Estrutura funcional dun ordenador segundo von Neumann.</figcaption></figure>
+<p>A idea de von Neumann consistía en conectar permanentemente os bloques funcionais dos ordenadores, sendo coordinado o seu funcionamento por un elemento de control. Esta tecnoloxía segue estando vixente na actualidade (con pequenas variacións) e emprégase pola maioría dos fabricantes.</p>
+<p>A estrutura xeral dun ordenador segundo a arquitectura de von Neumann componse de <strong>catro bloques básicos</strong>:</p>
+<ul>
+  <li><strong>Unidade de control (UC):</strong> ten como función ler, unha tras outra, as instrucións máquina almacenadas na memoria principal, e xerar os sinais de control necesarios para que toda a máquina funcione e execute as instrucións lidas. Para coñecer en todo momento a posición de memoria na que está almacenada a seguinte instrución a executar existe un rexistro apuntador chamado <strong>contador de programa</strong>.</li>
+  <li><strong>Unidade aritmético-lóxica (ALU):</strong> emprégase para levar a cabo operacións matemáticas elementais como sumas ou restas e operacións lóxicas como AND, OR ou NOT. Os datos sobre os que opera proveñen da memoria principal e poden estar almacenados de forma temporal nalgúns <strong>rexistros</strong> da propia ALU.</li>
+  <li><strong>Unidade de memoria:</strong> a memoria principal está formada por un conxunto de <strong>celas</strong> de igual tamaño ou número de bits que se identifican de forma individual a través dun <strong>enderezo</strong> e sobre as que se poden realizar operacións de lectura ou escritura. Cada cela soe estar formada por un conxunto de bits, denominándose <strong>punto de memoria</strong>, que son o elemento básico de información: permiten dous valores, <strong>0</strong> ou <strong>1</strong>, que se corresponden a estados de tensión diferentes. As celas empréganse para almacenar tanto datos como instrucións de máquina.</li>
+  <li><strong>Unidade de entrada/saída:</strong> leva a cabo a transferencia de información a través de canles asociadas a unidades externas, que poden estar formadas por <strong>memorias auxiliares ou secundarias</strong> (soporte de almacenamento de gran capacidade) e outras chamadas <strong>periféricos</strong>, que permiten a comunicación entre o sistema e o medio exterior mediante a carga de datos e programas na memoria principal ou a presentación de resultados.</li>
+</ul>
+<p>Este modelo é capaz de executar unha serie de instrucións elementais que denominou <strong>instrucións máquina</strong>, que deben estar almacenadas na memoria principal co programa almacenado para poder ser lidas e executadas. Que se poidan executar diferentes programas fai que este tipo de máquinas se chamen de <strong>propósito xeral</strong>.</p>
+<p>Analizando esta arquitectura observamos como cada elemento ten unha determinada función, sendo totalmente imprescindible, e comunícase con outros elementos do sistema para conseguir o obxectivo: procesar información e levar a cabo a tarefa para a que se programou.</p>
+<div class="box warn"><div class="box-title">Quinto compoñente: os buses</div><p>A maiores dos elementos que conforman esta arquitectura precisamos dun quinto compoñente: os <strong>buses</strong>, que son camiños a través dos que as instrucións e os datos circulan entre os distintos bloques do ordenador.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud1/von-neumann.png" alt="John von Neumann" loading="lazy"><figcaption><strong>John von Neumann.</strong> Naceu no ano 1903 en Budapest. Durante a Segunda Guerra Mundial traballaba para o goberno americano e, vendo as limitacións da ENIAC e outras máquinas de computación, definiu un novo sistema lóxico de computación.</figcaption></figure>`
+  },
