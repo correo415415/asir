@@ -17,6 +17,10 @@ apuntes/              Apuntes ORIGINALES tal y como se reciben, separados por ma
     ud2/                unidad2.html + imagenes/
   lm/                 LM · Lenguajes de Marcas (sitio MkDocs exportado)
     index.html, tema01/, referencias/, assets/
+  fh/                 FH · Fundamentos de Hardware (PDFs rasterizados en gallego)
+    ud1-*.pdf, ud2-*.pdf, ud3-*.pdf
+    ocr/                Texto OCR (tesseract glg+spa) de cada PDF
+    img/ud1|ud2|ud3/    Figuras extraídas de los PDF y renombradas
 parseados/            Misma estructura de carpetas, con los apuntes convertidos a nodos
   manifest.js         Lista de ficheros parseados que se cargan
   xbd/
@@ -24,7 +28,15 @@ parseados/            Misma estructura de carpetas, con los apuntes convertidos 
     ud2.js            UD2 parseada (50 nodos, con figuras) — generada con tools/parse_xbd_ud2.py
   lm/
     ud1.js            UD1 parseada (35 nodos)
-tools/                Scripts de parseo (parse_xbd_ud2.py + meta_xbd_ud2.py)
+  fh/
+    ud1.js            UD1 · Arquitectura de ordenadores (29 nodos, 26 imágenes)
+    ud2.js            UD2 · Representación y medidas de la información (28 nodos, 13 imágenes)
+    ud3.js            UD3 · Elementos internos de un sistema informático (70 nodos, 123 imágenes)
+tools/                Scripts de parseo y extracción:
+                        parse_xbd_ud2.py + meta_xbd_ud2.py   (XBD UD2 HTML → nodos)
+                        ocr_fh_ud3.sh                        (pdftoppm + tesseract glg+spa)
+                        extract_pdf_images.py                (pymupdf, aplana transparencias)
+                        contact_sheet.py                     (hoja de contactos para revisar figuras)
 todo.md               Tareas pendientes
 vercel.json           Configuración de despliegue estático
 ```

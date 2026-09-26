@@ -1,16 +1,16 @@
 # TODO
 
 ## Contenido nuevo
-- [ ] **FH · Fundamentos de Hardware** (nueva materia, carpeta `fh/`, PDFs rasterizados → OCR con tesseract `glg+spa` en `apuntes/fh/ocr/`)
+- [x] **FH · Fundamentos de Hardware** (nueva materia, carpeta `fh/`, PDFs rasterizados → OCR con tesseract `glg+spa` en `apuntes/fh/ocr/`)
   - [x] Copiar PDFs originales a `apuntes/fh/`
   - [x] UD1 · Arquitectura de ordenadores → `parseados/fh/ud1.js` (29 nodos, 26 imágenes)
   - [x] UD2 · Representación y medidas de la información → `parseados/fh/ud2.js` (28 nodos, 13 imágenes, 7 nodos de ejercicios resueltos)
-  - [ ] UD3 · Elementos internos de un sistema informático → `parseados/fh/ud3.js`
-  - [x] Extraer las imágenes relevantes de los PDF (analizarlas antes de incluirlas) a `apuntes/fh/img/udN/` (`tools/extract_pdf_images.py`) — UD1, UD2 hechas; UD3 pendiente
+  - [x] UD3 · Elementos internos de un sistema informático → `parseados/fh/ud3.js` (70 nodos, 123 imágenes)
+  - [x] Extraer las imágenes relevantes de los PDF (analizarlas antes de incluirlas) a `apuntes/fh/img/udN/` (`tools/extract_pdf_images.py`, `tools/contact_sheet.py`) — UD1, UD2, UD3 hechas
 - [x] **XBD · UD2** (`unidad2.html` + `imagenes/`)
   - [x] Copiar original a `apuntes/xbd/ud2/`
   - [x] Parsear a `parseados/xbd/ud2.js` (50 nodos) con las 48 figuras del original (`tools/parse_xbd_ud2.py` + `tools/meta_xbd_ud2.py`)
-- [x] Registrar XBD UD2 y FH UD1/UD2 en `parseados/manifest.js` (falta FH UD3)
+- [x] Registrar XBD UD2 y FH UD1/UD2/UD3 en `parseados/manifest.js`
 - [ ] Actualizar README (tabla de materias)
 
 ## Web
