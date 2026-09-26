@@ -3810,3 +3810,614 @@ cando queremos aforrar custos e non temos tanta necesidade de velocidade.
 Os discos SATA poden ser utilizados por controladoras SAS pero non á inversa,
 unha controladora SATA non recoñece discos SAS.
 
+===== PAXINA 36 =====
+M.2
+
+Se ves M.2 na descrición dun SSD, refírese ó factor de forma físico da unidade.
+M.2 introduciuse en 2012 e foi deseñado para substituír o estándar mSATA, que
+se popularizou brevemente nos portátiles. Normalmente verás números
+despois de M.2 que definen o tamaño da unidade en termos das súas
+dimensións físicas, con dous díxitos para a súa anchura e dous ou tres para a
+súa lonxitude. Así, por exemplo, o MP700 PRO M.2 2280 de 2 TB é un SSD de 22
+mm de ancho e 80 mm de longo.
+
+É importante ter en conta que o feito de que unha unidade sexa un modelo M.2
+non significa que sexa unha unidade PCle NVMe. Cómpre sinalar que
+actualmente hai dous conectores SATA físicos comúns: M.2 e SATA. As
+unidades M.2 conéctanse directamente ó zócolo, mentres que as que usan un
+conector SATA requiren un cable SATA.
+
+NVMe significa Non-Volatile Memory Express e é un protocolo de
+comunicación deseñado para aproveitar ó máximo o rendemento da memoria
+flash. A memoria flash NAND é a tecnoloxía de almacenamento subxacente
+que se emprega nos SSD, polo que maximizar o seu potencial ten sentido,
+especialmente porque as tecnoloxías máis antigas como SATA foron
+deseñadas pensando nos discos duros.
+
+PCle (Peripheral Component Interconnect Express)
+
+Calquera tipo de dispositivo pódese conectar a través de PCle. SATA ofrece
+unha maior compatibilidade que PCle pero está a quedar desactualizada en
+termos de rendemento, xa que PCle pode transmitir datos en ata catro canles
+PCle, mentres que SATA está limitado a só unha. Polo tanto, o novo estándar
+PCle ten unha vantaxe de rendemento. Ademais, PCle continuou mellorando
+con cada xeración e a interface case duplica o rendemento cada vez.
+
+A táboa seguinte amosa o rendemento teórico máximo compatible con SATA e
+PCle:
+
+Interface x1 carril x2 carrís x4 carrís
+PCle 5.0 4.000 MB/s 8 000 MB/s 16 000 MB/s
+PCle 4.0 2 000 MB/s 4 000 MB/s 8 000 MB/s
+PCle 3.0 1000 MB/s 2 000 MB/s 4 000 MB/s
+SATA 550 MB/s - -
+
+8.2 > Disco duro
+
+Chamamos disco duro (en inglés hard disk, abreviado con frecuencia HD ou
+HDD) ó dispositivo encargado de almacenar información de forma persistente
+nun ordenador.
+
+Os discos duros xeralmente utilizan un sistema de gravación magnética
+analóxica. Neste tipo de disco encontramos dentro da carcasa unha serie de
+pratos metálicos colocados un enriba doutro xirando a gran velocidade. Sobre
+estes pratos sitúanse os cabezais encargados de ler ou escribir os pulos
+magnéticos.
+
+Tal e como sae de fábrica o disco duro non pode ser utilizado por un sistema
+operativo. Antes temos que definir nel unha ou máis particións e logo darlles
+un formato que poida ser entendido polo noso sistema.
+
+Dentro dun disco duro hai varios pratos (entre 2 e 4), que son discos (de
+aluminio ou cristal) concéntricos e que xiran todos ó mesmo tempo. O cabezal
+de lectura e escritura móvese cara dentro ou fóra segundo conveña, e pode ler
+tódolos pratos á vez.
+
+Hai varios conceptos para referirse a zonas do disco:
+
+SSD M.2
+
+SSD PCle
+
+MBR (Master Boot Record)
+
+É o primeiro sector dun dispositi-
+vo de almacenamento de datos e
+úsase para almacenar as instru-
+cións de arranque da máquina
+(bootstrap) e a táboa de parti-
+cións contendo o sistema de
+ficheiros.
+
+GPT (GUID Partition Table)
+
+É a evolución do MBR coa chegada
+da interface UEFI. Só contén a
+táboa de particións ó non facer
+falla xestionar o arranque pois xa
+o fai a interface mediante un
+sistema operativo de arranque
+propio.
+
+Partes mecánicas
+
+A nivel mecánico un disco duro
+soe ter:
+
+e pratos onde grava os datos.
+
+e cabezal de lectura / escritura.
+e motor que fai xirar os pratos.
+
++ oelectroimán move o cabezal.
+e circuíto electrónico de con-
+trol, que inclúe: interface co
+ordenador e memoria caché.
+
+e bolsiña desecante para evitar
+a humidade.
+
+e caixa para protexer da sucida-
+de (non está ó baleiro).
+
+e parafusos, a miúdo especiais.
+===== PAXINA 37 =====
+Fiabilidade das unidades SSD
+
+As unidades SSD teñen un número
+máximo de escrituras, o que limita
+a súa vida útil.
+
+Cando compras unha unidade SSD,
+o fabricante indica:
+
+e Período de garantía en anos.
+
+e Cantos terabytes podes escri-
+bir na unidade en total antes de
+que falle. Estes datos chámanse
+TBW (terabytes escritos).
+
+e Capacidade da unidade en
+terabytes.
+
+O cálculo que se fai realmente é
+DWPD (Drive Writes Per Day), que
+é simplemente o número de veces
+que se pode escribir en toda a
+unidade cada día.
+
+TBW
+
+365 x garantia x capacidade
+
+Disco A Disco B
+
+DWPD-
+
+Anos de
+garantía 5 5
+TeWw 1000 1000
+Capacidade 20068 40068
+DWPD 2.74 137
+
+Para ver canto tempo máis lle
+queda a un disco unha vez que
+leva un tempo en funcionamento,
+necesitamos dous datos:
+
+e Cantos días leva o disco en
+funcionamento.
+
+e LBArea: Canto se escribiu real-
+
+mente nese tempo (bytes escri-
+
+tos).
+TBW,.a = LB Areal # tamanhosector
+
+1024?
+
+e prato: cada un dos discos que hai dentro do disco duro.
+
+e cara: cada un dos dous lados dun prato.
+
+e cabeza: número de cabezal; equivale a dar o número de cara, xa que hai
+un cabezal por cara.
+
+e pista: unha circunferencia dentro dunha cara; a pista O está no borde ex-
+terior.
+
+e cilindro: conxunto de varias pistas; son tódalas circunferencias que están
+aliñadas verticalmente (unha de cada cara).
+
+e sector: inclúe anacos de moitas pistas e caras.
+
+Dentro do disco encontramos o MBR (Master Boot Record no sector de
+arranque), que contén a táboa de particións e as particións, necesarias para
+poder colocar os sistemas de ficheiros.
+
+As características que se deben ter en conta nun disco duro para poder valorar
+as súas prestacións son:
+
+e Tempo medio de xiro: tempo que tarda o disco en xirar media volta, unha
+vez que a agulla do disco duro se sitúa no cilindro. O disco debe xirar ata
+que o dato se sitúe baixo a cabeza. Este tempo é de media o tempo que
+tarda en dar medio xiro. Por este motivo é directamente inversa a velo-
+cidade de xiro.
+
+e Tempo medio de acceso: tempo medio que tarda en situarse a agulla no
+cilindro desexado. Soe ser aproximadamente un terzo do tempo que
+tarda en ir dende o centro ó exterior ou viceversa.
+
+e Tempo de acceso máximo: tempo que tarda en ir do centro ó exterior ou
+viceversa.
+
+e Tempo pista a pista: tempo necesario para saltar da pista actual á adxa-
+cente.
+
+e Taxa de transferencia: velocidade á que pode transferir a información ó
+ordenador. Pode ser velocidade sostida ou de pico.
+
+e Caché de pista: é unha memoria de estado sólido, tipo RAM, dentro do
+disco duro.
+
+e Interface: medio mediante o que un disco duro se comunica co ordena-
+dor. Pode ser IDE, SCSI, SATA, USB ou Firewire.
+
+8.3 > SSD (Solid-State Drive)
+
+Utiliza unha memoria non volátil, como a memoria flash, para almacenar
+datos, en lugar dos pratos xiratorios magnéticos usados nos discos duros
+convencionais; se non necesitamos almacenar os datos existen outros que
+empregan memoria RAM en vez de memoria flash.
+
+En comparación cos discos duros tradicionais, as unidades de estado sólido son
+menos sensibles ós golpes, practicamente inaudibles e teñen un menor tempo
+de acceso e latencia, xa que non precisan de pezas mecánicas móbiles.
+
+Fan uso da mesma interface que os HDD polo que son facilmente
+intercambiables sen ter que recorrer a adaptadores ou tarxetas de expansión
+para compatibilizalos co equipo.
+
+Tamén existían dispositivos que combinan ambas tecnoloxías, discos duros e
+memorias flash que se denominaban discos duros híbridos (HHD), que
+tentaban unir capacidade e velocidade a un prezo inferior.
+
+Vantaxes
+
+Os dispositivos de estado sólido que usan bloques de memorias flash teñen
+varias vantaxes fronte ós discos duros mecánicos:
+
+e Arranque máis rápido, ó non ter pratos que necesiten tomar unha veloci-
+dade constante.
+
+e Gran velocidade de escritura.
+
+e Maior rapidez de lectura, incluso 10 veces máis que os discos duros tradi-
+cionais máis rápidos grazas a RAIDs internos nun mesmo SSD.
+
+===== PAXINA 38 =====
+e Baixa latencia de lectura e escritura, centos de veces máis rápido que os
+discos mecánicos.
+
+e Lanzamento e arranque de aplicacións en menor tempo.
+
+e Menor consumo de enerxía e produción de calor.
+
+e Sen ruído.
+
+e Mellor tempo medio entre fallos.
+
+e Maior seguridade permitindo unha rápida limpeza dos datos almacenados.
+
+e Rendemento determinista ó ser o tempo de procura constante.
+
+e Rendemento sen deterioro mentres o medio se enche, ó non existir frag-
+mentación.
+
+e Menor peso e tamaño que un disco duro tradicional de similar capacidade.
+
+e Máis resistente pois soporta caídas, golpes e vibracións sen se derramar e
+sen se descalibrar ó carecer de elementos mecánicos.
+
+e Borrado máis seguro e irrecuperable de datos.
+
+Inconvenientes
+
+Os dispositivos de estado sólido que usan memorias flash teñen tamén varias
+desvantaxes:
+
+e Menores capacidades de almacenamento.
+
+e Os datos pérdense despois dun fallo físico pois a cela destrúese mentres
+que nun disco duro mecánico os datos son frecuentemente recuperables
+usando axuda de expertos.
+
+e Ó reducirse o tamaño do transistor diminúese directamente a vida útil
+das memorias NAND, pero isto solucionarase en modelos posteriores ó
+instalar sistemas utilizando memristores.
+
+8.4 > Disquete
+
+O disquete ou disco flexible (en inglés, diskette ou floppy disk) é un soporte
+de almacenamento de datos de tipo magnético, formado por unha fina lámina
+circular (disco) de material magnetizable e flexible (de aí a súa denominación),
+encerrada nunha cuberta de plástico, cadrada ou rectangular.
+
+Este tipo de soporte de almacenamento é vulnerable á sucidade e ós campos
+magnéticos externos, polo que deixa de funcionar co tempo ou polo desgaste.
+
+Os tamaños dos disquetes soen denominarse empregando o Sistema
+Anglosaxón de Unidades, incluso nos países nos que o Sistema Internacional de
+Unidades é o estándar. Os estándares foron:
+
+e 8": formato estándar de IBM usado no System/370.
+e 5/4": formato estándar de PC.
+e 3/4"; formato estándar de PC.
+
+Este tipo de unidade está obsoleto e os ordenadores xa non a incorporan, pola
+aparición de outros dispositivos de almacenamento máis manexables, que
+ademais dispoñen de moita máis memoria física, como por exemplo as
+memorias USB.
+
+A clave deste desprazamento progresivo está no maior custe por bit da
+superficie magnética fronte á superficie dun medio óptico ou dunha memoria
+flash, a súa maior fraxilidade xa que necesitan ser protexidos do contacto co
+exterior, do po e da luz, cambios de humidade e temperatura, electricidade
+estática, mediante sobres protectores ou peches herméticos ó baleiro.
+
+8.5 > DVD (Digital Versatile Disc ou Digital Video Disc)
+
+É un formato de almacenamento multimedia en disco óptico que pode ser
+usado para gardar datos, incluíndo películas con alta calidade de vídeo e son.
+
+Os DVD aseméllanse ós discos compactos: as súas dimensións físicas son as
+mesmas -12 cm ou o mini de 8 cm- pero están codificados nun formato
+distinto e a unha densidade moito maior. A diferenza dos CDs, tódolos DVD
+
+Memristor
+
+A imaxe corresponde a un circuíto
+con 17 memristores capturada
+mediante un microscopio de forza
+atómica.
+
+Descríbese como o cuarto ele-
+mento dos circuítos pasivos, xunto
+cos tres máis coñecidos: conden-
+sador, resistencia e indutor.
+
+O nome é unha palabra composta
+de memory resistor (resistencia-
+memoria). Un alto nivel de resis-
+tencia pode ser interpretado nun
+ordenador en termos de datos
+como un 1, e un baixo nivel como
+un O; deste modo, controlando a
+corrente, os datos poden ser
+gardados e rescritos.
+
+Tipos de disquete
+7d AO, Y
+e? y
+[632]
+ES (el
+Firewire (IEEE 1394)
+
+IEEE 1394 é un tipo de conexión
+para diversas plataformas, desti-
+nado á entrada e saída de datos
+en serie a gran velocidade. Sóese
+Usar para a conexión de cámaras
+dixitais e videocámaras. Estase a
+substituír pola interface USB nas
+súas versións 2.0 e 3.0 e pola
+interface Thunderbolt.
+
+Entre as súas características
+
+temos que:
+e permite unha lonxitude de ca-
+ble dende 4.5 a 100 metros.
+e pódese conectar en quente.
+
+e flexibilidade da conexión e a
+capacidade de conectar un má-
+ximo de 63 dispositivos.
+
+e resposta no momento, garan-
+tindo unha distribución dos da-
+tos en perfecta sincronía.
+
++ plug £ play.
+===== PAXINA 39 =====
+Tipos de DVD
+O medio do disco pode ser:
+
+e DVD-ROM (só lectura, manu-
+facturado con prensa).
+
+e DVDER (gravable unha soa
+vez).
+
+e DVDERW (regravable).
+
+e DVD-RAM (regravable de acce-
+so aleatorio).
+
+O disco pode ter un ou dous lados,
+e unha ou dúas capas de datos por
+lado; o número de lados e capas
+determina a capacidade do disco:
+
+e DVD-5: un lado, capa simple,
+4.7 GB
+
+e DVD-9: un lado, capa dobre,
+8.5 GB
+
+e DVD-10: dous lados, capa sim-
+ple en ambos lados, 9.4 GB
+
+e DVD-14: dous lados, capa do-
+bre nun lado, capa simple nou-
+tro, 13.3 GB
+
+e DVD-18: dous lados, capa do-
+bre en ambos lados, 17.1 GB
+
+deben conter un sistema de ficheiros. Este sistema de ficheiros chámase UDF,
+e é unha extensión do Estándar ISO 9660, usado para CDs de Datos.
+
+A capacidade dun DVD-ROM pode ser determinada a ollo polo número de lados
+de datos e o número de capas por lado. As capas dobres son usualmente de cor
+dourada, mentres que as capas simples son prateadas, como un CD.
+
+Outra maneira de saber se un DVD contén unha ou dúas capas é ver o anel
+central do disco. Se hai dous códigos de barras, é unha capa dobre; se hai un
+código de barras, é de capa simple.
+
+Cada medio pode conter calquera contido e ser de calquera tipo de capa. O + e
+o - son estándares técnicos similares, parcialmente compatibles. Ambos
+formatos son igualmente populares; a metade da industria apoia ó +, e a outra
+metade ó -, aínda que actualmente soportan ambos.
+
+A velocidade de transferencia de datos dumha unidade DVD está dado en
+múltiplos de 1350 KB/s, o que significa que unha unidade lectora de 16X
+permite unha transferencia de datos de 16 x 1350 = 21600 KB/s. Como as
+velocidades das unidades de CD danse en múltiplos de 150 KB/s, unha
+velocidade DVD equivale a nove velocidades de CD.
+
+Os dispositivos ópticos débense coidar do po e a súa superficie debe
+protexerse para que non sufran danos, polo que xeralmente posúen fundas
+protectoras. Neste sentido, os DVD son máis sensibles, as súas capas
+protectoras son máis finas, polo tanto están máis expostas a rabuñadas. Como
+se len con luz, o seu desgaste físico non é un gran problema.
+
+A permanencia da información almacenada neles depende das propiedades do
+material que os soporta e das condicións do seu almacenamento. En contra do
+que moitos pensan, a humidade e a temperatura son parámetros a considerar
+no almacenamento dos soportes ópticos. Os cambios bruscos poden causar
+deterioros importantes, porque os compoñentes das diferentes capas que os
+compoñen teñen diferentes coeficientes térmicos de expansión.
+
+Tanto para os DVDs como para os CDs existen normas internacionais para o
+seu almacenamento nos que se indica que para asegurar a súa permanencia, a
+longo prazo, deberíase manter unha temperatura máxima de 23 grados
+centígrados e un 50% de humidade relativa. Existen fungos que, en condicións
+climatolóxicas tropicais, (digamos 30%C de temperatura e 90% de humidade
+relativa), destrúen os CDs.
+
+8.6 > CD (Compact Disc)
+Entre os formatos máis relevantes deste soporte de almacenamento están:
+CD-R (Compact Disc-Recordable)
+
+Estes discos só poden ser gravados unha vez, aínda que se pode facer en varias
+sesións (discos multisesión), coa desvantaxe neste caso de que se perden
+bastantes megas de espazo de gravación e que algúns lectores, de modelos
+antigos, non son capaces de lelos.
+
+As gravadoras chegan a gravar CD-R a 52x, uns 7800 KB/s, sendo a capacidade
+total dun CD-R de 650 MB, 700 MB (o máis común), 800 MB ou 900 MB. Estas
+capacidades son válidas para discos de datos.
+
+CD-ROM (Compact Disc Read Only Memory)
+
+É un disco compacto óptico utilizado para almacenar información non volátil, o
+mesmo medio utilizado polos CDs de audio; pode ser lido pola computadora
+cun lector de CD-ROM.
+
+Un CD-ROM é un disco de plástico plano con información dixital codificada nel
+nunha espiral dende o centro ata o borde exterior.
+
+Os CD-ROMs son sempre manufacturados masivamente por un proceso
+chamado estampación, mentres que os CD-Rs e os CD-RWs son gravados.
+
+===== PAXINA 40 =====
+Existen dispositivos para queimar (gravar) múltiples discos ó mesmo tempo
+dende unha mesma fonte.
+
+Un CD-ROM estándar pode albergar 650 ou 700 MB de datos. O CD-ROM é
+popular para a distribución de software, especialmente aplicacións
+multimedia, e grandes bases de datos. Un CD-ROM pesa menos de 30 gramos.
+
+Os datos binarios gárdanse en forma de ocos e chairas, de tal forma que ó
+incidir o feixe de luz do láser, o ángulo de reflexión é distinto en función de se
+se trata dun oco ou dunha chaira.
+
+É crenza moi común pensar que un oco corresponde a un valor binario e unha
+chaira ó outro valor. Con todo, isto non é así, senón que os valores binarios son
+detectados polas transicións de oco a chaira, e viceversa: unha transición
+determina un 1 binario, mentres que a lonxitude dun oco ou unha chaira indica
+o número consecutivo de O binarios.
+
+CD-RW
+
+A pesares de que cada fabricante utiliza pequenas variacións na composición
+dos materiais empregados na fabricación dos discos, todos seguen un mesmo
+modelo: a información é almacenada nun substrato de policarbonato plástico,
+ó que se lle engade unha capa refractaria de aluminio que reflectirá a luz do
+láser (comunmente no rango do espectro infravermello, e por tanto non
+apreciable visualmente); se lle engade unha capa protectora que o cubre e,
+opcionalmente, unha etiqueta na parte superior.
+
+A diferenza en relación ós CD-R e CD-ROM, é que este formato permite gravar
+ou borrar varias veces (ó redor de 1000) nunha mesma posición.
+
+8.7 > Cinta magnética
+
+É un tipo de soporte de almacenamento de información: de imaxe, de son, de
+datos... Os dispositivos informáticos de almacenamento masivo de datos de
+cinta magnética (coñecidos como Streamers) son utilizados principalmente
+para respaldo de ficheiros e para o proceso de información de tipo secuencial,
+como na elaboración de nóminas das grandes organizacións públicas e
+privadas.
+
+8.8 > Disco magnetóptico
+
+É un disco óptico que sirve como soporte para a gravación magnetóptica dixi-
+tal. A gravación magnetóptica é un sistema de gravación combinado que grava
+de forma magnética, pero reproduce de forma óptica.
+
+Os datos grávanse no disco mediante o que se coñece como recubrimento de
+cambio de fase. A superficie do disco quéntase cun láser mentres se encontra
+baixo da influenza dun campo magnético. A aleación metálica que conforma o
+disco, por influenza deste fluxo magnético, modifica o seu estado de cristaliza-
+ción coa calor e, dentro dos puntos do material quentado, os dominios magné-
+ticos se reorientan. Ó refrescar o disco rapidamente, o magnetismo inducido,
+permanece.
+
+Isto débese a que ó refrescar rapidamente, se reflicte menos luz e o material
+non recristaliza adecuadamente, polo que non volve ó seu estado orixinal. Os
+discos magnetópticos tamén se coñecen como discos MO.
+
+O Minidisc é un exemplo de disco magnetóptico.
+9 >> Tarxetas de expansión
+
+As tarxetas de expansión usámolas para completar ou modificar determinados
+aspectos que non aparecen suficientemente evolucionados no soporte que nos
+presta a placa madre. Entre as tarxetas de expansión encontraremos tarxetas
+de son, gráficas, de televisión e vídeo, firewire, pcmcia...
+
+9.1> Tarxetas de son
+
+Tipos de USB
+
+1 micro USB macho
+2 mini USB
+
+3 tipo B macho
+
+4 tipo A femia
+
+5 tipo A macho
+
+A especificación clásica do USB
+contempla varios tamaños e tipos
+de conectores compatibles con
+distintas especificacións:
+
+e estándar de tamaño maior,
+usado en dispositivos de memo-
+ria USB,
+
+e tamaño mini usado en cámaras
+dixitais.
+
+e tamaño micro usado nos telé-
+fonos intelixentes.
+
+e esquema versátil USB On-The-
+Go, en tamaños mini e micro.
+
+A diferenza doutros cables de
+datos (Ethernet, HDMI...), cada
+extremo dun cable USB utiliza un
+tipo de conector diferente; un de
+tipo A e outro de tipo B. Este tipo
+de deseño elixiuse para evitar as
+sobrecargas eléctricas e non
+danar o equipo, xa que só a femia
+de tipo A presenta carga eléctrica.
+
+a
+USB Tipo C
+
+O USB Tipo C (ou USB-C) é un
+conector moderno, reversible e
+multifuncional deseñado para
+converterse no estándar universal
+para transmitir datos, vídeo e
+enerxía nun único cable.
+
+A diferenza dos seus predecesores
+como o USB-A, o deseño do USB-C
+é ovalado e non ten unha orienta-
+ción superior ou inferior, o que
+permite conectalo por calquera
+dos dous lados.
+
+A
+
+Tarxeta de son
