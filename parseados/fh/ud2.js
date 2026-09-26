@@ -400,3 +400,199 @@ window.APUNTES.unidades.push({
 <p>1 MFLOPS = 10⁶ FLOPS · 1 GFLOPS = 10⁹ FLOPS · 1 TFLOPS = 10¹² FLOPS.</p>
 <p><strong>Ollo!</strong> Non se debe tomar como única medida para valorar a capacidade dun ordenador.</p></div>`
   },
+
+  /* ---------------- 5 ---------------- */
+  {
+    id: 'fh-ud2-5',
+    tipo: 'tema',
+    titulo: '5. Aritmética binaria',
+    resumen: 'Operacións aritméticas con variables binarias. Suma: 1+1 = 0 e arrastre 1. Resta: 0−1 = 1 levando −1 á posición superior. Multiplicación e división seguen as mesmas regras que en decimal; a división por cero non é posible. O punto fraccionario non altera o procedemento.',
+    claves: ['Adición: 0+0=0 · 0+1=1 · 1+0=1 · 1+1=0 e arrastre 1', 'Subtracción: 0−1 = 1 levando −1 á seguinte posición', 'Minuendo negativo → a resta convértese en suma mantendo o signo', 'Multiplicación: mesmas regras que en decimal; signos iguais → +, distintos → −', 'División: mesmas regras; división por cero imposible (indeterminado/infinito)', 'Coma no divisor: desprazar a coma do dividendo tantas posicións como decimais teña o divisor'],
+    tags: ['aritmética binaria', 'suma', 'resta', 'multiplicación', 'división', 'arrastre', 'acarreo'],
+    links: ['fh-ud2-ex-arit'],
+    contenido: `
+<div class="box def"><div class="box-title">Aritmética binaria</div><p>Operacións aritméticas e lóxicas feitas con <strong>variables binarias</strong>.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud2/calculadora.png" alt="Calculadora binaria con teclas 0 e 1" loading="lazy"><figcaption>As catro operacións básicas fanse en binario coas mesmas regras que en decimal.</figcaption></figure>
+<h4>Adición</h4>
+<p>O símbolo do operador é <code>+</code>, os elementos chámanse <em>sumandos</em> e o resultado <em>suma</em>. A suma de dous díxitos 1 dá como resultado dous bits: un de suma (0) e un de <strong>arrastre</strong> (1).</p>
+<table>
+<tr><th>a</th><th>b</th><th>a + b</th></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>0 e levamos un 1 á posición inmediata superior</td></tr>
+</table>
+<p>Cando sumamos fraccións de números binarios ocorre o mesmo que en decimal: o punto fraccionario non inflúe no procedemento.</p>
+<h4>Subtracción</h4>
+<p>O símbolo é <code>−</code>, os elementos <em>minuendo</em> e <em>subtraendo</em> e o resultado <em>diferenza</em>. As regras son iguais ás da resta decimal: se o subtraendo é maior que o minuendo (só ocorre con 1 − 0… é dicir, 0 − 1), o resultado é 1 e débese levar un <strong>−1</strong> á seguinte posición de maior valor.</p>
+<table>
+<tr><th>a</th><th>b</th><th>a − b</th></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1 e levamos un −1 á posición inmediata superior</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+<p>Ó restar fraccións binarias o punto decimal non afecta ó procedemento. Cando o minuendo é negativo, a resta convértese nunha suma, aínda que se mantén o signo menos.</p>
+<h4>Multiplicación</h4>
+<p>O símbolo é o punto <code>·</code> (ás veces <code>*</code> ou <code>×</code>), os elementos <em>multiplicando</em> e <em>multiplicador</em> e o resultado <em>produto</em>. As regras son as mesmas que en decimal e o punto colócase igual. Nos signos: se son iguais o produto é positivo, se son diferentes negativo.</p>
+<table>
+<tr><th>a</th><th>b</th><th>a · b</th></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+<h4>División</h4>
+<p>O símbolo é a barra <code>/</code>, os elementos <em>dividendo</em> e <em>divisor</em> e o resultado <em>cociente</em>. As regras son as da división decimal; a <strong>división por cero non é posible</strong>, xa que o resultado sería indeterminado ou infinito, valores que un ordenador non pode procesar.</p>
+<p>Respecto á coma: primeiro cómpre <strong>eliminar o punto do divisor</strong> desprazando o punto do dividendo cara á dereita tantas posicións como cifras decimais teña o divisor (ou engadindo ceros á dereita).</p>
+<table>
+<tr><th>a</th><th>b</th><th>a / b</th></tr>
+<tr><td>0</td><td>0</td><td>indeterminado</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>indeterminado (∞)</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>`
+  },
+  {
+    id: 'fh-ud2-ex-arit',
+    tipo: 'ejercicio',
+    titulo: 'Exercicios resoltos: operacións en binario',
+    resumen: 'Suma 54,25 + 26,8125 = 81,0625 → 1010001,0001₂ · Resta 54,25 − 26,8125 = 27,4375 → 11011,0111₂ · Multiplicación 54,25 · 5,5 = 298,375 → 100101010,011₂ · División 9 / 3 = 3 → 11₂.',
+    claves: ['110110,01 + 11010,1101 = 1010001,0001 (81,0625)', '110110,0100 − 11010,1101 = 11011,0111 (27,4375)', '110110,01 · 101,1 = 100101010,011 (298,375)', '1001 / 11 = 11 (9/3 = 3)'],
+    tags: ['exercicio', 'suma binaria', 'resta binaria', 'multiplicación binaria', 'división binaria'],
+    contenido: `
+<div class="box ex"><div class="box-title">Adición</div>
+<p>Sumar en binario os decimais 54,25 e 26,8125. Ó 54,25 correspóndelle <code>110110,01₂</code> e ó 26,8125 <code>11010,1101₂</code>.</p>
+<pre>  arrastres   1111 1  1
+   54,2500    110110,0100
+ + 26,8125  +  11010,1101
+ ---------   -------------
+   81,0625   1010001,0001</pre>
+<p><strong>Resultado: 1010001,0001₂</strong></p></div>
+<div class="box ex"><div class="box-title">Subtracción</div>
+<p>Restarlle ó decimal 54,25 o número 26,8125.</p>
+<pre>   54,2500    110110,0100
+ − 26,8125  −  11010,1101
+ ---------   -------------
+   27,4375    011011,0111</pre>
+<p><strong>Resultado: 11011,0111₂</strong></p></div>
+<div class="box ex"><div class="box-title">Multiplicación</div>
+<p>Multiplicar en binario 54,25 (<code>110110,01₂</code>) por 5,5 (<code>101,1₂</code>).</p>
+<pre>        110110,01
+      ×     101,1
+      -----------
+         11011001
+        11011001
+       00000000
+      11011001
+      -----------
+   100101010,011</pre>
+<p>Comprobación: 54,25 · 5,5 = 298,375. <strong>Resultado: 100101010,011₂</strong></p></div>
+<div class="box ex"><div class="box-title">División</div>
+<p>Dividir en binario 9 (<code>1001₂</code>) entre 3 (<code>11₂</code>).</p>
+<pre>  1001 | 11
+ −11   ----
+  ---   11
+   011
+  − 11
+   ---
+    00</pre>
+<p><strong>Resultado: 11₂ (= 3)</strong></p></div>`
+  },
+
+  /* ---------------- 6 ---------------- */
+  {
+    id: 'fh-ud2-6',
+    tipo: 'tema',
+    titulo: '6. Métodos para representar números enteiros',
+    resumen: 'Os ordenadores usan 4 métodos para representar enteiros con signo cun número fixo n de bits (16, 32 ou 64, a lonxitude de palabra): signo e magnitude, complemento a 1, complemento a 2 e exceso a 2ⁿ⁻¹.',
+    claves: ['n bits = lonxitude da palabra (16, 32, 64)', 'Signo e magnitude: bit esquerdo = signo (0 +, 1 −), n−1 bits magnitude', 'Complemento a 1: negativos invertindo tódolos bits do positivo', 'Complemento a 2: complemento a 1 + 1 (desprezar acarreo final)', 'Exceso a 2ⁿ⁻¹: sen bit de signo; valor = número + 2ⁿ⁻¹'],
+    tags: ['enteiros', 'signo e magnitude', 'complemento a 1', 'complemento a 2', 'exceso', 'representación'],
+    links: ['fh-ud2-6-1', 'fh-ud2-6-2', 'fh-ud2-6-3', 'fh-ud2-6-4', 'fh-ud2-ex-enteiros'],
+    contenido: `
+<p>Os ordenadores utilizan <strong>4 métodos</strong> para a representación interna dos números enteiros (positivos e negativos):</p>
+<ul>
+  <li>Signo e magnitude (ou signo e módulo)</li>
+  <li>Complemento a 1</li>
+  <li>Complemento a 2</li>
+  <li>Exceso a 2ⁿ⁻¹</li>
+</ul>
+<p>Nestas representacións utilizamos o sistema binario e considérase que temos un <strong>número limitado de bits</strong> para cada dato numérico (a cantidade de bits soe coincidir coa <strong>lonxitude da palabra</strong> do ordenador: 16, 32 ou 64 bits). Este número de bits dispoñibles represéntase por <strong>n</strong>.</p>
+<table>
+<tr><th>Método</th><th>Bit de signo</th><th>Negativos</th><th>Exemplo 8 bits: 17 / −17</th></tr>
+<tr><td>Signo e magnitude</td><td>Si</td><td>Mesma magnitude, signo 1</td><td>0 0010001 / 1 0010001</td></tr>
+<tr><td>Complemento a 1</td><td>Si</td><td>Inverter tódolos bits</td><td>0 0010001 / 1 1101110</td></tr>
+<tr><td>Complemento a 2</td><td>Si</td><td>C1 + 1</td><td>0 0010001 / 1 1101111</td></tr>
+<tr><td>Exceso a 2ⁿ⁻¹</td><td>Non</td><td>Sumar 128</td><td>10010001 / 01101111</td></tr>
+</table>`
+  },
+  {
+    id: 'fh-ud2-6-1',
+    tipo: 'subtema',
+    titulo: '6.1 Signo e magnitude',
+    resumen: 'O bit máis á esquerda representa o signo (0 positivo, 1 negativo) e os n−1 bits restantes a magnitude do número.',
+    claves: ['Bit esquerdo: 0 = positivo, 1 = negativo', 'Resto (n−1 bits): magnitude en binario natural', 'Tamén chamado signo e módulo'],
+    tags: ['signo e magnitude', 'signo e módulo', 'bit de signo'],
+    contenido: `
+<p>Neste sistema de representación o bit que está situado <strong>máis á esquerda</strong> representa o <strong>signo</strong>; o seu valor será <code>0</code> para o signo positivo e <code>1</code> para o signo negativo. O resto de bits (<strong>n−1</strong>) representa a <strong>magnitude</strong> do número.</p>
+<div class="box ex"><div class="box-title">Exemplo (8 bits)</div><p>17 → <code>0 0010001</code> · −17 → <code>1 0010001</code></p></div>`
+  },
+  {
+    id: 'fh-ud2-6-2',
+    tipo: 'subtema',
+    titulo: '6.2 Complemento a 1',
+    resumen: 'Bit esquerdo para o signo (0 +, 1 −). Os positivos igual que en signo e magnitude; os negativos obtéñense complementando tódolos díxitos do positivo (0↔1), incluído o bit de signo.',
+    claves: ['Positivos: igual que signo e magnitude', 'Negativos: inverter tódolos bits do positivo, incluído o signo', '−17 en 8 bits: 00010001 → 11101110'],
+    tags: ['complemento a 1', 'C1', 'inversión de bits'],
+    contenido: `
+<p>Este sistema tamén utiliza o bit máis á esquerda para o signo (<code>0</code> positivo, <code>1</code> negativo). Para os números <strong>positivos</strong>, os n−1 bits da dereita representan a magnitude (igual que no caso anterior). Os números <strong>negativos</strong> obtéñense <strong>complementando tódolos díxitos</strong> do positivo correspondente (cambiando 0 por 1 e viceversa), incluído o bit de signo.</p>
+<div class="box ex"><div class="box-title">Exemplo (8 bits)</div><p>17 → <code>0 0010001</code> · −17 → <code>1 1101110</code></p></div>`
+  },
+  {
+    id: 'fh-ud2-6-3',
+    tipo: 'subtema',
+    titulo: '6.3 Complemento a 2',
+    resumen: 'Bit esquerdo para o signo. Positivos igual que antes; negativos en dous pasos: complemento a 1 e sumar 1, desprezando o último acarreo se existe. É a representación habitual dos enteiros.',
+    claves: ['Paso 1: complemento a 1 do positivo', 'Paso 2: sumar 1 (desprezar o acarreo final)', '−17 en 8 bits: 11101110 + 1 = 11101111', 'Habitual nos ordenadores para os enteiros'],
+    tags: ['complemento a 2', 'C2', 'dous pasos'],
+    contenido: `
+<p>Este sistema tamén utiliza o bit máis á esquerda para o signo (<code>0</code> positivo, <code>1</code> negativo). Para os positivos, os n−1 bits da dereita representan a magnitude. Os números <strong>negativos</strong> obtéñense en <strong>dous pasos</strong>:</p>
+<ol>
+  <li>Calcular o <strong>complemento a 1</strong>.</li>
+  <li><strong>Sumarlle 1</strong> a ese resultado, desprezando o derradeiro acarreo se existe.</li>
+</ol>
+<div class="box ex"><div class="box-title">Exemplo (8 bits)</div><p>17 → <code>0 0010001</code>. Complemento a 1: <code>1 1101110</code>. Sumamos 1: <code>1 1101111</code> ⇒ −17.</p></div>`
+  },
+  {
+    id: 'fh-ud2-6-4',
+    tipo: 'subtema',
+    titulo: '6.4 Exceso a 2ⁿ⁻¹',
+    resumen: 'Non usa bit de signo: tódolos bits representan unha magnitude igual ó número máis o exceso 2ⁿ⁻¹. O cero é un valor intermedio; os negativos van antes e os positivos despois. Para 8 bits o exceso é 128.',
+    claves: ['Sen bit de signo', 'Valor almacenado = número + 2ⁿ⁻¹', 'Cero = 2ⁿ⁻¹ (valor intermedio) · negativos por debaixo, positivos por riba', '8 bits: exceso 128 → 17 = 145 = 10010001 · −17 = 111 = 01101111'],
+    tags: ['exceso', 'exceso a 2n-1', 'sesgo', 'bias'],
+    contenido: `
+<p>Este sistema <strong>non usa ningún bit para o signo</strong>: todos os bits representan unha magnitude ou valor. Este valor correspóndese co <strong>número representado máis o exceso</strong>, que para n bits vén dado por <strong>2ⁿ⁻¹</strong>.</p>
+<p>Consiste en representar o <strong>cero como un valor intermedio</strong> (2ⁿ⁻¹) e situar os números negativos antes dese valor e os positivos despois del (motivo polo que se coñece como <em>exceso</em>).</p>
+<div class="box ex"><div class="box-title">Exemplo (8 bits)</div><p>Para 8 bits o exceso é 2⁷ = 128. 17 → 17 + 128 = 145 = <code>10010001</code> · −17 → −17 + 128 = 111 = <code>01101111</code>.</p></div>`
+  },
+  {
+    id: 'fh-ud2-ex-enteiros',
+    tipo: 'ejercicio',
+    titulo: 'Exercicio resolto: 17 e −17 en 8 bits cos 4 métodos',
+    resumen: 'Signo e magnitude: 00010001 / 10010001 · Complemento a 1: 00010001 / 11101110 · Complemento a 2: 00010001 / 11101111 · Exceso a 2⁷: 10010001 / 01101111.',
+    claves: ['17 = 10001₂', 'S-M: 0 0010001 / 1 0010001', 'C1: 0 0010001 / 1 1101110', 'C2: 0 0010001 / 1 1101111', 'Exceso 128: 145 = 10010001 / 111 = 01101111'],
+    tags: ['exercicio', 'signo e magnitude', 'complemento a 1', 'complemento a 2', 'exceso'],
+    contenido: `
+<div class="box ex"><div class="box-title">Representar os números 17 e −17 nunha palabra de 8 bits cos diferentes métodos</div>
+<p>O 17 correspóndese con <code>10001₂</code>. Con 8 bits, o primeiro representa o signo e os sete restantes a magnitude.</p>
+<h4>Signo e magnitude</h4>
+<table><tr><td>17</td><td><code>0</code> <code>0010001</code></td></tr><tr><td>−17</td><td><code>1</code> <code>0010001</code></td></tr></table>
+<h4>Complemento a 1</h4>
+<table><tr><td>17</td><td><code>0</code> <code>0010001</code></td></tr><tr><td>−17</td><td><code>1</code> <code>1101110</code></td></tr></table>
+<h4>Complemento a 2</h4>
+<p>Primeiro paso, complemento a 1 do positivo: <code>1 1101110</code>. Segundo paso, sumar 1:</p>
+<table><tr><td>17</td><td><code>0</code> <code>0010001</code></td></tr><tr><td>−17</td><td><code>1</code> <code>1101111</code></td></tr></table>
+<h4>Exceso a 2⁷</h4>
+<p>Para 8 bits o exceso é 2⁸⁻¹ = 2⁷ = 128; sumámoslles esa cantidade:</p>
+<table><tr><td>17 ⇒ 17 + 128 = 145</td><td><code>10010001</code></td></tr><tr><td>−17 ⇒ −17 + 128 = 111</td><td><code>01101111</code></td></tr></table></div>`
+  },
