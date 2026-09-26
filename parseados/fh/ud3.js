@@ -526,3 +526,220 @@ window.APUNTES.unidades.push({
 </table>
 <figure><img src="apuntes/fh/img/ud3/multimetro.png" alt="Medición da fonte cun multímetro" loading="lazy"><figcaption><strong>Utilización do multímetro</strong> para medir os valores da fonte: punta negra en terminal COM e nun pin negro (terra); punta vermella en terminal V movéndose polos distintos pins; 20 V en continua é suficiente.</figcaption></figure>`
   },
+
+  /* ---------------- 4 ---------------- */
+  {
+    id: 'fh-ud3-4',
+    tipo: 'tema',
+    titulo: '4. Placa base',
+    resumen: 'Placa de circuíto impreso (motherboard/mainboard) que conecta o microprocesador, a RAM, o almacenamento e as tarxetas de expansión; contén a ROM-BIOS, o reloxo e os conectores de E/S. Determina o rendemento (procesador, memoria, buses), a organización e as posibilidades de actualización e expansión.',
+    claves: ['Núcleo do ordenador; nela está a CPU', 'PCB rectangular: medio de conexión de tódolos compoñentes', 'Contén ROM-BIOS, reloxo, conectores (eléctrico, serie, paralelo, USB…)', 'Rendemento: tipo de procesador, memoria, buses, interfaces de disco; comunicación vía chipset e BIOS', 'Organización: todo se conecta a ela', 'Actualización e expansión: ata onde se pode ampliar', 'PCB (Printed Circuit Board): pistas de cobre sobre substrato non condutor', 'Sistemas dixitais por tamaño: mainframes, estacións de traballo, automatismos, portátiles'],
+    tags: ['placa base', 'motherboard', 'mainboard', 'PCB', 'circuíto impreso', 'ROM-BIOS', 'rendemento', 'expansión'],
+    links: ['fh-ud3-4-1', 'fh-ud3-4-2', 'fh-ud3-4-3', 'fh-ud3-4-4', 'fh-ud3-4-5', 'fh-ud3-4-6', 'fh-ud3-4-7'],
+    contenido: `
+<p>A placa base forma, xunto cos compoñentes nela inseridos, o <strong>núcleo do ordenador</strong> que fai posible o funcionamento de todo o sistema. É a pedra angular de calquera configuración, pois nela está situada a <strong>CPU</strong>, da que dependen as prestacións e a compatibilidade de software do PC.</p>
+<div class="box def"><div class="box-title">Placa base</div><p>(<em>motherboard</em> ou <em>mainboard</em>) Placa de circuíto impreso rectangular que serve como <strong>medio de conexión</strong> entre o microprocesador, a memoria RAM, os dispositivos de almacenamento, as tarxetas de expansión… Tódolos compoñentes do ordenador están conectados a ela dun xeito ou doutro.</p></div>
+<p>Tamén encontramos nela a <strong>memoria ROM-BIOS</strong>, o <strong>reloxo</strong> e os <strong>conectores</strong> (eléctrico, portos serie, paralelo, USB…) que conectan o ordenador cos periféricos de entrada e saída. É o soporte sobre o que se monta todo o PC: tanto o rendemento como as futuras expansións dependen do tipo de placa base escollida.</p>
+<figure><img src="apuntes/fh/img/ud3/pcb-placa-base.png" alt="Placa base vista en perspectiva" loading="lazy"><figcaption><strong>Placa de circuíto impreso (PCB, Printed Circuit Board).</strong> Medio para suxeitar mecanicamente e conectar electricamente compoñentes electrónicos a través de pistas de material condutor gravado en láminas de cobre laminadas sobre un substrato non condutor.</figcaption></figure>
+<h4>Papel fundamental</h4>
+<ul>
+  <li><strong>Rendemento:</strong> determina o tipo de procesador, memoria, buses e interfaces de disco que se poden usar, e a capacidade de comunicación entre dispositivos a través do chipset, a BIOS e as súas canles.</li>
+  <li><strong>Organización:</strong> o seu deseño determina como se organiza o computador, xa que todo se conecta a ela.</li>
+  <li><strong>Actualización e expansión:</strong> determina ata que punto se pode actualizar o computador e que dispositivos se poden instalar.</li>
+</ul>
+<div class="box info"><div class="box-title">División dos sistemas dixitais por tamaño</div>
+<ul>
+  <li><strong>Mainframes:</strong> proceso masivo de datos no menor tempo posible.</li>
+  <li><strong>Estacións de traballo:</strong> aumentan a produtividade individual nas empresas.</li>
+  <li><strong>Automatismos:</strong> control e automatización de procesos con microcontroladores e autómatas programables.</li>
+  <li><strong>Portátiles</strong> (laptop, notebook): ordenador persoal que se pode transportar con facilidade.</li>
+</ul></div>`
+  },
+  {
+    id: 'fh-ud3-4-1',
+    tipo: 'subtema',
+    titulo: '4.1 Tipos de placas base (factores de forma)',
+    resumen: 'Os factores de forma definen forma, dimensións, ancoraxes, posición de baías/conectores e conector de alimentación. Extended-ATX 305×330 (servidores, varios zócolos), ATX 305×244 (o clásico, 7 baías a 20 mm), Micro-ATX 244×244 (o máis usado en gaming), FlexATX 229×101 (oficina), Mini-ITX 170×170 (HTPC, non deriva de ATX), Nano-ITX 120×120 (IoT, multimedia), Pico-ITX 100×72 (CPU e RAM soldadas, GPIO, <8 W). Históricos: AT e BTX.',
+    claves: ['Factor de forma: forma, dimensións, posición dos parafusos, zonas de baías/conectores traseiros, conector e conexións da fonte', 'E-ATX: 305×330 mm · estacións de traballo e servidores · varios zócolos, máis DIMM', 'ATX: 305×244 mm · o máis clásico · X = Enhanced · 7 baías separadas 20 mm', 'Micro-ATX: 244×244 mm · primeira variante compacta · o máis usado para gaming', 'FlexATX: 229×101 mm · oficina/multimedia · económicas · fontes SFX', 'Mini-ITX: 170×170 mm · non deriva de ATX · HTPC e compactos · refrixeración e gráficas compactas', 'Nano-ITX: 120×120 mm · multimedia, IoT, mini PC · expansión limitada', 'Pico-ITX: 100×72 mm · CPU e RAM soldadas · <8 W · pasiva · GPIO (Raspberry Pi) · domótica, servidores domésticos', 'AT (anos 80): ~300 mm, conector de 6 pins · BTX (Intel 2004): mellor refrixeración, incompatible con ATX salvo a fonte, non aceptado', 'Escoller a caixa que corresponda ó factor de forma da placa'],
+    tags: ['factor de forma', 'ATX', 'E-ATX', 'Micro-ATX', 'FlexATX', 'Mini-ITX', 'Nano-ITX', 'Pico-ITX', 'AT', 'BTX', 'HTPC', 'GPIO'],
+    contenido: `
+<p>Por que hai diferentes tipos se a placa base ofrece a mesma función? Débese ás diferentes configuracións e requisitos dos sistemas: a elección depende do procesador, do tipo de sistema e das características adicionais que se precisen. Para reducir custos e permitir a intercambiabilidade, os fabricantes crearon <strong>estándares</strong> sobre o tamaño e a disposición dos elementos.</p>
+<div class="box def"><div class="box-title">Factor de forma</div><p>Estándares creados polos fabricantes. Definen: a <strong>forma</strong> da placa (cadrada ou rectangular); as <strong>dimensións</strong> exactas; a <strong>posición das ancoraxes</strong> (parafusos); as <strong>zonas</strong> das baías de expansión e conectores traseiros (teclado, rato, USB…); a <strong>forma do conector da fonte</strong>; e as <strong>conexións eléctricas</strong> da fonte (cantos cables, valores e función).</p></div>
+<figure><img src="apuntes/fh/img/ud3/factores-forma-placas.png" alt="Comparativa de tamaños ATX, Micro-ATX, Mini-ITX, Nano-ITX, Pico-ITX" loading="lazy"><figcaption>Tamaños relativos: ATX, Micro-ATX, Mini-ITX, Nano-ITX e Pico-ITX.</figcaption></figure>
+<h4>Extended-ATX (E-ATX)</h4>
+<p>Non deseñadas para PC cotiáns: úsanse en <strong>estacións de traballo e servidores pequenos</strong>. Tamaño <strong>305×330 mm</strong>, o que permite máis compoñentes: máis dun <strong>zócolo de CPU</strong>, maior número de módulos DIMM e canles de memoria… Non é un formato común: moitas carcasas teñen problemas para montalas; comprobar as especificacións.</p>
+<h4>ATX</h4>
+<p>O tipo <strong>máis clásico</strong>. Factor de forma rectangular, deseñado para facilitar instalación e mantemento, con máis baías e portos de expansión. O acrónimo vén de que os PC co 286 de Intel recibían o alcume de <strong>AT</strong>; co auxe dos clons a mediados dos 90 pasaron a chamarse <strong>ATX</strong>, onde a <strong>X significa Enhanced</strong> (mellorada). Dende entón é o estándar por excelencia. Dimensións <strong>305×244 mm</strong>. As placas derivadas de ATX funcionan co seu tipo de fonte e respectan as <strong>sete baías de expansión separadas 20 mm</strong>. O estándar está en constante revisión (novos portos, eliminación dos desactualizados).</p>
+<h4>Micro-ATX</h4>
+<p>Primeira variante do ATX, máis compacta: <strong>244×244 mm</strong>. Cambia a posición das baías de expansión respecto á placa. Os catro orificios superiores coinciden cos de ATX (20 mm), pero os dous inferiores son máis estreitos. Non é un problema: a maioría de usuarios nunca usa toda a expansión dun ATX. Hoxe son as <strong>máis utilizadas para PC de xogos</strong>, porque ofrecen a configuración e expansión necesarias.</p>
+<h4>FlexATX</h4>
+<p>Derivado do ATX para sobremesas <strong>pequenos</strong>: <strong>229×101 mm</strong>, con moitas menos opcións de conectividade. Compatible coas mesmas caixas que ATX (comprobar especificacións; non é tan común). Úsase en equipos de <strong>oficina e multimedia</strong> dunha soa función con espazo limitado. Non tódalas gráficas caben (as de gama alta non); menos espazo de RAM e portos PCIe. Deseñadas para ordenadores <strong>económicos</strong>. Compatibles con fontes ATX, pero para aforrar espazo pódense usar <strong>SFX</strong>.</p>
+<h4>Mini-ITX</h4>
+<p>Para pequenos sobremesas; <strong>non derivan das ATX</strong>. <strong>170×170 mm</strong>; menos compoñentes, aínda que a integración fixo que sexan tan boas como as ATX co tempo. O tamaño dá problemas para montar refrixeración (radiadores e disipadores pensados para ATX/Micro-ATX); hai gráficas máis compactas para caixas Mini-ITX. Os seus catro orificios coinciden cos da esquerda e centro das ATX, pero usalas nunha caixa ATX é un desperdicio. Recoméndanse para <strong>HTPC</strong> (<em>Home Theater Personal Computer</em>) e sistemas compactos con fontes pequenas.</p>
+<h4>Nano-ITX</h4>
+<p>Variante máis pequena do Mini-ITX: <strong>120×120 mm</strong>. Destinadas a dispositivos <strong>multimedia de consumo</strong>: caixas Android de gama alta, centros multimedia, dispositivos <strong>IoT</strong>, sistemas de son, ultraportátiles de baixo consumo ou mini PC. Expansión moi limitada: deseñadas para un uso específico sen actualizacións.</p>
+<h4>Pico-ITX</h4>
+<p>As <strong>máis pequenas</strong> do mercado: <strong>100×72 mm</strong>. Veñen co <strong>procesador integrado</strong> (non substituíble) e a <strong>RAM soldada</strong>, como nos portátiles. Perfectas para dispositivos <strong>domóticos</strong> pequenos de baixo consumo e <strong>servidores domésticos</strong> (ficheiros, P2P): consumo <strong>&lt; 8 W</strong>, refrixeración pasiva (pódese engadir ventilador). Permiten módulos adicionais grazas ós <strong>pins GPIO</strong> integrados (como na <strong>Raspberry Pi</strong>): sensores, pantallas…</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/pico-itx-raspberry.png" alt="Placa tipo Raspberry Pi con GPIO" loading="lazy"><figcaption>Placa compacta tipo Raspberry Pi con pins GPIO.</figcaption></figure>
+<table>
+<tr><th>Formato</th><th>Dimensións</th><th>Uso típico</th></tr>
+<tr><td>E-ATX</td><td>305 × 330 mm</td><td>Servidores, estacións de traballo</td></tr>
+<tr><td>ATX</td><td>305 × 244 mm</td><td>Sobremesa estándar</td></tr>
+<tr><td>Micro-ATX</td><td>244 × 244 mm</td><td>Gaming, sobremesa compacto</td></tr>
+<tr><td>FlexATX</td><td>229 × 101 mm</td><td>Oficina, multimedia económico</td></tr>
+<tr><td>Mini-ITX</td><td>170 × 170 mm</td><td>HTPC, compactos</td></tr>
+<tr><td>Nano-ITX</td><td>120 × 120 mm</td><td>Multimedia, IoT, mini PC</td></tr>
+<tr><td>Pico-ITX</td><td>100 × 72 mm</td><td>Domótica, servidores domésticos</td></tr>
+</table>
+<div class="box info"><div class="box-title">Formatos históricos</div>
+<p><strong>Placa base AT:</strong> dimensións da orde de 300 mm, imposible de encaixar en miniordenadores de sobremesa. Os conectores de seis pins naceron como alimentación para este tipo de placa. Producida a mediados dos 80, durou case dúas décadas ata a proliferación de clónicos.</p>
+<p><strong>BTX (Balanced Technology Extended):</strong> creado por <strong>Intel en 2004</strong> como evolución do ATX para resolver problemas de <strong>refrixeración</strong> dalgúns procesadores. Practicamente incompatible co ATX, agás pola fonte. Non foi aceptado polos fabricantes e usuarios porque a localización do procesador o facía incompatible con algúns tipos de procesadores.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/placa-base-at.png" alt="Placa base AT antiga" loading="lazy"><figcaption>Placa base AT.</figcaption></figure></div>
+<div class="box tip"><div class="box-title">Unha carcasa pode ser compatible con varios formatos?</div><p>A placa base determina o tamaño do PC e da carcasa. Cada carcasa ten un formato ideal para cada placa, pero hai modelos de uso máis xeral: moitas <strong>semitorres</strong> son compatibles con ATX, Micro-ATX e ás veces Mini-ITX. Aínda así, é mellor escoller a caixa que corresponda ó factor de forma da placa: un Micro-ATX nun chasis ATX non aproveita a refrixeración da caixa nin ten a vantaxe do tamaño pequeno.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/carcasas-por-formato.png" alt="Carcasas Mini-ITX, micro-ATX, ATX e E-ATX" loading="lazy"><figcaption>Carcasas para Mini-ITX, Micro-ATX, ATX e E-ATX.</figcaption></figure></div>`
+  },
+  {
+    id: 'fh-ud3-4-2',
+    tipo: 'subtema',
+    titulo: '4.2 Conexións da placa base',
+    resumen: 'Conexións internas (PCI, SATA, pila, RAM, disqueteira, alimentación ATX, zócolo do procesador, IDE, PCI Express, cabeceiras USB) e externas no panel traseiro (PS/2, USB 2.0/3.0, VGA, DVI, HDMI, botón de reinicio UEFI, FireWire, eSATA, RJ45, son analóxico e dixital).',
+    claves: ['Internos: 1 PCI · 2 SATA · 3 pila · 4 RAM · 5 disqueteira · 6 alimentación ATX · 7 zócolo · 8 IDE · 9 PCI Express', 'Cabeceiras USB internas para o panel frontal', 'Externos: 1 PS/2 · 2/7 USB 2.0 · 3 VGA · 4 DVI · 5 HDMI · 6 reinicio UEFI · 8 FireWire · 9 eSATA · 10 RJ45 · 11 USB 3.0 · 12 son analóxico · 13 son dixital'],
+    tags: ['conexións', 'conectores internos', 'conectores externos', 'PS/2', 'USB', 'HDMI', 'DVI', 'VGA', 'RJ45', 'FireWire', 'SATA', 'IDE'],
+    contenido: `
+<p>As placas base teñen varias conexións que lles permiten comunicarse con outros compoñentes, tanto de xeito <strong>interno</strong> como <strong>externo</strong>.</p>
+<figure><img src="apuntes/fh/img/ud3/conectores-internos-placa.png" alt="Conectores internos dunha placa base" loading="lazy"><figcaption><strong>Conectores internos da placa base:</strong> 1 PCI · 2 SATA · 3 pila · 4 memoria RAM · 5 disqueteira · 6 conexión eléctrica ATX · 7 zócolo do procesador · 8 IDE · 9 PCI Express.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/conectores-usb-internos.png" alt="Cabeceiras USB internas" loading="lazy"><figcaption>Cabeceiras USB internas para conectar os portos do panel frontal.</figcaption></figure>
+<figure><img src="apuntes/fh/img/ud3/conectores-externos-placa.png" alt="Panel de conectores externos" loading="lazy"><figcaption><strong>Conectores externos da placa base:</strong> 1 PS/2 · 2 USB 2.0 · 3 VGA · 4 DVI · 5 HDMI · 6 reinicio UEFI · 7 USB 2.0 · 8 FireWire · 9 SATA (eSATA) · 10 RJ45 · 11 USB 3.0 · 12 son analóxico · 13 son dixital.</figcaption></figure>`
+  },
+  {
+    id: 'fh-ud3-4-3',
+    tipo: 'subtema',
+    titulo: '4.3 BIOS (Basic Input/Output System)',
+    resumen: 'Rutinas básicas de baixo nivel almacenadas na ROM-BIOS (ou UEFI) que arrancan o ordenador e ceden o control ó sistema operativo. Alimentadas por unha pila de botón. Configúrase co setup (F2 ou Supr ó arrancar). Propósito: iniciar e probar o hardware e cargar un xestor de arranque ou SO.',
+    claves: ['Rutinas básicas de baixo nivel para arrancar e ceder o control ó SO', 'Almacenadas en ROM-BIOS (antes) ou UEFI (hoxe)', 'Pila de botón alimenta a configuración de forma permanente', 'Setup: F2 ou Supr antes de cargar o SO', 'Propósito: iniciar e probar o hardware (POST) e cargar o xestor de arranque/SO'],
+    tags: ['BIOS', 'ROM-BIOS', 'setup', 'pila', 'arranque', 'firmware', 'POST'],
+    contenido: `
+<p>Nas antigas memorias <strong>ROM-BIOS</strong> e nas actuais <strong>UEFI</strong> almacénanse as <strong>rutinas básicas de baixo nivel</strong> que fan posible que o ordenador arranque para, posteriormente, ceder o control ó sistema operativo. Están alimentadas de forma permanente por unha <strong>pila de botón</strong>.</p>
+<p>Mediante o <strong>setup</strong> podemos configurar a BIOS, tendo certos coñecementos técnicos. Para activalo teremos que premer, segundo o modelo de placa, a tecla <strong>F2</strong> ou <strong>Supr</strong> antes de que o equipo cargue o sistema operativo.</p>
+<div class="box def"><div class="box-title">Propósito da BIOS</div><p><strong>Iniciar e probar o hardware</strong> do sistema e <strong>cargar un xestor de arranque</strong> ou un sistema operativo que estea nun dispositivo de almacenamento.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/bios-pila.png" alt="Chip BIOS e pila de botón" loading="lazy"><figcaption>Chip ROM-BIOS e pila de botón na placa base.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/interface-bios.png" alt="Interface de texto da BIOS" loading="lazy"><figcaption><strong>Interface BIOS</strong> clásica (setup en modo texto).</figcaption></figure>
+</div>`
+  },
+  {
+    id: 'fh-ud3-4-4',
+    tipo: 'subtema',
+    titulo: '4.4 UEFI (Unified Extensible Firmware Interface)',
+    resumen: 'Especificación que define a interface entre o SO e o firmware da plataforma. Substitúe a BIOS con novas características: diagnose e reparación remotas sen SO, emulación de BIOS, arranque de unidades >2 TB con GPT, arquitectura e controladores independentes da CPU, contorna amigable e deseño modular.',
+    claves: ['Interface entre sistema operativo e firmware da plataforma', 'Xurdiu para substituír á BIOS', 'Diagnose e reparacións remotas, incluso sen SO instalado', 'Emula a BIOS se o SO só é compatible con ela (CSM)', 'Arranque dende unidades > 2 TB mediante GPT', 'Arquitectura e controladores independentes da CPU', 'Contorna gráfica amigable (rato) · deseño modular'],
+    tags: ['UEFI', 'firmware', 'GPT', '2 TB', 'modular', 'arranque'],
+    contenido: `
+<div class="box def"><div class="box-title">UEFI</div><p>Especificación que define a <strong>interface entre o sistema operativo e o firmware</strong> da plataforma. Xurdiu para <strong>substituír á BIOS</strong> e dotala de novas características, como soportar <strong>diagnose e reparacións remotas</strong>, incluso sen ter instalado o sistema operativo.</p></div>
+<p>Manexa bases de datos con información da plataforma, inicio e tempo de execución dos servizos dispoñibles, listos para cargar o sistema operativo. Destaca por:</p>
+<ul>
+  <li>Ser capaz de <strong>emular a BIOS</strong> cando o sistema operativo só é compatible con ela.</li>
+  <li>Posibilitar o <strong>arranque dende unidades superiores a 2 TB</strong> mediante <strong>GPT</strong>.</li>
+  <li>Ter unha arquitectura e controladores <strong>independentes da CPU</strong>.</li>
+  <li>Ter unha <strong>contorna de traballo amigable</strong>.</li>
+  <li>Ter un <strong>deseño modular</strong>.</li>
+</ul>
+<figure><img src="apuntes/fh/img/ud3/interface-uefi.png" alt="Interface gráfica UEFI" loading="lazy"><figcaption><strong>Interface UEFI</strong> gráfica (ASUS), con rato e paneis de estado.</figcaption></figure>`
+  },
+  {
+    id: 'fh-ud3-4-5',
+    tipo: 'subtema',
+    titulo: '4.5 Bus',
+    resumen: 'Cables ou pistas da placa por onde circula a información entre memoria, procesador e periféricos. Tres tipos: bus de control (goberna o acceso ás liñas compartidas), bus de enderezos (n liñas → 2ⁿ posicións enderezables) e bus de datos. Rendemento: ancho (8–128 bits, hoxe 64), frecuencia e velocidade de transmisión (MB/s). PCI Express: conexión punto a punto con carrís x1–x16.',
+    claves: ['Bus do sistema: cables/pistas para que a información circule entre memoria e periféricos segundo o procesador', 'Bus de control: goberna o uso das liñas de datos e enderezos compartidas; minimiza colisións', 'Bus de enderezos: enderezo do dato en tránsito; n liñas → 2ⁿ enderezos', 'Bus de datos: por el viaxan os datos entre compoñentes', 'Ancho do bus: 8, 16, 32, 64 ou 128 bits (hoxe 64)', 'Frecuencia do bus ≠ frecuencia da CPU → posibles pescozos de botella', 'Velocidade de transmisión: MB/s', 'Tódolos nodos reciben os datos do bus; os non destinatarios ignóranos', 'PCIe (2004): punto a punto, non bus; carrís x1, x4, x8, x16 · 1.0: 250 MB/s–4 GB/s · 2.0: 500 MB/s–8 GB/s · 3.0: 984,6 MB/s–15,8 GB/s · 4.0: 1969,2 MB/s–31,5 GB/s', 'Non confundir PCIe con PCI-X (evolución paralela do PCI que non se popularizou)'],
+    tags: ['bus', 'bus de control', 'bus de enderezos', 'bus de datos', 'ancho do bus', 'frecuencia', 'PCI Express', 'PCIe', 'carrís', 'PCI-X'],
+    contenido: `
+<div class="box def"><div class="box-title">Bus do sistema</div><p>Compoñente da placa base, formado por <strong>cables ou pistas</strong> nun circuíto impreso, que permite que a información circule da memoria cara ós periféricos e viceversa, segundo as instrucións do procesador.</p></div>
+<p>Divídense en tres tipos:</p>
+<ul>
+  <li><strong>Bus de control:</strong> goberna o uso e acceso ás liñas de datos e de enderezos, compartidas por tódolos compoñentes; así se minimizan as colisións de información.</li>
+  <li><strong>Bus de enderezos:</strong> canle independente do bus de datos onde se establece o <strong>enderezo de memoria</strong> do dato en tránsito. A memoria enderezable depende dos bits deste bus: con <em>n</em> liñas pódense enderezar <strong>2ⁿ</strong> posicións.</li>
+  <li><strong>Bus de datos:</strong> por el viaxan os datos entre os compoñentes hardware.</li>
+</ul>
+<h4>Capacidade e rendemento do bus</h4>
+<ul>
+  <li><strong>Ancho do bus:</strong> número de liñas en paralelo polas que se transmite información: 8, 16, 32, 64 ou 128 bits. Na actualidade trabállase con <strong>64 bits</strong>.</li>
+  <li><strong>Frecuencia do bus:</strong> frecuencia de reloxo á que traballa; non ten por que ser a da CPU, o que pode orixinar problemas de rendemento.</li>
+  <li><strong>Velocidade de transmisión:</strong> megabytes que pode transmitir nun segundo.</li>
+</ul>
+<p>Tódolos nodos conectados ó bus reciben os datos aínda que non se dirixan a eles; os nodos ós que non van dirixidos simplemente os ignoran.</p>
+<div class="box info"><div class="box-title">PCI Express</div>
+<p>O PCIe arrancou no <strong>2004</strong> e converteuse nun estándar que aínda non foi substituído, pero si mellorado. Os alicerces cambiaron: é unha <strong>conexión punto a punto, non un bus</strong>, eliminando a perda de rendemento de varios dispositivos comunicándose co procesador á vez. Nas placas vemos diferentes <strong>carrís</strong>: x1, x4, x8, x16.</p>
+<table>
+<tr><th>Versión</th><th>x1</th><th>x16</th></tr>
+<tr><td>PCIe 1.0</td><td>250 MB/s</td><td>4 GB/s</td></tr>
+<tr><td>PCIe 2.0</td><td>500 MB/s</td><td>8 GB/s</td></tr>
+<tr><td>PCIe 3.0</td><td>984,6 MB/s</td><td>15,8 GB/s</td></tr>
+<tr><td>PCIe 4.0</td><td>1969,2 MB/s</td><td>31,5 GB/s</td></tr>
+</table>
+<p>Non confundir <strong>PCIe</strong> con <strong>PCI-X</strong>: esta última foi unha evolución do PCI que non se popularizou porque se perdía velocidade ó instalar máis dun dispositivo.</p></div>`
+  },
+  {
+    id: 'fh-ud3-4-6',
+    tipo: 'subtema',
+    titulo: '4.6 Ocos de expansión',
+    resumen: 'Slots con contactos onde se inseren tarxetas para ampliar periféricos. Tipos: ISA (8/16 bits, desaparecido), PCI (paralelo, 32/64 bits, só para compoñentes obsoletos), AGP (gráficas, obsoleto) e PCI Express (serie, maior ancho de banda). Hoxe a maioría de periféricos van por USB e as placas integran rede, son e gráficos; os ocos quedan para dispositivos específicos.',
+    claves: ['Slot: contactos para inserir tarxetas que amplían periféricos; forma de comunicar o bus con outros dispositivos', 'ISA: 8 e 16 bits, xa non dispoñible', 'PCI: paralelo, 32 e 64 bits, só para compoñentes obsoletos', 'AGP: específico para gráficas, obsoleto', 'PCI Express: serie, maior ancho de banda', 'Antes 7 ocos, máis ISA que PCI; hoxe ningún ISA', 'USB → periféricos externos; placas integran rede, son, gráficos', 'Integrado: vantaxe = sen configurar (a ROM recoñéceo) · inconveniente = un fallo inutiliza toda a placa'],
+    tags: ['ocos de expansión', 'slots', 'ISA', 'PCI', 'AGP', 'PCI Express', 'tarxetas', 'integrado'],
+    contenido: `
+<p>Parte dos periféricos podémolos conectar a través de <strong>ocos de expansión (slots)</strong>, que teñen un número determinado de contactos onde inserir tarxetas que amplían a capacidade e o número de periféricos. Referímonos á forma na que o bus se pode comunicar con outros dispositivos periféricos. Normalmente son de catro tipos:</p>
+<ul>
+  <li><strong>ISA:</strong> xa non están dispoñibles; servían para dispositivos de 8 e 16 bits.</li>
+  <li><strong>PCI:</strong> comunicación <strong>paralela</strong> para dispositivos de 32 e 64 bits; só en máquinas que precisan compoñentes obsoletos.</li>
+  <li><strong>AGP:</strong> específicos de <strong>tarxetas gráficas</strong>… tamén obsoleto.</li>
+  <li><strong>PCI Express:</strong> comunicación <strong>serie</strong>, polo que alcanza un ancho de banda maior.</li>
+</ul>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/ocos-expansion.png" alt="Ocos PCI Express e PCI nunha placa" loading="lazy"><figcaption>Ocos PCI Express (x16, x1) e PCI.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/ocos-pci.png" alt="Ocos PCI" loading="lazy"><figcaption>Ocos PCI clásicos.</figcaption></figure>
+</div>
+<p>Antigamente as placas incorporaban nos sete ocos máis ISA que PCI, pero hoxe non se monta ningún ISA. Coa aparición dos conectores <strong>USB</strong>, a maioría dos periféricos conéctanse dende o exterior. Ademais, a maioría das placas <strong>integran</strong> tarxetas de rede, de son, gráficas… Así, os ocos só se usan para dispositivos moi específicos.</p>
+<div class="box tip"><div class="box-title">Integrado: vantaxe e inconveniente</div><p>A vantaxe é a <strong>despreocupación á hora de configuralos</strong>: a propia ROM está configurada para recoñecelos. O inconveniente é que, ante a maioría dos fallos dalgún deles, <strong>toda a placa base queda inutilizada</strong>.</p></div>`
+  },
+  {
+    id: 'fh-ud3-4-7',
+    tipo: 'subtema',
+    titulo: '4.7 Chipset',
+    resumen: 'Conxunto de circuítos integrados da placa que manexa o fluxo de datos entre procesador, memoria e periféricos; determina memoria máxima, buses, número de procesadores e a familia de micros compatible. Clásicamente ponte norte (CPU↔RAM↔AGP/PCIe, bus frontal FSB) e ponte sur (E/S, discos). Hoxe a ponte norte está no procesador (PCH de Intel desde 2009; I/O Die con Infinity Fabric en AMD Zen) e o que queda na placa chámase chipset.',
+    claves: ['Chipset = xogo de circuítos integrados auxiliares: fluxo de datos entre CPU, memoria e periféricos', 'Determina: memoria máxima enderezable, tipos/velocidades de buses, nº de procesadores, familia de micros compatible', 'Ponte norte: CPU ↔ RAM ↔ AGP/PCIe; con disipador; conectada á CPU polo bus frontal (FSB), que limita a lectura da RAM', 'Ponte sur: disco duro e resto de E/S; ligada á ponte norte', 'Hoxe: ponte norte integrada no procesador → PCH (Intel, 2009); ponte sur na placa → "chipset"', 'PCH: reloxo do sistema, FDI (gráficos integrados), DMI; xestiona PCIe principais (GPU + M.2) e memoria', 'Chipset actual: portos E/S, algúns PCIe, RAID, overclocking', 'AMD Zen: I/O Die (cIOD) = antiga ponte norte · Infinity Fabric = antigo FSB · UMC (memoria) · Hub de E/S', 'Frecuencias: fclk (Infinity Fabric), uclk (UMC), iclk (I/O Hub), mclk (RAM)', 'Capacidades do PCH ∝ núcleos/gama: overclocking, carrís PCIe (16 GPU + M.2), SATA, USB directos, liñas co chipset', 'Sobrequentamento do chipset → fallos como unha CPU; disipador pasivo; configuración equilibrada'],
+    tags: ['chipset', 'ponte norte', 'ponte sur', 'northbridge', 'southbridge', 'FSB', 'PCH', 'Platform Controller Hub', 'DMI', 'FDI', 'Infinity Fabric', 'I/O Die', 'Zen', 'AMD', 'Intel'],
+    contenido: `
+<div class="box def"><div class="box-title">Chipset</div><p>Xogo de circuítos integrados auxiliares: conxunto de circuítos integrados da placa base que <strong>manexa o fluxo de datos entre o procesador, a memoria e os periféricos</strong>.</p></div>
+<p>Determina as características <strong>inalterables</strong> da placa: o tamaño máximo de memoria enderezable, os tipos e velocidades dos buses, o número de procesadores que soporta… e o máis importante, a <strong>familia de microprocesadores</strong> que se poderá usar.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/chipset-disipador.png" alt="Chipset con disipador" loading="lazy"><figcaption>Chipset cun disipador térmico pasivo.</figcaption></figure>
+<h4>Ponte norte e ponte sur</h4>
+<p>A maior parte destas funcións agrúpanse en dous circuítos integrados de gran tamaño, chamados <strong>ponte norte</strong> e <strong>ponte sur</strong>. As placas actuais xa non soen traer a ponte norte, pois os micros de última xeración a levan integrada.</p>
+<ul>
+  <li><strong>Ponte norte:</strong> controla o fluxo de datos entre a <strong>CPU e a RAM</strong> e cara ó porto <strong>AGP ou PCI Express</strong>; soe levar un disipador polo quentamento. O bus que a conecta co procesador chámase <strong>bus frontal (FSB)</strong>; a súa velocidade limita o rendemento porque é a máxima á que o procesador pode ler da RAM.</li>
+  <li><strong>Ponte sur:</strong> transferencia de datos do <strong>disco duro</strong> e demais dispositivos de <strong>E/S</strong>, que transfire a través da canle de ligazón conectada á ponte norte.</li>
+</ul>
+<figure class="small"><img src="apuntes/fh/img/ud3/chipset-via.png" alt="Chip VIA de chipset" loading="lazy"><figcaption>Circuíto integrado dun chipset (VIA).</figcaption></figure>
+<h4>Que é o PCH?</h4>
+<p>Actualmente o <em>Northbridge</em> integrouse no procesador e pasou a chamarse <strong>PCH</strong>; o <em>Southbridge</em> aínda está na placa, pero agora chámase <strong>chipset</strong>. O <strong>Platform Controller Hub</strong> introduciuse en <strong>2009</strong> como solución simplificada de enrutamento de datos e soporte. Inclúe o <strong>reloxo do sistema</strong>, a <strong>Flexible Display Interface (FDI)</strong> (só con gráficos integrados) e a <strong>Direct Media Interface (DMI)</strong>.</p>
+<p>Distribución actual: o <strong>PCH</strong> xestiona as principais canles PCIe (<strong>GPU + SSD M.2</strong>) e a <strong>memoria</strong>; o <strong>chipset</strong> xestiona os portos de <strong>E/S</strong>, algunhas canles PCIe e aspectos especiais como <strong>RAID</strong> ou <strong>overclocking</strong>.</p>
+<h4>O equivalente en AMD (Zen)</h4>
+<p>AMD ten un deseño equivalente con diferenzas (a súa arquitectura chámase <strong>Zen</strong>, fronte a <strong>Gen</strong> de xeración en Intel). Polo seu deseño tipo <strong>chiplet</strong>, o PCH está dentro do paquete pero separado dos núcleos: un die específico chamado <strong>I/O Die</strong>:</p>
+<ul>
+  <li><strong>Die de E/S (cIOD):</strong> comunicación entre o procesador e os compoñentes externos (memoria e bus PCI).</li>
+  <li><strong>Infinity Fabric:</strong> bus que interconecta os CCX entre si, os CCD entre si e co die de E/S; forma parte do cIOD.</li>
+  <li><strong>Unified Memory Controller (UMC):</strong> comunicación coa RAM.</li>
+  <li><strong>Hub de E/S:</strong> comunicación co bus PCIe, periféricos e calquera outro bus que non sexa o da RAM.</li>
+</ul>
+<p>Noutras palabras: o <strong>die de E/S é a antiga ponte norte</strong> e o <strong>bus frontal (FSB) sería o Infinity Fabric</strong>. Cada parte funciona a unha frecuencia distinta: <strong>fclk</strong> (Infinity Fabric), <strong>uclk</strong> (UMC), <strong>iclk</strong> (I/O Hub); a RAM funciona a <strong>mclk</strong>.</p>
+<h4>Capacidades que proporciona o PCH</h4>
+<p>O procesador debe comunicarse con compoñentes de distintos fabricantes a través do PCH. As súas capacidades están en consonancia co procesador (normalmente proporcionais ó número de núcleos) e co prezo. Varían segundo:</p>
+<ul>
+  <li>Capacidade de <strong>overclocking</strong> para procesador e RAM.</li>
+  <li>Número de <strong>carrís PCIe directos</strong>: normalmente 16 para a gráfica e algúns adicionais para SSD M.2.</li>
+  <li>Número de interfaces <strong>SATA</strong>.</li>
+  <li>Número de portos <strong>USB</strong> directos no procesador.</li>
+  <li>Liñas de comunicación directa co chipset.</li>
+</ul>
+<p>Non tódalas placas empregan tódalas características dun PCH: nunha Micro-ATX ou Mini-ITX non hai espazo para varias interfaces, quedando só as máis importantes.</p>
+<div class="box warn"><div class="box-title">Problemas do PCH</div><p>Igual que unha CPU, as <strong>temperaturas</strong> afectan ó seu funcionamento; un erro de microcódigo ou unha voltaxe mal axustada tamén poden causar erros críticos. Se o chipset se sobrequenta pode sufrir os mesmos fallos que unha CPU; por iso incorpora un <strong>disipador pasivo</strong>. É moi importante unha configuración <strong>equilibrada en potencia e refrixeración</strong>.</p></div>`
+  },
