@@ -271,3 +271,132 @@ window.APUNTES.unidades.push({
 <p>Obter o valor hexadecimal de <code>0,07₈</code>. Pasamos a binario: 0→000 , 0→000 7→111 ⇒ <code>0,000111</code>. Reagrupamos en cuaternas: <code>0000 , 0001 1100</code> → 0 , 1 C.</p>
 <p><strong>Resultado: 0,1C₁₆</strong></p></div>`
   },
+
+  /* ---------------- 4 ---------------- */
+  {
+    id: 'fh-ud2-4',
+    tipo: 'tema',
+    titulo: '4. Medidas de información',
+    resumen: 'O bit é a unidade básica; un byte son 8 bits. Dende 1999 distínguense os prefixos decimais (KB = 1000 B, MB, GB… potencias de 10) dos binarios (KiB = 1024 B, MiB, GiB… potencias de 2). As memorias principais usan múltiplos de 1024 e as secundarias de 1000, pero moitos fabricantes seguen coa nomenclatura incorrecta.',
+    claves: ['Bit: información que só pode valer 0 ou 1 · Byte = 8 bits', 'kB = KB ≠ kb/Kb (bits)', 'Prefixos SI: KB 10³ · MB 10⁶ · GB 10⁹ · TB 10¹² · PB 10¹⁵ · EB 10¹⁸ · ZB 10²¹ · YB 10²⁴', 'Prefixos IEC (1999): KiB 2¹⁰ · MiB 2²⁰ · GiB 2³⁰ · TiB 2⁴⁰ · PiB 2⁵⁰ · EiB 2⁶⁰ · ZiB 2⁷⁰ · YiB 2⁸⁰', 'RAM e caché: múltiplos de 1024 · discos: múltiplos de 1000', 'Antes de 1999: 1 KB = 1024 bytes (hoxe incorrecto)', 'Ancho de banda: 1 bps = 1 bit/s · 1 B/s = 8 bit/s · 1 KB/s = 1000 B/s'],
+    tags: ['medidas', 'bit', 'byte', 'kilobyte', 'kibibyte', 'KB', 'KiB', 'MiB', 'GiB', 'prefixos', 'unidades'],
+    links: ['fh-ud2-4-1', 'fh-ud2-4-2', 'fh-ud2-4-3'],
+    contenido: `
+<p>No sistema binario só existen dous símbolos diferentes, 0 e 1. Unha información que só pode tomar como valores o 0 e o 1 denomínase <strong>bit</strong> e forma a <strong>unidade básica de información</strong>.</p>
+<p>Un ordenador, debido á súa construción baseada en circuítos electrónicos dixitais, traballa co sistema binario. Este é o motivo que nos obriga a transformar internamente tódolos nosos datos, tanto numéricos como alfanuméricos, a unha representación binaria.</p>
+<figure class="small"><img src="apuntes/fh/img/ud2/bit-byte.png" alt="Un byte formado por 8 bits" loading="lazy"><figcaption><strong>Bit ou byte.</strong> Non se debe confundir unha medida coa outra: un byte son 8 bits. Recorda: kB é o mesmo que KB, pero non que kb ou Kb (bits).</figcaption></figure>
+<p>Polo xeral, cando un fabricante fala de 4 GB de memoria RAM, fala de <strong>4 GiB</strong>… cando di que a caché é de 256 KB, quere dicir que ten <strong>256 KiB</strong>… cando di que un disco duro ten 500 GB, quere dicir 500 GB (500 · 1000 MB). Habitualmente, as capacidades das <strong>memorias principais</strong> usan múltiplos de <strong>1024</strong> e as das <strong>memorias secundarias</strong> múltiplos de <strong>1000</strong>.</p>
+<div class="box warn"><div class="box-title">Antes de 1999</div><p>Ata o ano 1999 non existían os KiB, MiB, GiB… e tampouco se utilizaban as potencias de dez cando se medía a información. Antes: 1 KB = 1024 bytes; 1 MB = 1024 KB. Isto hoxe en día <strong>non debería ser correcto</strong>, pero moitos fabricantes e comerciantes utilizan aínda a nomenclatura incorrecta.</p></div>
+<div class="fig-row">
+<table>
+<tr><th>Abrev.</th><th>Unidade (SI)</th><th>Equivalencia</th><th>Potencia</th></tr>
+<tr><td>KB</td><td>kilobyte</td><td>1000 bytes</td><td>10³</td></tr>
+<tr><td>MB</td><td>megabyte</td><td>1000 KB</td><td>10⁶</td></tr>
+<tr><td>GB</td><td>gigabyte</td><td>1000 MB</td><td>10⁹</td></tr>
+<tr><td>TB</td><td>terabyte</td><td>1000 GB</td><td>10¹²</td></tr>
+<tr><td>PB</td><td>petabyte</td><td>1000 TB</td><td>10¹⁵</td></tr>
+<tr><td>EB</td><td>exabyte</td><td>1000 PB</td><td>10¹⁸</td></tr>
+<tr><td>ZB</td><td>zettabyte</td><td>1000 EB</td><td>10²¹</td></tr>
+<tr><td>YB</td><td>yottabyte</td><td>1000 ZB</td><td>10²⁴</td></tr>
+</table>
+<table>
+<tr><th>Abrev.</th><th>Unidade (IEC)</th><th>Equivalencia</th><th>Potencia</th></tr>
+<tr><td>KiB</td><td>kibibyte</td><td>1024 bytes</td><td>2¹⁰</td></tr>
+<tr><td>MiB</td><td>mebibyte</td><td>1024 KiB</td><td>2²⁰</td></tr>
+<tr><td>GiB</td><td>gibibyte</td><td>1024 MiB</td><td>2³⁰</td></tr>
+<tr><td>TiB</td><td>tebibyte</td><td>1024 GiB</td><td>2⁴⁰</td></tr>
+<tr><td>PiB</td><td>pebibyte</td><td>1024 TiB</td><td>2⁵⁰</td></tr>
+<tr><td>EiB</td><td>exbibyte</td><td>1024 PiB</td><td>2⁶⁰</td></tr>
+<tr><td>ZiB</td><td>zebibyte</td><td>1024 EiB</td><td>2⁷⁰</td></tr>
+<tr><td>YiB</td><td>yobibyte</td><td>1024 ZiB</td><td>2⁸⁰</td></tr>
+</table>
+</div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud2/piramide-unidades.png" alt="Pirámide byte, kilobyte, megabyte, gigabyte, terabyte" loading="lazy"><figcaption>Xerarquía de unidades con múltiplos de 1024: 1 · 1024 · 1 048 576 · 1 073 741 824 · 1 099 511 627 776.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud2/conversion-unidades.png" alt="Esquema de conversión bit-B-KB-MB-GB-TB" loading="lazy"><figcaption>Para subir de unidade divídese (÷8 de bit a byte, ÷1024 entre múltiplos); para baixar multiplícase.</figcaption></figure>
+</div>
+<div class="box tip"><div class="box-title">Como pasamos dunha medida a outra?</div>
+<p>Para pasar 24 756 bits a KiB e KB: 24 756 / 8 / 1000 = <strong>3,0945 KB</strong> · 24 756 / 8 / 1024 = <strong>3,022 KiB</strong> (o libro redondea a 3,072 KB e 3 KiB).</p>
+<p>Para pasar 6 291 456 bytes a MiB e MB: 6 291 456 / 1024 / 1024 = <strong>6 MiB</strong> · 6 291 456 / 1000 / 1000 = <strong>6,29 MB</strong>.</p></div>
+<div class="box info"><div class="box-title">Ancho de banda</div>
+<p>Mídese en información/segundo: 1 bps = 1 bit/s · 1 byte/s = 1 B/s = 8 bit/s · 1 KB/s = 1000 B/s · 1 MB/s = 1000 KB/s = 1 000 000 B/s.</p></div>`
+  },
+  {
+    id: 'fh-ud2-4-1',
+    tipo: 'subtema',
+    titulo: '4.1 Engano na capacidade dos discos',
+    resumen: 'Un disco de 20 GB son 20·10⁹ bytes. Linux amósao así, pero Windows usa 1024 e chámalle GB ó que en realidade son GiB, polo que un disco "medra" ou "encolle". Un SATA de 500 GB = 500 000 000 000 B = 465,66 GiB.',
+    claves: ['20 GB = 20·1000·1000·1000 = 2·10¹⁰ bytes', '20 GiB = 20·1024³ = 21 474 836 480 bytes', 'Windows: sistema binario pero etiqueta GB (non usa GiB)', 'Linux: binario para GiB e decimal para GB', '500 GB anunciados → 500 000 000 000 / 1024³ = 465,66 GiB', 'A maior capacidade, maior discrepancia entre prefixo decimal e binario', 'Os fabricantes redondean á baixa para aforrar custos'],
+    tags: ['disco duro', 'capacidade', 'GB', 'GiB', 'Windows', 'Linux', 'engano', 'fabricantes'],
+    contenido: `
+<p>Supoñamos que queremos instalar un disco duro de <strong>20 GB</strong>. Como é unha memoria secundaria usamos a potencia de 10, polo que a capacidade sería:</p>
+<p style="text-align:center"><code>20 · 1000 · 1000 · 1000 = 2·10¹⁰ bytes</code></p>
+<p>Se o instalamos nunha máquina con <strong>Linux</strong>, esta será a capacidade que lle asigne o sistema operativo; pero se ten <strong>Windows</strong> recoñéceo cunha capacidade "maior" porque emprega o sistema binario pero mantén a etiqueta GB:</p>
+<p style="text-align:center"><code>20 · 1024 · 1024 · 1024 = 21 474 836 480 bytes</code></p>
+<p>E se instalamos un Ubuntu nunha máquina en VirtualBox baixo Windows cun disco de 20 GB… pois <em>medra</em>: Windows amosa 21 GB (21 474 836 480 bytes) e GParted, en Linux, 18,00 GiB para a mesma partición.</p>
+<figure><img src="apuntes/fh/img/ud2/gparted-disco-21gb.png" alt="Captura de Windows e GParted co mesmo disco" loading="lazy"><figcaption>O mesmo disco virtual visto por Windows ("Disco duro 21 GB", 21 474 836 480 bytes) e por GParted en Linux (18,00 GiB). Windows utiliza un sistema binario para os GB e non usa a medida GiB; Linux usa binario para GiB e decimal para GB.</figcaption></figure>
+<div class="box ex"><div class="box-title">Cal é a capacidade real dun disco duro SATA anunciado de 500 GB?</div>
+<p>Os fabricantes fan a trampa de pasar dunha medida a outra multiplicando/dividindo por 1000 en vez de 1024:</p>
+<p><code>500 GB · 1000 · 1000 · 1000 = 500 000 000 000 bytes</code></p>
+<p>Pero en realidade Windows recoñéceo como:</p>
+<p><code>500 000 000 000 / 1024 / 1024 / 1024 = 465,66 GB</code> — ou máis formalmente <strong>465,66 GiB</strong>.</p></div>
+<div class="box warn"><div class="box-title">Débese ter en conta</div>
+<ul>
+  <li>Segundo o fabricante, a cantidade do disco pode variar lixeiramente, e para aforrar custos sóese <strong>redondear á baixa</strong>.</li>
+  <li>A capacidade expresada con prefixo decimal resulta nunha <strong>cifra maior</strong> que se se expresase con prefixo binario.</li>
+  <li>Canta maior capacidade ten un disco duro, <strong>maior é a discrepancia</strong> entre as cifras con prefixo decimal e binario.</li>
+</ul></div>`
+  },
+  {
+    id: 'fh-ud2-4-2',
+    tipo: 'subtema',
+    titulo: '4.2 Frecuencia dun bus e taxa de transferencia',
+    resumen: 'A frecuencia mídese en Hz (ciclos/s) con múltiplos de 1000. Non se poden comparar directamente frecuencias de microarquitecturas distintas. Os buses poden facer varias transferencias por ciclo (MT/s, GT/s). Taxa de transferencia (ancho de banda, bit rate) = ancho do bus × frecuencia × transferencias/ciclo.',
+    claves: ['1 Hz = 1 ciclo/s · 1 KHz = 1000 Hz · 1 MHz = 1000 KHz · 1 GHz = 1000 MHz', 'Frecuencia ≠ rendemento entre microarquitecturas distintas (ex.: FPU a 2,2 GHz máis rápida que outra a 2,5 GHz)', 'Transferencias/segundo: 1 MT/s = 10⁶ T/s · 1 GT/s = 10⁹ T/s', '100 MHz × 4 transferencias/ciclo = 400 MT/s', 'Taxa de transferencia = ancho do bus × velocidade do bus', '32 bits × 200 Hz × 1 T/ciclo = 6400 bit/s = 800 B/s'],
+    tags: ['frecuencia', 'Hz', 'bus', 'taxa de transferencia', 'ancho de banda', 'bit rate', 'MT/s', 'GT/s'],
+    contenido: `
+<p>Outra característica importante do procesador é a <strong>frecuencia</strong> á que funciona. Mídese en <strong>Hz</strong> (hertzs ou ciclos/segundo) e é a velocidade á que executa cada instrución. Aplícanse múltiplos de 1000 en 1000:</p>
+<table>
+<tr><td>1 Hz</td><td>1 ciclo/s</td></tr>
+<tr><td>1 KHz</td><td>1000 Hz</td></tr>
+<tr><td>1 MHz</td><td>1000 KHz</td></tr>
+<tr><td>1 GHz</td><td>1000 MHz</td></tr>
+</table>
+<div class="box warn"><div class="box-title">Ollo coas comparacións</div><p>Non se pode comparar directamente a frecuencia de dous procesadores con <strong>microarquitectura distinta</strong>. Aínda que un vaia a maior frecuencia non significa que logre executar máis microinstrucións: pode ser que a FPU (unidade de punto flotante) dun procesador a 2,2 GHz sexa moito máis rápida que a doutro a 2,5 GHz.</p></div>
+<p>Existen buses que en cada ciclo fan <strong>varias transferencias</strong> (unha, dúas, tres…), polo que na actualidade os fabricantes poden utilizar outra unidade para indicar a velocidade dun bus: as <strong>T/s ou transferencias/segundo</strong>:</p>
+<ul>
+  <li>1 MT/s = 10⁶ transferencias/segundo</li>
+  <li>1 GT/s = 10⁹ transferencias/segundo</li>
+</ul>
+<p>Por exemplo, se un bus traballa a 100 MHz e fai 4 transferencias en cada ciclo: <code>100 Mciclos/s · 4 transferencias/ciclo = 400 MT/s</code>.</p>
+<div class="box def"><div class="box-title">Taxa de transferencia (ancho de banda, bit rate)</div>
+<p>É a velocidade á que se transmiten os datos por unha canle. Para calculala sempre teñen que indicar o <strong>ancho do bus</strong>:</p>
+<p style="text-align:center"><strong>Taxa de transferencia = Ancho do bus · Velocidade do bus (frecuencia)</strong></p></div>
+<div class="box ex"><div class="box-title">Exemplo</div><p>Un bus cun ancho de 32 bits, que traballa a 200 Hz e fai unha transferencia por ciclo, fai 200 transferencias de datos por segundo:</p>
+<p><code>200 ciclos/s · 32 b/transferencia · 1 transferencia/ciclo · 1 B/8 b = 800 B/s</code></p></div>
+<figure class="small"><img src="apuntes/fh/img/ud2/ancho-de-banda.png" alt="Cables de fibra con bits fluíndo" loading="lazy"><figcaption>O ancho de banda mídese en información por segundo (bps, B/s, KB/s, MB/s…).</figcaption></figure>`
+  },
+  {
+    id: 'fh-ud2-4-3',
+    tipo: 'subtema',
+    titulo: '4.3 Velocidade de procesamento',
+    resumen: 'Mídese en Hz e indica os ciclos por segundo do microprocesador. Cada instrución leva un número de ciclos distinto. Exemplo: 100 instrucións (25 %·1 ciclo, 50 %·2, 25 %·5) a 300 KHz = 250 ciclos = 0,00083 s. O rendemento en cálculo científico mídese en FLOPS.',
+    claves: ['Velocidade de procesamento en Hz = ciclos/segundo do micro', 'Cada instrución do xogo de instrucións leva 1, 2, 3… ciclos', 'Exemplo: 25·1 + 50·2 + 25·5 = 250 ciclos · a 300 KHz → 250 / 300 000 = 0,00083 s', 'FLOPS = operacións en coma flotante por segundo · MFLOPS 10⁶ · GFLOPS 10⁹ · TFLOPS 10¹²', 'FLOPS non debe ser a única medida para valorar un ordenador'],
+    tags: ['velocidade', 'procesamento', 'ciclos', 'Hz', 'FLOPS', 'rendemento', 'instrucións'],
+    contenido: `
+<p>A <strong>velocidade de procesamento</strong> mídese en Hz e indica o número de ciclos por segundo ó que traballa o microprocesador. Cada instrución do xogo de instrucións que entende o procesador leva unha serie de ciclos na súa execución: haberá instrucións que con dous ciclos xa se executan, outras tres, outras catro…</p>
+<figure class="small"><img src="apuntes/fh/img/ud2/velocidade-procesamento.png" alt="Portátil con engrenaxes" loading="lazy"><figcaption>A velocidade de procesamento depende da frecuencia e dos ciclos que consome cada instrución.</figcaption></figure>
+<div class="box ex"><div class="box-title">Cantos ciclos precisa o programa?</div>
+<p>Un microprocesador ten unha frecuencia de 300 KHz e un programa ten 100 instrucións, das cales o 25 % se executan nun só ciclo, un 50 % necesitan dous ciclos e o resto necesitan 5 ciclos. Cantos ciclos e canto tempo necesita o programa para executarse enteiro?</p>
+<ul>
+  <li>25 instrucións · 1 ciclo/instrución = 25 ciclos</li>
+  <li>50 instrucións · 2 ciclos/instrución = 100 ciclos</li>
+  <li>25 instrucións · 5 ciclos/instrución = 125 ciclos</li>
+</ul>
+<p>Total: <strong>250 ciclos</strong>. Como 300 KHz = 300 000 ciclos/s ⇒ 1/300 000 s/ciclo:</p>
+<p><code>250 ciclos · 1/300 000 s/ciclo = 0,00083333 s</code></p></div>
+<div class="box info"><div class="box-title">Rendemento dunha computadora: FLOPS</div>
+<p>Para medir o rendemento dunha computadora, especialmente en cálculos científicos que usan gran número de operacións en coma flotante, úsase a medida <strong>FLOPS</strong> (<em>Floating Point Operations per Second</em>): operacións en punto flotante por segundo que é capaz de facer.</p>
+<p>1 MFLOPS = 10⁶ FLOPS · 1 GFLOPS = 10⁹ FLOPS · 1 TFLOPS = 10¹² FLOPS.</p>
+<p><strong>Ollo!</strong> Non se debe tomar como única medida para valorar a capacidade dun ordenador.</p></div>`
+  },
