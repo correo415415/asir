@@ -1086,3 +1086,74 @@ window.APUNTES.unidades.push({
 <figure class="small"><img src="apuntes/fh/img/ud3/tdp.png" alt="TDP" loading="lazy"><figcaption>Especificación de TDP dun procesador.</figcaption></figure>
 `
   },
+  {
+    id: 'fh-ud3-7', tipo: 'tema', titulo: '7. Memoria',
+    resumen: 'Hardware que retén información: disco duro (persistente), RAM (volátil e rápida), caché (moi rápida). Clasificación por volatilidade, accesibilidade, reescritura, capacidade, localización e xerarquía.',
+    claves: ['RAM', 'ROM', 'Caché', 'Volátil', 'Acceso aleatorio', 'Xerarquía de memoria'],
+    tags: ['memoria', 'ram', 'rom', 'cache'],
+    links: ['fh-ud3', 'fh-ud3-7-1', 'fh-ud3-7-2', 'fh-ud3-7-3', 'fh-ud3-7-4', 'fh-ud3-7-5'],
+    contenido: `
+<p>A memoria é a parte do hardware que retén durante certo tempo a información que precisa o sistema. Nun PC toma estas formas:</p>
+<ul>
+<li><b>Disco duro</b>: ficheiros e programas do usuario; mantén a información apagado; gran capacidade.</li>
+<li><b>Memoria RAM</b>: programas e datos temporais mentres o equipo está aceso; rápida; <b>volátil</b>.</li>
+<li><b>Memoria caché</b>: pequena cantidade de memoria de moi alta velocidade (en micros, discos…) para non pedir constantemente datos a partes máis lentas.</li>
+</ul>
+<figure class="small"><img src="apuntes/fh/img/ud3/xerarquia-memoria.png" alt="Xerarquía de memoria" loading="lazy"><figcaption>Xerarquía: rexistros → caché → RAM → disco → fóra de liña.</figcaption></figure>
+<div class="box def"><div class="box-title">Características que clasifican a memoria</div>
+<ul>
+<li><b>Volatilidade</b>: volátil (RAM, precisa enerxía) / non volátil (ROM). A memoria <i>dinámica</i> é volátil e precisa refresco periódico.</li>
+<li><b>Accesibilidade</b>: acceso aleatorio (calquera posición en calquera momento) / secuencial (hai que atravesar as anteriores).</li>
+<li><b>Reescritura</b>: lectura/escritura; só lectura (ROM, gravada en fábrica); WORM (Write Once Read Many).</li>
+<li><b>Capacidade</b>: desde os semicondutores (anos 70) a velocidade ×100 000 e a capacidade creceu exponencialmente.</li>
+</ul></div>
+<div class="box info"><div class="box-title">Clasificación da memoria</div>
+<ul>
+<li><b>Localización</b>: caché, principal/interna, secundaria/periférica.</li>
+<li><b>Tecnoloxía</b>: semicondutora, magnética, óptica; volátil / non volátil.</li>
+<li><b>Tipo de escritura</b>: RAM, ROM, PROM, EPROM, EEPROM, FLASH.</li>
+<li><b>Xerarquía (distancia á CPU)</b>: primaria (caché e RAM), secundaria (discos), terciaria (brazo robótico), fóra de liña (DVD, USB), en rede (nube).</li>
+</ul></div>
+`
+  },
+  {
+    id: 'fh-ud3-7-1', tipo: 'subtema', titulo: '7.1 Memoria RAM (SDRAM DDR)',
+    resumen: 'Módulo con chips DRAM (precisan refresco) + SPD. Síncrona co reloxo (SDRAM); DDR transmite nos dous flancos → frecuencia efectiva = 2× real. DDR2…DDR6 duplican cada xeración; fendedura distinta por incompatibilidade de voltaxes.',
+    claves: ['DRAM vs SRAM', 'SPD', 'SDRAM', 'DDR', 'Frecuencia efectiva', 'Frecuencia real'],
+    tags: ['memoria', 'ram', 'ddr', 'sdram'],
+    links: ['fh-ud3-7', 'fh-ud3-7-2', 'fh-ud3-7-3'],
+    contenido: `
+<div class="box def"><div class="box-title">RAM</div><p>Memoria de almacenamento a curto prazo usada polo SO para almacenar temporalmente os programas e os seus procesos en execución. Nela cárganse as instrucións que executa a CPU e os datos que manipulan os programas. <b>Acceso aleatorio</b>: ler ou escribir en calquera posición co mesmo tempo de espera (a diferenza dunha cinta de casete).</p></div>
+<p>O que chamamos "memoria RAM" é un <b>módulo</b> (placa de circuíto impreso) con chips <b>DRAM</b> soldados:</p>
+<ul>
+<li><b>DRAM</b> (Dynamic RAM): precisa <b>refresco</b> continuo ou perde os datos. Barata, usada como memoria principal.</li>
+<li><b>SRAM</b> (Static RAM): non precisa refresco, mellores prestacións, máis cara por bit; úsase en rexistros e caché. Non confundir refresco con volatilidade: hai SRAM volátil e non volátil (NVRAM).</li>
+<li><b>SPD</b>: pequeno chip do módulo con datos de tamaño, tempo de acceso, velocidade e tipo, para que o controlador de memoria da placa se configure.</li>
+</ul>
+<div class="box def"><div class="box-title">SDRAM e DDR</div><p>As RAM actuais len/escriben en <b>sincronismo co reloxo</b> (SDRAM). <b>DDR</b> (Double Data Rate) transmite datos dúas veces por pulso (flancos de subida e baixada) → duplica a transferencia sen cambiar a frecuencia. De aí a <b>frecuencia efectiva</b> (a que anuncian os fabricantes, 2× a real) fronte á <b>frecuencia real</b> de traballo. DDR2, DDR3, DDR4, DDR5 e DDR6 seguen duplicando cada xeración.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/sdr-ddr-qdr.png" alt="SDR, DDR, QDR" loading="lazy"><figcaption>SDR vs DDR vs QDR: transferencias por ciclo de reloxo.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/ddr-xeracions.png" alt="Xeracións DDR" loading="lazy"><figcaption>As fendeduras das DDR non coinciden: distintas voltaxes.</figcaption></figure>
+</div>
+<div class="box info"><div class="box-title">Inscricións nos chips (histórico)</div><p>Se a memoria non vai ao ritmo da CPU prodúcense ciclos de espera. Nunha inscrición como <code>6825660</code>: 68 = chip de memoria, 2 = módulos internos… 256 = tamaño (KB), 60 = tempo de acceso (ns).</p></div>
+<div class="box tip"><div class="box-title">Novidades</div><p>DDR6 espérase para finais de 2025. A GDDR7 de 24 GB (gráficas) promete máis de 40 GB/s.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-7-2', tipo: 'subtema', titulo: '7.2 Factores de forma da RAM',
+    resumen: 'DIMM (sobremesa, 133,35×30 mm), FB-DIMM (servidores, mesmo tamaño, 5,1 mm grosor), SO-DIMM (portátiles, 67,6×30 mm).',
+    claves: ['DIMM', 'FB-DIMM', 'SO-DIMM', 'Rañuras de memoria'],
+    tags: ['memoria', 'ram', 'dimm', 'sodimm'],
+    links: ['fh-ud3-7', 'fh-ud3-7-1', 'fh-ud3-7-3'],
+    contenido: `
+<table><tr><th>Formato</th><th>Uso</th><th>Medidas</th><th>Grosor máx.</th></tr>
+<tr><td><b>DIMM</b> (Dual In-line Memory Module)</td><td>Sobremesa</td><td>133,35 × 30 mm</td><td>4 mm</td></tr>
+<tr><td><b>FB-DIMM</b> (Fully-Buffered)</td><td>Servidores</td><td>133,35 × 30 mm</td><td>5,1 mm</td></tr>
+<tr><td><b>SO-DIMM</b> (Small Outline)</td><td>Portátiles, mini-ITX, barebones, impresoras de gama alta</td><td>67,6 × 30 mm</td><td>3,8 mm</td></tr>
+</table>
+<p>As SO-DIMM teñen menos contactos pero manteñen as características das DIMM.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/sodimm.png" alt="SO-DIMM" loading="lazy"><figcaption>Módulo SO-DIMM de portátil.</figcaption></figure>
+<div class="box info"><div class="box-title">Rañuras de memoria</div><p>A placa base ten normalmente entre 2 e 4 rañuras dun tipo específico. Xunto co chipset, determinan que tipo de memoria se pode conectar e a capacidade máxima recoñecida.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/instalar-ram.png" alt="Instalación de RAM" loading="lazy"><figcaption>Instalación dun módulo DIMM.</figcaption></figure>
+`
+  },
