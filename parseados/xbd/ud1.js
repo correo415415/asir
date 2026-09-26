@@ -15,7 +15,8 @@ window.APUNTES.materias.xbd = window.APUNTES.materias.xbd || {
   abrev: 'XBD',
   codigo: 'MP0372',
   color: '#1d4e89',
-  descripcion: 'Del dato al SGBD. PostgreSQL y MongoDB sobre la base de datos de prácticas TendaGalicia.'
+  descripcion: 'Del dato al SGBD. PostgreSQL y MongoDB sobre la base de datos de prácticas TendaGalicia.',
+  sugerencias: ['ACID', 'CAP', 'clave primaria', 'entidad', 'cardinalidad', 'normalización', 'JSON', 'PostgreSQL']
 };
 
 window.APUNTES.unidades.push({

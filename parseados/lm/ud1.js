@@ -15,7 +15,8 @@ window.APUNTES.materias.lm = window.APUNTES.materias.lm || {
   abrev: 'LM',
   codigo: 'LMSGI',
   color: '#5b4b8a',
-  descripcion: 'Lenguajes de marcas y sistemas de gestión de información: HTML, XML, JSON, YAML, documentos bien formados, espacios de nombres y transformación de datos.'
+  descripcion: 'Lenguajes de marcas y sistemas de gestión de información: HTML, XML, JSON, YAML, documentos bien formados, espacios de nombres y transformación de datos.',
+  sugerencias: ['XML bien formado', 'espacio de nombres', 'JSON', 'YAML', 'DOCTYPE', 'atributo', 'HTML5']
 };
 
 window.APUNTES.unidades.push({

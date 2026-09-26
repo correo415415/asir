@@ -210,8 +210,10 @@
   function rebuild(materiaId) {
     currentMateria = materiaId || null;
     closePanel(true);
-    buildGraph(currentMateria); layout(); render(); renderIndex(); renderMateriaSwitch();
+    buildGraph(currentMateria); layout(); render(); renderIndex(); renderMateriaSwitch(); updatePlaceholder();
     document.body.style.setProperty('--mat-color', (currentMateria && window.APUNTES.materias[currentMateria] || {}).color || '#0f2545');
+    // Volver a aplicar la búsqueda / filtro activo sobre el nuevo mapa
+    if (input.value.trim().length >= 2 || kindFilter) { renderResults(); results.hidden = true; }
   }
   function setMateria(materiaId, animate) {
     if ((materiaId || null) === currentMateria) return;
@@ -319,8 +321,10 @@
   viewport.addEventListener('pointerdown', e => {
     if (e.button !== 0 && e.pointerType === 'mouse') return;
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    // Guardamos el elemento pulsado: con la captura del puntero, el `target` del pointerup es el viewport.
+    const target = e.target;
     viewport.setPointerCapture(e.pointerId);
-    if (pointers.size === 1) { dragging = true; moved = false; start = { x: e.clientX, y: e.clientY, cx: cam.x, cy: cam.y }; }
+    if (pointers.size === 1) { dragging = true; moved = false; start = { x: e.clientX, y: e.clientY, cx: cam.x, cy: cam.y, target }; }
     if (pointers.size === 2) { const [p, q] = [...pointers.values()]; pinchStart = { d: Math.hypot(p.x - q.x, p.y - q.y), s: cam.s }; }
     $('#hint').classList.add('hide');
   });
@@ -343,14 +347,17 @@
     if (pointers.size === 0) {
       dragging = false; viewport.classList.remove('dragging');
       if (!moved) {
-        const nodeEl = e.target.closest && e.target.closest('.node');
+        const tgt = (start && start.target) || e.target;
+        const nodeEl = tgt.closest && tgt.closest('.node');
         if (nodeEl) {
           const now = performance.now();
-          if (now - lastTap < 350 && lastTapId === nodeEl.dataset.id) centerOn(G.byId.get(nodeEl.dataset.id), 1.3);
-          else openNode(nodeEl.dataset.id, true);
-          lastTap = now; lastTapId = nodeEl.dataset.id;
-        } else if (e.target === viewport || e.target === world || e.target === nodesEl || e.target === edgesEl) closePanel();
+          const id = nodeEl.dataset.id;
+          if (now - lastTap < 350 && lastTapId === id) centerOn(G.byId.get(id), 1.3);
+          else openNode(id, true, { keepTab: false });
+          lastTap = now; lastTapId = id;
+        } else if (tgt === viewport || tgt === world || tgt === nodesEl || tgt === edgesEl) closePanel();
       }
+      start = null;
     }
   };
   viewport.addEventListener('pointerup', endPointer);
@@ -449,8 +456,21 @@
   $('#panel-next').onclick = () => step(1);
   $('#panel-body').addEventListener('click', e => {
     const b = e.target.closest('[data-go]'); if (b) { openNode(b.dataset.go, true); return; }
-    const t = e.target.closest('.tag[data-q]'); if (t) { input.value = t.dataset.q; renderResults(); input.focus(); }
+    const t = e.target.closest('.tag[data-q]'); if (t) { input.value = t.dataset.q; renderResults(); input.focus(); return; }
+    const img = e.target.closest('figure img, img.zoom'); if (img) openLightbox(img);
   });
+
+  /* Visor de imágenes (clic en una figura del panel) */
+  function openLightbox(img) {
+    const fig = img.closest('figure'); const cap = fig && fig.querySelector('figcaption');
+    const lb = document.createElement('div'); lb.className = 'lightbox'; lb.setAttribute('role', 'dialog');
+    lb.innerHTML = `<img src="${esc(img.getAttribute('src'))}" alt="${esc(img.alt || '')}">${cap ? `<figcaption>${cap.innerHTML}</figcaption>` : ''}`;
+    const close = () => { lb.remove(); document.removeEventListener('keydown', onKey); };
+    const onKey = ev => { if (ev.key === 'Escape') { ev.stopPropagation(); close(); } };
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', onKey, true);
+    document.body.appendChild(lb);
+  }
 
   function highlight(root, q) {
     const terms = q.split(/\s+/).filter(t => t.length >= 2).map(escRe); if (!terms.length) return;
@@ -472,14 +492,34 @@
   $('#search-filters').innerHTML = `<button data-k="" class="on">Todo</button>` + ['tema', 'subtema', 'ejercicio', 'glosario'].map(k => `<button data-k="${k}">${KIND_LABEL[k]}s</button>`).join('');
   $('#search-filters').addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
-    kindFilter = b.dataset.k || null;
-    $$('#search-filters button').forEach(x => x.classList.toggle('on', x === b));
+    // Volver a pulsar el filtro activo lo desactiva (vuelve a «Todo»)
+    kindFilter = (b.dataset.k && b.dataset.k !== kindFilter) ? b.dataset.k : null;
+    $$('#search-filters button').forEach(x => x.classList.toggle('on', (x.dataset.k || null) === kindFilter));
     renderResults(); input.focus();
   });
 
+  /* Sugerencias del placeholder según la materia activa */
+  function updatePlaceholder() {
+    const A = window.APUNTES || { materias: {}, unidades: [] };
+    const m = currentMateria ? A.materias[currentMateria] : null;
+    let sug = m && Array.isArray(m.sugerencias) && m.sugerencias.length ? m.sugerencias.slice() : null;
+    if (!sug) {
+      // Sin lista explícita: tomar las etiquetas más frecuentes de los nodos visibles
+      const freq = new Map();
+      G.nodes.forEach(n => (n.tags || []).forEach(t => { const k = t.trim(); if (k.length > 2 && k.length < 22 && !/^ud\d/i.test(k) && !A.materias[k.toLowerCase()]) freq.set(k, (freq.get(k) || 0) + 1); }));
+      sug = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12).map(e => e[0]);
+    }
+    const pick = sug.slice(0, 4);
+    input.placeholder = m ? `Buscar en ${m.abrev || m.nombre}… ${pick.join(', ')}` : `Buscar en todos los apuntes… ${pick.join(', ')}`;
+  }
+
   function search(q) {
     const nq = norm(q).trim();
-    if (nq.length < 2) return [];
+    if (nq.length < 2) {
+      // Sin texto pero con filtro de tipo → listar todos los nodos de ese tipo (en orden del mapa)
+      if (kindFilter) return G.order.map(id => G.byId.get(id)).filter(n => n && n.tipo === kindFilter).map(n => ({ n, score: 0 }));
+      return [];
+    }
     const terms = nq.split(/\s+/).filter(Boolean);
     const out = [];
     G.nodes.forEach(n => {
@@ -508,29 +548,39 @@
   }
   function renderResults() {
     const q = input.value; const terms = norm(q).trim().split(/\s+/).filter(Boolean);
+    const hasText = norm(q).trim().length >= 2;
     current = search(q);
-    nodeEls.forEach(el => el.classList.remove('dim', 'match'));
+    nodeEls.forEach(el => el.classList.remove('dim', 'match', 'kind-on'));
     edgesEl.classList.remove('dimmed');
-    if (norm(q).trim().length < 2) { results.hidden = true; results.innerHTML = ''; return; }
+    if (!hasText && !kindFilter) { results.hidden = true; results.innerHTML = ''; return; }
     const ids = new Set(current.map(r => r.n.id));
-    nodeEls.forEach((el, id) => el.classList.toggle('dim', !ids.has(id)));
-    ids.forEach(id => nodeEls.get(id) && nodeEls.get(id).classList.add('match'));
-    edgesEl.classList.add('dimmed');
+    if (hasText) {
+      nodeEls.forEach((el, id) => el.classList.toggle('dim', !ids.has(id)));
+      ids.forEach(id => nodeEls.get(id) && nodeEls.get(id).classList.add('match'));
+      edgesEl.classList.add('dimmed');
+    } else {
+      // Solo filtro de tipo: marcar en el mapa las tarjetas de ese tipo
+      ids.forEach(id => nodeEls.get(id) && nodeEls.get(id).classList.add('kind-on'));
+    }
     results.hidden = false; sel = -1;
-    const re = new RegExp('(' + terms.map(escRe).join('|') + ')', 'gi');
-    results.innerHTML = current.length ? `<div class="sr-head"><span>${current.length} resultado${current.length === 1 ? '' : 's'}</span><span>↑ ↓ Enter</span></div>` + current.map((r, i) => `
+    const re = terms.length ? new RegExp('(' + terms.map(escRe).join('|') + ')', 'gi') : null;
+    const mark = s => re ? esc(s).replace(re, '<mark>$1</mark>') : esc(s);
+    const head = hasText
+      ? `${current.length} resultado${current.length === 1 ? '' : 's'}${kindFilter ? ' · ' + KIND_LABEL[kindFilter] + 's' : ''}`
+      : `${current.length} ${KIND_LABEL[kindFilter].toLowerCase()}${current.length === 1 ? '' : 's'}${currentMateria ? ' en ' + esc((window.APUNTES.materias[currentMateria] || {}).abrev || '') : ' en todas las materias'}`;
+    results.innerHTML = current.length ? `<div class="sr-head"><span>${head}</span><span>↑ ↓ Enter</span></div>` + current.map((r, i) => `
       <div class="sr-item" data-id="${r.n.id}" data-i="${i}">
         <span class="sr-dot" style="background:${r.n.color || KIND_COLOR[r.n.tipo]}"></span>
         <div class="sr-text">
-          <div class="sr-title">${esc(r.n.titulo).replace(re, '<mark>$1</mark>')}</div>
-          <div class="sr-crumb">${esc([r.n.ctx && r.n.ctx.materiaAbrev, r.n.ctx && r.n.ctx.unidadCod].filter(Boolean).join(' › '))}</div>
-          <div class="sr-snip">${snippet(r.n, terms)}</div>
+          <div class="sr-title">${mark(r.n.titulo)}</div>
+          <div class="sr-crumb">${esc([r.n.ctx && r.n.ctx.materiaAbrev, r.n.ctx && r.n.ctx.unidadCod, !hasText && r.n.parent && !r.n.parent.virtual && r.n.parent.tipo !== 'unidad' && r.n.parent.tipo !== 'materia' ? r.n.parent.titulo : ''].filter(Boolean).join(' › '))}</div>
+          <div class="sr-snip">${hasText ? snippet(r.n, terms) : esc(r.n.resumen || '')}</div>
         </div>
         <span class="sr-kind">${KIND_LABEL[r.n.tipo]}</span>
-      </div>`).join('') : `<div class="sr-empty">Sin resultados para «${esc(q)}»${kindFilter ? ' en ' + KIND_LABEL[kindFilter] + 's' : ''}</div>`;
+      </div>`).join('') : `<div class="sr-empty">${hasText ? `Sin resultados para «${esc(q)}»` : 'No hay nodos'}${kindFilter ? ' en ' + KIND_LABEL[kindFilter] + 's' : ''}</div>`;
   }
   input.addEventListener('input', renderResults);
-  input.addEventListener('focus', () => { if (input.value.trim().length >= 2) results.hidden = false; });
+  input.addEventListener('focus', () => { if (input.value.trim().length >= 2 || kindFilter) { if (!results.innerHTML) renderResults(); results.hidden = false; } });
   results.addEventListener('click', e => { const it = e.target.closest('.sr-item'); if (it) { openNode(it.dataset.id, true); results.hidden = true; } });
   input.addEventListener('keydown', e => {
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
@@ -542,7 +592,9 @@
       if (!current.length) return;
       openNode(current[Math.max(0, sel)].n.id, true); results.hidden = true;
     } else if (e.key === 'Escape') {
-      if (input.value) { input.value = ''; renderResults(); } else input.blur();
+      if (input.value) { input.value = ''; renderResults(); }
+      else if (kindFilter) { kindFilter = null; $$('#search-filters button').forEach(x => x.classList.toggle('on', !x.dataset.k)); renderResults(); }
+      else input.blur();
     }
   });
   document.addEventListener('click', e => { if (!e.target.closest('.search-wrap')) results.hidden = true; });

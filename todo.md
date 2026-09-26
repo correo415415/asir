@@ -14,11 +14,11 @@
 - [ ] Actualizar README (tabla de materias)
 
 ## Web
-- [ ] Buscador: las **sugerencias del placeholder** cambian según la materia activa
-- [ ] Al hacer **clic en una tarjeta** se abre automáticamente el panel lateral en ese nodo
-- [ ] Bug: texto de las tarjetas **borroso** al pasar el ratón (y se queda así) → quitar `transform: scale` / forzar `backface-visibility`, `translateZ(0)` o cambiar la animación de hover
-- [ ] Filtros del buscador (glosario, ejercicios, temas…, excepto «Todo»): al pulsarlos se **listan todos los resultados** de ese tipo aunque no haya texto, y las tarjetas de ese tipo se **marcan** en el mapa
-- [ ] Soporte de imágenes en el contenido de los nodos (estilo `figure`/`img` en el panel, click para ampliar)
+- [x] Buscador: las **sugerencias del placeholder** cambian según la materia activa
+- [x] Al hacer **clic en una tarjeta** se abre automáticamente el panel lateral en ese nodo
+- [x] Bug: texto de las tarjetas **borroso** al pasar el ratón (y se queda así) → quitar `transform: scale` / forzar `backface-visibility`, `translateZ(0)` o cambiar la animación de hover
+- [x] Filtros del buscador (glosario, ejercicios, temas…, excepto «Todo»): al pulsarlos se **listan todos los resultados** de ese tipo aunque no haya texto, y las tarjetas de ese tipo se **marcan** en el mapa
+- [x] Soporte de imágenes en el contenido de los nodos (estilo `figure`/`img` en el panel, click para ampliar)
 
 ## Mantenimiento
 - [ ] Commits frecuentes + PR actualizada

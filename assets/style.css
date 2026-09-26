@@ -245,16 +245,21 @@ body.index-open .index { transform: none; opacity: 1; }
   box-shadow: var(--shadow);
   transform: translate(-50%, -50%);
   cursor: pointer;
-  transition: box-shadow .18s, transform .18s, opacity .25s, border-color .18s;
+  /* Sin transiciones de transform: al animarlas el navegador rasteriza la tarjeta en una capa
+     propia a la escala actual y el texto queda borroso (y así se quedaba). */
+  transition: box-shadow .18s, opacity .25s, border-color .18s;
 }
 .node::before {
   content: ''; position: absolute; left: -1px; top: -1px; bottom: -1px; width: 4px; border-radius: var(--r-sm) 0 0 var(--r-sm);
   background: var(--nc, var(--c-tema));
 }
-.node:hover { box-shadow: var(--shadow-lg); transform: translate(-50%, -50%) translateY(-2px); border-color: var(--stroke-2); }
+.node:hover { box-shadow: var(--shadow-lg); border-color: var(--stroke-2); }
 .node.active { border-color: var(--navy); box-shadow: 0 0 0 3px var(--focus), var(--shadow-lg); }
 .node.dim { opacity: .22; }
 .node.match { border-color: var(--brass); box-shadow: 0 0 0 3px rgba(184,137,47,.28), var(--shadow-lg); }
+/* Marcado por filtro de tipo (botones del buscador) */
+.node.kind-on { border-color: var(--nc); box-shadow: 0 0 0 3px color-mix(in srgb, var(--nc) 26%, transparent), var(--shadow-lg); }
+.node.kind-on .n-kind { color: var(--nc); }
 
 .node .n-kind { display: flex; align-items: center; gap: 6px; font-size: 10px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 .node .n-kind i { width: 6px; height: 6px; border-radius: 1px; background: var(--nc); }
@@ -334,6 +339,19 @@ body.index-open .index { transform: none; opacity: 1; }
 .panel-body details[open] summary::before { transform: rotate(90deg); }
 .panel-body mark { background: #f3e2b3; color: #111; padding: 0 2px; border-radius: 2px; }
 
+/* Imágenes de los apuntes */
+.panel-body img { max-width: 100%; height: auto; display: block; border-radius: var(--r-sm); border: 1px solid var(--stroke); background: #fff; }
+.panel-body figure { margin: 14px 0; padding: 10px; border: 1px solid var(--stroke); border-radius: var(--r-sm); background: #fff; }
+.panel-body figure img { border: none; margin: 0 auto; cursor: zoom-in; max-height: 420px; object-fit: contain; }
+.panel-body figure.small img { max-height: 200px; }
+.panel-body figure.diagram { background: #fbfcfe; }
+.panel-body figcaption { margin-top: 8px; font-size: 12px; color: var(--muted); text-align: center; line-height: 1.45; }
+.panel-body .fig-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+.panel-body .fig-row figure { margin: 0; }
+.lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(15,23,42,.82); display: flex; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
+.lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--r-sm); background: #fff; box-shadow: var(--shadow-lg); }
+.lightbox figcaption { position: absolute; left: 0; right: 0; bottom: 16px; text-align: center; color: #fff; font-size: 13px; padding: 0 24px; }
+
 .box { border: 1px solid var(--stroke); border-left: 3px solid var(--bc, var(--accent)); border-radius: 0 var(--r-sm) var(--r-sm) 0; padding: 10px 14px; margin: 14px 0; background: #fff; position: relative; }
 .box-title { font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; color: var(--bc, var(--accent)); }
 .box.def  { --bc: var(--c-tema); background: rgba(29,78,137,.045); }
@@ -412,10 +430,13 @@ body.index-open .index { transform: none; opacity: 1; }
 @media (min-width: 900px) {
   body.panel-open .search-wrap { left: calc((100vw - var(--panel-w) - 12px) / 2); width: min(720px, calc(100vw - var(--panel-w) - 48px)); }
   body.index-open.panel-open .search-wrap { left: calc(var(--index-w) + 12px + (100vw - var(--index-w) - var(--panel-w) - 24px) / 2); width: min(720px, calc(100vw - var(--index-w) - var(--panel-w) - 72px)); }
-  body.index-open.panel-open .search-filters { display: none; }
-  body.index-open.panel-open .search-wrap:focus-within .search-filters { display: none; }
   body.index-open:not(.panel-open) .search-wrap { left: calc(var(--index-w) + 12px + (100vw - var(--index-w) - 12px) / 2); }
   body.panel-open .hint { display: none; }
+}
+
+@media (min-width: 900px) and (max-width: 1280px) {
+  /* Con índice y panel abiertos no queda sitio para los filtros */
+  body.index-open.panel-open .search-filters { display: none; }
 }
 
 /* ---------- Modal ayuda ---------- */
