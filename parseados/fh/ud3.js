@@ -1284,3 +1284,88 @@ window.APUNTES.unidades.push({
 </div>
 `
   },
+  {
+    id: 'fh-ud3-8-2', tipo: 'subtema', titulo: '8.2 Disco duro (HDD)',
+    resumen: 'Almacenamento persistente por gravación magnética: 2–4 pratos xirando, cabezais por cara. Conceptos: prato, cara, cabeza, pista, cilindro, sector; MBR/GPT. Prestacións: tempos de xiro/acceso/pista a pista, taxa de transferencia, caché, interface.',
+    claves: ['Pratos', 'Cabezal', 'Pista', 'Cilindro', 'Sector', 'MBR', 'GPT', 'Tempo de acceso'],
+    tags: ['almacenamento', 'hdd', 'disco duro', 'mbr', 'gpt'],
+    links: ['fh-ud3-8', 'fh-ud3-8-1', 'fh-ud3-8-3'],
+    contenido: `
+<p>O <b>disco duro</b> (HD/HDD) almacena información de forma <b>persistente</b>. Usa gravación <b>magnética</b>: dentro da carcasa hai varios pratos metálicos (2–4, de aluminio ou cristal) xirando a gran velocidade e sobre eles os cabezais que len/escriben pulsos magnéticos. O cabezal móvese cara dentro/fóra e le todos os pratos á vez.</p>
+<div class="box warn"><div class="box-title">Antes de usalo</div><p>Tal como sae de fábrica non o pode usar un SO: hai que definir <b>particións</b> e darlles <b>formato</b>.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/cabezas-pistas-cilindros.png" alt="Cabezas, pistas, cilindros" loading="lazy"><figcaption>Cabezas, sector, pista e cilindro.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/hdd-tamanos.png" alt="Tamaños de HDD" loading="lazy"><figcaption>HDD de 3,5", 2,5" e 1,8".</figcaption></figure>
+</div>
+<div class="box def"><div class="box-title">Zonas do disco</div>
+<ul>
+<li><b>Prato</b>: cada disco interno. <b>Cara</b>: cada lado dun prato. <b>Cabeza</b>: número de cabezal (= número de cara, un cabezal por cara).</li>
+<li><b>Pista</b>: circunferencia dentro dunha cara; a pista 0 está no bordo exterior.</li>
+<li><b>Cilindro</b>: conxunto de pistas aliñadas verticalmente (unha por cara).</li>
+<li><b>Sector</b>: porción angular que atravesa moitas pistas e caras.</li>
+</ul></div>
+<div class="box def"><div class="box-title">MBR e GPT</div><p><b>MBR</b> (Master Boot Record): primeiro sector do disco; contén as instrucións de arranque (bootstrap) e a táboa de particións. <b>GPT</b> (GUID Partition Table): evolución do MBR coa UEFI; só contén a táboa de particións, porque o arranque xa o xestiona a interface UEFI.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/mbr-vs-gpt.png" alt="MBR vs GPT" loading="lazy"><figcaption>MBR vs GPT.</figcaption></figure>
+<div class="box info"><div class="box-title">Partes mecánicas</div><p>Pratos, cabezal de lectura/escritura, motor que xira os pratos, electroimán que move o cabezal, circuíto electrónico de control (interface + caché), bolsiña desecante, caixa protectora (non está ao baleiro) e parafusos especiais.</p></div>
+<div class="box def"><div class="box-title">Prestacións dun disco duro</div>
+<ul>
+<li><b>Tempo medio de xiro</b>: medio xiro do prato ata que o dato queda baixo a cabeza; inverso á velocidade de xiro (rpm).</li>
+<li><b>Tempo medio de acceso</b>: situar a agulla no cilindro desexado (≈ ⅓ do tempo centro–exterior).</li>
+<li><b>Tempo de acceso máximo</b>: do centro ao exterior ou viceversa.</li>
+<li><b>Tempo pista a pista</b>: saltar á pista adxacente.</li>
+<li><b>Taxa de transferencia</b>: sostida ou de pico.</li>
+<li><b>Caché de pista</b>: memoria RAM dentro do disco.</li>
+<li><b>Interface</b>: IDE, SCSI, SATA, USB, FireWire.</li>
+</ul></div>
+`
+  },
+  {
+    id: 'fh-ud3-8-3', tipo: 'subtema', titulo: '8.3 SSD (Solid-State Drive)',
+    resumen: 'Memoria flash non volátil en vez de pratos: sen pezas móbiles, silencioso, moi baixa latencia, resistente, menos consumo. Inconvenientes: menor capacidade, datos irrecuperables tras fallo, número limitado de escrituras (TBW, DWPD). Discos híbridos HHD. Memristores.',
+    claves: ['Flash NAND', 'TBW', 'DWPD', 'Sen fragmentación', 'HHD híbrido', 'Memristor'],
+    tags: ['almacenamento', 'ssd', 'flash', 'tbw'],
+    links: ['fh-ud3-8', 'fh-ud3-8-2', 'fh-ud3-8-1', 'fh-ud3-8-4'],
+    contenido: `
+<p>Usa memoria <b>non volátil</b> (flash) en vez de pratos magnéticos (hai variantes con RAM se non se precisa persistencia). Menos sensibles a golpes, inaudibles, menor tempo de acceso e latencia ao non ter pezas mecánicas. Usan a <b>mesma interface</b> que os HDD (SATA), polo que son intercambiables. Existiron <b>discos híbridos (HHD)</b>: HDD + flash para unir capacidade e velocidade a menor prezo.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/ssd-sata-25.png" alt="SSD SATA 2,5 pulgadas" loading="lazy"><figcaption>SSD SATA de 2,5".</figcaption></figure>
+<div class="box tip"><div class="box-title">Vantaxes</div>
+<ul>
+<li>Arranque máis rápido (sen pratos que acelerar); gran velocidade de escritura; lectura ata 10× máis rápida (RAID internos).</li>
+<li>Latencia centos de veces menor; aplicacións arrancan antes.</li>
+<li>Menor consumo e calor; sen ruído; mellor tempo medio entre fallos.</li>
+<li>Rendemento determinista (tempo de procura constante) e sen deterioro ao encherse (non hai fragmentación).</li>
+<li>Menor peso e tamaño; resiste caídas, golpes e vibracións.</li>
+<li>Borrado máis seguro e irrecuperable.</li>
+</ul></div>
+<div class="box warn"><div class="box-title">Inconvenientes</div>
+<ul>
+<li>Menores capacidades.</li>
+<li>Tras un fallo físico a cela destrúese: datos non recuperables (nun HDD si, con expertos).</li>
+<li>Ao reducir o transistor diminúe a vida útil das NAND (solución futura: <b>memristores</b>, o "cuarto elemento pasivo": resistencia con memoria; alta resistencia = 1, baixa = 0).</li>
+</ul></div>
+<div class="box def"><div class="box-title">Fiabilidade: TBW e DWPD</div>
+<p>Os SSD teñen un número máximo de escrituras. O fabricante indica: <b>garantía</b> (anos), <b>TBW</b> (terabytes escritos totais antes de fallar) e <b>capacidade</b>.</p>
+<pre>DWPD = TBW / (365 × anos_garantía × capacidade_TB)</pre>
+<p>DWPD (Drive Writes Per Day) = veces que se pode escribir a unidade completa cada día. Exemplo: 5 anos, 1000 TBW → disco de 200 GB: DWPD 2,74; disco de 400 GB: DWPD 1,37.</p>
+<p>Para saber cuánto lle queda a un disco en uso: días en funcionamento e <b>LBA escritos</b> reais: <code>TBW_real = LBA_escritos × tamaño_sector / 1024⁴</code>.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-8-4', tipo: 'subtema', titulo: '8.4 Disquete',
+    resumen: 'Soporte magnético flexible en cuberta plástica: 8" (IBM System/370), 5¼" e 3½" (PC). Obsoleto: vulnerable a sucidade e campos magnéticos, maior custo por bit, fráxil; substituído polas memorias USB.',
+    claves: ['Floppy disk', '8"', '5¼"', '3½"', 'Magnético', 'Obsoleto'],
+    tags: ['almacenamento', 'disquete', 'floppy'],
+    links: ['fh-ud3-8', 'fh-ud3-8-3', 'fh-ud3-8-5'],
+    contenido: `
+<p>Disco flexible (floppy): fina lámina circular de material magnetizable e flexible dentro dunha cuberta de plástico. Vulnerable á sucidade e aos campos magnéticos, deixa de funcionar co tempo.</p>
+<table><tr><th>Tamaño</th><th>Uso</th></tr>
+<tr><td>8"</td><td>Estándar IBM (System/370)</td></tr>
+<tr><td>5¼"</td><td>Estándar PC</td></tr>
+<tr><td>3½"</td><td>Estándar PC (1,44 MB)</td></tr>
+</table>
+<figure class="small"><img src="apuntes/fh/img/ud3/disquetes.png" alt="Tipos de disquete" loading="lazy"><figcaption>Disquetes de 8", 5¼" e 3½".</figcaption></figure>
+<div class="box info"><div class="box-title">Por que desapareceu</div><p>Maior custo por bit da superficie magnética fronte ao medio óptico ou flash, e maior fraxilidade (protexer de po, luz, humidade, temperatura e electricidade estática). Substituído por dispositivos máis manexables e con moita máis capacidade, como as memorias USB.</p></div>
+<div class="box def"><div class="box-title">FireWire (IEEE 1394)</div><p>Conexión serie de alta velocidade para E/S, usada con cámaras dixitais e videocámaras. Cable de 4,5 a 100 m, conexión en quente, ata <b>63 dispositivos</b>, resposta en sincronía, Plug &amp; Play. Substituída por USB 2.0/3.0 e Thunderbolt.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/firewire.png" alt="Conectores FireWire" loading="lazy"><figcaption>Conectores FireWire de 4, 6 e 9 pins.</figcaption></figure>
+`
+  },
