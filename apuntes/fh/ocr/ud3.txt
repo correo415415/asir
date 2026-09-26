@@ -2118,3 +2118,586 @@ Os problemas que poden causar
 as altas temperaturas nun PC
 poden ter un impacto significativo
 no seu rendemento.
+===== PAXINA 21 =====
+Núcleo físico
+
+Porción interna do microprocesa-
+dor case independente que realiza
+tódalas actividades dunha CPU
+solitaria.
+
+Núcleo lóxico
+
+Simulación dun núcleo físico a fin
+de repartir dun xeito máis eficien-
+te o procesamento.
+
+<= Y
+
+Procesadores comerciais
+
+Cando falamos de procesadores
+comerciais, “centrarémonos en
+procesadores coas seguintes
+arquitecturas (ISA):
+
+e x86: arquitectura de 32 bits
++ x64: arquitectura de 64 bits
+
++ ARMV8: arquitectura para mó-
+biles de 64 bits
+
+Samsung
+
+[ind
+
+Parte posterior do procesador
+
+Obviamente, non tódalas placas base son iguais e empregan tódalas caracte-
+rísticas dun PCH ou chipset, por exemplo se é Micro-ATX ou Mini-ITX debido a
+un tamaño máis pequeno non haberá espazo para varias interfaces periféricas,
+quedando só as máis importantes.
+
+5 >> Procesador
+
+O procesador ou microprocesador ou CPU (Central Process Unit) é o circuíto
+integrado máis complexo dun sistema informático; trátase do cerebro do or-
+denador. Este compoñente é o que organiza o fluxo de datos no interior da
+placa base, cara ou dende os periféricos á memoria e entre o resto dos compo-
+ñentes da placa. O procesador realiza unha serie de instrucións programadas
+en linguaxe de baixo nivel: de cálculo, aritméticas e lóxicas, que se efectúan a
+un ritmo marcado polo reloxo.
+
+Esta unidade central de procesamento está constituída, esencialmente, por
+rexistros, unha unidade de control, unha unidade aritmético lóxica (ALU) e
+unha unidade de cálculo en coma flotante.
+
+A nivel físico, o procesador é un circuíto ou chip, no que millóns de compoñen-
+tes electrónicos, como transistores, condensadores e resistencias, están cons-
+truídos nunha oblea de silicio.
+
+Este dispositivo está encapsulado nun chip e conéctase mediante un zócolo
+(socket) específico da placa base. Debido á miniaturización dos seus compoñen-
+tes, prodúcense altas temperaturas no microprocesador, o que o pode danar.
+Para evitalo, incorpóraselle un sistema de refrixeración que consta dun disipa-
+dor de calor fabricado nalgún material de alta condutividade térmica, como
+cobre ou aluminio, e de un ou máis ventiladores que eliminan o exceso da calor
+absorbida polo disipador. Entre o disipador e a cápsula do microprocesador
+colócase pasta térmica para mellorar a condutividade da calor.
+
+Un sistema informático de alto rendemento pode estar equipado con varios
+microprocesadores traballando en paralelo, e un microprocesador pode, a súa
+vez, estar constituído por varios núcleos físicos ou lóxicos.
+
+Existe a tendencia de integrar o maior número de elementos dentro do propio
+procesador, aumentando así a eficiencia enerxética e a miniaturización. Entre
+os elementos integrados están as unidades de punto flotante, controladores
+da memoria RAM, controladores de buses e procesadores dedicados de vídeo.
+
+Os procesadores máis estendidos e máis comercializados na actualidade son os
+fabricados por Intel, empresa que, nunha especie de alianza con Microsoft, fai
+que o software fabricado por este sexa totalmente compatible coas caracterís-
+ticas dos seus procesadores.
+
+Existen outros fabricantes, como AMD, Cyrix, Motorola... que tamén fabrican
+procesadores para ordenadores persoais e para grandes sistemas, xa que,
+basicamente, o proceso de fabricación é o mesmo, e é bastante complexo.
+
+Na actualidade, AMD está sendo desprazada do segundo posto por Qualcomm
+ou Samsung debido a irrupción destas empresas no mercado dos dispositivos
+móbiles.
+
+A velocidade do procesador depende tanto da frecuencia coa que o reloxo
+emite os seus pulos como do tipo de bus e doutras características:
+
+e Frecuencia de reloxo: é a velocidade á que está traballando o procesador
+e mídese en megahercios (Mhz). Na actualidade supéranse velocidades
+de 6 GHz, contrastando coa dos procesadores dos primeiros ordenado-
+res persoais que eran de 4.77 Mhz. Unha velocidade de 8 Mhz, por
+exemplo, significa que o procesador é quen de realizar 8 millóns de ope-
+racións por segundo. Cada operación pódese destinar a un proceso con-
+creto que estea en execución nese intre. Trátase dunha velocidade in-
+terna, xa que é á que se executan as instrucións no interior do procesa-
+dor. Para manter a velocidade dentro dos límites correctos e exactos
+
+===== PAXINA 22 =====
+sen oscilacións, en cada placa base hai un cristal de cuarzo (como os que
+toparíamos en calquera reloxo dixital) que xera os impulsos de forma
+síncrona.
+
+e Buses: son as vías internas polas que circulan os datos e inflúen seria-
+mente na velocidade real de proceso dun ordenador. A eficacia dos bu-
+ses depende do seu ancho (número de bits que poden circular por eles)
+e da rapidez coa que estes bits circulan. Esta velocidade externa é a ve-
+locidade á que o procesador se comunica coa placa base. Esta velocida-
+de coñécese como velocidade do bus ou FSB. Actualmente, pode superar
+os 8000 MHZ, e é a velocidade á que o computador realmente funciona
+no seu conxunto, xa que a miúdo se produce un atasco entre a placa ba-
+se e O microprocesador. Esta discrepancia de velocidade (entre interna e
+externa) coñécese como factor de multiplicación e é o valor polo que
+se multiplica a velocidade externa para determinar a velocidade de fun-
+cionamento real do sistema. Por exemplo: se a velocidade externa é de
+200 Mhz e o factor de multiplicación é de 8, a velocidade do procesador
+será de 1600 MHz, aínda que a velocidade do procesador interno sexa
+maior.
+
+e Memoria caché: é unha memoria de acceso rápido, máis aínda que a pro-
+pia RAM. Incorpórase na placa base dos equipos, para reducir a frecuen-
+cia de accesos á memoria RAM que o procesador ten que realizar. Outra
+característica da memoria caché, intrínseca á rapidez, é que non ten
+moita capacidade.
+
+Os ordenadores actuais soen montar dous tipos de memoria caché: interna,
+asociada ó propio procesador e de pequena capacidade, pero de elevado ren-
+demento e externa, que se sitúa, normalmente, entre o microprocesador e o
+resto de compoñentes hardware, como poden ser a RAM ou o controlador de
+entrada/saída, e serve de almacenamento intermedio.
+
+5.1> Zócolo do microprocesador
+
+É o lugar onde se insire o procesador na placa base. O propósito do zócolo é
+conectar electricamente os pins do procesador á placa base e suxeitar o chip
+para que non se solte. Os primeiros microprocesadores soldábanse á placa
+base ou inseríanse en zócolos que eran imposibles de retirar.
+
+Os encapsulados máis utilizados son:
+
++ PGA (Pin Grid Array): cadrado cun gran número de conectores redondos
+pequenos onde os pins do microprocesador se insiren por presión. Era o
+modelo que usaba AMD. Se presentan unha estrutura cadrada cunha
+panca cunha fendedura triangular tamén presente no microprocesador
+para saber en que posición encaixa cumpren o formato ZIF (Forza de in-
+serción cero), que se refire á presión necesaria para instalar ou retirar o
+microprocesador.
+
+e LGA (Land Grid Array): neste deseño, os pins colocáronse dentro do zó-
+colo (en lugar de levalos ó procesador). Esta medida foi tomada por In-
+tel para trasladar o problema da rotura dos pins ós fabricantes de pla-
+cas base. AMD actualmente tamén fabrica procesadores sen pins coa
+superficie plana. Aínda así, as placas base non son compatibles para
+ambos tipos de procesadores, polo que Intel e AMD teñen placas base
+exclusivas e incompatibles entre si.
+
+e BGA (Ball Grid Array): o microprocesador ten pequenas bólas que se sol-
+dan directamente á placa base. Polo tanto, non se require un zócolo e os
+custos simplificanse. Debido ó seu pequeno tamaño, adoita empregarse
+na fabricación de teléfonos intelixentes e portátiles.
+
+Finalmente, lembra que unha placa base pode ter varios zócolos para varios
+microprocesadores. Este é o caso das placas base de servidor, onde é común o
+uso de dous ou máis procesadores. En configuracións con moi alto número de
+procesadores, como os supercomputadores, non se usan zócolos; no seu lugar,
+os microprocesadores sóldanse directamente á placa base. Isto optimiza o
+
+A
+
+Caché do procesador
+
+Úsase para gardar as posicións da
+memoria principal máis utilizadas.
+A velocidade de adquisición dos
+datos increméntase enormemente
+cando empregamos este tipo de
+memoria.
+
+Cando a caché contén os datos
+que necesita a CPU, non hai tem-
+pos de espera e denomínase acer-
+to de caché. Cando a caché non
+contén os datos, denomínase fallo
+de caché, e a CPU terá que esperar
+ata que a memoria principal en-
+tregue os datos.
+
+Na práctica existen polo menos
+dúas memorias caché. Chámanse
+memoria caché de Nivel 1 (L1), de
+Nivel 2 (L2), e se existe de Nivel 3
+(L3).
+
+ZIF (Forza de inserción cero)
+
+Actualmente, tódolos zócolos son
+ZIF (Zero Insertion Force), o que
+significa que teñen un mecanismo
+(unha pequena panca) que permite
+inserir os chips sen esforzo.
+
+Antes, era necesario premer fisi-
+camente o chip para inserilo e,
+peor aínda, forzalo a saír (xeral-
+mente facendo panca lateral cun
+desaparafusador), o que provoca-
+ba moitas roturas dos pins do
+chip.
+===== PAXINA 23 =====
+Procesador PS5
+
+Os zócolos úsanse en sistemas de
+arquitectura aberta, onde o ob-
+xectivo é proporcionar unha varie-
+dade de compoñentes, permitindo
+a substitución da tarxeta ou do
+circuíto integrado. Nos sistemas
+de arquitectura propietaria, como
+as videoconsolas, os circuítos
+integrados sóldanse á placa base.
+
+Tarxeta gráfica
+
+Sabes por que os microprocesa-
+drores deseñados para xogos non
+inclúen gráficos por defecto?
+
+Porque a potencia da GPU sempre
+será maior e os microprocesado-
+res tamén necesitan RAM para
+funcionar correctamente.
+
+Rendemento do procesador
+
+A medición do rendemento dun
+microprocesador non é doada:
+unha métrica do rendemento é a
+frecuencia do reloxo que permite
+comparar procesadores con nú-
+cleos da mesma familia, pero é un
+indicador moi limitado dada a
+grande variedade de deseños
+comercializados. Unha forma
+fiable de medir a potencia dun
+procesador é mediante a obten-
+ción das instrucións que executa
+por ciclo de reloxo.
+
+Overcloking
+
+Pretende alcanzar unha maior
+velocidade de reloxo para un
+compoñente electrónico por riba
+das especificacións do fabricante.
+Pode acurtar a vida útil do com-
+poñente ou supor unha perda de
+estabilidade.
+
+espazo e o rendemento, que son factores clave en máquinas con varios miles
+de procesadores.
+
+5.2 > Que aspectos son importantes á hora de elixir un microproce-
+sador?
+
+A arquitectura dun microprocesador moderno é moi complexa, polo que con-
+fiar en parámetros básicos como o número de núcleos ou a frecuencia de fun-
+cionamento como características de compra pode ser un erro. Isto é especial-
+mente certo se se comparan procesadores de diferentes empresas ou diferen-
+tes series dentro da mesma empresa, porque hai moitos outros parámetros
+internos que definen a súa potencia, como a cantidade de caché que teñen, o
+número de instrucións por ciclo que executan e moitos máis.
+
+Ademais, debido ás diferenzas arquitectónicas internas, algúns procesadores
+son mellores que outros en certas tarefas, tamén debido ás microinstrucións
+que implementan.
+
+Entre os parámetros que deberiamos comprobar estarían:
+
+e Núcleos: todo depende do uso que se lle pretenda dar ó ordenador. O
+número de núcleos pode variar normalmente de catro a doce. Pode pa-
+recer que canto maior sexa o número, máis rápido funcionará... pero o
+número de núcleos que ten un procesador o que determina é o número
+de procesos que pode executar ó mesmo tempo. Pode executar un por
+núcleo a non ser que o procesador teña tecnoloxía de multithreading
+simultáneo, nese caso pode executar dous fíos por núcleo. Nese caso, a
+execución do segundo proceso será moito máis lenta, polo que un pro-
+cesador de catro núcleos con multithreading pode ter menos potencia
+que un procesador de seis núcleos sen multithreading, dependendo ta-
+mén da tarefa que se estea a realizar.
+
+e Frecuencia de funcionamento: é importante ó comparar procesadores
+da mesma arquitectura e, en xeral, unha frecuencia máis alta sempre é
+mellor, aínda que hai algunhas advertencias. En primeiro lugar, hai que
+ter en conta a diferenza entre a frecuencia base e, se o procesador a
+ten, a frecuencia turbo. A primeira está sempre garantida en tódolos
+núcleos e a segunda é un máximo que se alcanzará dependendo do nú-
+mero de núcleos en funcionamento e da temperatura do microprocesa-
+dor. Por exemplo, se un procesador indica un turbo boost máximo de 6
+GHz pero ten oito núcleos de alto rendemento, só alcanzaría esa fre-
+cuencia con un ou dous núcleos activos e, polo tanto, podería baixar a
+un turbo boost de 5.2 GHz cos oito activos. Se a refrixeración é deficien-
+te, podería incluso baixar á frecuencia base (podemos supor 3.2 GHz), a
+única garantida polo fabricante, xa sexa Intel, AMD ou calquera outro.
+
+e Potencia térmica disipada: polo tanto, a refrixeración é importante, así
+como a Potencia de deseño térmico (TDP) do procesador. Este paráme-
+tro refírese á potencia térmica disipada, non á potencia consumida e,
+por desgraza, ambas mídense en watts, o que pode ser confuso. Un pro-
+cesador de 95 W TDP pode ter un consumo de enerxía de 150 W, pero
+ese TDP de 95 W indica que require 95 W de refrixeración para funcionar
+á frecuencia base indicada polo fabricante. Afortunadamente, a partir
+do Core de 12.? xeración, os datos que proporciona Intel son o consumo
+de enerxía real, non o TDP.
+
+e Memoria caché: a caché é como unha pequena memoria RAM situada
+dentro do procesador; é esencial en calquera procesador porque a RAM
+é demasiado lenta para enviar os datos e as instrucións que un procesa-
+dor necesita, xa que o procesador funciona moito máis rápido que a
+RAM. A caché almacena as instrucións e os datos que a CPU usa con
+máis frecuencia, aforrando así tempo ó evitar recuperalos da RAM. Ha-
+bitualmente divídese en tres niveis:
+
+— 11: é unha caché privada para cada núcleo, situada dentro do núcleo.
+Ten a menor capacidade pero é a máis rápida. Divídese en caché de da-
+tos e caché de instrucións.
+
+===== PAXINA 24 =====
+—L2: é unha caché privada para cada núcleo, pero situada fóra do nú-
+cleo. Ten unha capacidade e velocidade intermedias.
+
+—L3: é a caché compartida por tódolos núcleos. Só hai unha en cada
+procesador. Ten a maior capacidade pero é a máis lenta.
+
+Existe outra caché que se usa con pouca frecuencia, a L4, especialmente
+en procesadores que veñen con GPU integradas.
+
+Cada nivel almacena un tipo de información dependendo da frecuencia
+coa que se necesite e da súa importancia. A medida que ascendemos de
+nivel, a capacidade aumenta e a velocidade diminúe.
+
+Se só se menciona un tamaño de caché para un procesador, estamos a
+referirnos á caché L3.
+
+e Gráficos integrados: en lugar de ter unha tarxeta gráfica, que seguirá
+funcionando no ordenador, o microprocesador inclúe todo o necesario
+para reproducir gráficos coa máxima calidade. No mesmo chip e en dife-
+rentes núcleos, está todo o que se precisa para xogar, traballar ou o que
+se queira facer. Lembra comprobar a resolución correspondente, xa que
+pódese ver contido cunha resolución de ata 4K. A gran maioría dos mi-
+croprocesadores inclúen gráficos por defecto, agás os deseñados para
+xogos.
+
+5.3 > Equivalentes de Intel fronte a AMD: como comparar os proce-
+sadores de forma xusta
+
+Ademais do feito de que os diferentes rangos de CPU pódense comparar xene-
+ricamente, hai outros puntos que tamén se deben ter en conta ó elixir un:
+
+e Xeración: é fundamental... non é posible comparar un ¡5 de última xera-
+ción cun Ryzen 5 de hai varias xeracións. Sería moi inxusto, xa que as xe-
+racións máis novas adoitan ofrecer mellores características por defecto.
+Polo tanto, debemos comparar procesadores de xeracións similares ou
+ten en conta a diferenza xeracional ó facer a comparación.
+
+e Prezo: aínda que as comparacións entre gamas poden ser útiles, os pre-
+zos poden variar dependendo de varios factores (novidade, modelo,
+marca, características, ofertas...). AMD tradicionalmente ofrece prezos
+máis competitivos, especialmente nas gamas media e alta, pero Intel
+axusta na actualidade tamén os seus prezos.
+
+e Rendemento: aínda que as comparacións xerais entre gamas son útiles, o
+rendemento específico pode variar significativamente entre modelos
+dentro da mesma gama. E importante revisar as probas de rendemento
+e as probas de rendemento para comparar modelos específicos en tare-
+fas relevantes para o seu uso.
+
+e Uso: este punto é sen dúbida a clave para acertar. Non hai un único proce-
+sador mellor ou peor. Todo depende das necesidades do usuario e do
+uso que se lle vai dar. Antes de elixir un procesador, debemos conside-
+rar para que se vai usar e mercar exactamente o que se precisa.
+
+e Compatibilidade: hai que vixiar de preto a compatibilidade do hardware.
+Os procesadores AMD e Intel usan diferentes zócolos e chipsets, o que
+significa que non son intercambiables na mesma placa base. Mesmo
+dentro da mesma marca, as diferentes xeracións de procesadores poden
+requirir diferentes placas base. Debemos asegurarnos de que o proce-
+sador que eliximos é compatible coa placa base actual.
+
+e Características: debemos ter en conta características como a compatibi-
+lidade con overclocking, a eficiencia enerxética e as tecnoloxías integra-
+das por cada marca. De novo, aquí debémonos centrar máis no que ne-
+cesitamos que en cal é o mellor.
+
+5.4 > Intel: como diferencialos pola numeración
+
+Vamos clasificar os diferentes procesadores Intel segundo os seus números de
+modelo; os termos ¡3, i5, i7 e ¡9 son simplemente nomes comerciais que indi-
+can:
+
+Intel vs AMD: Diferenzas
+técnicas
+
+A competencia entre Intel e AMD
+é feroz en 2025; ambas marcas
+ofrecen solucións potentes e
+diversas para diferentes tipos de
+usuarios. As principais diferenzas
+técnicas son:
+
+e Arquitectura e rendemento:
+Intel presenta a 14? xeración de
+procesadores Core, ofrecendo
+altos niveis de rendemento en
+tarefas de subproceso único,
+ideal para aplicacións e xogos
+que non aproveitan varios núcle-
+os. AMD presenta a serie Ryzen
+8000, ofrecendo unha excelente
+eficiencia enerxética, destacando
+en “tarefas  multisubproceso,
+sendo a opción superior para
+simulacións, edición de vídeo e
+renderización.
+
+e Eficiencia enerxética: AMD
+mellorou considerablemente o
+seu consumo de enerxía, conse-
+guindo procesadores que xeran
+menos calor e consomen menos
+enerxía baixo cargas pesadas.
+Intel mantén unha vantaxe na
+xestión dinámica de enerxía gra-
+zas Ós seus núcleos eficientes.
+
+e Compatibilidade: Intel require
+placas base actualizadas co
+chipset Z890 para aproveitar ó
+máximo as novas funcionalida-
+des. AMD mantén a compatibili-
+dade co zócolo AM5, o que per-
+mite actualizacións máis sinxe-
+las para os usuarios de xeracións
+anteriores.
+
+e Prezo: AMD xeralmente ofrece
+unha mellor relación custo-
+rendemento, especialmente na
+gama media. Intel tende a ter
+prezos máis altos para os seus
+procesadores de gama alta, pero
+con rendemento competitivo.
+
+En 2025, a elección entre Intel e
+AMD dependerá das necesidades
+específicas. Intel dá mellor ren-
+demento en xogos e tarefas de
+subproceso único e AMD destaca
+pola súa eficiencia enerxética e as
+súas capacidades de subproceso
+múltiple, o que é ideal para crea-
+dores e profesionais.
+===== PAXINA 25 =====
+Sen hyperthreading Con hyperthreading
+
+HyperThreading
+
+A “tecnoloxía HyperThreading
+simula esencialmente dous proce-
+sadores (ou núcleos) nun só chip,
+dividindo a carga de traballo entre
+eles e mellorando así a velocidade
+de procesamento.
+
+Por exemplo, os procesadores
+Intel Core i3 só teñen dous núcle-
+os físicos pero compórtanse coma
+se tivesen catro núcleos (en reali-
+dade, son fíos) grazas a esta tec-
+noloxía. Estes núcleos adicionais
+simulados por HyperThreading
+adoitan chamarse núcleos lóxicos.
+
+Thread?
+Tronas
+inreso7
+Fíos de procesamento
+
+Os fíos, ou subprocesos, non son
+unha parte física do procesador...
+podémolos definir como o fluxo
+de control de datos dun progra-
+ma. É un medio para xestionar as
+tarefas dun procesador e os seus
+diferentes núcleos de forma máis
+eficiente. Grazas ós fíos, as unida-
+des de asignación máis pequenas,
+que son as tarefas ou procesos
+dun programa, pódense dividir en
+fragmentos para optimizar o
+tempo de espera de cada instru-
+ción na cola de procesos. Estes
+fragmentos chámanse subproce-
+sos ou fíos. Cada fío de procesa-
+mento contén unha parte da
+tarefa a realizar, o que é máis
+sinxelo que colocar toda a tarefa
+no núcleo físico. Así, a CPU é
+capaz de procesar varias tarefas á
+vez, tendo en conta que normal-
+mente hai un ou dous fíos por
+núcleo. Estes procesadores chá-
+manse multifío. Debemos enten-
+der que un procesador con 12 fíos
+non terá 12 núcleos; os núcleos
+son algo de orixe física e os fíos
+son algo de orixe lóxica.
+
+e 13: Procesadores de gama baixa
+
+e ¡5: Procesadores de gama media
+
+e 17: Procesadores de gama alta
+
+e ¡9: Procesadores de gama moi alta
+
+Son os mesmos tipos de procesadores pero cun número maior ou menor de
+núcleos de caché ou se admiten hyperthreading. Non obstante, é importante
+ter en conta que só se poden comparar procesadores da mesma microarquitec-
+tura ou xeración (como a chama Intel): isto significa que un i3 de 10? xeración é
+xeralmente mellor que un ¡7 de 1? xeración, xa que a microarquitectura de 10?
+xeración é significativamente superior á de 1? xeración e mesmo poden ter o
+mesmo número de núcleos.
+
+Intel? Core". 17 -A1065) (GA processor
+
+A numeración dos procesadores é a seguinte:
+
+e Marca: Intel Core
+e Modelo: 33, ¡5...
+e Xeración: Esta é a microarquitectura ou xeración; pode variar de 1 á xera-
+ción actual
+e SKU: é o modelo exacto dentro da gama, indica a velocidade, os núcleos...
+e Sufixo: indica unha característica especial
+— K: multiplicador desbloqueado para facilitar o overclocking
+— Gl a G7: xogo de instrucións gráficas integrado no chip... maior núme-
+ro, mellor rendemento
+— T: optimizado para potencia
+— H: gráficos de alto rendemento
+— Q: CPU de catro núcleos
+— U: consumo de enerxía ultrabaixo
+
+5.5> AMD: como diferencialos pola numeración
+
+Dentro de AMD, centrarémonos nos procesadores Ryzen, xa que son os máis
+recentes do mercado. A arquitectura Zen de AMD foi un cambio benvido para
+todos, xa que provocou competencia, e Intel tivo que comezar a saír do seu
+letargo de catro núcleos.
+
+Zen é un cambio radical con respecto a Bulldozer (anterior arquitectura de
+AMD). Xa non hai núcleos nin módulos; AMD volveu a unha estrutura de núcle-
+os monolítica pero cunha base MCM. Isto significa que un Ryzen está composto
+por dúas unidades CCX, cada unha con catro núcleos, conectadas polo sistema
+Infinity Fabric. En base a isto, os núcleos pódense desactivar para crear proce-
+sadores con dous, catro, seis e oito núcleos para consumo xeral e ata 32 núcle-
+os no sector profesional. Usan o zócolo AM4 ou AM5 dependendo do modelo e
+veñen cun multiplicador desbloqueado, polo que admiten overclocking.
+
+En relación á latencia: o bus Infinity Fabric funciona á mesma velocidade que a
+RAM, polo que para mellorar a velocidade do procesador recoméndase usar
+memoria moi rápida.
+
+Ryzen 5 7640U
+
+A numeración dos procesadores é a seguinte:
+
+e Marca: Ryzen
+e Número de núcleos: 9 (doce núcleos), 7 (oito núcleos), 5 (seis núcleos, pe-
+ro non todos) e 3 (catro núcleos)... os Threadripper terían máis núcleos
+
