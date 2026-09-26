@@ -1,0 +1,4946 @@
+===== PAXINA 1 =====
+| de 3
+
+/ ntos internos dun
+
+É /
+SUMARIO
+EO
+A Com ñentes dos sistemas microinformáticos
+dy D
+
+positivos de almacenamento: características e ti-
+
+>
+positivos de memoria: características e tipos
+— Controladores
+
+OBXECTIVOS
+
+dentificar e caracterizar os diferentes compoñentes
+
+'onforman fisicamente un microordenador hoxe en
+
+ía
+
+Manexar con habilidade os conceptos básicos rela-
+
+os co hardware informático
+
+cer diferentes alternativas tecnolóxicas para
+
+tipo de dispositivo
+
+— Detectar posibles incompatibilidades entre diferen-
+
+ementos de calquera dispositivo
+
+- Describir dispositivos de almacenamento masivo uti-
+
+dos en sistemas de computadores, recoñecendo a
+
+Mu importancia na custodia da información
+
+pr escribir os tipos de memoria utilizados en compu-
+
+: tadores, analizando os parámetros que as definen e a
+úa achega ó rendemento do conxunto
+
+» É Entender as características dun orzamento
+
+¡E 5 Aprender a realizar un orzamento
+
+===== PAXINA 2 =====
+1>> Introdución
+
+Cando nos enfrontamos á montaxe ou desmontaxe dun equipo informático
+debemos ter en conta que este consta de partes claramente diferenciables e
+dependentes unhas doutras. Así, toparemos que non vale de nada ter un equi-
+po cun procesador cunha velocidade enorme se non temos proporcionada a
+memoria RAM do mesmo, ou un equipo de altísimas prestacións se o que que-
+remos é escribir unhas poucas cartas ó mes.
+
+Logo, é importante saber escoller as pezas que comporán o noso equipo, den-
+de a carcasa ata o procesador pasando pola fonte de alimentación, placa base,
+refrixerador...
+
+2 >> Carcasa
+
+Non está de máis dedicar un pouco de tempo a escoller a carcasa do ordena-
+dor, xa que é determinante na disposición mecánica de tódolos compoñentes
+internos e, por conseguinte, tamén nas posibilidades de ampliación que ten o
+equipo.
+
+É a estrutura metálica ou plástica que ten por función albergar e
+protexer os compoñentes internos do equipamento informático.
+
+Existen diversos tipos de carcasas (tamén reciben o nome de torre, gabinete,
+caixa ou chasis), estandarizadas nas dimensións e compoñentes máis caracte-
+rísticos, pero sen estar suxeitas a unha normativa xeral.
+
+Habitualmente tódolos indicadores e elementos de control do ordenador están
+situados na cara frontal da caixa; ademais pode ter un interruptor eléctrico na
+esquina superior dereita da cara posterior. Entre estes indicadores e controis
+soen estar:
+
+e Interruptor xeral, normalmente na cara dianteira.
+
+e Interruptor de chave, para bloquear o ordenador e protexelo de accesos
+externos.
+
+e LED de control, indica o estado do ordenador (aceso ou apagado).
+
+e LED de disco duro, indica o estado do disco duro (traballando nese intre ou
+non).
+
+Aínda que non tódalas carcasas son iguais, a maioría teñen os seguintes com-
+poñentes: chasis, cuberta, panel frontal, interruptores, baías para unidades,
+panel traseiro (con aberturas para portos de E/S e tarxetas de expansión...) e,
+nalgúns casos, ventiladores e fonte de alimentación como sistema de refrixe-
+ración.
+
+2.1> O chasis
+
+O chasis é o esqueleto do ordenador, a estrutura metálica, xeralmente feita de
+aluminio ou unha combinación de aceiro e plástico, que serve de soporte para
+montar as outras pezas. Debe ser unha estrutura ríxida e resistente que non se
+poida dobrar porque a maioría dos dispositivos montados nel non poden so-
+portar a flexión.
+
+2.2> A cuberta
+
+A cuberta forma a parte exterior da carcasa e únese ó chasis. A maioría dos
+ordenadores usan parafusos para fixar a cuberta ó chasis. Tamén hai sistemas
+de fixación esvarantes ou montados con orificios.
+
+Pode estar feita de varios tipos de materiais, como aluminio, fibra de vidro,
+metacrilato, plástico...
+
+2.3> O panel frontal
+
+O panel frontal é a parte frontal da carcasa, normalmente feita de plástico ou
+similar. O panel frontal ten indicadores ou LED que amosan o estado do com-
+putador. Normalmente ten un LED de acendido e outro LED que indica as ope-
+
+Chasis
+
+Forma habitual de retirar a
+cuberta
+
+O Retiramos os parafusos
+
+1 Deslizamos a cuberta
+
+2 Levantamos a cuberta
+
+Conexións do panel frontal a través do
+chasis
+
+TS
+
+Placa traseira (backplate)
+===== PAXINA 3 =====
+Baía extraíble
+
+Orientación
+
+As carcasas pódense clasificar
+pola disposición da placa base.
+
+e Vertical: é a orientación máis
+común; a carcasa e a placa base
+están dispostas verticalmente,
+coas rañuras de expansión per-
+pendiculares á placa base.
+
+e Horizontal ou sobremesa:
+Anteriormente, este era o tipo
+de carcasa máis común; hoxe en
+día, aínda se ve con certa fre-
+cuencia nos PC de oficina. Ás
+veces son pouco ergonómicas, xa
+que serven como base para o
+monitor, elevando a súa altura
+excesivamente.
+
+Baía integrada Dock Station
+
+A baía de acoplamento integrado
+na parte superior facilita a inser-
+ción de discos duros de 3.5" ou
+2.5".
+
+Os usuarios poden controlar o
+acceso e a transferencia de datos
+sobre a marcha sen ter que insta-
+lar fisicamente os seus discos
+duros nin engadir un dispositivo
+de acoplamento externo.
+
+racións de acceso ós discos duros. Tamén ten botóns de acendido e reinicio, e
+conectores USB.
+
+2.4> O panel traseiro
+
+É onde se atopan os portos ou conectores para os dispositivos externos. Esta
+placa é proporcionada polo fabricante da placa base, xa que o número de
+portos e a súa disposición varían segundo o modelo.
+
+2.5> Baías para unidades
+
+As baías para unidades son espazos para aloxar unidades de almacenamento.
+Usanse para montar unidades de disquete, discos duros, CD-ROM ou DVD.
+Pódense clasificar en dous tipos:
+
++ Internas: están completamente dentro da carcasa e non se pode acceder
+a elas dende o exterior. Usanse para montar dispositivos ós que non se
+pode acceder dende o exterior, como os discos duros.
+
+e Externas: están internas na carcasa e no chasis, pero pódese acceder a
+elas dende o exterior. Normalmente úsanse para unidades de disquete,
+CD-ROM e DVD.
+
+2.6 > Tipos de carcasas
+
+A clasificación adoita facerse por tamaño, dependendo da placa base que ad-
+miten:
+
+e Sobremesa: é a caixa tradicional, con espazo para unha unidade de 3.5
+polgadas e unha ou dúas de 5.25 polgadas. O número de ocos dispoñi-
+bles para ampliacións dependerá da placa base, que estará montada en
+horizontal, polo que as tarxetas terán que ser montadas en vertical.
+Normalmente, pónselle enriba dela o monitor, para que ocupe menos na
+mesa de traballo, o que pode ser un problema a nivel ergonómico. ATX
+ou BTX son factores de forma de Intel, tódolos usamos nos nosos orde-
+nadores de sobremesa e por iso os ordenadores de sobremesa son tan
+semellantes.
+
+e Torre: Se se ten previsto ampliar o equipo nun futuro, a mellor alternati-
+va é partir dunha carcasa deste tipo. Ó dispor de máis espazo, este tipo
+de caixa permite dispor os dispositivos con maior claridade e poderanse
+montar e desmontar máis facilmente, algo que pode ser realmente
+complexo nunha carcasa tipo sobremesa. Neste tipo de caixas a placa
+base móntase en posición vertical; como consecuencia, as tarxetas coló-
+canse horizontalmente.
+
+Estas unidades presentan tres ou catro baías de 5.25 polgadas e unha
+ou dúas de 3.5 polgadas. Segundo o tamaño da caixa e as baías que pre-
+senten pódense dividir en Microtorre (entre 25 e 32 cm de altura e in-
+corpora entre unha e tres baías externas e unha ou dúas baías internas,
+para placas base microATX ou flex-ATX), Minitorre (entre 32 e 37 cm de
+altura con tres baías externas e unha ou dúas baías internas, para pla-
+cas base ATX, microATX ou flex-ATX), Semitorre (entre 37 e 45 cm de
+altura, son as máis empregadas permitindo a instalación de placas base
+de tódolos formatos, con ata seis baías, Torre (entre 45 e 55 cm de al-
+tura, permiten unha boa ventilación e xeralmente aceptan placas base
+de todo tipo; teñen polo menos 6 baías) e Gran torre (entre 55 e 72 cm
+de altura, adoitan ter 8 baías externas; é unha caixa común para servi-
+dores de gama baixa polas súas boas características de ventilación e ex-
+pansión).
+
+e Servidor: úsase en instalacións de servidores ou almacenamento. Adoitan
+ser máis anchas do normal, teñen luces adicionais para a monitorización
+de discos ou portas de acceso con pechadura para as unidades. Teñen
+moitas baías internas e externas e algún outro sistema como poden ser
+discos en quente, incorporando varios orificios de ventilación adicionais.
+
+===== PAXINA 4 =====
+A maioría permiten a instalación de placas de servidor máis grandes ou
+fontes de alimentación redundantes.
+
+e Cubos: O cubo, tamén chamado miniPC, dispón de liberdade, o que fixo
+que crecerá rapidamente, aumentando o seu número de clientes de
+forma exponencial durante os seus poucos anos de vida. Estes ordena-
+dores, úsanse para factores de forma pequenos como mini-ITX ou SFF
+(Small Form Factor), que compren poucas das indicacións dos estánda-
+res máis estendidos, que veñen a ser os desenvolvidos por Intel.
+
+O cubo non ten ataduras, podémolos encontrar cos sistemas de refrixe-
+ración máis extravagantes ou cos deseños máis innovadores. Esta é pre-
+cisamente a forza dos cubos; pasaron de ser meros ordenadores peque-
+nos, onde é difícil montar un ordenador de grandes prestacións, a má-
+quinas onde os condicionantes de refrixeración ou potencia non son un
+problema e onde os elementos usados permiten dispor dunha máquina
+sen límites de prestacións: pequenos, lixeiros, fiables e moi silenciosos.
+Pero as vantaxes do deseño non radican só na refrixeración senón ta-
+mén na comodidade e facilidade de montaxe. Estes novos cubos tenden
+a ser descapotables, dispondo dun eixe que podemos usar para levantar
+todo o frontal deixando moito máis espazo para traballar; isto é de moi-
+ta axuda para aqueles que deben montar unha cantidade grande deles.
+A principal desvantaxe deste tipo de carcasas segue radicando no seu
+alto prezo comparado co das caixas tradicionais; é relativamente doado
+que sobrepasen os 200 €. Outra desvantaxe é que normalmente teñen
+poucas ou ás veces ningunha baía externa.
+
+e Barebone: non tódolos cubos son barebones nin tódolos barebones son
+cubos; é simplemente un formato comercial. Trátase dunha plataforma
+semiensamblada que consiste nunha carcasa en forma de cubo cunha
+placa base a maiores, dotada dun sistema de refrixeración máis sofisti-
+cado. Están deseñados de maneira que non poidan ser ensamblados os
+compoñentes hardware dun xeito convencional. O comprador deste tipo
+de plataformas decídese por elas máis polo deseño que polas posibili-
+dades de ampliación ou capacidade, que veñen restrinxidas pola placa
+base inicial. Entre as súas vantaxes está que se trata dun equipo moi
+compacto e que ocupa moi pouco espazo; ademais soen ser moi silen-
+ciosos.
+
+De aí que barebone sexa unha forma non incorrecta pero si pouco preci-
+sa de definir un MiniPC en formato cubo.
+
+e Rack: úsase para montar servidores en armarios rack en instalacións in-
+dustriais, centros de procesamento de datos...
+
+3 >> Fonte de alimentación
+
+A enerxía subminístraselle á placa base a través do que se denominan fontes
+de alimentación, que subministran 3.3, 5 ou 12 voltios á placa para o seu fun-
+cionamento dependendo do dispositivo que a use.
+
+Está situada dentro da carcasa; é unha caixa metálica rectangular equipada
+cun ventilador. Dela sae cableado de diferentes cores, o que permite alimentar
+os diferentes dispositivos da carcasa. Estes conectores están estandarizados.
+
+Unha fonte de alimentación debe proporcionar suficiente enerxía tanto para
+alimentar os compoñentes instalados como para permitir engadir compoñen-
+tes futuros.
+
+As fontes de alimentación que podemos atopar no mercado oscilan entre os
+180 W e os 2000 W (moi pouco común). Unha análise de mercado suxire que as
+fontes de alimentación máis vendidas oscilan entre os 500 W e os 850 W. Estas
+adoitan aplicarse á maioría dos PC do mercado, xa sexan de gama baixa, media
+ou alta.
+
+Se a fonte de alimentación non ten potencia suficiente (o normal é que estean
+entre os 350 e os 500 watts) para proporcionar electricidade a tódolos compo-
+ñentes, o equipo dará problemas.
+
+Tipos de carcasas
+
+A clasificación adoita facerse por
+tamaño, dependendo da placa
+base que admiten:
+
+y au
+
+Mini Slim
+
+Sobremesa
+Microtorre Minitorre
+Semitorre Torre
+
+Gran torre
+
+Servidor
+
+Rack
+===== PAXINA 5 =====
+Fonte de alimentación
+
+Algunhas carcasas inclúen unha
+fonte de alimentación, pero esta
+non forma parte da carcasa. O seu
+propósito é converter a corrente
+alterna da rede eléctrica en co-
+rrente continua que o ordenador
+pode usar. Á beira do conector de
+alimentación, pode haber un
+interruptor para activar ou desac-
+tivar a fonte de alimentación.
+
+Cables de alimentación ex-
+ternos
+
+e AK-5012: conecta un monitor,
+un ordenador ou calquera outro
+dispositivo á rede eléctrica. Nun
+extremo, ten un conector Shuc-
+ko macho para conectalo a unha
+toma de corrente Shucko; no
+outro extremo, ten un conector
+femia lEC320-C13 para conectalo
+ó dispositivo que se vai alimen-
+tar.
+
+tá:
+
+e AK-50242: conecta portátiles,
+fontes de alimentación externas,
+transformadores, fontes de ali-
+mentación reducidas e outros
+equipos á rede eléctrica. Nun
+extremo, ten un conector Shucko
+macho e no outro extremo un
+conector femia lEC320-C5 (con
+forma de trevo).
+
++ AK-5030: conecta a saída da
+fonte de alimentación á entrada
+
+dun monitor. Os conectores son
+1EC320-C13 e 1EC320-C14.
+
+En ordenadores de tipo servidor, que estean funcionando de forma permanen-
+te, sóense pór dúas fontes de alimentación para que a tensión que pasa polos
+compoñentes sexa máis estable e regular.
+
+Xoga un papel fundamental en varios aspectos do sistema informático:
+
+e Proporciona estabilidade ó sistema: unha fonte de alimentación de alta
+calidade con potencia suficiente para satisfacer as demandas dos distin-
+tos compoñentes do ordenador é unha garantía, mentres que unha fon-
+te de alimentación sobrecargada e de baixa calidade causa diversos
+problemas (funcionamento incorrecto, discos duros con sectores defec-
+tuosos...). Este tipo de problemas non son doados de detectar.
+
+e Determina as posibilidades de expansión: a súa potencia, medida en
+watts, é un factor determinante nas posibilidades de expansión e sopor-
+te do sistema, así como o número de conectores de alimentación que
+ofrece que subministran enerxía á placa base (conector de 20 ou 24
+pins) e ós dispositivos (conector Molex de 4 pins, conector mini-Molex
+Berg de 4 pins ou conector Serial ATA de 15 pins).
+
+e Refrixeración: o seu tamaño e ventilador inflúen no sistema de refrixera-
+ción do ordenador.
+
+e Consumo de enerxía: hoxe en día, adoitan incluír consumo intelixente
+asociado á actividade do sistema, de xeito que case tódolos dispositivos
+compren co estándar Energy Star, que identifica os produtos que usan
+a enerxía de forma eficiente.
+
+3.1> Clasificación segundo o seu cableado
+Poden ser de dous tipos:
+
+e Semimodular: trátase de fontes de alimentación que inclúen certos ca-
+bles fixos, pero que ofrecen a opción de usar conexións modulares op-
+cionais, especialmente SATA e PCle.
+
+e Modular: tódalas conexións son modulares, o que che permite usar só as
+que necesitas e, para este propósito, terás varios cables na caixa da fon-
+te de alimentación.
+
+3.2 > Clasificación segundo a súa refrixeración
+Poden ser de dous tipos:
+
+e Activas: as máis comúns, veñen equipadas cun ventilador para expulsar a
+calor.
+
+e Pasivas: arrefríanse por convección, non teñen ventilador e son moi silen-
+ciosas. Só son recomendables se o PC ten unha ventilación axeitada, xa
+que a fonte de alimentación podería sobrequentarse durante procesos
+moi esixentes.
+
+3.3 > Cal é o propósito do factor de forma dunha fonte de alimenta-
+ción?
+Cando unha fonte de alimentación ten un factor de forma específico, significa
+
+que ten dimensións definidas e puntos de montaxe específicos para caixas de
+PC específicas.
+
+A existencia de factores de forma sólidos e definidos é realmente positiva.
+Imaxina un mercado onde cada chasis usa a súa propia fonte de alimentación
+de factor de forma, o que che limita a usar caixas con fontes de alimentación
+incluídas e substitucións exclusivas e caras, ou te obriga a mercar fontes de
+alimentación específicas do fabricante que poderían non ser de boa calidade.
+En definitiva, un desastre.
+
+Por outra banda, se só houbese un factor de forma, tamén sería desastroso,
+tendo en conta que non todos teñen as mesmas necesidades. Unha fonte de
+alimentación cun chasis de tamaño normal/grande permite a fabricación de
+modelos de maior potencia con menos problemas de refrixeración, pero non lle
+
+===== PAXINA 6 =====
+atraerá a alguén que constrúa un sistema pequeno que require menos de 600
+W de potencia.
+
+A maioría das fontes de alimentación, especialmente as que se etiquetan para
+uso doméstico, empregan o estándar ATX. É importante aclarar a diferenza
+entre o estándar ATX (normas de comportamento eléctrico) e o factor de
+forma ATX (dimensións definidas).
+
+Especificamente, este estándar define o que se considera o comportamento
+axeitado dunha fonte de alimentación, é dicir: como se debe alimentar, que
+voltaxes debe ter, que proteccións debe incluír... curiosamente, este estándar
+está totalmente desenvolvido e controlado por Intel.
+
+3.4 > O factor de forma nas fontes de alimentación
+
+Os tipos de fontes de alimentación que podemos atopar ó abrir un PC depen-
+den xeralmente do factor de forma do dispositivo e de se é un clon ou dunha
+marca propietaria.
+
+Esta é unha das características máis importantes a ter en conta ó mercar equi-
+pos, xa que as incompatibilidades poden causar problemas graves ó configurar
+o sistema.
+
+ATX
+
+As fontes de alimentación ATX son as que se usan na maioría dos ordenadores
+actuais, evolucionando coas novas incorporacións de conectores, e incorporan-
+do as características xenéricas ó seu estándar.
+
+ATX PS/2, o máis común, xeralmente mide 150x140x86 mm (ancho x fondo x
+altura), aínda que as fontes de alimentación de maior potencia poden ser máis
+longas, cunha variante ATX PS/3 que é máis curta, duns 150x100x86 mm.
+
+As dimensións obrigatorias son 150 mm de ancho e 86 mm de alto, e a profun-
+didade depende do modelo. Polo xeral, a maioría das fontes de alimentación de
+ata 650 ou 750 W miden entre 140 mm e 160 mm. As fontes de alimentación
+de moi alta capacidade adoitan medir entre 180 e 200 mm, aínda que hai un
+crecente impulso por ofrecer as profundidades máis compactas posibles.
+
+SFX
+
+Poderiamos dicir que, no mercado de pezas de PC, o segundo formato máis
+empregado é o SFX, xa que é o máis común nos conxuntos de PC ultracompac-
+tos, o chamado Small Form Factor (SFF), que mide 125x100x63.5 mm, con va-
+riantes como a SFX-L de 125x130x63.5 mm, usada para poder usar ventiladores
+de maior diámetro cunha mellor sonoridade e maior capacidade de ventilación.
+
+Crear unha fonte de alimentación SFX implica varios desafíos e limitacións de
+enxeñaría. Abarrotar unha gran potencia nun espazo pequeno require máis
+traballo á hora de definir as capacidades de refrixeración e desenvolver o inte-
+rior da fonte de alimentación, xa que cada milímetro importa. Factores como
+garantir que o ventilador non choque con ningún compoñente son cruciais,
+mentres que algunhas fontes de alimentación ATX incluso teñen un chasis
+excesivo. Todo isto ten tres consecuencias moi obvias:
+
+e As fontes de alimentación máximas que se poden desenvolver con este
+formato son só de 600 a 700 W (ata 800 W con SFX-L), moi lonxe dos
+máis de 2 000 W que se conseguen con ATX.
+
+e Debido a que é un deseño máis difícil de desenvolver, non tódolos fabri-
+cantes se aventuran a fabricar modelos de calidade. Ademais de que se
+trata dun mercado significativamente máis pequeno que o ATX, a dis-
+poñibilidade de modelos SFX é bastante limitada.
+
+e Debido ó punto anterior, unha fonte de alimentación SFX custará máis
+que unha fonte de alimentación ATX de capacidades similares.
+
+Entón, podemos concluír que, en termos xerais e tomando como referencia
+fontes de alimentación de boa calidade, o formato ATX é superior en termos
+
+SFX
+
+ATX
+
+TFX
+
+TFX
+SFX
+
+Comparativa de tamaño
+
+Adaptador SFX/ATX
+
+As “fontes de alimentación
+SFX/SFX-L pódense montar en
+caixas ATX mediante un soporte
+(adaptador). Algunhas fontes de
+alimentación xa inclúen un.
+
+Overcloking
+
+Para aumentar as frecuencias do
+procesador ou da GPU hai que se
+asegurar, entre outras caracterís-
+ticas, de que a fonte de alimenta-
+ción proporcione a máxima estabi-
+lidade a un nivel de tensión de 12
+voltios.
+
+Dado que o overclocking require
+voltaxes de compoñentes varia-
+bles, canto máis estable sexa a
+tensión proporcionada pola fonte
+de alimentación, menos probable
+será que o overclocking sexa
+inestable.
+
+Se se aumenta lixeiramente a
+tensión, non haberá moito pro-
+blema, pero se se quere levar o
+sistema ó límite, si que o haberá.
+===== PAXINA 7 =====
+Como comprobar que forma-
+to de fonte de alimentación
+é compatible co meu PC
+
+Despois de coñecer tódolos for-
+matos dispoñibles, é hora de falar
+de xeitos sinxelos de determinar
+se o formato da fonte de alimen-
+tación é compatible co formato da
+caixa e viceversa. Hai varios esce-
+narios posibles:
+
+e Caixa e fonte de alimentación
+escollidas para PC por pezas: a
+solución é extremadamente sin-
+xela, nas follas de especifica-
+cións de cada compoñente, de-
+beríase poder ver que formato
+usa a fonte de alimentación e
+cales son compatibles coa caixa.
+
+e Sistema preconstruído: a cla-
+ve aquí é a mesma que a ante-
+rior... consultar as follas de es-
+pecificacións, xa que a compati-
+bilidade debería estar claramen-
+te indicada nalgún lugar.
+
++ Que ocorre se non temos nin-
+gunha información sobre o
+modelo do PC/carcasa/PSU?: as
+cousas complicanse moito máis
+aquí, pero é pouco probable que
+suceda xa que debe haber unha
+etiqueta ou algo nalgún lugar
+que indique que tipo de sistema
+é, e Google está cheo de follas
+de especificacións que deberían
+enumerar este tipo de compati-
+bilidade.
+
+En calquera caso, como moito
+teremos que comprobar as medi-
+das, comparalas con factores de
+forma estándar e botar unha
+ollada ós soportes de montaxe e
+comparalos con fotos de internet
+para ver se son compatibles.
+
+Tamén é moi importante asegu-
+rarse de que non haxa conectores
+propietarios e de que todos sexan
+estándar.
+
+de calidade de son, capacidade de refrixeración, prezo, potencia e probable-
+mente durabilidade en comparación co SFX, dada a ausencia destas limitacións.
+
+TFX
+
+E un factor de forma extremadamente raro no mercado de PC de compoñen-
+tes, cunha presenza lixeiramente maior en sistemas prefabricados.
+
+Este factor de forma fisicamente moi alongado (85x175x65 mm) está deseñado
+para ordenadores de dimensións reducidas, especialmente para carcasas tipo
+slim, que son bastante alongadas e delgadas ó mesmo tempo. Nalgúns casos,
+teñen unha altura adicional de 5 mm no lado do ventilador para acomodalo.
+
+Se xa o formato SFX era un pouco limitado, o TFX o é aínda máis. As limitacións
+de potencia, dispoñibilidade e prezo son aínda maiores, ata o punto de que a
+fonte de alimentación TFX máis potente do mercado de consumo non superan
+os 400 W.
+
+3.5 > Formatos usados para servidores e PC premontados
+
+Existen outros formatos empregados principalmente en servidores, pero ta-
+mén en certos sistemas premontados... son os menos habituais no mercado
+doméstico e os que se atopan con menos frecuencia nas tendas.
+
+Flex ATX
+
+Este é un factor de forma que se usa principalmente en sistemas premontados
+como certos barebones ou caixas de placas base mini-ITX (ás veces, este factor
+de forma chámase erroneamente factor de forma mini-ITX, cando en realidade
+non existe).
+
+As súas dimensións comúns son 81.5x150x40.5 mm, aínda que a profundidade
+pode variar dependendo do modelo.
+
+Cómpre mencionar que só se usa en modelos de moi baixa capacidade, como os
+de 250 W e similares, e por desgraza, requiren o uso de ventiladores de 4 cm
+de diámetro, que moven pouco aire e fan moito ruído.
+
+Factores de forma para montaxe en rack: 1U, 2U...
+
+Estes factores de forma están deseñados unicamente para a montaxe en rack,
+un tipo de carcasa que se usa nos servidores. Especificamente, U refírese a
+unha unidade de medida (Unidade de rack), equivalente a 44.50 milímetros.
+Xeralmente, as fontes de alimentación para montaxe en rack adoitan ter un
+tamaño de 1U ou 2U e están deseñadas para encaixar en carcasas de rack da
+mesma altura. As medidas típicas son as seguintes:
+
+1U: 100 mm de ancho, 40.5 mm de alto, a profundidade varía
+2U: 100 mm de ancho, 70 mm de alto, a profundidade varía
+
+Como podemos comprobar, 1U comparte a mesma altura que Flex ATX, pero
+este último é máis estreito, polo que non teñen o mesmo factor de forma.
+Tamén paga a pena sinalar que as medidas anteriores son as máis comúns,
+pero a lonxitude tamén pode variar dependendo da fonte de alimentación e da
+carcasa. A altura sempre debe manterse.
+
+Neste tipo de equipo, as fontes de alimentación redundantes tamén son moi
+comúns. No formato 1U, divídense horizontalmente en dous e verti-
+cal/horizontalmente no formato 2U.
+
+Outros formatos
+
+Hai outros formatos de fontes de alimentación de empresas específicas, como
+os barebones Shuttle, polo que se queres cambialo, terás que buscar especifi-
+cacións específicas desas empresas ou facer algo de bricolaxe para instalalo.
+
+Formato personalizado
+
+===== PAXINA 8 =====
+É o formato de fonte máis empregado nos servidores... mellor dito, non é un
+formato que exista como tal, xa que estamos a falar de tamaños, formas e
+sistemas de montaxe completamente personalizados que varían dunha fonte a
+outra.
+
+3.6 Eficiencia enerxética da fonte de alimentación
+
+O factor de potencia é a relación entre a potencia real subministrada pola
+toma de corrente e a potencia que a fonte de alimentación é capaz de usar.
+
+Nun circuíto ideal, esta relación sería 1, o que significa que toda a tensión e a
+corrente que sae da toma de corrente poderían ser utilizadas pola fonte de
+alimentación. O factor de potencia adoita ser un punto decimal que vai de O a
+1.
+
+Non obstante, a forma en que a corrente eléctrica viaxa polos cables non for-
+ma unha onda sinusoidal perfecta, como sería o ideal. Na realidade, faino en
+función de pequenos picos de tensión, que logo se corrixen nos transformado-
+res internos da fonte de alimentación para crear a corrente continua que re-
+quiren os compoñentes internos dos nosos ordenadores.
+
+Tipos de factor de potencia (PFC)
+
+Se o PFC non está regulado nunha fonte de alimentación, o factor de potencia
+resultante adoita ser de 0.65. E dicir, só se usa o 65% da potencia subministra-
+da. Ou, dito doutro xeito, a toma de corrente debe subministrar un 35% máis
+de corrente da que solicita a fonte de alimentación.
+
+Afortunadamente, este problema pódese resolver de dúas maneiras:
+
+e PFC pasivo: este tipo de sistema de corrección emprega indutores e con-
+densadores para mellorar o factor de potencia que recibe a fonte de
+alimentación. É unha forma moi económica de resolver o problema, pero
+ó mesmo tempo, non o resolve por completo. De feito, a corrección má-
+xima do factor de potencia que se pode conseguir con este tipo de com-
+poñente adoita roldar os 0.85.
+
+e PFC activo: Por lei, este é o tipo de corrección obrigatoria da Unión Euro-
+pea, que se esixe a tódalas fontes de alimentación do seu territorio
+dende o ano 2001. Neste caso, a corrección realízase mediante unha se-
+rie de circuítos integrados, nos que se instalan MOSFET, que fan todo o
+traballo. Con este método, o factor de potencia resultante é de 0.99, o
+que significa que case toda a enerxía entrante se transforma en enerxía
+útil.
+
+Polo tanto, incluír un dos dous tipos de PFC na topoloxía dunha fonte de ali-
+mentación é esencial para que a fonte de alimentación funcione da maneira
+máis eficiente posible. Non tería sentido ser altamente eficiente no extremo de
+saída se a fonte de alimentación consume moita máis enerxía da que realmen-
+te necesita no extremo de entrada.
+
+Con todo, a combinación de ambos conceptos (PFC máis eficiencia interna da
+fonte de alimentación) significa que as fontes de alimentación actuais consu-
+men moito menos que as de hai 10 anos.
+
+Que PFC ten unha fonte de alimentación?
+
+A maneira máis sinxela de coñecer o PFC dunha fonte de alimentación é acce-
+der á documentación do fabricante. Se a documentación non o amosa, pode-
+mos descubrilo en función da súa certificación enerxética.
+
+As fontes de alimentación usan o PFC para aumentar a eficiencia enerxética, o
+que está asociado a unha certificación 80 PLUS:
+
+Sobretensión
+
+Sen dúbida, un compoñente no
+que nunca debes escatimar é a
+fonte de alimentación.
+
+Debes ter en conta que este com-
+poñente non só subministra ener-
+xía ós compoñentes do ordenador,
+senón que tamén actúa como un
+dispositivo de protección para
+garantir que ningún deles reciba
+máis electricidade da que necesi-
+ta, O que evita danos e serve como
+barreira protectora contra posi-
+bles accidentes.
+
+Por iso protexe todo o hardware
+de sobretensións e caídas transi-
+torias que poidan producirse
+debido a cortes de enerxía ou
+outras incidencias relacionadas
+coa rede eléctrica.
+
+Polo tanto, cando vas a unha
+tenda e instalas unha destas
+fontes de alimentación, estás a
+mercar algo máis que un compo-
+ñente capaz de subministrar
+enerxía.
+
+Capacidade
+
+Recoméndase que a capacidade da
+fonte de alimentación sexa polo
+menos o dobre do consumo de
+enerxía estimado do ordenador.
+Débese a que a fonte de alimenta-
+ción funcionará a unha carga entre
+O 40 e o 60 %, que é o rango de
+alimentación onde é máis eficien-
+te.
+
+Significa que as perdas de enerxía
+debidas á calor son máis baixas,
+polo que non se debe optar por
+unha solución económica, xa que
+se poderían sufrir as consecuen-
+cias desa decisión en canto se
+instale no ordenador. Levar ó
+límite os requisitos de enerxía do
+PC pode acabar custando moito
+máis que recorrer a solucións máis
+potentes e de maior calidade
+dende o principio.
+===== PAXINA 9 =====
+Que é o programa de certifi-
+cación 80 PLUS?
+
+80 PLUS? é un programa de espe-
+cificación de rendemento e certifi-
+cación para unidades de fonte de
+alimentación internas (PSU).
+
+A súa especificación de rendemen-
+to require que as fontes de ali-
+mentación dos ordenadores e
+servidores teñan unha eficiencia
+enerxética do 80% ou superior ó
+10%, 20%, 50% e 100% da carga
+nominal cun factor de potencia
+real de 0.9 ou superior.
+
+80 PLUS? ofrece sete niveis de
+certificación para fontes de ali-
+mentación internas con clasifica-
+cións de eficiencia enerxética
+crecentes que van dende Estándar
+
+ata Rubí.
+
+PLUS”
+STANDARD
+ha.)
+
+PLUS
+
+BRONZE SILVER
+
+PLUS
+PLATINUM
+ha)
+
+TITANIUM
+
+RUBY
+
+Se a fonte de alimentación non
+inclúe ningún tipo de certificación,
+o mellor é esquecerse dela por
+completo e mercar outro modelo
+que a teña, sempre que non este-
+as disposto a malgastar enerxía.
+
+30 PLUS
+
+Certification 230V EU Internal Non-Redundant
+
+230V Internal Redundant
+
+96 of Rated Load 10% 20% 50% 100% so 10% 20% 50% 100%
+85% PEC >
+ao PLUS - 2% 02% - -
+030
+Be PEC aS%PEC>
+80 PLUS Bronzo ase 85% 81% 1%
+oso 070
+90% PEC 89% PEC>
+80 PLUS Silver 87% 87% 85% 85%
+oso 090
+92% PEC> 92% PC>
+80 PLUS Gold > 90% 109% = = 08% ans
+030 0.90
+9496 PEC 9% PEC>
+80 PLUS Platinum 92% 90% 90% 91%
+095 0.95
+APEC OS
+8O PLUS Titanium 90% o 96% 91% 90% 0 96% 91%
+SOX PEC DIMPECE  9SRPrCZ DOSRPECZ O 92PrCZ
+BO PLUS Ruby > -
+2030 030 096 0.9% 096
+
+3.7 > Conectores
+
+A que voltaxe deberiamos converter a nosa electricidade? Que especificacións
+necesitará a nosa fonte de alimentación para funcionar co resto dos compo-
+ñentes do noso ordenador?
+
+Para solucionar estes problemas e outros parecidos, desenvolvéronse varios
+estándares, entre os que destaca o estándar ATX, ou Advanced Technology
+Extended. Este estándar é o estándar para ordenadores de sobremesa domés-
+ticos e profesionais, aínda que existen algunhas alternativas, especialmente no
+campo dos servidores e sistemas industriais.
+
+Este estándar está presente nas fontes de alimentación, pero tamén o vere-
+mos nas placas base, onde atoparemos numerosos portos, incluídos os do
+estándar ATX. Esta relación entre a placa base e a fonte de alimentación vai
+dar na necesidade de conectores que permitan enganchar as distintas pezas
+que compoñen o equipo.
+
+O estándar ATX controla principalmente dúas variables dentro dos compoñen-
+tes: o tamaño dos compoñentes e as conexións que estes compoñentes terán
+entre si. Isto fai que sexa unha boa idea ter os mesmos conectores ou compa-
+tibles e controlar a enerxía enviada a través deses cables para que poidan fun-
+cionar correctamente e garantir que non haxa limitacións entre as marcas e
+modelos de compoñentes.
+
+Os conectores internos que atoparemos actualmente na nosa fonte de alimen-
+tación son os seguintes.
+
+ATX de 24 pins
+
+É o conector principal para fontes de alimentación ATX. Conecta a fonte de
+alimentación á placa base a través de varios raís de 3.3, 5 e 12 voltios. Tamén
+inclúe un circuíto de control para a comunicación de estado entre os dous
+compoñentes, incluíndo o acendido, o apagado e o modo de suspensión.
+
+Anteriormente, este conector só tiña 20 pins; de feito, moitas fontes de ali-
+mentación actuais aínda o presentan como un conector 20+4, cos últimos
+catro pins separados. Débese a que o conector orixinal non foi deseñado para
+altas demandas de potencia, polo que se actualizou para incorporar un pin
+máis para cada voltaxe a partir da versión 2.0 da especificación.
+
+ATX de 12 voltios
+
+Usase para proporcionar máis enerxía ós microprocesadores. Este conector
+pode ser de 4 ou 8 pins, con 8 pins xeralmente usados para placas base de
+servidor (EPS) e o conector de 4 pins para outras placas base.
+
+A súa principal diferenza é que en vez de transportar 3 voltaxes diferentes, só
+fornece enerxía a 12 voltios, o que obriga á placa base a ter módulos dedicados
+
+===== PAXINA 10 =====
+para facer a conversión ás voltaxes restantes. Isto aumenta moito a eficiencia
+ó requirir que a fonte de alimentación converta só unha voltaxe, o que aumen-
+ta a cantidade total de enerxía que se pode entregar á placa base usando co-
+rrentes máis baixas.
+
+O único problema é que as placas base se fan máis complexas, requirindo eta-
+pas de conversión adicionais para subministrar as voltaxes de 3.3 e 5 voltios.
+
+Fisicamente, o conector parécese a un conector EPS, pero con dous pins máis, o
+que fai un total de 10 pins, moito máis pequeno que o conector ATX estándar
+de 24 pins.
+
+Molex de 4 pins
+
+Está deseñado para alimentar periféricos e foi introducido no estándar ATX no
+seu lanzamento. Ofrece voltaxes de 5 e 12 voltios a través dos seus 4 pins e
+unha potencia de saída de máis de 100 W, máis que suficiente para a maioría
+dos dispositivos que usaban este porto, como unidades de disquete, discos
+duros IDE antigos ou unidades de CD e DVD antigas, entre outros.
+
+Tamén se usaba para proporcionar enerxía adicional a outros dispositivos co-
+mo algunhas placas base ou tarxetas gráficas antes da aparición de conectores
+máis especializados para estas tarefas.
+
+Hoxe en día, o seu uso reduciuse moito debido á perda de popularidade dos
+dispositivos que o empregan, como os discos duros tradicionais ou os reprodu-
+tores de DVD. Estes dispositivos máis modernos tamén empregan o conector
+de alimentación SATA, que é máis plano e máis doado de conectar.
+
+SATA
+
+Empregado por algúns dispositivos SATA, como as unidades de DVD máis no-
+vas ou os discos duros e SSD SATA. Ten un aspecto similar ó conector de datos
+SATA, pero é máis ancho, ten 16 pins e unha fendedura no lado oposto para
+evitar erros de conexión.
+
+O conector admite tres voltaxes: 3.3, 5 e 12 voltios, aínda que a primeira rara-
+mente se usa e ás veces nin sequera está conectada ós portos que saen da
+fonte de alimentación. Tamén existe unha versión reducida que só incorpora 6
+pins e unha tensión de 5 voltios, que se atopa principalmente en portátiles e
+algunhas fontes de alimentación de ordenador premontadas.
+
+PCI Express
+
+Están deseñados para engadir enerxía adicional ós dispositivos internos do
+ordenador, concretamente ás tarxetas de expansión PCle que requiren máis
+dos 75 W que xa proporciona o seu porto.
+
+Vénse con máis frecuencia nas tarxetas gráficas debido ó seu alto consumo de
+enerxía, e ás veces incorporan varios conectores na mesma placa de circuíto
+impreso, pero tamén se poden usar para proporcionar enerxía adicional nalgu-
+nhas placas base.
+
+Vén en dúas versións: unha versión de 6 pins que fornece ata 75 W e unha ver-
+sión de 8 pins capaz de fornecer 150 W de potencia, ambas traballando a 12
+voltios. Inicialmente, estas dúas versións non eran compatibles entre si, xa
+que, aínda que o conector de 6 pins tiña a mesma forma que parte do conector
+de 8 pins, tiña unha fendedura para evitar que se inserise nel.
+
+Non obstante, a maioría dos conectores de 8 pins foron substituídos pola ver-
+sión de 6+2 pins, que se pode usar para ambas situacións.
+
+Por outra banda, o conector de 6 pins, aínda que encaixa no conector de 8 pins
+e funcionará de inmediato debido ó seu deseño, é probable que cause danos no
+porto ou no conector se se usa, con poucas excepcións.
+
+EPS
+
+y
+
+Conectores de alimentación
+internos
+
+ATX de 24 pins
+24 PIN CONNECTOR
+
+man 1 |EJEO]| 1 («3.3
+(aa 2 | ul] 1 12
+(Ground) 3 [QUIEN] +5 (Grouna)
+
+qsv) 4 [LG 16 (rs-om
+(Ground) 5 [EN QU| 17 (Grouna)
+
+es 6 [GUEN 18 (crouna)
+(Ground) 7 | AE 1D (Ground)
+
+(ro, a |[B](C]| 20 (sv)
+(svse) o || 21 (+5
+(+124) 10 22 (+5V)
+(42) 11 a 23 (+5V)
+(av) 12 [OJO] 24 (Grouna)
+
+Voltaxe ATX de 24 pins
+
+>
+
+ATX de 12 voltios
+
+Molex de 4 pins
+
+O +12v
+[ +sv
+E Ground
+
+o
+
+Voltaxe Molex de 4 pins
+===== PAXINA 11 =====
+y
+
+Conectores de alimentación
+internos
+
+SATA
+
+PCI Express
+
+EPS
+
+Fontes modulares
+
+Fonte modular
+
+Fonte semimodular
+
+Este conector (que actualmente combina dous conectores) proporciona 12
+voltios de alimentación adicional a diferentes compoñentes do PC, máis co-
+munmente á CPU, aínda que tamén se usa nalgunhas tarxetas gráficas de ser-
+vidor ou compoñentes que requiren unha gran cantidade de enerxía. Pode ofre-
+cer 192 W en formato ATX de 4 pins ou 336 W en formato EPS de 8 pins.
+
+O conector en si está composto por dous conectores de 4 pins que xuntos
+forman un conector EPS completo. Aseméllase ó conector PCle de 8 pins en
+forma e aparencia, pero non son equivalentes, xa que ambos teñen diferentes
+asignacións de pins e diferentes potencias nominais. Un dos dous conectores
+de 4 pins nos que se subdivide é un conector ATX de 12 voltios, que tamén se
+usaba para proporcionar enerxía adicional ó procesador central.
+
+3.8 > Precaucións ó usar conectores de fonte de alimentación
+
+En xeral, conectar os cables da fonte de alimentación é un proceso rápido,
+sinxelo e seguro, e adoita seguirse a regra non escrita de que vaia onde vaia, o
+conector é o correcto. Non obstante, hai varios erros comúns que cometen
+usuarios sen experiencia que deben evitarse:
+
+e Os cables da CPU e da tarxeta gráfica confúndense moi facilmente, xa que
+ambos son de 8 pins, pero no 99% das fontes de alimentación, os pri-
+meiros están separados en 4+4 e os segundos en 6+2. É importante dis-
+tinguilos deste xeito ou consultar o manual antes de facer a conexión
+para evitar erros. Os conectores non encaixan onde non son... pero algu-
+nhas persoas poden pensar erroneamente que é o conector correcto e
+forzalo, rompéndoo e potencialmente danando o equipo.
+
+e A orientación dos conectores SATA pode facer que o pin do disco duro se
+rompa, polo que se se necesita demasiada forza para facer a conexión,
+probablemente estea orientada incorrectamente.
+
+3.9 > Conectores en fontes de alimentación modulares
+
+As fontes de alimentación máis comúns e baratas son as non modulares ou
+cableadas. Como o seu nome indica, os seus cables están conectados ós circuí-
+tos internos da fonte de alimentación e saen por un pequeno burato na parte
+traseira para montalos nun ordenador.
+
+Isto parece razoable para unha fonte de alimentación con só uns poucos co-
+nectores, pero cando se trata de fontes de alimentación con gran número de
+cables, na maioría dos casos algúns quedarán sen usar, completamente soltos
+na carcasa, o que é bastante molesto. Este é un problema que resolve o cable-
+ado modular.
+
+Unha fonte de alimentación modular substitúe toda esa morea de cables por
+conectores femia na parte traseira da fonte de alimentación. En lugar de ter un
+cableado completamente fixo, podemos conectar e desconectar os cables que
+necesitamos, para que os cables non utilizados non sexan un obstáculo.
+
+O máis importante que hai que mencionar é que non existe un estándar univer-
+sal para estes, polo que mesturar cables de diferentes fontes modulares é
+perigoso. Na maioría dos casos, utilízanse conectores Molex moi semellantes
+ós dos compoñentes.
+
+En xeral, a pesar das semellanzas, hai pouca marxe de erro, polo que sempre
+que se teña coidado (e se consulte o manual se cómpre), non debería haber
+problema.
+
+Fontes de alimentación semimodulares
+
+Non tódalas fontes de alimentación modulares do mercado inclúen o 100% dos
+seus cables. As fontes de alimentación semimodulares inclúen algúns cables
+fixos, normalmente os vitais (ATX+CPU) e, ás veces, outros de uso común,
+como os cables PCle.
+
+===== PAXINA 12 =====
+Este tipo de deseño utilízase para lograr un equilibrio entre o baixo prezo das
+fontes de alimentación con cable fixo e a versatilidade das fontes de alimenta-
+ción 100% modulares.
+
+Por que deberiamos escoller unha fonte de alimentación modular?
+Hai varios factores:
+
+e Versatilidade: sen dúbida, a característica máis destacable dunha fonte
+de alimentación modular é a versatilidade que ofrece o feito de que só
+precisa conectar os cables necesarios. Isto anímanos a escoller modelos
+con máis potencia e conectores, xa que se estivese cableada, intentarí-
+amos asegurarnos de que tivese o número xusto de conectores para non
+dificultar a montaxe do equipo. Cunha fonte de alimentación modular,
+ter conectores adicionais non é un problema, senón unha gran vantaxe.
+
+e Xestión de cables mellorada e simplificada: se instalas unha fonte de
+alimentación non modular, é probable que teñas moitos cables de so-
+bra. Como xa mencionamos, isto é un obstáculo importante para a xes-
+tión de cables e, nalgúns casos, mesmo para a refrixeración interna da
+caixa. Non obstante, cunha fonte de alimentación modular, só conectas
+os cables necesarios, deixando só uns poucos conectores sobrantes.
+Deste xeito, poderás organizar os cables moito mellor na túa caixa.
+Ademais, se necesitas retirar a fonte de alimentación da caixa, como é
+modular, podes simplemente desconectar os cables do lado da fonte
+mentres permanecen conectados ós compoñentes, aforrándoche o
+tempo que leva reorganizar os cables.
+
+e Podes escoller cables con fundas ou outras personalizacións: unha
+fonte de alimentación modular permíteche crear os teus propios cables
+con fundas caseiras ou podes mercar un kit prefabricado, que che per-
+mite substituír completamente todo o cableado. Se a fonte de alimen-
+tación non fose modular, terías que desoldar os cables dende o interior,
+o que é extremadamente perigoso e anula a garantía, ou simplemente
+terías que usar cables de extensión.
+
+Por que non deberiamos escoller unha fonte de alimentación modular?
+
+O cableado modular non só ten vantaxes. Hai varias desvantaxes que debemos
+ter en conta antes de mercar:
+
+e Prezo: o cableado modular aumenta significativamente o custo de produ-
+ción, o que o fai significativamente máis caro que unha versión non mo-
+dular. Ademais, se tes un orzamento axustado, é probable que atopes
+modelos baratos que presumen de cableado modular pero que son de
+baixa calidade interna. Debes ter en conta que a calidade é o primeiro,
+polo que se queres unha boa fonte de alimentación modular, terás que
+gastar máis cartos. A recomendación é non priorizar a modularidade
+sobre a calidade.
+
+e Conectores non universais: Obviamente, tódalas fontes de alimentación
+veñen con conectores estandarizados, polo que son compatibles con
+calquera compoñente. Non obstante, os conectores que van ás placas
+modulares das fontes de alimentación non son estándar. Agás algunhas
+excepcións, os conectores modulares de diferentes marcas e modelos
+non son compatibles. O problema que supón é que hai que ter coidado
+de non perder os cables da fonte de alimentación nin mesturalos cos
+doutra. Se os perdes, depende do fabricante e da túa sorte, xa que as
+pezas de reposto non sempre se venden por separado, aínda que nor-
+malmente si.
+
+e É posible que algunhas configuracións sexan máis molestas: podemos
+atoparnos con problemas en casos con moi pouco espazo para a fonte
+de alimentación, onde a lonxitude engadida da modularidade dificulta a
+configuración do equipo.
+
+3.10 > O futuro xa é presente: 12VHPWR
+
+Conectores antigos que xa
+non se usan
+
+ATX de 20 pins
+
+O predecesor do conector princi-
+pal de 24 pins actual, coa única
+diferenza na ausencia dunha liña
+adicional para cada voltaxe neses
+catro pins adicionais, como vimos
+anteriormente.
+
+ATX de 6 pins
+
+Este conector utilizouse no están-
+dar ATX 1.0 ata a súa eliminación
+no 2.0 e subministraba á placa
+base alimentación de 3.3 e 5 vol-
+tios antes de que as súas liñas se
+movesen ó conector de 24 pins,
+polo que non era necesario o seu
+mantemento.
+
+--
+
+e ae
+Berg
+
+Este conector foi deseñado espe-
+cificamente para conectores de
+disquetes de ordenador, actuando
+efectivamente como un mini
+conector Molex, xa que presenta-
+ba as mesmas conexións pero era
+máis pequeno e ofrecía menos
+enerxía.
+
+Non se atopa nas fontes de ali-
+mentación actuais debido á falta
+de utilización de disquetes, que
+eran o seu principal caso de uso.
+===== PAXINA 13 =====
+e
+
+Conector PCle 5.0
+
+Conector queimado
+
+Despois de analizar o problema,
+NVIDIA recomendoulle ó usuario
+que verificase que o conector
+estivese completamente inserido.
+
+Varios usuarios informaron de
+que, a pesar de estar conectado
+correctamente, continuaba a
+queimarse.
+
+O fabricante (e varios fabricantes
+de fontes de alimentación) res-
+ponderon que tamén se debe ter
+especial coidado coa forma en que
+se dobra o cable: sempre debe
+estar polo menos a 5 centímetros
+de distancia do conector e nunca
+en ángulos superiores a 90 graos.
+
+x
+
+25 mm
+
+35mm
+
+(TE
+
+Se non te queres complicar a vida
+dobrando o cable o suficiente para
+evitar que deixe de funcionar, a
+solución máis sinxela é mercar un
+cable cun conector de 90 graos.
+
+Este cable está deseñado especifi-
+camente para resolver este pro-
+blema e a maioría dos fabricantes
+de fontes de alimentación ofréce-
+no como opción, do mesmo xeito
+que a maioría das tarxetas gráfi-
+cas.
+
+É un conector desenvolvido por Intel que foi adoptado por NVIDIA nos seus
+modelos de gama alta e de maior potencia.
+
+Este conector 12VHPWR adoita denominarse PCle 5.0. Este nome provén da
+súa asociación coas fontes de alimentación PCle 5.0. A idea é substituír os
+conectores PCle de 6+2 pins, reducindo o número de cables necesarios para
+
+alimentar a tarxeta gráfica.
+
+As tarxetas gráficas modernas adoitan ter dous ou tres conectores de alimen-
+tación PCle de 8 pins. Isto proporciona unha fonte de alimentación de ata 450
+watts, ademais dos 75 watts que ofrece o porto PCle x16. O conector 12VHPWR
+ten como obxectivo corrixir este problema cun único conector de 12 pins que
+debería simplificar todo.
+
+Este conector ofrece varias características únicas. En primeiro lugar, admite
+catro niveis de potencia, comezando en 150 watts, 300 watts, 450 watts e
+chegando ata 600 watts. Teoricamente, este conector podería soportar no
+futuro case 1000 watts. Ademais dos conectores de alimentación, ten catro
+pins para a comunicación coa fonte de alimentación para mellorar a subminis-
+tración de enerxía.
+
+Problemas graves con este conector
+
+A medida que as primeiras unidades da NVIDIA RTX 4080 e RTX 4090 comeza-
+ron a chegar ó mercado, comezaron a aparecer os primeiros problemas rela-
+cionados con este tipo de conector debido ó alto consumo de enerxía, o que
+provocaba que o cable se queimase e deixase de funcionar.
+
+Unhas semanas despois do lanzamento da RTX 4090, comezaron a aparecer
+casos de conectores queimados. Un aparente problema de deseño provocaba
+que o conector non se inserise completamente nalgúns casos. Isto finalmente
+levou á queimadura do conector de alimentación debido a este defecto.
+
+Revisión do conector
+
+Debido ós danos sufridos polas tarxetas gráficas, PCI-SIG (regulador do conec-
+tor de alimentación 12VHPWR, entre outros), Intel e NVIDIA buscaron unha
+solución. Para conseguilo, redeseñaron o conector, renomeándoo a 12V-2x6,
+aínda que nas especificacións oficiais se denomina PCle 5.0 e ATX 3.1.
+
+A diferenza entre os dous conectores non é doada de ver. O novo conector 12V-
+2x6 engade pins máis longos para evitar os problemas de conexión que antes
+causaban danos. Ademais, o conector ATX 3.1 xa non é un conector obrigatorio,
+senón simplemente recomendado.
+
+3.11 > Como comprobar que a fonte de alimentación ATX funciona
+Os pasos son os seguintes:
+
+e Apaga o interruptor da fonte de alimentación e desconéctaa da fonte de
+alimentación.
+
+e Colle un clip ou un cable, dóbrao formando unha curva e conéctao entre o
+cable verde e un dos cables negros.
+
+e Conecta a fonte de alimentación.
+
+e Se a fonte de alimentación funciona, arrancará e o ventilador comezará a
+xirar. Se non hai movemento, a fonte de alimentación está defectuosa.
+
+Medición da fonte de alimentación cun multímetro
+Os pasos son os seguintes:
+
+e Acender o multímetro.
+
+e Seleccionar o rango de tensión de corrente continua.
+
+e Seleccionar o rango de 20 voltios DC.
+
+e Conectar o cable de proba negro á toma de terra da fonte de alimenta-
+ción (cables negros).
+
+===== PAXINA 14 =====
+e Co cable de proba vermello, medir as diferentes voltaxes: 5 voltios (cable
+vermello), 12 voltios (cable amarelo), -12 voltios (cable azul), 3.3 voltios
+(cable laranxa), 5 voltios (violeta), O voltios (negro).
+
++ O cable gris debería indicar se chega a voltaxe correcta á fonte de alimen-
+tación.
+
+e Retirar os cables de proba e apagar o multímetro.
+
+UTILIZACIÓN DE MULTIMETRO PARA
+MEDIR OS VALORES DA FONTE DE
+ALIMENTACION
+
+Punta de proba
+Karse
+MS8221A vermello móvese
+á. polos distintos pins
+20 Voltios en continua
+é suficiente para tódala:
+medicións
+
+Punta de proba
+negra en pin negro
+(terra)
+
+Punta de proba
+vermello
+en terminal V - Voltios
+
+Punta de proba negra
+en terminal COM
+
+4 >> Placa base
+
+A placa base forma, xunto cos compoñentes nela inseridas, o núcleo do orde-
+nador que fai posible o funcionamento de todo o sistema. É a pedra angular de
+calquera configuración, pois nela, está situada a CPU da que dependen as pres-
+tacións e compatibilidade de software do PC.
+
+A placa base (en inglés motherboard o mainboard) é umha placa de circuíto
+impreso rectangular que serve como medio de conexión entre o microprocesa-
+dor, a memoria RAM, os dispositivos de almacenamento, as tarxetas de expan-
+sión... (tódolos compoñentes do ordenador están conectados a ela, dun xeito
+ou doutro).
+
+Tamén encontramos nela a memoria ROM-BIOS, o reloxo, os conectores (eléc-
+trico, portos serie, portos paralelo, portos USB...) que serven para conectar o
+ordenador cos diferentes periféricos de entrada e saída.
+
+É dicir, é o soporte sobre o que se monta todo o PC, polo que tanto o rende-
+mento da máquina como a posibilidade de futuras expansións dependen direc-
+tamente do tipo de placa base escollida.
+
+A placa base xoga un papel fundamental en varios aspectos do ordenador,
+como:
+
+e Rendemento: determina o tipo de procesador, memoria, buses e interfa-
+ces de disco duro que se poden usar e establece a capacidade de comu-
+nicación entre diferentes dispositivos a través do chipset, a BIOS e tóda-
+las súas canles de comunicación.
+
+e Organización: o xeito en que está deseñada a placa base determina como
+se organizará o computador xa que todo se conecta a ela.
+
+e Actualización e Expansión: a placa base determina ata que punto se po-
+de actualizar o computador e ata que punto se pode instalar uns ou ou-
+tros tipos de dispositivos.
+
+División dos sistemas dixi-
+tais por tamaño
+
+e Mainframes: Permiten o pro-
+ceso masivo de datos no menor
+tempo posible.
+
++ Estacións de traballo: Au-
+mentan a produtividade indivi-
+dual nas empresas.
+
++ Automatismos: Control e au-
+tomatización de procesos a tra-
+vés de Microcontroladores e
+Autómatas programables.
+
+e Portátiles: Un ordenador por-
+tátil, ás veces coñecido simple-
+mente como portátil ou polos
+anglicismos laptop e notebook, é
+un ordenador persoal que se
+pode mover ou transportar con
+relativa facilidade.
+
+e
+
+===== PAXINA 15 =====
+Factor de forma
+
+Os estándares creados polos
+fabricantes coñécense como
+factores de forma.
+
+As características definidas polo
+factor de forma son:
+
+e A forma da placa (cadrada ou
+rectangular).
+
++ As súas dimensións físicas
+exactas (ancho e longo).
+
++A posición das ancoraxes, é
+dicir, as coordenadas onde se
+atopan os parafusos.
+
+e As zonas onde se atopan cer-
+tos compoñentes. Especifica-
+mente, as baías de expansión e
+os conectores traseiros (teclado,
+rato, USB...).
+
++ A forma física do conector da
+fonte de alimentación.
+
++ As conexións eléctricas da fon-
+te de alimentación, é dicir, can-
+tos cables require a placa da
+fonte de alimentación, os seus
+valores e a súa función.
+
+Placa base AT
+
+Ten unhas dimensións da orde de
+100 milímetros, o suficientemente
+grandes como para que sexa
+imposible encaixar en miniorde-
+nadores de sobremesa, o que
+dificulta a instalación de novas
+unidades.
+
+O concepto de conectores de seis
+pins naceu para funcionar como
+conectores de alimentación para
+este tipo de placa base.
+
+Producida a mediados da década
+de 1980, esta placa base durou
+case dúas décadas ata a prolifera-
+ción de equipos clónicos.
+
+4.1> Tipos de placas base
+
+Por que hai diferentes tipos se a placa base ofrece a mesma función? A exis-
+tencia de diferentes placas base débese ás diferentes configuracións e requisi-
+tos dos sistemas informáticos. A elección da placa base depende do procesa-
+dor que se queira usar, do tipo de sistema que se estea a construír e das carac-
+terísticas adicionais que se precisen.
+
+Para reducir custos e permitir a intercambiabilidade entre placas base, os fa-
+bricantes crearon varios estándares que agrupan recomendacións sobre o
+tamaño e a disposición dos elementos nas placas.
+
+Extended-ATX
+
+Cando falamos deste tipo de placas, estamos a falar de placas base que non
+están deseñadas para o seu uso en PC cotiáns, debido a que se usan tanto en
+estacións de traballo como en servidores pequenos.
+
+O tamaño deste tipo de placa base é de 305 x 330 mm, permitindo máis com-
+poñentes, como máis dun zócolo de CPU no seu interior, un maior número de
+módulos DIMM para ter un maior número de canles de memoria...
+
+Este non é un formato de uso común, o que leva a que moitas carcasas de PC
+teñan problemas para montalas polo que hai que comprobar as especificacións
+da carcasa para determinar se se poderá usar este tipo de placa base.
+
+ATX
+
+Este é o tipo de placa base máis clásico. Teñen un factor de forma máis rec-
+tangular e están deseñadas para facilitar a instalación e o mantemento. Nor-
+malmente teñen máis baías e portos de expansión, o que permite conectar
+unha variedade de compoñentes adicionais.
+
+O seu acrónimo provén do feito de que os PC co procesador 286 de Intel recibí-
+an o alcume de AT. Cando chegou o verdadeiro auxe dos clons ou compatibles
+de PC a mediados dos anos noventa do século pasado, as placas base pasaron a
+chamarse ATX, onde o X significa Enhanced (mellorada). Dende entón, conver-
+téronse no estándar por excelencia e no tipo de placa base máis utilizado.
+
+As dimensións deste formato de placa base son 305 x 244 mm, aínda que po-
+den variar lixeiramente. Ademais, tódalas placas base derivadas de ATX están
+deseñadas para funcionar co seu tipo de fonte de alimentación, ademais de
+respectar detalles como as sete baías de expansión separadas por 20 mm.
+
+O estándar ATX, ó ser o máis empregado, está en constante revisión, non só en
+termos de tamaño, senón tamén para adaptarse a cambios en forma de novos
+portos de expansión e alimentación, así como a eliminación daqueles que que-
+daron desactualizados.
+
+En definitiva, é importante que as diferentes pezas se poidan colocar de forma
+lóxica e coherente, pero ó mesmo tempo, os diferentes compoñentes non in-
+terfiran entre si.
+
+Micro-ATX
+
+Foi a primeira variante do formato ATX e é unha versión máis compacta. As
+dimensións desta placa base son de 244 x 244 mm, polo que cambia a posición
+das baías de expansión da caixa en relación coa placa base.
+
+Os catro orificios superiores adoitan coincidir cos da placa base ATX e, polo
+tanto, teñen un espazo de 20 mm entre eles, pero os dous orificios inferiores
+son máis estreitos. Isto non é un problema, xa que a gran maioría dos usuarios
+de PC nunca usan a capacidade de expansión completa dunha placa base ATX.
+
+Hoxe en día, son o tipo de placa base máis utilizado para construír PC para
+xogos, principalmente porque ofrecen o nivel de configuración e expansión
+necesario.
+
+===== PAXINA 16 =====
+FlexATX
+
+Estamos a falar dun derivado do estándar ATX deseñado para ofrecer unha
+solución compacta para ordenadores de sobremesa pequenos. Obviamente, ó
+ser unha placa base máis pequena derivada do formato ATX, o número de
+opcións de conectividade é moito menor.
+
+As placas base con formato FlexATX teñen un tamaño de 229 x 101 mm. É
+compatible coas mesmas caixas de PC que son compatibles co formato ATX,
+aínda que debemos comprobar as especificacións con atención, xa que este
+formato non é tan común no mercado.
+
+Este tipo de placa base úsase principalmente en equipos de oficina e multime-
+dia cunha soa función onde o espazo dispoñible é limitado. Os modelos máis
+potentes inclúen unha tarxeta gráfica dedicada, xa que, debido ás restricións
+de espazo, non tódalas tarxetas gráficas caben, especialmente as consideradas
+de gama alta.
+
+O mesmo ocorre co espazo da RAM e o número de portos PCle para ampliar as
+súas capacidades. Estas limitacións teñen como obxectivo reducir os custos de
+fabricación, polo que están deseñadas para ordenadores económicos. Aínda
+que son compatibles con fontes de alimentación ATX, para aforrar espazo
+podemos optar por fontes de alimentación máis pequenas como as SFX.
+
+Mini-ITX
+
+Para a creación de pequenos ordenadores de sobremesa, temos as chamadas
+placas base Mini-ITX, que non son un derivado das placas base ATX. Trátase de
+placas base de 170 x 170 mm, e o seu pequeno tamaño xeralmente significa
+que veñen con menos compoñentes que os tipos de placas base mencionados
+anteriormente. Non obstante, a integración de compoñentes fixo que fosen tan
+boas neste sentido como as ATX e derivados co paso do tempo.
+
+O seu tamaño causa certos problemas á hora de montar certos compoñentes,
+especialmente os sistemas de refrixeración como radiadores e disipadores de
+calor, que están deseñados para sistemas ATX e Micro-ATX. Tamén podemos
+atopar tarxetas gráficas máis compactas e, polo tanto, máis estreitas, que
+están deseñadas para caixas Mini-ITX.
+
+Aínda que podemos atopar torres que admiten unha placa base Mini-ITX, xa
+que os seus catro orificios adoitan coincidir cos catro orificios situados á es-
+querda e no centro das placas base ATX, usalas nunha caixa ATX ou Micro-ATX
+é un desperdicio de espazo. Polo tanto, recoméndanse para crear HTPC (Home
+Theater Personal Computer) multimedia ou outros sistemas compactos onde o
+espazo é escaso e o aproveitamento máximo é esencial, e onde só se poden
+instalar fontes de alimentación máis pequenas.
+
+Nano-ITX
+
+As placas base co formato Nano-ITX, unha variante máis pequena do Mini-ITX,
+comezaron a implementarse en 2025 e miden 120 x 120 mm. Este tipo de pla-
+cas están destinadas a dispositivos multimedia de consumo como caixas An-
+droid de gama alta, centros multimedia e dispositivos loT (Internet das Cou-
+sas), sistemas de son e ordenadores ultraportátiles de baixo consumo ou
+mesmo mini PC.
+
+Debido ó seu tamaño, as capacidades de expansión son moito máis limitadas
+que as de calquera outro tipo de placa base máis grande, xa que están deseña-
+das para un uso específico que non require actualizacións futuras. Aínda que é
+certo que, como calquera outra placa base, podes actualizar os seus compo-
+ñentes, debido ás limitacións de espazo, isto adoita ser un impedimento.
+
+Pico-1TX
+
+Estamos a falar das placas base máis pequenas dispoñibles no mercado. Son
+unha versión máis pequena das placas base Nano-ITX, que miden 100 x 72 mm.
+Este tipo de placa base xa vén co procesador integrado, polo que non é posible
+
+Unha carcasa pode ser com-
+patible con varios formatos?
+
+Un dos principais aspectos a ter
+en conta é que, en última instan-
+cia, o feito de que escollamos un
+tipo de placa base ou outro de-
+terminará o tamaño do noso PC,
+incluíndo, por suposto, a propia
+carcasa, así como as diversas
+características adicionais que
+ofrecen as máis grandes.
+
+Neste sentido, as carcasas dos
+ordenadores teñen unha serie de
+características que debemos ter
+en conta, xa que obviamente non
+todas son compatibles con tódo-
+los tipos de placas base do mer-
+cado, polo que debemos elixir
+coidadosamente a configuración
+de ambas.
+
+Cada carcasa ten un formato
+diferente que é perfecto para cada
+tipo de placa base, pero hai algúns
+modelos que teñen un uso moito
+máis xeral. Neste caso, se pensa-
+mos en chasis de semitorre, po-
+demos ver que hai bastantes que
+se ofrecen con compatibilidade
+para varios tipos de placas base,
+como ATX, micro-ATX e mesmo
+ás veces MINI-ITX, dependendo do
+caso.
+
+Ademais, polo feito de que teñen
+maior ou menor compatibilidade,
+aínda que todas teñen os orificios
+para incorporar este tipo de pla-
+cas base, hai algunhas que permi-
+ten facelo dun xeito moito mellor
+que outras.
+
+Debes ter en conta que é mellor
+escoller o tipo de caixa que se
+corresponde co factor de forma
+da placa base. En definitiva, mer-
+car un modelo Micro-ATX para un
+chasis que normalmente admite
+ATX simplemente deixará un
+conglomerado que non aproveita-
+rá ó máximo as capacidades de
+refrixeración da caixa, pero que
+tampouco terá a vantaxe dun
+factor de forma máis pequeno.
+
+As placas base desempeñan un
+papel crucial á hora de facilitar a
+comunicación entre diferentes
+compoñentes, garantindo un
+rendemento óptimo en cada tare-
+fa que realizamos.
+===== PAXINA 17 =====
+BTX (Balanced Technology
+Extended)
+
+Este estándar é un formato de
+placa base creado por Intel en
+2004 como unha evolución do
+formato ATX, para tentar resolver
+os problemas de refrixeración ós
+que se enfrontaban algúns proce-
+sadores.
+
+É practicamente incompatible co
+ATX, agás pola fonte de alimenta-
+ción (é posible usar unha fonte de
+alimentación ATX nunha placa
+base BTX).
+
+Non foi aceptada polos fabrican-
+tes e usuarios porque a localiza-
+ción do procesador na placa a
+facía incompatible con algúns
+tipos de procesadores que tiñan
+requisitos de localización específi-
+cos.
+
+Placa de circuíto impreso
+
+Tamén coñecida como PCB (Prin-
+ted Circuit Board), é un medio
+para suxeitar mecanicamente e
+conectar electricamente compo-
+ñentes electrónicos a través de
+camiños ou pistas de material
+condutor gravado en láminas de
+cobre laminadas sobre un subs-
+trato non condutor.
+
+Conectores internos da pla-
+ca base
+
+1PCI
+
+2 SATA
+
+3 pila
+
+4 memoria RAM
+
+5 disqueteira
+
+6 conexión eléctrica ATX
+7 zócolo procesador
+
+8 IDE
+
+9 PCI Express
+
+substituílo. O mesmo ocorre coa memoria, e ambas están soldadas á placa
+base, igual que nos portátiles. Non obstante, as características que ofrecen son
+moi diferentes en termos de rendemento e potencia, xa que tampouco permi-
+ten actualizacións de RAM, que tamén están soldadas á placa base.
+
+Este tipo de placas son perfectas para crear dispositivos domóticos pequenos
+e de baixo consumo. Tamén se empregan para crear pequenos servidores do-
+mésticos para compartir ficheiros e descargas P2P, debido ó seu baixo consu-
+mo, que non supera os 8 W na peor das hipóteses, e ó seu baixo nivel de ruído,
+xa que a maioría só teñen refrixeración pasiva, aínda que se lles pode engadir
+un ventilador para mellorar o rendemento.
+
+Ademais, son perfectas para crear diversos proxectos porque permiten a in-
+corporación dunha serie de módulos adicionais grazas ós seus pins GPIO inte-
+grados. Isto é algo que podemos atopar, por exemplo, na Raspberry Pi, e que
+nos permite instalar complementos como sensores, pantallas ou outro tipo de
+dispositivos adicionais para configuralos o máis completamente posible.
+
+4.2 > Conexións da placa base
+
+As placas base teñen varias conexións que lles permiten comunicarse con ou-
+tros compoñentes, tanto de xeito interno como externo.
+
+w
+y
+>
+a
+«X
+E
+o
+
+Conectores externos
+
+===== PAXINA 18 =====
+4.3 > BIOS (Basic Input/Output System)
+
+Nas antigas memorias ROM-BIOS e nas actuais UEFI almacénanse as rutinas
+básicas de baixo nivel que fan posible que o ordenador arranque para, poste-
+riormente, ceder o control ó sistema operativo. Están alimentadas de forma
+permanente por unha pila de botón.
+
+Mediante o setup, podemos configurar a BIOS, tendo certos coñecementos
+técnicos. Para activar o programa de configuración teremos que premer, se-
+gundo o modelo de placa base, a tecla F2 ou a tecla Supr antes de que o equi-
+po cargue o sistema operativo.
+
+O propósito fundamental da BIOS é iniciar e probar o hardware do sistema e
+cargar un xestor de arranque ou un sistema operativo que estea nun dispositi-
+vo de almacenamento de datos.
+
+4.4 > UEFI (Unified Extensible Firmware Interface)
+
+É unha especificación que define a interface existente entre o sistema operati-
+vo e a plataforma firmware. Xurdiu para substituír á BIOS e dotala de novas
+características como soportar diagnose e reparacións remotas, incluso sen ter
+instalado o sistema operativo.
+
+Manexa bases de datos con información da plataforma, inicio e tempo de exe-
+cución dos servizos dispoñibles listos para cargar el sistema operativo. Destaca
+por:
+
+e ser capaz de emular a BIOS cando o sistema operativo só é compatible
+con ela.
+
+e posibilitar o arranque dende unidades de almacenamento superiores a 2
+TB mediante GPT.
+
+e ter unha arquitectura e controladores independentes da CPU.
+
+e ter unha contorna de traballo amigable.
+
+e ter un deseño modular.
+
+4.5> Bus
+
+O bus do sistema é o compoñente da placa base, formado por cables ou pistas
+nun circuíto impreso, que permite que a información poida circular da memoria
+cara os periféricos e viceversa, segundo as instrucións marcadas polo procesa-
+dor. Divídense en tres tipos:
+
++ Bus de control: goberna o uso e acceso ás liñas de datos e de enderezos
+debido a que están compartidas por tódolos compoñentes; desta forma
+minimizanse as colisións de información no sistema.
+
+e Bus de enderezos: é unha canle do microprocesador independente do bus
+de datos onde se establece o enderezo de memoria do dato en tránsito;
+a capacidade da memoria que se pode enderezar depende da cantidade
+de bits que conforman este bus, sendo 2" o tamaño máximo en bits do
+banco de memoria que se poderá enderezar con n liñas.
+
+e Bus de datos: por el viaxan os datos entre os diversos compoñentes
+hardware do equipo informático.
+
+A capacidade e o rendemento do bus do sistema veñen determinados por:
+
+e Ancho do bus: é o número de liñas en paralelo polas que se transmite in-
+formación. Poden ser de 8, 16, 32, 64 ou 128 bits. Na actualidade, trabá-
+llase con 64 bits.
+
+e Frecuencia do bus: é a frecuencia de reloxo coa que o bus traballa; non
+ten por que ser a mesma que a frecuencia da CPU, o que pode orixinar
+problemas no rendemento do equipo.
+
+e Velocidade de transmisión: son os megabytes de información que pode
+transmitir nun segundo.
+
+Conectores externos da
+placa base
+
+1PS2
+
+2 USB 2.0
+
+3 VGA
+
+4 DVI
+
+5 HDMI
+
+6 reinicio UEFI
+7USB 2.0
+
+8 Firewire
+
+9 SATA
+
+10 RJ45
+
+11 USB 3.0
+
+12 Son analóxico
+13 Son dixital
+
+Interface BIOS
+
+Interface UEFI
+===== PAXINA 19 =====
+PCI Express
+
+Tarxetas PCI Express
+
+O PCle arrancou no 2004, conver-
+téndose nun estándar que aínda
+non foi substituído, pero que foi
+mellorado.
+
+Aquí, os alicerces cambiaron: era
+unha conexión punto a punto, non
+un bus. Deste xeito, eliminábase a
+perda de rendemento causada por
+varios dispositivos que intentaban
+comunicarse co procesador simul-
+taneamente. Antes tiñamos ocos
+individuais que se agrupaban para
+conseguir un maior ancho de
+banda. Agora, nas placas base,
+vemos diferentes carrís: x1, x4, x8,
+x16. Co tempo, esta conexión
+evolucionou, ofrecendo maiores
+velocidades de transferencia:
+
+1.0: de 250 MB/s (x1) a 4 GB/s (x16)
+2.0: de 500 MB/s a 8 GB/s
+
+3.0: de 984.6 MB/s a 15.8 GB/s
+4.0: de 1969.2 MB/s a 31.5 GB/s
+
+Non hai que confundir PCl-e con
+PCH-x... esta última foi unha evolu-
+ción da PCI, que non se populari-
+zou porque se perdían velocidades
+de transmisión ó instalar máis dun
+dispositivo.
+
+Tódolos nodos que están conectados ó bus reciben os datos aínda que non se
+dirixan a eles; os nodos ós que non van dirixidos simplemente ignoran eses
+datos.
+
+4.6> Ocos de expansión
+
+Parte dos periféricos podémolos conectar a través de ocos de expansión
+(slots), que teñen un número determinado de contactos onde podemos inserir
+tarxetas que serven para ampliar a capacidade e o número de periféricos co-
+nectados ó ordenador. Cando falamos de slots ou ocos de expansión, referímo-
+nos á forma na que o bus se pode comunicar con outros dispositivos periféri-
+cos. Normalmente son de catro tipos:
+
+e ISA: xa non están dispoñibles na actualidade; servían para conectar dispo-
+sitivos de 8 e 16 bits.
+
+e PCl: baseado na comunicación paralela para conectar dispositivos de 32 e
+64 bits; só se topan en máquinas que precisan compoñentes obsoletos.
+
+e AGP: específicos de tarxetas gráficas... tamén obsoleta.
+
+e PCI Express: baseado na comunicación serie polo que alcanza un ancho de
+banda maior.
+
+Antigamente as placas incorporaban nos sete ocos de expansión máis de tipo
+ISA que de tipo PCI, pero isto foi cambiando de tal xeito que na actualidade non
+se monta ningunha de tipo ISA.
+
+Coa aparición dos conectores USB, a maioría dos periféricos conéctanse dende
+o exterior. Ademais, a maioría das placas base incorporan na actualidade direc-
+tamente tarxetas de rede, de son, gráficas... Así, os ocos só se utilizan para
+conectar dispositivos moi específicos; os dispositivos convencionais soen ser
+parte da placa.
+
+A vantaxe radica na despreocupación á hora de configuralos, xa que a propia
+ROM estará configurada para recoñecelos sen problema. O inconveniente é que
+ante a maioría dos fallos dalgún deles, toda a placa base quedará inutilizada.
+
+4.7 > Chipset
+
+O chipset ou xogo de circuítos integrados auxiliares é o conxunto de circuítos
+integrados que se encontra na placa base e que manexa o fluxo de datos entre
+O procesador, a memoria e os periféricos.
+
+Determina as características da placa base que son inalterables, o tamaño
+máximo de memoria que a placa é quen de enderezar, os tipos e velocidades
+dos buses, o número de procesadores que pode soportar... e o máis importan-
+te, a familia de microprocesadores que se poderá usar con esa placa.
+
+A maior parte destas funcións de control agrúpanse en dous circuítos integra-
+dos de gran tamaño, normalmente chamados ponte norte e ponte sur. As
+placas actuais xa non soen traer a ponte norte pois os microprocesadores de
+última xeración xa a levan integrada.
+
+A ponte norte controla o fluxo de datos que se transfire entre a CPU e a me-
+moria RAM e entran no porto AGP ou PCI Express; soe levar un disipador tér-
+mico debido ó quentamento que sufre a causa da grande cantidade de datos
+que a miúdo o atravesan. O bus que conecta a ponte norte co procesador chá-
+mase bus frontal (FSB). A velocidade do FSB limita o rendemento dun procesa-
+dor porque é a velocidade máxima á que pode ler información da RAM.
+
+A ponte sur encárgase da transferencia de datos que entran e saen do disco
+duro e de tódolos demais dispositivos de entrada/saída, e os transfire a través
+da canle de ligazón que está conectada á ponte norte.
+
+Que é o PCH?
+
+Actualmente, o Northbridge integrouse no procesador e pasou a chamarse
+PCH. O Southbridge, pola contra, aínda está presente nas placas base, pero
+
+===== PAXINA 20 =====
+agora chámase chipset. Aínda que ambos seguen existindo, os seus nomes
+cambiaron debido ás súas características tan diferentes.
+
+O Platform Controller Hub (PCH) introduciuse por primeira vez en 2009 como
+unha solución simplificada para o enrutamento de datos e as funcións de so-
+porte. Este elemento inclúe actualmente elementos como o reloxo do sistema,
+a Flexible Display Interface (FDI) e a Direct Media Interface (DMI). Cómpre sina-
+lar que a FDI só se usa cando o chipset debe admitir procesadores con gráficos
+integrados.
+
+A distribución actual da xestión dos diferentes elementos cambiou significati-
+vamente. O PCH encárgase principalmente da xestión das principais canles
+PCle (GPU + M.2 SSD) e da xestión da memoria. O chipset é responsable da
+xestión dos portos de E/S, algunhas canles PCle e outros aspectos especiais
+como a configuración RAID ou o overclocking.
+
+AMD ten un deseño equivalente, pero con algunhas diferenzas (recordade que
+esta arquitectura recibe o nome de Zen fronte á arquitectura Intel que recibe o
+nome Gen de xeneración). Debido ó seu deseño de procesador tipo chiplet, o
+PCH está situado dentro do paquete, pero separado dos núcleos. É un DIE es-
+pecífico, chamado 1/O Die que esencialmente fai o mesmo que o PCH de Intel.
+
+Nos procesadores AMD coa microarquitectura Zen teriamos:
+
+e Die de E/S ou clOD: é o responsable da comunicación entre o procesador
+e os compoñentes externos, concretamente a memoria e o bus PCI.
+
+e Infinity Fabric: é o bus que interconecta internamente os CCX entre si, os
+CCD entre si e co die de E/S. En realidade, forma parte do clOD.
+
+e Controlador de memoria unificado (Unified Memory Controller): é a
+responsable da comunicación coa RAM.
+
+e Hub de E/S: é o responsable da comunicación co bus PCle, os periféricos
+ou calquera outro bus que non sexa o utilizado para a comunicación da
+RAM.
+
+Noutras palabras, o die de E/S é o que antes era a ponte norte. E o bus frontal
+(FSB) sería o Infinity Fabric.
+
+É importante ter en conta que cada parte do chip de E/S funciona a unha fre-
+cuencia diferente:
+
+e fclk: frecuencia de Infinity Fabric
+e uclk: frecuencia de Unified Memory Controller
+e iclk: frecuencia de I/O Hub
+
+Finalmente, a RAM funcionará á frecuencia chamada mclk.
+Capacidades que proporciona
+
+Para funcionar, o procesador require instalación nunha placa base. Debe comu-
+nicarse con outros compoñentes de diferentes fabricantes, o que se fai a tra-
+vés do PCH e as súas diferentes capacidades.
+
+As características e capacidades do PCH están en consonancia coas capacida-
+des do procesador e, en consecuencia, co prezo final. Normalmente, as capaci-
+dades do PCH son directamente proporcionais ó número de núcleos do proce-
+sador. Así, os modelos de gama máis alta ofrecerán a maior cantidade de fun-
+cionalidades, e estas diminúen a medida que baixamos no rango do procesador.
+
+As capacidades do PCH adoitan variar segundo estes parámetros:
+
+e Capacidade de overclocking para o procesador e a RAM.
+
+e Número de carrís PCle directos. Normalmente, hai 16 carrís para a tarxeta
+gráfica e algúns ofrecen carrís adicionais para SSD M.2 PCle.
+
+e Número de interfaces SATA.
+
+e Número de portos USB directos no procesador.
+
+e Liñas de comunicación directa co chipset.
+
+Que problemas pode expe-
+rimentar o PCH dunha placa
+base?
+
+En xeral, os compoñentes con
+capacidades máis limitadas non
+deberían ter fallos extremada-
+mente graves, pero tamén poden
+causar erros críticos.
+
+Se falamos dun procesador, por
+exemplo, é común saber que as
+temperaturas poden afectar
+directamente o seu funcionamen-
+to.
+
+Este tipo de fallos tamén poden
+afectar a outras partes da placa
+base se a voltaxe non se axusta
+correctamente.
+
+Un erro de microcódigo pode
+incluso afectar ó chipset, que, se
+se sobrequenta, pode experimen-
+tar os mesmos fallos que unha
+CPU.
+
+Por isto, adoitan incorporar un
+disipador de calor pasivo, similar ó
+que vemos noutros chips que son
+susceptibles á calor.
+
+Por estas razóns, é moi importan-
+te ter unha configuración equili-
+brada en termos de potencia e
+refrixeración.
+
+Os problemas que poden causar
+as altas temperaturas nun PC
+poden ter un impacto significativo
+no seu rendemento.
+===== PAXINA 21 =====
+Núcleo físico
+
+Porción interna do microprocesa-
+dor case independente que realiza
+tódalas actividades dunha CPU
+solitaria.
+
+Núcleo lóxico
+
+Simulación dun núcleo físico a fin
+de repartir dun xeito máis eficien-
+te o procesamento.
+
+<= Y
+
+Procesadores comerciais
+
+Cando falamos de procesadores
+comerciais, “centrarémonos en
+procesadores coas seguintes
+arquitecturas (ISA):
+
+e x86: arquitectura de 32 bits
++ x64: arquitectura de 64 bits
+
++ ARMV8: arquitectura para mó-
+biles de 64 bits
+
+Samsung
+
+[ind
+
+Parte posterior do procesador
+
+Obviamente, non tódalas placas base son iguais e empregan tódalas caracte-
+rísticas dun PCH ou chipset, por exemplo se é Micro-ATX ou Mini-ITX debido a
+un tamaño máis pequeno non haberá espazo para varias interfaces periféricas,
+quedando só as máis importantes.
+
+5 >> Procesador
+
+O procesador ou microprocesador ou CPU (Central Process Unit) é o circuíto
+integrado máis complexo dun sistema informático; trátase do cerebro do or-
+denador. Este compoñente é o que organiza o fluxo de datos no interior da
+placa base, cara ou dende os periféricos á memoria e entre o resto dos compo-
+ñentes da placa. O procesador realiza unha serie de instrucións programadas
+en linguaxe de baixo nivel: de cálculo, aritméticas e lóxicas, que se efectúan a
+un ritmo marcado polo reloxo.
+
+Esta unidade central de procesamento está constituída, esencialmente, por
+rexistros, unha unidade de control, unha unidade aritmético lóxica (ALU) e
+unha unidade de cálculo en coma flotante.
+
+A nivel físico, o procesador é un circuíto ou chip, no que millóns de compoñen-
+tes electrónicos, como transistores, condensadores e resistencias, están cons-
+truídos nunha oblea de silicio.
+
+Este dispositivo está encapsulado nun chip e conéctase mediante un zócolo
+(socket) específico da placa base. Debido á miniaturización dos seus compoñen-
+tes, prodúcense altas temperaturas no microprocesador, o que o pode danar.
+Para evitalo, incorpóraselle un sistema de refrixeración que consta dun disipa-
+dor de calor fabricado nalgún material de alta condutividade térmica, como
+cobre ou aluminio, e de un ou máis ventiladores que eliminan o exceso da calor
+absorbida polo disipador. Entre o disipador e a cápsula do microprocesador
+colócase pasta térmica para mellorar a condutividade da calor.
+
+Un sistema informático de alto rendemento pode estar equipado con varios
+microprocesadores traballando en paralelo, e un microprocesador pode, a súa
+vez, estar constituído por varios núcleos físicos ou lóxicos.
+
+Existe a tendencia de integrar o maior número de elementos dentro do propio
+procesador, aumentando así a eficiencia enerxética e a miniaturización. Entre
+os elementos integrados están as unidades de punto flotante, controladores
+da memoria RAM, controladores de buses e procesadores dedicados de vídeo.
+
+Os procesadores máis estendidos e máis comercializados na actualidade son os
+fabricados por Intel, empresa que, nunha especie de alianza con Microsoft, fai
+que o software fabricado por este sexa totalmente compatible coas caracterís-
+ticas dos seus procesadores.
+
+Existen outros fabricantes, como AMD, Cyrix, Motorola... que tamén fabrican
+procesadores para ordenadores persoais e para grandes sistemas, xa que,
+basicamente, o proceso de fabricación é o mesmo, e é bastante complexo.
+
+Na actualidade, AMD está sendo desprazada do segundo posto por Qualcomm
+ou Samsung debido a irrupción destas empresas no mercado dos dispositivos
+móbiles.
+
+A velocidade do procesador depende tanto da frecuencia coa que o reloxo
+emite os seus pulos como do tipo de bus e doutras características:
+
+e Frecuencia de reloxo: é a velocidade á que está traballando o procesador
+e mídese en megahercios (Mhz). Na actualidade supéranse velocidades
+de 6 GHz, contrastando coa dos procesadores dos primeiros ordenado-
+res persoais que eran de 4.77 Mhz. Unha velocidade de 8 Mhz, por
+exemplo, significa que o procesador é quen de realizar 8 millóns de ope-
+racións por segundo. Cada operación pódese destinar a un proceso con-
+creto que estea en execución nese intre. Trátase dunha velocidade in-
+terna, xa que é á que se executan as instrucións no interior do procesa-
+dor. Para manter a velocidade dentro dos límites correctos e exactos
+
+===== PAXINA 22 =====
+sen oscilacións, en cada placa base hai un cristal de cuarzo (como os que
+toparíamos en calquera reloxo dixital) que xera os impulsos de forma
+síncrona.
+
+e Buses: son as vías internas polas que circulan os datos e inflúen seria-
+mente na velocidade real de proceso dun ordenador. A eficacia dos bu-
+ses depende do seu ancho (número de bits que poden circular por eles)
+e da rapidez coa que estes bits circulan. Esta velocidade externa é a ve-
+locidade á que o procesador se comunica coa placa base. Esta velocida-
+de coñécese como velocidade do bus ou FSB. Actualmente, pode superar
+os 8000 MHZ, e é a velocidade á que o computador realmente funciona
+no seu conxunto, xa que a miúdo se produce un atasco entre a placa ba-
+se e O microprocesador. Esta discrepancia de velocidade (entre interna e
+externa) coñécese como factor de multiplicación e é o valor polo que
+se multiplica a velocidade externa para determinar a velocidade de fun-
+cionamento real do sistema. Por exemplo: se a velocidade externa é de
+200 Mhz e o factor de multiplicación é de 8, a velocidade do procesador
+será de 1600 MHz, aínda que a velocidade do procesador interno sexa
+maior.
+
+e Memoria caché: é unha memoria de acceso rápido, máis aínda que a pro-
+pia RAM. Incorpórase na placa base dos equipos, para reducir a frecuen-
+cia de accesos á memoria RAM que o procesador ten que realizar. Outra
+característica da memoria caché, intrínseca á rapidez, é que non ten
+moita capacidade.
+
+Os ordenadores actuais soen montar dous tipos de memoria caché: interna,
+asociada ó propio procesador e de pequena capacidade, pero de elevado ren-
+demento e externa, que se sitúa, normalmente, entre o microprocesador e o
+resto de compoñentes hardware, como poden ser a RAM ou o controlador de
+entrada/saída, e serve de almacenamento intermedio.
+
+5.1> Zócolo do microprocesador
+
+É o lugar onde se insire o procesador na placa base. O propósito do zócolo é
+conectar electricamente os pins do procesador á placa base e suxeitar o chip
+para que non se solte. Os primeiros microprocesadores soldábanse á placa
+base ou inseríanse en zócolos que eran imposibles de retirar.
+
+Os encapsulados máis utilizados son:
+
++ PGA (Pin Grid Array): cadrado cun gran número de conectores redondos
+pequenos onde os pins do microprocesador se insiren por presión. Era o
+modelo que usaba AMD. Se presentan unha estrutura cadrada cunha
+panca cunha fendedura triangular tamén presente no microprocesador
+para saber en que posición encaixa cumpren o formato ZIF (Forza de in-
+serción cero), que se refire á presión necesaria para instalar ou retirar o
+microprocesador.
+
+e LGA (Land Grid Array): neste deseño, os pins colocáronse dentro do zó-
+colo (en lugar de levalos ó procesador). Esta medida foi tomada por In-
+tel para trasladar o problema da rotura dos pins ós fabricantes de pla-
+cas base. AMD actualmente tamén fabrica procesadores sen pins coa
+superficie plana. Aínda así, as placas base non son compatibles para
+ambos tipos de procesadores, polo que Intel e AMD teñen placas base
+exclusivas e incompatibles entre si.
+
+e BGA (Ball Grid Array): o microprocesador ten pequenas bólas que se sol-
+dan directamente á placa base. Polo tanto, non se require un zócolo e os
+custos simplificanse. Debido ó seu pequeno tamaño, adoita empregarse
+na fabricación de teléfonos intelixentes e portátiles.
+
+Finalmente, lembra que unha placa base pode ter varios zócolos para varios
+microprocesadores. Este é o caso das placas base de servidor, onde é común o
+uso de dous ou máis procesadores. En configuracións con moi alto número de
+procesadores, como os supercomputadores, non se usan zócolos; no seu lugar,
+os microprocesadores sóldanse directamente á placa base. Isto optimiza o
+
+A
+
+Caché do procesador
+
+Úsase para gardar as posicións da
+memoria principal máis utilizadas.
+A velocidade de adquisición dos
+datos increméntase enormemente
+cando empregamos este tipo de
+memoria.
+
+Cando a caché contén os datos
+que necesita a CPU, non hai tem-
+pos de espera e denomínase acer-
+to de caché. Cando a caché non
+contén os datos, denomínase fallo
+de caché, e a CPU terá que esperar
+ata que a memoria principal en-
+tregue os datos.
+
+Na práctica existen polo menos
+dúas memorias caché. Chámanse
+memoria caché de Nivel 1 (L1), de
+Nivel 2 (L2), e se existe de Nivel 3
+(L3).
+
+ZIF (Forza de inserción cero)
+
+Actualmente, tódolos zócolos son
+ZIF (Zero Insertion Force), o que
+significa que teñen un mecanismo
+(unha pequena panca) que permite
+inserir os chips sen esforzo.
+
+Antes, era necesario premer fisi-
+camente o chip para inserilo e,
+peor aínda, forzalo a saír (xeral-
+mente facendo panca lateral cun
+desaparafusador), o que provoca-
+ba moitas roturas dos pins do
+chip.
+===== PAXINA 23 =====
+Procesador PS5
+
+Os zócolos úsanse en sistemas de
+arquitectura aberta, onde o ob-
+xectivo é proporcionar unha varie-
+dade de compoñentes, permitindo
+a substitución da tarxeta ou do
+circuíto integrado. Nos sistemas
+de arquitectura propietaria, como
+as videoconsolas, os circuítos
+integrados sóldanse á placa base.
+
+Tarxeta gráfica
+
+Sabes por que os microprocesa-
+drores deseñados para xogos non
+inclúen gráficos por defecto?
+
+Porque a potencia da GPU sempre
+será maior e os microprocesado-
+res tamén necesitan RAM para
+funcionar correctamente.
+
+Rendemento do procesador
+
+A medición do rendemento dun
+microprocesador non é doada:
+unha métrica do rendemento é a
+frecuencia do reloxo que permite
+comparar procesadores con nú-
+cleos da mesma familia, pero é un
+indicador moi limitado dada a
+grande variedade de deseños
+comercializados. Unha forma
+fiable de medir a potencia dun
+procesador é mediante a obten-
+ción das instrucións que executa
+por ciclo de reloxo.
+
+Overcloking
+
+Pretende alcanzar unha maior
+velocidade de reloxo para un
+compoñente electrónico por riba
+das especificacións do fabricante.
+Pode acurtar a vida útil do com-
+poñente ou supor unha perda de
+estabilidade.
+
+espazo e o rendemento, que son factores clave en máquinas con varios miles
+de procesadores.
+
+5.2 > Que aspectos son importantes á hora de elixir un microproce-
+sador?
+
+A arquitectura dun microprocesador moderno é moi complexa, polo que con-
+fiar en parámetros básicos como o número de núcleos ou a frecuencia de fun-
+cionamento como características de compra pode ser un erro. Isto é especial-
+mente certo se se comparan procesadores de diferentes empresas ou diferen-
+tes series dentro da mesma empresa, porque hai moitos outros parámetros
+internos que definen a súa potencia, como a cantidade de caché que teñen, o
+número de instrucións por ciclo que executan e moitos máis.
+
+Ademais, debido ás diferenzas arquitectónicas internas, algúns procesadores
+son mellores que outros en certas tarefas, tamén debido ás microinstrucións
+que implementan.
+
+Entre os parámetros que deberiamos comprobar estarían:
+
+e Núcleos: todo depende do uso que se lle pretenda dar ó ordenador. O
+número de núcleos pode variar normalmente de catro a doce. Pode pa-
+recer que canto maior sexa o número, máis rápido funcionará... pero o
+número de núcleos que ten un procesador o que determina é o número
+de procesos que pode executar ó mesmo tempo. Pode executar un por
+núcleo a non ser que o procesador teña tecnoloxía de multithreading
+simultáneo, nese caso pode executar dous fíos por núcleo. Nese caso, a
+execución do segundo proceso será moito máis lenta, polo que un pro-
+cesador de catro núcleos con multithreading pode ter menos potencia
+que un procesador de seis núcleos sen multithreading, dependendo ta-
+mén da tarefa que se estea a realizar.
+
+e Frecuencia de funcionamento: é importante ó comparar procesadores
+da mesma arquitectura e, en xeral, unha frecuencia máis alta sempre é
+mellor, aínda que hai algunhas advertencias. En primeiro lugar, hai que
+ter en conta a diferenza entre a frecuencia base e, se o procesador a
+ten, a frecuencia turbo. A primeira está sempre garantida en tódolos
+núcleos e a segunda é un máximo que se alcanzará dependendo do nú-
+mero de núcleos en funcionamento e da temperatura do microprocesa-
+dor. Por exemplo, se un procesador indica un turbo boost máximo de 6
+GHz pero ten oito núcleos de alto rendemento, só alcanzaría esa fre-
+cuencia con un ou dous núcleos activos e, polo tanto, podería baixar a
+un turbo boost de 5.2 GHz cos oito activos. Se a refrixeración é deficien-
+te, podería incluso baixar á frecuencia base (podemos supor 3.2 GHz), a
+única garantida polo fabricante, xa sexa Intel, AMD ou calquera outro.
+
+e Potencia térmica disipada: polo tanto, a refrixeración é importante, así
+como a Potencia de deseño térmico (TDP) do procesador. Este paráme-
+tro refírese á potencia térmica disipada, non á potencia consumida e,
+por desgraza, ambas mídense en watts, o que pode ser confuso. Un pro-
+cesador de 95 W TDP pode ter un consumo de enerxía de 150 W, pero
+ese TDP de 95 W indica que require 95 W de refrixeración para funcionar
+á frecuencia base indicada polo fabricante. Afortunadamente, a partir
+do Core de 12.? xeración, os datos que proporciona Intel son o consumo
+de enerxía real, non o TDP.
+
+e Memoria caché: a caché é como unha pequena memoria RAM situada
+dentro do procesador; é esencial en calquera procesador porque a RAM
+é demasiado lenta para enviar os datos e as instrucións que un procesa-
+dor necesita, xa que o procesador funciona moito máis rápido que a
+RAM. A caché almacena as instrucións e os datos que a CPU usa con
+máis frecuencia, aforrando así tempo ó evitar recuperalos da RAM. Ha-
+bitualmente divídese en tres niveis:
+
+— 11: é unha caché privada para cada núcleo, situada dentro do núcleo.
+Ten a menor capacidade pero é a máis rápida. Divídese en caché de da-
+tos e caché de instrucións.
+
+===== PAXINA 24 =====
+—L2: é unha caché privada para cada núcleo, pero situada fóra do nú-
+cleo. Ten unha capacidade e velocidade intermedias.
+
+—L3: é a caché compartida por tódolos núcleos. Só hai unha en cada
+procesador. Ten a maior capacidade pero é a máis lenta.
+
+Existe outra caché que se usa con pouca frecuencia, a L4, especialmente
+en procesadores que veñen con GPU integradas.
+
+Cada nivel almacena un tipo de información dependendo da frecuencia
+coa que se necesite e da súa importancia. A medida que ascendemos de
+nivel, a capacidade aumenta e a velocidade diminúe.
+
+Se só se menciona un tamaño de caché para un procesador, estamos a
+referirnos á caché L3.
+
+e Gráficos integrados: en lugar de ter unha tarxeta gráfica, que seguirá
+funcionando no ordenador, o microprocesador inclúe todo o necesario
+para reproducir gráficos coa máxima calidade. No mesmo chip e en dife-
+rentes núcleos, está todo o que se precisa para xogar, traballar ou o que
+se queira facer. Lembra comprobar a resolución correspondente, xa que
+pódese ver contido cunha resolución de ata 4K. A gran maioría dos mi-
+croprocesadores inclúen gráficos por defecto, agás os deseñados para
+xogos.
+
+5.3 > Equivalentes de Intel fronte a AMD: como comparar os proce-
+sadores de forma xusta
+
+Ademais do feito de que os diferentes rangos de CPU pódense comparar xene-
+ricamente, hai outros puntos que tamén se deben ter en conta ó elixir un:
+
+e Xeración: é fundamental... non é posible comparar un ¡5 de última xera-
+ción cun Ryzen 5 de hai varias xeracións. Sería moi inxusto, xa que as xe-
+racións máis novas adoitan ofrecer mellores características por defecto.
+Polo tanto, debemos comparar procesadores de xeracións similares ou
+ten en conta a diferenza xeracional ó facer a comparación.
+
+e Prezo: aínda que as comparacións entre gamas poden ser útiles, os pre-
+zos poden variar dependendo de varios factores (novidade, modelo,
+marca, características, ofertas...). AMD tradicionalmente ofrece prezos
+máis competitivos, especialmente nas gamas media e alta, pero Intel
+axusta na actualidade tamén os seus prezos.
+
+e Rendemento: aínda que as comparacións xerais entre gamas son útiles, o
+rendemento específico pode variar significativamente entre modelos
+dentro da mesma gama. E importante revisar as probas de rendemento
+e as probas de rendemento para comparar modelos específicos en tare-
+fas relevantes para o seu uso.
+
+e Uso: este punto é sen dúbida a clave para acertar. Non hai un único proce-
+sador mellor ou peor. Todo depende das necesidades do usuario e do
+uso que se lle vai dar. Antes de elixir un procesador, debemos conside-
+rar para que se vai usar e mercar exactamente o que se precisa.
+
+e Compatibilidade: hai que vixiar de preto a compatibilidade do hardware.
+Os procesadores AMD e Intel usan diferentes zócolos e chipsets, o que
+significa que non son intercambiables na mesma placa base. Mesmo
+dentro da mesma marca, as diferentes xeracións de procesadores poden
+requirir diferentes placas base. Debemos asegurarnos de que o proce-
+sador que eliximos é compatible coa placa base actual.
+
+e Características: debemos ter en conta características como a compatibi-
+lidade con overclocking, a eficiencia enerxética e as tecnoloxías integra-
+das por cada marca. De novo, aquí debémonos centrar máis no que ne-
+cesitamos que en cal é o mellor.
+
+5.4 > Intel: como diferencialos pola numeración
+
+Vamos clasificar os diferentes procesadores Intel segundo os seus números de
+modelo; os termos ¡3, i5, i7 e ¡9 son simplemente nomes comerciais que indi-
+can:
+
+Intel vs AMD: Diferenzas
+técnicas
+
+A competencia entre Intel e AMD
+é feroz en 2025; ambas marcas
+ofrecen solucións potentes e
+diversas para diferentes tipos de
+usuarios. As principais diferenzas
+técnicas son:
+
+e Arquitectura e rendemento:
+Intel presenta a 14? xeración de
+procesadores Core, ofrecendo
+altos niveis de rendemento en
+tarefas de subproceso único,
+ideal para aplicacións e xogos
+que non aproveitan varios núcle-
+os. AMD presenta a serie Ryzen
+8000, ofrecendo unha excelente
+eficiencia enerxética, destacando
+en “tarefas  multisubproceso,
+sendo a opción superior para
+simulacións, edición de vídeo e
+renderización.
+
+e Eficiencia enerxética: AMD
+mellorou considerablemente o
+seu consumo de enerxía, conse-
+guindo procesadores que xeran
+menos calor e consomen menos
+enerxía baixo cargas pesadas.
+Intel mantén unha vantaxe na
+xestión dinámica de enerxía gra-
+zas Ós seus núcleos eficientes.
+
+e Compatibilidade: Intel require
+placas base actualizadas co
+chipset Z890 para aproveitar ó
+máximo as novas funcionalida-
+des. AMD mantén a compatibili-
+dade co zócolo AM5, o que per-
+mite actualizacións máis sinxe-
+las para os usuarios de xeracións
+anteriores.
+
+e Prezo: AMD xeralmente ofrece
+unha mellor relación custo-
+rendemento, especialmente na
+gama media. Intel tende a ter
+prezos máis altos para os seus
+procesadores de gama alta, pero
+con rendemento competitivo.
+
+En 2025, a elección entre Intel e
+AMD dependerá das necesidades
+específicas. Intel dá mellor ren-
+demento en xogos e tarefas de
+subproceso único e AMD destaca
+pola súa eficiencia enerxética e as
+súas capacidades de subproceso
+múltiple, o que é ideal para crea-
+dores e profesionais.
+===== PAXINA 25 =====
+Sen hyperthreading Con hyperthreading
+
+HyperThreading
+
+A “tecnoloxía HyperThreading
+simula esencialmente dous proce-
+sadores (ou núcleos) nun só chip,
+dividindo a carga de traballo entre
+eles e mellorando así a velocidade
+de procesamento.
+
+Por exemplo, os procesadores
+Intel Core i3 só teñen dous núcle-
+os físicos pero compórtanse coma
+se tivesen catro núcleos (en reali-
+dade, son fíos) grazas a esta tec-
+noloxía. Estes núcleos adicionais
+simulados por HyperThreading
+adoitan chamarse núcleos lóxicos.
+
+Thread?
+Tronas
+inreso7
+Fíos de procesamento
+
+Os fíos, ou subprocesos, non son
+unha parte física do procesador...
+podémolos definir como o fluxo
+de control de datos dun progra-
+ma. É un medio para xestionar as
+tarefas dun procesador e os seus
+diferentes núcleos de forma máis
+eficiente. Grazas ós fíos, as unida-
+des de asignación máis pequenas,
+que son as tarefas ou procesos
+dun programa, pódense dividir en
+fragmentos para optimizar o
+tempo de espera de cada instru-
+ción na cola de procesos. Estes
+fragmentos chámanse subproce-
+sos ou fíos. Cada fío de procesa-
+mento contén unha parte da
+tarefa a realizar, o que é máis
+sinxelo que colocar toda a tarefa
+no núcleo físico. Así, a CPU é
+capaz de procesar varias tarefas á
+vez, tendo en conta que normal-
+mente hai un ou dous fíos por
+núcleo. Estes procesadores chá-
+manse multifío. Debemos enten-
+der que un procesador con 12 fíos
+non terá 12 núcleos; os núcleos
+son algo de orixe física e os fíos
+son algo de orixe lóxica.
+
+e 13: Procesadores de gama baixa
+
+e ¡5: Procesadores de gama media
+
+e 17: Procesadores de gama alta
+
+e ¡9: Procesadores de gama moi alta
+
+Son os mesmos tipos de procesadores pero cun número maior ou menor de
+núcleos de caché ou se admiten hyperthreading. Non obstante, é importante
+ter en conta que só se poden comparar procesadores da mesma microarquitec-
+tura ou xeración (como a chama Intel): isto significa que un i3 de 10? xeración é
+xeralmente mellor que un ¡7 de 1? xeración, xa que a microarquitectura de 10?
+xeración é significativamente superior á de 1? xeración e mesmo poden ter o
+mesmo número de núcleos.
+
+Intel? Core". 17 -A1065) (GA processor
+
+A numeración dos procesadores é a seguinte:
+
+e Marca: Intel Core
+e Modelo: 33, ¡5...
+e Xeración: Esta é a microarquitectura ou xeración; pode variar de 1 á xera-
+ción actual
+e SKU: é o modelo exacto dentro da gama, indica a velocidade, os núcleos...
+e Sufixo: indica unha característica especial
+— K: multiplicador desbloqueado para facilitar o overclocking
+— Gl a G7: xogo de instrucións gráficas integrado no chip... maior núme-
+ro, mellor rendemento
+— T: optimizado para potencia
+— H: gráficos de alto rendemento
+— Q: CPU de catro núcleos
+— U: consumo de enerxía ultrabaixo
+
+5.5> AMD: como diferencialos pola numeración
+
+Dentro de AMD, centrarémonos nos procesadores Ryzen, xa que son os máis
+recentes do mercado. A arquitectura Zen de AMD foi un cambio benvido para
+todos, xa que provocou competencia, e Intel tivo que comezar a saír do seu
+letargo de catro núcleos.
+
+Zen é un cambio radical con respecto a Bulldozer (anterior arquitectura de
+AMD). Xa non hai núcleos nin módulos; AMD volveu a unha estrutura de núcle-
+os monolítica pero cunha base MCM. Isto significa que un Ryzen está composto
+por dúas unidades CCX, cada unha con catro núcleos, conectadas polo sistema
+Infinity Fabric. En base a isto, os núcleos pódense desactivar para crear proce-
+sadores con dous, catro, seis e oito núcleos para consumo xeral e ata 32 núcle-
+os no sector profesional. Usan o zócolo AM4 ou AM5 dependendo do modelo e
+veñen cun multiplicador desbloqueado, polo que admiten overclocking.
+
+En relación á latencia: o bus Infinity Fabric funciona á mesma velocidade que a
+RAM, polo que para mellorar a velocidade do procesador recoméndase usar
+memoria moi rápida.
+
+Ryzen 5 7640U
+
+A numeración dos procesadores é a seguinte:
+
+e Marca: Ryzen
+e Número de núcleos: 9 (doce núcleos), 7 (oito núcleos), 5 (seis núcleos, pe-
+ro non todos) e 3 (catro núcleos)... os Threadripper terían máis núcleos
+
+===== PAXINA 26 =====
+e Xeración: 7 (2023), 8 (2024), 9 (2025)
+e Segmento: é redundante, indica o modelo de procesador (Athlon Silver,
+Athlon Gold, Ryzen 3, Ryzen 5, Ryzen 7 ou Ryzen 9)
+e Arquitectura: xeración da microarquitectura Zen
+e Características: O indica modelo de gama baixa e 5 modelo de gama alta
+e Factor de forma / TDP:
+— HX: 55 W para rendemento máximo en xogos
+— HS: 35 W para uso doméstico
+— U: de 15 a 28 W para equipos ultrafinos
+- C: de 15 a 28 W para portátiles
+- e: 9 W para equipos sen ventilador
+— X: frecuencias de funcionamento máis altas
+
+5.6 > ARM: o procesador do móbil
+
+Úsanse principalmente en teléfonos móbiles, tanto Android como iPhone. ARM
+creou as súas propias ISA (ARMv7, ARMv8), que implementan actualmente os
+núcleos Cortex-A
+
+O que ARM non fai é fabricalos. Por exemplo, Samsung compra a licenza do
+Cortex-A55 e fabrica un procesador (chip) con catro núcleos, cada un usando
+esa microarquitectura. Por outra banda, unha empresa tamén pode deseñar as
+súas propias microarquitecturas dende cero en lugar de usar Cortex-A; por
+exemplo, Apple adoitaba usar Cortex-A pero agora deseña a súa propia micro-
+arquitectura chamada Apple SoC.
+
+Existe outra gama de procesadores ARM chamada Neoverse, que se basea nas
+microarquitecturas que acabamos de comentar pero está deseñada para servi-
+dores.
+
+Procesadores híbridos
+
+Consiste en colocar núcleos de diferentes niveis de rendemento no mesmo
+procesador. Unha cousa moi interesante dos chips ARM é que cada núcleo pode
+ser diferente dos demais (isto é o que ARM chama tecnoloxía big.LITTLE).
+
+Estes núcleos están feitos para ter diferentes niveis de potencia porque isto
+aforra a duración da batería (Intel ten procesadores Lakefield con núcleos de
+distinta potencia). Cando non estamos a usar o teléfono, úsanse os núcleos de
+menor potencia e, cando estamos a xogar, úsanse os núcleos máis potentes.
+
+O consumo de enerxía pode parecer importante a nivel móbil, pero nos gran-
+des centros de datos e supercomputadores, os propios procesadores conso-
+men moita electricidade, así como ó arrefrialos. Polo tanto, non é de estrañar
+que o supercomputador máis rápido do mundo poida estar baseado nesta tec-
+noloxía.
+
+En 2021, Fugaku, con ARM, era o supercomputador máis potente do mundo,
+con 7,3 millóns de núcleos, todos eles ARM. Ademais, dado que ARM usa ISA de
+tipo RISC, o procesador é máis sinxelo, o que resulta nun menor consumo de
+enerxía en comparación cos ISA de tipo CISC.
+
+Doutra banda, a duración da batería tamén é importante nos portátiles, razón
+pola cal Apple decidiu cambiar os procesadores Intel polos procesadores ARM
+nos seus portátiles.
+
+6 >> Refrixerador
+
+Manter un sistema refrixerado é un factor determinante na lonxevidade dun
+ordenador, así como no uso óptimo do seu rendemento. Tódolos compoñentes
+internos do ordenador xeran calor cando funcionan, aínda que o procesador, a
+tarxeta gráfica, o chipset da placa base, a RAM e o disco duro son os que máis
+o xeran. Un ordenador ben refrixerado dura máis que un que funciona a altas
+temperaturas. Ademais, o sobrequentamento pode causar perda de datos e
+mesmo danos no ordenador.
+
+Arquitectura ZEN
+
+En Zen, os núcleos e a caché L3
+están organizados xerarquicamen-
+te.
+
+e CCX: composto por varios nú-
+cleos que comparten a mesma
+caché L3
+
++ CCD: composto por dous CCX
+
+e Die de E/S ou clOD: responsa-
+ble da comunicación entre o pro-
+cesador e o ambiente externo,
+concretamente a memoria e o
+bus PCI
+
++ Infinity Fabric: o bus que in-
+terconecta internamente os
+CCX, os CCD e o Die de E/S. Na
+realidade forma parte do clOD
+
+e Procesador. composto por
+varios CCD e o Die de E/S
+
+En Zen 2, o CCX está composto
+por ata 4 núcleos e unha caché L3
+con 16 MB; o CCD é a unión de 2
+CCX, polo que está composto por
+8 núcleos e 2 cachés L3.
+
+En Zen 3, o CCX está composto
+por ata 8 núcleos e unha caché L3
+de 32 MB, polo tanto o CCD está
+composto por 16 núcleos e 2
+caches L3.
+
+Latencia
+
+A comunicación entre diferentes
+núcleos é máis lenta canto máis
+separados estean:
+
+e Entre núcleos dentro do mes-
+mo CCX é a máis rápida: 50 ns
+
+e Con núcleos doutro CCX pero
+dentro do mesmo CCD é máis
+lenta: 150 ns
+
+e Con núcleos doutro CCD é a
+máis lenta: 200 ns
+===== PAXINA 27 =====
+Lei de Amdahl
+
+A lei de Amdahl afirma que o
+número de núcleos que pode ter
+un programa depende de como de
+paralelizable sexa.
+
+Noutras palabras, engadir máis
+núcleos non mellorará significati-
+vamente o rendemento. Polo
+tanto, ter máis núcleos non signi-
+fica necesariamente que un proce-
+sador sexa máis rápido.
+
+Refrixerador
+
+Disipador
+
+Ventilador
+
+x.
+
+Pasta térmica
+
+6.1> Sistema de refrixeración por aire ou sistema de ventilación
+
+Permite o fluxo de aire dentro da carcasa para que a temperatura non suba
+demasiado, é dicir, para igualar a temperatura coa temperatura ambiente. Isto
+pódese facer mediante refrixeración pasiva e refrixeración activa.
+
+A refrixeración pasiva implica o uso de disipadores de calor, un conxunto de
+aletas metálicas sen partes móbiles, a través das cales se propaga a calor dun
+compoñente e que se arrefrían facilmente debido á súa superficie. A súa acción
+principal consiste en aumentar a superficie de contacto co aire permitindo
+unha eliminación máis rápida da calor excedente. Sóese usar para evitar un
+aumento de temperatura nalgúns dos compoñentes, como pode ser no proce-
+sador ou nalgunhas tarxetas gráficas. Unha das súas vantaxes é que non pro-
+duce ruído.
+
+É importante usar pastas térmicas para que o microprocesador e o disipador
+fagan un bo contacto. A pasta térmica permite que a calor se transfira dende a
+parte superior do procesador ata o disipador de calor. Aínda que poidamos
+pensar que ambos compoñentes son lisos, en realidade son bastante rugosos a
+nivel microscópico. A pasta térmica debe ser moi boa condutora da calor, e iso
+é o que distingue unha pasta térmica doutra; véndese en xiringas ou, ás veces,
+en paquetes pequenos.
+
+Cando non abonda cos disipadores ou o tamaño destes é desproporcionado,
+óptase por usar a refrixeración activa que consiste en combinar un ventilador
+cun disipador de calor. Un ventilador é un dispositivo para axitar ou mover o
+aire. Basicamente crea unha corrente de aire movendo unhas palas. Podémolos
+topar para case calquera dos compoñentes do equipo: procesador, ponte norte,
+tarxeta gráfica, disco duro... debe colocarse de xeito que o aire entre pola parte
+dianteira e saia cara á parte traseira da carcasa.
+
+Ó conxunto de ventilador e disipador denomínaselle refrixerador. Podémolos
+encontrar soltos ou en formato tarxeta. Estes últimos insírense nun dos ocos
+que teñamos libres para tarxetas de expansión, de maneira que xeren unha
+corrente de aire preto da fonte de calor.
+
+De calquera modo, todo isto non servirá de nada se non expulsamos a calor ó
+exterior da carcasa do ordenador. Hai que ter en conta que o disipador e o
+ventilador non fan que a calor desapareza, só a trasladan de sitio; pero pode
+facer tanto dano preto do micro como acumulándose dentro da carcasa sen
+poder saír.
+
+Para que a refrixeración sexa perfecta, o ideal é ter un ventilador que introduza
+aire frío e outro que o expulse. Nun equipo normal, a fonte de alimentación soe
+sacar o aire quente, pero non soe haber un ventilador de entrada. Así que será
+conveniente comprar un ventilador e instalalo na parte frontal do noso orde-
+nador, onde xeralmente xa hai uns buratos preparados para aparafusar un
+ventilador de 8x8 cm.
+
+Outras formas de arrefrialo equipo serían quitarlle o po, afastar a caixa da
+parede ou abrir a xanela.
+
+En calquera caso, non debemos esquecer dúas cousas: unha, que o aire quente
+sobe, así que a saída de aire debe estar arriba (nunca situada por baixo da en-
+trada de aire frio); e dúas, que existen poucos esquemas de ventilación tan
+efectivos e baratos como abrir a carcasa do ordenador. Non é moi estético (hai
+gustos para todo), pero funciona moi ben.
+
+6.2 > Sistema de refrixeración líquida ou watercooling
+
+A refrixeración líquida baséase en que a auga (ou calquera líquido refrixeran-
+te) conduce mellor a calor que o aire. Estes líquidos teñen unha maior conduti-
+vidade térmica que o aire. A partir deste principio, extraemos a calor xerada
+polo procesador principal, tarxeta gráfica, chipset de placa base ou discos
+duros, fóra da carcasa do ordenador apoiándonos nun circuíto cerrado de auga,
+
+===== PAXINA 28 =====
+arrefriándoa inmediatamente fóra del. Tódolos sistemas de refrixeración líqui-
+da deben contar con varios compoñentes básicos: o depósito ou bloque de
+auga (xeralmente feito de cobre ou aluminio), o circuíto de auga formado polos
+tubos polos que flúe o refrixerante, a bomba que xera a circulación do líquido,
+o radiador (o compoñente que arrefría a auga do circuíto mediante tubos moi
+finos que transfiren a calor ó aire) e os ventiladores que a arrefrían. O maior
+inconveniente deste sistema é que unha fuga de líquido danaría o equipo.
+
+As vantaxes da refrixeración líquida son:
+
+e É unha opción moi interesante para facer overclocking, porque con estes
+sistemas conseguimos arrefriar o equipo no seu conxunto xa que, a dife-
+renza dos sistemas tradicionais, non se xera calor dentro da carcasa do
+ordenador.
+
+e O medio de refrixeración é económico e doado de obter.
+
+e Os compoñentes principais do ordenador mantéñense illados do ambiente
+circundante, evitando a exposición ó po e á humidade.
+
+e Dependendo do deseño escollido, pódense crear sistemas cun grande im-
+pacto visual.
+
+e O líquido disipa toda a calor acumulada na placa base, non só a calor
+acumulada en puntos específicos, conseguindo unha temperatura ideal
+do sistema, normalmente arredor dos 21 *C.
+
+e Conséguese unha refrixeración silenciosa.
+
+6.3 > Sistema de refrixeración por inmersión
+
+Nun sistema de refrixeración por inmersión líquida, o PC mergúllase
+completamente nun líquido con moi baixa condutividade eléctrica, como aceite
+mineral ou auga pura (auga destilada) que non contén impurezas, minerais ou
+metais que fagan que a auga sexa condutora.
+
+O PC arrefría mediante o intercambio de calor entre os seus compoñentes, o
+refrixerante e o aire circundante. Aínda que este método é bastante sinxelo,
+tamén ten as súas desvantaxes, como a necesidade de substituír pezas para
+actualizacións ou reparacións.
+
+6.4 > Refrixeración Peltier
+
+Para casos extremos poderíamos usar células Peltier; estes curiosos aparellos
+son un elemento termoeléctrico que consiste nunhas láminas que, ó ser atra-
+vesadas pola corrente eléctrica, fan que unha das súas caras se arrefríe, men-
+tres que a outra se quenta.
+
+Este sistema non elimina a calor; só a transfire dun punto a outro unha vez
+subministrada enerxía. Polo tanto, debe combinarse cun sistema de refrixera-
+ción por aire ou líquido.
+
+Estes sistemas de refrixeración son pouco comúns nos PC e utilízanse en over-
+clocking extremo.
+
+As celas Peltier pódense mercar en tendas de electrónica especializadas, pero
+O seu prezo é elevado.
+
+6.5 > Refrixeración por software
+
+Outro método para arrefriar os microprocesadores consiste en aproveitar unha
+serie de ordes de aforro enerxético presentes en tódolos micros dende a época
+dos Pentium; mediante estas ordes pomos a descansar aquelas partes do pro-
+cesador que non están traballando nese intre, reducindo moito a temperatura
+do mesmo.
+
+Desgraciadamente, o sistema ten unha limitación insalvable: cando o micro se
+utiliza ó máximo da súa potencia en todo momento, a refrixeración non se
+pode realizar. De calquera modo, os programas aproveitan tempos mortos
+bastante máis pequenos que décimas de segundo, así que sempre poden ser
+útiles, polo menos como apoio a un bo ventilador.
+
+a
+
+Thermal pad
+
+Existe outra solución similar á
+pasta térmica chamada almofada
+térmica. Son como pequenas
+esponxas que conducen a calor.
+Úsanse máis en tarxetas gráficas
+ou teléfonos móbiles que en
+procesadores. Ademais da calida-
+de (condución térmica) da almofa-
+da térmica, existen diferentes
+grosores.
+
+É
+ventilador
+
+Bomba
+Depósito
+
+Refrixeración líquida
+O seu funcionamento é o seguinte:
+
+e O líquido almacenado no depó-
+sito vai á bomba, que se encarga
+de presurizar e mover o líquido
+por tódolos bloques.
+
+e Cando o líquido pasou por tó-
+dolos bloques, vai ó radiador,
+que ten un ventilador que arre-
+fría o líquido ó pasar polas ale-
+tas do radiador.
+
+e Despois de arrefriarse, volve ó
+depósito para repetir o ciclo an-
+terior, formando así un circuíto.
+
+Bloques para procesadores
+
+Estes bloques están deseñados
+para disipar a calor do micropro-
+cesador.
+
+Refrixeración por inmersión
+===== PAXINA 29 =====
+Refrixeración por software
+
+TDP
+
+Unha TDP máis alta non significa
+necesariamente un maior consu-
+mo de enerxía.
+
+Non obstante, do mesmo xeito
+que coas fontes de alimentación,
+unha TDP máis alta significa unha
+menor eficiencia enerxética.
+
+Isto significa que unha TDP alta
+pode realmente malgastar cartos
+en electricidade, xa que esa elec-
+tricidade se usa para xerar calor.
+
+Os sistemas operativos actuais realizan esta tarefa automaticamente.
+6.6> Control da temperatura
+O control da temperatura pódese facer de dúas maneiras:
+
+e Por hardware: hai dispositivos no mercado que se instalan en comparti-
+mentos para unidades de 54. Estes dispositivos teñen sensores que se
+colocan nas zonas onde queremos monitorizar a temperatura e un panel
+que amosa os datos. Poden incluír avisos de temperaturas excesivas.
+
+e Por software: Case tódalas placas base actuais teñen unha opción no SE-
+TUP do ordenador chamada Monitor de hardware, que amosa, entre
+outros datos, as temperaturas da CPU e da placa base. Podemos usar
+programas de diagnóstico de hardware como Everest, que proporciona
+información sobre as temperaturas do procesador e da placa base (esta
+información amósase con máis detalle na versión de pago). Tamén hai
+outros programas, como SpeedFan.
+
+Cal é a temperatura correcta? Hai dous estados a ter en conta ó estudar a
+temperatura do ordenador: co sistema inactivo e con moita carga. Débese
+consultar a temperatura máxima recomendada para a CPU. Hoxe en día, por
+exemplo, temos CPU que poden funcionar a 72 “C sen experimentar unha
+redución na súa vida útil, pero... canto menor sexa a temperatura dos
+compoñentes do ordenador, maior será a súa vida útil.
+
+6.7> TDP (Thermal Design Power)
+
+A potencia de deseño térmico (TDP) non se refire ó consumo de enerxía do
+procesador, senón a cantidade de calor que disipa. Esta especificación indica a
+cantidade máxima de calor que se espera que un compoñente produza baixo un
+uso intensivo. Isto contradí a idea errónea común de que a TDP indica o con-
+sumo de enerxía do procesador; esta cifra non é unha medida directa do con-
+sumo de enerxía.
+
+Úsase para determinar o disipador de calor axeitado para ese procesador e
+mídese en watts, pero non representa necesariamente o consumo de enerxía
+do procesador en watts, aínda que normalmente hai unha correlación entre o
+consumo de enerxía e a TDP. Os valores típicos son decenas de watts.
+
+Polo tanto, o TDP utilízase para determinar a potencia que debe ter o noso
+refrixerador de CPU. O fabricante do refrixerador adoita especificar con que
+modelos de procesador se pode usar.
+
+7 >> Memoria
+
+A memoria do ordenador é a parte do hardware que retén durante certo perío-
+do de tempo información que lle cómpre ó sistema para funcionar correcta-
+mente. Nun ordenador persoal, a memoria xeralmente toma as seguintes for-
+mas:
+
+e Disco duro: almacena os ficheiros e programas do usuario. Mantén a in-
+formación incluso se apagamos o ordenador, e ten unha grande capaci-
+dade de almacenamento.
+
+e Memoria RAM: usada para almacenar cousas tales como programas e in-
+formación de xeito temporal mentres o ordenador está aceso. Isto se fai
+porque este tipo de memoria é rápida, e é útil para acceder a datos sen
+ter que os ler dun soporte de almacenamento máis lento, como é un
+disco duro. A información é volátil e pérdese cando o ordenador se apa-
+ga.
+
+e Memoria caché: xeralmente tópase nos microprocesadores, discos duros
+ou outros aparellos; é unha pequena cantidade de memoria de moi alta
+velocidade dedicada a que partes importantes do ordenador poidan tra-
+ballar á máxima velocidade sen necesidade de pedir información cons-
+tantemente a partes máis lentas do sistema.
+
+===== PAXINA 30 =====
+En relación á información presentan unha serie de características que as clasi-
+fican:
+
+Volatilidade
+
+A memoria volátil precisa enerxía para manter a información almacenada,
+polo que se usa só nas memorias primarias, por exemplo a memoria RAM (Ran-
+dom Access Memory).
+
+A memoria non volátil retén a información almacenada incluso se non recibe
+corrente eléctrica constantemente, como é o caso da memoria ROM (Read-
+Only Memory), usándose para almacenamentos a longo prazo.
+
+A memoria dinámica é volátil e precisa que periodicamente leamos e reescri-
+bamos sen modificacións a información almacenada para manter a súa integri-
+dade.
+
+Accesibilidade
+
+Acceso aleatorio significa que podemos acceder a calquera localización da
+memoria en calquera momento.
+
+Acceso secuencial significa que para acceder a unha localización determinada
+teremos antes que avanzar atravesando as unidades de información anterio-
+res.
+
+Reescritura
+
+As memorias de lectura/escritura permiten que se reescriba a información
+moitas veces; polo xeral a velocidade de lectura será moito maior que a de
+escritura.
+
+As memorias de só lectura (ROM) reteñen a información almacenada no mo-
+mento de fabricarse e as de escritura única e lectura múltiple WORM Write
+Once Read Many) permiten que a información se escriba unha soa vez nalgún
+momento tras a fabricación.
+
+Capacidade
+
+Coa aparición dos materiais semicondutores na década do 1970 multiplicouse a
+velocidade dos ordenadores por 100 000 aproximadamente e a capacidade da
+memoria creceu nunha proporción similar, e dende entón non parou de crecer
+dun xeito exponencial.
+
+7.1> Memoria RAM
+
+As distintas xeracións de memoria que empregan os computadores actuais
+como memoria de traballo son de tipo SDRAM-DDR (Synchronous Dynamic
+Random-Acess Memory - Double Data Rate. Podemos adoptar como definición
+á que aparece na Wikipedia:
+
+A memoria de acceso aleatorio ou RAM é unha memoria de almace-
+namento a curto prazo empregada polo sistema operativo dos com-
+putadores e outros dispositivos para almacenar de forma temporal
+tódolos programas e os seus procesos de execución.
+
+Na memoria RAM cárganse tódalas instrucións que executa a unida-
+de central de procesamento (CPU) e outras unidades do ordenador,
+ademais de conter os datos que manipulan os diferentes progra-
+mas.
+
+Chámanse de Acceso Aleatorio porque é posible ler ou escribir en calquera
+posición de memoria co mesmo tempo de espera, non sendo necesario pasar
+por unhas posicións para chegar a outras, tal como sucedía en antigos disposi-
+tivos de acceso secuencial (un claro exemplo eras as antigas cintas de casete,
+nas que para chegar a unha canción tiñas que pasar por tódalas anteriores). A
+maioría das memorias empregadas na actualidade son de acceso aleatorio
+(RAM, ROM, caché SRAM, flash...).
+
+Ñ
+A
+Clasificación da memoria
+
+Segundo a súa localización:
+
+e Caché
+e Principal ou interna
+e Secundaria ou periférica
+
+Segundo a tecnoloxía empregada:
+
+e Semiconductora
+
+e Magnética
+
+. Óptica
+
+e Volátil / Non volátil
+
+Segundo o tipo de escritura:
+
+e RAM
+
+e ROM
+
+e PROM
+
+e EPROM
+e EEPROM
+e FLASH
+
+Segundo a xerarquía (distancia
+dende a CPU):
+
+e Primaria (caché e RAM)
+
+e Secundaria (discos duros mag-
+néticos e magnetoópticos)
+
+e Terciaria (brazo robótico)
+
+e Fóra de liña (DVD e USB)
+
+e En rede (nube)
+
+Inscricións nos chips
+
+Pode ocorrer que os elementos da
+memoria non funcionen ó mesmo
+ritmo de frecuencia da CPU, o que
+implica que se produzan ciclos de
+espera.
+
+Para controlalo, deberémonos
+fixar na inscrición que aparece nos
+módulos de memoria.
+
+Para unha inscrición tal como
+6825660, significará que hai un
+SIMM de memoria de 8 x 256 KB a
+unha velocidade de 60 nanose-
+gundos:
+
+e O primeiro número sirve para
+recoñecer que o chip é de me-
+moria: 6825660.
+
+e Despois indica cantos módulos
+internos presenta: 6825660.
+
++0 tamaño deses módulos:
+6825660.
+
+e O tempo de acceso: 6825660.
+===== PAXINA 31 =====
+Anverso memoria RAM
+
+Reverso memoria RAM
+
+Incompatibilidade entre as
+evolucións da memoria DDR
+
+O zócolo que presentan as memo-
+rias DDR non son compatibles pois
+teñen distinto lugar para a fende-
+dura para evitar erros xa que
+traballan con distintas voltaxes.
+
+A DDR6 espérase que saia ó mer-
+cado a finais de 2025. A nova
+DRAM GDDR7 de 24 GB promete
+velocidades superiores a 40 GB/s.
+
+Rañura RIMM
+
+Doutra banda, e estritamente falando, o que normalmente chamamos memo-
+ria RAM consiste nunha placa de circuíto impreso que chamamos módulo no
+que se soldan os chips de memoria (DRAM) propiamente ditos.
+
+O termo DRAM ou Dinamyc RAM fai referencia a constitución física destas
+memorias, que precisan ser continuamente refrescadas para manter os datos
+que almacenan. En caso contrario estes datos esvaeceríanse e perderíanse. En
+contraposición a estas memorias están as SRAM ou Static RAM que se empre-
+gan por exemplo nos rexistros dos procesadores. Ó contrario que as memorias
+DRAM, as memorias SRAM (de mellores prestacións pero cun prezo máis alto
+por bit de almacenamento) non precisan de refresco para preservar os datos
+escritos nelas. Non confundir o refresco coa volatilidade, xa que existe memo-
+ria SRAM volátil e memoria SRAM non volátil, esta última denominada NVRAM.
+
+Seguindo cos módulos de memoria, contan cunha serie de contactos que lle
+permiten a comunicación coa placa base do equipo e mediante os que se ali-
+menta o módulo. No módulo tamén vai incrustado un pequeno procesador: o
+SPD, que contén datos sobre o tamaño, o tempo de acceso, a velocidade e o
+tipo de memoria, grazas ó cal o equipo pode amosar eses datos ó usuario e
+gracias ó cal pódese establecer axeitadamente a comunicación entre as memo-
+rias do módulo e o Controlador de Memoria da Placa Base.
+
+As memorias RAM actuais traballan realizando as operacións de lectura e es-
+critura en sincronismo co reloxo do sistema do equipo, de aí que tamén reciban
+o cualificativo de Síncronas (SDRAM ou RAM Dinámicas e Síncronas).
+
+A primeira evolución das memorias SDRAM chegou coa tecnoloxía DDR ou
+Double Data Rate, que fixo posible que as memorias transmitan datos dúas
+veces por cada pulso de reloxo do sistema, facendo uso dos flancos de subida e
+de baixada do sinal. Isto implica multiplicar por dous a capacidade de trans-
+misión de datos da memoria, sen necesidade de cambiar a frecuencia do relo-
+xo.
+
+Asociada a esta tecnoloxía xorde o termo Frecuencia Efectiva ou Frecuencia
+de Transferencia da memoria, para diferencialo da Frecuencia Real de Tra-
+ballo de funcionamento. Como se deduce da imaxe lateral a frecuencia real de
+traballo da memoria é a do reloxo coa que está sincronizada, o que sucede é
+que ó facer dúas operación por cada ciclo de reloxo pódese pensar que é coma
+se traballase a unha frecuencia o dobre da real, por iso se lle chama frecuencia
+efectiva de traballo e por iso debemos saber que é diferente da frecuencia real
+pero que depende dela.
+
+As seguintes evolucións de memorias: DDR2, DDR3, DDR4, DDR5 e DDR6 segui-
+ron a mesma liña de duplicar, en cada nova xeración, a transmisión de datos da
+xeración anterior sen a necesidade imperiosa de modificar a frecuencia do sinal
+de reloxo do sistema.
+
+7.2> Factores de forma das memorias RAM actuais
+Actualmente existes tres factores de forma para as memorias RAM:
+
+e DIMM (Dual In-line Memory Module - módulo de memoria en dobre liña):
+é o que se emprega nas computadoras de escritorio. Miden 133.35x30
+mm e teñen un grosor máximo de 4 mm. Comercialízanse módulos con
+diferente altura.
+
+e FB-DIMM (Fully-Buffered DIMM): empregada principalmente en equipos
+servidores. Teñen as mesmas dimensións que as DIMM 133,35x30 mm,
+pero un grosor máximo de 5.1 mm.
+
+e SO-DIMM (Small Outline DIMM ou DIMM de pequeno formato): emprega-
+da principalmente en equipos portátiles. Miden 67.6x30 mm e teñen un
+grosor máximo de 3.8 mm.
+
+7.3 > Características máis importantes dunha memoria RAM
+
+===== PAXINA 32 =====
+As principais características que debemos ter en conta á hora de seleccionar
+unha memoria RAM serían:
+
+e Capacidade: é a cantidade de información que unha memoria pode alma-
+cenar. Mídese en bytes e os módulos máis comúns agora mesmo son de
+8GB, 16GB e 32GB.
+
+e Frecuencia de Traballo Externa: é unha característica propia das memo-
+rias síncronas SDRAM, e representa a frecuencia á que realiza opera-
+cións polo bus que a comunica co procesador. Canto maior é esta fre-
+cuencia, tanto maior será o número de operacións por segundo que rea-
+lice a memoria. Os módulos actuais están ó redor do GHz.
+
+e Frecuencia efectiva: é o dato que dan os fabricantes.
+
+e Taxa de transferencia: esta característica representa os datos transferi-
+dos por segundo entre a memoria e a CPU. Para calculalo téñense en
+conta as transferencias que realiza a memoria (frecuencia efectiva) e os
+bits (ou Bytes) que transmite a memoria en cada transferencia (ancho
+do bus de comunicacións). As memorias actuais traballan con buses de
+64 bits de ancho (8 Bytes).
+
+e Tecnoloxía MultiCanle: consiste en aumentar o rendemento do sistema
+facendo posible que o procesador (en realidade o controlador de memo-
+ria en primeiro termo) acceda a máis dun módulo de memoria en cada
+operación. Actualmente existen tecnoloxías DualChannel, TriChannel e
+QuadChannel segundo se permita o acceso simultáneo a 2, 3 e 4 módu-
+los respectivamente. A efectos prácticos é similar a que a Taxa de
+Transferencia se duplique, triplique ou cuadruplique en cada respectivo
+caso. Para facer tecnoloxía MultiChannel os módulos de memoria de-
+ben ser iguais (fabricante, frecuencia e latencias) motivo polo que se
+adoitan comercializar varios módulos de memoria RAM iguais nun mes-
+mo Kit.
+
+e Tensión: canto maior sexa a tensión á que traballe o módulo maior ren-
+demento terá; con todo, maior será o consumo e máis calor xerará.
+
+e Latencias: describen os tempos que os chips de memoria requiren para
+executar diferentes operacións. Nas memorias actuais adoitan indicarse
+en unidades de ciclos de reloxo mediante catro parámetros: CL, Treo, Tre
+e Tras. Nunha memoria actual adoitan escribirse como catro números
+separados con guións, tal que así: 7-8-8-24. Aínda que as latencias ante-
+riores non son as únicas latencias dunha memoria, si son as máis signifi-
+cativas.
+
+A latencia CAS (tamén chamada CL) é o número de ciclos que transcorren
+entre a solicitude de datos e o inicio da transmisión.
+
+Un ciclo é o inverso da frecuencia e normalmente mídese en nanosegundos.
+Coñecendo a frecuencia de funcionamento da RAM (a frecuencia do reloxo), a
+duración do ciclo calcúlase do seguinte xeito:
+
+1000 / frecuencia * CL = latencia CAS en nanosegundos
+
+onde empregamos 1000 ciclos en vez de 1 só para realizar a operación xa en
+nanosegundos.
+
+En principio canto máis baixas sexan as latencias mellor será a memoria, pero
+como as latencias se dan en ciclos de reloxo e estes dependen da frecuencia de
+traballo da memoria, podería suceder que memorias con frecuencias de
+traballo baixas e con baixas latencias sexan mellores que outras con maior
+frecuencia de traballo e maiores latencias.
+
+Para ter RAM de dobre canle, é necesario o seguinte:
+
+e O procesador debe estar deseñado para ler de dous módulos de RAM si-
+multaneamente.
+
+e A placa base debe ter dúas canles para a transmisión de datos.
+
++ Debes ter dous módulos de memoria.
+
+Keayrurr CES
+
+os
+
+A y isto 1o
+
+Memorias SO-DIMM (Small
+Outline DIMM)
+
+Este tipo de memoria de menor
+formato úsase en dispositivos
+máis compactos como portátiles
+ou barebones.
+
+En placas mini-ITX pódense en-
+contrar este tipo de memorias e
+tamén en impresoras de gama
+alta.
+
+Teñen un menor número de con-
+tactos pero manteñen as caracte-
+rísticas das memorias con forma-
+to DIMM estándar.
+
+Rañuras de memoria
+
+A memoria dos ordenadores vén
+en forma de módulos, que son
+simplemente pequenas placas de
+circuíto que integran diferentes
+chips de memoria nunha soa
+unidade.
+
+Polo tanto, a placa base adoita ter
+varias  rañuras (normalmente
+entre 2 e 4) dun tipo específico
+(actualmente DIMM de 240 pins).
+
+Combinado coas características do
+chipset, isto determinará que tipo
+de memoria podemos conectar e
+cal é a capacidade máxima de
+memoria que a placa base pode
+recoñecer.
+
+A RAM é utilizada polo procesador
+para almacenar datos temporal-
+mente mentres se executan os
+programas.
+===== PAXINA 33 =====
+Í ao SS
+Bancos de memoria RAM
+
+Por exemplo, unha memoria DDR3
+traballa sincronizada co bus que a
+comunica co procesador a unha
+frecuencia de 800 MHZ.
+
+Coa tecnoloxía DDR, será capaz de
+facer o dobre de transferencias de
+datos por segundo, é dicir, 1600
+MT/s (millóns de transferencias
+por segundo). O fabricante vende-
+rá esta memoria como DDR3-
+1600. Así que 1 600 é ó que lle
+chamamos frecuencia efectiva.
+
+A memoria DDR3-1600 fai 1600
+MT/s e como traballa cun bus de
+64 bits (8 Bytes) entón, a súa Taxa
+de transferencia será:
+
+1600 x 8 = 12 800 MB/s
+
+O fabricante anunciará esta me-
+moria como DDR3-1600 ou tamén
+como PC3-12800. En ámbolos
+dous casos está dando a mesma
+información.
+
+Se instalamos nun equipo dous
+módulos PC3-12800 en DualChan-
+nel teremos unha Taxa de trans-
+ferencia de:
+
+12 800 x 2 = 25 600 MB/s.
+
+Na imaxe superior indícase con
+diferentes cores que, para empre-
+gar a tecnoloxía DualChannel non
+vale con pór os módulos en cal-
+quera banco.
+
+Deben pórse por parellas nos
+vermellos ou ben por parellas nos
+negros.
+
+Se se instalan dous módulos e se
+coloca un nun banco vermello e
+outro nun banco negro, non fun-
+cionarán en DualChamnel.
+
+Se se colocan catro módulos
+funcionarán por parellas, é dicir,
+poderase acceder simultaneamen-
+te ós dous vermellos por un lado e
+ós dous negros por outro lado.
+
+O rendemento é tal que resulta
+mellor ter dous módulos de me-
+moria de 8 GB en DualChannel
+que un só módulo de 16 GB en
+SingleChannel.
+
+e Os módulos deben ter o mesmo tamaño, velocidade e ser do mesmo fa-
+bricante.
+
+e Os dous módulos deben instalarse nas rañuras especificadas polo fabri-
+cante da placa base para utilizar ambas as canles. Dúas rañuras com-
+parten unha canle e outras dúas comparten a segunda canle.
+
+Xeracións de memorias RAM actuais e as súas características
+
+Modelo DDR DDR2 DDR3 DDR4 DDR5 DDR6
+
+Ano de lanzamento 1998 2003 2007 2014 2020 2025
+
+Número de contactos 184 240 240 288 288 ?
+
+Capacidades (max) 16B 4GB 16 GB 32 GB 128 GB ?
+
+Frecuencias de traba-
+
+100-200 200-533 400-1066 800-2133 |2400-3600| 6400?
+llo (MHz)
+Frecuencias afectivas 200-400 | 400-1066 | 800-2133 | 1600-3200 |4800-10000| 12800-?
+Taxas de transferen- 1600-3 200 3200-8 500 6 400-17000 12800-25600 38 400-57 600 102400-?
+cia (MB/s)
+Tensión 2.5V/2.6V 1.8V 1.5V/1.35V 1.2V/1.05V 1.1 ?
+
+AMD Zen
+
+Pero hai unha última cousa a ter en conta, nos procesadores AMD coa
+microarquitectura Zen, o seu bus Infinity Fabric interno funciona á mesma
+frecuencia que a frecuencia de reloxo da RAM.
+
+Polo tanto, neste caso, sempre se recomenda mercar RAM cunha frecuencia
+máis alta, xa que isto mellorará a comunicación interna entre os CCD. Non
+obstante, non é tan sinxelo.
+
+Lembremos as tres frecuencias utilizadas para acceder á RAM:
+
+e felk: frecuencia de Infinity Fabric
+e uclk: frecuencia de Unified Memory Controller
+e mclk: frecuencia de reloxo da RAM
+
+Inicialmente, a relación é 1:1:1.
+
+Polo tanto, canto maior sexa a frecuencia da RAM, maior será a frecuencia de
+Infinity Fabric. Non obstante, se a frecuencia da RAM é demasiado alta, Infinity
+Fabric non poderá funcionar tan rápido, polo que reducirá automaticamente á
+metade a súa frecuencia, o que significa que funcionará máis lento. Polo tanto,
+se a RAM é moi rápida, a proporción será de 2:1:1.
+
+7.4> Memorias RAM especiais para propósitos específicos
+
+Existen outros tipos de memorias RAM con certas características adicionais
+especiais que se empregan en equipos que requiren prestacións específicas.
+Algunhas destas memorias especiais son:
+
+e Memorias con ECC (comprobación e corrección de erros): son memorias
+capaces de recoñecer e corrixir erros que poderían provocar corrupción
+nos datos. Como son máis fiables adoitan usarse en servidores e equi-
+pos onde é importante a integridade dos datos, como por exemplo en
+contornos científicos ou financeiros. Pola contra, estas memorias son
+máis caras e lentas debido precisamente a que teñen que facer compro-
+bación de datos.
+
+===== PAXINA 34 =====
+e Memorias rexistradas: os módulos de memoria rexistrada teñen un re-
+xistro adicional ou chip de memoria intermedia entre os módulos de
+memoria que permite o manexo de maiores cantidades de memoria
+RAM a costa de introducir maiores retardos. Este tipo de memoria adoi-
+ta empregarse, ó igual que a memoria ECC, en servidores ou equipos
+específicos. De feito moitas memorias rexistradas son tamén ECC.
+
+7.52 Memoria ROM
+
+ROM é o acrónimo de Read-Only Memory (memoria de só lectura). É unha
+memoria de semicondutor non destrutible, polo que non se pode escribir sobre
+ela, e que conserva intacta a información almacenada, incluso no caso de
+interrupción de corrente (memoria non volátil). A ROM soe almacenar a
+configuración do sistema ou o programa de arranque do ordenador.
+
+A memoria de só lectura ou ROM é utilizada como medio de almacenamento de
+datos nos ordenadores. Debido a que non se pode escribir facilmente, o seu
+uso principal reside na distribución de programas que estean estreitamente
+ligados ó soporte físico do ordenador, e que seguramente non necesitarán
+actualización.
+
+A razón de que aínda existan é que non se pode ler un programa que é
+necesario para executar un disco dende o propio disco. Polo tanto, a BIOS, ou o
+sistema de arranque do ordenador terán que ir nunha memoria de tipo ROM
+(na actualidade empréganse memorias flash, que son evolución das ROMs
+iniciais).
+
+A memoria RAM normalmente é máis rápida de ler que a maioría das memorias
+ROM, polo tanto o contido da memoria ROM sóese transvasar á memoria RAM
+para o seu uso. Usanse principalmente en microprogramación de sistemas; os
+fabricantes sóenas empregar cando producen compoñentes de forma masiva.
+
+8 >> Sistemas de almacenamento
+
+Para poder ler e escribir a información nos soportes de almacenamento
+externo, cómpre dispor dunha interface, tanto física como lóxica, coa que unir
+o periférico co bus do sistema.
+
+Non se encargan soamente de administrar a transferencia de datos, senón que
+ademais controlan as operacións de entrada/saída da información dende e cara
+ós periféricos ou unidades de disco, polo que se lles soe chamar controladoras
+de disco.
+
+8.1> Controladoras de disco
+Os tipos de controladoras ou adaptadores son os seguintes:
+PATA (Parallel Advanced Technology Attachment)
+
+Trátase dun estándar de interface en desuso, que se coñeceu orixinalmente
+como IDE (Integrated Device Electronics). Tamén foi coñecida como ATA (AT-
+bus Attachment) polo que se lle soe chamar controladora de bus AT. Se nalgún
+momento o usuario vira a denominación IDE-ATAPI, estaría vendo ou
+configurando un dispositivo deste tipo.
+
+O deseño orixinal de ATA (dous dispositivos en cada bus) ten o inconveniente
+de que mentres accedemos a un dispositivo, o outro non se pode usar.
+
+Este tipo de discos estendéronse máis que os SCSI debido ó seu custe moito
+menor, aínda que o seu rendemento tamén era máis baixo. Debido ás
+limitacións que ten PATA, desenvolveuse o Serial ATA que o substituíu na
+meirande parte dos equipos.
+
+Cada cable de conexión (consta de 40 fíos) pode ter tres conexións: unha para
+conectalo á placa base, un conector intermedio para un disco duro ou DVD, e
+un terceiro ó final do cable para conectar outro dispositivo.
+
+Memoria rexistrada
+
+As memorias rexistradas son
+doadamente recoñecibles polo
+chip extra que levan tal como se
+pode observar na imaxe. Estes
+módulos requiren un controlador
+de memoria específico, polo que
+so funcionarán en equipos con
+placas base ou procesadores que
+conten con tales controladores.
+Como o factor de forma é o mes-
+mo que un módulo normal pode
+resultar sinxelo equivocarse e
+instalalos en equipos non compa-
+tibles. En tal caso o equipo detec-
+tará que non ten memoria RAM
+instalada ou ben sacará unha
+mensaxe de erro indicando que
+non admite memoria rexistrada.
+
+Memoria FLASH
+
+As aplicacións máis habituais
+deste tipo de memorias, ademais
+de para servir de soporte á BIOS,
+son como chaveiros USB, tarxetas
+PC Card para portátiles ou tarxe-
+tas de memoria para almacenar
+fotos.
+
+Track/
+Cylinder
+
+Sector
+
+Heads
+
+Sistemas para enderezar o
+contido
+
+O primeiro sistema que se usou
+para enderezar o contido foi o
+CHS (cilindro-cabeza-sector), xa
+que con estes tres valores pode-
+mos situar un dato calquera do
+disco.
+
+Máis adiante creouse outro siste-
+ma máis sinxelo: LBA (direcciona-
+mento lóxico de bloques), que
+consiste en dividir o disco enteiro
+en sectores e asignar un único
+número a cada un; é o sistema
+usado actualmente.
+===== PAXINA 35 =====
+“a
+
+Cable PATA
+
+Cable SCSI interno
+
+sa
+
+Cable SCSI externo
+
+9
+
+Cable SATA
+
+NS
+
+Conector SATA
+
+Conector SAS
+
+Se nun conector IDE pinchamos un dispositivo, farémolo seleccionándoo como
+mestre; se pinchamos dous teremos que configuralos previamente,
+seleccionando un deles como mestre e o segundo como escravo.
+
+O normal é que os dispositivos incorporen na parte traseira uns pequenos
+interruptores que permiten escoller entre tres posibilidades: mestre (M,
+Master), escravo (S, Slave) ou deixar que o propio cable se encargue de decidir
+cal é cada un deles (CS, Cable Select).
+
+Eran bastante lentas polo que evolucionaron dando lugar ás controladoras E-
+IDE (Enhanced Intelligent Drive Electronics) que as melloraban na forma de
+realizar a transferencia da información, a xestión de discos de máis de 504 MB
+de capacidade e a identificación a través do software dos periféricos que se lle
+conectan, permitindo o uso da tecnoloxía Plug and Play e chegando a poder
+conectar catro dispositivos a cada controladora.
+
+Na práctica, ó compartir a interface física, eran equivalentes as controladoras
+IDE, E-IDE e PATA á hora de conectar os dispositivos.
+
+SCSI (Small Computer System Interface)
+
+Son capaces de soportar ata sete periféricos numerados, dunha gama de
+periféricos moito maior que nas E-IDE e IDE. Desta forma, é como se cada un
+dos periféricos tivese unha controladora propia. Tódolos periféricos quedan
+unidos entre si por un único cable de 50 ou 68 fíos que se activan
+sucesivamente no modo denominado fervenza (un tras doutro).
+
+O único problema destas controladoras é a dificultade que presentan na
+configuración dos diferentes periféricos. A grande diferenza deste tipo de
+controladoras é que na actualidade non se insiren normalmente na propia
+placa base, véndense como tarxetas de ampliación, incluíndo un cable que
+consta da conexión á propia controladora e sete conexións máis para os
+diferentes periféricos.
+
+SATA (Serial Advanced Technology Attachment)
+
+Substitúe á tradicional PATA proporcionando maiores velocidades, mellor
+aproveitamento cando hai varias unidades, maior lonxitude de cable de
+transmisión de datos e capacidade para conectar unidades en quente.
+
+As diferenzas co Parallel ATA estriban en que:
+
+e Os conectores de datos e alimentación son diferentes e o cable é un ca-
+ble (7 fíos) non unha cinta (40 fíos), co que se mellora a ventilación.
+
+e Os discos duros conéctanse punto a punto, un disco duro a cada conector
+da placa, a diferenza de PATA no que se conectan dous discos a cada
+conector IDE.
+
+e A razón pola que o cable é serie é que, ó ter menos fíos, produce menos
+interferencias que se utilizase un sistema paralelo, o que permite au-
+mentar as frecuencias de funcionamento con maior facilidade.
+
+e Ademais permite cables de maior lonxitude (ata 1 metro, a diferenza do
+PATA, que non pode ser maior de 45 cm).
+
+A relación rendemento/prezo convérteo nun competidor de SCSI xa que o fai
+moi apropiado en sistemas de almacenamento masivos, como RAID.
+
+SAS (Serial Attached SCSI)
+
+Esta interface de transferencia de datos en serie é a sucesora da SCSI paralela;
+aínda que segue utilizando comandos SCSI para interactuar cos dispositivos
+SAS, aumenta a velocidade e permite a conexión e desconexión en quente.
+
+O conector é similar ó da interface SATA permitindo utilizar estes discos duros
+cando queremos aforrar custos e non temos tanta necesidade de velocidade.
+Os discos SATA poden ser utilizados por controladoras SAS pero non á inversa,
+unha controladora SATA non recoñece discos SAS.
+
+===== PAXINA 36 =====
+M.2
+
+Se ves M.2 na descrición dun SSD, refírese ó factor de forma físico da unidade.
+M.2 introduciuse en 2012 e foi deseñado para substituír o estándar mSATA, que
+se popularizou brevemente nos portátiles. Normalmente verás números
+despois de M.2 que definen o tamaño da unidade en termos das súas
+dimensións físicas, con dous díxitos para a súa anchura e dous ou tres para a
+súa lonxitude. Así, por exemplo, o MP700 PRO M.2 2280 de 2 TB é un SSD de 22
+mm de ancho e 80 mm de longo.
+
+É importante ter en conta que o feito de que unha unidade sexa un modelo M.2
+non significa que sexa unha unidade PCle NVMe. Cómpre sinalar que
+actualmente hai dous conectores SATA físicos comúns: M.2 e SATA. As
+unidades M.2 conéctanse directamente ó zócolo, mentres que as que usan un
+conector SATA requiren un cable SATA.
+
+NVMe significa Non-Volatile Memory Express e é un protocolo de
+comunicación deseñado para aproveitar ó máximo o rendemento da memoria
+flash. A memoria flash NAND é a tecnoloxía de almacenamento subxacente
+que se emprega nos SSD, polo que maximizar o seu potencial ten sentido,
+especialmente porque as tecnoloxías máis antigas como SATA foron
+deseñadas pensando nos discos duros.
+
+PCle (Peripheral Component Interconnect Express)
+
+Calquera tipo de dispositivo pódese conectar a través de PCle. SATA ofrece
+unha maior compatibilidade que PCle pero está a quedar desactualizada en
+termos de rendemento, xa que PCle pode transmitir datos en ata catro canles
+PCle, mentres que SATA está limitado a só unha. Polo tanto, o novo estándar
+PCle ten unha vantaxe de rendemento. Ademais, PCle continuou mellorando
+con cada xeración e a interface case duplica o rendemento cada vez.
+
+A táboa seguinte amosa o rendemento teórico máximo compatible con SATA e
+PCle:
+
+Interface x1 carril x2 carrís x4 carrís
+PCle 5.0 4.000 MB/s 8 000 MB/s 16 000 MB/s
+PCle 4.0 2 000 MB/s 4 000 MB/s 8 000 MB/s
+PCle 3.0 1000 MB/s 2 000 MB/s 4 000 MB/s
+SATA 550 MB/s - -
+
+8.2 > Disco duro
+
+Chamamos disco duro (en inglés hard disk, abreviado con frecuencia HD ou
+HDD) ó dispositivo encargado de almacenar información de forma persistente
+nun ordenador.
+
+Os discos duros xeralmente utilizan un sistema de gravación magnética
+analóxica. Neste tipo de disco encontramos dentro da carcasa unha serie de
+pratos metálicos colocados un enriba doutro xirando a gran velocidade. Sobre
+estes pratos sitúanse os cabezais encargados de ler ou escribir os pulos
+magnéticos.
+
+Tal e como sae de fábrica o disco duro non pode ser utilizado por un sistema
+operativo. Antes temos que definir nel unha ou máis particións e logo darlles
+un formato que poida ser entendido polo noso sistema.
+
+Dentro dun disco duro hai varios pratos (entre 2 e 4), que son discos (de
+aluminio ou cristal) concéntricos e que xiran todos ó mesmo tempo. O cabezal
+de lectura e escritura móvese cara dentro ou fóra segundo conveña, e pode ler
+tódolos pratos á vez.
+
+Hai varios conceptos para referirse a zonas do disco:
+
+SSD M.2
+
+SSD PCle
+
+MBR (Master Boot Record)
+
+É o primeiro sector dun dispositi-
+vo de almacenamento de datos e
+úsase para almacenar as instru-
+cións de arranque da máquina
+(bootstrap) e a táboa de parti-
+cións contendo o sistema de
+ficheiros.
+
+GPT (GUID Partition Table)
+
+É a evolución do MBR coa chegada
+da interface UEFI. Só contén a
+táboa de particións ó non facer
+falla xestionar o arranque pois xa
+o fai a interface mediante un
+sistema operativo de arranque
+propio.
+
+Partes mecánicas
+
+A nivel mecánico un disco duro
+soe ter:
+
+e pratos onde grava os datos.
+
+e cabezal de lectura / escritura.
+e motor que fai xirar os pratos.
+
++ oelectroimán move o cabezal.
+e circuíto electrónico de con-
+trol, que inclúe: interface co
+ordenador e memoria caché.
+
+e bolsiña desecante para evitar
+a humidade.
+
+e caixa para protexer da sucida-
+de (non está ó baleiro).
+
+e parafusos, a miúdo especiais.
+===== PAXINA 37 =====
+Fiabilidade das unidades SSD
+
+As unidades SSD teñen un número
+máximo de escrituras, o que limita
+a súa vida útil.
+
+Cando compras unha unidade SSD,
+o fabricante indica:
+
+e Período de garantía en anos.
+
+e Cantos terabytes podes escri-
+bir na unidade en total antes de
+que falle. Estes datos chámanse
+TBW (terabytes escritos).
+
+e Capacidade da unidade en
+terabytes.
+
+O cálculo que se fai realmente é
+DWPD (Drive Writes Per Day), que
+é simplemente o número de veces
+que se pode escribir en toda a
+unidade cada día.
+
+TBW
+
+365 x garantia x capacidade
+
+Disco A Disco B
+
+DWPD-
+
+Anos de
+garantía 5 5
+TeWw 1000 1000
+Capacidade 20068 40068
+DWPD 2.74 137
+
+Para ver canto tempo máis lle
+queda a un disco unha vez que
+leva un tempo en funcionamento,
+necesitamos dous datos:
+
+e Cantos días leva o disco en
+funcionamento.
+
+e LBArea: Canto se escribiu real-
+
+mente nese tempo (bytes escri-
+
+tos).
+TBW,.a = LB Areal # tamanhosector
+
+1024?
+
+e prato: cada un dos discos que hai dentro do disco duro.
+
+e cara: cada un dos dous lados dun prato.
+
+e cabeza: número de cabezal; equivale a dar o número de cara, xa que hai
+un cabezal por cara.
+
+e pista: unha circunferencia dentro dunha cara; a pista O está no borde ex-
+terior.
+
+e cilindro: conxunto de varias pistas; son tódalas circunferencias que están
+aliñadas verticalmente (unha de cada cara).
+
+e sector: inclúe anacos de moitas pistas e caras.
+
+Dentro do disco encontramos o MBR (Master Boot Record no sector de
+arranque), que contén a táboa de particións e as particións, necesarias para
+poder colocar os sistemas de ficheiros.
+
+As características que se deben ter en conta nun disco duro para poder valorar
+as súas prestacións son:
+
+e Tempo medio de xiro: tempo que tarda o disco en xirar media volta, unha
+vez que a agulla do disco duro se sitúa no cilindro. O disco debe xirar ata
+que o dato se sitúe baixo a cabeza. Este tempo é de media o tempo que
+tarda en dar medio xiro. Por este motivo é directamente inversa a velo-
+cidade de xiro.
+
+e Tempo medio de acceso: tempo medio que tarda en situarse a agulla no
+cilindro desexado. Soe ser aproximadamente un terzo do tempo que
+tarda en ir dende o centro ó exterior ou viceversa.
+
+e Tempo de acceso máximo: tempo que tarda en ir do centro ó exterior ou
+viceversa.
+
+e Tempo pista a pista: tempo necesario para saltar da pista actual á adxa-
+cente.
+
+e Taxa de transferencia: velocidade á que pode transferir a información ó
+ordenador. Pode ser velocidade sostida ou de pico.
+
+e Caché de pista: é unha memoria de estado sólido, tipo RAM, dentro do
+disco duro.
+
+e Interface: medio mediante o que un disco duro se comunica co ordena-
+dor. Pode ser IDE, SCSI, SATA, USB ou Firewire.
+
+8.3 > SSD (Solid-State Drive)
+
+Utiliza unha memoria non volátil, como a memoria flash, para almacenar
+datos, en lugar dos pratos xiratorios magnéticos usados nos discos duros
+convencionais; se non necesitamos almacenar os datos existen outros que
+empregan memoria RAM en vez de memoria flash.
+
+En comparación cos discos duros tradicionais, as unidades de estado sólido son
+menos sensibles ós golpes, practicamente inaudibles e teñen un menor tempo
+de acceso e latencia, xa que non precisan de pezas mecánicas móbiles.
+
+Fan uso da mesma interface que os HDD polo que son facilmente
+intercambiables sen ter que recorrer a adaptadores ou tarxetas de expansión
+para compatibilizalos co equipo.
+
+Tamén existían dispositivos que combinan ambas tecnoloxías, discos duros e
+memorias flash que se denominaban discos duros híbridos (HHD), que
+tentaban unir capacidade e velocidade a un prezo inferior.
+
+Vantaxes
+
+Os dispositivos de estado sólido que usan bloques de memorias flash teñen
+varias vantaxes fronte ós discos duros mecánicos:
+
+e Arranque máis rápido, ó non ter pratos que necesiten tomar unha veloci-
+dade constante.
+
+e Gran velocidade de escritura.
+
+e Maior rapidez de lectura, incluso 10 veces máis que os discos duros tradi-
+cionais máis rápidos grazas a RAIDs internos nun mesmo SSD.
+
+===== PAXINA 38 =====
+e Baixa latencia de lectura e escritura, centos de veces máis rápido que os
+discos mecánicos.
+
+e Lanzamento e arranque de aplicacións en menor tempo.
+
+e Menor consumo de enerxía e produción de calor.
+
+e Sen ruído.
+
+e Mellor tempo medio entre fallos.
+
+e Maior seguridade permitindo unha rápida limpeza dos datos almacenados.
+
+e Rendemento determinista ó ser o tempo de procura constante.
+
+e Rendemento sen deterioro mentres o medio se enche, ó non existir frag-
+mentación.
+
+e Menor peso e tamaño que un disco duro tradicional de similar capacidade.
+
+e Máis resistente pois soporta caídas, golpes e vibracións sen se derramar e
+sen se descalibrar ó carecer de elementos mecánicos.
+
+e Borrado máis seguro e irrecuperable de datos.
+
+Inconvenientes
+
+Os dispositivos de estado sólido que usan memorias flash teñen tamén varias
+desvantaxes:
+
+e Menores capacidades de almacenamento.
+
+e Os datos pérdense despois dun fallo físico pois a cela destrúese mentres
+que nun disco duro mecánico os datos son frecuentemente recuperables
+usando axuda de expertos.
+
+e Ó reducirse o tamaño do transistor diminúese directamente a vida útil
+das memorias NAND, pero isto solucionarase en modelos posteriores ó
+instalar sistemas utilizando memristores.
+
+8.4 > Disquete
+
+O disquete ou disco flexible (en inglés, diskette ou floppy disk) é un soporte
+de almacenamento de datos de tipo magnético, formado por unha fina lámina
+circular (disco) de material magnetizable e flexible (de aí a súa denominación),
+encerrada nunha cuberta de plástico, cadrada ou rectangular.
+
+Este tipo de soporte de almacenamento é vulnerable á sucidade e ós campos
+magnéticos externos, polo que deixa de funcionar co tempo ou polo desgaste.
+
+Os tamaños dos disquetes soen denominarse empregando o Sistema
+Anglosaxón de Unidades, incluso nos países nos que o Sistema Internacional de
+Unidades é o estándar. Os estándares foron:
+
+e 8": formato estándar de IBM usado no System/370.
+e 5/4": formato estándar de PC.
+e 3/4"; formato estándar de PC.
+
+Este tipo de unidade está obsoleto e os ordenadores xa non a incorporan, pola
+aparición de outros dispositivos de almacenamento máis manexables, que
+ademais dispoñen de moita máis memoria física, como por exemplo as
+memorias USB.
+
+A clave deste desprazamento progresivo está no maior custe por bit da
+superficie magnética fronte á superficie dun medio óptico ou dunha memoria
+flash, a súa maior fraxilidade xa que necesitan ser protexidos do contacto co
+exterior, do po e da luz, cambios de humidade e temperatura, electricidade
+estática, mediante sobres protectores ou peches herméticos ó baleiro.
+
+8.5 > DVD (Digital Versatile Disc ou Digital Video Disc)
+
+É un formato de almacenamento multimedia en disco óptico que pode ser
+usado para gardar datos, incluíndo películas con alta calidade de vídeo e son.
+
+Os DVD aseméllanse ós discos compactos: as súas dimensións físicas son as
+mesmas -12 cm ou o mini de 8 cm- pero están codificados nun formato
+distinto e a unha densidade moito maior. A diferenza dos CDs, tódolos DVD
+
+Memristor
+
+A imaxe corresponde a un circuíto
+con 17 memristores capturada
+mediante un microscopio de forza
+atómica.
+
+Descríbese como o cuarto ele-
+mento dos circuítos pasivos, xunto
+cos tres máis coñecidos: conden-
+sador, resistencia e indutor.
+
+O nome é unha palabra composta
+de memory resistor (resistencia-
+memoria). Un alto nivel de resis-
+tencia pode ser interpretado nun
+ordenador en termos de datos
+como un 1, e un baixo nivel como
+un O; deste modo, controlando a
+corrente, os datos poden ser
+gardados e rescritos.
+
+Tipos de disquete
+7d AO, Y
+e? y
+[632]
+ES (el
+Firewire (IEEE 1394)
+
+IEEE 1394 é un tipo de conexión
+para diversas plataformas, desti-
+nado á entrada e saída de datos
+en serie a gran velocidade. Sóese
+Usar para a conexión de cámaras
+dixitais e videocámaras. Estase a
+substituír pola interface USB nas
+súas versións 2.0 e 3.0 e pola
+interface Thunderbolt.
+
+Entre as súas características
+
+temos que:
+e permite unha lonxitude de ca-
+ble dende 4.5 a 100 metros.
+e pódese conectar en quente.
+
+e flexibilidade da conexión e a
+capacidade de conectar un má-
+ximo de 63 dispositivos.
+
+e resposta no momento, garan-
+tindo unha distribución dos da-
+tos en perfecta sincronía.
+
++ plug £ play.
+===== PAXINA 39 =====
+Tipos de DVD
+O medio do disco pode ser:
+
+e DVD-ROM (só lectura, manu-
+facturado con prensa).
+
+e DVDER (gravable unha soa
+vez).
+
+e DVDERW (regravable).
+
+e DVD-RAM (regravable de acce-
+so aleatorio).
+
+O disco pode ter un ou dous lados,
+e unha ou dúas capas de datos por
+lado; o número de lados e capas
+determina a capacidade do disco:
+
+e DVD-5: un lado, capa simple,
+4.7 GB
+
+e DVD-9: un lado, capa dobre,
+8.5 GB
+
+e DVD-10: dous lados, capa sim-
+ple en ambos lados, 9.4 GB
+
+e DVD-14: dous lados, capa do-
+bre nun lado, capa simple nou-
+tro, 13.3 GB
+
+e DVD-18: dous lados, capa do-
+bre en ambos lados, 17.1 GB
+
+deben conter un sistema de ficheiros. Este sistema de ficheiros chámase UDF,
+e é unha extensión do Estándar ISO 9660, usado para CDs de Datos.
+
+A capacidade dun DVD-ROM pode ser determinada a ollo polo número de lados
+de datos e o número de capas por lado. As capas dobres son usualmente de cor
+dourada, mentres que as capas simples son prateadas, como un CD.
+
+Outra maneira de saber se un DVD contén unha ou dúas capas é ver o anel
+central do disco. Se hai dous códigos de barras, é unha capa dobre; se hai un
+código de barras, é de capa simple.
+
+Cada medio pode conter calquera contido e ser de calquera tipo de capa. O + e
+o - son estándares técnicos similares, parcialmente compatibles. Ambos
+formatos son igualmente populares; a metade da industria apoia ó +, e a outra
+metade ó -, aínda que actualmente soportan ambos.
+
+A velocidade de transferencia de datos dumha unidade DVD está dado en
+múltiplos de 1350 KB/s, o que significa que unha unidade lectora de 16X
+permite unha transferencia de datos de 16 x 1350 = 21600 KB/s. Como as
+velocidades das unidades de CD danse en múltiplos de 150 KB/s, unha
+velocidade DVD equivale a nove velocidades de CD.
+
+Os dispositivos ópticos débense coidar do po e a súa superficie debe
+protexerse para que non sufran danos, polo que xeralmente posúen fundas
+protectoras. Neste sentido, os DVD son máis sensibles, as súas capas
+protectoras son máis finas, polo tanto están máis expostas a rabuñadas. Como
+se len con luz, o seu desgaste físico non é un gran problema.
+
+A permanencia da información almacenada neles depende das propiedades do
+material que os soporta e das condicións do seu almacenamento. En contra do
+que moitos pensan, a humidade e a temperatura son parámetros a considerar
+no almacenamento dos soportes ópticos. Os cambios bruscos poden causar
+deterioros importantes, porque os compoñentes das diferentes capas que os
+compoñen teñen diferentes coeficientes térmicos de expansión.
+
+Tanto para os DVDs como para os CDs existen normas internacionais para o
+seu almacenamento nos que se indica que para asegurar a súa permanencia, a
+longo prazo, deberíase manter unha temperatura máxima de 23 grados
+centígrados e un 50% de humidade relativa. Existen fungos que, en condicións
+climatolóxicas tropicais, (digamos 30%C de temperatura e 90% de humidade
+relativa), destrúen os CDs.
+
+8.6 > CD (Compact Disc)
+Entre os formatos máis relevantes deste soporte de almacenamento están:
+CD-R (Compact Disc-Recordable)
+
+Estes discos só poden ser gravados unha vez, aínda que se pode facer en varias
+sesións (discos multisesión), coa desvantaxe neste caso de que se perden
+bastantes megas de espazo de gravación e que algúns lectores, de modelos
+antigos, non son capaces de lelos.
+
+As gravadoras chegan a gravar CD-R a 52x, uns 7800 KB/s, sendo a capacidade
+total dun CD-R de 650 MB, 700 MB (o máis común), 800 MB ou 900 MB. Estas
+capacidades son válidas para discos de datos.
+
+CD-ROM (Compact Disc Read Only Memory)
+
+É un disco compacto óptico utilizado para almacenar información non volátil, o
+mesmo medio utilizado polos CDs de audio; pode ser lido pola computadora
+cun lector de CD-ROM.
+
+Un CD-ROM é un disco de plástico plano con información dixital codificada nel
+nunha espiral dende o centro ata o borde exterior.
+
+Os CD-ROMs son sempre manufacturados masivamente por un proceso
+chamado estampación, mentres que os CD-Rs e os CD-RWs son gravados.
+
+===== PAXINA 40 =====
+Existen dispositivos para queimar (gravar) múltiples discos ó mesmo tempo
+dende unha mesma fonte.
+
+Un CD-ROM estándar pode albergar 650 ou 700 MB de datos. O CD-ROM é
+popular para a distribución de software, especialmente aplicacións
+multimedia, e grandes bases de datos. Un CD-ROM pesa menos de 30 gramos.
+
+Os datos binarios gárdanse en forma de ocos e chairas, de tal forma que ó
+incidir o feixe de luz do láser, o ángulo de reflexión é distinto en función de se
+se trata dun oco ou dunha chaira.
+
+É crenza moi común pensar que un oco corresponde a un valor binario e unha
+chaira ó outro valor. Con todo, isto non é así, senón que os valores binarios son
+detectados polas transicións de oco a chaira, e viceversa: unha transición
+determina un 1 binario, mentres que a lonxitude dun oco ou unha chaira indica
+o número consecutivo de O binarios.
+
+CD-RW
+
+A pesares de que cada fabricante utiliza pequenas variacións na composición
+dos materiais empregados na fabricación dos discos, todos seguen un mesmo
+modelo: a información é almacenada nun substrato de policarbonato plástico,
+ó que se lle engade unha capa refractaria de aluminio que reflectirá a luz do
+láser (comunmente no rango do espectro infravermello, e por tanto non
+apreciable visualmente); se lle engade unha capa protectora que o cubre e,
+opcionalmente, unha etiqueta na parte superior.
+
+A diferenza en relación ós CD-R e CD-ROM, é que este formato permite gravar
+ou borrar varias veces (ó redor de 1000) nunha mesma posición.
+
+8.7 > Cinta magnética
+
+É un tipo de soporte de almacenamento de información: de imaxe, de son, de
+datos... Os dispositivos informáticos de almacenamento masivo de datos de
+cinta magnética (coñecidos como Streamers) son utilizados principalmente
+para respaldo de ficheiros e para o proceso de información de tipo secuencial,
+como na elaboración de nóminas das grandes organizacións públicas e
+privadas.
+
+8.8 > Disco magnetóptico
+
+É un disco óptico que sirve como soporte para a gravación magnetóptica dixi-
+tal. A gravación magnetóptica é un sistema de gravación combinado que grava
+de forma magnética, pero reproduce de forma óptica.
+
+Os datos grávanse no disco mediante o que se coñece como recubrimento de
+cambio de fase. A superficie do disco quéntase cun láser mentres se encontra
+baixo da influenza dun campo magnético. A aleación metálica que conforma o
+disco, por influenza deste fluxo magnético, modifica o seu estado de cristaliza-
+ción coa calor e, dentro dos puntos do material quentado, os dominios magné-
+ticos se reorientan. Ó refrescar o disco rapidamente, o magnetismo inducido,
+permanece.
+
+Isto débese a que ó refrescar rapidamente, se reflicte menos luz e o material
+non recristaliza adecuadamente, polo que non volve ó seu estado orixinal. Os
+discos magnetópticos tamén se coñecen como discos MO.
+
+O Minidisc é un exemplo de disco magnetóptico.
+9 >> Tarxetas de expansión
+
+As tarxetas de expansión usámolas para completar ou modificar determinados
+aspectos que non aparecen suficientemente evolucionados no soporte que nos
+presta a placa madre. Entre as tarxetas de expansión encontraremos tarxetas
+de son, gráficas, de televisión e vídeo, firewire, pcmcia...
+
+9.1> Tarxetas de son
+
+Tipos de USB
+
+1 micro USB macho
+2 mini USB
+
+3 tipo B macho
+
+4 tipo A femia
+
+5 tipo A macho
+
+A especificación clásica do USB
+contempla varios tamaños e tipos
+de conectores compatibles con
+distintas especificacións:
+
+e estándar de tamaño maior,
+usado en dispositivos de memo-
+ria USB,
+
+e tamaño mini usado en cámaras
+dixitais.
+
+e tamaño micro usado nos telé-
+fonos intelixentes.
+
+e esquema versátil USB On-The-
+Go, en tamaños mini e micro.
+
+A diferenza doutros cables de
+datos (Ethernet, HDMI...), cada
+extremo dun cable USB utiliza un
+tipo de conector diferente; un de
+tipo A e outro de tipo B. Este tipo
+de deseño elixiuse para evitar as
+sobrecargas eléctricas e non
+danar o equipo, xa que só a femia
+de tipo A presenta carga eléctrica.
+
+a
+USB Tipo C
+
+O USB Tipo C (ou USB-C) é un
+conector moderno, reversible e
+multifuncional deseñado para
+converterse no estándar universal
+para transmitir datos, vídeo e
+enerxía nun único cable.
+
+A diferenza dos seus predecesores
+como o USB-A, o deseño do USB-C
+é ovalado e non ten unha orienta-
+ción superior ou inferior, o que
+permite conectalo por calquera
+dos dous lados.
+
+A
+
+Tarxeta de son
+===== PAXINA 41 =====
+USB Tvre-C— USB20/31
+
+USB (Universal Serial Bus)
+
+Define os cables, conectores e
+protocolos usados nun bus para
+conectar, comunicar e prover de
+electricidade a computadoras,
+periféricos e dispositivos electró-
+nicos.
+
+Foi desenvolvido para economizar
+e estandarizar a conexión de
+calquera tipo de periférico.
+
+No caso dos discos duros, só una
+selecta minoría implementan
+directamente a interface USB
+como conexión nativa, sendo os
+discos externos maioritariamente
+IDE ou Serial ATA cun adaptador
+no seu interior.
+
+Os dispositivos USB clasifícanse
+segundo a súa velocidade de
+transferencia de datos en:
+
+e Baixa velocidade (1.0): Taxa
+de transferencia de ata 1,5
+Mbit/s. Usase nos teclados, ratos
+ou cámaras web.
+
+e Velocidade completa (1.1):
+Taxa de transferencia de ata 12
+Mbit/s.
+
+e Alta velocidade (2.0): Taxa de
+transferencia de ata 480 Mbit/s.
+O cable dispón de catro liñas, un
+par para datos e outro par de
+alimentación.
+
+e Súperalta velocidade (3.0):
+Taxa de transferencia de ata 4,8
+Gbit/s. Os dispositivos que se
+enchufan e despois dun rato qu-
+edan en desuso, pasan inmedia-
+tamente a un estado de baixo
+consumo.
+
+e (3.1): Taxa de transferencia de
+ata 10 Gbit/s. O MacBook pode
+ser alimentado a través da súa
+conexión a un porto USB destas
+características.
+
+Tarxeta gráfica
+
+Unha tarxeta de son é unha tarxeta de expansión para ordenadores que permi-
+te a entrada e saída de son baixo o control dun programa informático.
+
+Unha tarxeta de son típica inclúe un chip de son que polo xeral ten un conver-
+tedor Dixital-Analóxico que cumpre coa función de traducir formas de ondas
+gravadas ou xeradas dixitalmente nun sinal analóxico e viceversa. Este sinal é
+enviado a un conector (para audífonos) onde se pode conectar calquera outro
+dispositivo como pode ser un amplificador, un altofalante...
+
+A meirande parte das tarxetas de son tamén teñen un conector de entrada
+polo que pode entrar calquera tipo de sinal de son proveniente doutro disposi-
+tivo como micrófonos, casetes... e logo así a tarxeta de son pode dixitalizar
+estas ondas e gardalas no disco duro do ordenador.
+
+Case tódalas tarxetas de son adoptan o estándar PC99 de Microsoft que con-
+siste en asignar unha cor a cada conector externo, deste modo:
+
+e Rosa: entrada analóxica para micrófono.
+
+e Azul: entrada analóxica Line-In.
+
+e Verde: saída analóxica para o sinal estéreo principal (altofalantes fron-
+tais).
+
+e Negro: saída analóxica para altofalantes traseiros.
+
+e Laranxa: saída dixital SPDIF (ás veces usado como saída analóxica para al-
+tofalantes centrais).
+
+9.2> Tarxetas gráficas
+
+Unha tarxeta gráfica, tarxeta de vídeo ou GPU (Graphics Processing Unit) é
+unha tarxeta de circuíto impreso encargada de transformar os sinais eléctricos,
+que chegan dende o microprocesador, en información comprensible e repre-
+sentable pola pantalla do ordenador.
+
+Normalmente leva circuítos integrados auxiliares ou incluso un procesador de
+apoio para poder realizar operacións gráficas coa máxima eficiencia posible, así
+como memoria para almacenar tanto a imaxe como outros datos que se usan
+nesas operacións.
+
+As principais características dunha tarxeta gráfica son:
+
+e Arquitectura: é tan crucial para o rendemento da GPU que NVIDIA dife-
+rencia as súas xeracións a través do nome da arquitectura (Maxwell,
+Pascal, Turing, Ampere, Ada Lovelace...). Refírese ó deseño ou enfoque
+do funcionamento interno dunha GPU, xunto coa interacción dos distin-
+tos compoñentes dentro dunha tarxeta gráfica. Por exemplo, o número
+de núcleos que ten unha GPU, como están dispostos, as funcións asig-
+nadas a cada núcleo, o acceso á caché e a prioridade...
+
++ Frecuencia: case tódalas tarxetas gráficas teñen tres frecuencias diferen-
+tes:
+
+— base, que é a velocidade de reloxo á que funciona a GPU en repouso.
+
+— game, a velocidade de reloxo ó xogar a videoxogos ou cando se selec-
+ciona unha configuración predefinida de overclocking específica.
+
+— boost, a frecuencia teórica máxima á que pode funcionar a GPU.
+
+A frecuencia da GPU mídese en MHz e indica a velocidade á que poden
+funcionar os núcleos dunha GPU. Un mellor arrefriamento permite fre-
+cuencias máis altas (máis calor, polo que se require un mellor arrefria-
+mento), razón pola cal as tarxetas gráficas con tres ventiladores ou
+bloques de auga manexan frecuencias máis altas.
+
+e Velocidade da memoria: a velocidade da memoria mídese en Gbps (Giga-
+bits por segundo).
+
+e Ancho de banda: o ancho de banda da memoria mídese en GB/s, distinto
+do ancho de banda da interface (medido en bits).
+
+e Alimentación: PCle para subministrar enerxía directamente dende a fon-
+te de alimentación. Estes varían segundo o modelo e a marca, incluíndo
+6+4, 8+2 e mesmo un conector completo de 12 pins.
+
+===== PAXINA 42 =====
+e Conectores: debe conectarse á rañura PCI-Express.
+
+e Saídas de vídeo: HDMI 2.1, DisplayPort 1.4 e USB, no caso das tarxetas
+máis potentes para a realidade virtual.
+
+e Cores: número de cores que é capaz de xerar. Considérase cor verdadeira
+Ós 24 bits xa que o ollo humano non pode diferenciar máis deses 24 bits.
+
+e Formato: formato de pantalla. A máis usada é 1920x1080 (Horizontal x
+Vertical).
+
+e Refrixerador: moi importante para non queimar o procesador, xa que
+cómpre un bo sistema de refrixeración da calor. Sen un bo sistema de
+refrixeración o procesador gráfico non aguantaría as altas temperaturas
+e perdería rendemento incluso chegando a queimarse.
+
+Actualmente os maiores fabricantes de tarxetas gráficas no mercado son Nvi-
+dia e AMD. O tipo de bus é decisivo para o bo funcionamento da tarxeta gráfi-
+ca, xa que normalmente vai conectada a un oco de expansión; é dicir, comuní-
+case coa CPU a través do bus do sistema.
+
+Os sistemas de conexión máis habituais entre a tarxeta gráfica e o monitor
+son:
+
+THUNDERBOLT
+
+e VGA (Video Graphics Array): foi o estándar analóxico dos anos 1990 e es-
+taba deseñado para dispositivos con tubo de raios catódicos (CRT); so-
+fre de ruído eléctrico e distorsión pola conversión de dixital a analóxico
+e o erro de amosa ó avaliar os píxeles a enviar ó monitor. Conéctase
+mediante 15 pins co conector D-sub: DE-15. O seu uso continúa moi es-
+tendido, aínda que claramente amosa unha redución fronte ó HDMI.
+
+e DVI (Digital Visual Interface): é o substituto do anterior, pero enfocado
+cara Ó dixital; foi deseñado para obter a máxima calidade de visualiza-
+ción nas pantallas dixitais ou proxectores. Tamén se conecta mediante
+pins evitando a distorsión e o ruído ó facer corresponder directamente
+un píxel a representar con un do monitor na resolución nativa do mes-
+mo. O seu problema foi que non é capaz de transmitir son.
+
+e HDMI (High-Definition Multimedia Interface): é unha tecnoloxía propieta-
+ria transmisora de son e vídeo dixital de alta definición cifrado sen com-
+presión, nun mesmo cable. Conéctase mediante patillas de contacto
+sendo ideado inicialmente para televisores, e non para monitores; por
+iso, non apaga a pantalla cando deixa de recibir o sinal.
+
+e DisplayPort: é un estándar de conexión de son e vídeo dixital que se usa
+principalmente para transmitir sinais de vídeo e son dun ordenador a
+unha pantalla externa, como un monitor ou un proxector. Os cables Dis-
+playPort tamén transportan enerxía, o que permite que algúns disposi-
+tivos se alimenten directamente a través do cable. Ten varias vantaxes
+sobre o resto de conectores xa que admite resolucións máis altas,
+transmite sinais de vídeo e son con menos compresión, transfire datos
+máis rápido que outros estándares e require menos cables que as cone-
+xións analóxicas, xa que só un cable transporta enerxía e datos de
+son/vídeo, perfecto para configuracións de escritorio con varios monito-
+res.
+
+Thunderbolt
+
+É o nome utilizado por Intel para
+designar a un tipo de conector de
+alta velocidade que fai uso de
+tecnoloxía óptica.
+
+Ten capacidade para ofrecer un
+gran ancho de banda, ata 20
+gigabits por segundo, pero pode-
+ría desenvolverse ata chegar ós
+100 Gbit/s.
+
+Foi concibido para substituír
+algúns buses actuais, como Fire-
+Wire e HDMI.
+
+Posúe as seguintes características:
+
+etaxa de transferencia de 10
+Gbit/s sobre cable de cobre a
+distancias de ata 3 metros; o
+prototipo usaba cables de fibra
+óptica que funcionaban a distan-
+cias de incluso 100 metros.
+
+e conexión simultánea a múlti-
+ples dispositivos.
+
++ múltiples protocolos.
+e transferencia bidireccional.
+
++ implementación da calidade de
+servizo.
+
+e substitución en quente.
+===== PAXINA 43 =====
+Tarxeta sintonizadora de TV
+
+É un dispositivo que permite ver
+canles de televisión nun ordena-
+dor, de forma que non cómpre un
+televisor externo. Só fai falla unha
+toma de antena para poder sinto-
+nizar as canles.
+
+Este periférico soe ser interno
+(por conexión PCI), pero tamén hai
+modelos que se conectan por USB.
+Xunto co dispositivo, inclúese un
+programa, necesario para contro-
+lar as canles.
+
+Moitas sintonizadoras de TV
+permiten:
+
+e Ver canles de televisión (tódo-
+los que reciba ben a antena).
+
+e Escoitar a radio (FM).
+e Usar o teletexto.
+
+e Conectar un aparello externo,
+como un vídeo, e así velo no or-
+denador.
+
+e Gravar todo o que sae na tele-
+visión no disco duro do ordena-
+dor.
+
+e Controlar todo isto mediante
+un mando a distancia.
+
+Bastantes tarxetas veñen cun
+pequeno sensor de infravermellos
+que se lle conecta por detrás, e
+cun mando a distancia que permi-
+te interactuar co programa de
+control.
+
+e
+o
+
+Tarxeta de rede
+
+1BNC
+2 RJ-45
+
+e Thunderbolt: é unha tecnoloxía de E/S (entrada/saída) de alta velocidade
+desenvolvida por Intel e Apple. Permite a transferencia de datos entre
+dispositivos a velocidades de ata 10 gigabits por segundo (Gbps). Pódese
+usar para conectar unha variedade de dispositivos, incluíndo discos du-
+ros externos, monitores e outros dispositivos periféricos. As versións 1 e
+2 de Thunderbolt empregan o conector Mini DisplayPort (MDP), mentres
+que as versións 3 e 4 empregan o conector USB-C.
+
++ USB-C: é o conector USB máis moderno e se está a converter pouco a
+pouco no novo estándar para as conexións USB. E máis pequeno e rever-
+sible que os conectores USB tradicionais, o que facilita moito a conexión
+de dispositivos. Tamén é capaz de alcanzar velocidades de transferencia
+de datos moito maiores que o USB tradicional, o que o fai ideal para dis-
+positivos con moitos datos, como discos duros externos e cámaras de
+vídeo. Case calquera dispositivo que use unha conexión USB pode usar
+USB tipo C, incluídos teléfonos, tabletas, portátiles ou cámaras.
+
+9.3 > NIC (Network Interface Card ou Network Interface Controller)
+
+A tarxeta de rede é o periférico que actúa como interface de conexión entre
+dispositivos nunha rede de ordenadores posibilitando compartir información e
+recursos entre dous ou máis ordenadores.
+
+Cada tarxeta de rede ten un número de identificación único, de 48 bits en he-
+xadecimal, chamado enderezo MAC (Media Access Control). Estes enderezos
+únicos de hardware son administrados polo IEEE. Os tres primeiros octetos (24
+bits) identifican ó provedor e coñécese como número OUI (Organizationally
+Unique Identifier), que combinado con outro número de 24 bits forman o ende-
+rezo MAC completo.
+
+A maioría de tarxetas de rede traen unha ROM opcional que permite que o
+equipo arranque dende un servidor da rede, o que permite usar equipos sen
+sistema de almacenamento para cargar o sistema operativo.
+
+Nun principio usábanse tarxetas adaptadas ó tipo de topoloxía implementada;
+así se tiñamos unha topoloxía en anel usabamos tarxetas Token Ring que usa-
+ban conectores BNC para enganchar o cable coaxial.
+
+Estas tarxetas para rede (Token Ring) están practicamente en desuso, debido á
+baixa velocidade e elevado custo que presentan respecto das Ethernet, que
+usan conectores RJ-45 e cable de par trenzado.
+
+Coa entrada das redes Gigabit nas domicilios particulares é frecuente que
+estas veñan integradas na placa base e con ata 4 portos RJ-45, que antes es-
+taba reservado ós servidores.
+
+A velocidade de transmisión é normalmente 10 Mbit/s ou 10/100 Mbit/s, evolu-
+cionando cara a 1000 Mbit/s, coñecidas como Gigabit Ethernet.
+
+Tamén son NIC as tarxetas sen fíos (wireless), axustándose á norma 802.11b,
+802.11g e 802.11n.
+
+10 >> Como facer un orzamento
+
+O primeiro que calquera técnico informático debe ser quen de realizar é un
+orzamento, ben sexa do hardware que necesita a nivel de equipos de sobreme-
+sa ou a nivel de rede corporativa, ben do software que lle permita sacar parti-
+do a eses equipos.
+
+Logo, é importante saber escoller as pezas que comporán o noso equipo, den-
+de a carcasa ata o procesador pasando pola fonte de alimentación, placa base,
+refrixerador...
+
+10.1> Por onde empezo?
+
+===== PAXINA 44 =====
+Centrémonos na busca do material a nivel de aplicación que debemos incorpo-
+rar a calquera equipo da empresa na que esteamos a traballar, xa que co soft-
+ware é co que debemos tratar. Os pasos a seguir serán os seguintes:
+
+e Comprobar de que aplicacións dispomos: antes de nada debemos saber
+que aplicacións están instaladas no equipo, para poder decidir se temos
+que comprar ou non outras que nos permitan desenvolver con profesio-
+nalidade a actividade a que se dedica a empresa para a que traballemos.
+
+e Decidir que aplicacións debería ter: este paso deberémolo consultar co
+resto dos usuarios do sistema, pois podemos pensar que xa temos todo
+controlado a nivel software, pero normalmente levarémonos sorpresas
+ó comprobar que programas que nós consideramos elementais para
+calquera ámbito non cómpren onde traballamos ou que existen pro-
+gramas para nós descoñecidos e que son de grande utilidade para parte
+dos usuarios.
+
+e Ver se as características técnicas se axustan: non vale de nada comprar
+un software espectacular se despois non temos un equipo que o poida
+mover.
+
+e Buscar o mellor prezo: ás veces teremos que decantarnos por un softwa-
+re que a priori consideramos en segundo lugar debido a problemas eco-
+nómicos ó ter que axustar o noso orzamento.
+
+10.2 > Comprobar de que aplicacións dispomos
+
+Vamos iniciar a busca das aplicacións que posuímos dentro do equipo. Para iso,
+se nos encontramos nun contorno Windows deberemos no Panel de Control
+premer na icona de Engadir ou eliminar programas para comprobar que ten
+instalado o equipo (este é un paso que debemos facer con tódolos equipos que
+vaian ter uso a posteriori, pois non ten por que ter instalado o mesmo softwa-
+re un que outro).
+
+Dentro das aplicacións que topamos ó abrir este cadro de diálogo están parte
+das que temos instaladas no equipo, pois non podemos asegurar que tódalas
+aplicacións que existen no equipo teñan un programa de desinstalación (que é
+verdadeiramente o que amosa neste punto o ordenador).
+
+Pero o que si sabemos é que, polo menos, temos este software. A seguinte
+pregunta que nos deberiamos facer é se é ou non legal. A nivel de empresa
+debemos ter claro que non podemos ter ningún tipo de software ilegal, e que
+parte dos programas que temos instalados no noso equipo en casa (onde si son
+legais, ou cando menos alegais) non o son nun contorno dedicado a gañar car-
+tos co uso desas aplicacións.
+
+Pero ter instalado un programa nun equipo non nos habilita para traspasalo a
+outro, e non por motivos legais senón porque a transportabilidade non é direc-
+ta. Non podemos coller a icona dun programa e pensar que cambiándoa ó novo
+equipo vai funcionar. E máis, aínda que saibamos tódolos ficheiros que debe-
+mos mover dun equipo ó outro non chega, pois existen entradas no rexistro de
+Windows que non coñecemos e que nos darán problemas con toda seguridade.
+
+Polo tanto, debemos ter os ficheiros de instalación para ese software que
+temos, xa sexa mediante un DVD, un CD, un disquete, unha imaxe ISO, unha
+aplicación MSI...
+
+Se estamos a traballar en Ubuntu, e sería moi parella a forma de facelo para
+calquera outra distribución de Linux, podemos optar pola opción Xestor de
+paquetes Synaptic para ver que temos xa instalado. Verdadeiramente traba-
+llando con Ubuntu non aparecen os problemas de cartos que temos se esta-
+mos a traballar en Windows, pois toparemos a maioría das aplicacións de bal-
+de, pero teremos menos onde elixir.
+
+10.3 > Decidir que aplicacións debería ter
+
+Despois de saber que temos, o seguinte paso será falar cos usuarios e saber
+que precisan para traballar. Probablemente, toparemos entre as súas peticións
+
+Torre
+
+Se contamos ampliar o equipo nun
+futuro, a mellor alternativa é
+partir dunha carcasa deste tipo.
+
+Ó dispor de máis espazo, este tipo
+de caixa permite dispor os dispo-
+sitivos con maior claridade e
+poderanse montar e desmontar
+máis facilmente, algo que pode
+ser realmente complexo nunha
+carcasa tipo sobremesa.
+
+Neste tipo de caixas a placa base
+móntase en posición vertical;
+como consecuencia, as tarxetas
+colócanse horizontalmente.
+
+Estas unidades presentan tres ou
+catro baías de 5.25 polgadas e
+unha ou dúas de 3.5 polgadas.
+
+a
+y
+o
+y
+
+Engadir ou eliminar programas
+
+[SS
+lanos to, 1206 nto Desta, O para talar atacar O pa liar
+
+Xestor de paquetes Synaptic
+===== PAXINA 45 =====
+Sobremesa
+
+É a caixa tradicional, con espazo
+para unha unidade de 3.5 polgadas
+e unha ou dúas de 5.25 polgadas.
+
+O número de ocos dispoñibles
+para ampliacións dependerá da
+placa base, que estará montada
+en horizontal, polo que as tarxe-
+tas terán que ser montadas en
+vertical.
+
+Normalmente, pónselle enriba
+dela o monitor, para que ocupe
+menos no posto de traballo.
+
+Características técnicas
+
+moitos programas que xa existían na empresa, pero tamén outros que non hai;
+tamén comprobaremos que parte do software existente é innecesario pois non
+se usa na actualidade e non tería sentido reinstalalo ou facer unha actualiza-
+ción do mesmo.
+
+Agora temos que empezar a tomar decisións, polo xeral consensuadas cos
+nosos superiores, ben xefes do departamento informático, ben outros xefes
+dos departamentos nos que teñamos que instalar as aplicacións, ou mesmo co
+dono da empresa, que é o que pon os cartos.
+
+Non por moito que nos guste un programa de retoque fotográfico debemos
+influír nos nosos superiores promovendo a súa compra cando sabemos que o
+uso que se lle vai dar é nulo para sacar adiante o traballo que ten a empresa e
+verdadeiramente só o queremos para, no tempo de lecer, facer retoques nas
+fotos que sacamos na última festa á que fomos. Cando se nos permite tomar
+decisións (ou influír sobor delas), temos que ter os pés ben asentados no chan
+e tomalas coa cabeza despois de reflexionar e non nos deixar levar pola opor-
+tunidade que nos brindan para comprar o que nos fai falla en casa, pero sobra
+na oficina.
+
+10.4 > Ver se as características técnicas se axustan
+
+Ben, xa temos decididas as aplicacións que necesitamos e que necesitan o
+resto dos nosos compañeiros para poder traballar a gusto. Agora debemos ver
+nas especificacións técnicas de cada programa se estas se axustan ós equipos
+que temos, pois de nada nos valerían uns programas que non poidan correr no
+ordenador por falta de memoria ou por incompatibilidade co sistema
+operativo.
+
+Por exemplo, de nada nos valería comprar a última versión de AutoCAD se non
+temos equipos con procesadores de 64 bits; ante casos deste tipo o que
+debemos saber é se nos chega á hora de traballar cunha versión anterior do
+produto que se axuste ós equipos que temos ou se debemos facer un cambio
+coordinado tanto de aplicacións como de hardware.
+
+10.5 > Buscar o mellor prezo
+
+Como norma xeral, non debemos buscar os prezos das cousas en sitios web
+como eBay pois trátase de portais de poxa, e non son reais á hora de facer un
+orzamento (poderían ser unha boa comparativa se hai a posibilidade de
+actualizar o software comprando unha versión anterior que abarate custos).
+
+Por último, tampouco debemos fiarnos en demasía das opinións que dá a xente
+sobre o que buscamos en foros, pois trátanse de opinións, polo xeral non
+contrastadas, de xente que non está especializada no uso desas aplicacións e
+que soe escribir en quente (nun momento de enfado, de decepción ou de ledicia
+ante o que se atopa) sen ter feita unha valoración en frío despois de probar os
+pros e as contras da aplicación. Unha boa referencia son as publicacións
+especializadas, pois é ó que se adican: dar consellos sobor das aplicacións que
+os usuarios usan.
+

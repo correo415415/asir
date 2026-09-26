@@ -1,0 +1,1313 @@
+===== PÁXINA 01.txt =====
+Arquitectura de
+rdenadores
+
+= Os sistemas informáticos
+y — Bloques funcionais dun sistema microinformático e
+|" compoñentes de cada bloque funcional
+
+- Computación neuromórfica e as súas aplicacións na
+»,¡intelixencia artificial
+
+A
+
+vos
+
+— Coñecer os pasos que se deron na evolución da in-
+lata chegar ó momento actual
+
+- Introducir a informática dende o punto de vista dos
+equipos e sistemas informáticos
+
+“Coñecer a arquitectura de Von Neumann, Os seus
+lementos funcionais e os seus subsistemas
+Explicar O funcionamento interno dun ordenador e
+ñecer como se.almacena e usa a información
+— Coñecer as arquitecturas actuais noutro tipo de dis-
+¿positivos
+Entender que son os SoC
+tificar as.novas arquitecturas que se están a im-
+ar nos procesadores
+orar e debater sobre a importancia dos sistemas
+os na actualidade
+
+17
+|
+
+===== PÁXINA 02.txt =====
+1 >> Introdución
+
+O termo informática procede da conxunción de dúas verbas, información e
+automática. A informática permítenos xestionar a información en forma de
+datos e instrucións, permítenos controlar sistemas de maquinaria, crear e
+modificar enormes bases de datos, realizar os efectos especiais dunha película,
+realizar tarefas rutineiras como a confección de documentos, levar a contabili-
+dade dunha empresa... Podemos definir a informática como a
+
+Ciencia que estuda o tratamento racional e automático da informa-
+ción ademais da tecnoloxía para mantela conservada e utilizala de
+maneira eficiente e económica
+
+A principal ferramenta que actualmente nos permite o tratamento automático
+da información é o ordenador, que podemos definir como
+
+Máquina composta de elementos físicos, na súa maioría de orixe
+electrónica, capaz de realizar diferentes operacións sobre a infor-
+mación a gran velocidade e con gran precisión
+
+Algunhas desas operacións poderían ser lectura, almacenamento, cálculos,
+comparacións, escritura...
+
+2 >> Historia da informática
+
+En 1937 a universidade de Harvard un equipo de enxeñeiros de IBM comezan a
+desenvolver un proxecto que en 1944 culmina na primeira computadora elec-
+tromecánica, denominada calculadora automática de secuencia controlada,
+aínda que coñecida popularmente como MARK 1.
+
+As esixencias militares, concretamente a necesidade de elaborar táboas para o
+cálculo de traxectoria de proxectís, induciron ós científicos estadounidenses a
+construír o que é considerado o primeiro ordenador electrónico, o ENIAC (Elec-
+tronic Numerical Integrator And Calculator) que entrou en funcionamento en
+1945, e estaba composto por 18 000 válvulas cun consumo de 160 Kw. Era mil
+veces máis rápido que a MARK l.
+
+En 1951 constrúese a primeira computadora posta á venda, a UNIVAC l, a partir
+de aí disparouse o desenvolvemento de novas máquinas e a súa produción en
+serie.
+
+3 >> Xeracións de ordenadores
+
+Dende que na primeira parte da década dos cincuenta comezaron a utilizarse
+os ordenadores con fins comerciais, estes evolucionaron de tal xeito, que cabe
+destacar cinco xeracións:
+
+3.1> Primeira xeración (1940-1955)
+
+Os ordenadores electrónicos da primeira xeración foron deseñados con
+VÁLVULAS ELECTRÓNICAS DE BALEIRO. O seu tamaño era enorme e o seu
+mantemento moi complicado e a fiabilidade escasa. O tempo medio entre dúas
+avarías era de media hora. Os tempos de cálculo dos seus circuítos eran de
+varios microsegundos, polo que a execución de programas longos era de varios
+días. Utilizaban como linguaxe de programación a LINGUAXE MÁQUINA. Como
+único soporte para almacenar a información utilizaban as TARXETAS PERFO-
+RADAS ou a CINTA PERFORADA.
+
+3.2 > Segunda xeración (1955-1964)
+
+As válvulas son substituídas por TRANSISTORES. Tal innovación reduciu consi-
+derablemente o tamaño dos ordenadores e aumentou a súa fiabilidade, en
+consecuencia viuse aumentada a súa capacidade de cálculo e reducido o seu
+consumo. O seu campo de utilización, ata agora científico e militar, ampliouse
+ó administrativo e universitario.
+
+Harvard MARK |
+
+Medía 16.6 metros de longo, e 2.6
+metros de alto, pesaba 70 tonela-
+das e estaba constituída por
+800 000 pezas móbiles.
+
+Precisaba de 800 000 metros de
+cable para lograr sumar dous
+números en menos dun segundo e
+multiplicalos en menos de tres.
+
+Podía traballar con operandos de
+ata 23 cifras.
+
+John von Neumann
+Naceu no ano 1903 en Budapest.
+
+Durante a Segunda Guerra Mun-
+dial traballaba para o goberno
+americano e vendo as limitacións
+da ENIAC e outras máquinas de
+computación definiu un novo
+sistema lóxico de computación.
+===== PÁXINA 03.txt =====
+Spacewar!
+
+É un videoxogo de combate espa-
+cial desenvolvido en 1962 por
+Steve Russell en colaboración con
+Martin Graetz, Wayne Wiitanen,
+Bob Saunders, Steve Piner e ou-
+tros.
+
+Foi programado para o recén
+creado minicomputador DEC PDP-
+1 do MIT.
+
+¡Mac
+
+Rachou coa monotonía dos PCs
+ofrecendo un deseño en forma de
+ovo, cunha carcasa transparente
+que deixaba ver os compoñentes e
+que se ofrecía en diferentes e
+divertidas cores, contrastando cos
+modelos compactos e beige que
+existían ata ese momento.
+
+Tiña unha asa na parte superior
+que permitía unha mellor mobili-
+dade, e o teclado e rato conectá-
+banse directamente.
+
+Ofrecen a posibilidade de simultanear o cálculo puro con operacións de entra-
+da/saída. Aparece por primeira vez a MEMORIA INTERNA a base de núcleos de
+ferrita e como memoria externa os primeiros SOPORTES MAGNÉTICOS la
+cinta magnética e os tambores magnéticos). Aparecen as LINGUAXES DE
+PROGRAMACIÓN, entre elas o ENSAMBLADOR, e algúns de alto nivel (COBOL,
+FORTRAN, ALGOL...).
+
+En 1962 desenvolveuse o primeiro xogo de ordenador, o Spacewarl!.
+3.3 > Terceira xeración (1964-1971)
+
+O elemento máis significativo é o CIRCUÍTO INTEGRADO, que consiste no
+encapsulamento dunha gran cantidade de compoñentes electrónicos discretos,
+conformando un ou varios circuítos cunha función determinada, sobre unha
+pastilla de plástico.
+
+O tamaño dos ordenadores volveuse reducir unha vez máis, aumentando a súa
+potencia de cálculo e a súa fiabilidade. Pasouse así de ordenadores capaces de
+executar miles de instrucións por segundo a outros que podían executar mi-
+llóns delas nese mesmo tempo. A miniaturización estendeuse a tódolos circuí-
+tos da computadora.
+
+O software evolucionou de forma considerable, coa aparición de varios SISTE-
+MAS OPERATIVOS. Comezaron a utilizarse as memorias de semicondutores e
+os DISCOS MAGNÉTICOS.
+
+3.4 > Cuarta xeración (1971-1981)
+
+En 1971, produciuse unha nova revolución no mundo dos ordenadores, orixinada
+polo nacemento do MICROPROCESADOR. Tecnoloxía de moi alta integración e
+elevadísima velocidade e fiabilidade, introducindo toda a CPU nunha pastilla.
+
+A tecnoloxía utilizada, permitiu a fabricación de microcomputadores e ordena-
+dores persoais de alta fiabilidade, velocidade e economía.
+
+Comezan a utilizarse os DISQUETES ou floppy-disk como unidade de almace-
+namento externo.
+
+Aparecen unha multitude de linguaxes de todo tipo e as REDES de transmisión
+de datos para conectar ordenadores.
+
+3.5 > Quinta xeración (1981-actualidade)
+
+É un proxecto nado en Xapón co obxectivo de desenvolver unha nova clase de
+computadoras que utilizarían técnicas e tecnoloxías de intelixencia artificial
+tanto no eido do hardware como do software.
+
+Usando a linguaxe serían capaces de resolver problemas complexos, como a
+tradución automática dunha linguaxe natural a outra (galego a inglés, por
+exemplo), tentando empregar para o seu desenvolvemento diferentes tipos de
+arquitecturas e dando lugar a aparición das linguaxes naturais (linguaxes de
+quinta xeración).
+
+Ó aumento constante de velocidade de proceso, e á miniaturización dos seus
+compoñentes, hai que engadir a proliferación das redes de ordenadores e dis-
+positivos (redes integradas).
+
+Intégranse nun mesmo proxecto datos, imaxes e voz, aparecendo o concepto
+de MULTIMEDIA.
+
+Xeneralízase o uso da rede de redes, INTERNET.
+
+4 >> Choque de arquitecturas: CISC fronte a RISC
+
+Unha das primeiras decisións á hora de deseñar un microprocesador é decidir
+cal será o seu xogo de instrucións. Hai dúas razóns:
+
+e O xogo de instrucións decide o deseño físico do conxunto
+
+===== PÁXINA 04.txt =====
+e calquera operación que se deba executar no microprocesador deberá po-
+der ser descrita pola linguaxe desas instrucións.
+
+Existen múltiples tipos de instrucións, que se engloban dentro de tres grandes
+categorías: operacións con memoria, operacións aritméticas e operacións de
+control sobre a CPU.
+
+A complexidade do set de instrucións é variable e depende enormemente do
+que os seus deseñadores decidiran no momento da súa creación.
+
+Se usamos o algoritmo para fritir un ovo para ilustrar as diferenzas entre estes
+dous conceptos obsérvase que o paso 6 fala de verter o ovo na tixola como
+unha das instrucións a efectuar. Dende a óptica dun procesador sería unha
+instrución complexa que se podería dividir en varias instrucións máis sinxe-
+las:
+
+6.1 Colocar o ovo partido sobre a tixola.
+
+6.2 Achegar o ovo partido a un par de centímetros do aceite quente.
+6.3 Abrir o ovo partido.
+
+6.4Verter o contido do ovo partido sobre o aceite.
+
+6.5 Esperar ata que o ovo estea baleiro.
+
+6.6Retirar a casca da tixola.
+
+6.7 Tirar ó lixo a casca do ovo.
+
+Estase a realizar a mesma labor con dous xogos de instrucións diferentes; a
+primeira instrución (Paso 6) é máis complexa que as novas instrucións (Paso
+6.x), que son máis simples e sinxelas de entender pero tamén son moitas
+máis en cantidade. Empregar unha ou outras dependerá do set de instrucións
+que admite o procesador.
+
+A mediados do século XX, IBM reuniu un grupo de investigadores para estudiar
+de que forma un programa traballase en múltiples computadoras sen cambios
+importantes, ampliando a compatibilidade do software en diferentes máqui-
+nas. O resultado foi a tecnoloxía CISC (Complex Instruction Set Computing).
+Anos máis tarde apareceu outro enfoque, a tecnoloxía RISC.
+
+Ambas aproximacións fundaméntanse sobre a mesma base de funcionamento:
+
+un bucle infinito no que nun mesmo ciclo, un procesador recibe unha
+nova instrución a executar, descodifícaa, execútaa e espera a que
+chegue a seguinte instrución
+
+pero son moi diferentes en relación ó tipo de instrución que admiten.
+
+CISC ofrece un conxunto de instrucións bastante completas e lentas de execu-
+tar, pero que agrupaban varias operacións de baixo nivel na mesma instrución.
+Isto dá lugar a programas pequenos e sinxelos de desenvolver que realizan
+poucos accesos a memoria (agora é insignificante pero daquela era vital ante a
+falta de recursos). No algoritmo para fritir un ovo, cun enfoque CISC teriamos
+unha única instrución, o Paso 6. Verter o ovo na tixola.
+
+CISC ten ó x86 como o seu maior expoñente, con Intel e AMD á cabeza do seu
+desenvolvemento... practicamente calquera ordenador de sobremesa ou portá-
+til dende os anos 80 usou un procesador x86.
+
+Co paso do tempo, os científicos de IBM comprobaron que os deseñadores de
+software creaban as súas propias instrucións máis sinxelas e precisas. Na dé-
+cada dos 70, empezaron a deseñar unha alternativa que posteriormente se
+introduciu no mercado baixo o acrónimo RISC (Reduced Instruction Set Com-
+puting).
+
+A súa principal virtude é ter un conxunto de instrucións moi simples que se
+executarán máis rapidamente no procesador.
+
+Algoritmo para fritir un ovo
+
+Un posible algoritmo para fritir un
+ovo podería ser o seguinte:
+1 Pór unha tixola enriba do lume
+2 Prender o lume
+3 Pór aceite na tixola
+
+4 Esperar a que o aceite estea
+quente
+
+5 Cascar o ovo
+6 Verter o ovo na tixola
+
+7 Coa axuda dunha paleta, botar
+O aceite por riba do ovo
+
+8 Comprobar que o ovo está
+fritido e, nese caso, sacalo a un
+prato
+
+System/360
+
+Nos anos 50 do século pasado
+tódalas computadoras  deseñá-
+banse de forma completamente
+illada uns dos outros.
+
+As instrucións de cada un deles
+eran independentes facendo que
+un programa escrito para un
+modelo de ordenador non se
+puidese executar noutro.
+
+Foi o primeiro ordenador en usar
+un xogo de instrucións a partir do
+enfoque CISC no ano 1964.
+===== PÁXINA 05.txt =====
+IBM 801
+
+Empezouse a crear en 1975, foi
+deseñado por John Cocke e consi-
+dérase o primeiro procesador RISC
+da historia.
+
+CISC ou RISC
+
+A arquitectura CISC ten un con-
+xunto de instrucións caracterizado
+por ser moi amplo e permitir
+operacións complexas entre ope-
+randos situados na memoria ou
+nos rexistros internos.
+
+Este tipo de arquitectura dificulta
+o paralelismo entre instrucións,
+polo que para o alto rendemento
+implementan un sistema que
+convirte as instrucións complexas
+en varias instrucións simples do
+tipo RISC, chamadas polo xeral
+microinstrucións.
+
+A B AANDB AORB NOTA
+
+¡O 0 0 1
+011 0 1 1
+10 0 1 0
+
+Operacións lóxicas ou boole-
+anas
+
+En computación xogan un papel
+fundamental as operacións lóxicas
+ou booleanas que se implementan
+mediante dispositivos electróni-
+cos chamados portas lóxicas, que
+son a base da implementación dos
+circuítos de conmutación integra-
+dos nun chip que traballan con
+bits.
+
+Existe un catálogo de poucas instrucións e estas son moi sinxelas, o que impli-
+ca que para tarefas complexas necesitaremos un maior número delas, e por
+isto o programa final terá unha lonxitude maior e accederá nun maior número
+de ocasións ós datos almacenados na memoria. No algoritmo para fritir un ovo,
+cun enfoque RISC precisaríamos as instrucións descritas entre Paso 6.1 e Paso
+6.7.
+
+O obxectivo de deseñar máquinas con esta arquitectura é posibilitar a segmen-
+tación e o paralelismo na execución de instrucións e reducir os accesos á me-
+moria.
+
+Un procesador de tipo RISC é máis simple tanto en software (instrucións) como
+en hardware (rexistros de memoria), polo que será un dispositivo máis barato
+que outras CPU. O maior exemplo de procesador RISC son os produtos ARM,
+utilizados amplamente en dispositivos móbiles e en supercomputadoras.
+
+Tanto CISC como RISC evolucionaron de forma moi notable dende o seu nace-
+mento, adoptando melloras provindes do contrario en ambos casos e novos
+conxuntos de instrucións para adaptarse ós novos usos dos ordenadores.
+
+Ó principio a diferenza era moi ampla debido ás limitacións técnicas da época
+tanto en tamaño de memoria como en velocidade de procesamento pero na
+actual informática moderna os requirimentos son moi diferentes: os límites en
+capacidade de almacenamento son case inexistentes e os procesadores son
+quen de executar millóns de instrucións nun só segundo.
+
+A gran batalla actual permite un enfoque por parte de ARM e x86 cara ó que
+lle importa ós usuarios do século XXI: o punto forte de ARM está na eficiencia
+enerxética posto que un chip ARM consume moita menos enerxía que un pro-
+cesador x86 que ten no seu alto rendemento a súa gran virtude, a costa de
+consumir bastante máis enerxía.
+
+5 >> Sistemas informáticos
+
+O conxunto de ordes ou instrucións que se introducen nun ordenador para
+realizar un proceso determinado denomínase programa. O conxunto de varios
+programas denomínase aplicación informática.
+
+Unha aplicación informática podería ser, por exemplo, un programa bancario,
+que consta de varios programas, cada un dos cales ten unha finalidade concre-
+ta: nóminas, préstamos, contabilidade...
+
+O conxunto de instrucións, programas e aplicacións informáticas quedan defi-
+nidos baixo o termo de software.
+
+Temos tamén que considerar que para que estes programas funcionen e poi-
+dan xerar a información que o usuario precisa, necesítanse determinados com-
+poñentes físicos. Estes compoñentes físicos agrúpanse baixo a denominación
+de hardware.
+
+Polo que podemos definir como sistema informático o
+
+Hardware e Software necesario para satisfacer determinadas nece-
+sidades do usuario
+
+As persoas que utilizan, desenvolven ou manteñen o hardware e o software
+reciben o nome de Persoal informático.
+
+5.1> Programa
+
+A función principal dun ordenador é executar programas, polo que todo este
+esquema vai encamiñado a iso, co gallo de coñecer o seu funcionamento básico
+e como interaccionan os distintos bloques entre si.
+
+Un programa é un conxunto de instrucións que son almacenadas se-
+cuencialmente en posicións ou enderezos sucesivos de memoria e
+que serán executadas unha tras outra.
+
+===== PÁXINA 06.txt =====
+O funcionamento do ordenador consistirá en extraer instrucións da memoria
+principal, interpretalas, extraer de memoria os datos empregados na operación
+(chamados operandos), envialos á unidade que realiza as operacións e calcular
+o resultado.
+
+6 >> Bloques funcionais dun sistema microinformático
+
+O modelo básico de arquitectura empregada nos ordenadores foi establecido
+en 1946 por John von Neumann. O seu aporte máis significativo foi construír un
+ordenador con programa almacenado, xa que os existentes ata entón traballa-
+ban con programas cableados que se introducían establecendo manualmente
+as conexións.
+
+Unidade de Proceso Central
+
+Unidade de control
+
+Unidade Aritmético Lóxica
+
+Dispositivos de entrada Dispositivos de saída
+
+Unidade de memoria
+
+Estrutura funcional dun ordenador
+
+A idea de von Neumann consistía en conectar permanentemente os bloques
+funcionais dos ordenadores, sendo coordinado o seu funcionamento por un
+elemento de control. Esta tecnoloxía segue estando vixente na actualidade
+(con pequenas variacións) e emprégase pola maioría dos fabricantes.
+
+A estrutura xeral dun ordenador segundo a arquitectura de von Neumann
+componse de catro bloques básicos:
+
+e Unidade de control (UC): Ten como función ler, unha tras outra, as ins-
+trucións máquina almacenadas na memoria principal, e xerar os sinais
+de control necesarios para que toda a máquina funcione e execute as
+instrucións lidas.
+
+Para coñecer en todo momento a posición de memoria na que estaba
+almacenada a seguinte instrución a executar existe un rexistro apunta-
+dor chamado contador de programa.
+
+e Unidade aritmético lóxica: emprégase para levar a cabo operacións ma-
+temáticas elementais como sumas ou restas e operacións lóxicas como
+AND, OR ou NOT.
+
+Os datos sobre os que opera esta unidade proveñen da memoria princi-
+pal e poden estar almacenados de forma temporal nalgúns rexistros da
+propia ALU.
+
+e Unidade de memoria: a memoria principal está formada por un conxunto
+
+de celas de igual tamaño ou número de bits que se identifican de forma
+individual a través dun enderezo e sobre as que se poden realizar opera-
+cións de lectura ou escritura.
+Cada cela soe estar formada por un conxunto de bits, denominándose
+punto de memoria, que son o elemento básico de información. Permiten
+dous valores: O ou 1 que se corresponden a estados de tensión diferen-
+tes. As celas empréganse para almacenar tanto datos como instrucións
+de máquina.
+
+e Unidade de entrada/saída: leva a cabo a transferencia de información a
+través de canles asociadas a unidades externas que poden estar forma-
+das por memorias auxiliares ou secundarias, que serven de soporte de
+almacenamento de gran capacidade, e outras chamadas periféricos, que
+permiten a comunicación entre o sistema e o medio exterior mediante a
+
+a o
+lo]
+o
+o [O]
+2
+De
+(O) :
+O
+
+Hardware
+
+Compoñentes físicos, como por
+exemplo monitor, teclado, micro-
+procesador, memoria...
+
+Software
+
+É a parte intanxible (programas e
+aplicacións). Pódese dividir en:
+
+e Software base: parte do soft-
+ware sen a cal o computador
+non pode funcionar. Tamén se
+denomina Sistema operativo.
+
+e Software de aplicación: parte
+do software que serve para pro-
+cesar a información.
+
+Firmware
+
+É a parte intanxible dos compo-
+ñentes hardware, o software co
+que se programan e configuran os
+dispositivos.
+
+Cando se grava nun compoñente
+hardware queda practicamente
+invariable ó longo da vida deste.
+===== PÁXINA 07.txt =====
+Smartphone
+
+Un SoC, o Exynos 4 Quad (4412).
+na placa dun teléfono intelixente
+Samsung Galaxy S III.
+
+Diagrama dun SoC
+
+A memoria nun SoC é como unha
+guía de referencia rápida para o
+procesador.
+
+Almacena os datos que o procesa-
+dor precisa para acceder de inme-
+diato.
+
+Canto máis preto estea a memoria
+do procesador no chip, máis rápi-
+da será a recuperación, o que
+mellora a velocidade e a capaci-
+dade de resposta do sistema.
+
+á
+ó
+
+CI
+
+ei
+E
+
+Í
+
+Afecta ó tamaño?
+
+Ó integrar compoñentes esenciais
+como o procesador, a memoria e
+outros nun só chip, os dispositivos
+vólvense máis elegantes e com-
+pactos.
+
+carga de datos e programas na memoria principal ou a presentación de
+resultados.
+
+Este modelo é capaz de executar unha serie de instrucións elementais que
+denominou instrucións máquina, que deben estar almacenadas na memoria
+principal co programa almacenado para poder ser lidas e executadas.
+
+Que se poidan executar diferentes programas fai que este tipo de máquinas se
+chamen de propósito xeral.
+
+Analizando esta arquitectura observamos como cada elemento ten unha de-
+terminada función, sendo totalmente imprescindible e comunícase con outros
+elementos do sistema para conseguir o obxectivo, que non é outro que proce-
+sar información e levar a cabo a tarefa para a que se programou.
+
+A maiores dos elementos que conforman esta arquitectura precisamos dun
+quinto compoñente: os buses que son camiños a través dos que as instrucións
+e os datos circulan entre os distintos bloques do ordenador.
+
+7 >> SOC: System on a Chip
+
+Un sistema nun chip describe a tendencia de usar tecnoloxías de fabricación
+que integran tódolos ou unha gran parte dos módulos que compoñen un com-
+putador ou calquera outro sistema informático ou electrónico nun único circuí-
+to integrado ou chip.
+
+Un SoC é unha integración revolucionaria de múltiples compoñentes
+esenciais, como o procesador, a memoria e a entrada/saída, nun só
+chip.
+
+O único requirimento é que sexan partes que nunha arquitectura de PC tradi-
+cional se atribuirían a un chip aparte, e non ó propio SoC. Este deseño compac-
+to mellora o rendemento de ordenadores portátiles, ordenadores de sobreme-
+sa, tabletas e teléfonos intelixentes.
+
+Para potenciar a multitarefa dun portátil ou para optimizar a potencia de pro-
+cesamento dun teléfono intelixente, o SoC é a pedra angular tecnolóxica que
+impulsa os avances nos dispositivos informáticos modernos, garantindo un
+rendemento e unha capacidade de resposta mellorados.
+
+O exemplo máis representativo da aplicación da tecnoloxía SoC son os siste-
+mas embebidos que presentan os actuais teléfonos móbiles... chips con arqui-
+tectura ARM integrando practicamente todo o necesario para o funcionamento
+do dispositivo, facéndoo todo nun espazo moi pequeno, e permitindo ter a
+miniaturización existente nos móbiles actuais.
+
+Un SoC normalmente consume menos enerxía, ten un custo inferior e unha
+maior fiabilidade que os sistemas multichip ós que substitúen, polo que, ó
+cumprir menos pezas para o sistema, os custos de material e ensamblado
+vense reducidos.
+
+7.1> Vantaxes e desvantaxes de usar un SoC
+
+Unha vez explicado o concepto de SoC a pregunta que xorde é: que vantaxes e
+desvantaxes implica o uso dun SoC fronte a ter varios chips separados?
+
+Vantaxes:
+
+e Optimización do espazo: os SoC ocupan menos espazo que varios com-
+poñentes discretos, o que fai posibles deseños de dispositivos máis pe-
+quenos e de menor peso ó xuntar varias funcionalidades nun único chip,
+algo que é crítico nun teléfono móbil.
+
+e Eficiencia enerxética: a substitución de compoñentes e circuítos grandes
+por SOC implica prescindir dos buses de datos e leva a unha redución
+significativa no consumo de enerxía e así pódense conseguir as métricas
+PPA (potencia, rendemento e área) requiridas.
+
+===== PÁXINA 08.txt =====
+e Máis económico: un único chip SoC é máis económico que o conxunto de
+varios chips separados que doutro xeito serían necesarios
+
+e Fiabilidade: un único SoC ten menos conexións e, polo tanto, é significa-
+tivamente máis fiable que un sistema multiparte conectado a través
+dun substrato
+
+e Rendemento: debido a que os sinais poden permanecer no chip, un SoC
+pode lograr un maior rendemento e velocidade que unha solución mul-
+tiparte
+
+Desvantaxes:
+
+e Punto único de fallo: con tódolos compoñentes nun só chip, un fallo nun
+compoñente afecta a todo o sistema (o que tamén limita as actualiza-
+cións)
+
+e Custo do desenvolvemento: en comparación cos compoñentes estándar,
+o deseño de SoC personalizados require máis coñecementos e ferra-
+mentas especializadas, o que supón un maior tempo e custos de desen-
+volvemento. Estes custos máis elevados só se poden recuperar se o
+mercado do SoC é o suficientemente grande como para absorbelos
+
+e Dependencia do fabricante: Os fabricantes dos teléfonos dependerán do
+fabricante do SoC en maior medida dado que se un compoñente é parte
+do system on a chip e hai problemas de implementación ou subministro
+non se podería cambiar
+
+e Flexibilidade: un SoC é ideal para a tarefa á que se destina, pero ten un
+alcance limitado para ser aplicado a calquera outra tarefa.
+
+e Analóxico/dixital mixto: como tódolos compoñentes dun SoC se fabrican
+cunha única tecnoloxía de proceso, non hai opción de usar a tecnoloxía
+óptima para as seccións analóxicas. Isto leva a un rendemento analóxico
+reducido e fai que os SoC sexan máis axeitados para aplicacións dixitais
+
+e Non idoneidade: poderían non ser idóneos para aplicacións intensivas en
+consumo enerxético
+
+e Non actualizables: os equipos que os integran non soen ser actualizables
+en relación ó hardware, xa que está estreitamente ligado ó deseño do
+dispositivo
+
+7.2 > Procesadores de PC, tamén son un SoC?
+
+Tendo en conta a definición que fixemos anteriormente de SoC, podemos com-
+probar ata que punto o é un procesador de PC actual. En particular, vamos
+analizar se podemos considerar unha CPU AMD ou Intel actual un SoC ou non.
+
+Nestas CPU, como en moitas outras, non só temos o procesador propiamente
+dito no seu interior, senón que tamén contamos con outras partes que antes
+ían en chips separados... especificamente, estamos a falar da ponte norte ou
+northbridge, que integra o controlador de memorias e as liñas PCle, e que nos
+equipos máis antigos formaba parte da placa base.
+
+Tamén hai que lle sumar o feito de que a maioría destas CPU contan con gráfi-
+cos integrados, outro compoñente tipicamente usado fóra do propio chip do
+procesador.
+
+A gran fonte de discrepancia está na ausencia de compoñentes esenciais para o
+funcionamento como é a memoria. Moitos especialistas consideran que un SoC
+debería ter todo, polo que debería combinar ademais de CPU, gráficos e ponte
+norte tamén a ponte sur e a memoria RAM. Estas dúas últimas partes son as
+que non teñen estes procesadores, ó carecer dos controladores de USB, SATA e
+demais que forman parte do chipset.
+
+Isto provocaría que non puidésemos considerar como SoC un AMD ou un Intel
+normal e corrente.
+
+Intel decidiu apostar polo seu SoC ó que puxo o nome de Lakefield dentro dun
+proxecto de procesadores de baixo consumo para equipos portátiles bastante
+
+Intel Lakefield
+
+É unha das CPU máis estrañas e
+curiosas que apareceron nos
+últimos anos no mundo do PC.
+Reúne varios paradigmas que van
+utilizar as futuras CPU de Intel
+como é o uso da tecnoloxía de
+empaquetado Foveros e unha
+configuración de núcleos híbridos
+coñecida como big.LITTLE.
+
+Non soe ser habitual que unha
+CPU chegue ó estado de fin de
+vida en pouco máis dun ano, pero
+así foi con Lakefield.
+
+Coprocesadores
+
+Un coprocesador é unha unidade
+especializada que axuda ó proce-
+sador en determinadas opera-
+cións.
+
+Coprocesador matemático
+
+Ó principio eran coprocesadores
+matemáticos que  executaban
+operacións en coma flotante, que
+son operacións complexas con
+moitos díxitos.
+
+Coprocesador gráfico
+
+Hoxe son coprocesadores gráficos
+que descargan ó procesador prin-
+cipal de operacións de procesa-
+mento de imaxes: fotos ou vídeo.
+===== PÁXINA 09.txt =====
+Rapsberry Pi
+
+Cerebro humano
+
+e Máis eficiente enerxeticamente
+
+e Formado por neuronas que
+activan sinapses entre elas
+
+e Realiza tarefas de forma máis
+rápida e eficiente
+
+e Recoñecemento de facianas ou
+cheiros de forma intelixente
+
+Procesador
+
+e Menos eficiente enerxetica-
+mente
+
+e É moi eficiente realizando cál-
+culos
+
+e Hai moitas tarefas como poden
+ser recoñecer persoas, cheiros,
+darlle sentido á música... que
+non é quen de realizar ou que lle
+resulta moi custoso en tempo e
+
+enerxía
+
+arriscado polas súas características, como por exemplo que tódalas partes do
+chip constrúense postas unhas enriba das outras.
+
+Non podemos esquecer que a tecnoloxía Foveros utilizouse en futuros deseños
+de CPU e GPU da propia Intel, sendo a implementación de Lakefield unha posta
+a proba da tecnoloxía.
+
+Tampouco se pode esquecer o feito de que se trata da primeira CPU de Intel
+para PC baseada en núcleos híbridos ou de diferente potencia.
+
+A explicación que dou Intel para xustificar o cese da produción é que a deman-
+da do mercado ó que ía dirixida virou cara outros procesadores da compañía...
+Intel lanzou Alder Lake (continuados por Raptor Lake e Meteor Lake), baseada
+en núcleos híbridos, o que xustificaría a non continuidade deste procesador.
+
+En todo caso, Lakefield, pese ás tecnoloxías que incorpora foi un fracaso co-
+mercial para Intel, dado que foi parar a ordenadores de máis de 2 000 euros
+pero cun rendemento dun Netbook de 400, polo que a súa existencia converté-
+rase nun sen sentido.
+
+7.3 > En que sistemas os podemos encontrar?
+
+Estes sistemas embebidos son os que se empregan dentro dun dispositivo
+concreto como pode ser un elemento de maquinaria, un caixeiro, ou en xeral
+calquera aparello que teña un propósito específico e non un uso xeral como un
+ordenador tradicional.
+
+As consolas máis recentes tamén fan uso dun SoC que integra boa parte das
+funcionalidades nun único chip, algo entendible tendo en conta que buscan ser
+máis pequenas que un ordenador de sobremesa normal e consumir menos.
+
+Outro exemplo son as Rapsberry Pi, que son ordenadores de moi pequeno
+tamaño e baixo custo destinados a usos relacionados coa computación básica,
+a ciencia, automatización industrial e robótica...
+
+8 >> Novas arquitecturas dos microprocesadores
+
+Na actualidade, as computadoras avanzaron moito e poden realizar billóns de
+operacións por segundo; con todo, non son quen de recoñecer a unha persoa
+pola súa forma de andar ou de recoñecer patróns ou procesar imaxes tal e
+como as procesa un cerebro humano.
+
+O deseño de microprocesadores confronta unha serie de desafíos significativos
+na procura constante da mellora do seu rendemento, eficiencia e funcionalida-
+de. Entre os obstáculos actuais atopamos:
+
+e Escalada: a medida que facemos os microprocesadores máis pequenos,
+enfrontámonos a limitacións físicas e tecnolóxicas. Encoller os transis-
+tores e compoñentes provoca problemas de calor, interferencia elec-
+tromagnética e fugas de corrente. Con todo, as empresas do sector
+conseguiron simplificar os seus núcleos, o que é un avance para futuros
+deseños con unha maior cantidade de núcleos.
+
+e Eficiencia enerxética: a crecente demanda de dispositivos móbiles e sis-
+temas de alto rendemento fai crucial a eficiencia enerxética. Os deseña-
+dores deben reducir o consumo sen comprometer o rendemento, o que
+implica optimizar a arquitectura, administrar enerxía e explorar novas
+tecnoloxías como transistores de baixo consumo.
+
+e Múltiples núcleos: os microprocesadores modernos adoptan arquitectu-
+ras multicore para ter un maior rendemento. Deseñar e programar sis-
+temas así trae retos como sincronización, asignación de recursos e la-
+tencia. Lograr eficiencia demanda enfoque meticuloso no deseño e op-
+timización, e as arquitecturas heteroxéneas ofrecen novas posibilidades.
+
+e Seguridade: nun mundo de crecentes ameazas cibernéticas, asegurar mi-
+croprocesadores é crucial. Ataques, vulnerabilidades e brechas de segu-
+ridade desafían a protección de datos e a integridade do sistema. Ga-
+
+===== PÁXINA 10.txt =====
+rantir a seguridade dende o deseño ata mecanismos de protección é
+esencial, incluíndo ameazas incorporadas nos chips.
+
+As arquitecturas híbridas de procesamento combinan diferentes tipos de
+unidades de procesamento nun só sistema para aproveitar as fortalezas de
+cada un deles. Estas arquitecturas ofrecen varias vantaxes significativas en
+comparación con enfoques de procesamento máis tradicionais:
+
+e Rendemento optimizado: cando se combinan diferentes tipos de unida-
+des de procesamento, como CPU (Unidade Central de Procesamento),
+GPU (Unidade de Procesamento Gráfico), NPU (Unidade de Procesamen-
+to Neuronal)... as arquitecturas híbridas poden aproveitar a especializa-
+ción de cada unidade para tarefas específicas. Isto pode levar a un ren-
+demento xeral mellorado en comparación cun sistema que só utiliza un
+tipo de procesador.
+
+e Eficiencia enerxética: poden distribuír a carga de traballo entre diferen-
+tes unidades de procesamento dun xeito máis eficiente, o que pode re-
+ducir o consumo de enerxía total en comparación cun sistema que de-
+pende unicamente dunha CPU. As GPU, por exemplo, son eficientes para
+tarefas altamente paralelas, o que pode liberar a CPU para tarefas máis
+intensivas en cómputo.
+
+e Mellor rendemento en cargas de traballo específicas: algunhas aplica-
+cións benefícianse máis de certos tipos de procesamento. Por exemplo,
+algunhas cargas que requiren unha gran cantidade de cálculos execú-
+tanse de forma máis eficiente nunha GPGPU, en comparación con facelo
+cunha CPU xenérica. Unha arquitectura híbrida pode asignar as tarefas
+adecuadas ás unidades de procesamento máis apropiadas.
+
+e Empaquetados 3D: estes empaquetados permiten encapsular diferentes
+tipos de chips de lóxica e memoria máis próximos os uns ós outros, me-
+llorando o rendemento. Con todo, este tipo de empaquetado tamén
+precisa resolver algúns retos actuais, como a disipación de temperatura.
+
+Existen catro tecnoloxías emerxentes que prometen redefinir a industria nos
+vindeiros anos (2025-2030).
+
+8.1> Computación óptica
+
+A computación óptica pode substituír os sinais eléctricos actuais por sinais de
+luz moito máis rápidos a través de interconexións de fibra óptica (por exemplo,
+para o seu uso en buses entre a CPU e a RAM).
+
+Como resultado de estudos realizados, descubriuse que o ruído inherente á
+optoelectrónica integrada non é un obstáculo. De feito, pódese aproveitar para
+mellorar a creatividade da intelixencia artificial.
+
+O Motor de Fotónica de Silicio en 3D Passage demostra o potencial dos in-
+terconectores ópticos, logrando taxas de datos de 100Gbps/mm?.
+
+Esta tecnoloxía podería eliminar o pescozo da botella de von Neumann, que é a
+limitación do rendemento tradicional entre procesadores e memoria.
+
+Con todo, quedan desafíos na xestión térmica e na consistencia na fabricación.
+8.2 > A computación neuromórfica
+
+O procesador Loihi de Intel representa unha desviación radical das arquitec-
+turas de computación tradicionais.
+
+Estes chips imitan as redes neuronais biolóxicas procesando certas cargas de
+traballo de lA con 1/1000 da enerxía das GPU convencionais... esta eficiencia
+pode facer posible a implantación de microchips en retinas artificiais para
+persoas que sofren algún tipo de cegueira, realizar narices artificiais que poi-
+dan recoñecer cheiros, sistemas de recoñecemento facial...
+
+GPGPU General-Purpose
+computing on Graphics Pro-
+cessing Units
+
+O uso de varias tarxetas de vídeo
+nun mesmo ordenador, ou un gran
+número de chips gráficos, parale-
+liza aínda máis a natureza xa
+paralela do procesamento gráfico.
+
+Esencialmente, unha canle GPGPU
+é un tipo de procesamento parale-
+lo entre unha ou máis GPU e CPU,
+con instrucións aceleradas espe-
+ciais para procesar imaxes ou
+outras formas gráficas de datos.
+Aínda que as GPU funcionan a
+frecuencias máis baixas, normal-
+mente teñen moitas veces o nú-
+mero de elementos de procesa-
+mento. Polo tanto, as GPU poden
+procesar moitas máis imaxes e
+outros datos gráficos por segundo
+que unha CPU tradicional. Migrar
+datos a forma paralela e logo usar
+a GPU para procesalos pode (teo-
+ricamente) crear unha gran acele-
+ración.
+
+As canles GPGPU desenvolvéronse
+a principios do século XXI para o
+procesamento gráfico.
+
+Hala Point
+
+O primeiro sistema neuromórfico
+feito por Intel de 1 150 millóns de
+neuronas da industria, constrúe
+un camiño cara a unha lA máis
+eficiente e escalable.
+
+Disporía dunha arquitectura que
+permitiría manexar tarefas como
+a computación cognitiva, a inteli-
+xencia artificial adaptativa e os
+datos de detección... usando de 15
+a 300 veces menos enerxía que os
+chips actuais de silicio.
+===== PÁXINA 11.txt =====
+Oportunidades
+
+Desafíos
+
+Desafíos e oportunidades
+
+e Complexidade da fabricación:
+a integración de chiplets require
+unha xestión térmica e eléctrica
+precisa.
+
+e Falta de habilidades: os enxe-
+ñeiros deben dominar novas fe-
+rramentas e comprender a crip-
+tografía resistente ós produtos
+cuánticos.
+
+e Evolución dos estándares: a
+industria necesita estándares
+unificados para as interfaces de
+chiplets e os protocolos de se-
+guridade.
+
+e Preocupacións ambientais: a
+eficiencia mellora, pero o con-
+sumo de enerxía aumenta.
+
+e Presións de custos: precísase
+un investimento de capital masi-
+VO, O Que pode limitar a innova-
+ción.
+
+Chiplet
+
+Un chiplet é un paquete que aloxa
+varios chips baixo un único die. En
+comparación cos procesadores
+cun deseño monolítico, é dicir,
+aqueles que integran tódolos
+chips e núcleos nun único paque-
+te, o deseño de chiplet é moito
+máis eficiente e tamén reduce os
+custos e a posibilidade de fallos
+do procesador.
+
+Die
+
+No contexto dos circuítos integra-
+dos, é un pequeno bloque de
+material semicondutor sobre o
+
+que se fabrica un circuíto funcio-
+nal determinado.
+
+As primeiras aplicacións en robótica e procesamento de sensores amosan po-
+sibilidades, pero as ferramentas de programación e os estándares aínda están
+madurando.
+
+8.3 > Fabricación biomolecular
+
+A investigación do MIT sobre a ensamblaxe de transistores guiados por ADN
+podería revolucionar a fabricación de chips, reducindo potencialmente os cus-
+tos de fabricación.
+
+Aínda que aínda está nas primeiras etapas, este enfoque podería democratizar
+a produción de chips e habilitar novas formas de circuítos tridimensionais.
+
+8.4 > Microprocesadores cuánticos
+
+Un microprocesador cuántico é un tipo de dispositivo de procesamento de
+información que opera utilizando principios de mecánica cuántica en lugar da
+física clásica. A diferencia dos microprocesadores tradicionais, que utilizan bits
+clásicos (0 ou 1) para representar información, os microprocesadores cuánticos
+empregan qubits (bits cuánticos) que poden estar en múltiples estados á vez
+debido ó fenómeno de superposición cuántica.
+
+En lugar de realizar cálculos secuencialmente como nas CPU clásicas, os mi-
+croprocesadores cuánticos adoitan aproveitar conceptos como a superposición
+e a entrelazación para realizar cálculos de maneira paralela nunha escala moi-
+to maior. Isto ten o potencial de permitir un rendemento significativamente
+superior en certos tipos de problemas, como a simulación de sistemas cuánti-
+cos, a optimización complexa e a factorización de números grandes.
+
+Con todo, os microprocesadores cuánticos tamén presentan desafíos significa-
+tivos. A coherencia cuántica, que é a capacidade de manter os qubits nun esta-
+do cuántico durante o tempo suficiente para realizar cálculos, é un obstáculo
+importante. A decoherencia, que é a interacción dos qubits coa súa contorna
+que pode facer que perdan as súas propiedades cuánticas, pode limitar a utili-
+dade dos microprocesadores cuánticos en certas aplicacións.
+
+Na actualidade, os microprocesadores cuánticos están nunha etapa de desen-
+volvemento e experimentación. Aínda que están lonxe de ser utilizados en
+aplicacións prácticas a grande escala, os microprocesadores cuánticos amosan
+un gran potencial para revolucionar a informática e resolver problemas com-
+plexos de maneira máis eficiente no futuro.
+
+9 >> A Intelixencia Artificial nos procesadores
+
+A intelixencia artificial non só axudará a deseñar mellores microprocesadores
+nun período de tempo máis curto; as redes neuronais artificiais tamén se po-
+den usar para mellorar certas áreas, como as unidades de predición. Isto é algo
+co que AMD xa leva experimentando para gañar rendemento.
+
+Estas novas arquitecturas serán híbridas, e isto tamén implica que haberá
+aceleradores de IA como as NPU ou os motores neuronais que vemos nos SoC
+de Apple, que cobrarán cada vez máis importancia a medida que as cargas de
+traballo de lA aumenten co paso dos anos.
+
+Actualmente, os procesadores utilizan técnicas de aprendizaxe automática,
+aprendizaxe profunda e redes neuronais, todas elas disciplinas da intelixencia
+artificial.
+
+Estas técnicas axudan a que a velocidade de procesamento dea un salto cuali-
+tativo e os procesadores sexan máis eficientes e rápidos.
+
+9.1> Aprendizaxe automática (machine learning)
+
+Cando falamos da aprendizaxe automática como unha aplicación da Intelixen-
+cia Artificial, referímonos ó uso de datos para poder crear modelos preditivos e
+tomar decisións. A Aprendizaxe automática está baseada na alimentación de
+
+===== PÁXINA 12.txt =====
+datos e, xeralmente, dispón duns conxuntos de regras predefinidas para poder
+traballar.
+
+O problema é que a día de hoxe non comprende o concepto do mundo como o
+fai un cerebro humano... un ordenador pode conectar un evento a algo que
+sucedeu antes, pero ten moitas dificultades cando ten que pór unha nova co-
+nexión ou un novo evento nun contexto determinado.
+
+Por exemplo, se deseñamos un sistema que detecte unha cara humana, primei-
+ro haberá que traballar cun conxunto de imaxes, cantas máis mellor, nas que
+aparecerán caras ou non. Para adestrar ó sistema haberá que lle indicar que
+imaxes teñen caras humanas e cales non de forma que, unha vez rematado o
+adestramento, o sistema sexa quen de recoñecer, con certa eficacia, en novas
+imaxes se aparece unha cara humana.
+
+9.2 > Aprendizaxe profunda (deep learning)
+
+É unha parte da aprendizaxe automática que utiliza redes neuronais nos seus
+algoritmos. Estas redes son algoritmos matemáticos creados a semellanza do
+funcionamento dun cerebro.
+
+Ata hai pouco non se podían implementar en dispositivos como os teléfonos
+intelixentes porque as limitacións do hardware o impedían. A día de hoxe, é
+posible a súa integración e empréganse GPU para executar algoritmos de
+adestramento e avaliación dos modelos na aprendizaxe profunda, xa que estes
+compoñentes, ó estar deseñados para traballar de forma paralela, son ideais
+para resolver este tipo de problemas.
+
+Pero se xa se pode, por que usar a intelixencia artificial nos procesadores?
+
+Pois porque para realizar tarefas complexas como o recoñecemento facial, a
+realidade aumentada ou mellorar as fotos, tarefas moi frecuentes e demanda-
+das polos usuarios de dispositivos electrónicos, usar motores neuronais nos
+chips fará que moitos procesadores usen a intelixencia artificial dun modo
+máis eficiente en vez de utilizar a forza bruta coa CPU ou GPU.
+
+9.3 > As redes neuronais
+
+Os sistemas neuromórficos teñen como obxectivo replicar o funcionamento do
+cerebro humano. Están deseñados para recibir imaxes e sons dunha forma na
+que a Intelixencia Artificial nunca antes dispuña. As plataformas tradicionais
+de Intelixencia Artificial e Aprendizaxe Automática son brillantes ó facer predi-
+cións sólidas sobre os problemas que son cuantificables ou podemos expresar
+mediante números, pero fallan cando o desafío necesita ir máis aló.
+
+A informática neuromórfica baséase no concepto dun cerebro nun chip. Men-
+tres que a aprendizaxe automático e as teorías máis complexas, como a apren-
+dizaxe profunda, baséanse nas decisións de alcance, a tecnoloxía neuromórfica
+intenta copiar literalmente a forma dun cerebro humano. Isto fai que, ademais
+de tomar decisións, poida almacenar información e deducir cousas por si mes-
+mo. Un sistema neuromórfico pode identificar patróns en datos visuais ou
+auditivos e ir axustando as súas predicións en función do que vai aprendendo
+co tempo.
+
+9.4 > Como pode a computación neuromórfica transformar a Inteli-
+xencia Artificial?
+
+Calquera aplicación de Intelixencia Artificial exitosa baséase na computación
+na nube, en volumes masivos de datos dos que obter patróns, velocidade e
+latencia. Os dispositivos de Internet das cousas (loT) son probablemente o
+mellor exemplo... os usuarios de Alexa de Amazon, o do Google Home o que
+esperan é que calquera resposta as súas peticións sexa atendida ó instante.
+Para conseguilo, as redes entre o lugar no que se xera o comando de voz e os
+datos teñen que ser extremadamente potentes e eficientes para que a respos-
+ta se produza no tempo esperado. Aínda que os teléfonos intelixentes asumi-
+ron algúns dos aspectos da Intelixencia Artificial, non teñen a potencia de
+
+Artificial Intelligence
+
+Machine Learning
+
+Neural Networks
+
+Deep Learning
+
+Capas da aprendizaxe
+
+A aprendizaxe supervisada é un
+subconxunto da aprendizaxe
+automática e o método máis
+sinxelo para adestrar un algorit-
+mo. Amosar a relación de entrada
+e saída é o enfoque estándar para
+ensinar ós algoritmos as decisións
+correctas. Unha vez que un mode-
+lo aprende que escoller en diver-
+sas situacións, pode tomar deci-
+sións en novos casos.
+
+Pensa en aprender unha nova
+lingua. Atopamos patróns, como a
+estrutura dun tempo verbal, e
+practicamos con frases de exem-
+plo. Despois inferimos o tempo
+mesmo se é unha frase nova, é
+dicir, non do conxunto de ades-
+tramento.
+
+A aprendizaxe non supervisada é
+outro subconxunto da aprendizaxe
+automática. Trátase de ensinar
+patróns ás máquinas a partir de
+datos sen etiquetar.
+
+Pensa nun neno pequeno que
+aprende unha nova lingua. Non
+sabe o que é un tempo verbal do
+xeito que os adultos o aprenden
+na aula. Enténdeno sen ser ades-
+trados con datos etiquetados.
+
+Deep learning
+
+A aprendizaxe profunda ou redes
+neuronais profundas (DNN, polas
+súas siglas en inglés) é a última
+estratexia de recoñecemento para
+resolver desafíos complexos da lA,
+como o recoñecemento da fala ou
+o recoñecemento visual.
+===== PÁXINA 13.txt =====
+Hidden
+
+Input
+
+Output
+
+) => )
+JE )
+NS
+
+ANN
+Artificial Neural Network
+
+Unha rede neuronal artificial é
+un grupo interconectado de no-
+dos, inspirado nunha simplifica-
+ción das neuronas dun cerebro.
+
+Cada nodo circular representa
+unha neurona artificial e unha
+frecha representa unha conexión
+dende a saída dunha neurona
+artificial ata a entrada doutra.
+
+WTA network
+(lateral inhibition)
+
+SNN
+Spiking Neural Networks
+
+Cómpre unha porcentaxe menor
+de neuronas para transmitir a
+información, se o comparamos cos
+transistores dunha arquitectura
+convencional, o que posibilita que
+outras neuronas que non están na
+rede poidan aprender sobre a
+marcha.
+
+cómputo necesaria para algoritmos cerebrais máis complexos e se o puideran
+facer, esgotarían as baterías pola potencia necesaria.
+
+Un chip neuromórfico utiliza menos enerxía e mellora o rendemento en compa-
+ración cun chip convencional debido a como foi deseñado. A informática neu-
+romórfica utiliza un novo tipo de modelo que imita mellor o cerebro humano...
+en lugar de pasar información dun transistor ó seguinte, unha rede neuromór-
+fica consiste en millóns de neuronas que poden pasar a información en calque-
+ra dirección tal como se faría bioloxicamente nun cerebro. Isto recibe o nome
+de rede neuronal de impulsos (SSN, siglas en inglés).
+
+Ademais, os procesadores actuais, necesitan unha propagación inversa, xa que
+as neuronas só se activan cando ocorre un evento. Isto fai que os resultados
+non se retroalimenten no sistema para ir facendo un axuste fino, xa que a
+aprendizaxe por parte dos cerebros é xeralmente un proceso de retroalimenta-
+ción e, por tanto, son máis eficientes neste contexto.
+
+9.5 > Que nos espera no futuro?
+
+Os expertos creen que os chips neuromórficos poderían integrarse nos teléfo-
+nos intelixentes a partir de 2025 e impulsar o crecemento da loT. Como os
+dispositivos poderán percibir a contorna ó seu arredor para deducir decisións,
+na próxima década comezaremos a ver:
+
+e Desenvolvemento máis rápido no transporte e na fabricación. Os vehícu-
+los autónomos levan moitos anos en dificultades e gran parte deste
+atraso débese á súa incapacidade para detectar o seu contorno. É pro-
+bable que os chips neuromórficos leven isto ó seguinte nivel, comezan-
+do a impulsar a comercialización da tecnoloxía.
+
+e Os teléfonos intelixentes poderán vixiar continuamente o que fai o usua-
+rio (se a seguridade dos datos o permite) e incluso axudarlle antes de
+facer preguntas baseadas no que percibiu. O teu dispositivo podería
+comezar a comprender as túas intencións do mesmo xeito que o fai o
+teu cerebro.
+
+e O campo da robótica crecerá rapidamente a medida que os robots sexan
+máis capaces de responder a comandos baseados no seu contorno. Se
+un robot pode navegar de forma independente e pensar por si mesmo
+sen consumir grandes cantidades de enerxía, o mundo comezará a cam-
+biar rapidamente.
+

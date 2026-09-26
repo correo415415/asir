@@ -1,0 +1,1437 @@
+===== PÁXINA 01.txt =====
+nidade 2
+
+epresentación e
+edidas da información
+
+os de datos
+stemas de codificación numérica
+idas de información
+ética binaria
+— Métodos para representar números enteiros
+— Importancia da representación en complementos
+Métodos de enderezamento
+
+h OBXECTIVOS
+
+— Distinguir os diferentes tipos de datos
+a cambiar de base de numeración
+alizar cálculos sinxelos coas unidades de medida
+de uso común nos sistemas informáticos
+— Saber operar en binario
+étodos para representar números de
+laneiras
+ñecer as diferentes formas de enderezar datos
+
+===== PÁXINA 02.txt =====
+1>> Introdución
+
+Os ordenadores precisan información coa que traballar para poder resultar
+útiles. Ó estar compostos de circuítos electrónicos, atopámonos co problema
+de que só traballan con dous estados: pasa corrente (que representaremos cun
+1) e non pasa corrente (que representaremos cun O). Esta característica dos
+equipos electrónicos xera a necesidade de transformar os datos, tanto numéri-
+cos como alfanuméricos, nunha representación binaria para que o ordenador
+os poida procesar. Esta información divídese en ordes e datos, que poden ser
+de diferentes tipos atendendo ó tratamento que se lles dea.
+
+2 >> Tipos de datos
+
+O tratamento automático da información establece tres fases de procesamen-
+to (entrada, proceso e saída) que clasifican os datos do seguinte modo:
+
+e De entrada: son os que se introducen dende soportes de información
+(disco duro, lapis de memoria, DVD...) ou a través dos periféricos de en-
+trada (teclado, rato, escáner...). Correspóndense coa fase de entrada.
+
+e Intermedios: son os que se obteñen e usan na fase de proceso, que ten
+lugar no hardware do ordenador.
+
+e De saída: denomínanse tamén resultados e aparecen na fase de saída. Vi-
+sualizámolos a través dos periféricos de saída (monitor, impresora...).
+
+Os datos tamén se clasifican atendendo a se o seu valor cambia ou non duran-
+te o proceso:
+
+e Constantes: permanecen inamovibles durante a execución do proceso ou
+programa que os usa, como por exemplo o número pi nun programa que
+calcula a superficie dun círculo, pois o seu valor será o mesmo para cal-
+quera dato de entrada e non variará ó longo da execución.
+
+e Variables: modifícanse durante o proceso dependendo do código do pro-
+grama, por exemplo os xuros que un usuario debe pagar ó banco pola
+súa hipoteca calculados por un programa, pois dependendo do xuro pac-
+tado (e doutras condicións) o resultado variará.
+
+Nos ordenadores, o conxunto de instrucións execútase sobre un conxunto de
+datos. Esta información subminístrase mediante símbolos o caracteres:
+
+Caracteres
+
+Alfabéticos a,b, C... y, z, A, B, C... Y, Z
+Numéricos 0, 1,2, 3... 9
+Especiais «+-[1100?.
+De control Fin de liña, chío, avance de páxina...
+Gráficos RRCOMEZY.
+
+Os caracteres do primeiro e segundo grupo denomínanse caracteres alfanu-
+méricos e os pertencentes ós tres primeiros grupos, caracteres de texto.
+
+2.1> Códigos de Entrada/Saída
+
+Os sistemas de codificación alfanumérica serven para representar unha canti-
+dade determinada de símbolos en binario. A cada símbolo corresponderalle
+unha combinación dun número de bits. A asignación de códigos é arbitraria, e
+por tanto cada fabricante podería asignar unha combinación diferente ó mes-
+mo carácter. Para combater o caos que provocaría, créanse códigos que nor-
+malicen esta situación, e que se aceptan entre toda a comunidade informática
+como estándares. Os sistemas de codificación alfanumérica máis importantes
+son:
+
+===== PÁXINA 03.txt =====
+Imaxe en código ASCII
+
+Co programa  ASCII-O-Matic,
+dispoñible na Web, podemos
+transformar calquera imaxe en
+caracteres alfanuméricos.
+
+e Código BCD de intercambio normalizado (Standard BCD Interchange
+Code): utiliza 6 bits, polo que pode asignar 2“ = 64 valores (non inclúe
+letras minúsculas). As veces engádeselle un bit de paridade impar, para
+comprobar erros, co que se ten unha lonxitude de 7 bits, pero só 64 va-
+lores válidos. O formato que seguen as palabras deste código é o se-
+guinte:
+
+— Bit de paridade (ou de verificación): é opcional; serve para detec-
+tar erros nos caracteres.
+
+- Bits de zona: serven para distinguir entre un número e outro ca-
+rácter (00 para os caracteres numéricos).
+
+- Bits de posición: para os valores numéricos, codifícase en código
+binario natural (agás o cero que se codifica como un 10, isto é,
+10104).
+
+e EBCDIC (Extended BCD Interchange Code): cada símbolo representámo-
+lo por unha combinación de 8 bits agrupados en dous bloques de catro.
+É o formato estendido do BCD. Neste caso asignaremos 2%=256 posibles
+combinacións de ceros e uns (codificaremos maiúsculas, minúsculas,
+números e incluso caracteres de control). O formato sería:
+
+— Bits de zona: se valen 00 o carácter é de control, se valen 01 trá-
+tase dun carácter especial (nin letra nin número), se valen 10 é un
+carácter en minúscula e se valen 11 é un carácter en maiúscula ou
+numérico.
+
+- Bits de posición: se os bits 2 e 3 valen 11 trátase dun carácter nu-
+mérico; noutro caso trátase dunha letra.
+
+e ASCII (American Standard Code for Informatión Interchange): este sis-
+tema utiliza unha combinación de 8 bits para representar cada símbolo,
+co que se poden representar un total de 256 símbolos diferentes (23). É
+o máis utilizado. Con este código podemos representar os díxitos do O ó
+9, as letras maiúsculas do A ó Z, as minúsculas, caracteres especiais e
+de control.
+
+e Unicode: úsase na maioría das aplicacións actuais e en Internet, así como
+en sistemas operativos como Windows.
+
+e FIELDATA: utiliza bloques de 6 bits para representar os diferentes símbo-
+los. O seu uso é raro e pouco estendido, xa que só se usa en ordenado-
+res que procesan a información en bloques de 36 bits. Usábase en orde-
+nadores Unisys.
+
+3 >> Sistemas de codificación numérica
+
+Un sistema de numeración é o conxunto de símbolos e regras que se
+utiliza para representar datos numéricos.
+
+Caracterízanse por estar ligados a unha base que determina o número de sim-
+bolos diferentes que os compoñen. Trátase de sistemas posicionais, de forma
+que o valor que cada símbolo representa queda determinado pola posición que
+ocupa en relación ó resto de símbolos e polo factor de multiplicación corres-
+pondente.
+
+Aqueles que nos guiamos polo sistema métrico decimal (é o habitual, aínda que
+os ingleses, por exemplo, usan outros sistemas de medida) estamos afeitos a
+usar múltiplos de 10 para representar cantidades. Isto é así porque o número
+de símbolos que emprega o noso sistema de codificación é exactamente 10 (do
+069).
+
+O sistema de codificación numérica que emprega o ordenador para representar
+internamente as instrucións e os datos é o código binario natural, que posúe
+dous símbolos (0 e 1) debido ás características propias que presentan os equi-
+pos informáticos: funcionan con electricidade e é relativamente sinxelo com-
+probar se nun determinado instante pasa ou non a corrente eléctrica por un
+punto.
+
+Cada un dos símbolos cos que se codifica cada sistema é a menor unidade de
+información que o sistema pode procesar e recibe o nome de bit.
+
+===== PÁXINA 04.txt =====
+Os ordenadores, a nivel interno, tamén utilizan códigos agrupados (octal e
+hexadecimal), debido a que fai anos facilitaban a labor dos programadores
+porque programar en binario (ensamblador ou código máquina) é moi irritante
+e provoca erros imprevisibles se secuenciamos mal os uns e os ceros.
+
+É posible agrupar os bits deste xeito porque é moi doado converter un número
+en base 2 ó correspondente noutra base maior sempre que sexa potencia de
+dous (pois existe unha correspondencia directa entre elas), pero non a outras
+como base 5 ou base 7.
+
+Polo tanto, os sistemas de numeración que o ordenador emprega para repre-
+sentar a información que estamos afeitos a usar en decimal son:
+
+e Binario: é un sistema en base 2 (dous símbolos: O e 1). É o que se deriva
+directamente do paso da corrente eléctrica polos compoñentes electró-
+nicos do equipo, polo que o ordenador o usa a nivel interno. Cada sím-
+bolo decimal represéntase mediante unha combinación de catro bits,
+como podemos ver na táboa lateral.
+
+e Octal: é un sistema en base 8 (oito símbolos: do O ó 7), polo que os núme-
+ros se representan posicionalmente por potencias de 8. Cada símbolo
+en base 8 equivale a 3 bits no sistema binario.
+
+e Hexadecimal: é un sistema en base 16 (dezaseis símbolos: do 06 Ve do A
+ó F). Os símbolos alfabéticos do A ó F representan os números do 10 ó
+15 do sistema decimal, polo que a súa representación decimal precisa
+dous símbolos. Cada símbolo en base 16 equivale a 4 bits no sistema bi-
+nario.
+
+3.15 Conversión dun sistema de numeración a outro
+Calquera base a decimal
+
+Para pasar de calquera base a decimal simplemente aplicamos o teorema fun-
+damental da numeración que aparece na marxe da páxina, substituíndo 8 pola
+base correspondente.
+
+Así, se queremos pasar un número de binario a decimal teremos que B é 2, se
+desexamos pasar de octal a decimal B será 8 e se queremos pasar de hexade-
+cimal a decimal tomaremos como base 16.
+
+Cada unha delas posúe pequenas diferenzas respecto ás demais, pero basica-
+mente en todas aplicamos un sumatorio sobre unha serie de potencias.
+
+Con sistemas de numeración que utilicen máis símbolos dos que ten o código
+decimal, teremos que utilizar unha tradución deses símbolos antes de aplicar o
+teorema.
+
+Binario a decimal
+Obter o valor decimal do número 1011101.01, sendo (2 a base.
+
+Na parte enteira, determinamos as posicións de dereita a esquerda a partir do punto
+decimal:
+
+1-2+0-2+1-21+1-23+1- 240-2141 AO
+Para a parte decimal traballamos de esquerda a dereita:
+0-27+1-27
+O número buscado será a suma de ambas partes:
+
+1:2+0:2+1-21+1:-23+1:2+0:21+1:22+0:21+1- 2?=93.25%0
+
+Octal a decimal
+
+Queremos obter o valor decimal do número 117.458.
+
+Sistemas de numeración
+
+Decimal Binario Octal  |Hexadecimal
+o 0000 o o
+1 0001 1 1
+2 0010 2 2
+3 0011 3 3
+4 0100 4 4
+5 0101 5 5
+6 0110 6 6
+7 on 7 7
+8 1000 10 8
+9 1001 n 9
+10 1010 12 A
+n 1011 13 B
+12 100 14 E
+13 1101 15 D
+14 1110 16 E
+15 am 47 F
+
+100000 10000 1000 100 10 1
+
+..654321
+
+Teorema fundamental de la
+numeración (TFN)
+
+Tódolos sistemas  posicionais
+están baseados neste teorema,
+que relaciona cantidades de cal-
+quera sistema de numeración con
+esas mesmas cantidades no sis-
+tema decimal.
+
+Ven dado pola fórmula seguinte:
+
+YX *B
+
+Onde:
+
+X  éovalor absoluto do díxito en
+cuestión.
+
+i- éaposición que ocupa o díxito
+respecto ó punto decimal.
+
+B éabase.
+
+Así:
+
+80,5=8-10'+0-10%+5-10*
+===== PÁXINA 05.txt =====
+Mensaxe diabólica
+
+Bender deixa unha clara mensaxe
+nun dos capítulos de Futurama. A
+quen representa o número que
+escribe no espello?
+
+SÍ
+
+Sistema hexadecimal
+
+Este sistema emprega letras para
+representar parte dos seus símbo-
+los, polo que deberemos traducir,
+ben mentalmente ou ben por
+medio da escritura, esas letras a
+valores numéricos antes de efec-
+tuar as operacións matemáticas.
+
+Díxitos infinitos
+
+Un número cun só díxito na súa
+parte fraccionaria en base 10 pode
+xerar un número con infinitos
+díxitos fraccionarios en base 2.
+Comprobámolo co número 0.210.
+
+0.2-2=0.4
+0.4 : 2 = 0.8
+0.8:2= 16
+0.6: 2= 12
+02-2- 04
+
+Unha das operacións repítese,
+polo que será un número periódi-
+co: O.00110011..2.
+
+Parte decimal
+
+4-8145-87
+
+Parte enteira
+1- 8241-8147 - 8O
+O número buscado será a suma de ambas partes:
+1-82+1-81+7-8%+4-81+5- 8? 79,.578125ú0
+Hexadecimal a decimal
+Queremos obter o valor decimal do número A03F.0746.
+Parte enteira Parte decimal
+A-163+0-162+3 -161+F - 160 0 -161+7.+ 167?
+
+Temos que ter en conta que hai que substituír as letras polo valor equivalente en
+decimal:
+
+Parte decimal
+0 -161+7- 16?
+
+Parte enteira
+10 + 165+0 - 162+3 - 16'+15 - 160
+O número buscado será a suma de ambas partes:
+10 - 16940 - 162+3 - 161+15 - 1604 O - 161+7 - 16?= 41 023.0273437510
+
+Decimal a binario
+
+Para realizar as conversións inversas, empréganse algoritmos diferentes. En
+primeiro lugar temos que diferenciar entre a parte enteira e a parte decimal.
+
+Para calcular a parte enteira dividimos o número orixinal entre a base e repe-
+timos o procedemento para os cocientes que vamos obtendo. Os restos destas
+divisións e o último cociente son as cifras buscadas, que sempre serán O ou 1. O
+último cociente é o díxito máis significativo e o menos significativo é o primei-
+ro resto.
+
+Para calcular a parte decimal multiplicamos a parte decimal do número orixi-
+nal pola base e repetimos o procedemento sucesivamente coas partes deci-
+mais dos números obtidos. A secuencia de partes enteiras que obtemos é a
+representación en base 2 da parte decimal do número. Este procedemento
+termina cando xa non hai parte decimal.
+
+Isto xera un problema, pois se almacenamos un número binario nun ordenador
+cun número prefixado de bits (polo tanto, finito), teremos que recortar o nú-
+mero de cifras co que o representemos co fin de gardalo nese tamaño finito.
+
+Podemos comprobar doadamente que un número decimal con díxitos fraccio-
+narios pode dar lugar a un número binario con infinitos díxitos, tal e como
+sucede ó tentar calcular o valor binario do número 0.240: partindo dun só díxito
+decimal temos un número en binario periódico puro que, á forza, terá un erro
+por truncamento.
+
+Decimal a binario
+Obter o valor binario do número 92.375(10.
+
+Primeiro actuamos sobre a parte enteira do número e dividimola sucesivamente entre
+a base na que queremos representar o número inicial para, finalmente, ter en conta
+os díxitos dos restos e o último cociente:
+
+===== PÁXINA 06.txt =====
+De modo que a parte enteira sería 10111002.
+
+Agora, traballamos coa parte decimal e multiplicamos sucesivamente pola base para
+obter a tradución, sempre desprezando a parte enteira, ata atopar unha operación
+repetida (número periódico en binario) ou unha multiplicación por cero (número exac-
+to en binario):
+
+037/5-2-| 0.75
+0.75 -2-|15
+05 -2=|10
+0.0 :2="0.0
+
+Polo tanto a parte decimal será 0110 e o número buscado 1011100.011.
+
+Decimal a outras bases
+
+O procedemento é similar ó paso de decimal a binario, pero dividindo e multi-
+plicando agora pola base en cuestión (B = 8 se estamos a traballar con codifi-
+cación octal e B= 16 se o facemos con codificación hexadecimal).
+
+Binario a octal
+
+Se temos un número en binario e querémolo transformar no seu equivalente
+en octal, dividímolo en ternas de tres valores a partir do punto fraccionario;
+cada terna equivale a un símbolo en octal.
+
+Se o número de díxitos non é un múltiplo de 3, os díxitos da terna incompleta
+complétanse con ceros, aplicándoos de forma que non modifiquen o número:
+pola esquerda, se é na parte enteira, ou pola dereita, se é na parte fraccionaria.
+
+Binario a hexadecimal
+
+Agora, en vez de separar o número binario en ternas, separamos os díxitos en
+grupos de catro elementos (cuaternas) tomando de novo como punto de refe-
+rencia ó punto decimal; cada cuaterna equivale a un símbolo en hexadecimal.
+
+Se o número de díxitos non é múltiplo de 4, os díxitos da cuaterna incompleta
+complétanse con ceros, pola esquerda para a parte enteira e pola dereita para
+a parte decimal.
+
+Binario a octal
+
+Obter o valor octal do número 1111000.11001..
+
+Dividimos o número en ternas, completando con ceros aquelas que o precisen:
+001 m1 000 o 10 010
+
+En terna equivale a un símbolo en base octal (a súa interpretación en binario natu-
+
+ral):
+
+1 7 0 c 6 2
+
+Polo tanto o número final obtido é o 170.628.
+
+Binario a hexadecimal
+
+Obter o valor hexadecimal do número 111111100000.11111110101%.
+
+Dividimos o número en cuaternas, completando con ceros aquelas que o precisen:
+1111 1110 0000 6 111 1110 1010
+
+Cada unha correspóndese cun símbolo en base hexadecimal (a súa interpretación en
+binario natural):
+
+F E (o) E F E A
+
+Así, o número final obtido é o FEO.FEAgs.
+
+123.456 m» 123/56 8 123
+
+Erro por truncamento
+
+O erro que se comete ó desprezar
+unha serie de decimais denomína-
+se erro por truncamento. Ó non
+usar o código decimal para alma-
+cenar os datos (por motivos de
+eficiencia) estaremos cometendo
+este tipo de erro. E o mesmo
+problema que presentan as calcu-
+ladoras (as primeiras só permitían
+8 ou 10 díxitos) ou as follas de
+cálculo (a partir do 15% decimal) e
+obríganos a traballar con números
+aproximados en vez de reais.
+
+Bases non potencia de dous
+
+Se queremos pasar dunha base
+que non é potencia de dous a
+binario (ou viceversa) teremos que
+facer sempre un paso intermedio:
+pasar a base decimal.
+===== PÁXINA 07.txt =====
+Bases potencia de dous a binario
+
+Neste caso substituímos cada símbolo (octal ou hexadecimal) polos díxitos
+binarios que lle correspondan (tres ou catro). Deste xeito simplificamos o noso
+código á hora de programar, pois en vez de ter que escribir 3 ou 4 uns e ceros
+(dependendo de se se trata de código octal ou hexadecimal) escribimos soa-
+mente o símbolo correspondente na base agrupada. Isto permite, ademais de
+obter menos erros, unha tradución máis rápida dos números binarios ós deci-
+mais e viceversa.
+
+Octal a binario
+
+Obter o valor binario do número 521.171. A cada díxito octal correspóndelle unha
+terna en binario natural:
+
+Dividimos o número en ternas, completando con ceros aquelas que o precisen:
+5 2 1 6 1 7
+101 010 001 o 001 m
+Polo tanto, o número final obtido é o 101010001.001111(2.
+
+Hexadecimal a binario
+Obter o valor binario do número ACDC.BADqs.
+
+A cada símbolo hexadecimal correspóndelle un bloque de catro díxitos en binario
+natural:
+
+A Cc D Cc o B A D
+1010 100 1101 1100 o 1011 1010 1101
+De modo que o número final obtido é o 1010110011011100.1011101011012.
+
+Hexadecimal a octal e viceversa
+
+Para converter un número hexadecimal a octal, o procedemento máis sinxelo é
+pasar de hexadecimal a binario e de binario a octal, aproveitándonos de que se
+trata de códigos agrupados, pois todas elas son potencias de dous.
+
+O único que temos que facer é cambiar os símbolos hexadecimais polo seu
+equivalente binario e volvelos agrupar, esta vez de tres en tres, para obter os
+simbolos equivalentes en código octal.
+
+Para levar a cabo o caso contrario, pasaríamos de octal a binario e de este a
+hexadecimal.
+
+Octal a hexadecimal
+Obter o valor hexadecimal do número 0.07.
+A cada símbolo octal correspóndelle un bloque de tres díxitos en binario natural:
+(o) o (o) 7
+000 o 000 m1
+Agrupámolos agora de catro en catro e calculamos a súa equivalencia en hexadecimal:
+0000 o 0001 1100
+0 o 1 Cc
+
+Polo tanto o número final obtido é o 0.1Cus.
+
+===== PÁXINA 08.txt =====
+4 >> Medidas de información
+
+No sistema binario so existen dous símbolos diferentes, O e 1. Unha informa-
+ción que só pode tomar como valores o O e o 1 denominase bit e forma a uni-
+dade básica de información.
+
+Un ordenador, debido á súa construción baseada fundamentalmente en circuí-
+tos electrónicos dixitais, traballa co sistema binario (dous símbolos, o O e o 1).
+Este é o motivo que nos obriga a transformar internamente tódolos nosos
+datos, tanto numéricos como alfanuméricos, a unha representación binaria
+para que a máquina sexa capaz de procesalos.
+
+Polo xeral, cando un fabricante fala de 4 GB de memoria RAM, fala de 4 GiB...
+cando di que a caché é de 256 KB, quere dicir que ten 256 KiB... cando di que un
+disco duro ten 500 GB, quere dicir que ten 500 GB (500 - 1000 MB)... habi-
+tualmente, as capacidades das memorias principais usan múltiplos de 1 024 e
+as capacidades das memorias secundarias usan múltiplos de 1000.
+
+O problema é que ata o ano 1999 non existían os KiB, MiB, GiB... e tampouco se
+utilizaban as potencias de dez cando se medía a información.
+
+Antes:
+1KB = 1 024 bytes.
+1MB = 1 024 KB bytes.
+
+Isto hoxe en día non debería ser correcto. As táboas do lateral amosan como se
+teñen que nomear e facer as conversións segundo os estándares.
+
+Pero... moitos fabricantes e comerciantes utilizan aínda a nomenclatura inco-
+rrecta.
+
+4.1> Engano na capacidade dos discos
+
+Supoñamos que queremos instalar un disco duro de 20 GB, como é unha me-
+moria secundaria usamos a potencia de 10, polo que a capacidade sería:
+
+20 - 1000 - 1000 - 1000=2 - 10" bytes
+
+Se o instalamos nunha máquina que ten como sistema operativo Linux esta
+será a capacidade que lle asigne a ese disco o sistema operativo pero se ten
+Windows teremos que o recoñece cunha maior capacidade:
+
+20 - 1024 - 1024 - 1024 = 21 474 836 480 bytes
+
+E se instalamos un Ubuntu nunha máquina en VirtualBox baixo o sistema ope-
+rativo Windows cun disco de 20 GB... pois medra.
+
+Disco duro 21 GB
+
+Unidades de disco Var
+
+Disco duro 21 GB
+O vaox marporse (21.474 836.480 bytes)
+/dev/sda - GParted
+GParted Editar Ver Dispositiv
+
+VBOX HARDDISK (1.0)
+
+1.024, sor
+
+/dev/sdar
+18.00GiB
+
+Partición istema de archivos Punto de montaje Tamaño Usado Libre Opcio:
+/dev/sda1 ext / 1E90GIS,  416CIB  13.84CI8 boot
+y /deu/sdaz CL extended 2.00 Gi8 -
+/dev/sdas ME linuxswap OGIB. 48,:15mI8 1.95 cia
+
+Windows utiliza un sistema binario para os GB e non utiliza a medida GiB... e
+
+abreviatura| unidade [equivalencia| potencia
+KB kilobyte | 1000 bytes | 105
+MB megabyte | 1000 KB 10%
+68 gigabyte | 1000 MB 107
+TB terabyte | 100068 | 1012
+PB petabyte | 1000 TB 1015
+ES exabyte | 1000PB 1018
+28 zettabyte | 1000 EB 1021
+YE yottabyte | 100078 | 10%
+ción de 8 bi
+abreviatura] unidade |equivalencia| potencia
+ios KiB kibibyte | 1024 bytes | 210
+—— MiB mebibyte | 1024 KiB 2
+GiB gibibyte | 1024 MiB 0
+TIB tebibyte | 1024GiB o
+PiB pebibyte | 1024TiB 250
+E exbibyte | 1024 PIB 260
+ziB zebibyte | 1024Ei8 | 20
+YiB yobibyte | 1024ZiB 20
+
+Linux utiliza un sistema binario para os GiB e un sistema decimal para os GB.
+Pero isto lévanos a engano cando a publicidade aproveita o cambio de sistema
+de capacidade.
+
+===== PÁXINA 09.txt =====
+bie
+[1Jo[+]1[ofolo[1]
+
+byte
+bit ou byte
+
+Non se debe confundir unha me-
+dida coa outra, un byte son 8 bits.
+
+Recorda, kB é o mesmo que KB
+pero non que kb ou Kb.
+
+Como pasamos dunha medi-
+da a outra?
+
+É un procedemento sinxelo, por
+exemplo, para pasar 24 756 bits a
+KiB e KB faremos as seguintes
+operacións:
+
+24756/8/1000=3.072 KB
+24756/8/1024=3 KiB
+
+Se queremos é pasar 6 291 456
+bytes a MiB e MB teremos:
+
+6291456/1024/1024=6 MiB
+6291456/1000/1000 = 6.29 MB
+
+Ancho de banda
+
+Mídese en información/segundo,
+polo tanto:
+
+1bps =1 bit/s
+
+1 byte/s = 1B/s = 8 bits/s
+
+1KB/s = 1000 B/s
+
+1 MB/s = 1000 KB/s = 1000 000 B/s
+
+Cal é a capacidade real dun disco duro SATA anunciado de 500 GB?
+
+Os fabricantes fan a trampa de pasar dunha medida a outra realizando multi-
+plicacións/divisións por/entre 1000 en vez de 1 024:
+
+500 GB - 1000 - 1000 - 1000 = 500 000 000 000 bytes
+Pero en realidade o sistema operativo Windows recoñéceo como:
+500 000 000 000 / 1024 / 1024 / 1024 = 465.66 GB
+ou máis formalmente 465.66 GiB
+Débese ter en conta:
+
+e Segundo o fabricante a cantidade do disco pode variar lixeiramente e para
+aforrar costes sóese redondear á baixa
+
+e A capacidade expresada con prefixo decimal resulta nunha cifra maior que
+si se expresara con prefixo binario
+
+e Canta maior capacidade ten un disco duro, maior é a discrepancia entre as
+cifras que expresan esta capacidade con prefixo decimal e binario
+
+4.2 > Frecuencia dun bus e Taxa de transferencia
+
+Outra característica importante do procesador é a frecuencia á que funciona,
+mídese en Hz (Hertzs ou ciclos/segundo) e é a velocidade á que executa cada
+instrución.
+
+Aplícanse múltiplos de 1 000 en 1 000:
+1 Hz=1ciclo/s
+1 KHz = 1 000 Hz
+1 MHz = 1000 KHz
+1 GHz = 1000 MHz
+
+Cómpre destacar que non se pode comparar directamente a frecuencia de dous
+procesadores con microarquitectura distinta.
+
+Aínda que un vaia máis rápido có outro (a maior frecuencia) non significa que
+logre executar máis microinstrucións... pode ser que a FPU (Unidade de Punto
+Flotante) dun procesador a 2.2 GHz sexa moito máis rápida que a doutro pro-
+cesador a 2.5 GHz.
+
+Isto é debido a que existen buses que en cada ciclo fan varias transferencias
+(unha, dúas, tres...) polo que na actualidade os fabricantes poden utilizar outra
+unidade para indicar a velocidade dun bus: as T/s ou Transferencias/segundo:
+
+1 MT/s = 10“ transferencias/segundo
+1 GT/s = 10* transferencias/segundo
+
+Por exemplo, se un bus traballa a 100 MHz e fai 4 transferencias en cada ciclo,
+teremos:
+
+100 Mciclos/s - 4 transferencias en cada ciclo = 400 MT/s
+
+Para calcular o ancho de banda (taxa de transferencia) sempre teñen que indi-
+car o ancho do bus.
+
+É a velocidade á que se transmiten os datos por unha canle, tamén
+se pode denominar bit rate
+
+Taxa de transferencia = Ancho bus - Velocidade do bus (frecuencia)
+
+Por exemplo, se teño un bus que ten un ancho de 32 bits, e traballa a 200 Hz e
+fai unha transferencia por ciclo, quere dicir que fai 200 transferencias de datos
+por segundo, polo que para calcular o ancho de banda teremos:
+
+200 ciclos/s - 32 b/transferencia - 1transferencia/ciclo - 1B/8 b = 800 B/s
+
+===== PÁXINA 10.txt =====
+4.3> Velocidade de procesamento
+
+A velocidade de procesamento mídese en Hz e indica o número de ciclos parti-
+do por segundo ó que traballa o microprocesador. Cada instrución do xogo de
+instrucións que entende o procesador leva unha serie de ciclos a súa execu-
+ción... haberá instrucións que con dous ciclos xa se executan, outras tres, ou-
+tras catro...
+
+1 Hz=1ciclo/s
+1 KHz = 1000 Hz
+1 MHz = 1000 KHz
+
+Por exemplo, se un microprocesador ten unha frecuencia de 300 KHz e un pro-
+grama ten 100 instrucións das cales o 25% se executan nun só ciclo, un 50%
+necesitan dous ciclos para executarse e o resto necesitan 5 ciclos para a súa
+execución, cantos ciclos de microprocesador necesita o programa para execu-
+tarse enteiro?
+
+Temos:
+25 instrucións - 1 ciclo/instrución
+50 instrucións - 2 ciclos/instrución
+25 instrucións - 5 ciclos/instrución
+o que equivale a 250 ciclos
+300 KHz= 300 - 1000 ciclos/s => 1/300 000 s/ciclo
+250 ciclos - 1/300 000 s/ciclo = 0.00083333 s
+
+5 >> Aritmética binaria
+
+Entendemos por aritmética binaria as operacións aritméticas e lóxicas feitas
+con variables binarias. As operacións aritméticas básicas son as seguintes:
+
+Adición
+O simbolo do operador da adición é o símbolo máis +, os elementos chámanse
+sumandos e o resultado suma.
+
+A suma de dous díxitos 1 binarios da como resultado dous bits, un de suma (0)
+e un de arrastre (1).
+
+Cando sumamos fraccións de números binarios ocorre o mesmo que cando
+sumamos en decimal, polo tanto o punto fraccionario non inflúe no procede-
+mento.
+
+Adición
+
+Sumar, en binario, os números decimais 54.25 e 26.8125.
+
+Sumamos en paralelo en decimal e binario. Cada número decimal ten o seu corres-
+pondente binario: ó 54.25 correspóndelle o 110110.012 e ó 26.8125 o 11010.11012.
+
+11 Díxitos de arrastre 1111 1 1
+
+54.2500 110110 0100
++26 8125 + 11010 1101
+
+81.0625 1010001 0001
+
+Polo tanto o número final obtido é o 1010001.00012.
+
+Subtracción
+
+Rendemento dunha compu-
+tadora
+
+Para medir o rendemento dunha
+computadora, especialmente en
+cálculos científicos que usan gran
+número de operacións en coma
+flotante, úsase a medida FLOPS
+(Float Point Operation per Second)
+que son as operacións en punto
+flotante por segundo que é quen
+de facer.
+
+1 MFLOPS = 10% FLOPS
+1 GFLOPS = 10? FLOPS
+1 TFLOPS = 10 FLOPS
+
+OLLO!!! Non se debe tomar como
+única medida para valorar a capa-
+cidade dun ordenador.
+
+1 1 o* (o) 1 1
+
+* e levamos un 1 á posición inme-
+diata superior
+
+** e levamos un -1 á posición
+inmediata superior
+
+*** indeterminado
+===== PÁXINA 11.txt =====
+O símbolo do operador da subtracción é o símbolo -, os elementos chámanse
+minuendo e subtraendo e o resultado diferenza.
+
+Do mesmo xeito, as regras para a resta en binario son iguais ás da resta en
+decimal; polo tanto, se o subtraendo é maior que o minuendo (o que, con nú-
+meros binarios, só ocorre cando o subtraendo é 1 e o minuendo é 0), o resulta-
+do da resta é 1 e débese levar un -1 á seguinte posición de maior valor.
+
+Ó restar fraccións binarias, o punto (ou coma) decimal non afecta ó procede-
+mento.
+
+Cando o minuendo é negativo, a resta convértese nunha suma, aínda que se
+mantén o signo menos que indica un número negativo.
+
+Subtracción
+En binario, restarlle ó número decimal 54.25 o número 26.8125.
+
+Restamos en paralelo en decimal e binario.
+
+414 414 44 4414 114
+54.2500 110110.0100
+-26.8125 2 11010,1101
+27.4375 011011.0111
+
+Polo tanto o número final obtido é o 11011.01112.
+
+Multiplicación
+
+O símbolo do operador da multiplicación é o punto - (aínda que as veces tamén
+toparemos o asterisco ou a aspa), os elementos chámanse multiplicando e
+multiplicador e o resultado produto.
+
+As regras para a multiplicación binaria son tamén as mesmas que para a mul-
+tiplicación decimal.
+
+O punto colócase exactamente igual que ó traballar con números decimais.
+
+No que respecta Ós signos, aplícanse as mesmas regras que no sistema deci-
+mal: se os signos do multiplicando e do multiplicador son iguais, o signo do
+produto é positivo e, se son diferentes, o signo do produto é negativo.
+
+Multiplicación
+Multiplicar, en binario, os números decimais 54,25 e o número 5.5.
+Multiplicamos en paralelo en decimal e binario.
+
+Cada número decimal ten o seu correspondente binario: ó 54.25 correspóndelle o
+110110.012 e Ó 5.5 o 11010.1101.
+
+54.2 5 110110.01
+27125 11011001
+27125 11011001
+298.375 00000000
+
+11011001
+100101010.01141
+
+Polo tanto, o número final obtido é o 100101010.0112.
+
+===== PÁXINA 12.txt =====
+División
+O símbolo do operador da división é a barra /, os elementos chámanse dividen-
+do e divisor e o resultado cociente.
+
+As regras para a división binaria son as mesmas que para a división decimal;
+polo tanto, a división por cero non é posible, xa que o resultado sería unha
+forma indeterminada ou infinito, valores que un ordenador non pode procesar.
+
+No que respecta á coma (ou punto) que separa a parte enteira da fraccionaria,
+as operacións realízanse igual que cos números decimais: primeiro, cómpre
+eliminar o punto do divisor desprazando o punto do dividendo cara á dereita
+tantas posicións como cifras decimais teña o divisor (ou engadindo á dereita o
+número correspondente de ceros).
+
+División
+Dividir, en binario, o número decimal 9 entre 3.
+
+Realizamos a división en paralelo en decimal e binario. Cada número decimal ten un
+equivalente en binario: o 9 correspóndese con 10012 e o 3 con 112.
+
+2.3 rt 1 1
+0 0 0 1 1
+
+1 1
+
+0 0
+
+Polo tanto, o número final obtido é o 112.
+
+6 >> Métodos para representar números enteiros
+
+Os ordenadores utilizan 4 métodos para a representación interna dos números
+enteiros (positivos e negativos), que son:
+
+e Signo e magnitude (ou signo e módulo)
+e Complemento a 1
+
+e Complemento a 2
+
+e Exceso a 211
+
+Nestas representacións de números utilizamos o sistema binario e considérase
+que temos un número limitado de bits para cada dato numérico (a cantidade
+de bits soe coincidir coa lonxitude da palabra do ordenador, que soe ser de 16,
+32 ou 64 bits). Este número de bits dispoñibles represéntase por n.
+
+6.1> Signo e magnitude
+
+Neste sistema de representación o bit que está situado máis á esquerda repre-
+senta o signo; o seu valor será O para o signo positivo e 1 para o signo negati-
+vo. O resto de bits (n-1) representa a magnitude do número.
+
+6.2> Complemento a 1
+
+Este sistema de representación utiliza o bit máis á esquerda para o signo, co-
+rrespondendo o O para o signo positivo e o 1 para o signo negativo. Para os
+números positivos, os n-1 bits da dereita representan a magnitude (igual que
+no caso anterior). Os números negativos obtéñense complementando tódolos
+díxitos do positivo correspondente (cambiando 0's por 1's e viceversa), incluído
+o bit de signo.
+
+6.3 > Complemento a 2
+
+Este sistema de representación tamén utiliza o bit máis á esquerda para o
+signo, correspondendo o O para o signo positivo e o 1 para o signo negativo.
+
+===== PÁXINA 13.txt =====
+Para os números positivos, os n-1 bits da dereita representan a magnitude
+(igual que nos casos anteriores). Os números negativos obtéñense en dous
+pasos: primeiro calculando o complemento a 1 e segundo sumándolle 1 a ese
+resultado, desprezando o derradeiro acarreo se existe.
+
+6.4 > Exceso a 2"
+
+Este sistema de representación non usa ningún bit para o signo, de tal xeito
+
+que todos os bits representan unha magnitude ou valor. Este valor correspón-
+
+dese co número representado máis o exceso, que para n bits ven representado
++
+
+por 271,
+
+Consiste en representar o cero como un valor intermedio, que para n bits se
+representa mediante 2” e situar os números negativos antes dese valor e os
+positivos despois del (motivo polo que se coñece como exceso).
+
+Representar os números 17 e -17 nunha palabra de 8 bits cos diferentes métodos
+descritos.
+
+Cada número decimal ten unha representación binaria correspondente; o 17 corres-
+póndese con 100012.
+
+Se temos 8 bits, o primeiro representa o signo e os sete restantes representan a
+magnitude do número:
+
+Signo e magnitude
+
+17 [o] [o o 1 o o o 1]
+
+7 [1] [o o 1 0.0 o 1)
+Complemento a 1
+
+17 [o] [o o 1 o o o 1]
+
+-17 [1] [1 101110)
+
+Complemento a 2
+
+17 [o] [o o 10 o o 1]
+
+Para calcular o negativo, o primeiro paso é calcular o complemento a 1 do número
+
+positivo:
+1] [11 o 1110)
+
+O segundo paso é sumar 1:
+
+Exceso a 2”!
+
+Para 8 bits o exceso é 2% = 2 = 128. Por tanto, para representar os números pedidos
+teremos que lles sumar esa cantidade.
+
+17=>17+128=145 [1 0 O 1 0 o o 1]
+
+a7=>-17+128=4141 [o 1 1 0 1 1 1 1]
+
+7 >> Importancia da representación en complementos
+
+Usase para que dentro das máquinas non se teñan que ter máis circuítos dos
+necesarios. A vantaxe clara que se ten é que as restas realizarémolas como
+sumas, e por tanto a nosa unidade aritmético-lóxica non terá que incorporar
+
+===== PÁXINA 14.txt =====
+un restador (cun circuíto sumador bastará para realizar tanto sumas como
+restas).
+
+Outra das vantaxes que teñen os complementos é que para realizar as opera-
+cións inversas fanse os mesmos pasos que para as operacións iniciais.
+
+Se traballamos con números en Complemento a 1 teremos que poderemos
+restar un número doutro simplemente sumándolle ao minuendo o complemen-
+to a 1 do subtraendo.
+
+Ó obter o resultado, hai dúas posibilidades:
+
+e Se hai acarreo, o resultado é un número positivo e debemos sumar ese
+acarreo ó resultado obtido.
+
+e Se non hai acarreo final, o resultado é un número negativo e debemos
+calcular o seu complemento a 1 para obter o resultado correcto.
+
+Restar o número 17 ó número 42 en palabras de 8 bits usando o complemento a 1
+
+a
+Complemento a 1 de 17
+Sumamos os dous números [1]
+
+Sumamos o acarreo [1]
+
+O número buscado é o 25 [o] 00011001
+
+Restar o número 42 ó número 17 en palabras de 8 bits usando o complemento a 1
+
+”
+Complemento a 1 de 42
+Sumamos os dous números [o]
+
+Como o bit de acarreo é O, complementamos o resultado
+
+O número buscado é o -25 al 00011001
+
+Se estamos a traballar en Complemento a 2 usariamos o mesmo algoritmo
+coa única diferenza de sumarlle 1 ó complemento a 1 para facer o complemen-
+toa2.
+
+7.1> Representación en coma fixa
+
+O seu nome vén da posición en que se supón situado o punto decimal, que será
+fixa. A coma fixa é usada para os números enteiros, supoñendo o punto deci-
+mal implicitamente á dereita dos bits.
+
+Existen catro formas de representar números en coma fixa:
+
+e Binario puro.
+
+e Decimal codificado en binario (BCD).
+e Decimal desempaquetado.
+
+e Decimal empaquetado.
+
+Binario puro
+
+Un número binario puro represéntase utilizando un conxunto de bits equiva-
+lente a unha palabra.
+
+===== PÁXINA 15.txt =====
+DECIMAL BCD
+0 0000
+1 0001
+0010
+0011
+
+0100
+0101
+0110
+0111
+
+1000
+1001
+
+o|o|3|o|a an [o0|mn
+
+1111 0010
+
+Bits de zona Bits de díxito
+
+Octetos e cuartetos
+
+Cada octeto divídese en dous
+cuartetos, correspondendo o da
+esquerda ós bits de zona e o da
+dereita ós bits de díxito.
+
+Para almacenar números enteiros mediante este tipo de representación, po-
+demos empregar os catro métodos tratados anteriormente: signo e magnitu-
+de, complemento a un, complemento a dous e exceso a 2", pero o habitual é
+empregar o Complemento a 2.
+
+Representar os números 17 e -17 nunha palabra de 16 bits
+
+Ó traballar cunha palabra de 16 bits, o bit máis á esquerda representa o signo (0 para
+positivo e 1 para negativo), mentres que os bits restantes representan a magnitude en
+Complemento a 2.
+
+17 [o] [ooooo00000010001]
+
+7 [1] [iari11111101111)
+
+Decimal codificado en binario (BCD)
+
+Para representar números mediante este sistema, cómpre converter cada
+díxito dun número decimal no seu equivalente de 4 bits.
+
+Empréganse catro bits porque debemos representar 10 símbolos posibles (do O
+ó 9), e o número de símbolos representables calcúlase elevando a base (2 neste
+caso, Ó tratarse do sistema binario) á potencia do número de bits dispoñibles:
+se empregásemos 3 bits, só poderiamos representar 2% = 8 símbolos, polo que
+precisamos 4 bits para obter 2* = 16 símbolos, aínda que algunhas combina-
+cións queden sen utilizar (as combinacións concretas elixidas son as mesmas
+que se empregan para o código hexadecimal).
+
+Polo tanto, simplemente precisamos substituír cada díxito dun número polo
+código BCD correspondente, ou viceversa.
+
+Decimal aBCD
+
+Representar o número 17 en código BCD
+
+y
+
+Calcular o equivalente decimal do número 0010 1001 0101 0111 almacenado en BCD
+
+BCD a decimal
+
+loo1o] [1001] [o1o1] j[o1 11] 2957
+
+Un aspecto que cómpre ter en conta é que este sistema non permite represen-
+tar números negativos; para conseguilo, sería preciso recorrer a algunha solu-
+ción alternativa, como un bit de signo adicional ou algo semellante.
+
+Para abordar esta cuestión, desenvolvéronse os seguintes métodos de repre-
+sentación.
+
+Decimal sen empaquetar
+
+A base deste sistema de representación é que cada díxito que compón un nú-
+mero ocupa un byte (oito bits ou un octeto).
+
+Para codificar un díxito, cada un destes octetos divídese á súa vez en dous
+cuartetos (grupos de catro bits):
+
+e O da dereita coñécese como bits de díxito e consiste na codificación BCD
+do díxito.
+
+e O da esquerda coñécese como bits de zona; no octeto situado máis á de-
+reita, estes indican o signo do número (1100 para positivo e 1101 para
+negativo), mentres que nos octetos restantes, os bits de zona énchense
+con uns.
+
+===== PÁXINA 16.txt =====
+Decimal sen empaquetar
+
+Representar os números 1234 e -5678 en código decimal sen empaquetar nunha
+máquina con palabras de 32 bits
+
+1234 [1111 0001] [1111 oo10] [1111 oo11 [1100 0100]
+
+5678 [1111 0101 [1111 o110] [1111 o111 [1101 1000]
+
+En consecuencia, no sistema decimal sen empaquetar, a conversión é directa,
+pero desaproveitase unha cantidade significativa de espazo: tódolos cuartetos
+de zona, agás aquel que contén o signo, non conteñen información e simple-
+mente énchense con uns.
+
+Decimal empaquetado
+
+Este sistema de codificación é unha evolución do anterior, deseñado para apro-
+veitar un espazo que antes se desperdiciaba.
+
+Cada díxito decimal represéntase mediante un cuarteto, eliminando o uso de
+octetos, e o signo sitúase no cuarteto máis á dereita (garantindo que ocupe
+sempre a mesma posición, independentemente do tamaño da palabra da má-
+quina), seguindo a mesma codificación: 1100 para valores positivos e 1101 para
+os negativos.
+
+Decimal empaquetado
+
+Representar os números 1234 e -5 678 en código decimal empaquetado nunha máqui-
+na con palabras de 32 bits
+
+1234 [0000 0000 0000 0001 0010 0011 0100 1100]
+
+-5 678 [0000 0000 0000 o101 o110 0111 1000 1101]
+
+7.2> Representación en coma flotante
+
+Ata o de agora, tratamos os números enteiros sen preocuparnos de como se
+almacenan os números con parte decimal.
+
+A representación en coma flotante (ou en punto flotante no ámbito anglosa-
+xón) permite representar números decimais e baséase na notación científica ou
+exponencial.
+
+Nesta notación, un número represéntase do seguinte xeito:
+Número = mantisa - base exPoñente
+Por exemplo, en base 10, a representación do número 25.4 sería:
+0.254 - 10?
+
+Para normalizar a mantisa, debemos realizar as operacións matemáticas nece-
+sarias para eliminar a parte enteira e garantir que a primeira cifra tras o punto
+decimal sexa significativa (é dicir, distinta de cero).
+
+Esta operación varía segundo o número sexa menor ou maior que a unidade (en
+valor absoluto; o signo é irrelevante, xa que se trata por separado):
+
+e Se o número é menor que a unidade, xa ten un punto decimal. Neste caso,
+comprobamos se a primeira cifra é significativa: se o é, non fai falta fa-
+cer nada máis; se non, multiplicamos o número pola base do expoñente
+tantas veces como sexa preciso ata que a primeira cifra pase a ser signi-
+ficativa.
+
+===== PÁXINA 17.txt =====
+e Se o número é maior que a unidade, debémolo dividir pola base do expo-
+ñente ata obter un número que cumpra as condicións mencionadas.
+
+Dado que agora dispoñemos de tres compoñentes (signo, expoñente e mantisa)
+para representar un número, debemos distribuír entre eles os bits da palabra
+de computador, tal como se amosa no seguinte exemplo:
+
+31 30 24 23 0
+
+Signo Expoñente Mantisa
+
+onde:
+
+e Signo: é o código asociado ao signo; O para os positivos e 1 para os nega-
+tivos.
+
+e Expoñente: represéntase en signo e magnitude ou en exceso a 2", sendo
+sempre un número enteiro.
+
+e Mantisa: é un número real con punto decimal implícito á esquerda dos
+seus bits, sendo representada xeralmente en signo e magnitude ou en
+complemento a 1 ou en complemento a 2.
+
+e Base do expoñente: é unha potencia de 2 determinada polo fabricante do
+procesador.
+
+Un ordenador utiliza o seguinte formato para representar os números en coma flo-
+tante:
+
+— O bit 31 úsase para representar o signo da mantisa
+
+— os bits do 23 ao 30 úsanse para representar o expoñente en exceso a 2"
+
+=o0s bits do O ao 22 úsanse para representar a mantisa normalizada en Comple-
+mento a 1
+
+— a base do expoñente é 2
+
+— O O representarémolo con tódolos bits a O
+
+(Se non estás seguro de por que é necesario especificar a representación de 0, proba
+un experimento rápido e calcula o número representado polos seguintes números de
+coma flotante: 00...00 e 11...11).
+
+Representar os números 12 e -12 nese formato
+
+O primeiro que teremos que facer é normalizar o número 12 a unha potencia da base,
+para calcular o expoñente:
+
+12=12*P=6*2=3*2=15*28=0.75*2
+Polo tanto temos que o expoñente é 4.
+
+Como a representación do expoñente é en exceso a 2”, ó ser n = 8 bits teremos que
+281 = 27 = 128;
+
+128 + 4 = 132 1000 0100
+
+A mantisa é 0.75 e témola que pasar a binario (multiplicando por 2), co que nos queda
+0.11.
+
+Como é un número positivo quedará igual en complemento a 1. O signo deste número
+será positivo polo que poremos un O.
+
+Así 12 representarémolo como:
+
+1 [o] [1000 o100] [110 0000 oo00 0000o ooo00 vo00o
+
+Para representar o -12 seguiremos os mesmos pasos cambiando o signo, que agora
+será negativo, e polo tanto un 1 e complementando a 1 a mantisa por tratarse dun
+número negativo:
+
+4% [1] [1000 o100] |001 1111 1111 1111 1111 1111)
+
+===== PÁXINA 18.txt =====
+8 >> Métodos de enderezamento
+
+Ata o de agora, aprendemos a codificar datos e a manexar sistemas que nos
+permiten representar números dun xeito máis complexo para nós, pero máis
+sinxelo para o ordenador.
+
+Aínda precisamos entender como recuperalos unha vez almacenados; esta é a
+función dos métodos de enderezamento.
+
+Ó falar de enderezamento, introduciremos un novo termo: instrución. Empre-
+gamos este termo para referirnos tanto a datos coma a ordes; de feito, ambos
+adoitan estar contidos nela, compartindo o mesmo sistema de almacenamen-
+to, e o feito de que funcionen como ordes ou como datos depende de como se
+utilicen.
+
+Os métodos ou modos de enderezamento das instrucións indican como locali-
+zar o andel de almacenamento específico onde se garda a información: unha
+localización coñecida como enderezo de memoria.
+
+Un enderezo de memoria serve como identificador dunha área de
+almacenamento concreta.
+
+Poden empregarse diversos métodos de enderezamento con diferentes veloci-
+dades de execución, dependendo do número de accesos intermedios á memoria
+que o procesador deba realizar:
+
+e Enderezamento inmediato: non precisa acceso a memoria, xa que o dato
+que se procesará forma parte da instrución.
+
+Código de operación Dato
+
+e Enderezamento directo: o procesador, a través da unidade de control,
+ten que acceder unha vez á memoria no enderezo que indica a instru-
+ción para localizar o dato.
+
+Código de operación € do dato
+
+e Dato
+
+e Enderezamento indirecto: primeiro accedemos a unha posición de me-
+moria que contén o enderezo do dato que intervén na instrución.
+
+Código de operación € do dato
+
+Dato
+
+[e] € do dato
+
+e Enderezamento relativo: o enderezo do dato que intervén na instrución
+obtémolo sumándolle ó enderezo da propia instrución unha cantidade
+fixa, que normalmente está contida nun rexistro de tipo especial.
+
+===== PÁXINA 19.txt =====
+Código de operación € do dato
+
++K
+
+e+K Dato
+
+Buscar datos utilizando diferentes métodos de enderezamento
+
+Dispomos dun sistema que procesa instrucións de 8 bits. Os cinco primeiros bits
+empréganse para especificar o código de operación, e os bits restantes utilízanse para
+o enderezo dos datos. Calcula os datos que se cargarán na memoria empregando os
+modos de enderezamento inmediato, directo, indirecto e relativo (cun desprazamento
+de 4) para a instrución 11011111, tendo en conta o seguinte contido da táboa de memo-
+ria do ordenador:
+
+Enderezo Contido |
+000 11001100
+001 00000000
+010 11111111
+on 00000011
+100 11110000
+101 00111100
+110 00000001
+11 00001000
+
+Descompoñemos a instrución indicada nas súas dúas partes:
+
+Instrución Código de operación Enderezamento
+
+(oa
+
+Enderezamento inmediato
+Como o dato xa o temos dentro da propia instrución, o único que facemos é comple-
+tar con ceros a instrución:
+
+Instrución resultante 00000111
+
+Enderezamento directo
+
+Buscamos na táboa o contido do enderezo 111:
+
+Instrución resultante 00001000
+
+Enderezamento indirecto
+
+Buscamos na táboa o contido do enderezo 111:
+
+Instrución intermedia 00001000
+
+Volvemos buscar agora o contido do enderezo 000 (derradeiros 3 díxitos da instrución
+intermedia):
+
+Instrución resultante 11001100
+
+===== PÁXINA 20.txt =====
+Enderezamento relativo
+
+Sumamos o enderezo inicial (1112) co desprazamento da máquina (4 = 1002), despre-
+zando o acarreo:
+
+111 + 100 = 011
+
+Instrución intermedia 00000011
+
+Volvemos buscar agora o contido do enderezo 011 (derradeiros 3 díxitos da instrución
+intermedia):
+
+Instrución resultante 00000011
+

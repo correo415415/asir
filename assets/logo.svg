@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Apuntes ASIR">
+  <rect width="32" height="32" rx="7" fill="#0f2545"/>
+  <!-- Marca: tres nodos unidos formando una A, con nodo central (mapa de conocimiento) -->
+  <path d="M16 8.5 L8.5 24.5 M16 8.5 L23.5 24.5 M11.2 19 L20.8 19" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" fill="none" opacity=".9"/>
+  <circle cx="16" cy="8.5" r="2.6" fill="#ffffff"/>
+  <circle cx="8.5" cy="24.5" r="2.6" fill="#ffffff"/>
+  <circle cx="23.5" cy="24.5" r="2.6" fill="#ffffff"/>
+  <circle cx="16" cy="19" r="2.1" fill="#c9a24a"/>
+</svg>
