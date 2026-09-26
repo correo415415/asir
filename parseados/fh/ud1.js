@@ -486,3 +486,47 @@ window.APUNTES.unidades.push({
 <div class="box warn"><div class="box-title">Desafíos</div><p>A <strong>coherencia cuántica</strong> —manter os qubits nun estado cuántico durante o tempo suficiente para calcular— é un obstáculo importante. A <strong>decoherencia</strong>, a interacción dos qubits coa súa contorna que lles fai perder as propiedades cuánticas, pode limitar a súa utilidade en certas aplicacións.</p></div>
 <p>Na actualidade os microprocesadores cuánticos están nunha etapa de desenvolvemento e experimentación. Aínda que están lonxe de usarse en aplicacións prácticas a grande escala, amosan un gran potencial para revolucionar a informática e resolver problemas complexos de maneira máis eficiente no futuro.</p>`
   },
+
+  /* ---------------- 9 ---------------- */
+  {
+    id: 'fh-ud1-9',
+    tipo: 'tema',
+    titulo: '9. A Intelixencia Artificial nos procesadores',
+    resumen: 'A IA axuda a deseñar procesadores e a melloralos (unidades de predición). Arquitecturas híbridas con aceleradores de IA (NPU, motores neuronais). Técnicas: aprendizaxe automática, aprendizaxe profunda e redes neuronais.',
+    claves: ['A IA acelera o deseño de microprocesadores', 'Redes neuronais para mellorar unidades de predición (AMD)', 'Aceleradores de IA: NPU, motores neuronais (SoC de Apple)', 'Técnicas: machine learning, deep learning, redes neuronais', 'Capas: IA ⊃ machine learning ⊃ redes neuronais ⊃ deep learning', 'Aprendizaxe supervisada (datos etiquetados) vs non supervisada'],
+    tags: ['intelixencia artificial', 'IA', 'NPU', 'motor neuronal', 'machine learning', 'deep learning', 'redes neuronais', 'AMD', 'Apple', 'aprendizaxe supervisada'],
+    links: ['fh-ud1-9-1', 'fh-ud1-9-2', 'fh-ud1-9-3', 'fh-ud1-9-4', 'fh-ud1-9-5'],
+    contenido: `
+<p>A intelixencia artificial non só axudará a deseñar mellores microprocesadores nun período de tempo máis curto; as <strong>redes neuronais artificiais</strong> tamén se poden usar para mellorar certas áreas, como as <strong>unidades de predición</strong>. Isto é algo co que AMD xa leva experimentando para gañar rendemento.</p>
+<p>Estas novas arquitecturas serán híbridas, e isto tamén implica que haberá <strong>aceleradores de IA</strong> como as <strong>NPU</strong> ou os motores neuronais que vemos nos SoC de Apple, que cobrarán cada vez máis importancia a medida que as cargas de traballo de IA aumenten.</p>
+<p>Actualmente, os procesadores utilizan técnicas de <strong>aprendizaxe automática</strong>, <strong>aprendizaxe profunda</strong> e <strong>redes neuronais</strong>, todas elas disciplinas da intelixencia artificial. Estas técnicas axudan a que a velocidade de procesamento dea un salto cualitativo e os procesadores sexan máis eficientes e rápidos.</p>
+<figure class="small"><img src="apuntes/fh/img/ud1/capas-aprendizaxe.png" alt="Capas: Artificial Intelligence ⊃ Machine Learning ⊃ Neural Networks ⊃ Deep Learning" loading="lazy"><figcaption><strong>Capas da aprendizaxe.</strong> A intelixencia artificial engloba a aprendizaxe automática; dentro dela, as redes neuronais; e dentro destas, a aprendizaxe profunda.</figcaption></figure>
+<div class="box info"><div class="box-title">Aprendizaxe supervisada e non supervisada</div>
+<p>A <strong>aprendizaxe supervisada</strong> é o método máis sinxelo para adestrar un algoritmo: amosar a relación de entrada e saída. Unha vez que un modelo aprende que escoller en diversas situacións, pode tomar decisións en novos casos. Pensa en aprender unha nova lingua: atopamos patróns (a estrutura dun tempo verbal), practicamos con frases de exemplo e despois inferimos o tempo mesmo nunha frase nova.</p>
+<p>A <strong>aprendizaxe non supervisada</strong> ensina patróns ás máquinas a partir de datos <em>sen etiquetar</em>. Pensa nun neno pequeno que aprende unha lingua: non sabe o que é un tempo verbal, enténdeo sen ser adestrado con datos etiquetados.</p></div>`
+  },
+  {
+    id: 'fh-ud1-9-1',
+    tipo: 'subtema',
+    titulo: '9.1 Aprendizaxe automática (machine learning)',
+    resumen: 'Uso de datos para crear modelos preditivos e tomar decisións, con regras predefinidas. Non comprende o mundo coma un cerebro. Exemplo: adestrar un detector de caras con imaxes etiquetadas.',
+    claves: ['Datos → modelos preditivos → decisións', 'Regras predefinidas e alimentación de datos', 'Non entende o contexto coma un cerebro humano', 'Exemplo: adestrar con imaxes con/sen caras e despois recoñecer en imaxes novas'],
+    tags: ['machine learning', 'aprendizaxe automática', 'modelo preditivo', 'adestramento', 'recoñecemento facial'],
+    contenido: `
+<p>Cando falamos da aprendizaxe automática como unha aplicación da Intelixencia Artificial, referímonos ó uso de <strong>datos</strong> para poder crear <strong>modelos preditivos</strong> e tomar decisións. Está baseada na alimentación de datos e, xeralmente, dispón duns conxuntos de regras predefinidas para poder traballar.</p>
+<p>O problema é que a día de hoxe non comprende o concepto do mundo como o fai un cerebro humano: un ordenador pode conectar un evento a algo que sucedeu antes, pero ten moitas dificultades cando ten que pór unha nova conexión ou un novo evento nun contexto determinado.</p>
+<div class="box ex"><div class="box-title">Exemplo</div><p>Se deseñamos un sistema que detecte unha cara humana, primeiro haberá que traballar cun conxunto de imaxes, cantas máis mellor, nas que aparecerán caras ou non. Para adestrar ó sistema haberá que lle indicar que imaxes teñen caras humanas e cales non, de forma que, unha vez rematado o adestramento, o sistema sexa quen de recoñecer, con certa eficacia, en novas imaxes se aparece unha cara humana.</p></div>`
+  },
+  {
+    id: 'fh-ud1-9-2',
+    tipo: 'subtema',
+    titulo: '9.2 Aprendizaxe profunda (deep learning)',
+    resumen: 'Parte do machine learning que usa redes neuronais (algoritmos matemáticos a semellanza do cerebro). Execútase en GPU polo seu paralelismo. Os motores neuronais nos chips fan a IA máis eficiente que a forza bruta da CPU/GPU.',
+    claves: ['Subconxunto do machine learning que usa redes neuronais', 'Antes non cabía nun smartphone; hoxe si', 'GPU para adestrar e avaliar modelos (traballo paralelo)', 'Motores neuronais nos chips: recoñecemento facial, realidade aumentada, mellora de fotos… sen forza bruta'],
+    tags: ['deep learning', 'aprendizaxe profunda', 'DNN', 'GPU', 'motor neuronal', 'realidade aumentada'],
+    contenido: `
+<p>É unha parte da aprendizaxe automática que utiliza <strong>redes neuronais</strong> nos seus algoritmos. Estas redes son algoritmos matemáticos creados a semellanza do funcionamento dun cerebro.</p>
+<p>Ata hai pouco non se podían implementar en dispositivos como os teléfonos intelixentes porque as limitacións do hardware o impedían. A día de hoxe é posible a súa integración e empréganse <strong>GPU</strong> para executar algoritmos de adestramento e avaliación dos modelos, xa que estes compoñentes, ó estar deseñados para traballar de forma paralela, son ideais para este tipo de problemas.</p>
+<figure><img src="apuntes/fh/img/ud1/deep-learning.png" alt="Rede neuronal profunda con varias capas ocultas" loading="lazy"><figcaption><strong>Deep learning.</strong> A aprendizaxe profunda ou redes neuronais profundas (DNN) é a última estratexia de recoñecemento para resolver desafíos complexos da IA, como o recoñecemento da fala ou o recoñecemento visual.</figcaption></figure>
+<div class="box tip"><div class="box-title">Por que usar IA nos procesadores?</div><p>Para realizar tarefas complexas como o recoñecemento facial, a realidade aumentada ou mellorar as fotos —tarefas moi frecuentes e demandadas polos usuarios— usar <strong>motores neuronais</strong> nos chips fará que moitos procesadores usen a IA dun modo máis eficiente en vez de utilizar a forza bruta coa CPU ou GPU.</p></div>`
+  },
