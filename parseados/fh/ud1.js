@@ -571,3 +571,53 @@ window.APUNTES.unidades.push({
   <li><strong>Robótica.</strong> Crecerá rapidamente a medida que os robots sexan máis capaces de responder a comandos baseados no seu contorno. Se un robot pode navegar de forma independente e pensar por si mesmo sen consumir grandes cantidades de enerxía, o mundo comezará a cambiar rapidamente.</li>
 </ul>`
   },
+
+  /* ---------------- GLOSARIO ---------------- */
+  {
+    id: 'fh-ud1-glosario',
+    tipo: 'glosario',
+    titulo: 'Glosario UD1',
+    resumen: 'Termos clave da unidade: informática, ordenador, xeracións, CISC/RISC, microinstrución, sistema informático, firmware, UC, ALU, contador de programa, bus, SoC, chiplet, die, GPGPU, NPU, qubit, SNN…',
+    claves: ['CISC · RISC · microinstrucións', 'UC · ALU · memoria · E/S · buses', 'SoC · chiplet · die · coprocesador', 'Machine learning · deep learning · ANN · SNN', 'Qubit · superposición · decoherencia'],
+    tags: ['glosario', 'definicións', 'vocabulario'],
+    contenido: `
+<dl>
+<dt>Informática</dt><dd>Ciencia que estuda o tratamento racional e automático da información e a tecnoloxía para conservala e utilizala de maneira eficiente e económica.</dd>
+<dt>Ordenador</dt><dd>Máquina de elementos físicos, maiormente electrónicos, capaz de realizar operacións sobre a información a gran velocidade e precisión.</dd>
+<dt>MARK 1 / ENIAC / UNIVAC I</dt><dd>Primeira computadora electromecánica (1944) / primeiro ordenador electrónico (1945) / primeiro ordenador comercial (1951).</dd>
+<dt>Xeracións de ordenadores</dt><dd>Cinco etapas definidas pola tecnoloxía dominante: válvulas, transistores, circuíto integrado, microprocesador e IA/redes.</dd>
+<dt>Xogo de instrucións</dt><dd>Conxunto de instrucións que un microprocesador pode executar; decide o seu deseño físico.</dd>
+<dt>CISC</dt><dd><em>Complex Instruction Set Computing</em>: instrucións amplas e complexas que agrupan varias operacións (x86: Intel, AMD).</dd>
+<dt>RISC</dt><dd><em>Reduced Instruction Set Computing</em>: poucas instrucións simples e rápidas que favorecen a segmentación e o paralelismo (ARM, IBM 801).</dd>
+<dt>Microinstrucións</dt><dd>Instrucións simples tipo RISC nas que os procesadores CISC descompoñen internamente as instrucións complexas.</dd>
+<dt>Portas lóxicas</dt><dd>Dispositivos electrónicos que implementan operacións booleanas (AND, OR, NOT); base dos circuítos integrados.</dd>
+<dt>Programa / aplicación / software</dt><dd>Conxunto de instrucións / conxunto de programas / conxunto de instrucións, programas e aplicacións.</dd>
+<dt>Hardware</dt><dd>Compoñentes físicos do sistema.</dd>
+<dt>Firmware</dt><dd>Software gravado nos compoñentes hardware para programalos e configuralos; case invariable ó longo da súa vida.</dd>
+<dt>Sistema informático</dt><dd>Hardware e software necesario para satisfacer as necesidades do usuario.</dd>
+<dt>Arquitectura de von Neumann</dt><dd>Modelo de 1946 con programa almacenado e catro bloques: unidade de control, ALU, memoria e entrada/saída, unidos por buses.</dd>
+<dt>Unidade de control (UC)</dt><dd>Le as instrucións da memoria e xera os sinais de control. Usa o contador de programa.</dd>
+<dt>Contador de programa</dt><dd>Rexistro que apunta á posición de memoria da seguinte instrución a executar.</dd>
+<dt>ALU</dt><dd>Unidade aritmético-lóxica: operacións matemáticas (suma, resta) e lóxicas (AND, OR, NOT).</dd>
+<dt>Punto de memoria</dt><dd>Bit: elemento básico de información, con valores 0 ou 1 correspondentes a estados de tensión.</dd>
+<dt>Buses</dt><dd>Camiños polos que circulan instrucións e datos entre os bloques do ordenador.</dd>
+<dt>SoC</dt><dd><em>System on a Chip</em>: integración de procesador, memoria, E/S e outros módulos nun único chip.</dd>
+<dt>Ponte norte / ponte sur</dt><dd>Northbridge: controlador de memoria e PCIe (hoxe integrado na CPU). Southbridge/chipset: controladores de USB, SATA, etc.</dd>
+<dt>Coprocesador</dt><dd>Unidade especializada que axuda ó procesador (matemático de coma flotante, gráfico).</dd>
+<dt>Sistema embebido</dt><dd>Sistema informático integrado nun dispositivo con propósito específico.</dd>
+<dt>GPGPU</dt><dd>Computación de propósito xeral en GPU: procesamento paralelo entre GPU e CPU.</dd>
+<dt>NPU</dt><dd>Unidade de procesamento neuronal; acelerador de IA.</dd>
+<dt>Chiplet / die</dt><dd>Paquete con varios chips baixo un único die / bloque de semicondutor sobre o que se fabrica un circuíto.</dd>
+<dt>Pescozo de botella de von Neumann</dt><dd>Limitación de rendemento na comunicación entre procesador e memoria.</dd>
+<dt>Computación neuromórfica</dt><dd>Chips que imitan as redes neuronais biolóxicas (Loihi, Hala Point) cun consumo moi inferior.</dd>
+<dt>Qubit</dt><dd>Bit cuántico que pode estar en varios estados á vez (superposición).</dd>
+<dt>Coherencia / decoherencia</dt><dd>Capacidade de manter o estado cuántico / perda dese estado pola interacción coa contorna.</dd>
+<dt>Machine learning</dt><dd>Uso de datos para crear modelos preditivos e tomar decisións.</dd>
+<dt>Deep learning</dt><dd>Parte do machine learning que usa redes neuronais profundas (DNN).</dd>
+<dt>ANN</dt><dd>Rede neuronal artificial: nodos (neuronas) interconectados por conexións ponderadas.</dd>
+<dt>SNN</dt><dd>Rede neuronal de impulsos: neuronas que se activan só ante eventos e pasan información en calquera dirección.</dd>
+</dl>`
+  }
+
+  ]
+});
