@@ -2701,3 +2701,563 @@ e Marca: Ryzen
 e Número de núcleos: 9 (doce núcleos), 7 (oito núcleos), 5 (seis núcleos, pe-
 ro non todos) e 3 (catro núcleos)... os Threadripper terían máis núcleos
 
+===== PAXINA 26 =====
+e Xeración: 7 (2023), 8 (2024), 9 (2025)
+e Segmento: é redundante, indica o modelo de procesador (Athlon Silver,
+Athlon Gold, Ryzen 3, Ryzen 5, Ryzen 7 ou Ryzen 9)
+e Arquitectura: xeración da microarquitectura Zen
+e Características: O indica modelo de gama baixa e 5 modelo de gama alta
+e Factor de forma / TDP:
+— HX: 55 W para rendemento máximo en xogos
+— HS: 35 W para uso doméstico
+— U: de 15 a 28 W para equipos ultrafinos
+- C: de 15 a 28 W para portátiles
+- e: 9 W para equipos sen ventilador
+— X: frecuencias de funcionamento máis altas
+
+5.6 > ARM: o procesador do móbil
+
+Úsanse principalmente en teléfonos móbiles, tanto Android como iPhone. ARM
+creou as súas propias ISA (ARMv7, ARMv8), que implementan actualmente os
+núcleos Cortex-A
+
+O que ARM non fai é fabricalos. Por exemplo, Samsung compra a licenza do
+Cortex-A55 e fabrica un procesador (chip) con catro núcleos, cada un usando
+esa microarquitectura. Por outra banda, unha empresa tamén pode deseñar as
+súas propias microarquitecturas dende cero en lugar de usar Cortex-A; por
+exemplo, Apple adoitaba usar Cortex-A pero agora deseña a súa propia micro-
+arquitectura chamada Apple SoC.
+
+Existe outra gama de procesadores ARM chamada Neoverse, que se basea nas
+microarquitecturas que acabamos de comentar pero está deseñada para servi-
+dores.
+
+Procesadores híbridos
+
+Consiste en colocar núcleos de diferentes niveis de rendemento no mesmo
+procesador. Unha cousa moi interesante dos chips ARM é que cada núcleo pode
+ser diferente dos demais (isto é o que ARM chama tecnoloxía big.LITTLE).
+
+Estes núcleos están feitos para ter diferentes niveis de potencia porque isto
+aforra a duración da batería (Intel ten procesadores Lakefield con núcleos de
+distinta potencia). Cando non estamos a usar o teléfono, úsanse os núcleos de
+menor potencia e, cando estamos a xogar, úsanse os núcleos máis potentes.
+
+O consumo de enerxía pode parecer importante a nivel móbil, pero nos gran-
+des centros de datos e supercomputadores, os propios procesadores conso-
+men moita electricidade, así como ó arrefrialos. Polo tanto, non é de estrañar
+que o supercomputador máis rápido do mundo poida estar baseado nesta tec-
+noloxía.
+
+En 2021, Fugaku, con ARM, era o supercomputador máis potente do mundo,
+con 7,3 millóns de núcleos, todos eles ARM. Ademais, dado que ARM usa ISA de
+tipo RISC, o procesador é máis sinxelo, o que resulta nun menor consumo de
+enerxía en comparación cos ISA de tipo CISC.
+
+Doutra banda, a duración da batería tamén é importante nos portátiles, razón
+pola cal Apple decidiu cambiar os procesadores Intel polos procesadores ARM
+nos seus portátiles.
+
+6 >> Refrixerador
+
+Manter un sistema refrixerado é un factor determinante na lonxevidade dun
+ordenador, así como no uso óptimo do seu rendemento. Tódolos compoñentes
+internos do ordenador xeran calor cando funcionan, aínda que o procesador, a
+tarxeta gráfica, o chipset da placa base, a RAM e o disco duro son os que máis
+o xeran. Un ordenador ben refrixerado dura máis que un que funciona a altas
+temperaturas. Ademais, o sobrequentamento pode causar perda de datos e
+mesmo danos no ordenador.
+
+Arquitectura ZEN
+
+En Zen, os núcleos e a caché L3
+están organizados xerarquicamen-
+te.
+
+e CCX: composto por varios nú-
+cleos que comparten a mesma
+caché L3
+
++ CCD: composto por dous CCX
+
+e Die de E/S ou clOD: responsa-
+ble da comunicación entre o pro-
+cesador e o ambiente externo,
+concretamente a memoria e o
+bus PCI
+
++ Infinity Fabric: o bus que in-
+terconecta internamente os
+CCX, os CCD e o Die de E/S. Na
+realidade forma parte do clOD
+
+e Procesador. composto por
+varios CCD e o Die de E/S
+
+En Zen 2, o CCX está composto
+por ata 4 núcleos e unha caché L3
+con 16 MB; o CCD é a unión de 2
+CCX, polo que está composto por
+8 núcleos e 2 cachés L3.
+
+En Zen 3, o CCX está composto
+por ata 8 núcleos e unha caché L3
+de 32 MB, polo tanto o CCD está
+composto por 16 núcleos e 2
+caches L3.
+
+Latencia
+
+A comunicación entre diferentes
+núcleos é máis lenta canto máis
+separados estean:
+
+e Entre núcleos dentro do mes-
+mo CCX é a máis rápida: 50 ns
+
+e Con núcleos doutro CCX pero
+dentro do mesmo CCD é máis
+lenta: 150 ns
+
+e Con núcleos doutro CCD é a
+máis lenta: 200 ns
+===== PAXINA 27 =====
+Lei de Amdahl
+
+A lei de Amdahl afirma que o
+número de núcleos que pode ter
+un programa depende de como de
+paralelizable sexa.
+
+Noutras palabras, engadir máis
+núcleos non mellorará significati-
+vamente o rendemento. Polo
+tanto, ter máis núcleos non signi-
+fica necesariamente que un proce-
+sador sexa máis rápido.
+
+Refrixerador
+
+Disipador
+
+Ventilador
+
+x.
+
+Pasta térmica
+
+6.1> Sistema de refrixeración por aire ou sistema de ventilación
+
+Permite o fluxo de aire dentro da carcasa para que a temperatura non suba
+demasiado, é dicir, para igualar a temperatura coa temperatura ambiente. Isto
+pódese facer mediante refrixeración pasiva e refrixeración activa.
+
+A refrixeración pasiva implica o uso de disipadores de calor, un conxunto de
+aletas metálicas sen partes móbiles, a través das cales se propaga a calor dun
+compoñente e que se arrefrían facilmente debido á súa superficie. A súa acción
+principal consiste en aumentar a superficie de contacto co aire permitindo
+unha eliminación máis rápida da calor excedente. Sóese usar para evitar un
+aumento de temperatura nalgúns dos compoñentes, como pode ser no proce-
+sador ou nalgunhas tarxetas gráficas. Unha das súas vantaxes é que non pro-
+duce ruído.
+
+É importante usar pastas térmicas para que o microprocesador e o disipador
+fagan un bo contacto. A pasta térmica permite que a calor se transfira dende a
+parte superior do procesador ata o disipador de calor. Aínda que poidamos
+pensar que ambos compoñentes son lisos, en realidade son bastante rugosos a
+nivel microscópico. A pasta térmica debe ser moi boa condutora da calor, e iso
+é o que distingue unha pasta térmica doutra; véndese en xiringas ou, ás veces,
+en paquetes pequenos.
+
+Cando non abonda cos disipadores ou o tamaño destes é desproporcionado,
+óptase por usar a refrixeración activa que consiste en combinar un ventilador
+cun disipador de calor. Un ventilador é un dispositivo para axitar ou mover o
+aire. Basicamente crea unha corrente de aire movendo unhas palas. Podémolos
+topar para case calquera dos compoñentes do equipo: procesador, ponte norte,
+tarxeta gráfica, disco duro... debe colocarse de xeito que o aire entre pola parte
+dianteira e saia cara á parte traseira da carcasa.
+
+Ó conxunto de ventilador e disipador denomínaselle refrixerador. Podémolos
+encontrar soltos ou en formato tarxeta. Estes últimos insírense nun dos ocos
+que teñamos libres para tarxetas de expansión, de maneira que xeren unha
+corrente de aire preto da fonte de calor.
+
+De calquera modo, todo isto non servirá de nada se non expulsamos a calor ó
+exterior da carcasa do ordenador. Hai que ter en conta que o disipador e o
+ventilador non fan que a calor desapareza, só a trasladan de sitio; pero pode
+facer tanto dano preto do micro como acumulándose dentro da carcasa sen
+poder saír.
+
+Para que a refrixeración sexa perfecta, o ideal é ter un ventilador que introduza
+aire frío e outro que o expulse. Nun equipo normal, a fonte de alimentación soe
+sacar o aire quente, pero non soe haber un ventilador de entrada. Así que será
+conveniente comprar un ventilador e instalalo na parte frontal do noso orde-
+nador, onde xeralmente xa hai uns buratos preparados para aparafusar un
+ventilador de 8x8 cm.
+
+Outras formas de arrefrialo equipo serían quitarlle o po, afastar a caixa da
+parede ou abrir a xanela.
+
+En calquera caso, non debemos esquecer dúas cousas: unha, que o aire quente
+sobe, así que a saída de aire debe estar arriba (nunca situada por baixo da en-
+trada de aire frio); e dúas, que existen poucos esquemas de ventilación tan
+efectivos e baratos como abrir a carcasa do ordenador. Non é moi estético (hai
+gustos para todo), pero funciona moi ben.
+
+6.2 > Sistema de refrixeración líquida ou watercooling
+
+A refrixeración líquida baséase en que a auga (ou calquera líquido refrixeran-
+te) conduce mellor a calor que o aire. Estes líquidos teñen unha maior conduti-
+vidade térmica que o aire. A partir deste principio, extraemos a calor xerada
+polo procesador principal, tarxeta gráfica, chipset de placa base ou discos
+duros, fóra da carcasa do ordenador apoiándonos nun circuíto cerrado de auga,
+
+===== PAXINA 28 =====
+arrefriándoa inmediatamente fóra del. Tódolos sistemas de refrixeración líqui-
+da deben contar con varios compoñentes básicos: o depósito ou bloque de
+auga (xeralmente feito de cobre ou aluminio), o circuíto de auga formado polos
+tubos polos que flúe o refrixerante, a bomba que xera a circulación do líquido,
+o radiador (o compoñente que arrefría a auga do circuíto mediante tubos moi
+finos que transfiren a calor ó aire) e os ventiladores que a arrefrían. O maior
+inconveniente deste sistema é que unha fuga de líquido danaría o equipo.
+
+As vantaxes da refrixeración líquida son:
+
+e É unha opción moi interesante para facer overclocking, porque con estes
+sistemas conseguimos arrefriar o equipo no seu conxunto xa que, a dife-
+renza dos sistemas tradicionais, non se xera calor dentro da carcasa do
+ordenador.
+
+e O medio de refrixeración é económico e doado de obter.
+
+e Os compoñentes principais do ordenador mantéñense illados do ambiente
+circundante, evitando a exposición ó po e á humidade.
+
+e Dependendo do deseño escollido, pódense crear sistemas cun grande im-
+pacto visual.
+
+e O líquido disipa toda a calor acumulada na placa base, non só a calor
+acumulada en puntos específicos, conseguindo unha temperatura ideal
+do sistema, normalmente arredor dos 21 *C.
+
+e Conséguese unha refrixeración silenciosa.
+
+6.3 > Sistema de refrixeración por inmersión
+
+Nun sistema de refrixeración por inmersión líquida, o PC mergúllase
+completamente nun líquido con moi baixa condutividade eléctrica, como aceite
+mineral ou auga pura (auga destilada) que non contén impurezas, minerais ou
+metais que fagan que a auga sexa condutora.
+
+O PC arrefría mediante o intercambio de calor entre os seus compoñentes, o
+refrixerante e o aire circundante. Aínda que este método é bastante sinxelo,
+tamén ten as súas desvantaxes, como a necesidade de substituír pezas para
+actualizacións ou reparacións.
+
+6.4 > Refrixeración Peltier
+
+Para casos extremos poderíamos usar células Peltier; estes curiosos aparellos
+son un elemento termoeléctrico que consiste nunhas láminas que, ó ser atra-
+vesadas pola corrente eléctrica, fan que unha das súas caras se arrefríe, men-
+tres que a outra se quenta.
+
+Este sistema non elimina a calor; só a transfire dun punto a outro unha vez
+subministrada enerxía. Polo tanto, debe combinarse cun sistema de refrixera-
+ción por aire ou líquido.
+
+Estes sistemas de refrixeración son pouco comúns nos PC e utilízanse en over-
+clocking extremo.
+
+As celas Peltier pódense mercar en tendas de electrónica especializadas, pero
+O seu prezo é elevado.
+
+6.5 > Refrixeración por software
+
+Outro método para arrefriar os microprocesadores consiste en aproveitar unha
+serie de ordes de aforro enerxético presentes en tódolos micros dende a época
+dos Pentium; mediante estas ordes pomos a descansar aquelas partes do pro-
+cesador que non están traballando nese intre, reducindo moito a temperatura
+do mesmo.
+
+Desgraciadamente, o sistema ten unha limitación insalvable: cando o micro se
+utiliza ó máximo da súa potencia en todo momento, a refrixeración non se
+pode realizar. De calquera modo, os programas aproveitan tempos mortos
+bastante máis pequenos que décimas de segundo, así que sempre poden ser
+útiles, polo menos como apoio a un bo ventilador.
+
+a
+
+Thermal pad
+
+Existe outra solución similar á
+pasta térmica chamada almofada
+térmica. Son como pequenas
+esponxas que conducen a calor.
+Úsanse máis en tarxetas gráficas
+ou teléfonos móbiles que en
+procesadores. Ademais da calida-
+de (condución térmica) da almofa-
+da térmica, existen diferentes
+grosores.
+
+É
+ventilador
+
+Bomba
+Depósito
+
+Refrixeración líquida
+O seu funcionamento é o seguinte:
+
+e O líquido almacenado no depó-
+sito vai á bomba, que se encarga
+de presurizar e mover o líquido
+por tódolos bloques.
+
+e Cando o líquido pasou por tó-
+dolos bloques, vai ó radiador,
+que ten un ventilador que arre-
+fría o líquido ó pasar polas ale-
+tas do radiador.
+
+e Despois de arrefriarse, volve ó
+depósito para repetir o ciclo an-
+terior, formando así un circuíto.
+
+Bloques para procesadores
+
+Estes bloques están deseñados
+para disipar a calor do micropro-
+cesador.
+
+Refrixeración por inmersión
+===== PAXINA 29 =====
+Refrixeración por software
+
+TDP
+
+Unha TDP máis alta non significa
+necesariamente un maior consu-
+mo de enerxía.
+
+Non obstante, do mesmo xeito
+que coas fontes de alimentación,
+unha TDP máis alta significa unha
+menor eficiencia enerxética.
+
+Isto significa que unha TDP alta
+pode realmente malgastar cartos
+en electricidade, xa que esa elec-
+tricidade se usa para xerar calor.
+
+Os sistemas operativos actuais realizan esta tarefa automaticamente.
+6.6> Control da temperatura
+O control da temperatura pódese facer de dúas maneiras:
+
+e Por hardware: hai dispositivos no mercado que se instalan en comparti-
+mentos para unidades de 54. Estes dispositivos teñen sensores que se
+colocan nas zonas onde queremos monitorizar a temperatura e un panel
+que amosa os datos. Poden incluír avisos de temperaturas excesivas.
+
+e Por software: Case tódalas placas base actuais teñen unha opción no SE-
+TUP do ordenador chamada Monitor de hardware, que amosa, entre
+outros datos, as temperaturas da CPU e da placa base. Podemos usar
+programas de diagnóstico de hardware como Everest, que proporciona
+información sobre as temperaturas do procesador e da placa base (esta
+información amósase con máis detalle na versión de pago). Tamén hai
+outros programas, como SpeedFan.
+
+Cal é a temperatura correcta? Hai dous estados a ter en conta ó estudar a
+temperatura do ordenador: co sistema inactivo e con moita carga. Débese
+consultar a temperatura máxima recomendada para a CPU. Hoxe en día, por
+exemplo, temos CPU que poden funcionar a 72 “C sen experimentar unha
+redución na súa vida útil, pero... canto menor sexa a temperatura dos
+compoñentes do ordenador, maior será a súa vida útil.
+
+6.7> TDP (Thermal Design Power)
+
+A potencia de deseño térmico (TDP) non se refire ó consumo de enerxía do
+procesador, senón a cantidade de calor que disipa. Esta especificación indica a
+cantidade máxima de calor que se espera que un compoñente produza baixo un
+uso intensivo. Isto contradí a idea errónea común de que a TDP indica o con-
+sumo de enerxía do procesador; esta cifra non é unha medida directa do con-
+sumo de enerxía.
+
+Úsase para determinar o disipador de calor axeitado para ese procesador e
+mídese en watts, pero non representa necesariamente o consumo de enerxía
+do procesador en watts, aínda que normalmente hai unha correlación entre o
+consumo de enerxía e a TDP. Os valores típicos son decenas de watts.
+
+Polo tanto, o TDP utilízase para determinar a potencia que debe ter o noso
+refrixerador de CPU. O fabricante do refrixerador adoita especificar con que
+modelos de procesador se pode usar.
+
+7 >> Memoria
+
+A memoria do ordenador é a parte do hardware que retén durante certo perío-
+do de tempo información que lle cómpre ó sistema para funcionar correcta-
+mente. Nun ordenador persoal, a memoria xeralmente toma as seguintes for-
+mas:
+
+e Disco duro: almacena os ficheiros e programas do usuario. Mantén a in-
+formación incluso se apagamos o ordenador, e ten unha grande capaci-
+dade de almacenamento.
+
+e Memoria RAM: usada para almacenar cousas tales como programas e in-
+formación de xeito temporal mentres o ordenador está aceso. Isto se fai
+porque este tipo de memoria é rápida, e é útil para acceder a datos sen
+ter que os ler dun soporte de almacenamento máis lento, como é un
+disco duro. A información é volátil e pérdese cando o ordenador se apa-
+ga.
+
+e Memoria caché: xeralmente tópase nos microprocesadores, discos duros
+ou outros aparellos; é unha pequena cantidade de memoria de moi alta
+velocidade dedicada a que partes importantes do ordenador poidan tra-
+ballar á máxima velocidade sen necesidade de pedir información cons-
+tantemente a partes máis lentas do sistema.
+
+===== PAXINA 30 =====
+En relación á información presentan unha serie de características que as clasi-
+fican:
+
+Volatilidade
+
+A memoria volátil precisa enerxía para manter a información almacenada,
+polo que se usa só nas memorias primarias, por exemplo a memoria RAM (Ran-
+dom Access Memory).
+
+A memoria non volátil retén a información almacenada incluso se non recibe
+corrente eléctrica constantemente, como é o caso da memoria ROM (Read-
+Only Memory), usándose para almacenamentos a longo prazo.
+
+A memoria dinámica é volátil e precisa que periodicamente leamos e reescri-
+bamos sen modificacións a información almacenada para manter a súa integri-
+dade.
+
+Accesibilidade
+
+Acceso aleatorio significa que podemos acceder a calquera localización da
+memoria en calquera momento.
+
+Acceso secuencial significa que para acceder a unha localización determinada
+teremos antes que avanzar atravesando as unidades de información anterio-
+res.
+
+Reescritura
+
+As memorias de lectura/escritura permiten que se reescriba a información
+moitas veces; polo xeral a velocidade de lectura será moito maior que a de
+escritura.
+
+As memorias de só lectura (ROM) reteñen a información almacenada no mo-
+mento de fabricarse e as de escritura única e lectura múltiple WORM Write
+Once Read Many) permiten que a información se escriba unha soa vez nalgún
+momento tras a fabricación.
+
+Capacidade
+
+Coa aparición dos materiais semicondutores na década do 1970 multiplicouse a
+velocidade dos ordenadores por 100 000 aproximadamente e a capacidade da
+memoria creceu nunha proporción similar, e dende entón non parou de crecer
+dun xeito exponencial.
+
+7.1> Memoria RAM
+
+As distintas xeracións de memoria que empregan os computadores actuais
+como memoria de traballo son de tipo SDRAM-DDR (Synchronous Dynamic
+Random-Acess Memory - Double Data Rate. Podemos adoptar como definición
+á que aparece na Wikipedia:
+
+A memoria de acceso aleatorio ou RAM é unha memoria de almace-
+namento a curto prazo empregada polo sistema operativo dos com-
+putadores e outros dispositivos para almacenar de forma temporal
+tódolos programas e os seus procesos de execución.
+
+Na memoria RAM cárganse tódalas instrucións que executa a unida-
+de central de procesamento (CPU) e outras unidades do ordenador,
+ademais de conter os datos que manipulan os diferentes progra-
+mas.
+
+Chámanse de Acceso Aleatorio porque é posible ler ou escribir en calquera
+posición de memoria co mesmo tempo de espera, non sendo necesario pasar
+por unhas posicións para chegar a outras, tal como sucedía en antigos disposi-
+tivos de acceso secuencial (un claro exemplo eras as antigas cintas de casete,
+nas que para chegar a unha canción tiñas que pasar por tódalas anteriores). A
+maioría das memorias empregadas na actualidade son de acceso aleatorio
+(RAM, ROM, caché SRAM, flash...).
+
+Ñ
+A
+Clasificación da memoria
+
+Segundo a súa localización:
+
+e Caché
+e Principal ou interna
+e Secundaria ou periférica
+
+Segundo a tecnoloxía empregada:
+
+e Semiconductora
+
+e Magnética
+
+. Óptica
+
+e Volátil / Non volátil
+
+Segundo o tipo de escritura:
+
+e RAM
+
+e ROM
+
+e PROM
+
+e EPROM
+e EEPROM
+e FLASH
+
+Segundo a xerarquía (distancia
+dende a CPU):
+
+e Primaria (caché e RAM)
+
+e Secundaria (discos duros mag-
+néticos e magnetoópticos)
+
+e Terciaria (brazo robótico)
+
+e Fóra de liña (DVD e USB)
+
+e En rede (nube)
+
+Inscricións nos chips
+
+Pode ocorrer que os elementos da
+memoria non funcionen ó mesmo
+ritmo de frecuencia da CPU, o que
+implica que se produzan ciclos de
+espera.
+
+Para controlalo, deberémonos
+fixar na inscrición que aparece nos
+módulos de memoria.
+
+Para unha inscrición tal como
+6825660, significará que hai un
+SIMM de memoria de 8 x 256 KB a
+unha velocidade de 60 nanose-
+gundos:
+
+e O primeiro número sirve para
+recoñecer que o chip é de me-
+moria: 6825660.
+
+e Despois indica cantos módulos
+internos presenta: 6825660.
+
++0 tamaño deses módulos:
+6825660.
+
+e O tempo de acceso: 6825660.
