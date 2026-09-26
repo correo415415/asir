@@ -142,3 +142,132 @@ window.APUNTES.unidades.push({
 <tr><td>FIELDATA</td><td>6</td><td>64</td><td>Unisys, palabras de 36 bits</td></tr>
 </table>`
   },
+
+  /* ---------------- 3 ---------------- */
+  {
+    id: 'fh-ud2-3',
+    tipo: 'tema',
+    titulo: '3. Sistemas de codificación numérica',
+    resumen: 'Un sistema de numeración é o conxunto de símbolos e regras para representar datos numéricos. Son posicionais e están ligados a unha base. O ordenador usa binario (base 2) internamente e códigos agrupados octal (base 8, 3 bits) e hexadecimal (base 16, 4 bits).',
+    claves: ['Sistema de numeración = símbolos + regras · ligado a unha base', 'Posicional: o valor depende da posición e do factor de multiplicación', 'Bit = menor unidade de información (0 ou 1)', 'Binario: base 2 · Octal: base 8 (1 símbolo = 3 bits) · Hexadecimal: base 16 (1 símbolo = 4 bits, A–F = 10–15)', 'Agrupar bits só é directo con bases potencia de 2', 'Teorema fundamental da numeración (TFN): N = Σ Xᵢ · Bⁱ'],
+    tags: ['sistemas de numeración', 'binario', 'octal', 'hexadecimal', 'base', 'bit', 'TFN', 'posicional'],
+    links: ['fh-ud2-3-1'],
+    contenido: `
+<div class="box def"><div class="box-title">Sistema de numeración</div><p>Conxunto de <strong>símbolos e regras</strong> que se utiliza para representar datos numéricos.</p></div>
+<p>Caracterízanse por estar ligados a unha <strong>base</strong> que determina o número de símbolos diferentes que os compoñen. Trátase de sistemas <strong>posicionais</strong>: o valor que cada símbolo representa queda determinado pola posición que ocupa en relación ó resto de símbolos e polo factor de multiplicación correspondente.</p>
+<figure class="small"><img src="apuntes/fh/img/ud2/pesos-posicionais.png" alt="Pesos posicionais en base 10" loading="lazy"><figcaption>Pesos de cada posición nun sistema posicional en base 10: …10⁵, 10⁴, 10³, 10², 10¹, 10⁰.</figcaption></figure>
+<p>Aqueles que nos guiamos polo sistema métrico decimal estamos afeitos a usar múltiplos de 10 para representar cantidades, porque o número de símbolos que emprega o noso sistema é exactamente 10 (do 0 ó 9).</p>
+<p>O sistema de codificación numérica que emprega o ordenador para representar internamente as instrucións e os datos é o <strong>código binario natural</strong>, que posúe dous símbolos (0 e 1) debido ás características propias dos equipos informáticos: funcionan con electricidade e é relativamente sinxelo comprobar se nun determinado instante pasa ou non a corrente por un punto.</p>
+<div class="box def"><div class="box-title">Bit</div><p>Cada un dos símbolos cos que se codifica cada sistema é a <strong>menor unidade de información</strong> que o sistema pode procesar e recibe o nome de <strong>bit</strong>.</p></div>
+<p>Os ordenadores, a nivel interno, tamén utilizan <strong>códigos agrupados</strong> (octal e hexadecimal), porque facilitaban a labor dos programadores: programar en binario (ensamblador ou código máquina) é moi irritante e provoca erros imprevisibles se secuenciamos mal os uns e os ceros. É posible agrupar os bits deste xeito porque é moi doado converter un número en base 2 ó correspondente noutra base maior sempre que sexa <strong>potencia de dous</strong> (existe unha correspondencia directa), pero non a outras como base 5 ou base 7.</p>
+<ul>
+  <li><strong>Binario:</strong> base 2 (símbolos 0 e 1). Derívase directamente do paso da corrente polos compoñentes electrónicos; o ordenador úsao a nivel interno. Cada símbolo decimal represéntase mediante unha combinación de catro bits.</li>
+  <li><strong>Octal:</strong> base 8 (do 0 ó 7); os números represéntanse posicionalmente por potencias de 8. Cada símbolo en base 8 equivale a <strong>3 bits</strong>.</li>
+  <li><strong>Hexadecimal:</strong> base 16 (do 0 ó 9 e do A ó F). As letras A–F representan os números do 10 ó 15. Cada símbolo en base 16 equivale a <strong>4 bits</strong>.</li>
+</ul>
+<figure class="small"><img src="apuntes/fh/img/ud2/simbolos-hexadecimais.png" alt="Símbolos hexadecimais 0-9 e A-F" loading="lazy"><figcaption><strong>Sistema hexadecimal.</strong> Emprega letras para representar parte dos seus símbolos, polo que deberemos traducilas a valores numéricos antes de efectuar operacións.</figcaption></figure>
+<table>
+<tr><th>Decimal</th><th>Binario</th><th>Octal</th><th>Hexadecimal</th></tr>
+<tr><td>0</td><td>0000</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>0001</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>0010</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>0011</td><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>0100</td><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>0101</td><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>0110</td><td>6</td><td>6</td></tr>
+<tr><td>7</td><td>0111</td><td>7</td><td>7</td></tr>
+<tr><td>8</td><td>1000</td><td>10</td><td>8</td></tr>
+<tr><td>9</td><td>1001</td><td>11</td><td>9</td></tr>
+<tr><td>10</td><td>1010</td><td>12</td><td>A</td></tr>
+<tr><td>11</td><td>1011</td><td>13</td><td>B</td></tr>
+<tr><td>12</td><td>1100</td><td>14</td><td>C</td></tr>
+<tr><td>13</td><td>1101</td><td>15</td><td>D</td></tr>
+<tr><td>14</td><td>1110</td><td>16</td><td>E</td></tr>
+<tr><td>15</td><td>1111</td><td>17</td><td>F</td></tr>
+</table>
+<div class="box tip"><div class="box-title">Teorema fundamental da numeración (TFN)</div>
+<p>Tódolos sistemas posicionais están baseados neste teorema, que relaciona cantidades de calquera sistema de numeración con esas mesmas cantidades no sistema decimal:</p>
+<p style="text-align:center"><strong>N = Σ Xᵢ · Bⁱ</strong></p>
+<ul>
+  <li><strong>X</strong>: valor absoluto do díxito en cuestión.</li>
+  <li><strong>i</strong>: posición que ocupa o díxito respecto ó punto decimal (negativa á dereita do punto).</li>
+  <li><strong>B</strong>: base.</li>
+</ul>
+<p>Exemplo: 80,5 = 8·10¹ + 0·10⁰ + 5·10⁻¹.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud2/bender-espello.png" alt="Bender escribe un número binario no espello" loading="lazy"><figcaption><strong>Mensaxe diabólica.</strong> Bender deixa unha clara mensaxe nun dos capítulos de Futurama. A quen representa o número que escribe no espello? (0101100101 visto no espello…).</figcaption></figure>`
+  },
+  {
+    id: 'fh-ud2-3-1',
+    tipo: 'subtema',
+    titulo: '3.1 Conversión dun sistema de numeración a outro',
+    resumen: 'Calquera base → decimal: aplicar o TFN. Decimal → outra base: divisións sucesivas (parte enteira) e multiplicacións sucesivas (parte fraccionaria). Binario ↔ octal/hexadecimal: agrupar en ternas/cuaternas dende o punto. Hexadecimal ↔ octal: pasando por binario.',
+    claves: ['Base B → decimal: sumatorio de díxito × potencia da base (TFN)', 'Decimal → base B (parte enteira): dividir sucesivamente; restos + último cociente, lidos do último ó primeiro', 'Decimal → base B (parte fraccionaria): multiplicar sucesivamente; partes enteiras en orde', 'Un decimal finito pode dar un binario periódico infinito → erro por truncamento', 'Binario → octal: ternas dende o punto (completar con ceros) · Binario → hexadecimal: cuaternas', 'Octal/hex → binario: substituír cada símbolo por 3/4 bits', 'Hex ↔ octal: pasar por binario e reagrupar', 'Bases non potencia de dous: paso intermedio por decimal'],
+    tags: ['conversión', 'cambio de base', 'binario a decimal', 'decimal a binario', 'binario a octal', 'binario a hexadecimal', 'truncamento', 'ternas', 'cuaternas'],
+    links: ['fh-ud2-ex-conv'],
+    contenido: `
+<h4>Calquera base a decimal</h4>
+<p>Para pasar de calquera base a decimal simplemente aplicamos o <strong>teorema fundamental da numeración</strong>, substituíndo <em>B</em> pola base correspondente: 2 para binario, 8 para octal, 16 para hexadecimal. Basicamente en todas aplicamos un <strong>sumatorio sobre unha serie de potencias</strong>. Con sistemas que utilicen máis símbolos dos que ten o código decimal (hexadecimal), teremos que traducir eses símbolos (A=10 … F=15) antes de aplicar o teorema.</p>
+<h4>Decimal a binario</h4>
+<p>Para as conversións inversas empréganse algoritmos diferentes. Primeiro diferenciamos entre a <strong>parte enteira</strong> e a <strong>parte decimal</strong>:</p>
+<ul>
+  <li><strong>Parte enteira:</strong> dividimos o número entre a base e repetimos co cociente que vamos obtendo. Os <strong>restos</strong> destas divisións e o <strong>último cociente</strong> son as cifras buscadas (sempre 0 ou 1). O último cociente é o díxito máis significativo e o primeiro resto o menos significativo.</li>
+  <li><strong>Parte decimal:</strong> multiplicamos a parte decimal pola base e repetimos sucesivamente coas partes decimais dos números obtidos. A secuencia de <strong>partes enteiras</strong> que obtemos é a representación en base 2 da parte decimal. Termina cando xa non hai parte decimal.</li>
+</ul>
+<div class="box warn"><div class="box-title">Díxitos infinitos e erro por truncamento</div>
+<p>Un número cun só díxito na súa parte fraccionaria en base 10 pode xerar un número con <strong>infinitos díxitos</strong> fraccionarios en base 2. Comprobámolo con 0,2₁₀: 0,2·2 = 0,4 → 0,4·2 = 0,8 → 0,8·2 = 1,6 → 0,6·2 = 1,2 → 0,2·2 = 0,4… Unha das operacións repítese, polo que será un número periódico: 0,00110011…₂.</p>
+<p>Se almacenamos un número binario nun ordenador cun número prefixado (finito) de bits, teremos que recortar as cifras. O erro que se comete ó desprezar unha serie de decimais denomínase <strong>erro por truncamento</strong>. É o mesmo problema que presentan as calculadoras (as primeiras só permitían 8 ou 10 díxitos) ou as follas de cálculo (a partir do 15.º decimal) e obríganos a traballar con números aproximados en vez de reais.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud2/infinito-binario.png" alt="Símbolo de infinito formado por ceros e uns" loading="lazy"><figcaption>Un decimal exacto pode converterse nun binario periódico con infinitos díxitos.</figcaption></figure>
+<h4>Decimal a outras bases</h4>
+<p>O procedemento é similar ó paso de decimal a binario, pero dividindo e multiplicando pola base en cuestión (B = 8 en octal, B = 16 en hexadecimal).</p>
+<h4>Binario a octal</h4>
+<p>Dividimos o número binario en <strong>ternas</strong> (grupos de tres) a partir do punto fraccionario; cada terna equivale a un símbolo en octal. Se o número de díxitos non é múltiplo de 3, complétase con ceros de forma que non modifiquen o número: <strong>pola esquerda</strong> na parte enteira, <strong>pola dereita</strong> na parte fraccionaria.</p>
+<h4>Binario a hexadecimal</h4>
+<p>Separamos os díxitos en <strong>cuaternas</strong> (grupos de catro) tomando como referencia o punto decimal; cada cuaterna equivale a un símbolo hexadecimal. Complétase con ceros igual que no caso anterior.</p>
+<h4>Bases potencia de dous a binario</h4>
+<p>Substituímos cada símbolo (octal ou hexadecimal) polos díxitos binarios que lle correspondan (<strong>tres ou catro</strong>). Deste xeito simplificamos o código á hora de programar: en vez de escribir 3 ou 4 uns e ceros escribimos só o símbolo correspondente, obtendo menos erros e unha tradución máis rápida.</p>
+<h4>Hexadecimal a octal e viceversa</h4>
+<p>O procedemento máis sinxelo é pasar de hexadecimal a binario e de binario a octal, aproveitando que ambos son códigos agrupados (potencias de dous): cambiamos os símbolos hexadecimais polo seu equivalente binario e reagrupámolos de tres en tres. Para o caso contrario, de octal a binario e deste a hexadecimal.</p>
+<div class="box tip"><div class="box-title">Bases non potencia de dous</div><p>Se queremos pasar dunha base que non é potencia de dous a binario (ou viceversa) teremos que facer sempre un paso intermedio: <strong>pasar a base decimal</strong>.</p></div>`
+  },
+  {
+    id: 'fh-ud2-ex-conv',
+    tipo: 'ejercicio',
+    titulo: 'Exercicios resoltos: cambios de base',
+    resumen: 'Conversións resoltas do libro: 1011101,01₂ → 93,25₁₀ · 117,45₈ → 79,578125₁₀ · A03F,07₁₆ → 41 023,02734375₁₀ · 92,375₁₀ → 1011100,011₂ · 1111000,11001₂ → 170,62₈ · 111111100000,11111110101₂ → FE0,FEA₁₆ · 521,17₈ → 101010001,001111₂ · ACDC,BAD₁₆ → binario · 0,07₈ → 0,1C₁₆.',
+    claves: ['1011101,01₂ = 93,25₁₀', '117,45₈ = 79,578125₁₀', 'A03F,07₁₆ = 41 023,02734375₁₀', '92,375₁₀ = 1011100,011₂', '1111000,11001₂ = 170,62₈', '111111100000,11111110101₂ = FE0,FEA₁₆', '521,17₈ = 101010001,001111₂', 'ACDC,BAD₁₆ = 1010110011011100,101110101101₂', '0,07₈ = 0,1C₁₆'],
+    tags: ['exercicio', 'conversión', 'binario', 'octal', 'hexadecimal', 'decimal'],
+    contenido: `
+<div class="box ex"><div class="box-title">Binario a decimal</div>
+<p>Obter o valor decimal do número <code>1011101,01₂</code>.</p>
+<p>Parte enteira (posicións de dereita a esquerda a partir do punto): 1·2⁰ + 0·2¹ + 1·2² + 1·2³ + 1·2⁴ + 0·2⁵ + 1·2⁶ = 1 + 4 + 8 + 16 + 64 = 93.</p>
+<p>Parte decimal (de esquerda a dereita): 0·2⁻¹ + 1·2⁻² = 0,25.</p>
+<p><strong>Resultado: 93,25₁₀</strong></p></div>
+<div class="box ex"><div class="box-title">Octal a decimal</div>
+<p>Obter o valor decimal de <code>117,45₈</code>.</p>
+<p>Parte enteira: 1·8² + 1·8¹ + 7·8⁰ = 64 + 8 + 7 = 79. Parte decimal: 4·8⁻¹ + 5·8⁻² = 0,5 + 0,078125.</p>
+<p><strong>Resultado: 79,578125₁₀</strong></p></div>
+<div class="box ex"><div class="box-title">Hexadecimal a decimal</div>
+<p>Obter o valor decimal de <code>A03F,07₁₆</code>. Substituímos as letras polo seu valor (A = 10, F = 15):</p>
+<p>Parte enteira: 10·16³ + 0·16² + 3·16¹ + 15·16⁰ = 40 960 + 48 + 15 = 41 023. Parte decimal: 0·16⁻¹ + 7·16⁻² = 0,02734375.</p>
+<p><strong>Resultado: 41 023,02734375₁₀</strong></p></div>
+<div class="box ex"><div class="box-title">Decimal a binario</div>
+<p>Obter o valor binario de <code>92,375₁₀</code>.</p>
+<p>Parte enteira, divisións sucesivas entre 2: 92→46 (r 0), 46→23 (r 0), 23→11 (r 1), 11→5 (r 1), 5→2 (r 1), 2→1 (r 0), último cociente 1. Lido do último cociente ó primeiro resto: <code>1011100</code>.</p>
+<p>Parte decimal, multiplicacións sucesivas por 2 desprezando a parte enteira: 0,375·2 = <strong>0</strong>,75 → 0,75·2 = <strong>1</strong>,5 → 0,5·2 = <strong>1</strong>,0 → remata. Parte decimal: <code>011</code>.</p>
+<p><strong>Resultado: 1011100,011₂</strong></p></div>
+<div class="box ex"><div class="box-title">Binario a octal</div>
+<p>Obter o valor octal de <code>1111000,11001₂</code>. Ternas completando con ceros: <code>001 111 000 , 110 010</code> → 1 7 0 , 6 2.</p>
+<p><strong>Resultado: 170,62₈</strong></p></div>
+<div class="box ex"><div class="box-title">Binario a hexadecimal</div>
+<p>Obter o valor hexadecimal de <code>111111100000,11111110101₂</code>. Cuaternas: <code>1111 1110 0000 , 1111 1110 1010</code> → F E 0 , F E A.</p>
+<p><strong>Resultado: FE0,FEA₁₆</strong></p></div>
+<div class="box ex"><div class="box-title">Octal a binario</div>
+<p>Obter o valor binario de <code>521,17₈</code>. A cada díxito octal correspóndelle unha terna: 5→101, 2→010, 1→001, 1→001, 7→111.</p>
+<p><strong>Resultado: 101010001,001111₂</strong></p></div>
+<div class="box ex"><div class="box-title">Hexadecimal a binario</div>
+<p>Obter o valor binario de <code>ACDC,BAD₁₆</code>. A→1010, C→1100, D→1101, C→1100, B→1011, A→1010, D→1101.</p>
+<p><strong>Resultado: 1010110011011100,101110101101₂</strong></p></div>
+<div class="box ex"><div class="box-title">Octal a hexadecimal</div>
+<p>Obter o valor hexadecimal de <code>0,07₈</code>. Pasamos a binario: 0→000 , 0→000 7→111 ⇒ <code>0,000111</code>. Reagrupamos en cuaternas: <code>0000 , 0001 1100</code> → 0 , 1 C.</p>
+<p><strong>Resultado: 0,1C₁₆</strong></p></div>`
+  },
