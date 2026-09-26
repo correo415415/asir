@@ -940,3 +940,50 @@ window.APUNTES.unidades.push({
 <figure class="small"><img src="apuntes/fh/img/ud3/velocidade-arm.png" alt="Evolución da velocidade ARM" loading="lazy"><figcaption>Evolución do rendemento dos núcleos ARM.</figcaption></figure>
 `
   },
+  {
+    id: 'fh-ud3-6', tipo: 'tema', titulo: '6. Refrixeración',
+    resumen: 'Todos os compoñentes xeran calor; unha boa refrixeración alarga a vida do equipo. Aire (pasiva/activa), líquida, inmersión, Peltier, software, control de temperatura e TDP.',
+    claves: ['Disipador', 'Ventilador', 'Pasta térmica', 'Watercooling', 'Peltier', 'TDP'],
+    tags: ['refrixeracion', 'calor', 'disipador'],
+    links: ['fh-ud3', 'fh-ud3-6-1', 'fh-ud3-6-2', 'fh-ud3-6-3', 'fh-ud3-6-4', 'fh-ud3-6-5', 'fh-ud3-6-6', 'fh-ud3-6-7'],
+    contenido: `
+<p>Manter o sistema refrixerado é determinante para a <b>lonxevidade</b> e o <b>rendemento</b> do ordenador. Os que máis calor xeran son: procesador, tarxeta gráfica, chipset, RAM e disco duro. O sobrequentamento pode causar perda de datos e danos físicos.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/disipador-ventilador-cpu.png" alt="Refrixerador de CPU" loading="lazy"><figcaption>Refrixerador = disipador + ventilador (+ pasta térmica).</figcaption></figure>
+<ul>
+<li><b>6.1</b> Refrixeración por aire (pasiva e activa).</li>
+<li><b>6.2</b> Refrixeración líquida (watercooling).</li>
+<li><b>6.3</b> Refrixeración por inmersión.</li>
+<li><b>6.4</b> Células Peltier.</li>
+<li><b>6.5</b> Refrixeración por software.</li>
+<li><b>6.6</b> Control da temperatura.</li>
+<li><b>6.7</b> TDP.</li>
+</ul>
+<div class="box info"><div class="box-title">Arquitectura Zen: CCX, CCD, cIOD (recordo do apartado 5)</div>
+<p><b>CCX</b>: varios núcleos que comparten caché L3. <b>CCD</b>: dous CCX. <b>cIOD</b> (die de E/S): comunica o procesador coa memoria e o bus PCI. <b>Infinity Fabric</b>: bus que interconecta CCX, CCD e cIOD. Zen 2: CCX de 4 núcleos + 16 MB L3 (CCD = 8 núcleos); Zen 3: CCX de 8 núcleos + 32 MB L3 (CCD = 16 núcleos).</p>
+<p><b>Latencia</b>: dentro do mesmo CCX ≈ 50 ns; entre CCX do mesmo CCD ≈ 150 ns; entre CCD ≈ 200 ns.</p></div>
+<div class="box def"><div class="box-title">Lei de Amdahl</div><p>A mellora que se obtén ao engadir núcleos depende de canto sexa <b>paralelizable</b> o programa. Máis núcleos non significa necesariamente un procesador máis rápido.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/lei-amdahl.png" alt="Lei de Amdahl" loading="lazy"><figcaption>Lei de Amdahl: límite da aceleración por paralelismo.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-6-1', tipo: 'subtema', titulo: '6.1 Refrixeración por aire (ventilación)',
+    resumen: 'Pasiva: disipador de aletas sen partes móbiles, silencioso. Activa: disipador + ventilador. Pasta térmica ou almofada térmica entre micro e disipador. Fluxo de aire: entra diante, sae detrás/arriba.',
+    claves: ['Refrixeración pasiva', 'Refrixeración activa', 'Disipador', 'Ventilador', 'Pasta térmica', 'Thermal pad'],
+    tags: ['refrixeracion', 'aire', 'disipador', 'ventilador'],
+    links: ['fh-ud3-6', 'fh-ud3-6-2'],
+    contenido: `
+<p>Permite o fluxo de aire dentro da carcasa para igualar a temperatura interna coa ambiente.</p>
+<div class="box def"><div class="box-title">Refrixeración pasiva</div><p>Usa <b>disipadores</b>: conxunto de aletas metálicas sen partes móbiles que aumentan a superficie de contacto co aire. Non produce ruído. Úsase en procesadores de baixo consumo, chipsets e algunhas gráficas.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/disipador-pasivo.png" alt="Disipador pasivo" loading="lazy"><figcaption>Disipador pasivo.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/ventilador.png" alt="Ventilador" loading="lazy"><figcaption>Ventilador.</figcaption></figure>
+</div>
+<div class="box tip"><div class="box-title">Pasta térmica</div><p>Imprescindible entre micro e disipador: as superficies parecen lisas pero son rugosas a nivel microscópico. Debe ser moi boa condutora da calor. Véndese en xiringas. Alternativa: <b>almofada térmica</b> (thermal pad), pequenas esponxas condutoras con distintos grosores, máis usadas en gráficas e móbiles.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/pasta-termica.png" alt="Pasta térmica" loading="lazy"><figcaption>Aplicación de pasta térmica.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/almofadas-termicas.png" alt="Almofadas térmicas" loading="lazy"><figcaption>Almofadas térmicas.</figcaption></figure>
+</div>
+<div class="box def"><div class="box-title">Refrixeración activa</div><p>Combina un <b>ventilador</b> co disipador: o conxunto chámase <b>refrixerador</b>. Hainos para procesador, ponte norte, gráfica, disco duro… tamén en formato tarxeta de expansión.</p></div>
+<div class="box warn"><div class="box-title">O disipador non elimina a calor, trasládaa</div><p>Hai que expulsar o aire quente da carcasa. Ideal: un ventilador que introduza aire frío (frontal, oco de 8×8 cm) e outro que o expulse (a fonte soe facelo). O aire quente sobe: a saída debe estar arriba, nunca por baixo da entrada. Outros trucos: quitar o po, afastar a caixa da parede, abrir a carcasa.</p></div>
+`
+  },
