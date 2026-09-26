@@ -390,3 +390,99 @@ window.APUNTES.unidades.push({
 <p>As <strong>consolas</strong> máis recentes tamén fan uso dun SoC que integra boa parte das funcionalidades nun único chip, algo entendible tendo en conta que buscan ser máis pequenas que un ordenador de sobremesa normal e consumir menos.</p>
 <figure class="small"><img src="apuntes/fh/img/ud1/raspberry-pi.png" alt="Raspberry Pi" loading="lazy"><figcaption><strong>Raspberry Pi.</strong> Ordenadores de moi pequeno tamaño e baixo custo destinados a usos relacionados coa computación básica, a ciencia, automatización industrial e robótica.</figcaption></figure>`
   },
+
+  /* ---------------- 8 ---------------- */
+  {
+    id: 'fh-ud1-8',
+    tipo: 'tema',
+    titulo: '8. Novas arquitecturas dos microprocesadores',
+    resumen: 'Desafíos do deseño (escalada, eficiencia enerxética, multinúcleo, seguridade), arquitecturas híbridas (CPU+GPU+NPU, empaquetados 3D, chiplets) e catro tecnoloxías emerxentes 2025-2030: óptica, neuromórfica, biomolecular e cuántica.',
+    claves: ['Os ordenadores fan billóns de operacións/s pero non recoñecen patróns coma un cerebro', 'Desafíos: escalada (calor, interferencias, fugas), eficiencia enerxética, múltiples núcleos (sincronización, latencia), seguridade', 'Arquitecturas híbridas: CPU + GPU + NPU → rendemento optimizado, eficiencia, cargas específicas (GPGPU)', 'Empaquetados 3D e chiplets fronte a deseño monolítico', 'Emerxentes: computación óptica, neuromórfica, fabricación biomolecular, microprocesadores cuánticos'],
+    tags: ['novas arquitecturas', 'multicore', 'arquitecturas híbridas', 'GPU', 'NPU', 'GPGPU', 'chiplet', 'die', 'empaquetado 3D', 'eficiencia enerxética', 'seguridade'],
+    links: ['fh-ud1-8-1', 'fh-ud1-8-2', 'fh-ud1-8-3', 'fh-ud1-8-4'],
+    contenido: `
+<p>Na actualidade as computadoras avanzaron moito e poden realizar billóns de operacións por segundo; con todo, non son quen de recoñecer a unha persoa pola súa forma de andar ou de recoñecer patróns ou procesar imaxes tal e como as procesa un cerebro humano.</p>
+<div class="fig-row">
+<figure><img src="apuntes/fh/img/ud1/cerebro.png" alt="Cerebro humano" loading="lazy"><figcaption><strong>Cerebro humano.</strong> Máis eficiente enerxeticamente · formado por neuronas que activan sinapses entre elas · realiza tarefas de forma máis rápida e eficiente · recoñece facianas ou cheiros de forma intelixente.</figcaption></figure>
+<figure><img src="apuntes/fh/img/ud1/procesador.png" alt="Procesador Intel Core" loading="lazy"><figcaption><strong>Procesador.</strong> Menos eficiente enerxeticamente · moi eficiente realizando cálculos · hai tarefas (recoñecer persoas, cheiros, darlle sentido á música…) que non é quen de realizar ou que lle resultan moi custosas en tempo e enerxía.</figcaption></figure>
+</div>
+<h4>Desafíos actuais do deseño de microprocesadores</h4>
+<ul>
+  <li><strong>Escalada:</strong> a medida que facemos os microprocesadores máis pequenos enfrontámonos a limitacións físicas e tecnolóxicas. Encoller os transistores provoca problemas de calor, interferencia electromagnética e fugas de corrente. Con todo, as empresas conseguiron simplificar os seus núcleos, un avance para futuros deseños con máis núcleos.</li>
+  <li><strong>Eficiencia enerxética:</strong> a demanda de dispositivos móbiles e sistemas de alto rendemento fai crucial reducir o consumo sen comprometer o rendemento: optimizar a arquitectura, administrar enerxía e explorar transistores de baixo consumo.</li>
+  <li><strong>Múltiples núcleos:</strong> as arquitecturas <em>multicore</em> traen retos como sincronización, asignación de recursos e latencia. As arquitecturas heteroxéneas ofrecen novas posibilidades.</li>
+  <li><strong>Seguridade:</strong> ataques, vulnerabilidades e brechas desafían a protección de datos e a integridade do sistema. Hai que garantir a seguridade dende o deseño, incluíndo ameazas incorporadas nos chips.</li>
+</ul>
+<h4>Arquitecturas híbridas de procesamento</h4>
+<p>Combinan diferentes tipos de unidades de procesamento nun só sistema para aproveitar as fortalezas de cada unha:</p>
+<ul>
+  <li><strong>Rendemento optimizado:</strong> ó combinar CPU (Unidade Central de Procesamento), GPU (Unidade de Procesamento Gráfico), NPU (Unidade de Procesamento Neuronal)... cada unidade especialízase en tarefas específicas.</li>
+  <li><strong>Eficiencia enerxética:</strong> distribúen a carga de traballo; as GPU son eficientes para tarefas altamente paralelas, liberando a CPU.</li>
+  <li><strong>Mellor rendemento en cargas específicas:</strong> algunhas cargas con moitos cálculos execútanse mellor nunha GPGPU que nunha CPU xenérica.</li>
+  <li><strong>Empaquetados 3D:</strong> encapsulan chips de lóxica e memoria máis próximos entre si, mellorando o rendemento; queda por resolver a disipación de temperatura.</li>
+</ul>
+<figure><img src="apuntes/fh/img/ud1/gpgpu.png" alt="Tarxeta con varias GPU" loading="lazy"><figcaption><strong>GPGPU</strong> (<em>General-Purpose computing on Graphics Processing Units</em>). Usar varias tarxetas de vídeo ou moitos chips gráficos paraleliza aínda máis o procesamento. Unha canle GPGPU é procesamento paralelo entre unha ou máis GPU e CPU con instrucións aceleradas especiais. Aínda que as GPU funcionan a frecuencias máis baixas, teñen moitas máis unidades de procesamento, polo que procesan moitos máis datos por segundo que unha CPU tradicional. Desenvolvéronse a principios do século XXI.</figcaption></figure>
+<div class="fig-row">
+<figure><img src="apuntes/fh/img/ud1/chiplet.png" alt="Chiplet: varios chips (CPU, GPU, memoria 3D) nun paquete" loading="lazy"><figcaption><strong>Chiplet.</strong> Paquete que aloxa varios chips baixo un único <em>die</em>. Fronte ós procesadores monolíticos (tódolos chips e núcleos nun único paquete), o deseño de chiplet é máis eficiente, reduce custos e a posibilidade de fallos.</figcaption></figure>
+<figure><img src="apuntes/fh/img/ud1/die.png" alt="Die dun circuíto integrado" loading="lazy"><figcaption><strong>Die.</strong> Pequeno bloque de material semicondutor sobre o que se fabrica un circuíto funcional determinado.</figcaption></figure>
+</div>
+<div class="box warn"><div class="box-title">Desafíos e oportunidades</div>
+<ul>
+  <li><strong>Complexidade da fabricación:</strong> a integración de chiplets require unha xestión térmica e eléctrica precisa.</li>
+  <li><strong>Falta de habilidades:</strong> os enxeñeiros deben dominar novas ferramentas e comprender a criptografía resistente ós ordenadores cuánticos.</li>
+  <li><strong>Evolución dos estándares:</strong> fan falta estándares unificados para as interfaces de chiplets e os protocolos de seguridade.</li>
+  <li><strong>Preocupacións ambientais:</strong> a eficiencia mellora, pero o consumo total de enerxía aumenta.</li>
+  <li><strong>Presións de custos:</strong> precísase un investimento de capital masivo, o que pode limitar a innovación.</li>
+</ul></div>
+<p>Existen <strong>catro tecnoloxías emerxentes</strong> que prometen redefinir a industria nos vindeiros anos (2025-2030): computación óptica, computación neuromórfica, fabricación biomolecular e microprocesadores cuánticos.</p>`
+  },
+  {
+    id: 'fh-ud1-8-1',
+    tipo: 'subtema',
+    titulo: '8.1 Computación óptica',
+    resumen: 'Substituír sinais eléctricos por luz (fibra óptica) en buses CPU–RAM. O motor de fotónica de silicio 3D Passage acada 100 Gbps/mm². Podería eliminar o pescozo de botella de von Neumann.',
+    claves: ['Sinais de luz en lugar de eléctricos (interconexións de fibra óptica)', 'O ruído da optoelectrónica non é obstáculo; pode aproveitarse na IA', 'Passage (fotónica de silicio 3D): 100 Gbps/mm²', 'Elimina o pescozo de botella de von Neumann (procesador ↔ memoria)', 'Desafíos: xestión térmica e consistencia na fabricación'],
+    tags: ['computación óptica', 'fotónica', 'fibra óptica', 'pescozo de botella de von Neumann', 'Passage'],
+    contenido: `
+<p>A computación óptica pode substituír os sinais eléctricos actuais por <strong>sinais de luz</strong> moito máis rápidos a través de interconexións de fibra óptica (por exemplo, para o seu uso en buses entre a CPU e a RAM).</p>
+<p>Como resultado de estudos realizados, descubriuse que o ruído inherente á optoelectrónica integrada non é un obstáculo; de feito, pódese aproveitar para mellorar a creatividade da intelixencia artificial.</p>
+<p>O <strong>Motor de Fotónica de Silicio en 3D Passage</strong> demostra o potencial dos interconectores ópticos, logrando taxas de datos de <strong>100 Gbps/mm²</strong>.</p>
+<div class="box info"><div class="box-title">Pescozo de botella de von Neumann</div><p>Esta tecnoloxía podería eliminar o <em>pescozo da botella de von Neumann</em>, que é a limitación do rendemento tradicional entre procesadores e memoria.</p></div>
+<p>Con todo, quedan desafíos na xestión térmica e na consistencia na fabricación.</p>`
+  },
+  {
+    id: 'fh-ud1-8-2',
+    tipo: 'subtema',
+    titulo: '8.2 A computación neuromórfica',
+    resumen: 'Chips que imitan redes neuronais biolóxicas (Intel Loihi) procesando cargas de IA con 1/1000 da enerxía dunha GPU. Hala Point: 1150 millóns de neuronas, 15-300 veces menos enerxía.',
+    claves: ['Intel Loihi: desviación radical das arquitecturas tradicionais', 'Imitan redes neuronais biolóxicas: 1/1000 da enerxía das GPU', 'Aplicacións: retinas artificiais, narices artificiais, recoñecemento facial, robótica, sensores', 'Hala Point: primeiro sistema neuromórfico de Intel con 1150 millóns de neuronas', 'Ferramentas de programación e estándares aínda madurando'],
+    tags: ['neuromórfica', 'Loihi', 'Hala Point', 'Intel', 'redes neuronais', 'eficiencia'],
+    contenido: `
+<p>O procesador <strong>Loihi</strong> de Intel representa unha desviación radical das arquitecturas de computación tradicionais. Estes chips imitan as <strong>redes neuronais biolóxicas</strong>, procesando certas cargas de traballo de IA con <strong>1/1000 da enerxía</strong> das GPU convencionais. Esta eficiencia pode facer posible a implantación de microchips en retinas artificiais para persoas con cegueira, narices artificiais que recoñezan cheiros, sistemas de recoñecemento facial...</p>
+<figure><img src="apuntes/fh/img/ud1/hala-point.png" alt="Sistema neuromórfico Intel Hala Point" loading="lazy"><figcaption><strong>Hala Point.</strong> O primeiro sistema neuromórfico de Intel de 1 150 millóns de neuronas constrúe un camiño cara a unha IA máis eficiente e escalable. Permitiría manexar tarefas como a computación cognitiva, a IA adaptativa e os datos de detección usando de 15 a 300 veces menos enerxía que os chips actuais de silicio.</figcaption></figure>
+<p>As primeiras aplicacións en robótica e procesamento de sensores amosan posibilidades, pero as ferramentas de programación e os estándares aínda están madurando. (Véxase tamén o apartado 9.3, <em>As redes neuronais</em>.)</p>`
+  },
+  {
+    id: 'fh-ud1-8-3',
+    tipo: 'subtema',
+    titulo: '8.3 Fabricación biomolecular',
+    resumen: 'Investigación do MIT: ensamblaxe de transistores guiada por ADN. Podería abaratar e democratizar a fabricación de chips e habilitar circuítos tridimensionais.',
+    claves: ['MIT: transistores ensamblados guiados por ADN', 'Reduce potencialmente os custos de fabricación', 'Primeiras etapas; podería democratizar a produción e permitir circuítos 3D'],
+    tags: ['biomolecular', 'ADN', 'MIT', 'fabricación de chips'],
+    contenido: `
+<p>A investigación do <strong>MIT</strong> sobre a ensamblaxe de transistores guiados por <strong>ADN</strong> podería revolucionar a fabricación de chips, reducindo potencialmente os custos de fabricación.</p>
+<p>Aínda que está nas primeiras etapas, este enfoque podería democratizar a produción de chips e habilitar novas formas de circuítos tridimensionais.</p>`
+  },
+  {
+    id: 'fh-ud1-8-4',
+    tipo: 'subtema',
+    titulo: '8.4 Microprocesadores cuánticos',
+    resumen: 'Operan con qubits que poden estar en varios estados á vez (superposición) e aproveitan a entrelazación para cálculo paralelo masivo. Retos: coherencia e decoherencia cuántica. Aínda en fase experimental.',
+    claves: ['Bits clásicos (0 ou 1) → qubits en múltiples estados (superposición cuántica)', 'Superposición + entrelazación → cálculo paralelo a gran escala', 'Útiles en simulación cuántica, optimización complexa, factorización de números grandes', 'Coherencia cuántica: manter os qubits o tempo suficiente', 'Decoherencia: interacción coa contorna que fai perder as propiedades cuánticas', 'Estado actual: desenvolvemento e experimentación'],
+    tags: ['cuántico', 'qubit', 'superposición', 'entrelazación', 'coherencia', 'decoherencia', 'factorización'],
+    contenido: `
+<p>Un <strong>microprocesador cuántico</strong> é un dispositivo de procesamento de información que opera utilizando principios de mecánica cuántica en lugar da física clásica. A diferenza dos microprocesadores tradicionais, que utilizan bits clásicos (0 ou 1), os cuánticos empregan <strong>qubits</strong> (bits cuánticos) que poden estar en múltiples estados á vez debido ó fenómeno de <strong>superposición cuántica</strong>.</p>
+<p>En lugar de realizar cálculos secuencialmente como nas CPU clásicas, aproveitan a superposición e a <strong>entrelazación</strong> para realizar cálculos de maneira paralela a unha escala moito maior. Isto ten o potencial de permitir un rendemento significativamente superior en certos problemas: a simulación de sistemas cuánticos, a optimización complexa e a factorización de números grandes.</p>
+<div class="box warn"><div class="box-title">Desafíos</div><p>A <strong>coherencia cuántica</strong> —manter os qubits nun estado cuántico durante o tempo suficiente para calcular— é un obstáculo importante. A <strong>decoherencia</strong>, a interacción dos qubits coa súa contorna que lles fai perder as propiedades cuánticas, pode limitar a súa utilidade en certas aplicacións.</p></div>
+<p>Na actualidade os microprocesadores cuánticos están nunha etapa de desenvolvemento e experimentación. Aínda que están lonxe de usarse en aplicacións prácticas a grande escala, amosan un gran potencial para revolucionar a informática e resolver problemas complexos de maneira máis eficiente no futuro.</p>`
+  },
