@@ -305,3 +305,88 @@ window.APUNTES.unidades.push({
 <div class="box warn"><div class="box-title">Quinto compoñente: os buses</div><p>A maiores dos elementos que conforman esta arquitectura precisamos dun quinto compoñente: os <strong>buses</strong>, que son camiños a través dos que as instrucións e os datos circulan entre os distintos bloques do ordenador.</p></div>
 <figure class="small"><img src="apuntes/fh/img/ud1/von-neumann.png" alt="John von Neumann" loading="lazy"><figcaption><strong>John von Neumann.</strong> Naceu no ano 1903 en Budapest. Durante a Segunda Guerra Mundial traballaba para o goberno americano e, vendo as limitacións da ENIAC e outras máquinas de computación, definiu un novo sistema lóxico de computación.</figcaption></figure>`
   },
+
+  /* ---------------- 7 ---------------- */
+  {
+    id: 'fh-ud1-7',
+    tipo: 'tema',
+    titulo: '7. SoC: System on a Chip',
+    resumen: 'Un SoC integra procesador, memoria, E/S e outros módulos nun único chip. Base dos móbiles (ARM), consolas, Raspberry Pi e sistemas embebidos: menos consumo, custo e espazo; máis fiabilidade.',
+    claves: ['SoC = tódolos módulos (ou gran parte) dun computador nun único circuíto integrado', 'Requisito: partes que nun PC tradicional irían en chips separados', 'Exemplo: chips ARM dos teléfonos móbiles', 'Menos enerxía, menor custo, máis fiabilidade que sistemas multichip', 'Canto máis preto está a memoria do procesador, máis rápida a resposta'],
+    tags: ['SoC', 'System on a Chip', 'ARM', 'sistemas embebidos', 'Exynos', 'smartphone', 'integración'],
+    links: ['fh-ud1-7-1', 'fh-ud1-7-2', 'fh-ud1-7-3'],
+    contenido: `
+<p>Un <strong>sistema nun chip</strong> describe a tendencia de usar tecnoloxías de fabricación que integran tódolos ou unha gran parte dos módulos que compoñen un computador ou calquera outro sistema informático ou electrónico nun único circuíto integrado ou chip.</p>
+<div class="box def"><div class="box-title">SoC</div><p>Un SoC é unha integración revolucionaria de múltiples compoñentes esenciais, como o <strong>procesador</strong>, a <strong>memoria</strong> e a <strong>entrada/saída</strong>, nun só chip.</p></div>
+<p>O único requirimento é que sexan partes que nunha arquitectura de PC tradicional se atribuirían a un chip aparte, e non ó propio SoC. Este deseño compacto mellora o rendemento de ordenadores portátiles, de sobremesa, tabletas e teléfonos intelixentes. Para potenciar a multitarefa dun portátil ou para optimizar a potencia de procesamento dun teléfono intelixente, o SoC é a pedra angular tecnolóxica que impulsa os avances nos dispositivos informáticos modernos.</p>
+<div class="fig-row">
+<figure><img src="apuntes/fh/img/ud1/soc-exynos.png" alt="SoC Exynos 4 Quad na placa dun Samsung Galaxy S III" loading="lazy"><figcaption><strong>Smartphone.</strong> Un SoC, o Exynos 4 Quad (4412), na placa dun teléfono intelixente Samsung Galaxy S III.</figcaption></figure>
+<figure><img src="apuntes/fh/img/ud1/diagrama-soc.png" alt="Diagrama dun SoC: bloques dixitais (CPU, RAM), sensores MEMS, analóxico e RF" loading="lazy"><figcaption><strong>Diagrama dun SoC.</strong> A memoria nun SoC é como unha guía de referencia rápida para o procesador: almacena os datos que precisa de inmediato. Canto máis preto estea a memoria do procesador no chip, máis rápida será a recuperación, o que mellora a velocidade e a capacidade de resposta do sistema.</figcaption></figure>
+</div>
+<p>O exemplo máis representativo da aplicación da tecnoloxía SoC son os <strong>sistemas embebidos</strong> que presentan os actuais teléfonos móbiles: chips con arquitectura <strong>ARM</strong> integrando practicamente todo o necesario para o funcionamento do dispositivo, facéndoo todo nun espazo moi pequeno e permitindo a miniaturización existente nos móbiles actuais.</p>
+<p>Un SoC normalmente <strong>consome menos enerxía</strong>, ten un <strong>custo inferior</strong> e unha <strong>maior fiabilidade</strong> que os sistemas multichip ós que substitúe: ó cumprir menos pezas para o sistema, os custos de material e ensamblado vense reducidos.</p>
+<figure><img src="apuntes/fh/img/ud1/cpu-mcu-mpu-soc-mcm.png" alt="CPU, MCU, MPU, SoC e MCM" loading="lazy"><figcaption>Distintos niveis de integración: CPU (Central Processing Unit), MCU (Micro Computer Unit), MPU (Micro Processing Unit), SoC (System on Chip) e MCM (Multi Chip Module).</figcaption></figure>
+<div class="box tip"><div class="box-title">Afecta ó tamaño?</div><p>Ó integrar compoñentes esenciais como o procesador, a memoria e outros nun só chip, os dispositivos vólvense máis elegantes e compactos.</p></div>`
+  },
+  {
+    id: 'fh-ud1-7-1',
+    tipo: 'subtema',
+    titulo: '7.1 Vantaxes e desvantaxes de usar un SoC',
+    resumen: 'Vantaxes: espazo, eficiencia enerxética (PPA), custo, fiabilidade, rendemento. Desvantaxes: punto único de fallo, custo de desenvolvemento, dependencia do fabricante, pouca flexibilidade, analóxico limitado, non actualizable.',
+    claves: ['+ Optimización do espazo', '+ Eficiencia enerxética: sen buses externos, métricas PPA (potencia, rendemento, área)', '+ Máis económico · + Fiabilidade (menos conexións) · + Rendemento (sinais no chip)', '− Punto único de fallo (limita actualizacións)', '− Custo de desenvolvemento alto: só rendible con mercado grande', '− Dependencia do fabricante · − Pouca flexibilidade', '− Analóxico/dixital mixto: unha única tecnoloxía de proceso', '− Non idóneo para aplicacións intensivas en consumo · − Non actualizable'],
+    tags: ['SoC', 'vantaxes', 'desvantaxes', 'PPA', 'punto único de fallo', 'fiabilidade'],
+    contenido: `
+<p>Unha vez explicado o concepto de SoC a pregunta que xorde é: que vantaxes e desvantaxes implica o uso dun SoC fronte a ter varios chips separados?</p>
+<div class="box tip"><div class="box-title">Vantaxes</div>
+<ul>
+  <li><strong>Optimización do espazo:</strong> os SoC ocupan menos espazo que varios compoñentes discretos, o que fai posibles deseños de dispositivos máis pequenos e de menor peso ó xuntar varias funcionalidades nun único chip, algo crítico nun teléfono móbil.</li>
+  <li><strong>Eficiencia enerxética:</strong> a substitución de compoñentes e circuítos grandes por SoC implica prescindir dos buses de datos e leva a unha redución significativa no consumo de enerxía, conseguindo as métricas <strong>PPA</strong> (potencia, rendemento e área) requiridas.</li>
+  <li><strong>Máis económico:</strong> un único chip SoC é máis económico que o conxunto de varios chips separados que doutro xeito serían necesarios.</li>
+  <li><strong>Fiabilidade:</strong> un único SoC ten menos conexións e, polo tanto, é significativamente máis fiable que un sistema multiparte conectado a través dun substrato.</li>
+  <li><strong>Rendemento:</strong> debido a que os sinais poden permanecer no chip, un SoC pode lograr un maior rendemento e velocidade que unha solución multiparte.</li>
+</ul></div>
+<div class="box danger"><div class="box-title">Desvantaxes</div>
+<ul>
+  <li><strong>Punto único de fallo:</strong> con tódolos compoñentes nun só chip, un fallo nun compoñente afecta a todo o sistema (o que tamén limita as actualizacións).</li>
+  <li><strong>Custo do desenvolvemento:</strong> o deseño de SoC personalizados require máis coñecementos e ferramentas especializadas, o que supón maior tempo e custos. Só se recuperan se o mercado do SoC é o suficientemente grande.</li>
+  <li><strong>Dependencia do fabricante:</strong> se un compoñente é parte do SoC e hai problemas de implementación ou subministro, non se podería cambiar.</li>
+  <li><strong>Flexibilidade:</strong> un SoC é ideal para a tarefa á que se destina, pero ten un alcance limitado para calquera outra tarefa.</li>
+  <li><strong>Analóxico/dixital mixto:</strong> como tódolos compoñentes se fabrican cunha única tecnoloxía de proceso, non hai opción de usar a tecnoloxía óptima para as seccións analóxicas; os SoC son máis axeitados para aplicacións dixitais.</li>
+  <li><strong>Non idoneidade:</strong> poderían non ser idóneos para aplicacións intensivas en consumo enerxético.</li>
+  <li><strong>Non actualizables:</strong> os equipos que os integran non soen ser actualizables en hardware, xa que está estreitamente ligado ó deseño do dispositivo.</li>
+</ul></div>`
+  },
+  {
+    id: 'fh-ud1-7-2',
+    tipo: 'subtema',
+    titulo: '7.2 Procesadores de PC, tamén son un SoC?',
+    resumen: 'As CPU Intel/AMD integran ponte norte (controlador de memoria, PCIe) e gráficos, pero non a ponte sur nin a RAM, polo que non se consideran SoC. Intel Lakefield foi o intento de SoC para PC (Foveros, big.LITTLE), un fracaso comercial.',
+    claves: ['CPU actuais integran northbridge (controlador de memoria + PCIe) e gráficos', 'Falta a ponte sur (USB, SATA…) e a RAM → non son SoC estritos', 'Intel Lakefield: SoC de baixo consumo, empaquetado 3D Foveros, núcleos híbridos big.LITTLE', 'Lakefield: fin de vida en pouco máis dun ano; PCs de 2000 € con rendemento de netbook', 'Sucesores con núcleos híbridos: Alder Lake, Raptor Lake, Meteor Lake', 'Coprocesadores: matemático (coma flotante) e gráfico'],
+    tags: ['SoC', 'Intel', 'AMD', 'northbridge', 'ponte norte', 'ponte sur', 'chipset', 'Lakefield', 'Foveros', 'big.LITTLE', 'Alder Lake', 'coprocesador'],
+    contenido: `
+<p>Tendo en conta a definición de SoC, podemos comprobar ata que punto o é un procesador de PC actual, en particular unha CPU <strong>AMD</strong> ou <strong>Intel</strong>.</p>
+<p>Nestas CPU non só temos o procesador propiamente dito no seu interior, senón tamén outras partes que antes ían en chips separados: a <strong>ponte norte</strong> ou <em>northbridge</em>, que integra o controlador de memorias e as liñas PCIe, e que nos equipos máis antigos formaba parte da placa base. Tamén hai que sumar que a maioría destas CPU contan con <strong>gráficos integrados</strong>, outro compoñente tipicamente usado fóra do chip do procesador.</p>
+<p>A gran fonte de discrepancia está na ausencia de compoñentes esenciais como a <strong>memoria</strong>. Moitos especialistas consideran que un SoC debería combinar, ademais de CPU, gráficos e ponte norte, tamén a <strong>ponte sur</strong> e a <strong>memoria RAM</strong>. Estas dúas últimas partes non as teñen estes procesadores, ó carecer dos controladores de USB, SATA e demais que forman parte do <em>chipset</em>. Isto provocaría que non puidésemos considerar como SoC un AMD ou un Intel normal e corrente.</p>
+<h4>Intel Lakefield</h4>
+<p>Intel decidiu apostar polo seu SoC ó que puxo o nome de <strong>Lakefield</strong>, dentro dun proxecto de procesadores de baixo consumo para equipos portátiles bastante arriscado polas súas características, como que tódalas partes do chip constrúense postas unhas enriba das outras.</p>
+<figure><img src="apuntes/fh/img/ud1/intel-lakefield-foveros.png" alt="Intel Lakefield: capas DRAM, chiplet de cómputo e die base apilados (Foveros)" loading="lazy"><figcaption><strong>Intel Lakefield.</strong> Unha das CPU máis estrañas e curiosas dos últimos anos no mundo do PC. Reúne varios paradigmas das futuras CPU de Intel: a tecnoloxía de empaquetado <strong>Foveros</strong> e unha configuración de núcleos híbridos coñecida como <strong>big.LITTLE</strong>. Non soe ser habitual que unha CPU chegue ó fin de vida en pouco máis dun ano, pero así foi con Lakefield.</figcaption></figure>
+<p>A tecnoloxía Foveros utilizouse en futuros deseños de CPU e GPU da propia Intel, sendo Lakefield unha posta a proba. Tamén foi a primeira CPU de Intel para PC baseada en <strong>núcleos híbridos</strong> ou de diferente potencia. A explicación de Intel para o cese da produción é que a demanda do mercado virou cara outros procesadores da compañía: Intel lanzou <strong>Alder Lake</strong> (continuados por Raptor Lake e Meteor Lake), baseada en núcleos híbridos. En todo caso, Lakefield foi un fracaso comercial: foi parar a ordenadores de máis de 2 000 euros pero cun rendemento dun netbook de 400.</p>
+<div class="box info"><div class="box-title">Coprocesadores</div>
+<p>Un <strong>coprocesador</strong> é unha unidade especializada que axuda ó procesador en determinadas operacións.</p>
+<div class="fig-row">
+<figure><img src="apuntes/fh/img/ud1/coprocesador-80387.png" alt="Coprocesador matemático Intel 80387" loading="lazy"><figcaption><strong>Coprocesador matemático.</strong> Ó principio executaban operacións en coma flotante, que son operacións complexas con moitos díxitos.</figcaption></figure>
+<figure><img src="apuntes/fh/img/ud1/xeon-phi.png" alt="Intel Xeon Phi Coprocessor" loading="lazy"><figcaption><strong>Coprocesador gráfico.</strong> Hoxe son coprocesadores gráficos que descargan ó procesador principal de operacións de procesamento de imaxes: fotos ou vídeo.</figcaption></figure>
+</div></div>`
+  },
+  {
+    id: 'fh-ud1-7-3',
+    tipo: 'subtema',
+    titulo: '7.3 En que sistemas os podemos encontrar?',
+    resumen: 'Sistemas embebidos (maquinaria, caixeiros, aparellos de propósito específico), consolas recentes e Raspberry Pi (ordenadores pequenos e baratos para computación básica, ciencia, automatización e robótica).',
+    claves: ['Sistemas embebidos: dispositivo con propósito específico (maquinaria, caixeiros…)', 'Consolas recentes: SoC para reducir tamaño e consumo', 'Raspberry Pi: ordenador de moi pequeno tamaño e baixo custo'],
+    tags: ['sistemas embebidos', 'consolas', 'Raspberry Pi', 'robótica', 'automatización'],
+    contenido: `
+<p>Estes <strong>sistemas embebidos</strong> son os que se empregan dentro dun dispositivo concreto como pode ser un elemento de maquinaria, un caixeiro, ou en xeral calquera aparello que teña un propósito específico e non un uso xeral como un ordenador tradicional.</p>
+<p>As <strong>consolas</strong> máis recentes tamén fan uso dun SoC que integra boa parte das funcionalidades nun único chip, algo entendible tendo en conta que buscan ser máis pequenas que un ordenador de sobremesa normal e consumir menos.</p>
+<figure class="small"><img src="apuntes/fh/img/ud1/raspberry-pi.png" alt="Raspberry Pi" loading="lazy"><figcaption><strong>Raspberry Pi.</strong> Ordenadores de moi pequeno tamaño e baixo custo destinados a usos relacionados coa computación básica, a ciencia, automatización industrial e robótica.</figcaption></figure>`
+  },
