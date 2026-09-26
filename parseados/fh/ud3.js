@@ -987,3 +987,102 @@ window.APUNTES.unidades.push({
 <div class="box warn"><div class="box-title">O disipador non elimina a calor, trasládaa</div><p>Hai que expulsar o aire quente da carcasa. Ideal: un ventilador que introduza aire frío (frontal, oco de 8×8 cm) e outro que o expulse (a fonte soe facelo). O aire quente sobe: a saída debe estar arriba, nunca por baixo da entrada. Outros trucos: quitar o po, afastar a caixa da parede, abrir a carcasa.</p></div>
 `
   },
+  {
+    id: 'fh-ud3-6-2', tipo: 'subtema', titulo: '6.2 Refrixeración líquida (watercooling)',
+    resumen: 'A auga conduce mellor a calor que o aire. Circuíto cerrado: bloque, tubos, bomba, radiador e ventiladores. Ideal para overclocking, silenciosa; risco de fugas.',
+    claves: ['Bloque de auga', 'Bomba', 'Radiador', 'Depósito', 'Circuíto cerrado', 'Fuga'],
+    tags: ['refrixeracion', 'liquida', 'watercooling'],
+    links: ['fh-ud3-6', 'fh-ud3-6-1', 'fh-ud3-6-3'],
+    contenido: `
+<p>Baséase en que a auga (ou outro líquido refrixerante) ten maior <b>condutividade térmica</b> que o aire. Extrae a calor do procesador, gráfica, chipset ou discos fóra da carcasa mediante un <b>circuíto cerrado</b>.</p>
+<div class="box def"><div class="box-title">Compoñentes</div>
+<ul>
+<li><b>Bloque de auga</b> (cobre ou aluminio): en contacto co compoñente.</li>
+<li><b>Tubos</b>: circuíto polo que flúe o refrixerante.</li>
+<li><b>Bomba</b>: presuriza e move o líquido.</li>
+<li><b>Radiador</b>: tubos moi finos + aletas que transfiren a calor ao aire.</li>
+<li><b>Ventiladores</b>: arrefrían o radiador.</li>
+<li><b>Depósito</b>: almacena o líquido.</li>
+</ul></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/refrixeracion-liquida-esquema.png" alt="Esquema de refrixeración líquida" loading="lazy"><figcaption>Depósito → bomba → bloques → radiador → depósito.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/bloque-cpu-liquida.png" alt="Bloque de CPU" loading="lazy"><figcaption>Bloque para procesador.</figcaption></figure>
+</div>
+<div class="box tip"><div class="box-title">Vantaxes</div>
+<ul>
+<li>Moi boa para <b>overclocking</b>: non se xera calor dentro da carcasa.</li>
+<li>Medio de refrixeración económico e fácil de obter.</li>
+<li>Os compoñentes quedan illados do po e da humidade.</li>
+<li>Grande impacto visual (deseño).</li>
+<li>Disipa a calor de toda a placa, temperatura ideal ≈ 21 °C.</li>
+<li>Refrixeración <b>silenciosa</b>.</li>
+</ul></div>
+<div class="box danger"><div class="box-title">Inconveniente</div><p>Unha <b>fuga de líquido</b> danaría o equipo.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-6-3', tipo: 'subtema', titulo: '6.3 Refrixeración por inmersión',
+    resumen: 'O PC mergúllase nun líquido de moi baixa condutividade eléctrica (aceite mineral, auga destilada). Sinxelo pero dificulta reparacións e actualizacións.',
+    claves: ['Aceite mineral', 'Auga destilada', 'Baixa condutividade eléctrica'],
+    tags: ['refrixeracion', 'inmersion'],
+    links: ['fh-ud3-6', 'fh-ud3-6-2', 'fh-ud3-6-4'],
+    contenido: `
+<p>O ordenador completo mergúllase nun líquido con <b>moi baixa condutividade eléctrica</b>: aceite mineral ou auga pura (destilada, sen minerais nin metais que a fagan condutora).</p>
+<p>A calor intercámbiase entre os compoñentes, o refrixerante e o aire circundante.</p>
+<div class="box warn"><div class="box-title">Desvantaxe</div><p>Substituír pezas para actualizacións ou reparacións é moi incómodo.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/refrixeracion-inmersion.png" alt="Refrixeración por inmersión" loading="lazy"><figcaption>Equipo mergullado en aceite mineral.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-6-4', tipo: 'subtema', titulo: '6.4 Refrixeración Peltier',
+    resumen: 'Célula termoeléctrica: ao pasar corrente, unha cara arrefría e a outra quenta. Non elimina calor, só a transfire; combínase con aire ou líquido. Overclocking extremo, cara.',
+    claves: ['Célula Peltier', 'Termoeléctrico', 'Overclocking extremo'],
+    tags: ['refrixeracion', 'peltier'],
+    links: ['fh-ud3-6', 'fh-ud3-6-3', 'fh-ud3-6-5'],
+    contenido: `
+<p>As <b>células Peltier</b> son elementos termoeléctricos: láminas que, ao ser atravesadas por corrente eléctrica, fan que unha cara se <b>arrefríe</b> mentres a outra se <b>quenta</b>.</p>
+<div class="box warn"><div class="box-title">Non elimina a calor</div><p>Só a transfire dun punto a outro consumindo enerxía, así que debe combinarse cun sistema de refrixeración por aire ou líquido.</p></div>
+<p>Pouco comúns en PC; úsanse en <b>overclocking extremo</b>. Véndense en tendas de electrónica especializadas a prezo elevado.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/peltier.png" alt="Célula Peltier" loading="lazy"><figcaption>Célula Peltier.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-6-5', tipo: 'subtema', titulo: '6.5 Refrixeración por software',
+    resumen: 'Ordes de aforro enerxético (desde os Pentium) que poñen a descansar as partes do micro inactivas. Non serve a plena carga; os SO actuais fano automaticamente.',
+    claves: ['Aforro enerxético', 'Tempos mortos', 'Estados de repouso'],
+    tags: ['refrixeracion', 'software', 'aforro'],
+    links: ['fh-ud3-6', 'fh-ud3-6-4', 'fh-ud3-6-6'],
+    contenido: `
+<p>Aproveita as <b>ordes de aforro enerxético</b> presentes en todos os micros desde a época dos Pentium: pon a descansar as partes do procesador que non traballan nese intre, reducindo moito a temperatura.</p>
+<div class="box warn"><div class="box-title">Limitación</div><p>Cando o micro traballa ao máximo en todo momento non hai tempos mortos que aproveitar. Aínda así os programas aproveitan pausas menores que décimas de segundo, polo que sempre serve de apoio a un bo ventilador.</p></div>
+<p>Os sistemas operativos actuais realizan esta tarefa <b>automaticamente</b>.</p>
+`
+  },
+  {
+    id: 'fh-ud3-6-6', tipo: 'subtema', titulo: '6.6 Control da temperatura',
+    resumen: 'Por hardware (paneis con sensores en baías de 5¼") ou por software (Monitor de hardware do SETUP, Everest, SpeedFan). Medir en repouso e con carga; menor temperatura = maior vida útil.',
+    claves: ['Sensores', 'Monitor de hardware', 'SpeedFan', 'Everest', 'Temperatura máxima'],
+    tags: ['refrixeracion', 'temperatura', 'monitorizacion'],
+    links: ['fh-ud3-6', 'fh-ud3-6-5', 'fh-ud3-6-7'],
+    contenido: `
+<ul>
+<li><b>Por hardware</b>: dispositivos que se instalan en baías de 5¼" con sensores colocados nas zonas a monitorizar e un panel que amosa os datos, con avisos de temperatura excesiva.</li>
+<li><b>Por software</b>: case todas as placas teñen no SETUP a opción <b>Monitor de hardware</b> (temperaturas de CPU e placa). Programas: <b>Everest</b> (máis detalle na versión de pago), <b>SpeedFan</b>, HWMonitor…</li>
+</ul>
+<div class="box tip"><div class="box-title">Cal é a temperatura correcta?</div><p>Hai que mirar dous estados: <b>sistema inactivo</b> e <b>con moita carga</b>, e consultar a temperatura máxima recomendada da CPU. Hoxe hai CPU que funcionan a 72 °C sen reducir a súa vida útil, pero canto menor sexa a temperatura, maior será a vida dos compoñentes.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/monitor-temperatura.png" alt="Monitor de temperatura" loading="lazy"><figcaption>Monitorización de temperaturas por software.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-6-7', tipo: 'subtema', titulo: '6.7 TDP (Thermal Design Power)',
+    resumen: 'Potencia de deseño térmico: calor máxima que disipa un compoñente baixo uso intensivo, en watts. Non é o consumo eléctrico (aínda que correlaciona). Serve para elixir o refrixerador.',
+    claves: ['TDP', 'Watts', 'Calor disipada', 'Refrixerador adecuado'],
+    tags: ['refrixeracion', 'tdp', 'procesador'],
+    links: ['fh-ud3-6', 'fh-ud3-6-6', 'fh-ud3-5'],
+    contenido: `
+<div class="box def"><div class="box-title">TDP</div><p>Cantidade máxima de <b>calor</b> que se espera que un compoñente produza baixo uso intensivo. Mídese en <b>watts</b>, pero <b>non é o consumo eléctrico</b> do procesador (aínda que normalmente hai correlación). Valores típicos: decenas de watts.</p></div>
+<p>Úsase para determinar a potencia que debe ter o <b>refrixerador de CPU</b>: o fabricante do refrixerador especifica con que modelos de procesador se pode usar.</p>
+<div class="box info"><div class="box-title">TDP alta ≠ máis consumo, pero…</div><p>Igual que coas fontes, unha TDP alta implica <b>menor eficiencia enerxética</b>: esa electricidade malgástase en xerar calor.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/tdp.png" alt="TDP" loading="lazy"><figcaption>Especificación de TDP dun procesador.</figcaption></figure>
+`
+  },
