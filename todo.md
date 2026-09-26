@@ -21,12 +21,12 @@
 - [x] Soporte de imágenes en el contenido de los nodos (estilo `figure`/`img` en el panel, click para ampliar)
 
 ## Mapa
-- [ ] **Sistema automático anti-solapamiento de tarjetas** (`layout()` en `assets/app.js`): que las tarjetas nunca se superpongan, sea cual sea el número de nodos (p. ej. XBD UD1+UD2 juntas o «Todas las materias»), sin ajustes manuales por materia
-  - [ ] Radios de anillo adaptativos: calcular el radio de cada anillo para que la longitud de arco disponible por nodo sea ≥ ancho de tarjeta + margen (en vez de `RADII` fijos)
-  - [ ] Reparto angular proporcional al número de hojas, con ángulo mínimo por nodo según su ancho real (t-materia 300 px, t-unidad 270, tema 230, subtema/ejercicio 210) y alto estimado
-  - [ ] Pasada final de resolución de colisiones (AABB): empujar radialmente/tangencialmente las tarjetas que aún choquen hasta que no quede ninguna intersección
-  - [ ] Mantener las aristas legibles (padre-hijo cercanos) y el centrado inicial / `fitAll`
-  - [ ] Test automático (Playwright o script node) que cargue todas las materias y verifique 0 intersecciones entre tarjetas
+- [x] **Sistema automático anti-solapamiento de tarjetas** (`assets/layout.js`, usado por `layout()` en `assets/app.js`): que las tarjetas nunca se superpongan, sea cual sea el número de nodos (p. ej. XBD UD1+UD2 juntas o «Todas las materias»), sin ajustes manuales por materia
+  - [x] Radios de anillo adaptativos: calcular el radio de cada anillo para que la longitud de arco disponible por nodo sea ≥ ancho de tarjeta + margen (en vez de `RADII` fijos)
+  - [x] Reparto angular proporcional al número de hojas, con ángulo mínimo por nodo según su ancho real (t-materia 300 px, t-unidad 270, tema 230, subtema/ejercicio 210) y alto estimado
+  - [x] Pasada final de resolución de colisiones (AABB): empujar radialmente/tangencialmente las tarjetas que aún choquen hasta que no quede ninguna intersección
+  - [x] Mantener las aristas legibles (padre-hijo cercanos) y el centrado inicial / `fitAll`
+  - [x] Test automático (Playwright o script node) que cargue todas las materias y verifique 0 intersecciones entre tarjetas → `node tools/test_layout.js` (verificado también en navegador con medidas reales: XBD 87, FH 128, Todas 251 tarjetas, 0 solapes)
 
 ## Mantenimiento
-- [ ] Commits frecuentes + PR actualizada
+- [x] Commits frecuentes + PR actualizada

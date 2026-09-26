@@ -10,7 +10,8 @@ busca desde la **barra inferior**. Estilo blanco *glass* profesional. Desplegabl
 index.html            Aplicación (topbar, índice, lienzo, panel de detalle, buscador, ayuda)
 assets/
   style.css           Estilos (tema blanco glass)
-  app.js              Lógica: grafo, layout radial, pan/zoom, índice, panel, búsqueda
+  layout.js           Disposición radial sin solapamientos (anillos adaptativos, filas escalonadas, colisiones AABB)
+  app.js              Lógica: grafo, pan/zoom, índice, panel, búsqueda; usa layout.js con las medidas reales de las tarjetas
 apuntes/              Apuntes ORIGINALES tal y como se reciben, separados por materia
   xbd/                XBD · Xestión de Bases de Datos (MP0372)
     ud1-sistemas-almacenamiento-sgbd.html
@@ -37,6 +38,7 @@ tools/                Scripts de parseo y extracción:
                         ocr_fh_ud3.sh                        (pdftoppm + tesseract glg+spa)
                         extract_pdf_images.py                (pymupdf, aplana transparencias)
                         contact_sheet.py                     (hoja de contactos para revisar figuras)
+                        test_layout.js                       (node: verifica 0 solapes de tarjetas en todas las materias)
 todo.md               Tareas pendientes
 vercel.json           Configuración de despliegue estático
 ```
