@@ -743,3 +743,101 @@ window.APUNTES.unidades.push({
 <p>Non tódalas placas empregan tódalas características dun PCH: nunha Micro-ATX ou Mini-ITX non hai espazo para varias interfaces, quedando só as máis importantes.</p>
 <div class="box warn"><div class="box-title">Problemas do PCH</div><p>Igual que unha CPU, as <strong>temperaturas</strong> afectan ó seu funcionamento; un erro de microcódigo ou unha voltaxe mal axustada tamén poden causar erros críticos. Se o chipset se sobrequenta pode sufrir os mesmos fallos que unha CPU; por iso incorpora un <strong>disipador pasivo</strong>. É moi importante unha configuración <strong>equilibrada en potencia e refrixeración</strong>.</p></div>`
   },
+
+  /* ---------------- 5 ---------------- */
+  {
+    id: 'fh-ud3-5',
+    tipo: 'tema',
+    titulo: '5. Procesador',
+    resumen: 'CPU: o circuíto integrado máis complexo, o cerebro do ordenador. Constituída por rexistros, unidade de control, ALU e unidade de coma flotante; millóns de transistores nunha oblea de silicio, encapsulada e conectada por un zócolo. Precisa refrixeración (disipador + ventilador + pasta térmica). A velocidade depende da frecuencia de reloxo (>6 GHz hoxe vs 4,77 MHz), dos buses (FSB, factor de multiplicación) e da caché.',
+    claves: ['CPU = Central Process Unit: cerebro do ordenador, organiza o fluxo de datos e executa instrucións de baixo nivel ó ritmo do reloxo', 'Compoñentes: rexistros, unidade de control, ALU, unidade de coma flotante', 'Chip de silicio con millóns de transistores, condensadores e resistencias; encapsulado e inserido nun zócolo (socket)', 'Refrixeración: disipador (cobre/aluminio) + ventiladores + pasta térmica', 'Varios micros en paralelo; varios núcleos físicos ou lóxicos por micro', 'Tendencia a integrar: FPU, controlador de RAM, controladores de buses, vídeo', 'Fabricantes: Intel (alianza con Microsoft), AMD, Cyrix, Motorola; Qualcomm e Samsung en móbiles', 'Frecuencia de reloxo: MHz/GHz; 4,77 MHz nos primeiros PC → >6 GHz hoxe; cristal de cuarzo', 'Buses: velocidade externa = FSB (>8000 MHz); factor de multiplicación × externa = interna (200 MHz × 8 = 1600 MHz)', 'Caché: máis rápida que a RAM, pouca capacidade; interna (no micro) e externa; acerto/fallo de caché; L1, L2, L3', 'Arquitecturas comerciais: x86 (32 bits), x64 (64 bits), ARMv8 (móbil 64 bits)'],
+    tags: ['procesador', 'CPU', 'microprocesador', 'ALU', 'unidade de control', 'rexistros', 'frecuencia', 'reloxo', 'FSB', 'factor de multiplicación', 'caché', 'Intel', 'AMD', 'x86', 'x64', 'ARM'],
+    links: ['fh-ud3-5-1', 'fh-ud3-5-2', 'fh-ud3-5-3', 'fh-ud3-5-4', 'fh-ud3-5-5', 'fh-ud3-5-6'],
+    contenido: `
+<div class="box def"><div class="box-title">Procesador (CPU, Central Process Unit)</div><p>O circuíto integrado <strong>máis complexo</strong> dun sistema informático; o <strong>cerebro do ordenador</strong>. Organiza o fluxo de datos no interior da placa base, cara ou dende os periféricos á memoria e entre o resto dos compoñentes. Realiza instrucións programadas en <strong>linguaxe de baixo nivel</strong> (de cálculo, aritméticas e lóxicas) a un ritmo marcado polo <strong>reloxo</strong>.</p></div>
+<p>Está constituída esencialmente por <strong>rexistros</strong>, unha <strong>unidade de control</strong>, unha <strong>unidade aritmético-lóxica (ALU)</strong> e unha <strong>unidade de cálculo en coma flotante</strong>.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/procesador-intel.png" alt="Procesador Intel na placa base" loading="lazy"><figcaption>Procesador Intel instalado no seu zócolo.</figcaption></figure>
+<p>A nivel físico é un <strong>chip</strong> no que millóns de compoñentes electrónicos (transistores, condensadores, resistencias) están construídos nunha <strong>oblea de silicio</strong>. Está <strong>encapsulado</strong> e conéctase mediante un <strong>zócolo (socket)</strong> específico da placa base. Pola miniaturización prodúcense <strong>altas temperaturas</strong> que o poden danar: incorpóraselle un <strong>disipador</strong> de cobre ou aluminio e un ou máis <strong>ventiladores</strong>; entre disipador e cápsula colócase <strong>pasta térmica</strong>.</p>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/die-procesador.png" alt="Die dun procesador" loading="lazy"><figcaption>Die de silicio dun procesador.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/procesador-posterior.png" alt="Parte posterior dun procesador LGA" loading="lazy"><figcaption>Parte posterior do procesador (contactos LGA).</figcaption></figure>
+</div>
+<p>Un sistema de alto rendemento pode ter <strong>varios microprocesadores en paralelo</strong>, e un micro pode estar constituído por varios <strong>núcleos físicos ou lóxicos</strong>. Existe a tendencia de <strong>integrar</strong> o maior número de elementos no propio procesador (unidades de punto flotante, controladores de RAM e de buses, procesadores de vídeo), aumentando eficiencia e miniaturización.</p>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/nucleos-cpu.png" alt="Núcleos dun procesador" loading="lazy"><figcaption><strong>Núcleo físico:</strong> porción interna case independente que realiza tódalas actividades dunha CPU. <strong>Núcleo lóxico:</strong> simulación dun núcleo físico para repartir o procesamento.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/nucleos-rendemento.png" alt="Núcleos con distintos niveis de rendemento" loading="lazy"><figcaption>Núcleos con distintos niveis de rendemento.</figcaption></figure>
+</div>
+<h4>Fabricantes</h4>
+<p>Os máis estendidos son os de <strong>Intel</strong>, que nunha especie de alianza con Microsoft fai que o software deste sexa totalmente compatible cos seus procesadores. Outros: <strong>AMD</strong>, Cyrix, Motorola… Na actualidade AMD está sendo desprazada do segundo posto por <strong>Qualcomm</strong> ou <strong>Samsung</strong> pola irrupción no mercado móbil.</p>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/intel-core-i7.png" alt="Intel Core i7" loading="lazy"><figcaption>Intel Core i7.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/amd-opteron.png" alt="AMD Opteron" loading="lazy"><figcaption>AMD Opteron (64 bits).</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/samsung-exynos.png" alt="Samsung Exynos" loading="lazy"><figcaption>Samsung Exynos (ARM).</figcaption></figure>
+</div>
+<div class="box info"><div class="box-title">Procesadores comerciais (ISA)</div><ul><li><strong>x86:</strong> arquitectura de 32 bits</li><li><strong>x64:</strong> arquitectura de 64 bits</li><li><strong>ARMv8:</strong> arquitectura para móbiles de 64 bits</li></ul></div>
+<h4>De que depende a velocidade do procesador</h4>
+<ul>
+  <li><strong>Frecuencia de reloxo:</strong> velocidade á que traballa, en MHz/GHz. Hoxe supéranse os <strong>6 GHz</strong>, fronte ós <strong>4,77 MHz</strong> dos primeiros PC. 8 MHz = 8 millóns de operacións por segundo. É unha velocidade <strong>interna</strong>. Un <strong>cristal de cuarzo</strong> na placa xera os impulsos de forma síncrona.</li>
+  <li><strong>Buses:</strong> vías internas polas que circulan os datos; a súa eficacia depende do ancho e da rapidez. A velocidade <strong>externa</strong> á que o procesador se comunica coa placa chámase <strong>velocidade do bus ou FSB</strong> (pode superar os 8000 MHz) e é á que o computador realmente funciona no seu conxunto. A discrepancia entre interna e externa coñécese como <strong>factor de multiplicación</strong>: se a externa é 200 MHz e o factor 8, a velocidade do procesador será 1600 MHz.</li>
+  <li><strong>Memoria caché:</strong> memoria de acceso rápido, máis que a RAM, para reducir os accesos á RAM. Pouca capacidade. Dous tipos: <strong>interna</strong> (no propio procesador, pequena e moi rápida) e <strong>externa</strong> (entre o micro e o resto de compoñentes, almacenamento intermedio).</li>
+</ul>
+<div class="box tip"><div class="box-title">Caché do procesador</div><p>Garda as posicións da memoria principal <strong>máis utilizadas</strong>. Cando a caché contén os datos que necesita a CPU non hai esperas: <strong>acerto de caché</strong>. Cando non os contén: <strong>fallo de caché</strong>, e a CPU espera á memoria principal. Na práctica hai polo menos dúas: <strong>L1</strong>, <strong>L2</strong> e, se existe, <strong>L3</strong>.</p></div>
+<div class="box info"><div class="box-title">Rendemento do procesador</div><p>Medilo non é doado: a frecuencia de reloxo permite comparar procesadores con núcleos da mesma familia, pero é un indicador limitado. Unha forma fiable é obter as <strong>instrucións que executa por ciclo de reloxo</strong> (IPC).</p></div>
+<div class="box warn"><div class="box-title">Overclocking</div><p>Pretende alcanzar unha maior velocidade de reloxo por riba das especificacións do fabricante. Pode <strong>acurtar a vida útil</strong> do compoñente ou supor <strong>perda de estabilidade</strong>.</p></div>`
+  },
+  {
+    id: 'fh-ud3-5-1',
+    tipo: 'subtema',
+    titulo: '5.1 Zócolo do microprocesador',
+    resumen: 'Lugar onde se insire o procesador: conecta electricamente os pins e suxeita o chip. Encapsulados: PGA (pins no procesador, AMD clásico, ZIF con panca), LGA (pins no zócolo, Intel; AMD tamén xa sen pins), BGA (bólas soldadas á placa; móbiles e portátiles). Placas de servidor con varios zócolos; supercomputadores e consolas: soldados.',
+    claves: ['Zócolo (socket): conecta electricamente os pins e suxeita o chip', 'PGA (Pin Grid Array): pins no micro inseridos por presión; AMD; ZIF con panca e marca triangular', 'LGA (Land Grid Array): pins dentro do zócolo; Intel trasladou o problema das roturas ás placas; AMD tamén xa sen pins', 'Intel e AMD: placas exclusivas e incompatibles entre si', 'BGA (Ball Grid Array): bólas soldadas directamente á placa; sen zócolo; smartphones e portátiles', 'ZIF (Zero Insertion Force): panca para inserir sen esforzo; antes rompíanse os pins', 'Servidores: varios zócolos · Supercomputadores e consolas (arquitectura propietaria): soldados'],
+    tags: ['zócolo', 'socket', 'PGA', 'LGA', 'BGA', 'ZIF', 'pins', 'encapsulado'],
+    contenido: `
+<p>É o lugar onde se insire o procesador na placa base. O seu propósito é <strong>conectar electricamente os pins</strong> do procesador á placa e <strong>suxeitar o chip</strong>. Os primeiros micros soldábanse ou inseríanse en zócolos imposibles de retirar.</p>
+<h4>Encapsulados máis utilizados</h4>
+<ul>
+  <li><strong>PGA (Pin Grid Array):</strong> cadrado cun gran número de conectores redondos onde os <strong>pins do microprocesador</strong> se insiren por presión. Era o modelo que usaba <strong>AMD</strong>. Presentan unha <strong>panca</strong> e unha <strong>fendedura triangular</strong> (tamén no micro) para saber en que posición encaixa: cumpren o formato <strong>ZIF</strong>.</li>
+  <li><strong>LGA (Land Grid Array):</strong> os pins colocáronse <strong>dentro do zócolo</strong> en lugar de no procesador. Medida tomada por <strong>Intel</strong> para trasladar o problema da rotura dos pins ós fabricantes de placas. AMD tamén fabrica hoxe procesadores sen pins. Aínda así, as placas <strong>non son compatibles</strong> para ambos: Intel e AMD teñen placas exclusivas e incompatibles.</li>
+  <li><strong>BGA (Ball Grid Array):</strong> o micro ten pequenas <strong>bólas que se soldan directamente á placa</strong>. Non require zócolo e simplifica custos. Polo seu tamaño úsase en <strong>smartphones e portátiles</strong>.</li>
+</ul>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/zocolo-lga.png" alt="Zócolo LGA" loading="lazy"><figcaption>Zócolo <strong>LGA</strong> (pins no zócolo).</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/zocolo-pga.png" alt="Zócolo PGA" loading="lazy"><figcaption>Zócolo <strong>PGA</strong> (buracos para os pins do micro).</figcaption></figure>
+</div>
+<div class="box info"><div class="box-title">ZIF (Forza de inserción cero)</div><p>Hoxe tódolos zócolos son <strong>ZIF</strong> (<em>Zero Insertion Force</em>): teñen unha pequena panca que permite inserir os chips sen esforzo. Antes era necesario premer fisicamente o chip e, peor, forzalo a saír facendo panca cun desaparafusador, o que rompía moitos pins.</p></div>
+<p>Unha placa pode ter <strong>varios zócolos</strong>: é o caso das placas de <strong>servidor</strong>, con dous ou máis procesadores. En configuracións con moitísimos procesadores, como os <strong>supercomputadores</strong>, non se usan zócolos: os micros sóldanse á placa, optimizando espazo e rendemento.</p>
+<div class="box tip"><div class="box-title">Arquitectura aberta vs propietaria</div><p>Os zócolos úsanse en sistemas de <strong>arquitectura aberta</strong>, onde se busca variedade de compoñentes e substitución. Nos sistemas de <strong>arquitectura propietaria</strong>, como as <strong>videoconsolas</strong> (ex.: procesador da PS5), os circuítos integrados sóldanse á placa.</p></div>`
+  },
+  {
+    id: 'fh-ud3-5-2',
+    tipo: 'subtema',
+    titulo: '5.2 Aspectos importantes ó elixir un microprocesador',
+    resumen: 'Non abonda con núcleos e frecuencia. Comprobar: núcleos (4–12; multithreading = 2 fíos/núcleo, o segundo máis lento), frecuencia base (garantida) vs turbo (depende de núcleos activos e temperatura), TDP (potencia térmica a disipar, non consumo; desde Core 12.ª xen Intel dá consumo real), caché (L1 por núcleo dentro, L2 por núcleo fóra, L3 compartida; L4 con GPU integrada) e gráficos integrados (ata 4K; non nos de xogos).',
+    claves: ['Núcleos ≠ velocidade: determinan cantos procesos á vez (1 por núcleo, 2 con multithreading; o 2.º fío máis lento)', '4 núcleos con multithreading pode rendir menos que 6 sen el', 'Frecuencia base: garantida en tódolos núcleos · turbo: máximo con poucos núcleos activos e boa temperatura (ex.: 6 GHz → 5,2 GHz cos 8 activos → 3,2 GHz base se refrixera mal)', 'TDP (Thermal Design Power): potencia térmica disipada, non consumo; 95 W TDP pode consumir 150 W; Intel dá consumo real desde a 12.ª xeración', 'Caché L1: privada por núcleo, dentro do núcleo, mínima e máis rápida; datos + instrucións', 'Caché L2: privada por núcleo, fóra do núcleo, intermedia', 'Caché L3: compartida por tódolos núcleos, unha por procesador, maior e máis lenta; se só se cita unha caché, é a L3', 'L4: pouco frecuente, con GPU integrada', 'Gráficos integrados: ata 4K; a maioría os inclúe agás os deseñados para xogos', 'Fíos (threads): fluxo de control lóxico; 1-2 por núcleo; 12 fíos ≠ 12 núcleos · HyperThreading: i3 con 2 núcleos → 4 fíos'],
+    tags: ['elixir procesador', 'núcleos', 'multithreading', 'HyperThreading', 'fíos', 'threads', 'frecuencia base', 'turbo', 'TDP', 'caché L1', 'L2', 'L3', 'gráficos integrados'],
+    contenido: `
+<p>A arquitectura dun micro moderno é moi complexa: confiar en parámetros básicos como o número de núcleos ou a frecuencia pode ser un erro, sobre todo comparando empresas ou series distintas, porque hai moitos outros parámetros (caché, instrucións por ciclo…). Ademais, polas diferenzas arquitectónicas e as microinstrucións que implementan, algúns procesadores son mellores en certas tarefas.</p>
+<h4>Núcleos</h4>
+<p>Todo depende do uso. O número varía normalmente de <strong>4 a 12</strong>. Non determina a velocidade, senón o <strong>número de procesos que pode executar á vez</strong>: un por núcleo, ou dous fíos por núcleo se ten <strong>multithreading simultáneo</strong> (o segundo proceso será moito máis lento). Un procesador de 4 núcleos con multithreading pode ter menos potencia que un de 6 sen el, segundo a tarefa.</p>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/hyperthreading.png" alt="Sen e con hyperthreading" loading="lazy"><figcaption><strong>HyperThreading.</strong> Simula dous procesadores (núcleos) nun só chip, dividindo a carga. Un Core i3 con dous núcleos físicos compórtase como se tivese catro (<em>núcleos lóxicos</em>).</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/fios-nucleos.png" alt="8 fíos sobre 4 núcleos" loading="lazy"><figcaption><strong>Fíos de procesamento.</strong> Non son físicos: son o fluxo de control dun programa. As tarefas divídense en fragmentos (fíos) para optimizar as esperas; normalmente 1–2 fíos por núcleo. Un procesador con 12 fíos non ten 12 núcleos.</figcaption></figure>
+</div>
+<h4>Frecuencia de funcionamento</h4>
+<p>Importante ó comparar procesadores da <strong>mesma arquitectura</strong>; máis alta é mellor, con advertencias. Distinguir a <strong>frecuencia base</strong> (garantida en tódolos núcleos) da <strong>frecuencia turbo</strong> (máximo que depende dos núcleos activos e da temperatura). Exemplo: un turbo máximo de 6 GHz con oito núcleos só se alcanza con un ou dous activos; cos oito pode baixar a 5,2 GHz; con mala refrixeración, á base (p. ex. 3,2 GHz), a única garantida.</p>
+<h4>Potencia térmica disipada (TDP)</h4>
+<p>A refrixeración é importante, e tamén a <strong>Potencia de deseño térmico (TDP)</strong>: refírese á <strong>potencia térmica disipada, non á consumida</strong>, aínda que ambas se miden en watts. Un procesador de 95 W TDP pode consumir 150 W: os 95 W indican que require 95 W de refrixeración para funcionar á frecuencia base. A partir do <strong>Core de 12.ª xeración</strong>, Intel dá o consumo real, non o TDP.</p>
+<h4>Memoria caché</h4>
+<p>Pequena RAM dentro do procesador; esencial porque a RAM é demasiado lenta para o micro. Almacena instrucións e datos de uso frecuente. Tres niveis:</p>
+<ul>
+  <li><strong>L1:</strong> privada por núcleo, <strong>dentro do núcleo</strong>. Menor capacidade, a máis rápida. Divídese en caché de <strong>datos</strong> e de <strong>instrucións</strong>.</li>
+  <li><strong>L2:</strong> privada por núcleo, pero <strong>fóra do núcleo</strong>. Capacidade e velocidade intermedias.</li>
+  <li><strong>L3:</strong> <strong>compartida</strong> por tódolos núcleos; só unha por procesador. Maior capacidade, a máis lenta.</li>
+</ul>
+<p>Existe outra pouco frecuente, a <strong>L4</strong>, en procesadores con GPU integrada. Ó ascender de nivel aumenta a capacidade e diminúe a velocidade. Se só se menciona un tamaño de caché, refírese á <strong>L3</strong>.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/cache-l1-l2-l3.png" alt="Esquema de cachés L1, L2 e L3" loading="lazy"><figcaption>L1 (datos e instrucións) e L2 por núcleo; L3 compartida (2 MB/núcleo).</figcaption></figure>
+<h4>Gráficos integrados</h4>
+<p>En lugar dunha tarxeta gráfica (que seguirá funcionando se a hai), o micro inclúe todo o necesario para reproducir gráficos; comprobar a resolución (ata <strong>4K</strong>). A gran maioría inclúen gráficos por defecto, <strong>agás os deseñados para xogos</strong>.</p>
+<div class="box tip"><div class="box-title">Por que os micros para xogos non inclúen gráficos?</div><p>Porque a potencia da <strong>GPU</strong> dedicada sempre será maior, e os micros tamén necesitan RAM para funcionar correctamente.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/tarxeta-grafica-dedicada.png" alt="Tarxeta gráfica dedicada" loading="lazy"><figcaption>Tarxeta gráfica dedicada.</figcaption></figure></div>`
+  },
