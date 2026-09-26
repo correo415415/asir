@@ -1038,3 +1038,534 @@ E Ground
 o
 
 Voltaxe Molex de 4 pins
+===== PAXINA 11 =====
+y
+
+Conectores de alimentación
+internos
+
+SATA
+
+PCI Express
+
+EPS
+
+Fontes modulares
+
+Fonte modular
+
+Fonte semimodular
+
+Este conector (que actualmente combina dous conectores) proporciona 12
+voltios de alimentación adicional a diferentes compoñentes do PC, máis co-
+munmente á CPU, aínda que tamén se usa nalgunhas tarxetas gráficas de ser-
+vidor ou compoñentes que requiren unha gran cantidade de enerxía. Pode ofre-
+cer 192 W en formato ATX de 4 pins ou 336 W en formato EPS de 8 pins.
+
+O conector en si está composto por dous conectores de 4 pins que xuntos
+forman un conector EPS completo. Aseméllase ó conector PCle de 8 pins en
+forma e aparencia, pero non son equivalentes, xa que ambos teñen diferentes
+asignacións de pins e diferentes potencias nominais. Un dos dous conectores
+de 4 pins nos que se subdivide é un conector ATX de 12 voltios, que tamén se
+usaba para proporcionar enerxía adicional ó procesador central.
+
+3.8 > Precaucións ó usar conectores de fonte de alimentación
+
+En xeral, conectar os cables da fonte de alimentación é un proceso rápido,
+sinxelo e seguro, e adoita seguirse a regra non escrita de que vaia onde vaia, o
+conector é o correcto. Non obstante, hai varios erros comúns que cometen
+usuarios sen experiencia que deben evitarse:
+
+e Os cables da CPU e da tarxeta gráfica confúndense moi facilmente, xa que
+ambos son de 8 pins, pero no 99% das fontes de alimentación, os pri-
+meiros están separados en 4+4 e os segundos en 6+2. É importante dis-
+tinguilos deste xeito ou consultar o manual antes de facer a conexión
+para evitar erros. Os conectores non encaixan onde non son... pero algu-
+nhas persoas poden pensar erroneamente que é o conector correcto e
+forzalo, rompéndoo e potencialmente danando o equipo.
+
+e A orientación dos conectores SATA pode facer que o pin do disco duro se
+rompa, polo que se se necesita demasiada forza para facer a conexión,
+probablemente estea orientada incorrectamente.
+
+3.9 > Conectores en fontes de alimentación modulares
+
+As fontes de alimentación máis comúns e baratas son as non modulares ou
+cableadas. Como o seu nome indica, os seus cables están conectados ós circuí-
+tos internos da fonte de alimentación e saen por un pequeno burato na parte
+traseira para montalos nun ordenador.
+
+Isto parece razoable para unha fonte de alimentación con só uns poucos co-
+nectores, pero cando se trata de fontes de alimentación con gran número de
+cables, na maioría dos casos algúns quedarán sen usar, completamente soltos
+na carcasa, o que é bastante molesto. Este é un problema que resolve o cable-
+ado modular.
+
+Unha fonte de alimentación modular substitúe toda esa morea de cables por
+conectores femia na parte traseira da fonte de alimentación. En lugar de ter un
+cableado completamente fixo, podemos conectar e desconectar os cables que
+necesitamos, para que os cables non utilizados non sexan un obstáculo.
+
+O máis importante que hai que mencionar é que non existe un estándar univer-
+sal para estes, polo que mesturar cables de diferentes fontes modulares é
+perigoso. Na maioría dos casos, utilízanse conectores Molex moi semellantes
+ós dos compoñentes.
+
+En xeral, a pesar das semellanzas, hai pouca marxe de erro, polo que sempre
+que se teña coidado (e se consulte o manual se cómpre), non debería haber
+problema.
+
+Fontes de alimentación semimodulares
+
+Non tódalas fontes de alimentación modulares do mercado inclúen o 100% dos
+seus cables. As fontes de alimentación semimodulares inclúen algúns cables
+fixos, normalmente os vitais (ATX+CPU) e, ás veces, outros de uso común,
+como os cables PCle.
+
+===== PAXINA 12 =====
+Este tipo de deseño utilízase para lograr un equilibrio entre o baixo prezo das
+fontes de alimentación con cable fixo e a versatilidade das fontes de alimenta-
+ción 100% modulares.
+
+Por que deberiamos escoller unha fonte de alimentación modular?
+Hai varios factores:
+
+e Versatilidade: sen dúbida, a característica máis destacable dunha fonte
+de alimentación modular é a versatilidade que ofrece o feito de que só
+precisa conectar os cables necesarios. Isto anímanos a escoller modelos
+con máis potencia e conectores, xa que se estivese cableada, intentarí-
+amos asegurarnos de que tivese o número xusto de conectores para non
+dificultar a montaxe do equipo. Cunha fonte de alimentación modular,
+ter conectores adicionais non é un problema, senón unha gran vantaxe.
+
+e Xestión de cables mellorada e simplificada: se instalas unha fonte de
+alimentación non modular, é probable que teñas moitos cables de so-
+bra. Como xa mencionamos, isto é un obstáculo importante para a xes-
+tión de cables e, nalgúns casos, mesmo para a refrixeración interna da
+caixa. Non obstante, cunha fonte de alimentación modular, só conectas
+os cables necesarios, deixando só uns poucos conectores sobrantes.
+Deste xeito, poderás organizar os cables moito mellor na túa caixa.
+Ademais, se necesitas retirar a fonte de alimentación da caixa, como é
+modular, podes simplemente desconectar os cables do lado da fonte
+mentres permanecen conectados ós compoñentes, aforrándoche o
+tempo que leva reorganizar os cables.
+
+e Podes escoller cables con fundas ou outras personalizacións: unha
+fonte de alimentación modular permíteche crear os teus propios cables
+con fundas caseiras ou podes mercar un kit prefabricado, que che per-
+mite substituír completamente todo o cableado. Se a fonte de alimen-
+tación non fose modular, terías que desoldar os cables dende o interior,
+o que é extremadamente perigoso e anula a garantía, ou simplemente
+terías que usar cables de extensión.
+
+Por que non deberiamos escoller unha fonte de alimentación modular?
+
+O cableado modular non só ten vantaxes. Hai varias desvantaxes que debemos
+ter en conta antes de mercar:
+
+e Prezo: o cableado modular aumenta significativamente o custo de produ-
+ción, o que o fai significativamente máis caro que unha versión non mo-
+dular. Ademais, se tes un orzamento axustado, é probable que atopes
+modelos baratos que presumen de cableado modular pero que son de
+baixa calidade interna. Debes ter en conta que a calidade é o primeiro,
+polo que se queres unha boa fonte de alimentación modular, terás que
+gastar máis cartos. A recomendación é non priorizar a modularidade
+sobre a calidade.
+
+e Conectores non universais: Obviamente, tódalas fontes de alimentación
+veñen con conectores estandarizados, polo que son compatibles con
+calquera compoñente. Non obstante, os conectores que van ás placas
+modulares das fontes de alimentación non son estándar. Agás algunhas
+excepcións, os conectores modulares de diferentes marcas e modelos
+non son compatibles. O problema que supón é que hai que ter coidado
+de non perder os cables da fonte de alimentación nin mesturalos cos
+doutra. Se os perdes, depende do fabricante e da túa sorte, xa que as
+pezas de reposto non sempre se venden por separado, aínda que nor-
+malmente si.
+
+e É posible que algunhas configuracións sexan máis molestas: podemos
+atoparnos con problemas en casos con moi pouco espazo para a fonte
+de alimentación, onde a lonxitude engadida da modularidade dificulta a
+configuración do equipo.
+
+3.10 > O futuro xa é presente: 12VHPWR
+
+Conectores antigos que xa
+non se usan
+
+ATX de 20 pins
+
+O predecesor do conector princi-
+pal de 24 pins actual, coa única
+diferenza na ausencia dunha liña
+adicional para cada voltaxe neses
+catro pins adicionais, como vimos
+anteriormente.
+
+ATX de 6 pins
+
+Este conector utilizouse no están-
+dar ATX 1.0 ata a súa eliminación
+no 2.0 e subministraba á placa
+base alimentación de 3.3 e 5 vol-
+tios antes de que as súas liñas se
+movesen ó conector de 24 pins,
+polo que non era necesario o seu
+mantemento.
+
+--
+
+e ae
+Berg
+
+Este conector foi deseñado espe-
+cificamente para conectores de
+disquetes de ordenador, actuando
+efectivamente como un mini
+conector Molex, xa que presenta-
+ba as mesmas conexións pero era
+máis pequeno e ofrecía menos
+enerxía.
+
+Non se atopa nas fontes de ali-
+mentación actuais debido á falta
+de utilización de disquetes, que
+eran o seu principal caso de uso.
+===== PAXINA 13 =====
+e
+
+Conector PCle 5.0
+
+Conector queimado
+
+Despois de analizar o problema,
+NVIDIA recomendoulle ó usuario
+que verificase que o conector
+estivese completamente inserido.
+
+Varios usuarios informaron de
+que, a pesar de estar conectado
+correctamente, continuaba a
+queimarse.
+
+O fabricante (e varios fabricantes
+de fontes de alimentación) res-
+ponderon que tamén se debe ter
+especial coidado coa forma en que
+se dobra o cable: sempre debe
+estar polo menos a 5 centímetros
+de distancia do conector e nunca
+en ángulos superiores a 90 graos.
+
+x
+
+25 mm
+
+35mm
+
+(TE
+
+Se non te queres complicar a vida
+dobrando o cable o suficiente para
+evitar que deixe de funcionar, a
+solución máis sinxela é mercar un
+cable cun conector de 90 graos.
+
+Este cable está deseñado especifi-
+camente para resolver este pro-
+blema e a maioría dos fabricantes
+de fontes de alimentación ofréce-
+no como opción, do mesmo xeito
+que a maioría das tarxetas gráfi-
+cas.
+
+É un conector desenvolvido por Intel que foi adoptado por NVIDIA nos seus
+modelos de gama alta e de maior potencia.
+
+Este conector 12VHPWR adoita denominarse PCle 5.0. Este nome provén da
+súa asociación coas fontes de alimentación PCle 5.0. A idea é substituír os
+conectores PCle de 6+2 pins, reducindo o número de cables necesarios para
+
+alimentar a tarxeta gráfica.
+
+As tarxetas gráficas modernas adoitan ter dous ou tres conectores de alimen-
+tación PCle de 8 pins. Isto proporciona unha fonte de alimentación de ata 450
+watts, ademais dos 75 watts que ofrece o porto PCle x16. O conector 12VHPWR
+ten como obxectivo corrixir este problema cun único conector de 12 pins que
+debería simplificar todo.
+
+Este conector ofrece varias características únicas. En primeiro lugar, admite
+catro niveis de potencia, comezando en 150 watts, 300 watts, 450 watts e
+chegando ata 600 watts. Teoricamente, este conector podería soportar no
+futuro case 1000 watts. Ademais dos conectores de alimentación, ten catro
+pins para a comunicación coa fonte de alimentación para mellorar a subminis-
+tración de enerxía.
+
+Problemas graves con este conector
+
+A medida que as primeiras unidades da NVIDIA RTX 4080 e RTX 4090 comeza-
+ron a chegar ó mercado, comezaron a aparecer os primeiros problemas rela-
+cionados con este tipo de conector debido ó alto consumo de enerxía, o que
+provocaba que o cable se queimase e deixase de funcionar.
+
+Unhas semanas despois do lanzamento da RTX 4090, comezaron a aparecer
+casos de conectores queimados. Un aparente problema de deseño provocaba
+que o conector non se inserise completamente nalgúns casos. Isto finalmente
+levou á queimadura do conector de alimentación debido a este defecto.
+
+Revisión do conector
+
+Debido ós danos sufridos polas tarxetas gráficas, PCI-SIG (regulador do conec-
+tor de alimentación 12VHPWR, entre outros), Intel e NVIDIA buscaron unha
+solución. Para conseguilo, redeseñaron o conector, renomeándoo a 12V-2x6,
+aínda que nas especificacións oficiais se denomina PCle 5.0 e ATX 3.1.
+
+A diferenza entre os dous conectores non é doada de ver. O novo conector 12V-
+2x6 engade pins máis longos para evitar os problemas de conexión que antes
+causaban danos. Ademais, o conector ATX 3.1 xa non é un conector obrigatorio,
+senón simplemente recomendado.
+
+3.11 > Como comprobar que a fonte de alimentación ATX funciona
+Os pasos son os seguintes:
+
+e Apaga o interruptor da fonte de alimentación e desconéctaa da fonte de
+alimentación.
+
+e Colle un clip ou un cable, dóbrao formando unha curva e conéctao entre o
+cable verde e un dos cables negros.
+
+e Conecta a fonte de alimentación.
+
+e Se a fonte de alimentación funciona, arrancará e o ventilador comezará a
+xirar. Se non hai movemento, a fonte de alimentación está defectuosa.
+
+Medición da fonte de alimentación cun multímetro
+Os pasos son os seguintes:
+
+e Acender o multímetro.
+
+e Seleccionar o rango de tensión de corrente continua.
+
+e Seleccionar o rango de 20 voltios DC.
+
+e Conectar o cable de proba negro á toma de terra da fonte de alimenta-
+ción (cables negros).
+
+===== PAXINA 14 =====
+e Co cable de proba vermello, medir as diferentes voltaxes: 5 voltios (cable
+vermello), 12 voltios (cable amarelo), -12 voltios (cable azul), 3.3 voltios
+(cable laranxa), 5 voltios (violeta), O voltios (negro).
+
++ O cable gris debería indicar se chega a voltaxe correcta á fonte de alimen-
+tación.
+
+e Retirar os cables de proba e apagar o multímetro.
+
+UTILIZACIÓN DE MULTIMETRO PARA
+MEDIR OS VALORES DA FONTE DE
+ALIMENTACION
+
+Punta de proba
+Karse
+MS8221A vermello móvese
+á. polos distintos pins
+20 Voltios en continua
+é suficiente para tódala:
+medicións
+
+Punta de proba
+negra en pin negro
+(terra)
+
+Punta de proba
+vermello
+en terminal V - Voltios
+
+Punta de proba negra
+en terminal COM
+
+4 >> Placa base
+
+A placa base forma, xunto cos compoñentes nela inseridas, o núcleo do orde-
+nador que fai posible o funcionamento de todo o sistema. É a pedra angular de
+calquera configuración, pois nela, está situada a CPU da que dependen as pres-
+tacións e compatibilidade de software do PC.
+
+A placa base (en inglés motherboard o mainboard) é umha placa de circuíto
+impreso rectangular que serve como medio de conexión entre o microprocesa-
+dor, a memoria RAM, os dispositivos de almacenamento, as tarxetas de expan-
+sión... (tódolos compoñentes do ordenador están conectados a ela, dun xeito
+ou doutro).
+
+Tamén encontramos nela a memoria ROM-BIOS, o reloxo, os conectores (eléc-
+trico, portos serie, portos paralelo, portos USB...) que serven para conectar o
+ordenador cos diferentes periféricos de entrada e saída.
+
+É dicir, é o soporte sobre o que se monta todo o PC, polo que tanto o rende-
+mento da máquina como a posibilidade de futuras expansións dependen direc-
+tamente do tipo de placa base escollida.
+
+A placa base xoga un papel fundamental en varios aspectos do ordenador,
+como:
+
+e Rendemento: determina o tipo de procesador, memoria, buses e interfa-
+ces de disco duro que se poden usar e establece a capacidade de comu-
+nicación entre diferentes dispositivos a través do chipset, a BIOS e tóda-
+las súas canles de comunicación.
+
+e Organización: o xeito en que está deseñada a placa base determina como
+se organizará o computador xa que todo se conecta a ela.
+
+e Actualización e Expansión: a placa base determina ata que punto se po-
+de actualizar o computador e ata que punto se pode instalar uns ou ou-
+tros tipos de dispositivos.
+
+División dos sistemas dixi-
+tais por tamaño
+
+e Mainframes: Permiten o pro-
+ceso masivo de datos no menor
+tempo posible.
+
++ Estacións de traballo: Au-
+mentan a produtividade indivi-
+dual nas empresas.
+
++ Automatismos: Control e au-
+tomatización de procesos a tra-
+vés de Microcontroladores e
+Autómatas programables.
+
+e Portátiles: Un ordenador por-
+tátil, ás veces coñecido simple-
+mente como portátil ou polos
+anglicismos laptop e notebook, é
+un ordenador persoal que se
+pode mover ou transportar con
+relativa facilidade.
+
+e
+
+===== PAXINA 15 =====
+Factor de forma
+
+Os estándares creados polos
+fabricantes coñécense como
+factores de forma.
+
+As características definidas polo
+factor de forma son:
+
+e A forma da placa (cadrada ou
+rectangular).
+
++ As súas dimensións físicas
+exactas (ancho e longo).
+
++A posición das ancoraxes, é
+dicir, as coordenadas onde se
+atopan os parafusos.
+
+e As zonas onde se atopan cer-
+tos compoñentes. Especifica-
+mente, as baías de expansión e
+os conectores traseiros (teclado,
+rato, USB...).
+
++ A forma física do conector da
+fonte de alimentación.
+
++ As conexións eléctricas da fon-
+te de alimentación, é dicir, can-
+tos cables require a placa da
+fonte de alimentación, os seus
+valores e a súa función.
+
+Placa base AT
+
+Ten unhas dimensións da orde de
+100 milímetros, o suficientemente
+grandes como para que sexa
+imposible encaixar en miniorde-
+nadores de sobremesa, o que
+dificulta a instalación de novas
+unidades.
+
+O concepto de conectores de seis
+pins naceu para funcionar como
+conectores de alimentación para
+este tipo de placa base.
+
+Producida a mediados da década
+de 1980, esta placa base durou
+case dúas décadas ata a prolifera-
+ción de equipos clónicos.
+
+4.1> Tipos de placas base
+
+Por que hai diferentes tipos se a placa base ofrece a mesma función? A exis-
+tencia de diferentes placas base débese ás diferentes configuracións e requisi-
+tos dos sistemas informáticos. A elección da placa base depende do procesa-
+dor que se queira usar, do tipo de sistema que se estea a construír e das carac-
+terísticas adicionais que se precisen.
+
+Para reducir custos e permitir a intercambiabilidade entre placas base, os fa-
+bricantes crearon varios estándares que agrupan recomendacións sobre o
+tamaño e a disposición dos elementos nas placas.
+
+Extended-ATX
+
+Cando falamos deste tipo de placas, estamos a falar de placas base que non
+están deseñadas para o seu uso en PC cotiáns, debido a que se usan tanto en
+estacións de traballo como en servidores pequenos.
+
+O tamaño deste tipo de placa base é de 305 x 330 mm, permitindo máis com-
+poñentes, como máis dun zócolo de CPU no seu interior, un maior número de
+módulos DIMM para ter un maior número de canles de memoria...
+
+Este non é un formato de uso común, o que leva a que moitas carcasas de PC
+teñan problemas para montalas polo que hai que comprobar as especificacións
+da carcasa para determinar se se poderá usar este tipo de placa base.
+
+ATX
+
+Este é o tipo de placa base máis clásico. Teñen un factor de forma máis rec-
+tangular e están deseñadas para facilitar a instalación e o mantemento. Nor-
+malmente teñen máis baías e portos de expansión, o que permite conectar
+unha variedade de compoñentes adicionais.
+
+O seu acrónimo provén do feito de que os PC co procesador 286 de Intel recibí-
+an o alcume de AT. Cando chegou o verdadeiro auxe dos clons ou compatibles
+de PC a mediados dos anos noventa do século pasado, as placas base pasaron a
+chamarse ATX, onde o X significa Enhanced (mellorada). Dende entón, conver-
+téronse no estándar por excelencia e no tipo de placa base máis utilizado.
+
+As dimensións deste formato de placa base son 305 x 244 mm, aínda que po-
+den variar lixeiramente. Ademais, tódalas placas base derivadas de ATX están
+deseñadas para funcionar co seu tipo de fonte de alimentación, ademais de
+respectar detalles como as sete baías de expansión separadas por 20 mm.
+
+O estándar ATX, ó ser o máis empregado, está en constante revisión, non só en
+termos de tamaño, senón tamén para adaptarse a cambios en forma de novos
+portos de expansión e alimentación, así como a eliminación daqueles que que-
+daron desactualizados.
+
+En definitiva, é importante que as diferentes pezas se poidan colocar de forma
+lóxica e coherente, pero ó mesmo tempo, os diferentes compoñentes non in-
+terfiran entre si.
+
+Micro-ATX
+
+Foi a primeira variante do formato ATX e é unha versión máis compacta. As
+dimensións desta placa base son de 244 x 244 mm, polo que cambia a posición
+das baías de expansión da caixa en relación coa placa base.
+
+Os catro orificios superiores adoitan coincidir cos da placa base ATX e, polo
+tanto, teñen un espazo de 20 mm entre eles, pero os dous orificios inferiores
+son máis estreitos. Isto non é un problema, xa que a gran maioría dos usuarios
+de PC nunca usan a capacidade de expansión completa dunha placa base ATX.
+
+Hoxe en día, son o tipo de placa base máis utilizado para construír PC para
+xogos, principalmente porque ofrecen o nivel de configuración e expansión
+necesario.
+
