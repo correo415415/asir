@@ -553,15 +553,12 @@
     nodeEls.forEach(el => el.classList.remove('dim', 'match', 'kind-on'));
     edgesEl.classList.remove('dimmed');
     if (!hasText && !kindFilter) { results.hidden = true; results.innerHTML = ''; return; }
+    // Búsqueda y filtro de tipo se comportan igual: las tarjetas que no corresponden se "apagan"
+    // y las que sí, se resaltan (con texto: color de búsqueda; solo tipo: color del tipo).
     const ids = new Set(current.map(r => r.n.id));
-    if (hasText) {
-      nodeEls.forEach((el, id) => el.classList.toggle('dim', !ids.has(id)));
-      ids.forEach(id => nodeEls.get(id) && nodeEls.get(id).classList.add('match'));
-      edgesEl.classList.add('dimmed');
-    } else {
-      // Solo filtro de tipo: marcar en el mapa las tarjetas de ese tipo
-      ids.forEach(id => nodeEls.get(id) && nodeEls.get(id).classList.add('kind-on'));
-    }
+    nodeEls.forEach((el, id) => el.classList.toggle('dim', !ids.has(id)));
+    ids.forEach(id => nodeEls.get(id) && nodeEls.get(id).classList.add(hasText ? 'match' : 'kind-on'));
+    edgesEl.classList.add('dimmed');
     results.hidden = false; sel = -1;
     const re = terms.length ? new RegExp('(' + terms.map(escRe).join('|') + ')', 'gi') : null;
     const mark = s => re ? esc(s).replace(re, '<mark>$1</mark>') : esc(s);
