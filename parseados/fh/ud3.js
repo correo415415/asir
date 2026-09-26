@@ -1434,3 +1434,100 @@ window.APUNTES.unidades.push({
 <p>Tamén chamados discos <b>MO</b>. O <b>MiniDisc</b> de Sony é un exemplo.</p>
 `
   },
+  {
+    id: 'fh-ud3-9', tipo: 'tema', titulo: '9. Tarxetas de expansión',
+    resumen: 'Completan ou melloran funcións da placa base: son, gráficas, TV, FireWire, rede… Inclúe USB (tipos, velocidades, USB-C), Thunderbolt e sintonizadoras de TV.',
+    claves: ['Tarxeta de expansión', 'USB', 'USB-C', 'Thunderbolt', 'Sintonizadora TV'],
+    tags: ['tarxetas', 'expansion', 'usb', 'thunderbolt'],
+    links: ['fh-ud3', 'fh-ud3-9-1', 'fh-ud3-9-2', 'fh-ud3-9-3', 'fh-ud3-4-5'],
+    contenido: `
+<p>As tarxetas de expansión completan ou modifican aspectos que a placa base non ten suficientemente evolucionados: tarxetas de <b>son</b>, <b>gráficas</b>, de <b>televisión</b> e vídeo, FireWire, PCMCIA, <b>rede</b>…</p>
+<div class="box def"><div class="box-title">USB (Universal Serial Bus)</div><p>Define cables, conectores e protocolos para conectar, comunicar e <b>alimentar</b> periféricos. Estandariza e abarata a conexión de calquera periférico. Os discos externos USB son maioritariamente IDE/SATA cun adaptador dentro.</p>
+<table><tr><th>Versión</th><th>Nome</th><th>Velocidade</th><th>Uso</th></tr>
+<tr><td>1.0</td><td>Baixa velocidade</td><td>1,5 Mbit/s</td><td>Teclados, ratos, webcams</td></tr>
+<tr><td>1.1</td><td>Velocidade completa</td><td>12 Mbit/s</td><td></td></tr>
+<tr><td>2.0</td><td>Alta velocidade</td><td>480 Mbit/s</td><td>4 liñas: par de datos + par de alimentación</td></tr>
+<tr><td>3.0</td><td>Superalta velocidade</td><td>4,8 Gbit/s</td><td>Dispositivos inactivos pasan a baixo consumo</td></tr>
+<tr><td>3.1</td><td></td><td>10 Gbit/s</td><td>Pode alimentar un MacBook</td></tr>
+</table></div>
+<div class="box info"><div class="box-title">Tipos de conector USB</div><p><b>Tipo A</b> (estándar, memorias USB), <b>tipo B</b>, <b>mini</b> (cámaras), <b>micro</b> (móbiles), USB On-The-Go (mini/micro). Cada extremo dun cable USB usa un conector distinto (A e B) para evitar sobrecargas: só a femia tipo A ten carga eléctrica.</p>
+<p><b>USB-C</b>: conector moderno, <b>reversible</b> (ovalado, sen arriba/abaixo) e multifuncional: datos, vídeo e enerxía nun só cable. Máis pequeno e rápido; úsano teléfonos, tabletas, portátiles e cámaras.</p></div>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/conectores-usb-tipos.png" alt="Tipos de USB" loading="lazy"><figcaption>1 micro USB, 2 mini USB, 3 tipo B, 4 tipo A femia, 5 tipo A macho.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/usb-c-vs-usb-a.png" alt="USB-C vs USB-A" loading="lazy"><figcaption>USB Type-C fronte a USB-A 2.0/3.1.</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/cable-usb-c.png" alt="Cable USB-C" loading="lazy"><figcaption>Cable USB-C.</figcaption></figure>
+</div>
+<div class="box def"><div class="box-title">Thunderbolt</div><p>Conector de alta velocidade de Intel (e Apple) que usa tecnoloxía óptica: <b>10 Gbit/s</b> por cobre ata 3 m (prototipo con fibra ata 100 m), ata 20 Gbit/s e potencialmente 100 Gbit/s. Conexión simultánea a múltiples dispositivos, múltiples protocolos, bidireccional, calidade de servizo, substitución en quente. Pensado para substituír FireWire e HDMI. Thunderbolt 1 e 2 usan conector <b>Mini DisplayPort</b>; 3 e 4 usan <b>USB-C</b>.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/thunderbolt.png" alt="Thunderbolt" loading="lazy"><figcaption>Porto Thunderbolt (Mini DisplayPort).</figcaption></figure>
+<div class="box info"><div class="box-title">Tarxeta sintonizadora de TV</div><p>Permite ver TV no ordenador só cunha toma de antena. Interna (PCI) ou USB; inclúe programa de control. Funcións: ver canles, radio FM, teletexto, conectar un vídeo externo, gravar a TV no disco, mando a distancia (sensor de infravermellos).</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/tarxeta-sintonizadora.png" alt="Sintonizadora de TV" loading="lazy"><figcaption>Tarxeta sintonizadora de TV PCI.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-9-1', tipo: 'subtema', titulo: '9.1 Tarxetas de son',
+    resumen: 'Entrada e saída de son baixo control dun programa. Chip con convertedor dixital-analóxico (e viceversa). Estándar PC99 de cores: rosa micro, azul line-in, verde saída frontal, negro traseiros, laranxa SPDIF.',
+    claves: ['DAC/ADC', 'PC99', 'Line-In', 'SPDIF', 'Rosa/Azul/Verde'],
+    tags: ['tarxetas', 'son', 'audio', 'pc99'],
+    links: ['fh-ud3-9', 'fh-ud3-9-2'],
+    contenido: `
+<p>Tarxeta de expansión que permite a <b>entrada e saída de son</b> baixo control dun programa. Inclúe un chip de son cun <b>convertedor dixital-analóxico</b> que traduce ondas gravadas ou xeradas dixitalmente nun sinal analóxico (e viceversa), enviado a un conector de saída (auriculares, amplificador, altofalantes). A entrada dixitaliza sinais de micrófonos, casetes… para gardalos no disco.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/tarxeta-son.png" alt="Tarxeta de son" loading="lazy"><figcaption>Tarxeta de son PCI con conectores PC99.</figcaption></figure>
+<div class="box def"><div class="box-title">Estándar PC99 (Microsoft): cores dos conectores</div>
+<table><tr><th>Cor</th><th>Función</th></tr>
+<tr><td>Rosa</td><td>Entrada analóxica micrófono</td></tr>
+<tr><td>Azul</td><td>Entrada analóxica Line-In</td></tr>
+<tr><td>Verde</td><td>Saída estéreo principal (altofalantes frontais)</td></tr>
+<tr><td>Negro</td><td>Saída altofalantes traseiros</td></tr>
+<tr><td>Laranxa</td><td>Saída dixital SPDIF (ou altofalantes centrais)</td></tr>
+</table></div>
+`
+  },
+  {
+    id: 'fh-ud3-9-2', tipo: 'subtema', titulo: '9.2 Tarxetas gráficas (GPU)',
+    resumen: 'Transforma sinais da CPU en información representable en pantalla. Características: arquitectura (Maxwell…Ada), frecuencias base/game/boost, memoria (Gbps), ancho de banda, alimentación PCIe, saídas HDMI 2.1/DP 1.4, cor 24 bits, refrixeración. Nvidia e AMD. Conexións: VGA, DVI, HDMI, DisplayPort, Thunderbolt, USB-C.',
+    claves: ['GPU', 'Arquitectura', 'Base/Game/Boost', 'VGA', 'DVI', 'HDMI', 'DisplayPort'],
+    tags: ['tarxetas', 'grafica', 'gpu', 'hdmi', 'displayport'],
+    links: ['fh-ud3-9', 'fh-ud3-9-1', 'fh-ud3-9-3', 'fh-ud3-5'],
+    contenido: `
+<p>A tarxeta gráfica, de vídeo ou <b>GPU</b> transforma os sinais eléctricos que chegan do microprocesador en información representable pola pantalla. Leva circuítos auxiliares ou un procesador de apoio para operacións gráficas e <b>memoria</b> para a imaxe e os datos. Fabricantes principais: <b>Nvidia</b> e <b>AMD</b>. Conéctase a un oco <b>PCI-Express</b>; o bus é decisivo no rendemento.</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/tarxeta-grafica.png" alt="Tarxeta gráfica" loading="lazy"><figcaption>Tarxeta gráfica PCIe con saídas VGA, HDMI e DVI.</figcaption></figure>
+<div class="box def"><div class="box-title">Características</div>
+<ul>
+<li><b>Arquitectura</b>: deseño interno (núcleos, disposición, caché…). Nvidia nomea xeracións pola arquitectura: Maxwell, Pascal, Turing, Ampere, Ada Lovelace…</li>
+<li><b>Frecuencia</b> (MHz): <i>base</i> (repouso), <i>game</i> (xogando/perfil OC) e <i>boost</i> (máxima teórica). Mellor refrixeración (3 ventiladores, bloque de auga) → frecuencias máis altas.</li>
+<li><b>Velocidade da memoria</b> (Gbps) e <b>ancho de banda</b> da memoria (GB/s), distinto do ancho da interface (bits).</li>
+<li><b>Alimentación</b>: conectores PCIe desde a fonte: 6+4, 8+2 ou 12 pins.</li>
+<li><b>Saídas de vídeo</b>: HDMI 2.1, DisplayPort 1.4, USB (realidade virtual).</li>
+<li><b>Cores</b>: 24 bits = cor verdadeira (o ollo non distingue máis). <b>Formato</b>: 1920×1080 o máis usado.</li>
+<li><b>Refrixerador</b>: imprescindible para non queimar a GPU.</li>
+</ul></div>
+<div class="box def"><div class="box-title">Conexións tarxeta–monitor</div>
+<ul>
+<li><b>VGA</b>: analóxico dos anos 90, para CRT; ruído e distorsión pola conversión D/A. Conector D-sub de 15 pins (DE-15). En retroceso fronte a HDMI.</li>
+<li><b>DVI</b>: substituto dixital; un píxel da tarxeta ↔ un píxel do monitor na resolución nativa. <b>Non transmite son</b>.</li>
+<li><b>HDMI</b>: propietario; son e vídeo HD cifrado sen compresión nun cable. Pensado para televisores: non apaga a pantalla ao perder sinal.</li>
+<li><b>DisplayPort</b>: estándar dixital de son e vídeo (e enerxía) para ordenador → monitor/proxector. Máis resolución, menos compresión, máis velocidade; ideal para varios monitores.</li>
+<li><b>Thunderbolt</b> (Intel/Apple): ata 10 Gbps; v1/v2 con Mini DisplayPort, v3/v4 con USB-C.</li>
+<li><b>USB-C</b>: pequeno, reversible, moi rápido; serve para case calquera dispositivo.</li>
+</ul></div>
+<figure><img src="apuntes/fh/img/ud3/conectores-video.png" alt="Conectores de vídeo" loading="lazy"><figcaption>USB-C, DisplayPort, HDMI, Mini DisplayPort/Thunderbolt, VGA e DVI.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-9-3', tipo: 'subtema', titulo: '9.3 Tarxeta de rede (NIC)',
+    resumen: 'Interface entre dispositivos dunha rede. Enderezo MAC único de 48 bits (OUI 24 bits do fabricante + 24 bits). ROM para arranque por rede. Token Ring/BNC en desuso; Ethernet RJ-45 10/100/1000 Mbit/s; NIC sen fíos 802.11b/g/n.',
+    claves: ['NIC', 'MAC 48 bits', 'OUI', 'RJ-45', 'BNC', 'Gigabit Ethernet', '802.11'],
+    tags: ['tarxetas', 'rede', 'nic', 'mac', 'ethernet'],
+    links: ['fh-ud3-9', 'fh-ud3-9-2'],
+    contenido: `
+<p>A tarxeta de rede (<b>NIC</b>, Network Interface Card/Controller) é a interface de conexión entre dispositivos dunha rede, permitindo compartir información e recursos.</p>
+<div class="box def"><div class="box-title">Enderezo MAC</div><p>Identificador único de <b>48 bits</b> en hexadecimal, administrado polo IEEE. Os tres primeiros octetos (24 bits) son o <b>OUI</b> (Organizationally Unique Identifier) do fabricante; os outros 24 bits completan o enderezo.</p></div>
+<p>A maioría traen unha <b>ROM</b> opcional para arrancar desde un servidor da rede (equipos sen almacenamento).</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/tarxeta-rede.png" alt="Tarxeta de rede" loading="lazy"><figcaption>Tarxeta de rede con conector 1 BNC e 2 RJ-45.</figcaption></figure>
+<ul>
+<li><b>Token Ring</b> (topoloxía en anel, conectores <b>BNC</b>, cable coaxial): en desuso por baixa velocidade e alto custo.</li>
+<li><b>Ethernet</b> (conectores <b>RJ-45</b>, par trenzado): 10 Mbit/s, 10/100 Mbit/s e <b>1000 Mbit/s (Gigabit Ethernet)</b>. Hoxe integradas na placa, ata 4 portos RJ-45 (antes só servidores).</li>
+<li><b>Sen fíos</b> (wireless): tamén son NIC; normas 802.11b, 802.11g, 802.11n (e ac/ax actuais).</li>
+</ul>
+`
+  },
