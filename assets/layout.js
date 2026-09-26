@@ -40,52 +40,73 @@
   function radialLayout(root, size, opts) {
     opts = opts || {};
     const gap = opts.gap != null ? opts.gap : 36;         // separación mínima entre tarjetas en el mismo anillo
-    const ringStep = opts.ringStep || 400;                // separación mínima entre anillos
-    const firstRing = opts.firstRing || 480;
+    const ringGap = opts.ringGap || 150;                  // hueco libre entre el borde de un anillo y el siguiente
+    const firstRing = opts.firstRing || 460;
+    const maxRows = opts.maxRows || 3;                    // filas escalonadas máximas por anillo
     const start = opts.startAngle != null ? opts.startAngle : -Math.PI / 2;
 
     // Profundidades y anillos
     const byDepth = [];
     (function walk(n, d) { n.depth = d; (byDepth[d] = byDepth[d] || []).push(n); n.children.forEach(c => walk(c, d + 1)); })(root, 0);
     const maxDepth = byDepth.length - 1;
-    if (maxDepth === 0) { root.x = 0; root.y = 0; return { radii: [0] }; }
+    if (maxDepth === 0) { root.x = 0; root.y = 0; return { radii: [0], rows: [1] }; }
 
-    // Radio mínimo por anillo: suma de anchos / 2π (condición necesaria) y separación mínima entre anillos
+    // Por anillo: radio central, número de filas escalonadas y grosor (filas × alto máximo).
+    // Un anillo con k filas necesita 1/k del arco por tarjeta: las tarjetas contiguas van en filas distintas.
     const need1 = n => size(n).w + gap;
-    const radii = [0];
+    const maxH = d => byDepth[d].reduce((a, n) => Math.max(a, size(n).h), 0);
+    const arcNeed = d => byDepth[d].reduce((a, n) => a + need1(n), 0);
+    const radii = [0], rows = [1], thick = [root.virtual ? 0 : size(root).h];
     for (let d = 1; d <= maxDepth; d++) {
-      const arc = byDepth[d].reduce((a, n) => a + need1(n), 0);
-      radii[d] = Math.max(d === 1 ? firstRing : radii[d - 1] + ringStep, arc / TAU + (d === 1 ? 0 : 0));
+      const rowH = maxH(d) + gap;
+      let r = d === 1 ? Math.max(firstRing, thick[0] / 2 + ringGap + rowH / 2) : radii[d - 1] + thick[d - 1] / 2 + ringGap + rowH / 2;
+      let k = 1;
+      while (k < maxRows && arcNeed(d) / k > TAU * (r + (k - 1) * rowH / 2)) k++;
+      // recalcular el radio central con el grosor definitivo; si ni así cabe, agrandar
+      r += (k - 1) * rowH / 2;
+      r = Math.max(r, arcNeed(d) / (TAU * k));
+      radii[d] = r; rows[d] = k; thick[d] = k * rowH;
     }
 
-    // Ángulo necesario por subárbol (de abajo arriba), en función de los radios actuales.
-    // Si el total excede 2π se escalan los radios y se repite (converge en 1-3 pasadas).
+    // Ángulo necesario por subárbol (de abajo arriba). Si el total excede 2π se agranda el anillo
+    // más exigente (desplazando los exteriores) y se repite.
     const need = new Map();
+    const own = n => n.depth === 0 ? 0 : need1(n) / rows[n.depth] / (radii[n.depth] - thick[n.depth] / 2 + (maxH(n.depth) + gap) / 2);
     const computeNeed = n => {
-      const own = n.depth === 0 ? 0 : need1(n) / radii[n.depth];
       const kids = n.children.reduce((a, c) => a + computeNeed(c), 0);
-      const v = Math.max(own, kids); need.set(n, v); return v;
+      const v = Math.max(own(n), kids); need.set(n, v); return v;
     };
-    for (let it = 0; it < 8; it++) {
+    for (let it = 0; it < 16; it++) {
       const total = computeNeed(root);
-      if (total <= TAU * 0.999) break;
-      const k = total / TAU * 1.01;
-      for (let d = 1; d <= maxDepth; d++) radii[d] *= k;
+      if (total <= TAU * 0.995) break;
+      let worst = 1, worstV = -1;
+      for (let d = 1; d <= maxDepth; d++) {
+        const v = byDepth[d].reduce((a, n) => a + (own(n) >= need.get(n) - 1e-9 ? own(n) : 0), 0);
+        if (v > worstV) { worstV = v; worst = d; }
+      }
+      const delta = radii[worst] * Math.max(0.05, total / TAU - 1);
+      for (let d = worst; d <= maxDepth; d++) radii[d] += delta;
     }
 
-    // Colocación: cada hijo recibe un sector proporcional a su necesidad y se sitúa en el centro
+    // Colocación: cada hijo recibe un sector proporcional a su necesidad; dentro de un anillo las
+    // tarjetas se alternan entre filas (interior → exterior) en orden angular.
+    const counter = [];
     const place = (n, a0, a1) => {
-      const r = radii[n.depth], mid = (a0 + a1) / 2;
-      if (n.depth === 0) { n.x = 0; n.y = 0; } else { n.x = Math.cos(mid) * r; n.y = Math.sin(mid) * r; }
+      const d = n.depth, mid = (a0 + a1) / 2;
+      if (d === 0) { n.x = 0; n.y = 0; } else {
+        const rowH = thick[d] / rows[d];
+        const row = rows[d] > 1 ? (counter[d] = (counter[d] || 0) + 1) % rows[d] : 0;
+        const r = radii[d] - thick[d] / 2 + rowH / 2 + row * rowH;
+        n.x = Math.round(Math.cos(mid) * r); n.y = Math.round(Math.sin(mid) * r);
+      }
       if (!n.children.length) return;
       const total = n.children.reduce((a, c) => a + need.get(c), 0) || 1;
       let a = a0;
       n.children.forEach(c => { const span = (a1 - a0) * (need.get(c) / total); place(c, a, a + span); a += span; });
     };
     place(root, start, start + TAU);
-    return { radii };
+    return { radii, rows };
   }
-
   /** Cajas con margen. */
   function boxes(nodes, size, margin) {
     return nodes.map(n => { const s = size(n); return { n, x: n.x, y: n.y, hw: s.w / 2 + margin / 2, hh: s.h / 2 + margin / 2 }; });

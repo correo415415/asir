@@ -48,7 +48,7 @@ let failed = 0;
 for (const mat of cases) {
   const { root, nodes } = buildTree(mat);
   const size = L.estimateSize;
-  const { radii } = L.radialLayout(root, size);
+  const { radii, rows } = L.radialLayout(root, size);
   const before = L.countOverlaps(nodes, size, 0);
   const left = L.resolveCollisions(nodes, size, { gap: 24 });
   const after = L.countOverlaps(nodes, size, 0);
