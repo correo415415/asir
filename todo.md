@@ -7,10 +7,10 @@
   - [ ] UD2 · Representación y medidas de la información → `parseados/fh/ud2.js`
   - [ ] UD3 · Elementos internos de un sistema informático → `parseados/fh/ud3.js`
   - [ ] Extraer las imágenes relevantes de los PDF (analizarlas antes de incluirlas) a `parseados/fh/img/`
-- [ ] **XBD · UD2** (`unidad2.html` + `imagenes/`)
-  - [ ] Copiar original a `apuntes/xbd/ud2/`
-  - [ ] Parsear a `parseados/xbd/ud2.js` incluyendo las imágenes (analizadas) en `parseados/xbd/img/ud2/`
-- [ ] Registrar los ficheros nuevos en `parseados/manifest.js`
+- [x] **XBD · UD2** (`unidad2.html` + `imagenes/`)
+  - [x] Copiar original a `apuntes/xbd/ud2/`
+  - [x] Parsear a `parseados/xbd/ud2.js` (50 nodos) con las 48 figuras del original (`tools/parse_xbd_ud2.py` + `tools/meta_xbd_ud2.py`)
+- [x] Registrar XBD UD2 en `parseados/manifest.js` (falta FH)
 - [ ] Actualizar README (tabla de materias)
 
 ## Web

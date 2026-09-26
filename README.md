@@ -14,14 +14,18 @@ assets/
 apuntes/              Apuntes ORIGINALES tal y como se reciben, separados por materia
   xbd/                XBD · Xestión de Bases de Datos (MP0372)
     ud1-sistemas-almacenamiento-sgbd.html
+    ud2/                unidad2.html + imagenes/
   lm/                 LM · Lenguajes de Marcas (sitio MkDocs exportado)
     index.html, tema01/, referencias/, assets/
 parseados/            Misma estructura de carpetas, con los apuntes convertidos a nodos
   manifest.js         Lista de ficheros parseados que se cargan
   xbd/
     ud1.js            UD1 parseada (36 nodos)
+    ud2.js            UD2 parseada (50 nodos, con figuras) — generada con tools/parse_xbd_ud2.py
   lm/
     ud1.js            UD1 parseada (35 nodos)
+tools/                Scripts de parseo (parse_xbd_ud2.py + meta_xbd_ud2.py)
+todo.md               Tareas pendientes
 vercel.json           Configuración de despliegue estático
 ```
 
@@ -80,5 +84,5 @@ Importar el repo en Vercel con *Framework Preset: Other* y sin comando de build.
 
 | Carpeta | Materia | Unidades parseadas |
 |---------|---------|--------------------|
-| `xbd`   | XBD · Xestión de Bases de Datos (MP0372) | UD1 |
+| `xbd`   | XBD · Xestión de Bases de Datos (MP0372) | UD1, UD2 |
 | `lm`    | LM · Lenguajes de Marcas y Sistemas de Gestión de Información (LMSGI) | UD1 |

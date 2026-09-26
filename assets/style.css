@@ -434,7 +434,7 @@ body.index-open .index { transform: none; opacity: 1; }
   body.panel-open .hint { display: none; }
 }
 
-@media (min-width: 900px) and (max-width: 1280px) {
+@media (min-width: 900px) and (max-width: 1500px) {
   /* Con índice y panel abiertos no queda sitio para los filtros */
   body.index-open.panel-open .search-filters { display: none; }
 }
