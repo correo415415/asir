@@ -21,7 +21,12 @@
 - [x] Soporte de imágenes en el contenido de los nodos (estilo `figure`/`img` en el panel, click para ampliar)
 
 ## Mapa
-- [ ] Evitar automáticamente que las tarjetas se **superpongan** cuando hay muchos nodos (p. ej. XBD UD1+UD2 o «Todas las materias»): radios de anillo adaptativos según el número de hojas + resolución de colisiones
+- [ ] **Sistema automático anti-solapamiento de tarjetas** (`layout()` en `assets/app.js`): que las tarjetas nunca se superpongan, sea cual sea el número de nodos (p. ej. XBD UD1+UD2 juntas o «Todas las materias»), sin ajustes manuales por materia
+  - [ ] Radios de anillo adaptativos: calcular el radio de cada anillo para que la longitud de arco disponible por nodo sea ≥ ancho de tarjeta + margen (en vez de `RADII` fijos)
+  - [ ] Reparto angular proporcional al número de hojas, con ángulo mínimo por nodo según su ancho real (t-materia 300 px, t-unidad 270, tema 230, subtema/ejercicio 210) y alto estimado
+  - [ ] Pasada final de resolución de colisiones (AABB): empujar radialmente/tangencialmente las tarjetas que aún choquen hasta que no quede ninguna intersección
+  - [ ] Mantener las aristas legibles (padre-hijo cercanos) y el centrado inicial / `fitAll`
+  - [ ] Test automático (Playwright o script node) que cargue todas las materias y verifique 0 intersecciones entre tarjetas
 
 ## Mantenimiento
 - [ ] Commits frecuentes + PR actualizada
