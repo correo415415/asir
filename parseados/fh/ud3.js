@@ -841,3 +841,102 @@ window.APUNTES.unidades.push({
 <div class="box tip"><div class="box-title">Por que os micros para xogos non inclúen gráficos?</div><p>Porque a potencia da <strong>GPU</strong> dedicada sempre será maior, e os micros tamén necesitan RAM para funcionar correctamente.</p>
 <figure class="small"><img src="apuntes/fh/img/ud3/tarxeta-grafica-dedicada.png" alt="Tarxeta gráfica dedicada" loading="lazy"><figcaption>Tarxeta gráfica dedicada.</figcaption></figure></div>`
   },
+  {
+    id: 'fh-ud3-5-3', tipo: 'subtema', titulo: '5.3 Intel vs AMD: criterios de comparación',
+    resumen: 'Para comparar procesadores de distintos fabricantes hai que fixarse en xeración, prezo, rendemento, uso previsto, compatibilidade e características.',
+    claves: ['Xeración', 'Prezo', 'Rendemento', 'Uso', 'Compatibilidade', 'Características'],
+    tags: ['procesador', 'intel', 'amd', 'comparativa'],
+    links: ['fh-ud3-5', 'fh-ud3-5-4', 'fh-ud3-5-5'],
+    contenido: `
+<p>Intel e AMD son os dous grandes fabricantes de procesadores x86. Non se poden comparar directamente polos números dos modelos, así que hai que usar criterios comúns:</p>
+<ul>
+<li><b>Xeración</b>: canto máis recente, mellor arquitectura e eficiencia.</li>
+<li><b>Prezo</b>: AMD soe ofrecer máis núcleos por euro; Intel máis rendemento por núcleo en gamas altas.</li>
+<li><b>Rendemento</b>: consultar <i>benchmarks</i> independentes (non a publicidade do fabricante).</li>
+<li><b>Uso</b>: ofimática, xogos, edición de vídeo, servidor… cada uso prioriza cousas distintas (fíos, frecuencia, gráfica integrada).</li>
+<li><b>Compatibilidade</b>: zócolo e chipset da placa base, tipo de RAM (DDR4/DDR5).</li>
+<li><b>Características</b>: gráfica integrada, TDP, soporte de PCIe 5.0, virtualización, overclocking (desbloqueado ou non).</li>
+</ul>
+<div class="box info"><div class="box-title">Intel vs AMD en 2025</div><p>Intel: Core de 14.ª xeración e Core Ultra sobre chipsets serie 800 (Z890). AMD: Ryzen 8000/9000 sobre zócolo AM5, que AMD mantén compatible varias xeracións (AM4 durou de 2016 a 2022+).</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/intel-vs-amd.png" alt="Intel vs AMD" loading="lazy"><figcaption>Os dous grandes fabricantes de CPU x86.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-5-4', tipo: 'subtema', titulo: '5.4 Numeración dos procesadores Intel',
+    resumen: 'Intel Core i3/i5/i7/i9 (gamas). O nome indica marca, modelo, xeración, SKU e sufixo (K, G, T, H, U…).',
+    claves: ['i3/i5/i7/i9', 'Xeración', 'SKU', 'Sufixo K', 'Sufixo U', 'Sufixo H'],
+    tags: ['procesador', 'intel', 'nomenclatura'],
+    links: ['fh-ud3-5-3', 'fh-ud3-5-5'],
+    contenido: `
+<p>As gamas de Intel Core van de menor a maior potencia: <b>i3</b> (básica), <b>i5</b> (media), <b>i7</b> (alta) e <b>i9</b> (entusiasta).</p>
+<div class="box ex"><div class="box-title">Exemplo: Intel Core i7-1065G7</div>
+<ul>
+<li><b>Intel Core</b>: marca.</li>
+<li><b>i7</b>: modelo/gama.</li>
+<li><b>10</b>: xeración (10.ª).</li>
+<li><b>65</b>: SKU (número de produto dentro da xeración; maior = mellor, normalmente).</li>
+<li><b>G7</b>: sufixo (nivel de gráficos integrados).</li>
+</ul></div>
+<table><tr><th>Sufixo</th><th>Significado</th></tr>
+<tr><td>K</td><td>Desbloqueado para overclocking</td></tr>
+<tr><td>G1–G7</td><td>Nivel de gráficos integrados (G7 = o mellor)</td></tr>
+<tr><td>T</td><td>Baixo consumo (sobremesa)</td></tr>
+<tr><td>H</td><td>Alto rendemento para portátiles</td></tr>
+<tr><td>Q</td><td>Quad-core (portátiles antigos)</td></tr>
+<tr><td>U</td><td>Ultra baixo consumo (ultraportátiles)</td></tr>
+<tr><td>F</td><td>Sen gráfica integrada</td></tr>
+</table>
+`
+  },
+  {
+    id: 'fh-ud3-5-5', tipo: 'subtema', titulo: '5.5 Numeración dos procesadores AMD Ryzen',
+    resumen: 'Arquitectura Zen (MCM con CCX e Infinity Fabric). O nome Ryzen indica gama, xeración, segmento, arquitectura e sufixo de TDP.',
+    claves: ['Zen', 'CCX', 'Infinity Fabric', 'AM4/AM5', 'Ryzen 3/5/7/9', 'Sufixos HX/HS/U'],
+    tags: ['procesador', 'amd', 'ryzen', 'nomenclatura'],
+    links: ['fh-ud3-5-3', 'fh-ud3-5-4'],
+    contenido: `
+<p>Coa arquitectura <b>Zen</b> (2017) AMD substituíu a antiga Bulldozer e volveu ser competitiva. Zen usa un deseño <b>MCM</b> (multi-chip module): cada chip ten dous <b>CCX</b> de 4 núcleos unidos por <b>Infinity Fabric</b>, un bus cuxa velocidade depende da frecuencia da RAM (por iso a memoria rápida beneficia aos Ryzen).</p>
+<ul>
+<li>De 2 a 8 núcleos en sobremesa (Ryzen), ata 32/64 en Threadripper/EPYC.</li>
+<li>Zócolos AM4 (DDR4) e AM5 (DDR5).</li>
+<li>Todos os Ryzen veñen <b>desbloqueados</b> para overclocking.</li>
+</ul>
+<figure class="small"><img src="apuntes/fh/img/ud3/zen3-ccx-infinity-fabric.png" alt="Zen 3 CCX e Infinity Fabric" loading="lazy"><figcaption>Zen 3: CCX unidos por Infinity Fabric.</figcaption></figure>
+<div class="box ex"><div class="box-title">Exemplo: Ryzen 5 7640U</div>
+<ul>
+<li><b>Ryzen 5</b>: gama (9 &gt; 7 &gt; 5 &gt; 3).</li>
+<li><b>7</b>: ano/xeración (7 = 2023, 8 = 2024, 9 = 2025).</li>
+<li><b>6</b>: segmento de mercado (maior = mellor).</li>
+<li><b>4</b>: arquitectura Zen (4 = Zen 4).</li>
+<li><b>0</b>: 0 = variante baixa, 5 = variante alta.</li>
+<li><b>U</b>: sufixo de TDP.</li>
+</ul></div>
+<table><tr><th>Sufixo</th><th>TDP / uso</th></tr>
+<tr><td>HX</td><td>55 W, portátiles gaming/estación de traballo</td></tr>
+<tr><td>HS</td><td>35 W, portátiles delgados de alto rendemento</td></tr>
+<tr><td>U</td><td>15–28 W, ultraportátiles</td></tr>
+<tr><td>C</td><td>15–28 W, Chromebooks</td></tr>
+<tr><td>e</td><td>9 W, moi baixo consumo</td></tr>
+<tr><td>X</td><td>Sobremesa de alto rendemento</td></tr>
+</table>
+<figure class="small"><img src="apuntes/fh/img/ud3/ryzen-5-7640u.png" alt="Desglose Ryzen 5 7640U" loading="lazy"><figcaption>Nomenclatura Ryzen para portátiles.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-5-6', tipo: 'subtema', titulo: '5.6 Procesadores ARM',
+    resumen: 'Arquitectura RISC de baixo consumo (ARMv7/v8, Cortex-A, Neoverse). Domina móbiles, chega a portátiles (Apple) e supercomputadores (Fugaku).',
+    claves: ['RISC vs CISC', 'ARMv8', 'Cortex-A', 'big.LITTLE', 'SoC', 'Neoverse'],
+    tags: ['procesador', 'arm', 'risc', 'soc'],
+    links: ['fh-ud3-5', 'fh-ud3-5-3'],
+    contenido: `
+<p>ARM non fabrica chips: <b>licencia deseños</b> (ARMv7 de 32 bits, ARMv8 de 64 bits) que outros integran nos seus <b>SoC</b> (Samsung Exynos con Cortex-A55, Apple A/M, Qualcomm Snapdragon, Nvidia…).</p>
+<ul>
+<li><b>Cortex-A</b>: núcleos para móbiles/tabletas. <b>Neoverse</b>: núcleos para servidores e centros de datos.</li>
+<li><b>big.LITTLE</b>: combina núcleos potentes con núcleos eficientes no mesmo chip; Intel copiou a idea (Lakefield, e despois os P-core/E-core dos Core 12.ª xen).</li>
+<li>O supercomputador <b>Fugaku</b> (Xapón, n.º 1 do mundo en 2021) usa 7,3 millóns de núcleos ARM.</li>
+<li>Apple pasou os seus portátiles de Intel a ARM (chips M1/M2/M3) con grande eficiencia enerxética.</li>
+</ul>
+<div class="box def"><div class="box-title">RISC vs CISC</div><p><b>RISC</b> (ARM): poucas instrucións sinxelas, executadas moi rápido e con baixo consumo. <b>CISC</b> (x86 Intel/AMD): moitas instrucións complexas, máis potencia bruta pero maior consumo e calor.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/velocidade-arm.png" alt="Evolución da velocidade ARM" loading="lazy"><figcaption>Evolución do rendemento dos núcleos ARM.</figcaption></figure>
+`
+  },
