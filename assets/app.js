@@ -108,20 +108,28 @@
     if (!root.virtual) G.nodes.unshift(root);
   }
 
-  /* ---------- Disposición radial ---------- */
-  const RADII = [0, 520, 1080, 1560, 1980];
+  /* ---------- Disposición radial sin solapamientos (assets/layout.js) ---------- */
+  // 1.ª pasada con tamaños estimados (antes de renderizar); 2.ª pasada con las medidas reales
+  // de las tarjetas ya en el DOM (relayoutMeasured), y una pasada final de colisiones AABB.
+  const L = window.ASIR_LAYOUT;
+  const sizeCache = new Map();
+  const sizeOf = n => sizeCache.get(n.id) || L.estimateSize(n);
   function layout() {
-    const leaves = n => n.children.length ? n.children.reduce((a, c) => a + leaves(c), 0) : 1;
-    const place = (n, a0, a1, depth) => {
-      const mid = (a0 + a1) / 2, r = RADII[Math.min(depth, RADII.length - 1)];
-      n.x = Math.cos(mid) * r; n.y = Math.sin(mid) * r; n.depth = depth;
-      if (!n.children.length) return;
-      const total = leaves(n); let a = a0;
-      n.children.forEach(c => { const span = (a1 - a0) * (leaves(c) / total); place(c, a, a + span, depth + 1); a += span; });
-    };
-    const root = G.root; root.x = 0; root.y = 0; root.depth = 0;
-    const total = leaves(root); let a = -Math.PI / 2;
-    root.children.forEach(c => { const span = Math.PI * 2 * (leaves(c) / total); place(c, a, a + span, 1); a += span; });
+    if (!G.root) return;
+    L.radialLayout(G.root, sizeOf, { gap: 36, ringGap: 150, firstRing: 460, maxRows: 3 });
+    L.resolveCollisions(G.nodes, sizeOf, { gap: 28 });
+  }
+  function relayoutMeasured() {
+    let changed = false;
+    nodeEls.forEach((el, id) => {
+      const w = el.offsetWidth, h = el.offsetHeight; if (!w || !h) return;
+      const prev = sizeCache.get(id);
+      if (!prev || Math.abs(prev.h - h) > 2 || Math.abs(prev.w - w) > 2) { sizeCache.set(id, { w, h }); changed = true; }
+    });
+    if (!changed) return;
+    layout();
+    G.nodes.forEach(n => { const el = nodeEls.get(n.id); if (el) { el.style.left = n.x + 'px'; el.style.top = n.y + 'px'; } });
+    drawEdges();
   }
 
   /* ---------- Render de nodos y aristas ---------- */
@@ -144,6 +152,16 @@
     });
     nodesEl.appendChild(frag);
 
+    drawEdges();
+
+    $('#legend').innerHTML = KINDS.map(k => `<span><i style="background:${KIND_COLOR[k]}"></i>${KIND_LABEL[k]}</span>`).join('');
+    const nMat = G.nodes.filter(n => n.tipo === 'materia').length || 1;
+    const nUd = G.nodes.filter(n => n.tipo === 'unidad').length;
+    $('#stats').textContent = `${G.nodes.filter(n => !n.virtual && n.tipo !== 'materia').length} nodos · ${nMat} materia(s) · ${nUd} unidad(es)`;
+  }
+
+  function drawEdges() {
+    edgesEl.innerHTML = '';
     const NS = 'http://www.w3.org/2000/svg';
     const draw = (a, b, cls) => {
       const A = G.byId.get(a), B = G.byId.get(b);
@@ -158,11 +176,6 @@
     };
     G.edges.forEach(([a, b]) => draw(a, b, G.byId.get(b).depth <= 2 ? 'strong' : ''));
     G.xrefs.forEach(([a, b]) => draw(a, b, 'xref'));
-
-    $('#legend').innerHTML = KINDS.map(k => `<span><i style="background:${KIND_COLOR[k]}"></i>${KIND_LABEL[k]}</span>`).join('');
-    const nMat = G.nodes.filter(n => n.tipo === 'materia').length || 1;
-    const nUd = G.nodes.filter(n => n.tipo === 'unidad').length;
-    $('#stats').textContent = `${G.nodes.filter(n => !n.virtual && n.tipo !== 'materia').length} nodos · ${nMat} materia(s) · ${nUd} unidad(es)`;
   }
 
   /* ---------- Selector de materia ---------- */
@@ -210,7 +223,7 @@
   function rebuild(materiaId) {
     currentMateria = materiaId || null;
     closePanel(true);
-    buildGraph(currentMateria); layout(); render(); renderIndex(); renderMateriaSwitch(); updatePlaceholder();
+    buildGraph(currentMateria); layout(); render(); relayoutMeasured(); renderIndex(); renderMateriaSwitch(); updatePlaceholder();
     document.body.style.setProperty('--mat-color', (currentMateria && window.APUNTES.materias[currentMateria] || {}).color || '#0f2545');
     // Volver a aplicar la búsqueda / filtro activo sobre el nuevo mapa
     if (input.value.trim().length >= 2 || kindFilter) { renderResults(); results.hidden = true; }
