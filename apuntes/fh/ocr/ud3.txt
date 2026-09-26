@@ -3261,3 +3261,552 @@ internos presenta: 6825660.
 6825660.
 
 e O tempo de acceso: 6825660.
+===== PAXINA 31 =====
+Anverso memoria RAM
+
+Reverso memoria RAM
+
+Incompatibilidade entre as
+evolucións da memoria DDR
+
+O zócolo que presentan as memo-
+rias DDR non son compatibles pois
+teñen distinto lugar para a fende-
+dura para evitar erros xa que
+traballan con distintas voltaxes.
+
+A DDR6 espérase que saia ó mer-
+cado a finais de 2025. A nova
+DRAM GDDR7 de 24 GB promete
+velocidades superiores a 40 GB/s.
+
+Rañura RIMM
+
+Doutra banda, e estritamente falando, o que normalmente chamamos memo-
+ria RAM consiste nunha placa de circuíto impreso que chamamos módulo no
+que se soldan os chips de memoria (DRAM) propiamente ditos.
+
+O termo DRAM ou Dinamyc RAM fai referencia a constitución física destas
+memorias, que precisan ser continuamente refrescadas para manter os datos
+que almacenan. En caso contrario estes datos esvaeceríanse e perderíanse. En
+contraposición a estas memorias están as SRAM ou Static RAM que se empre-
+gan por exemplo nos rexistros dos procesadores. Ó contrario que as memorias
+DRAM, as memorias SRAM (de mellores prestacións pero cun prezo máis alto
+por bit de almacenamento) non precisan de refresco para preservar os datos
+escritos nelas. Non confundir o refresco coa volatilidade, xa que existe memo-
+ria SRAM volátil e memoria SRAM non volátil, esta última denominada NVRAM.
+
+Seguindo cos módulos de memoria, contan cunha serie de contactos que lle
+permiten a comunicación coa placa base do equipo e mediante os que se ali-
+menta o módulo. No módulo tamén vai incrustado un pequeno procesador: o
+SPD, que contén datos sobre o tamaño, o tempo de acceso, a velocidade e o
+tipo de memoria, grazas ó cal o equipo pode amosar eses datos ó usuario e
+gracias ó cal pódese establecer axeitadamente a comunicación entre as memo-
+rias do módulo e o Controlador de Memoria da Placa Base.
+
+As memorias RAM actuais traballan realizando as operacións de lectura e es-
+critura en sincronismo co reloxo do sistema do equipo, de aí que tamén reciban
+o cualificativo de Síncronas (SDRAM ou RAM Dinámicas e Síncronas).
+
+A primeira evolución das memorias SDRAM chegou coa tecnoloxía DDR ou
+Double Data Rate, que fixo posible que as memorias transmitan datos dúas
+veces por cada pulso de reloxo do sistema, facendo uso dos flancos de subida e
+de baixada do sinal. Isto implica multiplicar por dous a capacidade de trans-
+misión de datos da memoria, sen necesidade de cambiar a frecuencia do relo-
+xo.
+
+Asociada a esta tecnoloxía xorde o termo Frecuencia Efectiva ou Frecuencia
+de Transferencia da memoria, para diferencialo da Frecuencia Real de Tra-
+ballo de funcionamento. Como se deduce da imaxe lateral a frecuencia real de
+traballo da memoria é a do reloxo coa que está sincronizada, o que sucede é
+que ó facer dúas operación por cada ciclo de reloxo pódese pensar que é coma
+se traballase a unha frecuencia o dobre da real, por iso se lle chama frecuencia
+efectiva de traballo e por iso debemos saber que é diferente da frecuencia real
+pero que depende dela.
+
+As seguintes evolucións de memorias: DDR2, DDR3, DDR4, DDR5 e DDR6 segui-
+ron a mesma liña de duplicar, en cada nova xeración, a transmisión de datos da
+xeración anterior sen a necesidade imperiosa de modificar a frecuencia do sinal
+de reloxo do sistema.
+
+7.2> Factores de forma das memorias RAM actuais
+Actualmente existes tres factores de forma para as memorias RAM:
+
+e DIMM (Dual In-line Memory Module - módulo de memoria en dobre liña):
+é o que se emprega nas computadoras de escritorio. Miden 133.35x30
+mm e teñen un grosor máximo de 4 mm. Comercialízanse módulos con
+diferente altura.
+
+e FB-DIMM (Fully-Buffered DIMM): empregada principalmente en equipos
+servidores. Teñen as mesmas dimensións que as DIMM 133,35x30 mm,
+pero un grosor máximo de 5.1 mm.
+
+e SO-DIMM (Small Outline DIMM ou DIMM de pequeno formato): emprega-
+da principalmente en equipos portátiles. Miden 67.6x30 mm e teñen un
+grosor máximo de 3.8 mm.
+
+7.3 > Características máis importantes dunha memoria RAM
+
+===== PAXINA 32 =====
+As principais características que debemos ter en conta á hora de seleccionar
+unha memoria RAM serían:
+
+e Capacidade: é a cantidade de información que unha memoria pode alma-
+cenar. Mídese en bytes e os módulos máis comúns agora mesmo son de
+8GB, 16GB e 32GB.
+
+e Frecuencia de Traballo Externa: é unha característica propia das memo-
+rias síncronas SDRAM, e representa a frecuencia á que realiza opera-
+cións polo bus que a comunica co procesador. Canto maior é esta fre-
+cuencia, tanto maior será o número de operacións por segundo que rea-
+lice a memoria. Os módulos actuais están ó redor do GHz.
+
+e Frecuencia efectiva: é o dato que dan os fabricantes.
+
+e Taxa de transferencia: esta característica representa os datos transferi-
+dos por segundo entre a memoria e a CPU. Para calculalo téñense en
+conta as transferencias que realiza a memoria (frecuencia efectiva) e os
+bits (ou Bytes) que transmite a memoria en cada transferencia (ancho
+do bus de comunicacións). As memorias actuais traballan con buses de
+64 bits de ancho (8 Bytes).
+
+e Tecnoloxía MultiCanle: consiste en aumentar o rendemento do sistema
+facendo posible que o procesador (en realidade o controlador de memo-
+ria en primeiro termo) acceda a máis dun módulo de memoria en cada
+operación. Actualmente existen tecnoloxías DualChannel, TriChannel e
+QuadChannel segundo se permita o acceso simultáneo a 2, 3 e 4 módu-
+los respectivamente. A efectos prácticos é similar a que a Taxa de
+Transferencia se duplique, triplique ou cuadruplique en cada respectivo
+caso. Para facer tecnoloxía MultiChannel os módulos de memoria de-
+ben ser iguais (fabricante, frecuencia e latencias) motivo polo que se
+adoitan comercializar varios módulos de memoria RAM iguais nun mes-
+mo Kit.
+
+e Tensión: canto maior sexa a tensión á que traballe o módulo maior ren-
+demento terá; con todo, maior será o consumo e máis calor xerará.
+
+e Latencias: describen os tempos que os chips de memoria requiren para
+executar diferentes operacións. Nas memorias actuais adoitan indicarse
+en unidades de ciclos de reloxo mediante catro parámetros: CL, Treo, Tre
+e Tras. Nunha memoria actual adoitan escribirse como catro números
+separados con guións, tal que así: 7-8-8-24. Aínda que as latencias ante-
+riores non son as únicas latencias dunha memoria, si son as máis signifi-
+cativas.
+
+A latencia CAS (tamén chamada CL) é o número de ciclos que transcorren
+entre a solicitude de datos e o inicio da transmisión.
+
+Un ciclo é o inverso da frecuencia e normalmente mídese en nanosegundos.
+Coñecendo a frecuencia de funcionamento da RAM (a frecuencia do reloxo), a
+duración do ciclo calcúlase do seguinte xeito:
+
+1000 / frecuencia * CL = latencia CAS en nanosegundos
+
+onde empregamos 1000 ciclos en vez de 1 só para realizar a operación xa en
+nanosegundos.
+
+En principio canto máis baixas sexan as latencias mellor será a memoria, pero
+como as latencias se dan en ciclos de reloxo e estes dependen da frecuencia de
+traballo da memoria, podería suceder que memorias con frecuencias de
+traballo baixas e con baixas latencias sexan mellores que outras con maior
+frecuencia de traballo e maiores latencias.
+
+Para ter RAM de dobre canle, é necesario o seguinte:
+
+e O procesador debe estar deseñado para ler de dous módulos de RAM si-
+multaneamente.
+
+e A placa base debe ter dúas canles para a transmisión de datos.
+
++ Debes ter dous módulos de memoria.
+
+Keayrurr CES
+
+os
+
+A y isto 1o
+
+Memorias SO-DIMM (Small
+Outline DIMM)
+
+Este tipo de memoria de menor
+formato úsase en dispositivos
+máis compactos como portátiles
+ou barebones.
+
+En placas mini-ITX pódense en-
+contrar este tipo de memorias e
+tamén en impresoras de gama
+alta.
+
+Teñen un menor número de con-
+tactos pero manteñen as caracte-
+rísticas das memorias con forma-
+to DIMM estándar.
+
+Rañuras de memoria
+
+A memoria dos ordenadores vén
+en forma de módulos, que son
+simplemente pequenas placas de
+circuíto que integran diferentes
+chips de memoria nunha soa
+unidade.
+
+Polo tanto, a placa base adoita ter
+varias  rañuras (normalmente
+entre 2 e 4) dun tipo específico
+(actualmente DIMM de 240 pins).
+
+Combinado coas características do
+chipset, isto determinará que tipo
+de memoria podemos conectar e
+cal é a capacidade máxima de
+memoria que a placa base pode
+recoñecer.
+
+A RAM é utilizada polo procesador
+para almacenar datos temporal-
+mente mentres se executan os
+programas.
+===== PAXINA 33 =====
+Í ao SS
+Bancos de memoria RAM
+
+Por exemplo, unha memoria DDR3
+traballa sincronizada co bus que a
+comunica co procesador a unha
+frecuencia de 800 MHZ.
+
+Coa tecnoloxía DDR, será capaz de
+facer o dobre de transferencias de
+datos por segundo, é dicir, 1600
+MT/s (millóns de transferencias
+por segundo). O fabricante vende-
+rá esta memoria como DDR3-
+1600. Así que 1 600 é ó que lle
+chamamos frecuencia efectiva.
+
+A memoria DDR3-1600 fai 1600
+MT/s e como traballa cun bus de
+64 bits (8 Bytes) entón, a súa Taxa
+de transferencia será:
+
+1600 x 8 = 12 800 MB/s
+
+O fabricante anunciará esta me-
+moria como DDR3-1600 ou tamén
+como PC3-12800. En ámbolos
+dous casos está dando a mesma
+información.
+
+Se instalamos nun equipo dous
+módulos PC3-12800 en DualChan-
+nel teremos unha Taxa de trans-
+ferencia de:
+
+12 800 x 2 = 25 600 MB/s.
+
+Na imaxe superior indícase con
+diferentes cores que, para empre-
+gar a tecnoloxía DualChannel non
+vale con pór os módulos en cal-
+quera banco.
+
+Deben pórse por parellas nos
+vermellos ou ben por parellas nos
+negros.
+
+Se se instalan dous módulos e se
+coloca un nun banco vermello e
+outro nun banco negro, non fun-
+cionarán en DualChamnel.
+
+Se se colocan catro módulos
+funcionarán por parellas, é dicir,
+poderase acceder simultaneamen-
+te ós dous vermellos por un lado e
+ós dous negros por outro lado.
+
+O rendemento é tal que resulta
+mellor ter dous módulos de me-
+moria de 8 GB en DualChannel
+que un só módulo de 16 GB en
+SingleChannel.
+
+e Os módulos deben ter o mesmo tamaño, velocidade e ser do mesmo fa-
+bricante.
+
+e Os dous módulos deben instalarse nas rañuras especificadas polo fabri-
+cante da placa base para utilizar ambas as canles. Dúas rañuras com-
+parten unha canle e outras dúas comparten a segunda canle.
+
+Xeracións de memorias RAM actuais e as súas características
+
+Modelo DDR DDR2 DDR3 DDR4 DDR5 DDR6
+
+Ano de lanzamento 1998 2003 2007 2014 2020 2025
+
+Número de contactos 184 240 240 288 288 ?
+
+Capacidades (max) 16B 4GB 16 GB 32 GB 128 GB ?
+
+Frecuencias de traba-
+
+100-200 200-533 400-1066 800-2133 |2400-3600| 6400?
+llo (MHz)
+Frecuencias afectivas 200-400 | 400-1066 | 800-2133 | 1600-3200 |4800-10000| 12800-?
+Taxas de transferen- 1600-3 200 3200-8 500 6 400-17000 12800-25600 38 400-57 600 102400-?
+cia (MB/s)
+Tensión 2.5V/2.6V 1.8V 1.5V/1.35V 1.2V/1.05V 1.1 ?
+
+AMD Zen
+
+Pero hai unha última cousa a ter en conta, nos procesadores AMD coa
+microarquitectura Zen, o seu bus Infinity Fabric interno funciona á mesma
+frecuencia que a frecuencia de reloxo da RAM.
+
+Polo tanto, neste caso, sempre se recomenda mercar RAM cunha frecuencia
+máis alta, xa que isto mellorará a comunicación interna entre os CCD. Non
+obstante, non é tan sinxelo.
+
+Lembremos as tres frecuencias utilizadas para acceder á RAM:
+
+e felk: frecuencia de Infinity Fabric
+e uclk: frecuencia de Unified Memory Controller
+e mclk: frecuencia de reloxo da RAM
+
+Inicialmente, a relación é 1:1:1.
+
+Polo tanto, canto maior sexa a frecuencia da RAM, maior será a frecuencia de
+Infinity Fabric. Non obstante, se a frecuencia da RAM é demasiado alta, Infinity
+Fabric non poderá funcionar tan rápido, polo que reducirá automaticamente á
+metade a súa frecuencia, o que significa que funcionará máis lento. Polo tanto,
+se a RAM é moi rápida, a proporción será de 2:1:1.
+
+7.4> Memorias RAM especiais para propósitos específicos
+
+Existen outros tipos de memorias RAM con certas características adicionais
+especiais que se empregan en equipos que requiren prestacións específicas.
+Algunhas destas memorias especiais son:
+
+e Memorias con ECC (comprobación e corrección de erros): son memorias
+capaces de recoñecer e corrixir erros que poderían provocar corrupción
+nos datos. Como son máis fiables adoitan usarse en servidores e equi-
+pos onde é importante a integridade dos datos, como por exemplo en
+contornos científicos ou financeiros. Pola contra, estas memorias son
+máis caras e lentas debido precisamente a que teñen que facer compro-
+bación de datos.
+
+===== PAXINA 34 =====
+e Memorias rexistradas: os módulos de memoria rexistrada teñen un re-
+xistro adicional ou chip de memoria intermedia entre os módulos de
+memoria que permite o manexo de maiores cantidades de memoria
+RAM a costa de introducir maiores retardos. Este tipo de memoria adoi-
+ta empregarse, ó igual que a memoria ECC, en servidores ou equipos
+específicos. De feito moitas memorias rexistradas son tamén ECC.
+
+7.52 Memoria ROM
+
+ROM é o acrónimo de Read-Only Memory (memoria de só lectura). É unha
+memoria de semicondutor non destrutible, polo que non se pode escribir sobre
+ela, e que conserva intacta a información almacenada, incluso no caso de
+interrupción de corrente (memoria non volátil). A ROM soe almacenar a
+configuración do sistema ou o programa de arranque do ordenador.
+
+A memoria de só lectura ou ROM é utilizada como medio de almacenamento de
+datos nos ordenadores. Debido a que non se pode escribir facilmente, o seu
+uso principal reside na distribución de programas que estean estreitamente
+ligados ó soporte físico do ordenador, e que seguramente non necesitarán
+actualización.
+
+A razón de que aínda existan é que non se pode ler un programa que é
+necesario para executar un disco dende o propio disco. Polo tanto, a BIOS, ou o
+sistema de arranque do ordenador terán que ir nunha memoria de tipo ROM
+(na actualidade empréganse memorias flash, que son evolución das ROMs
+iniciais).
+
+A memoria RAM normalmente é máis rápida de ler que a maioría das memorias
+ROM, polo tanto o contido da memoria ROM sóese transvasar á memoria RAM
+para o seu uso. Usanse principalmente en microprogramación de sistemas; os
+fabricantes sóenas empregar cando producen compoñentes de forma masiva.
+
+8 >> Sistemas de almacenamento
+
+Para poder ler e escribir a información nos soportes de almacenamento
+externo, cómpre dispor dunha interface, tanto física como lóxica, coa que unir
+o periférico co bus do sistema.
+
+Non se encargan soamente de administrar a transferencia de datos, senón que
+ademais controlan as operacións de entrada/saída da información dende e cara
+ós periféricos ou unidades de disco, polo que se lles soe chamar controladoras
+de disco.
+
+8.1> Controladoras de disco
+Os tipos de controladoras ou adaptadores son os seguintes:
+PATA (Parallel Advanced Technology Attachment)
+
+Trátase dun estándar de interface en desuso, que se coñeceu orixinalmente
+como IDE (Integrated Device Electronics). Tamén foi coñecida como ATA (AT-
+bus Attachment) polo que se lle soe chamar controladora de bus AT. Se nalgún
+momento o usuario vira a denominación IDE-ATAPI, estaría vendo ou
+configurando un dispositivo deste tipo.
+
+O deseño orixinal de ATA (dous dispositivos en cada bus) ten o inconveniente
+de que mentres accedemos a un dispositivo, o outro non se pode usar.
+
+Este tipo de discos estendéronse máis que os SCSI debido ó seu custe moito
+menor, aínda que o seu rendemento tamén era máis baixo. Debido ás
+limitacións que ten PATA, desenvolveuse o Serial ATA que o substituíu na
+meirande parte dos equipos.
+
+Cada cable de conexión (consta de 40 fíos) pode ter tres conexións: unha para
+conectalo á placa base, un conector intermedio para un disco duro ou DVD, e
+un terceiro ó final do cable para conectar outro dispositivo.
+
+Memoria rexistrada
+
+As memorias rexistradas son
+doadamente recoñecibles polo
+chip extra que levan tal como se
+pode observar na imaxe. Estes
+módulos requiren un controlador
+de memoria específico, polo que
+so funcionarán en equipos con
+placas base ou procesadores que
+conten con tales controladores.
+Como o factor de forma é o mes-
+mo que un módulo normal pode
+resultar sinxelo equivocarse e
+instalalos en equipos non compa-
+tibles. En tal caso o equipo detec-
+tará que non ten memoria RAM
+instalada ou ben sacará unha
+mensaxe de erro indicando que
+non admite memoria rexistrada.
+
+Memoria FLASH
+
+As aplicacións máis habituais
+deste tipo de memorias, ademais
+de para servir de soporte á BIOS,
+son como chaveiros USB, tarxetas
+PC Card para portátiles ou tarxe-
+tas de memoria para almacenar
+fotos.
+
+Track/
+Cylinder
+
+Sector
+
+Heads
+
+Sistemas para enderezar o
+contido
+
+O primeiro sistema que se usou
+para enderezar o contido foi o
+CHS (cilindro-cabeza-sector), xa
+que con estes tres valores pode-
+mos situar un dato calquera do
+disco.
+
+Máis adiante creouse outro siste-
+ma máis sinxelo: LBA (direcciona-
+mento lóxico de bloques), que
+consiste en dividir o disco enteiro
+en sectores e asignar un único
+número a cada un; é o sistema
+usado actualmente.
+===== PAXINA 35 =====
+“a
+
+Cable PATA
+
+Cable SCSI interno
+
+sa
+
+Cable SCSI externo
+
+9
+
+Cable SATA
+
+NS
+
+Conector SATA
+
+Conector SAS
+
+Se nun conector IDE pinchamos un dispositivo, farémolo seleccionándoo como
+mestre; se pinchamos dous teremos que configuralos previamente,
+seleccionando un deles como mestre e o segundo como escravo.
+
+O normal é que os dispositivos incorporen na parte traseira uns pequenos
+interruptores que permiten escoller entre tres posibilidades: mestre (M,
+Master), escravo (S, Slave) ou deixar que o propio cable se encargue de decidir
+cal é cada un deles (CS, Cable Select).
+
+Eran bastante lentas polo que evolucionaron dando lugar ás controladoras E-
+IDE (Enhanced Intelligent Drive Electronics) que as melloraban na forma de
+realizar a transferencia da información, a xestión de discos de máis de 504 MB
+de capacidade e a identificación a través do software dos periféricos que se lle
+conectan, permitindo o uso da tecnoloxía Plug and Play e chegando a poder
+conectar catro dispositivos a cada controladora.
+
+Na práctica, ó compartir a interface física, eran equivalentes as controladoras
+IDE, E-IDE e PATA á hora de conectar os dispositivos.
+
+SCSI (Small Computer System Interface)
+
+Son capaces de soportar ata sete periféricos numerados, dunha gama de
+periféricos moito maior que nas E-IDE e IDE. Desta forma, é como se cada un
+dos periféricos tivese unha controladora propia. Tódolos periféricos quedan
+unidos entre si por un único cable de 50 ou 68 fíos que se activan
+sucesivamente no modo denominado fervenza (un tras doutro).
+
+O único problema destas controladoras é a dificultade que presentan na
+configuración dos diferentes periféricos. A grande diferenza deste tipo de
+controladoras é que na actualidade non se insiren normalmente na propia
+placa base, véndense como tarxetas de ampliación, incluíndo un cable que
+consta da conexión á propia controladora e sete conexións máis para os
+diferentes periféricos.
+
+SATA (Serial Advanced Technology Attachment)
+
+Substitúe á tradicional PATA proporcionando maiores velocidades, mellor
+aproveitamento cando hai varias unidades, maior lonxitude de cable de
+transmisión de datos e capacidade para conectar unidades en quente.
+
+As diferenzas co Parallel ATA estriban en que:
+
+e Os conectores de datos e alimentación son diferentes e o cable é un ca-
+ble (7 fíos) non unha cinta (40 fíos), co que se mellora a ventilación.
+
+e Os discos duros conéctanse punto a punto, un disco duro a cada conector
+da placa, a diferenza de PATA no que se conectan dous discos a cada
+conector IDE.
+
+e A razón pola que o cable é serie é que, ó ter menos fíos, produce menos
+interferencias que se utilizase un sistema paralelo, o que permite au-
+mentar as frecuencias de funcionamento con maior facilidade.
+
+e Ademais permite cables de maior lonxitude (ata 1 metro, a diferenza do
+PATA, que non pode ser maior de 45 cm).
+
+A relación rendemento/prezo convérteo nun competidor de SCSI xa que o fai
+moi apropiado en sistemas de almacenamento masivos, como RAID.
+
+SAS (Serial Attached SCSI)
+
+Esta interface de transferencia de datos en serie é a sucesora da SCSI paralela;
+aínda que segue utilizando comandos SCSI para interactuar cos dispositivos
+SAS, aumenta a velocidade e permite a conexión e desconexión en quente.
+
+O conector é similar ó da interface SATA permitindo utilizar estes discos duros
+cando queremos aforrar custos e non temos tanta necesidade de velocidade.
+Os discos SATA poden ser utilizados por controladoras SAS pero non á inversa,
+unha controladora SATA non recoñece discos SAS.
+
