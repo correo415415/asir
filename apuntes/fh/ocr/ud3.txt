@@ -4421,3 +4421,526 @@ dos dous lados.
 A
 
 Tarxeta de son
+===== PAXINA 41 =====
+USB Tvre-C— USB20/31
+
+USB (Universal Serial Bus)
+
+Define os cables, conectores e
+protocolos usados nun bus para
+conectar, comunicar e prover de
+electricidade a computadoras,
+periféricos e dispositivos electró-
+nicos.
+
+Foi desenvolvido para economizar
+e estandarizar a conexión de
+calquera tipo de periférico.
+
+No caso dos discos duros, só una
+selecta minoría implementan
+directamente a interface USB
+como conexión nativa, sendo os
+discos externos maioritariamente
+IDE ou Serial ATA cun adaptador
+no seu interior.
+
+Os dispositivos USB clasifícanse
+segundo a súa velocidade de
+transferencia de datos en:
+
+e Baixa velocidade (1.0): Taxa
+de transferencia de ata 1,5
+Mbit/s. Usase nos teclados, ratos
+ou cámaras web.
+
+e Velocidade completa (1.1):
+Taxa de transferencia de ata 12
+Mbit/s.
+
+e Alta velocidade (2.0): Taxa de
+transferencia de ata 480 Mbit/s.
+O cable dispón de catro liñas, un
+par para datos e outro par de
+alimentación.
+
+e Súperalta velocidade (3.0):
+Taxa de transferencia de ata 4,8
+Gbit/s. Os dispositivos que se
+enchufan e despois dun rato qu-
+edan en desuso, pasan inmedia-
+tamente a un estado de baixo
+consumo.
+
+e (3.1): Taxa de transferencia de
+ata 10 Gbit/s. O MacBook pode
+ser alimentado a través da súa
+conexión a un porto USB destas
+características.
+
+Tarxeta gráfica
+
+Unha tarxeta de son é unha tarxeta de expansión para ordenadores que permi-
+te a entrada e saída de son baixo o control dun programa informático.
+
+Unha tarxeta de son típica inclúe un chip de son que polo xeral ten un conver-
+tedor Dixital-Analóxico que cumpre coa función de traducir formas de ondas
+gravadas ou xeradas dixitalmente nun sinal analóxico e viceversa. Este sinal é
+enviado a un conector (para audífonos) onde se pode conectar calquera outro
+dispositivo como pode ser un amplificador, un altofalante...
+
+A meirande parte das tarxetas de son tamén teñen un conector de entrada
+polo que pode entrar calquera tipo de sinal de son proveniente doutro disposi-
+tivo como micrófonos, casetes... e logo así a tarxeta de son pode dixitalizar
+estas ondas e gardalas no disco duro do ordenador.
+
+Case tódalas tarxetas de son adoptan o estándar PC99 de Microsoft que con-
+siste en asignar unha cor a cada conector externo, deste modo:
+
+e Rosa: entrada analóxica para micrófono.
+
+e Azul: entrada analóxica Line-In.
+
+e Verde: saída analóxica para o sinal estéreo principal (altofalantes fron-
+tais).
+
+e Negro: saída analóxica para altofalantes traseiros.
+
+e Laranxa: saída dixital SPDIF (ás veces usado como saída analóxica para al-
+tofalantes centrais).
+
+9.2> Tarxetas gráficas
+
+Unha tarxeta gráfica, tarxeta de vídeo ou GPU (Graphics Processing Unit) é
+unha tarxeta de circuíto impreso encargada de transformar os sinais eléctricos,
+que chegan dende o microprocesador, en información comprensible e repre-
+sentable pola pantalla do ordenador.
+
+Normalmente leva circuítos integrados auxiliares ou incluso un procesador de
+apoio para poder realizar operacións gráficas coa máxima eficiencia posible, así
+como memoria para almacenar tanto a imaxe como outros datos que se usan
+nesas operacións.
+
+As principais características dunha tarxeta gráfica son:
+
+e Arquitectura: é tan crucial para o rendemento da GPU que NVIDIA dife-
+rencia as súas xeracións a través do nome da arquitectura (Maxwell,
+Pascal, Turing, Ampere, Ada Lovelace...). Refírese ó deseño ou enfoque
+do funcionamento interno dunha GPU, xunto coa interacción dos distin-
+tos compoñentes dentro dunha tarxeta gráfica. Por exemplo, o número
+de núcleos que ten unha GPU, como están dispostos, as funcións asig-
+nadas a cada núcleo, o acceso á caché e a prioridade...
+
++ Frecuencia: case tódalas tarxetas gráficas teñen tres frecuencias diferen-
+tes:
+
+— base, que é a velocidade de reloxo á que funciona a GPU en repouso.
+
+— game, a velocidade de reloxo ó xogar a videoxogos ou cando se selec-
+ciona unha configuración predefinida de overclocking específica.
+
+— boost, a frecuencia teórica máxima á que pode funcionar a GPU.
+
+A frecuencia da GPU mídese en MHz e indica a velocidade á que poden
+funcionar os núcleos dunha GPU. Un mellor arrefriamento permite fre-
+cuencias máis altas (máis calor, polo que se require un mellor arrefria-
+mento), razón pola cal as tarxetas gráficas con tres ventiladores ou
+bloques de auga manexan frecuencias máis altas.
+
+e Velocidade da memoria: a velocidade da memoria mídese en Gbps (Giga-
+bits por segundo).
+
+e Ancho de banda: o ancho de banda da memoria mídese en GB/s, distinto
+do ancho de banda da interface (medido en bits).
+
+e Alimentación: PCle para subministrar enerxía directamente dende a fon-
+te de alimentación. Estes varían segundo o modelo e a marca, incluíndo
+6+4, 8+2 e mesmo un conector completo de 12 pins.
+
+===== PAXINA 42 =====
+e Conectores: debe conectarse á rañura PCI-Express.
+
+e Saídas de vídeo: HDMI 2.1, DisplayPort 1.4 e USB, no caso das tarxetas
+máis potentes para a realidade virtual.
+
+e Cores: número de cores que é capaz de xerar. Considérase cor verdadeira
+Ós 24 bits xa que o ollo humano non pode diferenciar máis deses 24 bits.
+
+e Formato: formato de pantalla. A máis usada é 1920x1080 (Horizontal x
+Vertical).
+
+e Refrixerador: moi importante para non queimar o procesador, xa que
+cómpre un bo sistema de refrixeración da calor. Sen un bo sistema de
+refrixeración o procesador gráfico non aguantaría as altas temperaturas
+e perdería rendemento incluso chegando a queimarse.
+
+Actualmente os maiores fabricantes de tarxetas gráficas no mercado son Nvi-
+dia e AMD. O tipo de bus é decisivo para o bo funcionamento da tarxeta gráfi-
+ca, xa que normalmente vai conectada a un oco de expansión; é dicir, comuní-
+case coa CPU a través do bus do sistema.
+
+Os sistemas de conexión máis habituais entre a tarxeta gráfica e o monitor
+son:
+
+THUNDERBOLT
+
+e VGA (Video Graphics Array): foi o estándar analóxico dos anos 1990 e es-
+taba deseñado para dispositivos con tubo de raios catódicos (CRT); so-
+fre de ruído eléctrico e distorsión pola conversión de dixital a analóxico
+e o erro de amosa ó avaliar os píxeles a enviar ó monitor. Conéctase
+mediante 15 pins co conector D-sub: DE-15. O seu uso continúa moi es-
+tendido, aínda que claramente amosa unha redución fronte ó HDMI.
+
+e DVI (Digital Visual Interface): é o substituto do anterior, pero enfocado
+cara Ó dixital; foi deseñado para obter a máxima calidade de visualiza-
+ción nas pantallas dixitais ou proxectores. Tamén se conecta mediante
+pins evitando a distorsión e o ruído ó facer corresponder directamente
+un píxel a representar con un do monitor na resolución nativa do mes-
+mo. O seu problema foi que non é capaz de transmitir son.
+
+e HDMI (High-Definition Multimedia Interface): é unha tecnoloxía propieta-
+ria transmisora de son e vídeo dixital de alta definición cifrado sen com-
+presión, nun mesmo cable. Conéctase mediante patillas de contacto
+sendo ideado inicialmente para televisores, e non para monitores; por
+iso, non apaga a pantalla cando deixa de recibir o sinal.
+
+e DisplayPort: é un estándar de conexión de son e vídeo dixital que se usa
+principalmente para transmitir sinais de vídeo e son dun ordenador a
+unha pantalla externa, como un monitor ou un proxector. Os cables Dis-
+playPort tamén transportan enerxía, o que permite que algúns disposi-
+tivos se alimenten directamente a través do cable. Ten varias vantaxes
+sobre o resto de conectores xa que admite resolucións máis altas,
+transmite sinais de vídeo e son con menos compresión, transfire datos
+máis rápido que outros estándares e require menos cables que as cone-
+xións analóxicas, xa que só un cable transporta enerxía e datos de
+son/vídeo, perfecto para configuracións de escritorio con varios monito-
+res.
+
+Thunderbolt
+
+É o nome utilizado por Intel para
+designar a un tipo de conector de
+alta velocidade que fai uso de
+tecnoloxía óptica.
+
+Ten capacidade para ofrecer un
+gran ancho de banda, ata 20
+gigabits por segundo, pero pode-
+ría desenvolverse ata chegar ós
+100 Gbit/s.
+
+Foi concibido para substituír
+algúns buses actuais, como Fire-
+Wire e HDMI.
+
+Posúe as seguintes características:
+
+etaxa de transferencia de 10
+Gbit/s sobre cable de cobre a
+distancias de ata 3 metros; o
+prototipo usaba cables de fibra
+óptica que funcionaban a distan-
+cias de incluso 100 metros.
+
+e conexión simultánea a múlti-
+ples dispositivos.
+
++ múltiples protocolos.
+e transferencia bidireccional.
+
++ implementación da calidade de
+servizo.
+
+e substitución en quente.
+===== PAXINA 43 =====
+Tarxeta sintonizadora de TV
+
+É un dispositivo que permite ver
+canles de televisión nun ordena-
+dor, de forma que non cómpre un
+televisor externo. Só fai falla unha
+toma de antena para poder sinto-
+nizar as canles.
+
+Este periférico soe ser interno
+(por conexión PCI), pero tamén hai
+modelos que se conectan por USB.
+Xunto co dispositivo, inclúese un
+programa, necesario para contro-
+lar as canles.
+
+Moitas sintonizadoras de TV
+permiten:
+
+e Ver canles de televisión (tódo-
+los que reciba ben a antena).
+
+e Escoitar a radio (FM).
+e Usar o teletexto.
+
+e Conectar un aparello externo,
+como un vídeo, e así velo no or-
+denador.
+
+e Gravar todo o que sae na tele-
+visión no disco duro do ordena-
+dor.
+
+e Controlar todo isto mediante
+un mando a distancia.
+
+Bastantes tarxetas veñen cun
+pequeno sensor de infravermellos
+que se lle conecta por detrás, e
+cun mando a distancia que permi-
+te interactuar co programa de
+control.
+
+e
+o
+
+Tarxeta de rede
+
+1BNC
+2 RJ-45
+
+e Thunderbolt: é unha tecnoloxía de E/S (entrada/saída) de alta velocidade
+desenvolvida por Intel e Apple. Permite a transferencia de datos entre
+dispositivos a velocidades de ata 10 gigabits por segundo (Gbps). Pódese
+usar para conectar unha variedade de dispositivos, incluíndo discos du-
+ros externos, monitores e outros dispositivos periféricos. As versións 1 e
+2 de Thunderbolt empregan o conector Mini DisplayPort (MDP), mentres
+que as versións 3 e 4 empregan o conector USB-C.
+
++ USB-C: é o conector USB máis moderno e se está a converter pouco a
+pouco no novo estándar para as conexións USB. E máis pequeno e rever-
+sible que os conectores USB tradicionais, o que facilita moito a conexión
+de dispositivos. Tamén é capaz de alcanzar velocidades de transferencia
+de datos moito maiores que o USB tradicional, o que o fai ideal para dis-
+positivos con moitos datos, como discos duros externos e cámaras de
+vídeo. Case calquera dispositivo que use unha conexión USB pode usar
+USB tipo C, incluídos teléfonos, tabletas, portátiles ou cámaras.
+
+9.3 > NIC (Network Interface Card ou Network Interface Controller)
+
+A tarxeta de rede é o periférico que actúa como interface de conexión entre
+dispositivos nunha rede de ordenadores posibilitando compartir información e
+recursos entre dous ou máis ordenadores.
+
+Cada tarxeta de rede ten un número de identificación único, de 48 bits en he-
+xadecimal, chamado enderezo MAC (Media Access Control). Estes enderezos
+únicos de hardware son administrados polo IEEE. Os tres primeiros octetos (24
+bits) identifican ó provedor e coñécese como número OUI (Organizationally
+Unique Identifier), que combinado con outro número de 24 bits forman o ende-
+rezo MAC completo.
+
+A maioría de tarxetas de rede traen unha ROM opcional que permite que o
+equipo arranque dende un servidor da rede, o que permite usar equipos sen
+sistema de almacenamento para cargar o sistema operativo.
+
+Nun principio usábanse tarxetas adaptadas ó tipo de topoloxía implementada;
+así se tiñamos unha topoloxía en anel usabamos tarxetas Token Ring que usa-
+ban conectores BNC para enganchar o cable coaxial.
+
+Estas tarxetas para rede (Token Ring) están practicamente en desuso, debido á
+baixa velocidade e elevado custo que presentan respecto das Ethernet, que
+usan conectores RJ-45 e cable de par trenzado.
+
+Coa entrada das redes Gigabit nas domicilios particulares é frecuente que
+estas veñan integradas na placa base e con ata 4 portos RJ-45, que antes es-
+taba reservado ós servidores.
+
+A velocidade de transmisión é normalmente 10 Mbit/s ou 10/100 Mbit/s, evolu-
+cionando cara a 1000 Mbit/s, coñecidas como Gigabit Ethernet.
+
+Tamén son NIC as tarxetas sen fíos (wireless), axustándose á norma 802.11b,
+802.11g e 802.11n.
+
+10 >> Como facer un orzamento
+
+O primeiro que calquera técnico informático debe ser quen de realizar é un
+orzamento, ben sexa do hardware que necesita a nivel de equipos de sobreme-
+sa ou a nivel de rede corporativa, ben do software que lle permita sacar parti-
+do a eses equipos.
+
+Logo, é importante saber escoller as pezas que comporán o noso equipo, den-
+de a carcasa ata o procesador pasando pola fonte de alimentación, placa base,
+refrixerador...
+
+10.1> Por onde empezo?
+
+===== PAXINA 44 =====
+Centrémonos na busca do material a nivel de aplicación que debemos incorpo-
+rar a calquera equipo da empresa na que esteamos a traballar, xa que co soft-
+ware é co que debemos tratar. Os pasos a seguir serán os seguintes:
+
+e Comprobar de que aplicacións dispomos: antes de nada debemos saber
+que aplicacións están instaladas no equipo, para poder decidir se temos
+que comprar ou non outras que nos permitan desenvolver con profesio-
+nalidade a actividade a que se dedica a empresa para a que traballemos.
+
+e Decidir que aplicacións debería ter: este paso deberémolo consultar co
+resto dos usuarios do sistema, pois podemos pensar que xa temos todo
+controlado a nivel software, pero normalmente levarémonos sorpresas
+ó comprobar que programas que nós consideramos elementais para
+calquera ámbito non cómpren onde traballamos ou que existen pro-
+gramas para nós descoñecidos e que son de grande utilidade para parte
+dos usuarios.
+
+e Ver se as características técnicas se axustan: non vale de nada comprar
+un software espectacular se despois non temos un equipo que o poida
+mover.
+
+e Buscar o mellor prezo: ás veces teremos que decantarnos por un softwa-
+re que a priori consideramos en segundo lugar debido a problemas eco-
+nómicos ó ter que axustar o noso orzamento.
+
+10.2 > Comprobar de que aplicacións dispomos
+
+Vamos iniciar a busca das aplicacións que posuímos dentro do equipo. Para iso,
+se nos encontramos nun contorno Windows deberemos no Panel de Control
+premer na icona de Engadir ou eliminar programas para comprobar que ten
+instalado o equipo (este é un paso que debemos facer con tódolos equipos que
+vaian ter uso a posteriori, pois non ten por que ter instalado o mesmo softwa-
+re un que outro).
+
+Dentro das aplicacións que topamos ó abrir este cadro de diálogo están parte
+das que temos instaladas no equipo, pois non podemos asegurar que tódalas
+aplicacións que existen no equipo teñan un programa de desinstalación (que é
+verdadeiramente o que amosa neste punto o ordenador).
+
+Pero o que si sabemos é que, polo menos, temos este software. A seguinte
+pregunta que nos deberiamos facer é se é ou non legal. A nivel de empresa
+debemos ter claro que non podemos ter ningún tipo de software ilegal, e que
+parte dos programas que temos instalados no noso equipo en casa (onde si son
+legais, ou cando menos alegais) non o son nun contorno dedicado a gañar car-
+tos co uso desas aplicacións.
+
+Pero ter instalado un programa nun equipo non nos habilita para traspasalo a
+outro, e non por motivos legais senón porque a transportabilidade non é direc-
+ta. Non podemos coller a icona dun programa e pensar que cambiándoa ó novo
+equipo vai funcionar. E máis, aínda que saibamos tódolos ficheiros que debe-
+mos mover dun equipo ó outro non chega, pois existen entradas no rexistro de
+Windows que non coñecemos e que nos darán problemas con toda seguridade.
+
+Polo tanto, debemos ter os ficheiros de instalación para ese software que
+temos, xa sexa mediante un DVD, un CD, un disquete, unha imaxe ISO, unha
+aplicación MSI...
+
+Se estamos a traballar en Ubuntu, e sería moi parella a forma de facelo para
+calquera outra distribución de Linux, podemos optar pola opción Xestor de
+paquetes Synaptic para ver que temos xa instalado. Verdadeiramente traba-
+llando con Ubuntu non aparecen os problemas de cartos que temos se esta-
+mos a traballar en Windows, pois toparemos a maioría das aplicacións de bal-
+de, pero teremos menos onde elixir.
+
+10.3 > Decidir que aplicacións debería ter
+
+Despois de saber que temos, o seguinte paso será falar cos usuarios e saber
+que precisan para traballar. Probablemente, toparemos entre as súas peticións
+
+Torre
+
+Se contamos ampliar o equipo nun
+futuro, a mellor alternativa é
+partir dunha carcasa deste tipo.
+
+Ó dispor de máis espazo, este tipo
+de caixa permite dispor os dispo-
+sitivos con maior claridade e
+poderanse montar e desmontar
+máis facilmente, algo que pode
+ser realmente complexo nunha
+carcasa tipo sobremesa.
+
+Neste tipo de caixas a placa base
+móntase en posición vertical;
+como consecuencia, as tarxetas
+colócanse horizontalmente.
+
+Estas unidades presentan tres ou
+catro baías de 5.25 polgadas e
+unha ou dúas de 3.5 polgadas.
+
+a
+y
+o
+y
+
+Engadir ou eliminar programas
+
+[SS
+lanos to, 1206 nto Desta, O para talar atacar O pa liar
+
+Xestor de paquetes Synaptic
+===== PAXINA 45 =====
+Sobremesa
+
+É a caixa tradicional, con espazo
+para unha unidade de 3.5 polgadas
+e unha ou dúas de 5.25 polgadas.
+
+O número de ocos dispoñibles
+para ampliacións dependerá da
+placa base, que estará montada
+en horizontal, polo que as tarxe-
+tas terán que ser montadas en
+vertical.
+
+Normalmente, pónselle enriba
+dela o monitor, para que ocupe
+menos no posto de traballo.
+
+Características técnicas
+
+moitos programas que xa existían na empresa, pero tamén outros que non hai;
+tamén comprobaremos que parte do software existente é innecesario pois non
+se usa na actualidade e non tería sentido reinstalalo ou facer unha actualiza-
+ción do mesmo.
+
+Agora temos que empezar a tomar decisións, polo xeral consensuadas cos
+nosos superiores, ben xefes do departamento informático, ben outros xefes
+dos departamentos nos que teñamos que instalar as aplicacións, ou mesmo co
+dono da empresa, que é o que pon os cartos.
+
+Non por moito que nos guste un programa de retoque fotográfico debemos
+influír nos nosos superiores promovendo a súa compra cando sabemos que o
+uso que se lle vai dar é nulo para sacar adiante o traballo que ten a empresa e
+verdadeiramente só o queremos para, no tempo de lecer, facer retoques nas
+fotos que sacamos na última festa á que fomos. Cando se nos permite tomar
+decisións (ou influír sobor delas), temos que ter os pés ben asentados no chan
+e tomalas coa cabeza despois de reflexionar e non nos deixar levar pola opor-
+tunidade que nos brindan para comprar o que nos fai falla en casa, pero sobra
+na oficina.
+
+10.4 > Ver se as características técnicas se axustan
+
+Ben, xa temos decididas as aplicacións que necesitamos e que necesitan o
+resto dos nosos compañeiros para poder traballar a gusto. Agora debemos ver
+nas especificacións técnicas de cada programa se estas se axustan ós equipos
+que temos, pois de nada nos valerían uns programas que non poidan correr no
+ordenador por falta de memoria ou por incompatibilidade co sistema
+operativo.
+
+Por exemplo, de nada nos valería comprar a última versión de AutoCAD se non
+temos equipos con procesadores de 64 bits; ante casos deste tipo o que
+debemos saber é se nos chega á hora de traballar cunha versión anterior do
+produto que se axuste ós equipos que temos ou se debemos facer un cambio
+coordinado tanto de aplicacións como de hardware.
+
+10.5 > Buscar o mellor prezo
+
+Como norma xeral, non debemos buscar os prezos das cousas en sitios web
+como eBay pois trátase de portais de poxa, e non son reais á hora de facer un
+orzamento (poderían ser unha boa comparativa se hai a posibilidade de
+actualizar o software comprando unha versión anterior que abarate custos).
+
+Por último, tampouco debemos fiarnos en demasía das opinións que dá a xente
+sobre o que buscamos en foros, pois trátanse de opinións, polo xeral non
+contrastadas, de xente que non está especializada no uso desas aplicacións e
+que soe escribir en quente (nun momento de enfado, de decepción ou de ledicia
+ante o que se atopa) sen ter feita unha valoración en frío despois de probar os
+pros e as contras da aplicación. Unha boa referencia son as publicacións
+especializadas, pois é ó que se adican: dar consellos sobor das aplicacións que
+os usuarios usan.
+
