@@ -1531,3 +1531,89 @@ window.APUNTES.unidades.push({
 </ul>
 `
   },
+  {
+    id: 'fh-ud3-10', tipo: 'tema', titulo: '10. Como facer un orzamento',
+    resumen: 'Todo técnico debe saber facer un orzamento de hardware (equipos, rede) e software. Pasos: comprobar que aplicacións hai, decidir cales debería haber, ver se as características técnicas se axustan e buscar o mellor prezo.',
+    claves: ['Orzamento', 'Inventario de software', 'Consenso cos usuarios', 'Requisitos técnicos', 'Mellor prezo'],
+    tags: ['orzamento', 'software', 'compra'],
+    links: ['fh-ud3', 'fh-ud3-10-1', 'fh-ud3-10-2', 'fh-ud3-10-3', 'fh-ud3-10-4', 'fh-ud3-10-5', 'fh-ud3-1'],
+    contenido: `
+<p>O primeiro que calquera técnico informático debe saber facer é un <b>orzamento</b>: do hardware (equipos de sobremesa ou rede corporativa) e do software que permita aproveitar eses equipos. Tamén hai que saber escoller as pezas do equipo: carcasa, fonte, placa base, refrixerador, procesador…</p>
+<figure class="small"><img src="apuntes/fh/img/ud3/equipo-completo.png" alt="Equipo completo" loading="lazy"><figcaption>Equipo de sobremesa completo.</figcaption></figure>
+<div class="box info"><div class="box-title">Torre vs sobremesa (marxe)</div>
+<p><b>Torre</b>: mellor se se pensa ampliar; máis espazo, montaxe máis clara. Placa en vertical → tarxetas en horizontal. 3–4 baías de 5,25" e 1–2 de 3,5".</p>
+<p><b>Sobremesa</b>: caixa tradicional con 1 baía de 3,5" e 1–2 de 5,25". Placa en horizontal → tarxetas en vertical. O monitor adoita poñerse enriba para ocupar menos.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/pc-sobremesa-hp.png" alt="Torre HP" loading="lazy"><figcaption>Carcasa torre.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-10-1', tipo: 'subtema', titulo: '10.1 Por onde empezo?',
+    resumen: 'Catro pasos para o software da empresa: 1) comprobar que aplicacións hai, 2) decidir cales debería haber (cos usuarios), 3) ver se as características técnicas se axustan aos equipos, 4) buscar o mellor prezo.',
+    claves: ['4 pasos', 'Inventario', 'Necesidades', 'Requisitos', 'Prezo'],
+    tags: ['orzamento', 'pasos'],
+    links: ['fh-ud3-10', 'fh-ud3-10-2'],
+    contenido: `
+<p>Centrámonos no software que debe incorporar calquera equipo da empresa. Pasos:</p>
+<ol>
+<li><b>Comprobar de que aplicacións dispomos</b>: saber que hai instalado para decidir se compramos outras.</li>
+<li><b>Decidir que aplicacións debería ter</b>: consultar co resto de usuarios; haberá sorpresas (programas que criamos esenciais non fan falla, e outros descoñecidos son moi útiles).</li>
+<li><b>Ver se as características técnicas se axustan</b>: non vale un software espectacular se o equipo non o move.</li>
+<li><b>Buscar o mellor prezo</b>: ás veces haberá que elixir a segunda opción por axustar o orzamento.</li>
+</ol>
+`
+  },
+  {
+    id: 'fh-ud3-10-2', tipo: 'subtema', titulo: '10.2 Comprobar de que aplicacións dispomos',
+    resumen: 'Windows: Panel de control → Engadir ou eliminar programas (só mostra as que teñen desinstalador). Comprobar legalidade (na empresa nada ilegal). Non se pode copiar un programa a outro equipo (rexistro): gardar os instaladores (DVD, ISO, MSI). Ubuntu: Synaptic; software de balde pero menos elección.',
+    claves: ['Engadir ou eliminar programas', 'Legalidade', 'Rexistro de Windows', 'Ficheiros de instalación', 'Synaptic'],
+    tags: ['orzamento', 'software', 'windows', 'ubuntu'],
+    links: ['fh-ud3-10', 'fh-ud3-10-1', 'fh-ud3-10-3'],
+    contenido: `
+<p>En <b>Windows</b>: Panel de Control → <b>Engadir ou eliminar programas</b>, en <i>todos</i> os equipos (non teñen por que ter o mesmo software). Só mostra as aplicacións con programa de desinstalación, así que hai máis das que aparecen.</p>
+<div class="fig-row">
+<figure class="small"><img src="apuntes/fh/img/ud3/engadir-quitar-programas.png" alt="Engadir ou eliminar programas" loading="lazy"><figcaption>Engadir ou eliminar programas (Windows).</figcaption></figure>
+<figure class="small"><img src="apuntes/fh/img/ud3/synaptic.png" alt="Synaptic" loading="lazy"><figcaption>Xestor de paquetes Synaptic (Ubuntu).</figcaption></figure>
+</div>
+<div class="box danger"><div class="box-title">É legal?</div><p>Na empresa non pode haber <b>ningún software ilegal</b>. Programas que en casa son legais (ou alegais) non o son nun contorno onde se gañan cartos co seu uso.</p></div>
+<div class="box warn"><div class="box-title">Non se pode "mover" un programa</div><p>Ter un programa instalado non permite traspasalo a outro equipo: non basta copiar a icona nin todos os ficheiros, hai <b>entradas no rexistro de Windows</b> que darán problemas. Hai que gardar os <b>ficheiros de instalación</b>: DVD, CD, imaxe ISO, paquete MSI…</p></div>
+<p>En <b>Ubuntu</b> (e outras distribucións Linux): <b>Xestor de paquetes Synaptic</b>. Non hai os problemas de cartos de Windows (a maioría é de balde) pero hai menos onde elixir.</p>
+`
+  },
+  {
+    id: 'fh-ud3-10-3', tipo: 'subtema', titulo: '10.3 Decidir que aplicacións debería ter',
+    resumen: 'Falar cos usuarios: pedirán programas que xa hai, outros novos, e parte do existente resulta innecesario. Decisións consensuadas con superiores/dono. Non promover compras polo gusto persoal se non serven para o traballo.',
+    claves: ['Falar cos usuarios', 'Software innecesario', 'Consenso', 'Pés no chan'],
+    tags: ['orzamento', 'decision', 'usuarios'],
+    links: ['fh-ud3-10', 'fh-ud3-10-2', 'fh-ud3-10-4'],
+    contenido: `
+<p>Sabendo o que temos, hai que <b>falar cos usuarios</b> e saber que precisan. Entre as peticións haberá programas que xa existían, outros novos, e comprobarase que parte do software existente <b>non se usa</b> e non ten sentido reinstalalo ou actualizalo.</p>
+<p>As decisións tómanse <b>consensuadas</b> cos superiores: xefes do departamento informático, xefes dos departamentos afectados ou o dono da empresa (quen pon os cartos).</p>
+<div class="box tip"><div class="box-title">Profesionalidade</div><p>Por moito que nos guste un programa de retoque fotográfico, non promover a súa compra se o seu uso na empresa vai ser nulo e só o queremos para o lecer. Decidir coa cabeza, sen aproveitar a oportunidade para comprar o que fai falla en casa pero sobra na oficina.</p></div>
+`
+  },
+  {
+    id: 'fh-ud3-10-4', tipo: 'subtema', titulo: '10.4 Ver se as características técnicas se axustan',
+    resumen: 'Comprobar as especificacións técnicas de cada programa fronte aos equipos (memoria, SO, 64 bits). Exemplo: AutoCAD último sen CPU de 64 bits non vale; usar versión anterior ou cambiar hardware e software coordinadamente.',
+    claves: ['Requisitos mínimos', 'Compatibilidade SO', '64 bits', 'Cambio coordinado'],
+    tags: ['orzamento', 'requisitos', 'compatibilidade'],
+    links: ['fh-ud3-10', 'fh-ud3-10-3', 'fh-ud3-10-5'],
+    contenido: `
+<p>Decididas as aplicacións, hai que mirar nas <b>especificacións técnicas</b> de cada programa se se axustan aos equipos: non valen programas que non corran por falta de memoria ou incompatibilidade co sistema operativo.</p>
+<div class="box ex"><div class="box-title">Exemplo</div><p>De nada vale comprar a última versión de <b>AutoCAD</b> se non temos procesadores de <b>64 bits</b>. Opcións: unha versión anterior que se axuste aos equipos, ou un <b>cambio coordinado</b> de aplicacións e hardware.</p></div>
+<figure class="small"><img src="apuntes/fh/img/ud3/requisitos-autocad.png" alt="Requisitos de AutoCAD" loading="lazy"><figcaption>Características técnicas / requisitos de AutoCAD.</figcaption></figure>
+`
+  },
+  {
+    id: 'fh-ud3-10-5', tipo: 'subtema', titulo: '10.5 Buscar o mellor prezo',
+    resumen: 'Non usar portais de poxa (eBay) para orzar: non son prezos reais (só como comparativa para actualizar desde versión anterior). Non fiarse dos foros (opinións en quente, non contrastadas). Referencia: publicacións especializadas.',
+    claves: ['eBay non', 'Foros con cautela', 'Publicacións especializadas', 'Actualización desde versión anterior'],
+    tags: ['orzamento', 'prezo', 'fontes'],
+    links: ['fh-ud3-10', 'fh-ud3-10-4'],
+    contenido: `
+<ul>
+<li>Non buscar prezos en <b>portais de poxa</b> como eBay: non son reais para un orzamento (poden servir de comparativa se se pode actualizar comprando unha versión anterior máis barata).</li>
+<li>Non fiarse demasiado das <b>opinións en foros</b>: non contrastadas, de xente non especializada e escritas "en quente" (enfado, decepción ou ledicia) sen valorar en frío pros e contras.</li>
+<li>Boa referencia: as <b>publicacións especializadas</b>, que se dedican precisamente a aconsellar sobre as aplicacións.</li>
+</ul>
+`
+  },
