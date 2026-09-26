@@ -596,3 +596,302 @@ window.APUNTES.unidades.push({
 <p>Para 8 bits o exceso é 2⁸⁻¹ = 2⁷ = 128; sumámoslles esa cantidade:</p>
 <table><tr><td>17 ⇒ 17 + 128 = 145</td><td><code>10010001</code></td></tr><tr><td>−17 ⇒ −17 + 128 = 111</td><td><code>01101111</code></td></tr></table></div>`
   },
+
+  /* ---------------- 7 ---------------- */
+  {
+    id: 'fh-ud2-7',
+    tipo: 'tema',
+    titulo: '7. Importancia da representación en complementos',
+    resumen: 'Os complementos permiten facer as restas como sumas, así a ALU só precisa un sumador. En C1: súmase ó minuendo o C1 do subtraendo; se hai acarreo, o resultado é positivo e súmase o acarreo; se non, é negativo e complementase. En C2 igual, sumando 1 ó complemento.',
+    claves: ['Menos circuítos: un sumador serve para sumar e restar', 'As operacións inversas fanse cos mesmos pasos', 'Resta en C1: minuendo + C1(subtraendo)', 'Con acarreo → positivo, sumar o acarreo ó resultado', 'Sen acarreo → negativo, complementar a 1 o resultado', 'En C2: mesmo algoritmo, sumando 1 ó complemento a 1'],
+    tags: ['complementos', 'resta como suma', 'ALU', 'sumador', 'acarreo'],
+    links: ['fh-ud2-7-1', 'fh-ud2-7-2', 'fh-ud2-ex-c1'],
+    contenido: `
+<p>Úsase para que dentro das máquinas <strong>non se teñan que ter máis circuítos dos necesarios</strong>. A vantaxe clara é que as <strong>restas realizarémolas como sumas</strong>, e por tanto a unidade aritmético-lóxica non terá que incorporar un restador: cun circuíto <strong>sumador</strong> bastará para realizar tanto sumas como restas.</p>
+<p>Outra vantaxe dos complementos é que para realizar as operacións inversas fanse os <strong>mesmos pasos</strong> que para as operacións iniciais.</p>
+<div class="box tip"><div class="box-title">Resta en Complemento a 1</div>
+<p>Podemos restar un número doutro simplemente <strong>sumándolle ó minuendo o complemento a 1 do subtraendo</strong>. Ó obter o resultado hai dúas posibilidades:</p>
+<ul>
+  <li>Se <strong>hai acarreo</strong>, o resultado é un número <strong>positivo</strong> e debemos <strong>sumar ese acarreo</strong> ó resultado obtido.</li>
+  <li>Se <strong>non hai acarreo</strong> final, o resultado é un número <strong>negativo</strong> e debemos calcular o seu <strong>complemento a 1</strong> para obter o resultado correcto.</li>
+</ul></div>
+<p>Se estamos a traballar en <strong>Complemento a 2</strong> usaríamos o mesmo algoritmo coa única diferenza de sumarlle 1 ó complemento a 1 para facer o complemento a 2.</p>`
+  },
+  {
+    id: 'fh-ud2-ex-c1',
+    tipo: 'ejercicio',
+    titulo: 'Exercicios resoltos: restas en complemento a 1',
+    resumen: '42 − 17 en 8 bits: 00101010 + C1(00010001) = 00101010 + 11101110 = 1 00011000 → hai acarreo → +1 = 00011001 = 25. 17 − 42: 00010001 + C1(00101010) = 00010001 + 11010101 = 11100110 sen acarreo → C1 → 00011001 → −25.',
+    claves: ['42 − 17: acarreo → sumar acarreo → 00011001 = +25', '17 − 42: sen acarreo → complementar → −00011001 = −25'],
+    tags: ['exercicio', 'complemento a 1', 'resta', 'acarreo'],
+    contenido: `
+<div class="box ex"><div class="box-title">Restar o número 17 ó número 42 en palabras de 8 bits usando complemento a 1</div>
+<pre>  42               0 0101010
+  Complemento a 1 de 17 (0 0010001)  →  1 1101110
+  Sumamos os dous números:
+      0 0101010
+    + 1 1101110
+    -----------
+   [1] 0 0011000   ← hai acarreo ⇒ resultado positivo
+  Sumamos o acarreo:
+      0 0011000 + 1 = 0 0011001</pre>
+<p><strong>O número buscado é o 25</strong> (<code>0 0011001</code>).</p></div>
+<div class="box ex"><div class="box-title">Restar o número 42 ó número 17 en palabras de 8 bits usando complemento a 1</div>
+<pre>  17               0 0010001
+  Complemento a 1 de 42 (0 0101010)  →  1 1010101
+  Sumamos os dous números:
+      0 0010001
+    + 1 1010101
+    -----------
+   [0] 1 1100110   ← non hai acarreo ⇒ resultado negativo
+  Complementamos o resultado:
+      1 1100110  →  0 0011001</pre>
+<p><strong>O número buscado é o −25</strong> (<code>1 0011001</code> en signo e magnitude, ou <code>1 1100110</code> en C1).</p></div>`
+  },
+  {
+    id: 'fh-ud2-7-1',
+    tipo: 'subtema',
+    titulo: '7.1 Representación en coma fixa',
+    resumen: 'Punto decimal implícito á dereita dos bits; úsase para enteiros. Catro formas: binario puro (normalmente en C2), BCD (cada díxito decimal en 4 bits, sen negativos), decimal desempaquetado (un byte por díxito: bits de zona 1111 + bits de díxito; signo 1100/1101 no último octeto) e decimal empaquetado (un cuarteto por díxito, signo no cuarteto máis á dereita).',
+    claves: ['Coma fixa: punto implícito á dereita → enteiros', 'Binario puro: palabra completa; habitual en Complemento a 2', 'BCD: cada díxito decimal → 4 bits (2⁴ = 16 ≥ 10 símbolos); non representa negativos', 'Decimal desempaquetado: 1 byte/díxito = bits de zona (1111) + bits de díxito (BCD); zona do último octeto = signo (1100 +, 1101 −)', 'Decimal empaquetado: 1 cuarteto/díxito; signo no cuarteto máis á dereita (1100 +, 1101 −)', 'Desempaquetado desaproveita espazo; empaquetado é a súa evolución'],
+    tags: ['coma fixa', 'binario puro', 'BCD', 'decimal desempaquetado', 'decimal empaquetado', 'bits de zona', 'bits de díxito'],
+    links: ['fh-ud2-ex-fixa'],
+    contenido: `
+<p>O seu nome vén da posición en que se supón situado o punto decimal, que será <strong>fixa</strong>. A coma fixa é usada para os <strong>números enteiros</strong>, supoñendo o punto decimal implicitamente <strong>á dereita</strong> dos bits. Existen catro formas de representar números en coma fixa:</p>
+<ul>
+  <li>Binario puro</li>
+  <li>Decimal codificado en binario (BCD)</li>
+  <li>Decimal desempaquetado</li>
+  <li>Decimal empaquetado</li>
+</ul>
+<h4>Binario puro</h4>
+<p>Un número binario puro represéntase utilizando un conxunto de bits equivalente a unha <strong>palabra</strong>. Para almacenar enteiros podemos empregar os catro métodos tratados anteriormente (signo e magnitude, C1, C2 e exceso a 2ⁿ⁻¹), pero o habitual é empregar o <strong>Complemento a 2</strong>.</p>
+<h4>Decimal codificado en binario (BCD)</h4>
+<p>Cómpre converter <strong>cada díxito</strong> dun número decimal no seu equivalente de <strong>4 bits</strong>. Empréganse catro bits porque debemos representar 10 símbolos posibles (do 0 ó 9): con 3 bits só poderiamos representar 2³ = 8 símbolos, polo que precisamos 4 bits para obter 2⁴ = 16, aínda que algunhas combinacións queden sen utilizar (as combinacións elixidas son as mesmas que en hexadecimal).</p>
+<table>
+<tr><th>Decimal</th><th>BCD</th><th>Decimal</th><th>BCD</th></tr>
+<tr><td>0</td><td>0000</td><td>5</td><td>0101</td></tr>
+<tr><td>1</td><td>0001</td><td>6</td><td>0110</td></tr>
+<tr><td>2</td><td>0010</td><td>7</td><td>0111</td></tr>
+<tr><td>3</td><td>0011</td><td>8</td><td>1000</td></tr>
+<tr><td>4</td><td>0100</td><td>9</td><td>1001</td></tr>
+</table>
+<div class="box warn"><div class="box-title">Limitación do BCD</div><p>Este sistema <strong>non permite representar números negativos</strong>; para conseguilo sería preciso recorrer a algunha solución alternativa, como un bit de signo adicional. Para abordar esta cuestión desenvolvéronse os métodos seguintes.</p></div>
+<h4>Decimal sen empaquetar (desempaquetado)</h4>
+<p>Cada díxito que compón un número ocupa <strong>un byte</strong> (oito bits ou un octeto). Para codificar un díxito, cada octeto divídese en dous <strong>cuartetos</strong>:</p>
+<ul>
+  <li>O da <strong>dereita</strong>: <strong>bits de díxito</strong>, a codificación BCD do díxito.</li>
+  <li>O da <strong>esquerda</strong>: <strong>bits de zona</strong>. No octeto situado máis á dereita indican o <strong>signo</strong> do número (<code>1100</code> positivo, <code>1101</code> negativo); nos octetos restantes énchense con uns (<code>1111</code>).</li>
+</ul>
+<figure class="small"><img src="apuntes/fh/img/ud2/bits-zona-dixito.png" alt="Octeto dividido en bits de zona e bits de díxito" loading="lazy"><figcaption><strong>Octetos e cuartetos.</strong> Cada octeto divídese en dous cuartetos: o da esquerda son os bits de zona e o da dereita os bits de díxito.</figcaption></figure>
+<p>A conversión é directa, pero <strong>desaprovéitase unha cantidade significativa de espazo</strong>: tódolos cuartetos de zona, agás o que contén o signo, non conteñen información.</p>
+<h4>Decimal empaquetado</h4>
+<p>Evolución do anterior, deseñado para aproveitar o espazo desperdiciado. Cada díxito decimal represéntase mediante <strong>un cuarteto</strong>, eliminando o uso de octetos, e o <strong>signo sitúase no cuarteto máis á dereita</strong> (garantindo que ocupe sempre a mesma posición, independentemente do tamaño da palabra), coa mesma codificación: <code>1100</code> positivo e <code>1101</code> negativo.</p>`
+  },
+  {
+    id: 'fh-ud2-ex-fixa',
+    tipo: 'ejercicio',
+    titulo: 'Exercicios resoltos: coma fixa (binario puro, BCD, desempaquetado, empaquetado)',
+    resumen: '17 e −17 en 16 bits C2 · 17 en BCD = 0001 0111 · 0010 1001 0101 0111 BCD = 2957 · 1234 e −5678 en decimal desempaquetado e empaquetado con palabras de 32 bits.',
+    claves: ['17 (16 bits, C2) = 0000000000010001 · −17 = 1111111111101111', '17 en BCD = 0001 0111', '0010 1001 0101 0111 (BCD) = 2957', '1234 desempaquetado = 1111 0001 · 1111 0010 · 1111 0011 · 1100 0100', '−5678 desempaquetado = 1111 0101 · 1111 0110 · 1111 0111 · 1101 1000', '1234 empaquetado = 0000 0000 0000 0001 0010 0011 0100 1100', '−5678 empaquetado = 0000 0000 0000 0101 0110 0111 1000 1101'],
+    tags: ['exercicio', 'coma fixa', 'BCD', 'decimal empaquetado', 'decimal desempaquetado', 'complemento a 2'],
+    contenido: `
+<div class="box ex"><div class="box-title">Representar 17 e −17 nunha palabra de 16 bits (binario puro)</div>
+<p>O bit máis á esquerda representa o signo e os restantes a magnitude en Complemento a 2:</p>
+<table><tr><td>17</td><td><code>0</code> <code>000000000010001</code></td></tr><tr><td>−17</td><td><code>1</code> <code>111111111101111</code></td></tr></table></div>
+<div class="box ex"><div class="box-title">Representar o número 17 en código BCD</div>
+<p>1 → <code>0001</code> · 7 → <code>0111</code> ⇒ <strong><code>0001 0111</code></strong></p></div>
+<div class="box ex"><div class="box-title">Calcular o equivalente decimal de 0010 1001 0101 0111 almacenado en BCD</div>
+<p><code>0010</code> → 2 · <code>1001</code> → 9 · <code>0101</code> → 5 · <code>0111</code> → 7 ⇒ <strong>2957</strong></p></div>
+<div class="box ex"><div class="box-title">Representar 1234 e −5678 en decimal sen empaquetar (palabras de 32 bits)</div>
+<table>
+<tr><td>1234</td><td><code>1111 0001</code> <code>1111 0010</code> <code>1111 0011</code> <code>1100 0100</code></td></tr>
+<tr><td>−5678</td><td><code>1111 0101</code> <code>1111 0110</code> <code>1111 0111</code> <code>1101 1000</code></td></tr>
+</table>
+<p>Os bits de zona son <code>1111</code> agás no último octeto, onde indican o signo (<code>1100</code> +, <code>1101</code> −).</p></div>
+<div class="box ex"><div class="box-title">Representar 1234 e −5678 en decimal empaquetado (palabras de 32 bits)</div>
+<table>
+<tr><td>1234</td><td><code>0000 0000 0000 0001 0010 0011 0100 1100</code></td></tr>
+<tr><td>−5678</td><td><code>0000 0000 0000 0101 0110 0111 1000 1101</code></td></tr>
+</table>
+<p>Cada díxito ocupa un cuarteto, o signo vai no cuarteto máis á dereita e o resto complétase con ceros pola esquerda.</p></div>`
+  },
+  {
+    id: 'fh-ud2-7-2',
+    tipo: 'subtema',
+    titulo: '7.2 Representación en coma flotante',
+    resumen: 'Permite representar números con parte decimal baseándose na notación científica: Número = mantisa · base^expoñente. A mantisa normalízase (sen parte enteira, primeira cifra significativa). A palabra reparte os bits entre signo, expoñente (signo-magnitude ou exceso) e mantisa (S-M, C1 ou C2); a base é unha potencia de 2 fixada polo fabricante.',
+    claves: ['Número = mantisa · base^expoñente (ex.: 25,4 = 0,254 · 10²)', 'Normalizar: eliminar a parte enteira e garantir primeira cifra decimal ≠ 0', 'Número < 1: multiplicar pola base ata que a 1.ª cifra sexa significativa', 'Número > 1: dividir pola base', 'Formato exemplo 32 bits: bit 31 signo · bits 30–23 expoñente · bits 22–0 mantisa', 'Signo: 0 +, 1 − · Expoñente: enteiro en S-M ou exceso a 2ⁿ⁻¹ · Mantisa: real con punto implícito á esquerda, en S-M, C1 ou C2', 'Base do expoñente: potencia de 2 fixada polo fabricante', 'O cero necesita unha representación especial (tódolos bits a 0)'],
+    tags: ['coma flotante', 'punto flotante', 'mantisa', 'expoñente', 'notación científica', 'normalizar'],
+    links: ['fh-ud2-ex-flotante'],
+    contenido: `
+<p>Ata o de agora tratamos os números enteiros sen preocuparnos de como se almacenan os números con parte decimal. A representación en <strong>coma flotante</strong> (ou <em>punto flotante</em> no ámbito anglosaxón) permite representar números decimais e baséase na <strong>notación científica ou exponencial</strong>:</p>
+<p style="text-align:center"><strong>Número = mantisa · base<sup>expoñente</sup></strong></p>
+<p>Por exemplo, en base 10, a representación do número 25,4 sería <code>0,254 · 10²</code>.</p>
+<h4>Normalización da mantisa</h4>
+<p>Debemos realizar as operacións necesarias para <strong>eliminar a parte enteira</strong> e garantir que a <strong>primeira cifra tras o punto decimal sexa significativa</strong> (distinta de cero). A operación varía segundo o número sexa menor ou maior que a unidade (en valor absoluto; o signo trátase por separado):</p>
+<ul>
+  <li>Se o número é <strong>menor que a unidade</strong>, xa ten un punto decimal. Comprobamos se a primeira cifra é significativa: se o é, non fai falta nada máis; se non, <strong>multiplicamos</strong> pola base do expoñente tantas veces como sexa preciso.</li>
+  <li>Se o número é <strong>maior que a unidade</strong>, debémolo <strong>dividir</strong> pola base do expoñente ata obter un número que cumpra as condicións.</li>
+</ul>
+<h4>Distribución dos bits</h4>
+<p>Dado que agora dispoñemos de tres compoñentes (signo, expoñente e mantisa), debemos distribuír entre eles os bits da palabra. Exemplo con 32 bits:</p>
+<table>
+<tr><th>Bit 31</th><th>Bits 30 … 23</th><th>Bits 22 … 0</th></tr>
+<tr><td>Signo</td><td>Expoñente (8 bits)</td><td>Mantisa (23 bits)</td></tr>
+</table>
+<ul>
+  <li><strong>Signo:</strong> código asociado ó signo; 0 para positivos e 1 para negativos.</li>
+  <li><strong>Expoñente:</strong> represéntase en signo e magnitude ou en <strong>exceso a 2ⁿ⁻¹</strong>, sendo sempre un número enteiro.</li>
+  <li><strong>Mantisa:</strong> número real con <strong>punto decimal implícito á esquerda</strong> dos seus bits, representada xeralmente en signo e magnitude, en complemento a 1 ou en complemento a 2.</li>
+  <li><strong>Base do expoñente:</strong> unha potencia de 2 determinada polo fabricante do procesador.</li>
+</ul>
+<div class="box tip"><div class="box-title">Por que hai que definir o cero?</div><p>Se non estás seguro de por que é necesario especificar a representación de 0, calcula o número representado polos seguintes valores de coma flotante: <code>00…00</code> e <code>11…11</code>. Ningún deles é o cero de forma natural, polo que hai que reservarlle unha representación (habitualmente tódolos bits a 0).</p></div>`
+  },
+  {
+    id: 'fh-ud2-ex-flotante',
+    tipo: 'ejercicio',
+    titulo: 'Exercicio resolto: 12 e −12 en coma flotante (32 bits)',
+    resumen: 'Formato: bit 31 signo; bits 23–30 expoñente en exceso a 2⁷; bits 0–22 mantisa normalizada en C1; base 2. 12 = 0,75 · 2⁴ → expoñente 128+4 = 132 = 10000100; mantisa 0,75 = 0,11₂. 12 → 0 10000100 110…0 · −12 → 1 10000100 001 1111…1.',
+    claves: ['12 = 6·2¹ = 3·2² = 1,5·2³ = 0,75·2⁴ → expoñente 4', 'Exceso a 2⁷ = 128 → 128 + 4 = 132 = 10000100', 'Mantisa 0,75 → 0,11₂ → 110 0000 … 0000 (23 bits)', '12 → 0 | 10000100 | 11000000000000000000000', '−12 → 1 | 10000100 | 00111111111111111111111 (mantisa en C1)'],
+    tags: ['exercicio', 'coma flotante', 'mantisa', 'expoñente', 'exceso', 'complemento a 1'],
+    contenido: `
+<div class="box ex"><div class="box-title">Formato do ordenador</div>
+<ul>
+  <li>O bit 31 úsase para o signo da mantisa.</li>
+  <li>Os bits do 23 ó 30 representan o expoñente en <strong>exceso a 2ⁿ⁻¹</strong>.</li>
+  <li>Os bits do 0 ó 22 representan a mantisa normalizada en <strong>Complemento a 1</strong>.</li>
+  <li>A base do expoñente é 2.</li>
+  <li>O 0 represéntase con tódolos bits a 0.</li>
+</ul></div>
+<div class="box ex"><div class="box-title">Representar os números 12 e −12 nese formato</div>
+<p><strong>1. Normalizar</strong> o 12 a unha potencia da base para calcular o expoñente:</p>
+<p><code>12 = 12·2⁰ = 6·2¹ = 3·2² = 1,5·2³ = 0,75·2⁴</code> ⇒ o expoñente é <strong>4</strong>.</p>
+<p><strong>2. Expoñente</strong> en exceso a 2ⁿ⁻¹ con n = 8 bits: 2⁷ = 128 ⇒ 128 + 4 = 132 = <code>1000 0100</code>.</p>
+<p><strong>3. Mantisa</strong> 0,75 a binario (multiplicando por 2): 0,75·2 = <strong>1</strong>,5 → 0,5·2 = <strong>1</strong>,0 ⇒ <code>0,11</code>. Como é positivo queda igual en complemento a 1. Signo 0.</p>
+<table>
+<tr><th></th><th>Signo</th><th>Expoñente</th><th>Mantisa</th></tr>
+<tr><td>12</td><td><code>0</code></td><td><code>1000 0100</code></td><td><code>110 0000 0000 0000 0000 0000</code></td></tr>
+<tr><td>−12</td><td><code>1</code></td><td><code>1000 0100</code></td><td><code>001 1111 1111 1111 1111 1111</code></td></tr>
+</table>
+<p>Para −12 seguimos os mesmos pasos cambiando o signo (1) e <strong>complementando a 1 a mantisa</strong> por tratarse dun número negativo.</p></div>`
+  },
+
+  /* ---------------- 8 ---------------- */
+  {
+    id: 'fh-ud2-8',
+    tipo: 'tema',
+    titulo: '8. Métodos de enderezamento',
+    resumen: 'Indican como localizar o enderezo de memoria onde se garda a información dunha instrución (que contén datos e ordes). Segundo os accesos intermedios á memoria: inmediato (0 accesos, o dato vai na instrución), directo (1 acceso), indirecto (2 accesos: a memoria contén o enderezo do dato) e relativo (enderezo da instrución + desprazamento fixo dun rexistro especial).',
+    claves: ['Instrución: contén datos e ordes; comparten almacenamento', 'Enderezo de memoria = identificador dunha área de almacenamento concreta', 'Inmediato: o dato forma parte da instrución (sen acceso a memoria)', 'Directo: un acceso á memoria no enderezo que indica a instrución', 'Indirecto: a posición indicada contén o enderezo do dato (dous accesos)', 'Relativo: enderezo da instrución + cantidade fixa (K) dun rexistro especial'],
+    tags: ['enderezamento', 'direccionamiento', 'inmediato', 'directo', 'indirecto', 'relativo', 'instrución', 'enderezo de memoria'],
+    links: ['fh-ud2-ex-ender'],
+    contenido: `
+<p>Ata o de agora aprendemos a codificar datos e a manexar sistemas que nos permiten representar números dun xeito máis sinxelo para o ordenador. Aínda precisamos entender <strong>como recuperalos unha vez almacenados</strong>: esta é a función dos métodos de enderezamento.</p>
+<div class="box def"><div class="box-title">Instrución</div><p>Termo que empregamos para referirnos tanto a <strong>datos</strong> coma a <strong>ordes</strong>; de feito, ambos adoitan estar contidos nela, compartindo o mesmo sistema de almacenamento. Que funcionen como ordes ou como datos depende de como se utilicen.</p></div>
+<p>Os métodos ou modos de enderezamento das instrucións indican como localizar o andel de almacenamento específico onde se garda a información: unha localización coñecida como <strong>enderezo de memoria</strong>.</p>
+<div class="box def"><div class="box-title">Enderezo de memoria</div><p>Serve como <strong>identificador dunha área de almacenamento concreta</strong>.</p></div>
+<p>Poden empregarse diversos métodos con diferentes velocidades de execución, dependendo do <strong>número de accesos intermedios á memoria</strong> que o procesador deba realizar:</p>
+<h4>Enderezamento inmediato</h4>
+<p>Non precisa acceso a memoria, xa que o <strong>dato forma parte da instrución</strong>.</p>
+<table><tr><td>Código de operación</td><td><strong>Dato</strong></td></tr></table>
+<h4>Enderezamento directo</h4>
+<p>O procesador, a través da unidade de control, ten que acceder <strong>unha vez á memoria</strong> no enderezo que indica a instrución para localizar o dato.</p>
+<table><tr><td>Código de operación</td><td>@ do dato</td></tr><tr><td colspan="2">@ → <strong>Dato</strong></td></tr></table>
+<h4>Enderezamento indirecto</h4>
+<p>Primeiro accedemos a unha posición de memoria que <strong>contén o enderezo do dato</strong> que intervén na instrución; despois accedemos a ese segundo enderezo.</p>
+<table><tr><td>Código de operación</td><td>@ do dato</td></tr><tr><td colspan="2">@ → @' · @' → <strong>Dato</strong></td></tr></table>
+<h4>Enderezamento relativo</h4>
+<p>O enderezo do dato obtémolo <strong>sumándolle ó enderezo da propia instrución unha cantidade fixa</strong> (K), que normalmente está contida nun rexistro de tipo especial.</p>
+<table><tr><td>Código de operación</td><td>@ do dato</td></tr><tr><td colspan="2">@ + K → <strong>Dato</strong></td></tr></table>
+<table>
+<tr><th>Modo</th><th>Accesos a memoria</th><th>Onde está o dato</th></tr>
+<tr><td>Inmediato</td><td>0</td><td>Na propia instrución</td></tr>
+<tr><td>Directo</td><td>1</td><td>No enderezo que indica a instrución</td></tr>
+<tr><td>Indirecto</td><td>2</td><td>No enderezo almacenado na posición que indica a instrución</td></tr>
+<tr><td>Relativo</td><td>1 (+ suma)</td><td>No enderezo da instrución + desprazamento K</td></tr>
+</table>`
+  },
+  {
+    id: 'fh-ud2-ex-ender',
+    tipo: 'ejercicio',
+    titulo: 'Exercicio resolto: buscar datos cos catro modos de enderezamento',
+    resumen: 'Instrucións de 8 bits (5 de código de operación + 3 de enderezo). Para 11011111 e a táboa de memoria dada: inmediato → 00000111 · directo → contido de 111 = 00001000 · indirecto → contido de 000 = 11001100 · relativo (K = 4 = 100) → 111 + 100 = 011 → 00000011.',
+    claves: ['11011111 → código 11011 + enderezo 111', 'Inmediato: completar con ceros → 00000111', 'Directo: M[111] = 00001000', 'Indirecto: M[111] = 00001000 → M[000] = 11001100', 'Relativo: 111 + 100 = 011 (desprezando acarreo) → M[011] = 00000011'],
+    tags: ['exercicio', 'enderezamento', 'inmediato', 'directo', 'indirecto', 'relativo'],
+    contenido: `
+<div class="box ex"><div class="box-title">Enunciado</div>
+<p>Dispomos dun sistema que procesa instrucións de 8 bits. Os cinco primeiros bits especifican o código de operación e os tres restantes o enderezo dos datos. Calcula os datos que se cargarán empregando os modos inmediato, directo, indirecto e relativo (cun desprazamento de 4) para a instrución <code>11011111</code>, tendo en conta o seguinte contido da memoria:</p>
+<table>
+<tr><th>Enderezo</th><th>Contido</th></tr>
+<tr><td>000</td><td>11001100</td></tr>
+<tr><td>001</td><td>00000000</td></tr>
+<tr><td>010</td><td>11111111</td></tr>
+<tr><td>011</td><td>00000011</td></tr>
+<tr><td>100</td><td>11110000</td></tr>
+<tr><td>101</td><td>00111100</td></tr>
+<tr><td>110</td><td>00000001</td></tr>
+<tr><td>111</td><td>00001000</td></tr>
+</table></div>
+<div class="box ex"><div class="box-title">Resolución</div>
+<p>Descompoñemos a instrución nas súas dúas partes: código de operación <code>11011</code> e enderezamento <code>111</code>.</p>
+<h4>Enderezamento inmediato</h4>
+<p>Como o dato xa o temos dentro da propia instrución, completamos con ceros: <strong><code>00000111</code></strong>.</p>
+<h4>Enderezamento directo</h4>
+<p>Buscamos na táboa o contido do enderezo 111: <strong><code>00001000</code></strong>.</p>
+<h4>Enderezamento indirecto</h4>
+<p>Buscamos o contido do enderezo 111 → instrución intermedia <code>00001000</code>. Volvemos buscar o contido do enderezo 000 (derradeiros 3 díxitos da intermedia): <strong><code>11001100</code></strong>.</p>
+<h4>Enderezamento relativo</h4>
+<p>Sumamos o enderezo inicial (111₂) co desprazamento (4 = 100₂), desprezando o acarreo: 111 + 100 = 011. Instrución intermedia <code>00000011</code>; buscamos o contido do enderezo 011: <strong><code>00000011</code></strong>.</p></div>`
+  },
+
+  /* ---------------- GLOSARIO ---------------- */
+  {
+    id: 'fh-ud2-glosario',
+    tipo: 'glosario',
+    titulo: 'Glosario UD2',
+    resumen: 'Termos clave: bit, byte, ASCII, EBCDIC, BCD, Unicode, base, TFN, truncamento, KiB/MiB/GiB, taxa de transferencia, FLOPS, acarreo, complemento a 1 e a 2, exceso, coma fixa/flotante, mantisa, expoñente, decimal empaquetado, enderezamento…',
+    claves: ['Bit · byte · palabra', 'BCD · EBCDIC · ASCII · Unicode · FIELDATA', 'Base · TFN · terna · cuaterna · truncamento', 'KB/KiB · Hz · T/s · FLOPS', 'S-M · C1 · C2 · exceso a 2ⁿ⁻¹', 'Coma fixa · coma flotante · mantisa · expoñente', 'Enderezamento inmediato / directo / indirecto / relativo'],
+    tags: ['glosario', 'definicións', 'vocabulario'],
+    contenido: `
+<dl>
+<dt>Bit</dt><dd>Menor unidade de información; só pode valer 0 ou 1.</dd>
+<dt>Byte (octeto)</dt><dd>Grupo de 8 bits. Cada octeto pode dividirse en dous cuartetos (grupos de 4 bits).</dd>
+<dt>Palabra</dt><dd>Número de bits que o ordenador procesa de vez (16, 32, 64…). Determina n nas representacións numéricas.</dd>
+<dt>Caracteres alfanuméricos / de texto</dt><dd>Alfabéticos + numéricos / alfabéticos + numéricos + especiais.</dd>
+<dt>BCD de intercambio</dt><dd>Código alfanumérico de 6 bits (64 valores) con bit de paridade opcional, bits de zona e bits de posición.</dd>
+<dt>EBCDIC</dt><dd><em>Extended BCD Interchange Code</em>: código de 8 bits (256 símbolos) en dous bloques de 4.</dd>
+<dt>ASCII</dt><dd><em>American Standard Code for Information Interchange</em>: código de 8 bits, o máis utilizado.</dd>
+<dt>Unicode</dt><dd>Codificación usada na maioría das aplicacións actuais, Internet e sistemas operativos como Windows.</dd>
+<dt>FIELDATA</dt><dd>Código de 6 bits para ordenadores Unisys con palabras de 36 bits; uso raro.</dd>
+<dt>Sistema de numeración</dt><dd>Conxunto de símbolos e regras para representar datos numéricos; posicional e ligado a unha base.</dd>
+<dt>Base</dt><dd>Número de símbolos distintos dun sistema: 2 (binario), 8 (octal), 10 (decimal), 16 (hexadecimal).</dd>
+<dt>Teorema fundamental da numeración (TFN)</dt><dd>N = Σ Xᵢ·Bⁱ: relaciona calquera sistema posicional co decimal.</dd>
+<dt>Terna / cuaterna</dt><dd>Grupo de 3 / 4 bits que equivale a un símbolo octal / hexadecimal.</dd>
+<dt>Erro por truncamento</dt><dd>Erro cometido ó desprezar decimais por ter un número finito de bits.</dd>
+<dt>KB, MB, GB… (SI)</dt><dd>Prefixos decimais: múltiplos de 1000 (10³, 10⁶, 10⁹…).</dd>
+<dt>KiB, MiB, GiB… (IEC, 1999)</dt><dd>Prefixos binarios: múltiplos de 1024 (2¹⁰, 2²⁰, 2³⁰…).</dd>
+<dt>Frecuencia</dt><dd>Ciclos por segundo (Hz) ós que traballa un procesador ou bus; múltiplos de 1000.</dd>
+<dt>Transferencias por segundo (T/s)</dt><dd>Unidade de velocidade dun bus que fai varias transferencias por ciclo (MT/s, GT/s).</dd>
+<dt>Taxa de transferencia (ancho de banda, bit rate)</dt><dd>Velocidade de transmisión de datos por unha canle = ancho do bus × frecuencia.</dd>
+<dt>FLOPS</dt><dd><em>Floating Point Operations per Second</em>: medida de rendemento en cálculo científico (MFLOPS, GFLOPS, TFLOPS).</dd>
+<dt>Acarreo (arrastre)</dt><dd>Bit que se leva á posición superior cando a suma de dous díxitos supera a base.</dd>
+<dt>Signo e magnitude</dt><dd>Bit esquerdo = signo; resto = magnitude.</dd>
+<dt>Complemento a 1</dt><dd>Negativos invertindo tódolos bits do positivo.</dd>
+<dt>Complemento a 2</dt><dd>Complemento a 1 máis 1; representación habitual dos enteiros.</dd>
+<dt>Exceso a 2ⁿ⁻¹</dt><dd>Sen bit de signo; valor almacenado = número + 2ⁿ⁻¹.</dd>
+<dt>Coma fixa</dt><dd>Punto decimal implícito nunha posición fixa (á dereita); para enteiros.</dd>
+<dt>BCD (decimal codificado en binario)</dt><dd>Cada díxito decimal codifícase en 4 bits; sen negativos.</dd>
+<dt>Decimal desempaquetado</dt><dd>Un byte por díxito: bits de zona (1111, ou signo 1100/1101 no último) + bits de díxito.</dd>
+<dt>Decimal empaquetado</dt><dd>Un cuarteto por díxito; signo (1100/1101) no cuarteto máis á dereita.</dd>
+<dt>Coma flotante</dt><dd>Representación de reais baseada na notación científica: mantisa · base^expoñente.</dd>
+<dt>Mantisa</dt><dd>Parte significativa normalizada (punto implícito á esquerda, primeira cifra ≠ 0).</dd>
+<dt>Expoñente</dt><dd>Enteiro que indica a potencia da base; represéntase en S-M ou exceso.</dd>
+<dt>Instrución</dt><dd>Unidade que contén datos e/ou ordes, compartindo o mesmo almacenamento.</dd>
+<dt>Enderezo de memoria</dt><dd>Identificador dunha área de almacenamento concreta.</dd>
+<dt>Enderezamento inmediato / directo / indirecto / relativo</dt><dd>Modos de localizar o dato: na instrución / nun acceso / en dous accesos / sumando un desprazamento K.</dd>
+</dl>`
+  }
+
+  ]
+});
