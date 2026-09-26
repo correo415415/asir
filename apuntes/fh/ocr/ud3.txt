@@ -448,3 +448,593 @@ tendo en conta que non todos teñen as mesmas necesidades. Unha fonte de
 alimentación cun chasis de tamaño normal/grande permite a fabricación de
 modelos de maior potencia con menos problemas de refrixeración, pero non lle
 
+===== PAXINA 6 =====
+atraerá a alguén que constrúa un sistema pequeno que require menos de 600
+W de potencia.
+
+A maioría das fontes de alimentación, especialmente as que se etiquetan para
+uso doméstico, empregan o estándar ATX. É importante aclarar a diferenza
+entre o estándar ATX (normas de comportamento eléctrico) e o factor de
+forma ATX (dimensións definidas).
+
+Especificamente, este estándar define o que se considera o comportamento
+axeitado dunha fonte de alimentación, é dicir: como se debe alimentar, que
+voltaxes debe ter, que proteccións debe incluír... curiosamente, este estándar
+está totalmente desenvolvido e controlado por Intel.
+
+3.4 > O factor de forma nas fontes de alimentación
+
+Os tipos de fontes de alimentación que podemos atopar ó abrir un PC depen-
+den xeralmente do factor de forma do dispositivo e de se é un clon ou dunha
+marca propietaria.
+
+Esta é unha das características máis importantes a ter en conta ó mercar equi-
+pos, xa que as incompatibilidades poden causar problemas graves ó configurar
+o sistema.
+
+ATX
+
+As fontes de alimentación ATX son as que se usan na maioría dos ordenadores
+actuais, evolucionando coas novas incorporacións de conectores, e incorporan-
+do as características xenéricas ó seu estándar.
+
+ATX PS/2, o máis común, xeralmente mide 150x140x86 mm (ancho x fondo x
+altura), aínda que as fontes de alimentación de maior potencia poden ser máis
+longas, cunha variante ATX PS/3 que é máis curta, duns 150x100x86 mm.
+
+As dimensións obrigatorias son 150 mm de ancho e 86 mm de alto, e a profun-
+didade depende do modelo. Polo xeral, a maioría das fontes de alimentación de
+ata 650 ou 750 W miden entre 140 mm e 160 mm. As fontes de alimentación
+de moi alta capacidade adoitan medir entre 180 e 200 mm, aínda que hai un
+crecente impulso por ofrecer as profundidades máis compactas posibles.
+
+SFX
+
+Poderiamos dicir que, no mercado de pezas de PC, o segundo formato máis
+empregado é o SFX, xa que é o máis común nos conxuntos de PC ultracompac-
+tos, o chamado Small Form Factor (SFF), que mide 125x100x63.5 mm, con va-
+riantes como a SFX-L de 125x130x63.5 mm, usada para poder usar ventiladores
+de maior diámetro cunha mellor sonoridade e maior capacidade de ventilación.
+
+Crear unha fonte de alimentación SFX implica varios desafíos e limitacións de
+enxeñaría. Abarrotar unha gran potencia nun espazo pequeno require máis
+traballo á hora de definir as capacidades de refrixeración e desenvolver o inte-
+rior da fonte de alimentación, xa que cada milímetro importa. Factores como
+garantir que o ventilador non choque con ningún compoñente son cruciais,
+mentres que algunhas fontes de alimentación ATX incluso teñen un chasis
+excesivo. Todo isto ten tres consecuencias moi obvias:
+
+e As fontes de alimentación máximas que se poden desenvolver con este
+formato son só de 600 a 700 W (ata 800 W con SFX-L), moi lonxe dos
+máis de 2 000 W que se conseguen con ATX.
+
+e Debido a que é un deseño máis difícil de desenvolver, non tódolos fabri-
+cantes se aventuran a fabricar modelos de calidade. Ademais de que se
+trata dun mercado significativamente máis pequeno que o ATX, a dis-
+poñibilidade de modelos SFX é bastante limitada.
+
+e Debido ó punto anterior, unha fonte de alimentación SFX custará máis
+que unha fonte de alimentación ATX de capacidades similares.
+
+Entón, podemos concluír que, en termos xerais e tomando como referencia
+fontes de alimentación de boa calidade, o formato ATX é superior en termos
+
+SFX
+
+ATX
+
+TFX
+
+TFX
+SFX
+
+Comparativa de tamaño
+
+Adaptador SFX/ATX
+
+As “fontes de alimentación
+SFX/SFX-L pódense montar en
+caixas ATX mediante un soporte
+(adaptador). Algunhas fontes de
+alimentación xa inclúen un.
+
+Overcloking
+
+Para aumentar as frecuencias do
+procesador ou da GPU hai que se
+asegurar, entre outras caracterís-
+ticas, de que a fonte de alimenta-
+ción proporcione a máxima estabi-
+lidade a un nivel de tensión de 12
+voltios.
+
+Dado que o overclocking require
+voltaxes de compoñentes varia-
+bles, canto máis estable sexa a
+tensión proporcionada pola fonte
+de alimentación, menos probable
+será que o overclocking sexa
+inestable.
+
+Se se aumenta lixeiramente a
+tensión, non haberá moito pro-
+blema, pero se se quere levar o
+sistema ó límite, si que o haberá.
+===== PAXINA 7 =====
+Como comprobar que forma-
+to de fonte de alimentación
+é compatible co meu PC
+
+Despois de coñecer tódolos for-
+matos dispoñibles, é hora de falar
+de xeitos sinxelos de determinar
+se o formato da fonte de alimen-
+tación é compatible co formato da
+caixa e viceversa. Hai varios esce-
+narios posibles:
+
+e Caixa e fonte de alimentación
+escollidas para PC por pezas: a
+solución é extremadamente sin-
+xela, nas follas de especifica-
+cións de cada compoñente, de-
+beríase poder ver que formato
+usa a fonte de alimentación e
+cales son compatibles coa caixa.
+
+e Sistema preconstruído: a cla-
+ve aquí é a mesma que a ante-
+rior... consultar as follas de es-
+pecificacións, xa que a compati-
+bilidade debería estar claramen-
+te indicada nalgún lugar.
+
++ Que ocorre se non temos nin-
+gunha información sobre o
+modelo do PC/carcasa/PSU?: as
+cousas complicanse moito máis
+aquí, pero é pouco probable que
+suceda xa que debe haber unha
+etiqueta ou algo nalgún lugar
+que indique que tipo de sistema
+é, e Google está cheo de follas
+de especificacións que deberían
+enumerar este tipo de compati-
+bilidade.
+
+En calquera caso, como moito
+teremos que comprobar as medi-
+das, comparalas con factores de
+forma estándar e botar unha
+ollada ós soportes de montaxe e
+comparalos con fotos de internet
+para ver se son compatibles.
+
+Tamén é moi importante asegu-
+rarse de que non haxa conectores
+propietarios e de que todos sexan
+estándar.
+
+de calidade de son, capacidade de refrixeración, prezo, potencia e probable-
+mente durabilidade en comparación co SFX, dada a ausencia destas limitacións.
+
+TFX
+
+E un factor de forma extremadamente raro no mercado de PC de compoñen-
+tes, cunha presenza lixeiramente maior en sistemas prefabricados.
+
+Este factor de forma fisicamente moi alongado (85x175x65 mm) está deseñado
+para ordenadores de dimensións reducidas, especialmente para carcasas tipo
+slim, que son bastante alongadas e delgadas ó mesmo tempo. Nalgúns casos,
+teñen unha altura adicional de 5 mm no lado do ventilador para acomodalo.
+
+Se xa o formato SFX era un pouco limitado, o TFX o é aínda máis. As limitacións
+de potencia, dispoñibilidade e prezo son aínda maiores, ata o punto de que a
+fonte de alimentación TFX máis potente do mercado de consumo non superan
+os 400 W.
+
+3.5 > Formatos usados para servidores e PC premontados
+
+Existen outros formatos empregados principalmente en servidores, pero ta-
+mén en certos sistemas premontados... son os menos habituais no mercado
+doméstico e os que se atopan con menos frecuencia nas tendas.
+
+Flex ATX
+
+Este é un factor de forma que se usa principalmente en sistemas premontados
+como certos barebones ou caixas de placas base mini-ITX (ás veces, este factor
+de forma chámase erroneamente factor de forma mini-ITX, cando en realidade
+non existe).
+
+As súas dimensións comúns son 81.5x150x40.5 mm, aínda que a profundidade
+pode variar dependendo do modelo.
+
+Cómpre mencionar que só se usa en modelos de moi baixa capacidade, como os
+de 250 W e similares, e por desgraza, requiren o uso de ventiladores de 4 cm
+de diámetro, que moven pouco aire e fan moito ruído.
+
+Factores de forma para montaxe en rack: 1U, 2U...
+
+Estes factores de forma están deseñados unicamente para a montaxe en rack,
+un tipo de carcasa que se usa nos servidores. Especificamente, U refírese a
+unha unidade de medida (Unidade de rack), equivalente a 44.50 milímetros.
+Xeralmente, as fontes de alimentación para montaxe en rack adoitan ter un
+tamaño de 1U ou 2U e están deseñadas para encaixar en carcasas de rack da
+mesma altura. As medidas típicas son as seguintes:
+
+1U: 100 mm de ancho, 40.5 mm de alto, a profundidade varía
+2U: 100 mm de ancho, 70 mm de alto, a profundidade varía
+
+Como podemos comprobar, 1U comparte a mesma altura que Flex ATX, pero
+este último é máis estreito, polo que non teñen o mesmo factor de forma.
+Tamén paga a pena sinalar que as medidas anteriores son as máis comúns,
+pero a lonxitude tamén pode variar dependendo da fonte de alimentación e da
+carcasa. A altura sempre debe manterse.
+
+Neste tipo de equipo, as fontes de alimentación redundantes tamén son moi
+comúns. No formato 1U, divídense horizontalmente en dous e verti-
+cal/horizontalmente no formato 2U.
+
+Outros formatos
+
+Hai outros formatos de fontes de alimentación de empresas específicas, como
+os barebones Shuttle, polo que se queres cambialo, terás que buscar especifi-
+cacións específicas desas empresas ou facer algo de bricolaxe para instalalo.
+
+Formato personalizado
+
+===== PAXINA 8 =====
+É o formato de fonte máis empregado nos servidores... mellor dito, non é un
+formato que exista como tal, xa que estamos a falar de tamaños, formas e
+sistemas de montaxe completamente personalizados que varían dunha fonte a
+outra.
+
+3.6 Eficiencia enerxética da fonte de alimentación
+
+O factor de potencia é a relación entre a potencia real subministrada pola
+toma de corrente e a potencia que a fonte de alimentación é capaz de usar.
+
+Nun circuíto ideal, esta relación sería 1, o que significa que toda a tensión e a
+corrente que sae da toma de corrente poderían ser utilizadas pola fonte de
+alimentación. O factor de potencia adoita ser un punto decimal que vai de O a
+1.
+
+Non obstante, a forma en que a corrente eléctrica viaxa polos cables non for-
+ma unha onda sinusoidal perfecta, como sería o ideal. Na realidade, faino en
+función de pequenos picos de tensión, que logo se corrixen nos transformado-
+res internos da fonte de alimentación para crear a corrente continua que re-
+quiren os compoñentes internos dos nosos ordenadores.
+
+Tipos de factor de potencia (PFC)
+
+Se o PFC non está regulado nunha fonte de alimentación, o factor de potencia
+resultante adoita ser de 0.65. E dicir, só se usa o 65% da potencia subministra-
+da. Ou, dito doutro xeito, a toma de corrente debe subministrar un 35% máis
+de corrente da que solicita a fonte de alimentación.
+
+Afortunadamente, este problema pódese resolver de dúas maneiras:
+
+e PFC pasivo: este tipo de sistema de corrección emprega indutores e con-
+densadores para mellorar o factor de potencia que recibe a fonte de
+alimentación. É unha forma moi económica de resolver o problema, pero
+ó mesmo tempo, non o resolve por completo. De feito, a corrección má-
+xima do factor de potencia que se pode conseguir con este tipo de com-
+poñente adoita roldar os 0.85.
+
+e PFC activo: Por lei, este é o tipo de corrección obrigatoria da Unión Euro-
+pea, que se esixe a tódalas fontes de alimentación do seu territorio
+dende o ano 2001. Neste caso, a corrección realízase mediante unha se-
+rie de circuítos integrados, nos que se instalan MOSFET, que fan todo o
+traballo. Con este método, o factor de potencia resultante é de 0.99, o
+que significa que case toda a enerxía entrante se transforma en enerxía
+útil.
+
+Polo tanto, incluír un dos dous tipos de PFC na topoloxía dunha fonte de ali-
+mentación é esencial para que a fonte de alimentación funcione da maneira
+máis eficiente posible. Non tería sentido ser altamente eficiente no extremo de
+saída se a fonte de alimentación consume moita máis enerxía da que realmen-
+te necesita no extremo de entrada.
+
+Con todo, a combinación de ambos conceptos (PFC máis eficiencia interna da
+fonte de alimentación) significa que as fontes de alimentación actuais consu-
+men moito menos que as de hai 10 anos.
+
+Que PFC ten unha fonte de alimentación?
+
+A maneira máis sinxela de coñecer o PFC dunha fonte de alimentación é acce-
+der á documentación do fabricante. Se a documentación non o amosa, pode-
+mos descubrilo en función da súa certificación enerxética.
+
+As fontes de alimentación usan o PFC para aumentar a eficiencia enerxética, o
+que está asociado a unha certificación 80 PLUS:
+
+Sobretensión
+
+Sen dúbida, un compoñente no
+que nunca debes escatimar é a
+fonte de alimentación.
+
+Debes ter en conta que este com-
+poñente non só subministra ener-
+xía ós compoñentes do ordenador,
+senón que tamén actúa como un
+dispositivo de protección para
+garantir que ningún deles reciba
+máis electricidade da que necesi-
+ta, O que evita danos e serve como
+barreira protectora contra posi-
+bles accidentes.
+
+Por iso protexe todo o hardware
+de sobretensións e caídas transi-
+torias que poidan producirse
+debido a cortes de enerxía ou
+outras incidencias relacionadas
+coa rede eléctrica.
+
+Polo tanto, cando vas a unha
+tenda e instalas unha destas
+fontes de alimentación, estás a
+mercar algo máis que un compo-
+ñente capaz de subministrar
+enerxía.
+
+Capacidade
+
+Recoméndase que a capacidade da
+fonte de alimentación sexa polo
+menos o dobre do consumo de
+enerxía estimado do ordenador.
+Débese a que a fonte de alimenta-
+ción funcionará a unha carga entre
+O 40 e o 60 %, que é o rango de
+alimentación onde é máis eficien-
+te.
+
+Significa que as perdas de enerxía
+debidas á calor son máis baixas,
+polo que non se debe optar por
+unha solución económica, xa que
+se poderían sufrir as consecuen-
+cias desa decisión en canto se
+instale no ordenador. Levar ó
+límite os requisitos de enerxía do
+PC pode acabar custando moito
+máis que recorrer a solucións máis
+potentes e de maior calidade
+dende o principio.
+===== PAXINA 9 =====
+Que é o programa de certifi-
+cación 80 PLUS?
+
+80 PLUS? é un programa de espe-
+cificación de rendemento e certifi-
+cación para unidades de fonte de
+alimentación internas (PSU).
+
+A súa especificación de rendemen-
+to require que as fontes de ali-
+mentación dos ordenadores e
+servidores teñan unha eficiencia
+enerxética do 80% ou superior ó
+10%, 20%, 50% e 100% da carga
+nominal cun factor de potencia
+real de 0.9 ou superior.
+
+80 PLUS? ofrece sete niveis de
+certificación para fontes de ali-
+mentación internas con clasifica-
+cións de eficiencia enerxética
+crecentes que van dende Estándar
+
+ata Rubí.
+
+PLUS”
+STANDARD
+ha.)
+
+PLUS
+
+BRONZE SILVER
+
+PLUS
+PLATINUM
+ha)
+
+TITANIUM
+
+RUBY
+
+Se a fonte de alimentación non
+inclúe ningún tipo de certificación,
+o mellor é esquecerse dela por
+completo e mercar outro modelo
+que a teña, sempre que non este-
+as disposto a malgastar enerxía.
+
+30 PLUS
+
+Certification 230V EU Internal Non-Redundant
+
+230V Internal Redundant
+
+96 of Rated Load 10% 20% 50% 100% so 10% 20% 50% 100%
+85% PEC >
+ao PLUS - 2% 02% - -
+030
+Be PEC aS%PEC>
+80 PLUS Bronzo ase 85% 81% 1%
+oso 070
+90% PEC 89% PEC>
+80 PLUS Silver 87% 87% 85% 85%
+oso 090
+92% PEC> 92% PC>
+80 PLUS Gold > 90% 109% = = 08% ans
+030 0.90
+9496 PEC 9% PEC>
+80 PLUS Platinum 92% 90% 90% 91%
+095 0.95
+APEC OS
+8O PLUS Titanium 90% o 96% 91% 90% 0 96% 91%
+SOX PEC DIMPECE  9SRPrCZ DOSRPECZ O 92PrCZ
+BO PLUS Ruby > -
+2030 030 096 0.9% 096
+
+3.7 > Conectores
+
+A que voltaxe deberiamos converter a nosa electricidade? Que especificacións
+necesitará a nosa fonte de alimentación para funcionar co resto dos compo-
+ñentes do noso ordenador?
+
+Para solucionar estes problemas e outros parecidos, desenvolvéronse varios
+estándares, entre os que destaca o estándar ATX, ou Advanced Technology
+Extended. Este estándar é o estándar para ordenadores de sobremesa domés-
+ticos e profesionais, aínda que existen algunhas alternativas, especialmente no
+campo dos servidores e sistemas industriais.
+
+Este estándar está presente nas fontes de alimentación, pero tamén o vere-
+mos nas placas base, onde atoparemos numerosos portos, incluídos os do
+estándar ATX. Esta relación entre a placa base e a fonte de alimentación vai
+dar na necesidade de conectores que permitan enganchar as distintas pezas
+que compoñen o equipo.
+
+O estándar ATX controla principalmente dúas variables dentro dos compoñen-
+tes: o tamaño dos compoñentes e as conexións que estes compoñentes terán
+entre si. Isto fai que sexa unha boa idea ter os mesmos conectores ou compa-
+tibles e controlar a enerxía enviada a través deses cables para que poidan fun-
+cionar correctamente e garantir que non haxa limitacións entre as marcas e
+modelos de compoñentes.
+
+Os conectores internos que atoparemos actualmente na nosa fonte de alimen-
+tación son os seguintes.
+
+ATX de 24 pins
+
+É o conector principal para fontes de alimentación ATX. Conecta a fonte de
+alimentación á placa base a través de varios raís de 3.3, 5 e 12 voltios. Tamén
+inclúe un circuíto de control para a comunicación de estado entre os dous
+compoñentes, incluíndo o acendido, o apagado e o modo de suspensión.
+
+Anteriormente, este conector só tiña 20 pins; de feito, moitas fontes de ali-
+mentación actuais aínda o presentan como un conector 20+4, cos últimos
+catro pins separados. Débese a que o conector orixinal non foi deseñado para
+altas demandas de potencia, polo que se actualizou para incorporar un pin
+máis para cada voltaxe a partir da versión 2.0 da especificación.
+
+ATX de 12 voltios
+
+Usase para proporcionar máis enerxía ós microprocesadores. Este conector
+pode ser de 4 ou 8 pins, con 8 pins xeralmente usados para placas base de
+servidor (EPS) e o conector de 4 pins para outras placas base.
+
+A súa principal diferenza é que en vez de transportar 3 voltaxes diferentes, só
+fornece enerxía a 12 voltios, o que obriga á placa base a ter módulos dedicados
+
+===== PAXINA 10 =====
+para facer a conversión ás voltaxes restantes. Isto aumenta moito a eficiencia
+ó requirir que a fonte de alimentación converta só unha voltaxe, o que aumen-
+ta a cantidade total de enerxía que se pode entregar á placa base usando co-
+rrentes máis baixas.
+
+O único problema é que as placas base se fan máis complexas, requirindo eta-
+pas de conversión adicionais para subministrar as voltaxes de 3.3 e 5 voltios.
+
+Fisicamente, o conector parécese a un conector EPS, pero con dous pins máis, o
+que fai un total de 10 pins, moito máis pequeno que o conector ATX estándar
+de 24 pins.
+
+Molex de 4 pins
+
+Está deseñado para alimentar periféricos e foi introducido no estándar ATX no
+seu lanzamento. Ofrece voltaxes de 5 e 12 voltios a través dos seus 4 pins e
+unha potencia de saída de máis de 100 W, máis que suficiente para a maioría
+dos dispositivos que usaban este porto, como unidades de disquete, discos
+duros IDE antigos ou unidades de CD e DVD antigas, entre outros.
+
+Tamén se usaba para proporcionar enerxía adicional a outros dispositivos co-
+mo algunhas placas base ou tarxetas gráficas antes da aparición de conectores
+máis especializados para estas tarefas.
+
+Hoxe en día, o seu uso reduciuse moito debido á perda de popularidade dos
+dispositivos que o empregan, como os discos duros tradicionais ou os reprodu-
+tores de DVD. Estes dispositivos máis modernos tamén empregan o conector
+de alimentación SATA, que é máis plano e máis doado de conectar.
+
+SATA
+
+Empregado por algúns dispositivos SATA, como as unidades de DVD máis no-
+vas ou os discos duros e SSD SATA. Ten un aspecto similar ó conector de datos
+SATA, pero é máis ancho, ten 16 pins e unha fendedura no lado oposto para
+evitar erros de conexión.
+
+O conector admite tres voltaxes: 3.3, 5 e 12 voltios, aínda que a primeira rara-
+mente se usa e ás veces nin sequera está conectada ós portos que saen da
+fonte de alimentación. Tamén existe unha versión reducida que só incorpora 6
+pins e unha tensión de 5 voltios, que se atopa principalmente en portátiles e
+algunhas fontes de alimentación de ordenador premontadas.
+
+PCI Express
+
+Están deseñados para engadir enerxía adicional ós dispositivos internos do
+ordenador, concretamente ás tarxetas de expansión PCle que requiren máis
+dos 75 W que xa proporciona o seu porto.
+
+Vénse con máis frecuencia nas tarxetas gráficas debido ó seu alto consumo de
+enerxía, e ás veces incorporan varios conectores na mesma placa de circuíto
+impreso, pero tamén se poden usar para proporcionar enerxía adicional nalgu-
+nhas placas base.
+
+Vén en dúas versións: unha versión de 6 pins que fornece ata 75 W e unha ver-
+sión de 8 pins capaz de fornecer 150 W de potencia, ambas traballando a 12
+voltios. Inicialmente, estas dúas versións non eran compatibles entre si, xa
+que, aínda que o conector de 6 pins tiña a mesma forma que parte do conector
+de 8 pins, tiña unha fendedura para evitar que se inserise nel.
+
+Non obstante, a maioría dos conectores de 8 pins foron substituídos pola ver-
+sión de 6+2 pins, que se pode usar para ambas situacións.
+
+Por outra banda, o conector de 6 pins, aínda que encaixa no conector de 8 pins
+e funcionará de inmediato debido ó seu deseño, é probable que cause danos no
+porto ou no conector se se usa, con poucas excepcións.
+
+EPS
+
+y
+
+Conectores de alimentación
+internos
+
+ATX de 24 pins
+24 PIN CONNECTOR
+
+man 1 |EJEO]| 1 («3.3
+(aa 2 | ul] 1 12
+(Ground) 3 [QUIEN] +5 (Grouna)
+
+qsv) 4 [LG 16 (rs-om
+(Ground) 5 [EN QU| 17 (Grouna)
+
+es 6 [GUEN 18 (crouna)
+(Ground) 7 | AE 1D (Ground)
+
+(ro, a |[B](C]| 20 (sv)
+(svse) o || 21 (+5
+(+124) 10 22 (+5V)
+(42) 11 a 23 (+5V)
+(av) 12 [OJO] 24 (Grouna)
+
+Voltaxe ATX de 24 pins
+
+>
+
+ATX de 12 voltios
+
+Molex de 4 pins
+
+O +12v
+[ +sv
+E Ground
+
+o
+
+Voltaxe Molex de 4 pins
